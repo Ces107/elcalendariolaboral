@@ -119,6 +119,55 @@ for s in slugs:
     b = (ROOT / "csv" / f"{s}.csv").read_bytes()
     check(b.startswith(b"\xef\xbb\xbfFecha;"), f"csv/{s}.csv: BOM y ';'")
 
+# calendario escolar (solo castellano): una página por comunidad, fechas iguales al JSON, todas en el sitemap
+esc = json.loads((ROOT / "data" / "escolar-2026-27.json").read_text("utf-8"))
+nav_html = (ROOT / "vacaciones-escolares" / "navidad" / "index.html").read_text("utf-8")
+for path in ["calendario-escolar/", "vacaciones-escolares/navidad/"] + [f"calendario-escolar/{r['slug']}/" for r in esc["regions"]]:
+    check(f"/{path}" in paths_in_sm, f"/{path} no está en sitemap.xml")
+    check(not (ROOT / "ca" / path).exists(), f"/ca/{path} no debe existir (solo castellano)")
+    f = ROOT / path / "index.html"
+    check(f.exists(), f"falta /{path}")
+    if f.exists():
+        check('hreflang="ca"' not in f.read_text("utf-8").split("</head>")[0], f"/{path}: sin hreflang a idiomas que no tiene")
+check(len(esc["regions"]) == 19, "escolar: 19 comunidades")
+
+
+def nav_row(href):
+    m = re.search(r'<a href="' + re.escape(href) + r'">.*?</tr>', nav_html, re.S)
+    return m.group(0) if m else ""
+
+
+for r in esc["regions"]:
+    f = ROOT / "calendario-escolar" / r["slug"] / "index.html"
+    if not f.exists():
+        continue
+    h = f.read_text("utf-8")
+    check(r["source"]["url"].replace("&", "&amp;") in h, f"escolar {r['slug']}: falta la fuente")
+    units = [(p, f"/calendario-escolar/{r['slug']}/#" + __import__("escolar").slugify(p["name"])) for p in r.get("provinces", [])] \
+        if r.get("provinces") and not r["stages"] and not r["breaks"] else [(r, f"/calendario-escolar/{r['slug']}/")]
+    for u, href in units:
+        prim = next((x for x in u["stages"] if "primaria" in x["stages"]), None)
+        for k in ("start", "end"):
+            if prim and prim[k]:
+                check(f'datetime="{prim[k]}"' in h, f"escolar {r['slug']}/{u['name']}: falta {k} {prim[k]}")
+        for n in u.get("non_teaching_days", []):
+            check(f'data-d="{n["date"]}"' in h, f"escolar {r['slug']}: {n['date']} no está en la rejilla")
+        nb = next((b for b in u["breaks"] if b["type"] == "navidad"), None)
+        row = nav_row(href)
+        check(bool(row), f"navidad: falta la fila de {u['name']}")
+        if nb and row:
+            ds = re.findall(r'datetime="([\d-]+)"', row)
+            n = int(re.search(r'class="num">(\d+)<', row).group(1))
+            s, e = dt.date.fromisoformat(ds[0]), dt.date.fromisoformat(ds[1])
+            check(s <= dt.date.fromisoformat(nb["start"]) and dt.date.fromisoformat(nb["end"]) <= e,
+                  f"navidad {u['name']}: {ds} no cubre {nb['start']}..{nb['end']}")
+            check(n == (e - s).days + 1, f"navidad {u['name']}: {n} días != {ds}")
+            check((s - dt.timedelta(1)).weekday() < 5 and (e + dt.timedelta(1)).weekday() < 5, f"navidad {u['name']}: el rango no acaba en día de clase")
+            check(f'datetime="{nb["start"]}"' in h or s.isoformat() in h, f"escolar {r['slug']}: Navidad no está en la página")
+cat = json.loads((ROOT / "data" / "escolar-2027-28.json").read_text("utf-8"))["regions"][0]
+hc = (ROOT / "calendario-escolar" / "cataluna" / "index.html").read_text("utf-8")
+check('id="curso-2027-2028"' in hc and f'datetime="{cat["stages"][0]["start"]}"' in hc, "cataluña: falta el curso 2027-2028")
+
 print(f"{len(fails)} fallos" if fails else f"OK: 19 comunidades, 12 festivos cada una, días de la semana correctos; {len(pages)} páginas en el sitemap")
 for f in fails:
     print(" -", f)

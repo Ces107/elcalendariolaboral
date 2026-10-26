@@ -432,11 +432,12 @@ BURGER = '<svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><pa
 KINDS = {"n": "k_n", "r": "k_r", "i": "k_i", "l": "k_l"}
 
 PAGE_PATH = ""  # path of the page being written, below the language base (for the language selector)
+PAGE_LANGS = LANGS  # languages that have this page; the selector sends the others to their home
 REGIONS = []    # localized regions, for menus and footer
 
 
 def lang_links():
-    return "".join(f'<a href="{lang_base(x)}{PAGE_PATH}" hreflang="{x}" lang="{x}"{" aria-current=true" if x == LANG else ""}>{LANG_NAMES[x]}</a>'
+    return "".join(f'<a href="{lang_base(x)}{PAGE_PATH if x in PAGE_LANGS else ""}" hreflang="{x}" lang="{x}"{" aria-current=true" if x == LANG else ""}>{LANG_NAMES[x]}</a>'
                    for x in LANGS)
 
 
@@ -464,20 +465,25 @@ def footer_html(data):
     s = data["source"]
     return (f'<footer class="ft"><div class="wrap ft-in">'
             f'<section class="ft-reg"><h2>{t("nav_regions")}</h2><ul class="cols">{regs}</ul></section>'
-            f'<section><h2>{t("nav_locals")}</h2><ul><li><a href="{BASE}festivos-locales/">{t("nav_locals")} 2027</a></li></ul></section>'
+            f'<section><h2>{t("nav_locals")}</h2><ul><li><a href="{BASE}festivos-locales/">{t("nav_locals")} 2027</a></li></ul>'
+            + (f'<h2>Calendario escolar</h2><ul><li><a href="{BASE}calendario-escolar/">Calendario escolar 2026-2027</a></li>'
+               f'<li><a href="{BASE}vacaciones-escolares/navidad/">Vacaciones de Navidad 2026-2027</a></li></ul>' if LANG == "es" else "")
+            + '</section>'
             f'<section><h2>El Calendario Laboral</h2><ul><li><a href="{s["url"]}" rel="noopener">{t("data_source")}</a></li>'
             f'<li><a href="{BASE}privacidad/">{t("privacy")}</a></li></ul>'
             f'<p class="ft-lang">{lang_links()}</p></section>'
             f'</div><div class="wrap ft-b">© 2026 {HOST}</div></footer>')
 
 
-def head_html(title, desc, path, og_img, extra="", hreflang=True):
-    """path: page path below the language base ('' for the home). hreflang for every language + x-default."""
-    global PAGE_PATH
+def head_html(title, desc, path, og_img, extra="", hreflang=True, langs=None):
+    """path: page path below the language base ('' for the home). hreflang for every language in `langs` (default all)
+    + x-default; a page in one language only gets no alternates."""
+    global PAGE_PATH, PAGE_LANGS
     PAGE_PATH = path
+    PAGE_LANGS = langs or LANGS
     canonical = URL + path
-    alts = "".join(f'<link rel="alternate" hreflang="{x}" href="{SITE}{lang_base(x)}{path}">' for x in LANGS) if hreflang else ""
-    if len(LANGS) > 1 and hreflang:
+    alts = "".join(f'<link rel="alternate" hreflang="{x}" href="{SITE}{lang_base(x)}{path}">' for x in PAGE_LANGS) if hreflang and len(PAGE_LANGS) > 1 else ""
+    if len(PAGE_LANGS) > 1 and hreflang:
         alts += f'<link rel="alternate" hreflang="x-default" href="{SITE}{lang_base("es")}{path}">'
     canon = f'<link rel="canonical" href="{canonical}">' if hreflang else '<meta name="robots" content="noindex">'
     return f"""<!doctype html>
@@ -557,12 +563,14 @@ def month_items(m, hols):
     return "".join(out)
 
 
-def month_html(m, hmap, hols):
-    first = dt.date(YEAR, m, 1)
-    nd = ((dt.date(YEAR + (m == 12), m % 12 + 1, 1)) - first).days
+def month_html(m, hmap, hols, year=YEAR, idp="", items=None, show_year=False):
+    """One month card. The school calendar passes the year, idp=None (no ids: several grids per page), its own list
+    under the month and show_year (the caption reads "Enero 2027")."""
+    first = dt.date(year, m, 1)
+    nd = ((dt.date(year + (m == 12), m % 12 + 1, 1)) - first).days
     cells = [""] * first.weekday()
     for d in range(1, nd + 1):
-        day = dt.date(YEAR, m, d)
+        day = dt.date(year, m, d)
         iso = day.isoformat()
         cls = ["we"] if day.weekday() >= 5 else []
         tt = ""
@@ -576,9 +584,10 @@ def month_html(m, hmap, hols):
     rows = "".join("<tr>" + "".join(c or "<td></td>" for c in cells[w * 7:w * 7 + 7]) + "</tr>" for w in range(weeks))
     head = "".join(f'<th scope="col" abbr="{T["_wd"][k]}"><span class="wl">{x}</span><span class="ws">{T["_wd1"][k]}</span></th>'
                    for k, x in enumerate(T["_wdh"]))
-    name = T["_months"][m - 1].capitalize()
-    return (f'<div class="mon" id="m{m}"><table><caption>{name}</caption><thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table>'
-            f'<ul class="mh" id="mh{m}">{month_items(m, hols)}</ul></div>')
+    name = T["_months"][m - 1].capitalize() + (f" {year}" if show_year else "")
+    ids = (f' id="{idp}m{m}"', f' id="{idp}mh{m}"') if idp is not None else ("", "")
+    return (f'<div class="mon"{ids[0]}><table><caption>{name}</caption><thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table>'
+            f'<ul class="mh"{ids[1]}>{month_items(m, hols) if items is None else items}</ul></div>')
 
 
 def year_html(hols):
@@ -869,10 +878,12 @@ def sitemap(urls_by_path):
     """One sitemap, every language, each url with its xhtml:link alternates."""
     sm = ['<?xml version="1.0" encoding="UTF-8"?>',
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">']
-    for p, lm in urls_by_path:
-        alts = "".join(f'<xhtml:link rel="alternate" hreflang="{x}" href="{SITE}{lang_base(x)}{p}"/>' for x in LANGS)
-        alts += f'<xhtml:link rel="alternate" hreflang="x-default" href="{SITE}{lang_base("es")}{p}"/>'
-        for x in LANGS:
+    for p, lm, *only in urls_by_path:
+        langs = only[0] if only else LANGS  # a page in fewer languages lists only those (one language: no alternates)
+        alts = "".join(f'<xhtml:link rel="alternate" hreflang="{x}" href="{SITE}{lang_base(x)}{p}"/>' for x in langs) if len(langs) > 1 else ""
+        if len(langs) > 1:
+            alts += f'<xhtml:link rel="alternate" hreflang="x-default" href="{SITE}{lang_base("es")}{p}"/>'
+        for x in langs:
             sm.append(f"  <url><loc>{SITE}{lang_base(x)}{p}</loc><lastmod>{lm}</lastmod>{alts}</url>")
     sm.append("</urlset>")
     return "\n".join(sm) + "\n"
@@ -939,7 +950,7 @@ def main():
              f"{ASSETS}icons/icon-192.png", f"{ASSETS}icons/icon-512.png"]
     sw = (ROOT / "sw.src.js").read_text("utf-8").replace("__VERSION__", ver).replace("__SHELL__", json.dumps(shell))
     (ROOT / "sw.js").write_text(sw, "utf-8", newline="\n")
-    print(f"ok · {len(pages_written) * len(LANGS)} urls · sw {ver}")
+    print(f"ok · {sum(len(w[2]) if len(w) > 2 else len(LANGS) for w in pages_written)} urls · sw {ver}")
 
 
 if __name__ == "__main__":

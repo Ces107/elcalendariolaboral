@@ -87,11 +87,17 @@ def faq_html(qas):
     return B.section("faq", t("h_faq"), f'<div class="faq">{items}</div>')
 
 
-def write(path, page, lastmod):
+def write(path, page, lastmod, langs=None):
+    """langs: the languages this page exists in, when not all of them (the sitemap lists only those)."""
     d = B.OUT / path
     d.mkdir(parents=True, exist_ok=True)
     (d / "index.html").write_text(_fix(page), "utf-8", newline="\n")
-    _written.append((path, lastmod))
+    _written.append((path, lastmod, langs) if langs else (path, lastmod))
+
+
+def school_link(r):
+    """Spanish only: the school calendar pages have no ca/gl/eu version."""
+    return f' · <a href="{B.BASE}calendario-escolar/{r["slug"]}/">Calendario escolar 2026-27 en {E(r["name"])}</a>' if ES else ""
 
 
 def city_list(cities):
@@ -172,7 +178,7 @@ def city_page(x, siblings, mine, pend):
     rnames = B.R(r)
     near = B.section("locales", E(B.fill(t("h_loc"), rnames)),
                      city_list(siblings) + f'<p class="more-l"><a href="{B.BASE}{r["slug"]}/">{E(B.fill(t("h1_region"), rnames))}</a> · '
-                     f'<a href="{B.BASE}festivos-locales/">{t("nav_locals")} 2027</a></p>')
+                     f'<a href="{B.BASE}festivos-locales/">{t("nav_locals")} 2027</a>{school_link(r)}</p>')
     key = f'{r["slug"]}-{c["slug"]}'
     lds = [crumbs_ld(crumbs), list_ld(B.fill(t("h_hol"), {**rnames, "region": name, "region_in": x["in"]}), x["hols"]),
            dataset_ld(B.fill(t("h_hol"), {**rnames, "region": name, "region_in": x["in"]}), desc,
@@ -289,7 +295,7 @@ def region_page(r, cities, pending):
     names = B.R(r)
     pend = f'<p class="m">Pendientes de publicar: {E(", ".join(pending))}.</p>' if pending and ES else ""
     locs = B.section("locales", E(B.fill(t("h_loc"), names)),
-                     city_list(cities) + pend + f'<p class="more-l"><a href="{B.BASE}festivos-locales/">{t("nav_locals")} 2027</a></p>')
+                     city_list(cities) + pend + f'<p class="more-l"><a href="{B.BASE}festivos-locales/">{t("nav_locals")} 2027</a>{school_link(r)}</p>')
     crumbs = [(t("spain"), ""), (name, f"{slug}/")]
     hname = B.fill(t("h_hol"), names)
     lds = [crumbs_ld(crumbs), list_ld(hname, f["hols"]),
@@ -334,7 +340,9 @@ def home_page():
             f'<a href="{DATA["source"]["url"]}" rel="noopener">{t("data_source")}</a></p><p class="next" id="next" hidden></p>'
             f'<div class="pickers">{B.region_select(None)}</div></div>')
     cal_sec = B.section("calendario", t("h_cal"), B.legend_html(["n"]) + B.year_html(nat), B.tools_html(), "cal")
-    reg_sec = B.section("comunidades", t("pick_region"), f'<ul class="chips">{chips}</ul>')
+    school = (f'<p class="more-l"><a href="{B.BASE}calendario-escolar/">Calendario escolar 2026-2027</a> · '
+              f'<a href="{B.BASE}vacaciones-escolares/navidad/">Vacaciones de Navidad 2026-2027</a></p>') if ES else ""
+    reg_sec = B.section("comunidades", t("pick_region"), f'<ul class="chips">{chips}</ul>{school}')
     hol_sec = B.section("festivos", E(B.fill(t("h_hol"), sp)), f'<ol class="hl">{"".join(B.hol_item(h) for h in nat)}</ol>')
     prow = "".join(B.pts_row(it) for it in B.all_breaks(nat))
     pts_sec = B.section("puentes", E(B.fill(t("h_pts"), sp)), f'<table class="tbl pts">{B.pts_head()}<tbody>{prow}</tbody></table>')
@@ -373,6 +381,9 @@ def write_pages(data, fix):
         pend = [c["name"] for c in loc["cities"] if c["region"] == x["r"]["slug"] and (c["status"] not in PUBLISHED or not c["holidays"])]
         write(x["path"], city_page(x, sib, mine, pend), x["c"]["source"]["checked"])
     write("festivos-locales/", hub_locales(loc, regions, cities), loc["updated"])
+    if ES:
+        import escolar
+        escolar.write_pages(data, write)
     return list(_written)
 
 

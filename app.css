@@ -119,6 +119,11 @@ select option:disabled { color: #8a929e; }
 .mh .k-i::before { background: var(--i); border-color: var(--i-b); }
 .mh .k-l::before { background: var(--l); border-color: var(--l-b); }
 .mh .we::before { background: transparent; border-width: 2px; }
+.mh .k-v::before { background: var(--v); border-color: var(--v-b); }
+/* school calendar: days outside the course blank, cells not clickable */
+.mon td.o { background: transparent; color: var(--mut); }
+.sch .mon td[data-d], .sch .mon td[data-d]:hover { cursor: default; box-shadow: none; }
+.tbl .sub th { padding-left: 28px; font-weight: 400; }
 .mh b { font-weight: 700; min-width: 16px; }
 .mh:empty { display: none; }
 .pop { position: absolute; z-index: 45; width: 280px; background: #fff; border: 1px solid var(--line); border-radius: 6px; box-shadow: 0 8px 24px rgba(16, 24, 40, .16); padding: 12px 14px; }
@@ -190,6 +195,7 @@ select option:disabled { color: #8a929e; }
 .ft h2 { font-size: 13px; font-weight: 700; margin-bottom: 8px; }
 .ft ul { list-style: none; margin: 0; padding: 0; }
 .ft li { padding: 3px 0; break-inside: avoid; }
+.ft ul + h2 { margin-top: 16px; }
 .ft .cols { columns: 3; column-gap: 16px; }
 .ft a { color: var(--ink2); text-decoration: none; }
 .ft-lang { display: flex; flex-wrap: wrap; gap: 4px 12px; margin: 12px 0 0; }
@@ -286,6 +292,15 @@ select option:disabled { color: #8a929e; }
   .hl .d { grid-column: 1 / -1; display: flex; gap: 8px; align-items: baseline; }
   .hl .h { grid-column: 1; }
   .links { columns: 1; }
+  .esc thead { display: none; }
+  .esc tr { display: flex; flex-wrap: wrap; column-gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line2); }
+  .esc th, .esc td { border: 0; padding: 0; flex: 1; }
+  .esc th { flex-basis: 100%; margin-bottom: 4px; }
+  .esc .sub th { padding-left: 16px; }
+  .esc td.num, .esc td.lk { flex: 0 0 auto; min-width: 40px; }
+  .esc td { font-size: 14px; }
+  .esc time { white-space: nowrap; }
+  .esc td[data-l]::before { content: attr(data-l); display: block; font-size: 12px; color: var(--mut); }
   .chips { grid-template-columns: 1fr 1fr; }
   .ft-in { grid-template-columns: 1fr; gap: 24px; }
   .ft .cols { columns: 2; }
