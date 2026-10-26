@@ -9,6 +9,9 @@
   var ASSETS = html.getAttribute('data-assets') || BASE;
   var HOST = location.host || 'elcalendariolaboral.es';
   var PAGE = doc.body.getAttribute('data-region') || '', HOME = !PAGE;
+  /* página de ciudad: sus 2 festivos locales vienen fijos en la página */
+  var CITY = doc.body.getAttribute('data-city') || '', CITYNAME = doc.body.getAttribute('data-cityname') || '';
+  var FIX = CITY ? JSON.parse(doc.body.getAttribute('data-locals') || '[]') : null, FZONE = doc.body.getAttribute('data-zone') || null;
   /* textos: build.py los incrusta en #cal-i18n desde su tabla T[idioma] */
   var T = JSON.parse($('cal-i18n').textContent);
   var f = function (s, o) { return s.replace(/\{(\w+)\}/g, function (m, k) { return o[k] != null ? o[k] : m; }); };
@@ -30,7 +33,7 @@
   function get(k) { try { return localStorage.getItem('cl27.' + k); } catch (e) { return null; } }
   function put(k, v) { try { if (v == null) localStorage.removeItem('cl27.' + k); else localStorage.setItem('cl27.' + k, v); } catch (e) { /* sin almacenamiento */ } }
 
-  var S = { region: null, zone: null, locals: ['', ''], n: 4, sel: null, vac: {}, vmode: false };
+  var S = { region: null, zone: null, locals: ['', ''], lnames: [], n: 4, sel: null, vac: {}, vmode: false };
   var key = function () { return S.region || 'es'; };
 
   /* ------------------------------------------------------------ datos */
@@ -47,7 +50,7 @@
       if (o && o.add) out.push({ date: o.add.date, name: o.add.name, kind: 'r' });
     }
     var boe = out.length;
-    if (S.region) S.locals.forEach(function (d) { if (d && IDX[d] != null && !out.some(function (h) { return h.date === d; })) out.push({ date: d, name: T.local_name, kind: 'l' }); });
+    if (S.region) S.locals.forEach(function (d, k) { if (d && IDX[d] != null && !out.some(function (h) { return h.date === d; })) out.push({ date: d, name: S.lnames[k] || T.local_name, kind: 'l' }); });
     out.sort(function (a, b) { return a.date < b.date ? -1 : a.date > b.date ? 1 : 0; });
     out.boe = boe;
     return out;
@@ -218,14 +221,14 @@
       if (h.kind === 'r') lbl.push(T.lbl_r);
       if (h.kind === 'l') { lbl.push(T.lbl_l); hasLoc = true; }
       if (weekend(i)) lbl.push(WDAY[i] === 6 ? T.lbl_6 : T.lbl_7);
-      var rm = k >= 0 ? '<button type="button" class="rm" data-rmloc="' + k + '" aria-label="' + esc(f(T.local_rm_aria, { d: longDay(i) })) + '">×</button>' : '';
+      var rm = k >= 0 && !FIX ? '<button type="button" class="rm" data-rmloc="' + k + '" aria-label="' + esc(f(T.local_rm_aria, { d: longDay(i) })) + '">×</button>' : '';
       return '<li class="' + h.kind + (weekend(i) ? ' wk' : '') + '"><time datetime="' + h.date + '">' + DOM[i] + ' ' + MON3[MON[i]] + '</time><span>' + esc(h.name) +
         (lbl.length ? '<small>' + lbl.join(' · ') + '</small>' : '') + '</span><em>' + WD3[WDAY[i]] + '</em>' + rm + '</li>';
     }).join('');
     if (S.region === 'canarias' && !S.zone) out += '<li class="z"><time>+1</time><span><button type="button" class="lnk" data-zone>' + T.island_feast + '</button></span><em></em></li>';
     var free = S.locals.filter(function (d) { return !d; }).length;
     if (S.region && free) out += '<li class="z"><time>+' + free + '</time><span><button type="button" class="lnk" data-addloc>' + T.loc_more + '</button></span><em></em></li>';
-    $('hlist').classList.toggle('hl-x', hasLoc);
+    $('hlist').classList.toggle('hl-x', hasLoc && !FIX);
     return out;
   }
 
@@ -261,15 +264,18 @@
     $('vclear').hidden = !used;
     if (!r) return;
 
-    $('rn').innerHTML = keepLast(r.name);
-    $('region').value = S.region;
-    if (z) {
+    if ($('rn')) $('rn').innerHTML = keepLast(r.name);
+    if ($('region')) $('region').value = S.region;
+    var nm = CITY ? CITYNAME : r.name;
+    $('h-fest').textContent = f(T.h_fest_r, { name: nm }); $('h-pts').textContent = f(T.h_pts_r, { name: nm });
+    if ($('more')) $('more').hidden = S.region !== PAGE; // lo de debajo es de la comunidad de la página
+    if (z && !CITY) {
       $('zone').setAttribute('aria-label', z.label);
       $('zone').innerHTML = (S.region === 'canarias' ? '<option value="">' + T.zone_prompt + '</option>' : '') +
         z.options.map(function (o) { return '<option value="' + o.slug + '"' + (S.zone === o.slug ? ' selected' : '') + '>' + esc(o.name) + '</option>'; }).join('');
       $('zt').innerHTML = keepLast(zoneText(zn));
       $('zone-f').hidden = false;
-    } else $('zone-f').hidden = true;
+    } else if ($('zone-f')) $('zone-f').hidden = true;
     placePick();
 
     PITEMS = bridges(hols);
@@ -284,8 +290,8 @@
 
     // exportar: la descarga lleva tus locales y vacaciones; las suscripciones, solo lo oficial
     if (icsUrl) URL.revokeObjectURL(icsUrl);
-    var label = r.name + (zn && zn.slug !== 'general' ? ' · ' + zn.name : '');
-    var suffix = S.zone && S.zone !== 'general' ? '-' + S.zone : '';
+    var label = CITY ? CITYNAME : r.name + (zn && zn.slug !== 'general' ? ' · ' + zn.name : '');
+    var suffix = CITY ? '-' + CITY : S.zone && S.zone !== 'general' ? '-' + S.zone : '';
     icsUrl = URL.createObjectURL(new Blob([ics(hols, label)], { type: 'text/calendar;charset=utf-8' }));
     $('dl').href = icsUrl; $('dl').download = T.ics_file + '-' + S.region + suffix + '.ics';
     var webcal = 'webcal://' + HOST + ASSETS + 'ics/' + S.region + suffix + '.ics';
@@ -317,6 +323,7 @@
 
   /* ------------------------------------------------------------ estado */
   function loadRegionState() {
+    if (FIX) { S.zone = FZONE; S.locals = FIX.map(function (x) { return x.date; }); S.lnames = FIX.map(function (x) { return x.name; }); loadVac(); return; }
     var z = D.zones[S.region];
     S.zone = z ? get('zone.' + S.region) : null;
     if (z && !z.options.some(function (o) { return o.slug === S.zone; })) S.zone = S.region === 'cataluna' ? 'general' : null;
@@ -339,7 +346,8 @@
     loadRegionState();
     if (push !== false) {
       try { history.replaceState(null, '', BASE + slug + '/'); } catch (e) { /* file:// */ }
-      doc.title = f(T.title_region, { name: REG[slug].name });
+      var tt = f(T.title_region, { name: REG[slug].name });
+      doc.title = tt.length > 60 ? f(T.title_region2, { name: REG[slug].name }) : tt;
     }
     render();
   }
@@ -363,11 +371,13 @@
   }
 
   /* ------------------------------------------------------------ eventos */
-  if (!HOME) {
+  if (!HOME && $('region')) {
     $('region').addEventListener('change', function () {
       if (!this.value) { location.href = BASE; return; }
       setRegion(this.value);
     });
+  }
+  if (!HOME && $('zone')) {
     $('zone').addEventListener('change', function () {
       S.zone = this.value || null; S.sel = null;
       put('zone.' + S.region, S.zone);
@@ -484,9 +494,9 @@
   $('vclear').addEventListener('click', function () { S.vac = {}; saveVac(); render(); if (!S.vmode) toast(T.toast_cleared); });
   doc.addEventListener('keydown', function (e) { if (e.key === 'Escape' && S.vmode) { setVmode(false); $('vmode').focus(); } });
 
-  $('pr').addEventListener('click', function () { window.print(); });
+  Array.prototype.forEach.call(doc.querySelectorAll('#pr,[data-print]'), function (b) { b.addEventListener('click', function () { window.print(); }); });
   $('sh').addEventListener('click', function () {
-    var url = location.origin + BASE + (S.region ? S.region + '/' : ''), title = doc.title;
+    var url = location.origin + location.pathname, title = doc.title;
     if (navigator.share) { navigator.share({ title: title, url: url }).catch(function () { /* cancelado */ }); return; }
     if (navigator.clipboard) navigator.clipboard.writeText(url).then(function () { toast(T.toast_copied); }, function () { toast(url); });
     else toast(url);

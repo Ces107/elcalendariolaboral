@@ -241,6 +241,37 @@ body.vmode .g b:focus-visible { outline-offset: -1px; border-radius: 50%; }
   body.vmode .calbar { margin-left: 0; margin-right: 0; padding: 0 0 10px; top: -16px; padding-top: 16px; }
   .ccaa { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
+/* migas, respuesta, bloque bajo la herramienta, páginas de tabla */
+.crumbs { margin: 0 0 10px; font-size: 13px; color: var(--mut); }
+.crumbs a { color: var(--mut); text-decoration-color: var(--line2); }
+.crumbs [aria-current] { color: var(--ink2); }
+.ans { margin: 14px 0 0; max-width: 62ch; font-size: 16px; color: var(--ink2); }
+.mut { color: var(--mut); font-size: 13.5px; margin: 10px 0 0; }
+.more { padding-top: 8px; padding-bottom: 56px; }
+.more-in { display: grid; gap: 36px 56px; border-top: 1px solid var(--line); padding-top: 28px; }
+.more h2, .faq h2, .sec h2 { margin: 0 0 4px; font-size: 17px; line-height: 1.4; font-weight: 600; letter-spacing: -.01em; }
+.links { margin: 0; padding: 0; list-style: none; }
+.links li { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 44px; border-top: 1px solid var(--line); font-size: 14.5px; }
+.links li:first-child { border-top: 0; }
+.links + .links li:first-child { border-top: 1px solid var(--line); }
+.links span { color: var(--mut); font-size: 13px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.faq details { border-top: 1px solid var(--line); }
+.faq details:first-of-type { border-top: 0; }
+.faq summary { padding: 11px 0; cursor: pointer; font-size: 14.5px; font-weight: 500; }
+.faq details p { margin: 0 0 14px; font-size: 14.5px; color: var(--ink2); max-width: 62ch; }
+.pg-in { padding-top: 28px; padding-bottom: 64px; }
+.pg-in > .faq, .sec { margin-top: 40px; }
+.tbl { width: 100%; border-collapse: collapse; font-size: 14.5px; font-variant-numeric: tabular-nums; }
+.tbl th, .tbl td { padding: 10px 12px 10px 0; text-align: left; vertical-align: top; border-top: 1px solid var(--line); font-weight: 400; }
+.tbl thead th { border-top: 0; padding-top: 4px; font-size: 12.5px; font-weight: 500; color: var(--mut); }
+.tbl tbody th { font-weight: 500; }
+.tbl td:last-child, .tbl th:last-child { padding-right: 0; }
+.tbl .pend th, .tbl .pend td { color: var(--mut); }
+.tbl time { white-space: nowrap; }
+.sec .tbl { table-layout: fixed; }
+.sec .tbl th:nth-child(1) { width: 44%; } .sec .tbl th:nth-child(3) { width: 72px; }
+@media (min-width: 900px) { .more-in { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+@media print { .more, .crumbs, .ans { display: none !important; } }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 
 /* impresión: una hoja A4 apaisada con el año, la lista y la fuente */

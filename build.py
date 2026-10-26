@@ -55,12 +55,17 @@ T = {"es": {
     "wd1": "LMXJVSD",
     "long_day": "{wd} {d} de {m}",
     # head
-    "title_home": "Calendario laboral 2027: festivos y puentes por comunidad",
-    "desc_home": "Los festivos de 2027 de tu comunidad, tus puentes y cuántos días libres sacas con tus vacaciones. Según el BOE. Añádelos a tu calendario.",
+    "title_home": "Calendario laboral 2027: festivos y puentes en España",
+    "desc_home": "Calendario laboral 2027 de España según el BOE: festivos de tu comunidad y tu ciudad, puentes y un planificador que te dice cuántos días libras.",
     "title_region": "Calendario laboral 2027 {name}: festivos y puentes",
-    "desc_region": "Los {n} festivos de 2027 en {place}, con su día de la semana, y los {p} puentes del año. Según el BOE del 13 de octubre de 2026.",
-    "ld_app": "El Calendario Laboral 2027", "ld_list": "Festivos 2027 en {place}", "ld_event": "Festivo laboral 2027 en {place}",
-    "crumb_home": "Calendario laboral 2027",
+    "title_region2": "Calendario laboral 2027 {name}: festivos",
+    "desc_region": "Festivos 2027 en {name}: los {n} del BOE con su día, {p} puentes y planificador de vacaciones. Añade los 2 locales de tu ciudad y expórtalo.",
+    "ld_app": "El Calendario Laboral 2027", "ld_list": "Festivos 2027 en {place}",
+    "crumb_home": "España",
+    "h_fest_r": "Festivos 2027 en {name}", "h_pts_r": "Puentes 2027 en {name}", "h_fest_home": "Festivos 2027 en España",
+    "csv_btn": "Excel (CSV)", "print_btn": "Imprimir",
+    "sub_note_city": "Google y Apple: los festivos de {name}, sin tus vacaciones.",
+    "updated": "actualizado {d}",
     "title_privacy": "Privacidad · El Calendario Laboral",
     "desc_privacy": "Privacidad de El Calendario Laboral: no guardamos datos tuyos en servidores.",
     # page
@@ -105,7 +110,7 @@ T = {"es": {
     "app_name": "Calendario laboral 2027", "app_short": "Laboral 2027", "app_desc": "Festivos, puentes y vacaciones 2027 por comunidad.",
 }}
 # Strings app.js needs (embedded as #cal-i18n).
-JS_KEYS = ["months", "mon3", "wd", "wd3", "wd1", "long_day", "title_region", "spain", "zone_prompt", "zone_general",
+JS_KEYS = ["months", "mon3", "wd", "wd3", "wd1", "long_day", "title_region", "title_region2", "h_fest_r", "h_pts_r", "spain", "zone_prompt", "zone_general",
            "island_feast", "h_lw", "meta_fest", "meta_isle", "meta_loc", "meta_pts1", "meta_pts", "meta_lab", "home_meta",
            "lbl_r", "lbl_l", "lbl_6", "lbl_7", "loc_more", "loc_out", "local_name", "local_rm_aria",
            "vmode", "done", "vhint", "vac_days1", "vac_days", "days", "free", "cost1", "cost", "trade_sr",
@@ -341,11 +346,26 @@ def lw_html(items):
     return f'<h3 class="sub">{t("h_lw")}</h3><ul class="lw">{li}</ul>'
 
 
+HUBS = [("festivos/", "Festivos 2027"), ("puentes/", "Puentes 2027"), ("dias-laborables/", "Días laborables 2027"),
+        ("festivos-locales/", "Festivos locales 2027"), ("calendario-escolar/", "Calendario escolar 2026-2027"),
+        ("vacaciones-escolares/navidad/", "Navidad en los colegios")]
+
+
+def pick(limit, *cands):
+    """First candidate that fits in `limit` characters (titles 60, descriptions 155); else the shortest."""
+    for c in cands:
+        if len(c) <= limit:
+            return c
+    return min(cands, key=len)
+
+
 def footer_html(data, current=None):
     regs = "".join(f'<a href="{BASE}{r["slug"]}/"{" aria-current=page" if r["slug"] == current else ""}>{E(r["name"])}</a>'
                    for r in data["regions"])
+    hubs = "".join(f'<a href="{BASE}{p}"{" aria-current=page" if p == current else ""}>{E(n)}</a>' for p, n in HUBS)
     s = data["source"]
-    return (f'<footer class="foot"><div class="wrap"><nav class="regs" aria-label="{t("foot_regions")}">{regs}</nav>'
+    return (f'<footer class="foot"><div class="wrap"><nav class="regs hubs" aria-label="Calendarios">{hubs}</nav>'
+            f'<nav class="regs" aria-label="{t("foot_regions")}">{regs}</nav>'
             f'<p>{t("foot_data")} <a href="{s["url"]}" rel="noopener">{t("foot_boe")}</a> · '
             f'<a href="{BASE}{t("privacy_slug")}/">{t("foot_privacy")}</a></p></div></footer>')
 
@@ -413,38 +433,29 @@ def meta_html(n_boe, can, n_pts, n_lab):
             f'<span>{t("meta_lab", n=n_lab)}</span>')
 
 
-def src_html(data):
-    return (f'<p class="src"><a href="{data["source"]["url"]}" rel="noopener" title="{t("src_title", d=data["updated"])}">{t("src")}</a></p>')
+def dmy(iso):
+    """'2026-10-26' -> '26 oct 2026'"""
+    d = dt.date.fromisoformat(iso)
+    return f'{d.day} {t("mon3")[d.month - 1]} {d.year}'
 
 
-# ---------------------------------------------------------------- region page
-
-def region_page(data, r):
-    slug, name = r["slug"], r["name"]
-    hols = region_holidays(data, slug)
-    pts = puentes(hols)
-    n_hol = len(hols) + (1 if slug == "canarias" else 0)
-    title = t("title_region", name=name)
-    desc = t("desc_region", n=n_hol, place=r["official"], p=len(pts))
-    canon = f"{URL}{slug}/"
-    events = [{"@type": "ListItem", "position": i + 1, "item": {
-        "@type": "Event", "name": f"{h['name']} ({name})", "startDate": h["date"], "endDate": h["date"],
-        "eventStatus": "https://schema.org/EventScheduled",
-        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-        "location": {"@type": "Place", "name": r["official"], "address": {"@type": "PostalAddress", "addressRegion": r["official"], "addressCountry": "ES"}},
-        "description": t("ld_event", place=r["official"])}} for i, h in enumerate(hols)]
-    ld = [
-        {"@context": "https://schema.org", "@type": "ItemList", "name": t("ld_list", place=r["official"]),
-         "numberOfItems": len(events), "itemListElement": events},
-        {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": t("crumb_home"), "item": URL},
-            {"@type": "ListItem", "position": 2, "name": name, "item": canon}]},
-    ]
-    ld_html = "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in ld)
-    return head_html(title, desc, f"{slug}/", f"{SITE}{ASSETS}og/{slug}.png", ld_html) + app_body(data, r)
+def src_html(data, extra=""):
+    return (f'<p class="src"><a href="{data["source"]["url"]}" rel="noopener">{t("src")}</a>{extra}{SEP}'
+            f'<time datetime="{data["updated"]}">{t("updated", d=dmy(data["updated"]))}</time></p>')
 
 
-# ---------------------------------------------------------------- app body (home and every region page)
+# ---------------------------------------------------------------- app body (home, every region page and every city page)
+
+def crumbs_html(items):
+    """items: [(name, path)] below the language base; the last one is the current page."""
+    out = []
+    for k, (name, path) in enumerate(items):
+        if k == len(items) - 1:
+            out.append(f'<span aria-current="page">{E(name)}</span>')
+        else:
+            out.append(f'<a href="{BASE}{path}">{E(name)}</a>')
+    return '<nav class="crumbs" aria-label="Migas de pan">' + '<span aria-hidden="true"> › </span>'.join(out) + '</nav>'
+
 
 def keep_last(s):
     """The selector chevron sticks to the last word (same as keepLast in app.js)."""
@@ -458,13 +469,19 @@ def zone_text(opt):
     return t("zone_general") if opt["slug"] == "general" else opt["name"]
 
 
-def hero_html(data, r, hols, pts, lab):
-    """Region page: the title carries the region selector. Home: plain title and the 19 regions as links."""
+def hero_html(data, r, hols, pts, lab, city=None):
+    """Region page: the title carries the region selector. City page: plain title, answer line and both sources.
+    Home: plain title and the 19 regions as links."""
     if not r:
         grid = "".join(f'<a href="{BASE}{x["slug"]}/" data-slug="{x["slug"]}">{E(x["name"])}</a>' for x in data["regions"])
         return (f'<section class="hero wrap"><h1>{t("h1")}</h1><p class="meta" id="meta"><span>{t("home_meta", n=len(hols))}</span></p>'
                 f'{src_html(data)}<nav class="ccaa" id="ccaa" aria-label="{t("home_grid")}">{grid}</nav></section>')
     slug = r["slug"]
+    boe = len([h for h in hols if h["kind"] != "l"])
+    if city:
+        return (f'<section class="hero wrap">{city["crumbs"]}<h1><span class="h1a">{t("h1")}</span> {E(city["title_name"])}</h1>'
+                f'<p class="ans">{city["ans"]}</p><p class="meta" id="meta">{meta_html(boe, False, len(pts), lab)}</p>'
+                f'{city["src"]}</section>')
     zone = data["zones"].get(slug)
     is_can = slug == "canarias"
     options = f'<option value="">{t("spain")}</option>' + "".join(
@@ -477,43 +494,74 @@ def hero_html(data, r, hols, pts, lab):
                      f'<select id="zone" aria-label="{E(zone["label"])}">{zopts}</select></div>')
     else:
         zone_html = f'<div class="pick zone" id="zone-f" hidden><span class="pv" id="zt"></span><select id="zone" aria-label="{t("zone_label")}"></select></div>'
-    boe = len(hols)
     return (f'<section class="hero wrap"><div class="pick reg" id="reg-f"><h1><span class="h1a">{t("h1")}</span> '
             f'<span class="pv" id="rn">{keep_last(r["name"])}</span></h1><select id="region" aria-label="{t("region_label")}">{options}</select></div>'
             f'{zone_html}<p class="meta" id="meta">{meta_html(boe, is_can, len(pts), lab)}</p>{src_html(data)}</section>')
 
 
-def app_body(data, r=None):
-    """One app: the home has no region (national holidays + the 19 regions), a region page has it chosen.
-    Lists are rendered here too, so the content is in the HTML before app.js runs."""
+def page_holidays(data, r=None, city=None):
+    """What the tool shows first: national (home), the region's BOE list, or the region (island if any) plus the city's 2 locals."""
+    if not r:
+        return [h for h in region_holidays(data, "madrid") if h["kind"] == "n"]
+    hols = region_holidays(data, r["slug"], city["zone"] if city else None)
+    if city:
+        hols = sorted(hols + [{"date": h["date"], "name": h["name"], "code": 0, "kind": "l"} for h in city["holidays"]],
+                      key=lambda h: h["date"])
+    return hols
+
+
+def workdays(hols, minus=0):
+    hd = {h["date"] for h in hols}
+    return sum(1 for d in DAYS if d.weekday() < 5 and d.isoformat() not in hd) - minus
+
+
+def app_body(data, r=None, city=None, more=""):
+    """One app: the home has no region (national holidays + the 19 regions), a region page has it chosen, a city page
+    has the region plus the city's 2 local holidays fixed. Lists are rendered here too, so the content is in the HTML
+    before app.js runs. `more` is the static block below the tool (links and FAQ)."""
     slug = r["slug"] if r else ""
-    hols = region_holidays(data, slug) if r else [h for h in region_holidays(data, "madrid") if h["kind"] == "n"]
+    hols = page_holidays(data, r, city)
     hmap = {}
     for h in hols:
         hmap.setdefault(h["date"], h)
-    is_can = slug == "canarias"
+    is_can = slug == "canarias" and not city
     hide = "" if r else " hidden"
     pts = puentes(hols) if r else []
-    lab = sum(1 for d in DAYS if d.weekday() < 5 and d.isoformat() not in hmap) - (1 if is_can else 0)
+    lab = workdays(hols, 1 if is_can else 0)
     hl = "".join(hol_li(h) for h in hols)
     if is_can:
         hl += f'<li class="z"><time>+1</time><span><button type="button" class="lnk" data-zone>{t("island_feast")}</button></span><em></em></li>'
-    if r:
+    if r and not city:
         hl += f'<li class="z"><time>+2</time><span><button type="button" class="lnk" data-addloc>{t("loc_more")}</button></span><em></em></li>'
     compact = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
     strings = json.dumps({k: t(k) for k in JS_KEYS}, ensure_ascii=False, separators=(",", ":"))
-    ics = f"ics/{slug}.ics"
+    key = f'{slug}-{city["slug"]}' if city else slug
+    ics = f"ics/{key}.ics"
     webcal = f"webcal://{HOST}{ASSETS}{ics}"
-    return f"""<body class="app{" home" if not r else ""}" data-region="{slug}">
+    name = city["title_name"] if city else (r["name"] if r else "")
+    h_fest = t("h_fest_r", name=name) if r else t("h_fest_home")
+    h_pts = t("h_pts_r", name=name) if r else t("h_pts")
+    attrs = f' data-region="{slug}"'
+    if city:
+        locs = [{"date": h["date"], "name": h["name"]} for h in city["holidays"]]
+        attrs += (f' data-city="{city["slug"]}" data-cityname="{E(city["title_name"])}" data-zone="{city["zone"] or ""}"'
+                  f' data-locals="{E(json.dumps(locs, ensure_ascii=False, separators=(",", ":")))}"')
+    note = t("sub_note_city", name=E(city["title_name"])) if city else t("sub_note")
+    path = (f'{slug}/{city["slug"]}/' if city else f"{slug}/") if r else ""
+    exp = ""
+    if r:
+        exp = (f'<a class="btn" href="{ASSETS}csv/{key}.csv" download="calendario-laboral-2027-{key}.csv">{t("csv_btn")}</a>'
+               f'<button class="btn" type="button" data-print>{t("print_btn")}</button>')
+    return f"""<body class="app{" home" if not r else ""}"{attrs}>
 {top_html()}
 <main>
-{hero_html(data, r, hols, pts, lab)}
+{hero_html(data, r, hols, pts, lab, city)}
 <div class="wrap body">
   <div class="side">
-    <section class="blk" id="festivos" aria-labelledby="h-fest"><h2 id="h-fest">{t("h_fest")}</h2><ol class="hlist" id="hlist">{hl}</ol>
+    <section class="blk" id="festivos" aria-labelledby="h-fest"><h2 id="h-fest">{E(h_fest)}</h2><ol class="hlist" id="hlist">{hl}</ol>
       <div class="locin" id="locin"{hide}><input type="date" id="l0" min="2027-01-01" max="2027-12-31" tabindex="-1" aria-hidden="true" aria-label="{t("loc_aria")}"><input type="date" id="l1" min="2027-01-01" max="2027-12-31" tabindex="-1" aria-hidden="true" aria-label="{t("loc_aria")}"></div>
     </section>
-    <section class="blk" id="puentes" aria-labelledby="h-pts"{hide}><h2 id="h-pts">{t("h_pts")}</h2><ol class="plist" id="plist">{"".join(puente_li(it, k) for k, it in enumerate(pts))}</ol>
+    <section class="blk" id="puentes" aria-labelledby="h-pts"{hide}><h2 id="h-pts">{E(h_pts)}</h2><ol class="plist" id="plist">{"".join(puente_li(it, k) for k, it in enumerate(pts))}</ol>
       <div id="lw">{lw_html(long_weekends(hols)) if r else ""}</div></section>
     <section class="blk" id="vacaciones" aria-labelledby="h-vac"{hide}><h2 id="h-vac">{t("h_vac")}</h2>
       <div class="step"><button type="button" id="vm" aria-label="{t("step_minus")}">−</button><input id="vn" type="number" inputmode="numeric" min="1" max="30" value="4" aria-label="{t("step_input")}"><button type="button" id="vp" aria-label="{t("step_plus")}">+</button><span aria-hidden="true">{t("step_lbl")}</span></div>
@@ -525,10 +573,11 @@ def app_body(data, r=None):
       <div class="calbar">{key_html()}<p class="vhint" id="vhint" hidden><span id="vstat" aria-live="polite">{t("vhint")}</span> <button type="button" class="lnk" id="vclear" hidden>{t("vclear")}</button></p><button class="tbtn" id="vmode" type="button"{hide}><span id="vlabel">{t("vmode")}</span><span id="vcount"></span></button></div>
       {year_html(hmap)}
     </section>
-    <div class="exp" id="exp"{hide}><a class="btn p" id="dl" href="{ASSETS}{ics}" download="{t("ics_file")}.ics">{t("ics_btn")}</a><a class="btn" id="gc" href="https://calendar.google.com/calendar/r?cid={quote(webcal, safe="")}" rel="noopener" target="_blank">{t("gcal")}</a><a class="btn" id="wc" href="{webcal}">{t("apple")}</a><p class="note">{t("sub_note")}</p></div>
-    <p class="pfoot">{SITE.split("://", 1)[1]}{BASE}{slug + "/" if slug else ""} · {t("print_src", boe=E(data["source"]["boe"]))}</p>
+    <div class="exp" id="exp"{hide}><a class="btn p" id="dl" href="{ASSETS}{ics}" download="{t("ics_file")}-{key}.ics">{t("ics_btn")}</a><a class="btn" id="gc" href="https://calendar.google.com/calendar/r?cid={quote(webcal, safe="")}" rel="noopener" target="_blank">{t("gcal")}</a><a class="btn" id="wc" href="{webcal}">{t("apple")}</a>{exp}<p class="note">{note}</p></div>
+    <p class="pfoot">{HOST}{BASE}{path} · {t("print_src", boe=E(data["source"]["boe"]))}</p>
   </div>
 </div>
+{more}
 </main>
 {footer_html(data, slug or None)}
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
@@ -539,17 +588,6 @@ def app_body(data, r=None):
 </body>
 </html>
 """
-
-
-# ---------------------------------------------------------------- app page
-
-def app_page(data):
-    title, desc = t("title_home"), t("desc_home")
-    ld = {"@context": "https://schema.org", "@type": "WebApplication", "name": t("ld_app"), "url": URL,
-          "applicationCategory": "UtilitiesApplication", "operatingSystem": "Web, Android", "inLanguage": LANG,
-          "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "description": desc}
-    ld_html = f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
-    return head_html(title, desc, "", f"{SITE}{ASSETS}og/espana.png", ld_html) + app_body(data)
 
 
 # ---------------------------------------------------------------- privacy page
@@ -600,7 +638,7 @@ def og_image(path, label, sub, hols):
     d = ImageDraw.Draw(im)
     X = 72 * S
     d.text((X, 76 * S), t("og_l1"), font=font(44 * S, "bl"), fill=INK)
-    size = 80 if len(label) <= 11 else (62 if len(label) <= 16 else 48)
+    size = 80 if len(label) <= 11 else (62 if len(label) <= 16 else (48 if len(label) <= 20 else 36))
     d.text((X, 150 * S), label, font=font(size * S, "bl"), fill=INK)
     d.text((X, 286 * S), sub, font=font(30 * S, "sb"), fill=MUT)
     d.text((X, 548 * S), (HOST + lang_base(LANG)).rstrip("/"), font=font(24 * S, "r"), fill=MUT)
@@ -678,15 +716,13 @@ def main():
     fix = lambda s: s.replace("{CSSV}", cssv).replace("{JSV}", jsv)
 
     OUT.mkdir(exist_ok=True)
-    (OUT / "index.html").write_text(fix(app_page(data)), "utf-8", newline="\n")
     (OUT / t("privacy_slug")).mkdir(exist_ok=True)
     (OUT / t("privacy_slug") / "index.html").write_text(fix(privacy_page(data)), "utf-8", newline="\n")
-    for r in data["regions"]:
-        d = OUT / r["slug"]
-        d.mkdir(exist_ok=True)
-        (d / "index.html").write_text(fix(region_page(data, r)), "utf-8", newline="\n")
+    sys.modules.setdefault("build", sys.modules[__name__])  # pages.py does "import build": reuse this module, not a second copy
+    import pages
+    pages_written = pages.write_pages(data, fix)  # home, regions, cities, hubs, school pages: [(path, lastmod)]
     if LANG != "es":
-        print(f"ok · {LANG} · {len(data['regions']) + 2} pages in {OUT}")
+        print(f"ok · {LANG} · {len(pages_written) + 1} pages in {OUT}")
         return
 
     # shared files: written once, by the Spanish build
@@ -710,10 +746,10 @@ def main():
             og_image(ROOT / "og" / f"{r['slug']}.png", r["name"], t("og_sub", n=n, p=len(puentes(hols))), hols)
         icons(ROOT / "icons")
 
-    paths = [""] + [f"{r['slug']}/" for r in data["regions"]] + [f'{t("privacy_slug")}/']
-    urls = [SITE + lang_base(x) + p for x in LANGS for p in paths]
+    pages.write_shared(data, "--no-img" not in sys.argv)  # city .ics, every .csv, city og images, 404
+    urls = [(SITE + lang_base(x) + p, lm) for x in LANGS for p, lm in pages_written]
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    sm += [f"  <url><loc>{u}</loc><lastmod>{data['updated']}</lastmod><changefreq>monthly</changefreq><priority>{'1.0' if u == URL else '0.8'}</priority></url>" for u in urls]
+    sm += [f"  <url><loc>{u}</loc><lastmod>{lm}</lastmod></url>" for u, lm in urls]
     sm.append("</urlset>")
     (ROOT / "sitemap.xml").write_text("\n".join(sm) + "\n", "utf-8", newline="\n")
 
