@@ -20,9 +20,7 @@ URL params: `d` days (default 22), `m` city/island slug, `x` blocked months 1-12
 - [x] header fits 861-1140 px (install and language as icons there)
 - [x] test_vacopt.py also checks the generated pages (static total, 22 cells, never on weekend/holiday, og, links)
 - [x] Playwright (scratchpad pw_vac.py): 390x844 + 1440, no console errors, no overflow, card PNGs render, shared URL reproduces the plan
-- [x] seo/press-vacaciones.md (5 lines + table)
 
 ## Next (ideas, not started)
-- [ ] city ranking section on the hub ("Totana 60, 108 ciudades 58") if press picks it up
 - [ ] ca/gl/eu: no i18n strings for this page yet; stays Spanish-only
 - [ ] OG quantize can turn regional yellow pinkish on small areas (cosmetic)
