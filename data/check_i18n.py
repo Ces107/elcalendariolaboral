@@ -61,6 +61,8 @@ def main():
             for f in REGION_FIELDS:
                 if not ok_text(entry.get(f)):
                     err(f"region {slug}.{lang}.{f}: missing")
+            if "seo" in entry and (not ok_text(entry["seo"]) or entry["seo"] == entry.get("name")):
+                err(f"region {slug}.{lang}.seo: empty or same as name (omit it instead)")
             if slug in RULE and entry.get("name") != RULE[slug]:
                 err(f"region {slug}.{lang}.name: must be {RULE[slug]!r} (owner rule), got {entry.get('name')!r}")
     for slug in regions:
@@ -105,10 +107,25 @@ def main():
         es = " ".join(t or "" for t in texts(tr.get("es")))
         want = placeholders(es)
         for lang in LANGS:
-            for t in texts(tr.get(lang)):
+            v = tr.get(lang)
+            for form, t in ([("one", v.get("one")), ("other", v.get("other"))] if isinstance(v, dict) else [("", v)]):
                 got = placeholders(t)
-                if t and got != want:
-                    err(f"ui {key}.{lang}: placeholders {sorted(got)} != es {sorted(want)}")
+                # A singular form may spell the number out ("Egun bat falta da", "jaiegun 1").
+                need = want - {"n"} if form == "one" else want
+                if t and not (need <= got <= want):
+                    err(f"ui {key}.{lang}{'.' + form if form else ''}: placeholders {sorted(got)} != es {sorted(want)}")
+
+    # Language-first views read by build.py localize() must agree with the main tables
+    for lang in LANGS:
+        v = i18n.get(lang)
+        if v is None:
+            continue
+        for slug, tr in regions.items():
+            if v.get("regions", {}).get(slug) != (tr.get(lang) or {}).get("name"):
+                err(f"{lang}.regions.{slug}: differs from regions.{slug}.{lang}.name")
+        for n, tr in hol.items():
+            if v.get("holidays", {}).get(n) != tr.get(lang):
+                err(f"{lang}.holidays[{n!r}]: differs from holidays")
 
     # Months and weekdays
     for lang in ALL:

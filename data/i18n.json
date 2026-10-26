@@ -1,0 +1,3829 @@
+{
+ "_doc": "Translations for the ca/gl/eu versions of elcalendariolaboral.es. Spanish stays as data/2027.json. regions.<slug>.<lang>: name/short/official, optional seo (usual form in that language, for <title>/meta in parentheses only), plus 'in' (en/a/-n form) and 'of' (de/del/-ko form). holidays: keyed by the exact Spanish name in 2027.json (including island and Arán holidays). ui.<key>.<lang>: string, or {one, other} for counts (choose 'one' when n == 1). Placeholders: {n} {p} {a} {b} {date}; {region} = regions.<slug>.<lang>.name, {region_in} = .in, {region_of} = .of (Spanish templates keep 'en {region}'). Validate with: python data/check_i18n.py Top-level ca/gl/eu keys are derived views of the same data in the shape build.py localize() reads ({regions: slug->name, official, holidays, zones: {'canarias': label, 'canarias.tenerife': name}}); regenerate, don't hand-edit.",
+ "languages": [
+  "es",
+  "ca",
+  "gl",
+  "eu"
+ ],
+ "regions": {
+  "andalucia": {
+   "ca": {
+    "name": "Andalusia",
+    "short": "Andalusia",
+    "official": "Andalusia",
+    "in": "a Andalusia",
+    "of": "d'Andalusia"
+   },
+   "gl": {
+    "name": "Andalucía",
+    "short": "Andalucía",
+    "official": "Andalucía",
+    "in": "en Andalucía",
+    "of": "de Andalucía"
+   },
+   "eu": {
+    "name": "Andaluzia",
+    "short": "Andaluzia",
+    "official": "Andaluzia",
+    "in": "Andaluzian",
+    "of": "Andaluziako"
+   }
+  },
+  "aragon": {
+   "ca": {
+    "name": "Aragó",
+    "short": "Aragó",
+    "official": "Aragó",
+    "in": "a Aragó",
+    "of": "d'Aragó"
+   },
+   "gl": {
+    "name": "Aragón",
+    "short": "Aragón",
+    "official": "Aragón",
+    "in": "en Aragón",
+    "of": "de Aragón"
+   },
+   "eu": {
+    "name": "Aragoi",
+    "short": "Aragoi",
+    "official": "Aragoi",
+    "in": "Aragoin",
+    "of": "Aragoiko"
+   }
+  },
+  "asturias": {
+   "ca": {
+    "name": "Astúries",
+    "short": "Astúries",
+    "official": "Principat d'Astúries",
+    "in": "a Astúries",
+    "of": "d'Astúries"
+   },
+   "gl": {
+    "name": "Asturias",
+    "short": "Asturias",
+    "official": "Principado de Asturias",
+    "in": "en Asturias",
+    "of": "de Asturias"
+   },
+   "eu": {
+    "name": "Asturias",
+    "short": "Asturias",
+    "official": "Asturiasko Printzerria",
+    "in": "Asturiasen",
+    "of": "Asturiasko"
+   }
+  },
+  "baleares": {
+   "ca": {
+    "name": "Illes Balears",
+    "short": "Illes Balears",
+    "official": "Illes Balears",
+    "in": "a les Illes Balears",
+    "of": "de les Illes Balears"
+   },
+   "gl": {
+    "name": "Illes Balears",
+    "short": "Illes Balears",
+    "official": "Illes Balears",
+    "in": "nas Illes Balears",
+    "of": "das Illes Balears",
+    "seo": "Illas Baleares"
+   },
+   "eu": {
+    "name": "Illes Balears",
+    "short": "Illes Balears",
+    "official": "Illes Balears",
+    "in": "Illes Balears-en",
+    "of": "Illes Balears-ko",
+    "seo": "Balearrak"
+   }
+  },
+  "canarias": {
+   "ca": {
+    "name": "Canàries",
+    "short": "Canàries",
+    "official": "Canàries",
+    "in": "a les Canàries",
+    "of": "de les Canàries"
+   },
+   "gl": {
+    "name": "Canarias",
+    "short": "Canarias",
+    "official": "Canarias",
+    "in": "en Canarias",
+    "of": "de Canarias"
+   },
+   "eu": {
+    "name": "Kanariak",
+    "short": "Kanariak",
+    "official": "Kanariak",
+    "in": "Kanarietan",
+    "of": "Kanarietako"
+   }
+  },
+  "cantabria": {
+   "ca": {
+    "name": "Cantàbria",
+    "short": "Cantàbria",
+    "official": "Cantàbria",
+    "in": "a Cantàbria",
+    "of": "de Cantàbria"
+   },
+   "gl": {
+    "name": "Cantabria",
+    "short": "Cantabria",
+    "official": "Cantabria",
+    "in": "en Cantabria",
+    "of": "de Cantabria"
+   },
+   "eu": {
+    "name": "Kantabria",
+    "short": "Kantabria",
+    "official": "Kantabria",
+    "in": "Kantabrian",
+    "of": "Kantabriako"
+   }
+  },
+  "castilla-la-mancha": {
+   "ca": {
+    "name": "Castella-la Manxa",
+    "short": "Castella-la Manxa",
+    "official": "Castella-la Manxa",
+    "in": "a Castella-la Manxa",
+    "of": "de Castella-la Manxa"
+   },
+   "gl": {
+    "name": "Castela-A Mancha",
+    "short": "Castela-A Mancha",
+    "official": "Castela-A Mancha",
+    "in": "en Castela-A Mancha",
+    "of": "de Castela-A Mancha"
+   },
+   "eu": {
+    "name": "Gaztela-Mantxa",
+    "short": "Gaztela-Mantxa",
+    "official": "Gaztela-Mantxa",
+    "in": "Gaztela-Mantxan",
+    "of": "Gaztela-Mantxako"
+   }
+  },
+  "castilla-y-leon": {
+   "ca": {
+    "name": "Castella i Lleó",
+    "short": "Castella i Lleó",
+    "official": "Castella i Lleó",
+    "in": "a Castella i Lleó",
+    "of": "de Castella i Lleó"
+   },
+   "gl": {
+    "name": "Castela e León",
+    "short": "Castela e León",
+    "official": "Castela e León",
+    "in": "en Castela e León",
+    "of": "de Castela e León"
+   },
+   "eu": {
+    "name": "Gaztela eta León",
+    "short": "Gaztela eta León",
+    "official": "Gaztela eta León",
+    "in": "Gaztela eta Leonen",
+    "of": "Gaztela eta Leongo"
+   }
+  },
+  "cataluna": {
+   "ca": {
+    "name": "Catalunya",
+    "short": "Catalunya",
+    "official": "Catalunya",
+    "in": "a Catalunya",
+    "of": "de Catalunya"
+   },
+   "gl": {
+    "name": "Catalunya",
+    "short": "Catalunya",
+    "official": "Catalunya",
+    "in": "en Catalunya",
+    "of": "de Catalunya",
+    "seo": "Cataluña"
+   },
+   "eu": {
+    "name": "Catalunya",
+    "short": "Catalunya",
+    "official": "Catalunya",
+    "in": "Catalunyan",
+    "of": "Catalunyako",
+    "seo": "Katalunia"
+   }
+  },
+  "extremadura": {
+   "ca": {
+    "name": "Extremadura",
+    "short": "Extremadura",
+    "official": "Extremadura",
+    "in": "a Extremadura",
+    "of": "d'Extremadura"
+   },
+   "gl": {
+    "name": "Estremadura",
+    "short": "Estremadura",
+    "official": "Estremadura",
+    "in": "en Estremadura",
+    "of": "de Estremadura"
+   },
+   "eu": {
+    "name": "Extremadura",
+    "short": "Extremadura",
+    "official": "Extremadura",
+    "in": "Extremaduran",
+    "of": "Extremadurako"
+   }
+  },
+  "galicia": {
+   "ca": {
+    "name": "Galiza",
+    "short": "Galiza",
+    "official": "Galiza",
+    "in": "a Galiza",
+    "of": "de Galiza",
+    "seo": "Galícia"
+   },
+   "gl": {
+    "name": "Galiza",
+    "short": "Galiza",
+    "official": "Galiza",
+    "in": "en Galiza",
+    "of": "de Galiza",
+    "seo": "Galicia"
+   },
+   "eu": {
+    "name": "Galiza",
+    "short": "Galiza",
+    "official": "Galiza",
+    "in": "Galizan",
+    "of": "Galizako",
+    "seo": "Galizia"
+   }
+  },
+  "madrid": {
+   "ca": {
+    "name": "Madrid",
+    "short": "Madrid",
+    "official": "Comunitat de Madrid",
+    "in": "a Madrid",
+    "of": "de Madrid"
+   },
+   "gl": {
+    "name": "Madrid",
+    "short": "Madrid",
+    "official": "Comunidade de Madrid",
+    "in": "en Madrid",
+    "of": "de Madrid"
+   },
+   "eu": {
+    "name": "Madril",
+    "short": "Madril",
+    "official": "Madrilgo Erkidegoa",
+    "in": "Madrilen",
+    "of": "Madrilgo"
+   }
+  },
+  "murcia": {
+   "ca": {
+    "name": "Múrcia",
+    "short": "Múrcia",
+    "official": "Regió de Múrcia",
+    "in": "a Múrcia",
+    "of": "de Múrcia"
+   },
+   "gl": {
+    "name": "Murcia",
+    "short": "Murcia",
+    "official": "Rexión de Murcia",
+    "in": "en Murcia",
+    "of": "de Murcia"
+   },
+   "eu": {
+    "name": "Murtzia",
+    "short": "Murtzia",
+    "official": "Murtziako Erregioa",
+    "in": "Murtzian",
+    "of": "Murtziako"
+   }
+  },
+  "navarra": {
+   "ca": {
+    "name": "Nafarroa",
+    "short": "Nafarroa",
+    "official": "Nafarroa",
+    "in": "a Nafarroa",
+    "of": "de Nafarroa",
+    "seo": "Navarra"
+   },
+   "gl": {
+    "name": "Nafarroa",
+    "short": "Nafarroa",
+    "official": "Nafarroa",
+    "in": "en Nafarroa",
+    "of": "de Nafarroa",
+    "seo": "Navarra"
+   },
+   "eu": {
+    "name": "Nafarroa",
+    "short": "Nafarroa",
+    "official": "Nafarroa",
+    "in": "Nafarroan",
+    "of": "Nafarroako"
+   }
+  },
+  "pais-vasco": {
+   "ca": {
+    "name": "Euskal Herria",
+    "short": "Euskal Herria",
+    "official": "Euskal Herria",
+    "in": "a Euskal Herria",
+    "of": "d'Euskal Herria",
+    "seo": "Euskadi"
+   },
+   "gl": {
+    "name": "Euskal Herria",
+    "short": "Euskal Herria",
+    "official": "Euskal Herria",
+    "in": "en Euskal Herria",
+    "of": "de Euskal Herria",
+    "seo": "Euskadi"
+   },
+   "eu": {
+    "name": "Euskal Herria",
+    "short": "Euskal Herria",
+    "official": "Euskal Herria",
+    "in": "Euskal Herrian",
+    "of": "Euskal Herriko",
+    "seo": "Euskadi"
+   }
+  },
+  "la-rioja": {
+   "ca": {
+    "name": "La Rioja",
+    "short": "La Rioja",
+    "official": "La Rioja",
+    "in": "a La Rioja",
+    "of": "de La Rioja"
+   },
+   "gl": {
+    "name": "A Rioxa",
+    "short": "A Rioxa",
+    "official": "A Rioxa",
+    "in": "na Rioxa",
+    "of": "da Rioxa"
+   },
+   "eu": {
+    "name": "Errioxa",
+    "short": "Errioxa",
+    "official": "Errioxa",
+    "in": "Errioxan",
+    "of": "Errioxako"
+   }
+  },
+  "comunitat-valenciana": {
+   "ca": {
+    "name": "País Valencià",
+    "short": "País Valencià",
+    "official": "País Valencià",
+    "in": "al País Valencià",
+    "of": "del País Valencià",
+    "seo": "Comunitat Valenciana"
+   },
+   "gl": {
+    "name": "País Valencià",
+    "short": "País Valencià",
+    "official": "País Valencià",
+    "in": "no País Valencià",
+    "of": "do País Valencià",
+    "seo": "Comunidade Valenciana"
+   },
+   "eu": {
+    "name": "País Valencià",
+    "short": "País Valencià",
+    "official": "País Valencià",
+    "in": "País Valencià-n",
+    "of": "País Valencià-ko",
+    "seo": "Valentziako Erkidegoa"
+   }
+  },
+  "ceuta": {
+   "ca": {
+    "name": "Ceuta",
+    "short": "Ceuta",
+    "official": "Ceuta",
+    "in": "a Ceuta",
+    "of": "de Ceuta"
+   },
+   "gl": {
+    "name": "Ceuta",
+    "short": "Ceuta",
+    "official": "Cidade Autónoma de Ceuta",
+    "in": "en Ceuta",
+    "of": "de Ceuta"
+   },
+   "eu": {
+    "name": "Ceuta",
+    "short": "Ceuta",
+    "official": "Ceuta",
+    "in": "Ceutan",
+    "of": "Ceutako"
+   }
+  },
+  "melilla": {
+   "ca": {
+    "name": "Melilla",
+    "short": "Melilla",
+    "official": "Melilla",
+    "in": "a Melilla",
+    "of": "de Melilla"
+   },
+   "gl": {
+    "name": "Melilla",
+    "short": "Melilla",
+    "official": "Cidade Autónoma de Melilla",
+    "in": "en Melilla",
+    "of": "de Melilla"
+   },
+   "eu": {
+    "name": "Melilla",
+    "short": "Melilla",
+    "official": "Melilla",
+    "in": "Melillan",
+    "of": "Melillako"
+   }
+  }
+ },
+ "holidays": {
+  "Año Nuevo": {
+   "ca": "Cap d'Any",
+   "gl": "Aninovo",
+   "eu": "Urteberri eguna"
+  },
+  "Epifanía del Señor": {
+   "ca": "Reis",
+   "gl": "Epifanía do Señor",
+   "eu": "Errege eguna"
+  },
+  "Día de Andalucía": {
+   "ca": "Dia d'Andalusia",
+   "gl": "Día de Andalucía",
+   "eu": "Andaluziaren Eguna"
+  },
+  "Día de les Illes Balears": {
+   "ca": "Dia de les Illes Balears",
+   "gl": "Día das Illes Balears",
+   "eu": "Illes Balears-en Eguna"
+  },
+  "Fiesta del Eid Fitr": {
+   "ca": "Festa de l'Eid Fitr",
+   "gl": "Festa do Eid Fitr",
+   "eu": "Eid Fitr jaia"
+  },
+  "San José": {
+   "ca": "Sant Josep",
+   "gl": "San Xosé",
+   "eu": "San Jose eguna"
+  },
+  "Jueves Santo": {
+   "ca": "Dijous Sant",
+   "gl": "Xoves Santo",
+   "eu": "Ostegun Santua"
+  },
+  "Viernes Santo": {
+   "ca": "Divendres Sant",
+   "gl": "Venres Santo",
+   "eu": "Ostiral Santua"
+  },
+  "Lunes de Pascua": {
+   "ca": "Dilluns de Pasqua",
+   "gl": "Luns de Pascua",
+   "eu": "Pazko astelehena"
+  },
+  "San Jorge / Día de Aragón": {
+   "ca": "Sant Jordi / Dia d'Aragó",
+   "gl": "San Xurxo / Día de Aragón",
+   "eu": "San Jurgi eguna / Aragoiren Eguna"
+  },
+  "Fiesta de Castilla y León": {
+   "ca": "Festa de Castella i Lleó",
+   "gl": "Festa de Castela e León",
+   "eu": "Gaztela eta Leongo Jaia"
+  },
+  "Fiesta del Trabajo": {
+   "ca": "Festa del Treball",
+   "gl": "Festa do Traballo",
+   "eu": "Langileen Eguna"
+  },
+  "Día de las Letras Gallegas": {
+   "ca": "Dia de les Lletres Gallegues",
+   "gl": "Día das Letras Galegas",
+   "eu": "Galizierazko Letren Eguna"
+  },
+  "Eidul Adha-Fiesta del Sacrificio": {
+   "ca": "Eidul Adha-Festa del Sacrifici",
+   "gl": "Eidul Adha-Festa do Sacrificio",
+   "eu": "Eidul Adha - Sakrifizioaren Jaia"
+  },
+  "Fiesta del Sacrificio-Aid Al Adha": {
+   "ca": "Festa del Sacrifici-Aid Al Adha",
+   "gl": "Festa do Sacrificio-Aid Al Adha",
+   "eu": "Sakrifizioaren Jaia - Aid Al Adha"
+  },
+  "Corpus Christi": {
+   "ca": "Corpus Christi",
+   "gl": "Corpus Christi",
+   "eu": "Corpus eguna"
+  },
+  "Día de Castilla-La Mancha": {
+   "ca": "Dia de Castella-la Manxa",
+   "gl": "Día de Castela-A Mancha",
+   "eu": "Gaztela-Mantxaren Eguna"
+  },
+  "Día de la Región de Murcia": {
+   "ca": "Dia de la Regió de Múrcia",
+   "gl": "Día da Rexión de Murcia",
+   "eu": "Murtziako Erregioaren Eguna"
+  },
+  "Día de La Rioja": {
+   "ca": "Dia de La Rioja",
+   "gl": "Día da Rioxa",
+   "eu": "Errioxaren Eguna"
+  },
+  "Día de San Juan": {
+   "ca": "Sant Joan",
+   "gl": "Día de San Xoán",
+   "eu": "San Joan eguna"
+  },
+  "Día de las Instituciones de Cantabria": {
+   "ca": "Dia de les Institucions de Cantàbria",
+   "gl": "Día das Institucións de Cantabria",
+   "eu": "Kantabriako Erakundeen Eguna"
+  },
+  "Nuestra Señora de África": {
+   "ca": "Mare de Déu d'Àfrica",
+   "gl": "Nosa Señora de África",
+   "eu": "Afrikako Andre Maria"
+  },
+  "Lunes siguiente a la Asunción de la Virgen": {
+   "ca": "L'endemà de l'Assumpció",
+   "gl": "Luns seguinte á Asunción da Virxe",
+   "eu": "Ama Birjinaren Jasokundearen hurrengo astelehena"
+  },
+  "Día de Asturias": {
+   "ca": "Dia d'Astúries",
+   "gl": "Día de Asturias",
+   "eu": "Asturiasen Eguna"
+  },
+  "Día de Extremadura": {
+   "ca": "Dia d'Extremadura",
+   "gl": "Día de Estremadura",
+   "eu": "Extremaduraren Eguna"
+  },
+  "Fiesta Nacional de Cataluña": {
+   "ca": "Diada Nacional de Catalunya",
+   "gl": "Festa Nacional de Catalunya",
+   "eu": "Catalunyako Jai Nazionala"
+  },
+  "La Bien Aparecida": {
+   "ca": "La Bien Aparecida",
+   "gl": "A Bien Aparecida",
+   "eu": "Bien Aparecidako Andre Maria"
+  },
+  "Aniversario del primer Gobierno Vasco": {
+   "ca": "Aniversari del primer Govern Basc",
+   "gl": "Aniversario do primeiro Goberno Vasco",
+   "eu": "Euskadiko lehen Gobernuaren urteurrena"
+  },
+  "Día de la Comunitat Valenciana": {
+   "ca": "Dia del País Valencià",
+   "gl": "Día do País Valencià",
+   "eu": "País Valencià-ren Eguna"
+  },
+  "Sustitución del 15 de agosto": {
+   "ca": "Substitució del 15 d'agost",
+   "gl": "Substitución do 15 de agosto",
+   "eu": "Abuztuaren 15aren ordezkoa"
+  },
+  "Fiesta Nacional de España": {
+   "ca": "Festa Nacional d'Espanya",
+   "gl": "Festa Nacional de España",
+   "eu": "Espainiako Jai Nazionala"
+  },
+  "Todos los Santos": {
+   "ca": "Tots Sants",
+   "gl": "Todos os Santos",
+   "eu": "Santu Guztien Eguna"
+  },
+  "Día de la Constitución Española": {
+   "ca": "Dia de la Constitució",
+   "gl": "Día da Constitución Española",
+   "eu": "Konstituzio Eguna"
+  },
+  "Inmaculada Concepción": {
+   "ca": "Immaculada Concepció",
+   "gl": "Inmaculada Concepción",
+   "eu": "Andre Maria Sortzez Garbiaren Eguna"
+  },
+  "Natividad del Señor": {
+   "ca": "Nadal",
+   "gl": "Natividade do Señor",
+   "eu": "Eguberri eguna"
+  },
+  "Nuestra Señora de los Reyes": {
+   "ca": "Mare de Déu dels Reis",
+   "gl": "Nosa Señora dos Reis",
+   "eu": "Erregeen Andre Maria"
+  },
+  "Nuestra Señora de la Peña": {
+   "ca": "Mare de Déu de la Penya",
+   "gl": "Nosa Señora da Peña",
+   "eu": "Peñako Andre Maria"
+  },
+  "Nuestra Señora del Pino": {
+   "ca": "Mare de Déu del Pi",
+   "gl": "Nosa Señora do Pino",
+   "eu": "Pinoko Andre Maria"
+  },
+  "Nuestra Señora de Guadalupe": {
+   "ca": "Mare de Déu de Guadalupe",
+   "gl": "Nosa Señora de Guadalupe",
+   "eu": "Guadalupeko Andre Maria"
+  },
+  "Nuestra Señora de las Nieves": {
+   "ca": "Mare de Déu de les Neus",
+   "gl": "Nosa Señora das Neves",
+   "eu": "Elurretako Andre Maria"
+  },
+  "Nuestra Señora de los Volcanes": {
+   "ca": "Mare de Déu dels Volcans",
+   "gl": "Nosa Señora dos Volcáns",
+   "eu": "Sumendietako Andre Maria"
+  },
+  "Virgen de la Candelaria": {
+   "ca": "Mare de Déu de la Candelaria",
+   "gl": "Virxe da Candeloria",
+   "eu": "Candelariako Ama Birjina"
+  },
+  "Fiesta de Arán": {
+   "ca": "Festa d'Aran",
+   "gl": "Festa de Arán",
+   "eu": "Arango Jaia"
+  }
+ },
+ "zones": {
+  "canarias": {
+   "label": {
+    "ca": "Illa",
+    "gl": "Illa",
+    "eu": "Uhartea"
+   },
+   "note": {
+    "ca": "Cada illa hi afegeix la seva festa insular (Decret 115/2026, BOC de 3 de juliol de 2026).",
+    "gl": "Cada illa engade a súa festa insular (Decreto 115/2026, BOC do 3 de xullo de 2026).",
+    "eu": "Uharte bakoitzak bere jaieguna gehitzen du (115/2026 Dekretua, 2026ko uztailaren 3ko BOC)."
+   },
+   "options": {
+    "el-hierro": {
+     "ca": "El Hierro",
+     "gl": "El Hierro",
+     "eu": "El Hierro"
+    },
+    "fuerteventura": {
+     "ca": "Fuerteventura",
+     "gl": "Fuerteventura",
+     "eu": "Fuerteventura"
+    },
+    "gran-canaria": {
+     "ca": "Gran Canària",
+     "gl": "Gran Canaria",
+     "eu": "Kanaria Handia"
+    },
+    "la-gomera": {
+     "ca": "La Gomera",
+     "gl": "La Gomera",
+     "eu": "La Gomera"
+    },
+    "la-palma": {
+     "ca": "La Palma",
+     "gl": "La Palma",
+     "eu": "La Palma"
+    },
+    "lanzarote": {
+     "ca": "Lanzarote i La Graciosa",
+     "gl": "Lanzarote e La Graciosa",
+     "eu": "Lanzarote eta La Graciosa"
+    },
+    "tenerife": {
+     "ca": "Tenerife",
+     "gl": "Tenerife",
+     "eu": "Tenerife"
+    }
+   }
+  },
+  "cataluna": {
+   "label": {
+    "ca": "Zona",
+    "gl": "Zona",
+    "eu": "Eremua"
+   },
+   "note": {
+    "ca": "A Aran, la festa del 29 de març queda substituïda per la del 17 de juny, Festa d'Aran (Ordre EMT/52/2026, DOGC d'1 d'abril de 2026).",
+    "gl": "En Arán, o 29 de marzo substitúese polo 17 de xuño, Festa de Arán (Orde EMT/52/2026, DOGC do 1 de abril de 2026).",
+    "eu": "Aranen, martxoaren 29aren ordez, ekainaren 17a da jaieguna: Arango Jaia (EMT/52/2026 Agindua, 2026ko apirilaren 1eko DOGC)."
+   },
+   "options": {
+    "general": {
+     "ca": "General",
+     "gl": "Xeral",
+     "eu": "Orokorra"
+    },
+    "aran": {
+     "ca": "Aran",
+     "gl": "Arán",
+     "eu": "Aran"
+    }
+   }
+  }
+ },
+ "ui": {
+  "site_title": {
+   "es": "Calendario laboral 2027",
+   "ca": "Calendari laboral 2027",
+   "gl": "Calendario laboral 2027",
+   "eu": "2027ko lan-egutegia"
+  },
+  "title_home": {
+   "es": "Calendario laboral 2027: festivos y puentes por comunidad",
+   "ca": "Calendari laboral 2027: festius i ponts per comunitat",
+   "gl": "Calendario laboral 2027: festivos e pontes por comunidade",
+   "eu": "2027ko lan-egutegia: jaiegunak eta zubiak erkidegoka"
+  },
+  "title_region": {
+   "es": "Calendario laboral 2027 {region}: festivos y puentes",
+   "ca": "Calendari laboral 2027 {region_in}: festius i ponts",
+   "gl": "Calendario laboral 2027 {region}: festivos e pontes",
+   "eu": "2027ko lan-egutegia {region_in}: jaiegunak eta zubiak"
+  },
+  "meta_region": {
+   "es": "Los {n} festivos de 2027 en {region}, con su día de la semana, y los {p} puentes del año. Según el BOE del 13 de octubre de 2026.",
+   "ca": "Els {n} festius del 2027 {region_in}, amb el dia de la setmana de cadascun, i els {p} ponts de l'any. Segons el BOE del 13 d'octubre de 2026.",
+   "gl": "Os {n} festivos de 2027 {region_in}, co seu día da semana, e as {p} pontes do ano. Segundo o BOE do 13 de outubro de 2026.",
+   "eu": "{region_in} 2027an izango diren {n} jaiegunak, bakoitza asteko zein egunetan den, eta urteko {p} zubiak. 2026ko urriaren 13ko BOEren arabera."
+  },
+  "meta_home": {
+   "es": "Los festivos de 2027 de tu comunidad, tus puentes y cuántos días libres sacas con tus vacaciones. Según el BOE. Añádelos a tu calendario.",
+   "ca": "Els festius del 2027 de la teva comunitat, els teus ponts i quants dies de festa seguits pots enllaçar amb les vacances. Segons el BOE. Afegeix-los al teu calendari.",
+   "gl": "Os festivos de 2027 da túa comunidade, as túas pontes e cantos días libres consegues coas túas vacacións. Segundo o BOE. Engádeos ao teu calendario.",
+   "eu": "Zure erkidegoko 2027ko jaiegunak, zure zubiak eta oporrekin zenbat egun libre lortzen dituzun. BOEren arabera. Gehitu zure egutegira."
+  },
+  "holidays": {
+   "es": "Festivos",
+   "ca": "Festius",
+   "gl": "Festivos",
+   "eu": "Jaiegunak"
+  },
+  "bridges": {
+   "es": "Puentes",
+   "ca": "Ponts",
+   "gl": "Pontes",
+   "eu": "Zubiak"
+  },
+  "vacation": {
+   "es": "Vacaciones",
+   "ca": "Vacances",
+   "gl": "Vacacións",
+   "eu": "Oporrak"
+  },
+  "legend": {
+   "es": "Leyenda",
+   "ca": "Llegenda",
+   "gl": "Lenda",
+   "eu": "Legenda"
+  },
+  "key_national": {
+   "es": "Nacional",
+   "ca": "Estatal",
+   "gl": "Estatal",
+   "eu": "Estatukoa"
+  },
+  "key_regional": {
+   "es": "Autonómico",
+   "ca": "Autonòmic",
+   "gl": "Autonómico",
+   "eu": "Erkidegokoa"
+  },
+  "key_local": {
+   "es": "Local",
+   "ca": "Local",
+   "gl": "Local",
+   "eu": "Tokikoa"
+  },
+  "mark_vacation": {
+   "es": "Marcar vacaciones",
+   "ca": "Marca les vacances",
+   "gl": "Marcar vacacións",
+   "eu": "Markatu oporrak"
+  },
+  "clear": {
+   "es": "Borrar",
+   "ca": "Esborra",
+   "gl": "Borrar",
+   "eu": "Ezabatu"
+  },
+  "clear_all": {
+   "es": "Borrar todo",
+   "ca": "Esborra-ho tot",
+   "gl": "Borrar todo",
+   "eu": "Ezabatu dena"
+  },
+  "vacation_cleared": {
+   "es": "Vacaciones borradas",
+   "ca": "Vacances esborrades",
+   "gl": "Borráronse as vacacións",
+   "eu": "Oporrak ezabatu dira"
+  },
+  "tap_hint_future": {
+   "es": "Toca los días que te vas a coger.",
+   "ca": "Toca els dies de vacances que agafaràs.",
+   "gl": "Toca os días que vas coller.",
+   "eu": "Sakatu hartuko dituzun egunak."
+  },
+  "tap_hint": {
+   "es": "Toca los días que te coges.",
+   "ca": "Toca els dies de vacances que agafes.",
+   "gl": "Toca os días que colles.",
+   "eu": "Sakatu hartzen dituzun egunak."
+  },
+  "how_many_days": {
+   "es": "¿Cuántos días de vacaciones?",
+   "ca": "Quants dies de vacances?",
+   "gl": "Cantos días de vacacións?",
+   "eu": "Zenbat opor egun?"
+  },
+  "vacation_days": {
+   "es": "Días de vacaciones",
+   "ca": "Dies de vacances",
+   "gl": "Días de vacacións",
+   "eu": "Opor egunak"
+  },
+  "one_more_day": {
+   "es": "Un día más",
+   "ca": "Un dia més",
+   "gl": "Un día máis",
+   "eu": "Egun bat gehiago"
+  },
+  "one_less_day": {
+   "es": "Un día menos",
+   "ca": "Un dia menys",
+   "gl": "Un día menos",
+   "eu": "Egun bat gutxiago"
+  },
+  "add_gcal": {
+   "es": "Añadir a Google Calendar",
+   "ca": "Afegeix a Google Calendar",
+   "gl": "Engadir a Google Calendar",
+   "eu": "Gehitu Google Calendar-era"
+  },
+  "download_ics": {
+   "es": "Descargar .ics",
+   "ca": "Baixa l'.ics",
+   "gl": "Descargar .ics",
+   "eu": "Deskargatu .ics"
+  },
+  "share": {
+   "es": "Compartir",
+   "ca": "Comparteix",
+   "gl": "Compartir",
+   "eu": "Partekatu"
+  },
+  "link_copied": {
+   "es": "Enlace copiado",
+   "ca": "Enllaç copiat",
+   "gl": "Copiouse a ligazón",
+   "eu": "Esteka kopiatu da"
+  },
+  "print": {
+   "es": "Imprimir",
+   "ca": "Imprimeix",
+   "gl": "Imprimir",
+   "eu": "Inprimatu"
+  },
+  "dark_mode": {
+   "es": "Modo oscuro",
+   "ca": "Mode fosc",
+   "gl": "Tema escuro",
+   "eu": "Modu iluna"
+  },
+  "n_holidays": {
+   "es": {
+    "one": "{n} festivo",
+    "other": "{n} festivos"
+   },
+   "ca": {
+    "one": "{n} festiu",
+    "other": "{n} festius"
+   },
+   "gl": {
+    "one": "{n} festivo",
+    "other": "{n} festivos"
+   },
+   "eu": {
+    "one": "jaiegun 1",
+    "other": "{n} jaiegun"
+   }
+  },
+  "n_bridges": {
+   "es": {
+    "one": "{n} puente",
+    "other": "{n} puentes"
+   },
+   "ca": {
+    "one": "{n} pont",
+    "other": "{n} ponts"
+   },
+   "gl": {
+    "one": "{n} ponte",
+    "other": "{n} pontes"
+   },
+   "eu": {
+    "one": "zubi 1",
+    "other": "{n} zubi"
+   }
+  },
+  "n_workdays": {
+   "es": {
+    "one": "{n} día laborable",
+    "other": "{n} días laborables"
+   },
+   "ca": {
+    "one": "{n} dia feiner",
+    "other": "{n} dies feiners"
+   },
+   "gl": {
+    "one": "{n} día laborable",
+    "other": "{n} días laborables"
+   },
+   "eu": {
+    "one": "lanegun 1",
+    "other": "{n} lanegun"
+   }
+  },
+  "n_workdays_short": {
+   "es": {
+    "one": "{n} laborable",
+    "other": "{n} laborables"
+   },
+   "ca": {
+    "one": "{n} feiner",
+    "other": "{n} feiners"
+   },
+   "gl": {
+    "one": "{n} laborable",
+    "other": "{n} laborables"
+   },
+   "eu": {
+    "one": "lanegun 1",
+    "other": "{n} lanegun"
+   }
+  },
+  "n_days": {
+   "es": {
+    "one": "{n} día",
+    "other": "{n} días"
+   },
+   "ca": {
+    "one": "{n} dia",
+    "other": "{n} dies"
+   },
+   "gl": {
+    "one": "{n} día",
+    "other": "{n} días"
+   },
+   "eu": {
+    "one": "egun 1",
+    "other": "{n} egun"
+   }
+  },
+  "n_national": {
+   "es": {
+    "one": "{n} festivo nacional",
+    "other": "{n} festivos nacionales"
+   },
+   "ca": {
+    "one": "{n} festiu estatal",
+    "other": "{n} festius estatals"
+   },
+   "gl": {
+    "one": "{n} festivo estatal",
+    "other": "{n} festivos estatais"
+   },
+   "eu": {
+    "one": "estatu mailako jaiegun 1",
+    "other": "{n} estatu mailako jaiegun"
+   }
+  },
+  "no_vacation": {
+   "es": "sin coger vacaciones",
+   "ca": "sense agafar vacances",
+   "gl": "sen coller vacacións",
+   "eu": "oporrik hartu gabe"
+  },
+  "n_vacation_days": {
+   "es": {
+    "one": "{n} día de vacaciones",
+    "other": "{n} días de vacaciones"
+   },
+   "ca": {
+    "one": "{n} dia de vacances",
+    "other": "{n} dies de vacances"
+   },
+   "gl": {
+    "one": "{n} día de vacacións",
+    "other": "{n} días de vacacións"
+   },
+   "eu": {
+    "one": "opor egun 1",
+    "other": "{n} opor egun"
+   }
+  },
+  "add_to_vacation": {
+   "es": "Añadir a mis vacaciones",
+   "ca": "Afegeix a les meves vacances",
+   "gl": "Engadir ás miñas vacacións",
+   "eu": "Gehitu nire oporretara"
+  },
+  "remove_from_vacation": {
+   "es": "Quitar de mis vacaciones",
+   "ca": "Treu de les meves vacances",
+   "gl": "Quitar das miñas vacacións",
+   "eu": "Kendu nire oporretatik"
+  },
+  "added_to_vacation": {
+   "es": {
+    "one": "{n} día en tus vacaciones",
+    "other": "{n} días en tus vacaciones"
+   },
+   "ca": {
+    "one": "{n} dia a les teves vacances",
+    "other": "{n} dies a les teves vacances"
+   },
+   "gl": {
+    "one": "{n} día nas túas vacacións",
+    "other": "{n} días nas túas vacacións"
+   },
+   "eu": {
+    "one": "Egun 1 zure oporretan",
+    "other": "{n} egun zure oporretan"
+   }
+  },
+  "removed_from_vacation": {
+   "es": "Quitado de tus vacaciones",
+   "ca": "Tret de les teves vacances",
+   "gl": "Quitouse das túas vacacións",
+   "eu": "Oporretatik kendu da"
+  },
+  "take": {
+   "es": "Coge el {a} y el {b}",
+   "ca": "Agafa festa el {a} i el {b}",
+   "gl": "Colle o {a} e o {b}",
+   "eu": "Hartu libre {a} eta {b}"
+  },
+  "no_bridges": {
+   "es": "Este año no hay puentes.",
+   "ca": "Aquest any no hi ha ponts.",
+   "gl": "Este ano non hai pontes.",
+   "eu": "Aurten ez dago zubirik."
+  },
+  "next_holiday": {
+   "es": "Próximo festivo",
+   "ca": "Pròxim festiu",
+   "gl": "Próximo festivo",
+   "eu": "Hurrengo jaieguna"
+  },
+  "days_left": {
+   "es": {
+    "one": "Falta {n} día",
+    "other": "Faltan {n} días"
+   },
+   "ca": {
+    "one": "Falta {n} dia",
+    "other": "Falten {n} dies"
+   },
+   "gl": {
+    "one": "Falta {n} día",
+    "other": "Faltan {n} días"
+   },
+   "eu": {
+    "one": "Egun bat falta da",
+    "other": "{n} egun falta dira"
+   }
+  },
+  "tomorrow": {
+   "es": "Mañana",
+   "ca": "Demà",
+   "gl": "Mañá",
+   "eu": "Bihar"
+  },
+  "today": {
+   "es": "Hoy",
+   "ca": "Avui",
+   "gl": "Hoxe",
+   "eu": "Gaur"
+  },
+  "pick_region": {
+   "es": "Elige tu comunidad",
+   "ca": "Tria la teva comunitat",
+   "gl": "Escolle a túa comunidade",
+   "eu": "Aukeratu zure erkidegoa"
+  },
+  "region_label": {
+   "es": "Comunidad autónoma",
+   "ca": "Comunitat autònoma",
+   "gl": "Comunidade autónoma",
+   "eu": "Autonomia-erkidegoa"
+  },
+  "by_region": {
+   "es": "Por comunidad",
+   "ca": "Per comunitat",
+   "gl": "Por comunidade",
+   "eu": "Erkidegoka"
+  },
+  "spain": {
+   "es": "España",
+   "ca": "Espanya",
+   "gl": "España",
+   "eu": "Espainia"
+  },
+  "in_spain": {
+   "es": "en España",
+   "ca": "a Espanya",
+   "gl": "en España",
+   "eu": "Espainian"
+  },
+  "locals": {
+   "es": "Locales",
+   "ca": "Locals",
+   "gl": "Locais",
+   "eu": "Tokikoak"
+  },
+  "local_holiday": {
+   "es": "Festivo local",
+   "ca": "Festiu local",
+   "gl": "Festivo local",
+   "eu": "Tokiko jaieguna"
+  },
+  "plus_local": {
+   "es": "+ Festivo local",
+   "ca": "+ Festiu local",
+   "gl": "+ Festivo local",
+   "eu": "+ Tokiko jaieguna"
+  },
+  "add_local": {
+   "es": "Añadir festivo local",
+   "ca": "Afegeix un festiu local",
+   "gl": "Engadir festivo local",
+   "eu": "Gehitu tokiko jaieguna"
+  },
+  "add_other_local": {
+   "es": "Añadir otro festivo local",
+   "ca": "Afegeix un altre festiu local",
+   "gl": "Engadir outro festivo local",
+   "eu": "Gehitu beste tokiko jaiegun bat"
+  },
+  "remove_local": {
+   "es": "Quitar festivo local",
+   "ca": "Treu el festiu local",
+   "gl": "Quitar festivo local",
+   "eu": "Kendu tokiko jaieguna"
+  },
+  "local_toast": {
+   "es": "Festivo local: {date}",
+   "ca": "Festiu local: {date}",
+   "gl": "Festivo local: {date}",
+   "eu": "Tokiko jaieguna: {date}"
+  },
+  "plus_two_local": {
+   "es": "Más los 2 festivos locales de tu municipio.",
+   "ca": "Cal afegir-hi els 2 festius locals del teu municipi.",
+   "gl": "Engádense os 2 festivos locais do teu concello.",
+   "eu": "Horiei zure udalerriko 2 tokiko jaiegunak gehitu behar zaizkie."
+  },
+  "data_source": {
+   "es": "Datos: BOE del 13 de octubre de 2026",
+   "ca": "Dades: BOE del 13 d'octubre de 2026",
+   "gl": "Datos: BOE do 13 de outubro de 2026",
+   "eu": "Datuak: 2026ko urriaren 13ko BOE"
+  },
+  "per_boe": {
+   "es": "Según el BOE del 13 de octubre de 2026.",
+   "ca": "Segons el BOE del 13 d'octubre de 2026.",
+   "gl": "Segundo o BOE do 13 de outubro de 2026.",
+   "eu": "2026ko urriaren 13ko BOEren arabera."
+  },
+  "privacy": {
+   "es": "Privacidad",
+   "ca": "Privadesa",
+   "gl": "Privacidade",
+   "eu": "Pribatutasuna"
+  },
+  "open_with_vacation": {
+   "es": "Abrir con mis vacaciones",
+   "ca": "Obre amb les meves vacances",
+   "gl": "Abrir coas miñas vacacións",
+   "eu": "Ireki nire oporrekin"
+  },
+  "holidays_in_region": {
+   "es": "Festivos 2027 en {region}",
+   "ca": "Festius 2027 {region_in}",
+   "gl": "Festivos 2027 {region_in}",
+   "eu": "2027ko jaiegunak {region_in}"
+  },
+  "holiday_in_region": {
+   "es": "Festivo laboral 2027 en {region}",
+   "ca": "Festa laboral 2027 {region_in}",
+   "gl": "Festivo laboral 2027 {region_in}",
+   "eu": "2027ko jaieguna {region_in}"
+  },
+  "og_title": {
+   "es": "Festivos y puentes",
+   "ca": "Festius i ponts",
+   "gl": "Festivos e pontes",
+   "eu": "Jaiegunak eta zubiak"
+  },
+  "manifest_description": {
+   "es": "Festivos, puentes y vacaciones 2027 por comunidad.",
+   "ca": "Festius, ponts i vacances del 2027 per comunitat.",
+   "gl": "Festivos, pontes e vacacións de 2027 por comunidade.",
+   "eu": "2027ko jaiegunak, zubiak eta oporrak, erkidegoka."
+  },
+  "n_regions": {
+   "es": "19 comunidades",
+   "ca": "19 comunitats",
+   "gl": "19 comunidades",
+   "eu": "19 erkidego"
+  },
+  "privacy_p1": {
+   "es": "No guardamos ningún dato tuyo en servidores. Tu comunidad, tus festivos locales y tus vacaciones se quedan en tu navegador o en tu móvil, y puedes borrarlos cuando quieras.",
+   "ca": "No guardem cap dada teva a cap servidor. La teva comunitat, els teus festius locals i les teves vacances es queden al teu navegador o al teu mòbil, i els pots esborrar quan vulguis.",
+   "gl": "Non gardamos ningún dato teu en servidores. A túa comunidade, os teus festivos locais e as túas vacacións quedan no teu navegador ou no teu móbil, e podes borralos cando queiras.",
+   "eu": "Ez dugu zure daturik gordetzen zerbitzarietan. Zure erkidegoa, zure tokiko jaiegunak eta zure oporrak zure nabigatzailean edo mugikorrean geratzen dira, eta nahi duzunean ezaba ditzakezu."
+  },
+  "privacy_p2": {
+   "es": "No hay cuentas, ni cookies propias, ni analítica, ni publicidad. Si algún día añadimos alguna de estas cosas, lo pondremos aquí y te pediremos permiso antes.",
+   "ca": "No hi ha comptes, ni galetes pròpies, ni analítica, ni publicitat. Si algun dia hi afegim alguna d'aquestes coses, ho farem constar aquí i abans et demanarem permís.",
+   "gl": "Non hai contas, nin cookies propias, nin ferramentas de análise, nin publicidade. Se algún día engadimos algunha destas cousas, indicarémolo aquí e pedirémosche permiso antes.",
+   "eu": "Ez dago konturik, ez geure cookierik, ez analitikarik, ez publizitaterik. Egunen batean horietakoren bat gehitzen badugu, hemen jarriko dugu, eta aurretik baimena eskatuko dizugu."
+  },
+  "privacy_p3": {
+   "es": "La tipografía se carga desde Google Fonts. «Añadir a Google Calendar» te lleva a Google, con su propia política de privacidad. El archivo .ics se crea en tu dispositivo.",
+   "ca": "La tipografia es carrega des de Google Fonts. «Afegeix a Google Calendar» et porta a Google, que té la seva pròpia política de privadesa. El fitxer .ics es crea al teu dispositiu.",
+   "gl": "A tipografía cárgase desde Google Fonts. «Engadir a Google Calendar» lévate a Google, coa súa propia política de privacidade. O ficheiro .ics créase no teu dispositivo.",
+   "eu": "Letra-tipoa Google Fonts-etik kargatzen da. «Gehitu Google Calendar-era» aukerak Googlera eramango zaitu, eta Googlek bere pribatutasun-politika du. .ics fitxategia zure gailuan sortzen da."
+  },
+  "privacy_meta": {
+   "es": "Privacidad de El Calendario Laboral: no guardamos datos tuyos en servidores.",
+   "ca": "Privadesa d'El Calendario Laboral: no guardem dades teves a cap servidor.",
+   "gl": "Privacidade de El Calendario Laboral: non gardamos datos teus en servidores.",
+   "eu": "El Calendario Laboral-en pribatutasuna: ez dugu zure daturik gordetzen zerbitzarietan."
+  },
+  "island": {
+   "es": "Isla",
+   "ca": "Illa",
+   "gl": "Illa",
+   "eu": "Uhartea"
+  },
+  "zone": {
+   "es": "Zona",
+   "ca": "Zona",
+   "gl": "Zona",
+   "eu": "Eremua"
+  },
+  "zone_general": {
+   "es": "Zona general",
+   "ca": "Zona general",
+   "gl": "Zona xeral",
+   "eu": "Eremu orokorra"
+  },
+  "pick_island": {
+   "es": "Elige tu isla",
+   "ca": "Tria la teva illa",
+   "gl": "Escolle a túa illa",
+   "eu": "Aukeratu zure uhartea"
+  },
+  "island_holiday": {
+   "es": "Fiesta de tu isla",
+   "ca": "Festa de la teva illa",
+   "gl": "Festa da túa illa",
+   "eu": "Zure uharteko jaia"
+  }
+ },
+ "months": {
+  "es": {
+   "full": [
+    "enero",
+    "febrero",
+    "marzo",
+    "abril",
+    "mayo",
+    "junio",
+    "julio",
+    "agosto",
+    "septiembre",
+    "octubre",
+    "noviembre",
+    "diciembre"
+   ],
+   "short": [
+    "ene",
+    "feb",
+    "mar",
+    "abr",
+    "may",
+    "jun",
+    "jul",
+    "ago",
+    "sep",
+    "oct",
+    "nov",
+    "dic"
+   ],
+   "of": [
+    "de enero",
+    "de febrero",
+    "de marzo",
+    "de abril",
+    "de mayo",
+    "de junio",
+    "de julio",
+    "de agosto",
+    "de septiembre",
+    "de octubre",
+    "de noviembre",
+    "de diciembre"
+   ]
+  },
+  "ca": {
+   "full": [
+    "gener",
+    "febrer",
+    "març",
+    "abril",
+    "maig",
+    "juny",
+    "juliol",
+    "agost",
+    "setembre",
+    "octubre",
+    "novembre",
+    "desembre"
+   ],
+   "short": [
+    "gen.",
+    "febr.",
+    "març",
+    "abr.",
+    "maig",
+    "juny",
+    "jul.",
+    "ag.",
+    "set.",
+    "oct.",
+    "nov.",
+    "des."
+   ],
+   "of": [
+    "de gener",
+    "de febrer",
+    "de març",
+    "d'abril",
+    "de maig",
+    "de juny",
+    "de juliol",
+    "d'agost",
+    "de setembre",
+    "d'octubre",
+    "de novembre",
+    "de desembre"
+   ],
+   "short_of": [
+    "de gen.",
+    "de febr.",
+    "de març",
+    "d'abr.",
+    "de maig",
+    "de juny",
+    "de jul.",
+    "d'ag.",
+    "de set.",
+    "d'oct.",
+    "de nov.",
+    "de des."
+   ]
+  },
+  "gl": {
+   "full": [
+    "xaneiro",
+    "febreiro",
+    "marzo",
+    "abril",
+    "maio",
+    "xuño",
+    "xullo",
+    "agosto",
+    "setembro",
+    "outubro",
+    "novembro",
+    "decembro"
+   ],
+   "short": [
+    "xan",
+    "feb",
+    "mar",
+    "abr",
+    "maio",
+    "xuño",
+    "xul",
+    "ago",
+    "set",
+    "out",
+    "nov",
+    "dec"
+   ],
+   "of": [
+    "de xaneiro",
+    "de febreiro",
+    "de marzo",
+    "de abril",
+    "de maio",
+    "de xuño",
+    "de xullo",
+    "de agosto",
+    "de setembro",
+    "de outubro",
+    "de novembro",
+    "de decembro"
+   ]
+  },
+  "eu": {
+   "full": [
+    "urtarrila",
+    "otsaila",
+    "martxoa",
+    "apirila",
+    "maiatza",
+    "ekaina",
+    "uztaila",
+    "abuztua",
+    "iraila",
+    "urria",
+    "azaroa",
+    "abendua"
+   ],
+   "short": [
+    "urt.",
+    "ots.",
+    "mar.",
+    "api.",
+    "mai.",
+    "eka.",
+    "uzt.",
+    "abu.",
+    "ira.",
+    "urr.",
+    "aza.",
+    "abe."
+   ],
+   "gen": [
+    "urtarrilaren",
+    "otsailaren",
+    "martxoaren",
+    "apirilaren",
+    "maiatzaren",
+    "ekainaren",
+    "uztailaren",
+    "abuztuaren",
+    "irailaren",
+    "urriaren",
+    "azaroaren",
+    "abenduaren"
+   ],
+   "erg": [
+    "urtarrilak",
+    "otsailak",
+    "martxoak",
+    "apirilak",
+    "maiatzak",
+    "ekainak",
+    "uztailak",
+    "abuztuak",
+    "irailak",
+    "urriak",
+    "azaroak",
+    "abenduak"
+   ]
+  }
+ },
+ "weekdays": {
+  "order": "monday-first (app.js getUTCDay() is sunday-first: index (d+6)%7)",
+  "es": {
+   "full": [
+    "lunes",
+    "martes",
+    "miércoles",
+    "jueves",
+    "viernes",
+    "sábado",
+    "domingo"
+   ],
+   "short": [
+    "lun",
+    "mar",
+    "mié",
+    "jue",
+    "vie",
+    "sáb",
+    "dom"
+   ],
+   "two": [
+    "lu",
+    "ma",
+    "mi",
+    "ju",
+    "vi",
+    "sá",
+    "do"
+   ],
+   "one": [
+    "L",
+    "M",
+    "X",
+    "J",
+    "V",
+    "S",
+    "D"
+   ]
+  },
+  "ca": {
+   "full": [
+    "dilluns",
+    "dimarts",
+    "dimecres",
+    "dijous",
+    "divendres",
+    "dissabte",
+    "diumenge"
+   ],
+   "short": [
+    "dl.",
+    "dt.",
+    "dc.",
+    "dj.",
+    "dv.",
+    "ds.",
+    "dg."
+   ],
+   "two": [
+    "dl",
+    "dt",
+    "dc",
+    "dj",
+    "dv",
+    "ds",
+    "dg"
+   ],
+   "one": [
+    "dl",
+    "dt",
+    "dc",
+    "dj",
+    "dv",
+    "ds",
+    "dg"
+   ]
+  },
+  "gl": {
+   "full": [
+    "luns",
+    "martes",
+    "mércores",
+    "xoves",
+    "venres",
+    "sábado",
+    "domingo"
+   ],
+   "short": [
+    "luns",
+    "mar",
+    "mér",
+    "xov",
+    "ven",
+    "sáb",
+    "dom"
+   ],
+   "two": [
+    "lu",
+    "ma",
+    "mé",
+    "xo",
+    "ve",
+    "sá",
+    "do"
+   ],
+   "one": [
+    "L",
+    "M",
+    "M",
+    "X",
+    "V",
+    "S",
+    "D"
+   ]
+  },
+  "eu": {
+   "full": [
+    "astelehena",
+    "asteartea",
+    "asteazkena",
+    "osteguna",
+    "ostirala",
+    "larunbata",
+    "igandea"
+   ],
+   "short": [
+    "al.",
+    "ar.",
+    "az.",
+    "og.",
+    "or.",
+    "lr.",
+    "ig."
+   ],
+   "two": [
+    "al",
+    "ar",
+    "az",
+    "og",
+    "or",
+    "lr",
+    "ig"
+   ],
+   "one": [
+    "A",
+    "A",
+    "A",
+    "O",
+    "O",
+    "L",
+    "I"
+   ]
+  }
+ },
+ "date_patterns": {
+  "_vars": "{wd} weekday full, {wd_short} weekday short, {d} day number, {month} month full, {month_of} months.<lang>.of, {mon} months.<lang>.short, {month_gen} months.eu.gen, {da} Basque day with article: 29a but 11 and 31 bare (Euskaltzaindia rule 203)",
+  "es": {
+   "long": "{wd} {d} de {month}",
+   "short": "{d} {mon}",
+   "short_wd": "{wd_short} {d} {mon}",
+   "example": "lunes 29 de marzo · 29 mar · lun 29 mar"
+  },
+  "ca": {
+   "long": "{wd} {d} {month_of}",
+   "short": "{d} {mon}",
+   "short_wd": "{wd_short} {d} {mon}",
+   "example": "dilluns 29 de març · dijous 1 d'abril · 16 ag. · dl. 29 març",
+   "research": {
+    "long": "{wd} {d} {month_of}",
+    "long_example": "dilluns 29 de març / dijous 1 d'abril",
+    "day_month": "{d} {month_of}",
+    "day_month_example": "29 de març / 15 d'agost",
+    "short": "{d} {mon_of}",
+    "short_example": "29 de març / 16 d'ag.",
+    "short_wd": "{wd_short} {d} {mon_of}",
+    "short_wd_example": "dl. 29 de març",
+    "short_compact": "{d} {mon}",
+    "short_compact_example": "29 març / 16 ag. (only where space forbids 'de': tables, chips)",
+    "full_with_year": "{d} {month_of} de {yyyy}",
+    "full_with_year_example": "13 d'octubre de 2026",
+    "year_in_running_text": "del {yyyy} / el {yyyy}",
+    "note": "{month_of}/{mon_of} already include 'de'/'d''. Weekdays and months are lowercase; capitalise only at the start of a label."
+   }
+  },
+  "gl": {
+   "long": "{wd} {d} {month_of}",
+   "short": "{d} {mon}",
+   "short_wd": "{wd_short} {d} {mon}",
+   "example": "luns 29 de marzo · 29 mar · luns 29 mar"
+  },
+  "eu": {
+   "long": "{month_gen} {da}, {wd}",
+   "short": "{mon} {d}",
+   "short_wd": "{mon} {d}, {wd_short}",
+   "example": "martxoaren 29a, astelehena · urriaren 11, astelehena · mar. 29",
+   "research": {
+    "long": "{month_gen} {d}a, {wd}",
+    "long_rule": "Append the article 'a' to the day number EXCEPT for 11 and 31 (hamaika already ends in -a): 'martxoaren 29a, astelehena' but 'urriaren 11, astelehena', 'abenduaren 31, ostirala'. Same in other cases: 11n/11ko, never 11an/11eko.",
+    "short": "{month_short} {d}",
+    "short_wd": "{month_short} {d}, {wd_short}",
+    "pick": "{d}a ({wd_short})",
+    "pick_example": "Hartu libre 29a (al.) eta 30a (ar.)",
+    "with_year": "{y}ko {month_gen} {d}a",
+    "with_year_rule": "Year suffix follows the spoken number: -ko after a vowel, -eko after a consonant. 2026ko (hogeita sei), 2027ko (hogeita zazpi); but 2021eko (hogeita bat). Inessive likewise: 2027an. For this site only 2026ko and 2027ko are needed."
+   }
+  }
+ },
+ "notes": {
+  "ca": [
+   {
+    "key": "Epifanía del Señor",
+    "choice": "Reis",
+    "why": "The Catalan DOGC orders call 6 January 'Reis', and all Catalan press uses it (3cat, betevé, Vilaweb, Nació). DOGV (Valencia) and CAIB (Balearic Islands) use 'Epifania del Senyor', a valid alternative if you want the BOE wording mirrored.",
+    "sources": [
+     "https://legado.elnotario.es/images/pdf/LAU-N38-14-CAT-Orden-EMO-80-2011.pdf",
+     "https://seuelectronica.diba.cat/documents/d/seu-electronica/calendari_festius_2023-pdf",
+     "https://www.3cat.cat/3catinfo/calendari-laboral-2027-a-catalunya-dos-ponts-i-tres-festius-que-cauran-en-cap-de-setmana/noticia/3402703/",
+     "https://beteve.cat/economia/calendari-laboral-2027-catalunya-barcelona-festius-ponts/",
+     "https://dogv.gva.es/datos/2025/07/07/pdf/2025_24690_va.pdf",
+     "https://www.caib.es/sites/calendarilaboral/ca/aao_2026/"
+    ]
+   },
+   {
+    "key": "Natividad del Señor",
+    "choice": "Nadal",
+    "why": "The DOGC, the press and the CAIB ('Dia de Nadal') all call 25 December 'Nadal'. DOGV uses the formal 'Nativitat del Senyor'. 'Nadal' is official in Catalonia and is what people say.",
+    "sources": [
+     "https://legado.elnotario.es/images/pdf/LAU-N38-14-CAT-Orden-EMO-80-2011.pdf",
+     "https://www.3cat.cat/3catinfo/calendari-laboral-2027-a-catalunya-dos-ponts-i-tres-festius-que-cauran-en-cap-de-setmana/noticia/3402703/",
+     "https://www.caib.es/sites/calendarilaboral/ca/aao_2026/",
+     "https://dogv.gva.es/datos/2025/07/07/pdf/2025_24690_va.pdf"
+    ]
+   },
+   {
+    "key": "Año Nuevo",
+    "choice": "Cap d'Any",
+    "why": "DOGV, CAIB, 3cat and Ara use 'Cap d'Any'. Nació and El Nacional also write 'Any Nou', but the official sources agree on 'Cap d'Any'.",
+    "sources": [
+     "https://dogv.gva.es/datos/2025/07/07/pdf/2025_24690_va.pdf",
+     "https://www.caib.es/sites/calendarilaboral/ca/aao_2026/",
+     "https://www.3cat.cat/3catinfo/calendari-laboral-2027-a-catalunya-dos-ponts-i-tres-festius-que-cauran-en-cap-de-setmana/noticia/3402703/",
+     "https://www.ara.cat/economia/mercat-laboral/calendari-festius-catalunya_1_4664083.html"
+    ]
+   },
+   {
+    "key": "Lunes de Pascua",
+    "choice": "Dilluns de Pasqua",
+    "why": "The DOGC wording is 'dilluns de Pasqua Florida'. But DOGV, the press (Ara, Vilaweb, Nació, betevé, El Nacional) and Viquipèdia, which redirects 'Dilluns de Pasqua Florida' there, all use 'Dilluns de Pasqua', and it matches the Spanish source. Use 'Dilluns de Pasqua Florida' if you want the DOGC form for Catalonia.",
+    "sources": [
+     "https://legado.elnotario.es/images/pdf/LAU-N38-14-CAT-Orden-EMO-80-2011.pdf",
+     "https://dogv.gva.es/datos/2025/07/07/pdf/2025_24690_va.pdf",
+     "https://www.ara.cat/economia/mercat-laboral/calendari-festius-catalunya_1_4664083.html",
+     "https://www.vilaweb.cat/noticies/calendari-laboral-2026-catalunya-festius-ponts/",
+     "https://naciodigital.cat/societat/ja-es-coneixen-dies-festius-ponts-2026_2095326_102.html",
+     "https://ca.wikipedia.org/wiki/Dilluns_de_Pasqua"
+    ]
+   },
+   {
+    "key": "Fiesta del Trabajo",
+    "choice": "Festa del Treball",
+    "why": "This is the form in both DOGC and DOGV. Press and CAIB also write 'Dia del Treball'.",
+    "sources": [
+     "https://legado.elnotario.es/images/pdf/LAU-N38-14-CAT-Orden-EMO-80-2011.pdf",
+     "https://dogv.gva.es/datos/2025/07/07/pdf/2025_24690_va.pdf",
+     "https://www.caib.es/sites/calendarilaboral/ca/aao_2026/",
+     "https://www.3cat.cat/3catinfo/calendari-laboral-2027-a-catalunya-dos-ponts-i-tres-festius-que-cauran-en-cap-de-setmana/noticia/3402703/"
+    ]
+   },
+   {
+    "key": "Fiesta Nacional de España",
+    "choice": "Festa Nacional d'Espanya",
+    "why": "This is the official name in DOGC and DOGV. Press often writes 'Dia de la Hispanitat', which is colloquial.",
+    "sources": [
+     "https://legado.elnotario.es/images/pdf/LAU-N38-14-CAT-Orden-EMO-80-2011.pdf",
+     "https://dogv.gva.es/datos/2025/07/07/pdf/2025_24690_va.pdf",
+     "https://www.3cat.cat/3catinfo/calendari-laboral-2027-a-catalunya-dos-ponts-i-tres-festius-que-cauran-en-cap-de-setmana/noticia/3402703/"
+    ]
+   },
+   {
+    "key": "Día de la Constitución Española",
+    "choice": "Dia de la Constitució",
+    "why": "The DOGC and the press use 'Dia de la Constitució' without 'Espanyola'. Adding it would be a word-for-word calque.",
+    "sources": [
+     "https://legado.elnotario.es/images/pdf/LAU-N38-14-CAT-Orden-EMO-80-2011.pdf",
+     "https://www.ara.cat/economia/mercat-laboral/calendari-festius-catalunya_1_4664083.html",
+     "https://beteve.cat/economia/calendari-laboral-2027-catalunya-barcelona-festius-ponts/"
+    ]
+   },
+   {
+    "key": "Inmaculada Concepción",
+    "choice": "Immaculada Concepció",
+    "why": "DOGV, CAIB, 3cat and Vilaweb use 'Immaculada Concepció'. The DOGC writes 'la Immaculada' and Ara and betevé write 'la Puríssima', which is colloquial.",
+    "sources": [
+     "https://dogv.gva.es/datos/2025/07/07/pdf/2025_24690_va.pdf",
+     "https://www.caib.es/sites/calendarilaboral/ca/aao_2026/",
+     "https://www.3cat.cat/3catinfo/calendari-laboral-2027-a-catalunya-dos-ponts-i-tres-festius-que-cauran-en-cap-de-setmana/noticia/3402703/",
+     "https://legado.elnotario.es/images/pdf/LAU-N38-14-CAT-Orden-EMO-80-2011.pdf"
+    ]
+   },
+   {
+    "key": "Lunes siguiente a la Asunción de la Virgen",
+    "choice": "L'endemà de l'Assumpció",
+    "why": "The CAIB names the equivalent Monday-after holiday 'L'endemà del Dia de les Illes Balears', and El Nacional's 2027 article calls 16 August 'l'endemà de l'Assumpció de la Mare de Déu'. I shortened it following the DOGC style 'l'Assumpció'. Long form: 'L'endemà de l'Assumpció de la Mare de Déu'.",
+    "sources": [
+     "https://www.caib.es/sites/calendarilaboral/ca/aao_2026/",
+     "https://www.elnacional.cat/oneconomia/ca/empreses/calendari-laboral-2027-9-festius-autonomies-tres-caps-setmana-llargs_1708861_102.html",
+     "https://legado.elnotario.es/images/pdf/LAU-N38-14-CAT-Orden-EMO-80-2011.pdf"
+    ]
+   },
+   {
+    "key": "Sustitución del 15 de agosto",
+    "choice": "Substitució del 15 d'agost",
+    "why": "No Catalan official source for 2027 has this exact label. The DOGC phrases substitutions as 'queda substituïda per', so I kept the noun 'substitució'. Alternative: 'Trasllat del 15 d'agost'.",
+    "sources": [
+     "https://portaldogc.gencat.cat/utilsEADOP/AppJava/PdfProviderServlet?documentId=1040896&type=01&language=ca_ES",
+     "https://seuelectronica.diba.cat/documents/d/seu-electronica/calendari_festius_2023-pdf"
+    ]
+   },
+   {
+    "key": "Día de San Juan",
+    "choice": "Sant Joan",
+    "why": "DOGC, DOGV and the press call it just 'Sant Joan'.",
+    "sources": [
+     "https://legado.elnotario.es/images/pdf/LAU-N38-14-CAT-Orden-EMO-80-2011.pdf",
+     "https://dogv.gva.es/datos/2025/07/07/pdf/2025_24690_va.pdf",
+     "https://beteve.cat/economia/calendari-laboral-2027-catalunya-barcelona-festius-ponts/"
+    ]
+   },
+   {
+    "key": "San José",
+    "choice": "Sant Josep",
+    "why": "This is the DOGV name, and El Nacional uses it too.",
+    "sources": [
+     "https://dogv.gva.es/datos/2025/07/07/pdf/2025_24690_va.pdf",
+     "https://www.elnacional.cat/oneconomia/ca/empreses/calendari-laboral-2027-9-festius-autonomies-tres-caps-setmana-llargs_1708861_102.html"
+    ]
+   },
+   {
+    "key": "Jueves Santo",
+    "choice": "Dijous Sant",
+    "why": "Used by the CAIB and by Alcúdia's 2027 notice.",
+    "sources": [
+     "https://www.caib.es/sites/calendarilaboral/ca/aao_2026/",
+     "https://www.alcudia.net/export/sites/default/ajuntament/ca/documentos/documents_d_interes/documents_d_interes/BAN-Calendari-Laboral-any-2027.pdf"
+    ]
+   },
+   {
+    "key": "Fiesta Nacional de Cataluña",
+    "choice": "Diada Nacional de Catalunya",
+    "why": "This is the official DOGC name and the press form. The '(11 Sept)' annotation becomes '(11 set.)' with Optimot's month abbreviation.",
+    "sources": [
+     "https://legado.elnotario.es/images/pdf/LAU-N38-14-CAT-Orden-EMO-80-2011.pdf",
+     "https://www.vilaweb.cat/noticies/calendari-laboral-2026-catalunya-festius-ponts/",
+     "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=detall&input_cercar=abreviatures+dels+mesos&numPagina=1&database=FITXES_PUB&idFont=13889&idHit=13889&tipusFont=Fitxes+de+l%27Optimot&numeroResultat=1&clickLink=detall&tipusCerca=cerca.fitxes"
+    ]
+   },
+   {
+    "key": "Fiesta de Arán",
+    "choice": "Festa d'Aran",
+    "why": "This is the DOGC name (2023 and 2027 orders) and the Viquipèdia title.",
+    "sources": [
+     "https://portaldogc.gencat.cat/utilsEADOP/AppJava/PdfProviderServlet?documentId=1040896&type=01&language=ca_ES",
+     "https://seuelectronica.diba.cat/documents/d/seu-electronica/calendari_festius_2023-pdf",
+     "https://ca.wikipedia.org/wiki/Festa_d%27Aran"
+    ]
+   },
+   {
+    "key": "En Arán, el 29 de marzo se sustituye por el 17 de junio, Fiesta de Arán (...)",
+    "choice": "A Aran, la festa del 29 de març queda substituïda per la del 17 de juny, Festa d'Aran (...)",
+    "why": "This mirrors the DOGC 2027 order: 'la festa del dia 29 de març (Pasqua Florida) queda substituïda per la de 17 de juny (Festa d'Aran)'.",
+    "sources": [
+     "https://portaldogc.gencat.cat/utilsEADOP/AppJava/PdfProviderServlet?documentId=1040896&type=01&language=ca_ES",
+     "https://www.3cat.cat/3catinfo/calendari-laboral-2027-a-catalunya-dos-ponts-i-tres-festius-que-cauran-en-cap-de-setmana/noticia/3402703/"
+    ]
+   },
+   {
+    "key": "Arán / Val d'Aran",
+    "choice": "Aran; 'Vall d'Aran' if the long form is needed",
+    "why": "The DOGC 2027 order says 'Al territori d'Aran'. In Catalan the valley is 'Vall d'Aran', and 'Val d'Aran' is the Aranese form, so use it only if you want to keep the local name.",
+    "sources": [
+     "https://portaldogc.gencat.cat/utilsEADOP/AppJava/PdfProviderServlet?documentId=1040896&type=01&language=ca_ES",
+     "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=cerca_generica&input_cercar=Val+d%27Aran&tipusCerca=cerca.tot"
+    ]
+   },
+   {
+    "key": "Día de les Illes Balears",
+    "choice": "Dia de les Illes Balears",
+    "why": "This is the form in official Balearic Catalan texts (Alcúdia's 2027 notice under the Govern's calendar). Viquipèdia titles it 'Diada de les Illes Balears', but I kept the official 'Dia'.",
+    "sources": [
+     "https://www.alcudia.net/export/sites/default/ajuntament/ca/documentos/documents_d_interes/documents_d_interes/BAN-Calendari-Laboral-any-2027.pdf",
+     "https://www.caib.es/sites/calendarilaboral/ca/aao_2026/",
+     "https://ca.wikipedia.org/wiki/Diada_de_les_Illes_Balears"
+    ]
+   },
+   {
+    "key": "Día de la Comunitat Valenciana",
+    "choice": "Dia de la Comunitat Valenciana",
+    "why": "This is the official holiday name in the Valencian DOGV decree, and the Spanish source keeps it too. The owner's 'País Valencià' rule covers region names, not a holiday's legal name. The politically aligned alternative, used by Viquipèdia and part of the press, is 'Diada Nacional del País Valencià' (or '9 d'Octubre'). Switch if the owner wants consistency with 'País Valencià'.",
+    "sources": [
+     "https://dogv.gva.es/datos/2025/07/07/pdf/2025_24690_va.pdf",
+     "https://ca.wikipedia.org/wiki/Diada_Nacional_del_Pa%C3%ADs_Valenci%C3%A0",
+     "https://www.uv.es/pas/nuevaWEB/gdh/2026%20Almanac_UV.pdf"
+    ]
+   },
+   {
+    "key": "Día de Andalucía",
+    "choice": "Dia d'Andalusia",
+    "why": "Viquipèdia article title.",
+    "sources": [
+     "https://ca.wikipedia.org/wiki/Dia_d%27Andalusia"
+    ]
+   },
+   {
+    "key": "Día de las Letras Gallegas",
+    "choice": "Dia de les Lletres Gallegues",
+    "why": "This is the Viquipèdia title. 'Gallegues' is part of the fixed name, so the 'Galiza' rule doesn't change it.",
+    "sources": [
+     "https://ca.wikipedia.org/wiki/Dia_de_les_Lletres_Gallegues"
+    ]
+   },
+   {
+    "key": "Fiesta de Castilla y León",
+    "choice": "Festa de Castella i Lleó",
+    "why": "Viquipèdia titles the article 'Dia de Castella i Lleó'. I kept 'Festa' to match the BOE name used in the source.",
+    "sources": [
+     "https://ca.wikipedia.org/wiki/Dia_de_Castella_i_Lle%C3%B3"
+    ]
+   },
+   {
+    "key": "Aniversario del primer Gobierno Vasco",
+    "choice": "Aniversari del primer Govern Basc",
+    "why": "'Govern Basc' is the institution's Catalan name (Viquipèdia). The 'Euskal Herria' rule covers the region name, not the institution.",
+    "sources": [
+     "https://ca.wikipedia.org/wiki/Govern_Basc"
+    ]
+   },
+   {
+    "key": "Corpus Christi",
+    "choice": "Corpus Christi",
+    "why": "Viquipèdia title, and El Nacional's 2027 list uses it.",
+    "sources": [
+     "https://ca.wikipedia.org/wiki/Corpus_Christi",
+     "https://www.elnacional.cat/oneconomia/ca/empreses/calendari-laboral-2027-9-festius-autonomies-tres-caps-setmana-llargs_1708861_102.html"
+    ]
+   },
+   {
+    "key": "Muslim holidays (Ceuta/Melilla)",
+    "choice": "Festa de l'Eid Fitr / Eidul Adha-Festa del Sacrifici / Festa del Sacrifici-Aid Al Adha",
+    "why": "As instructed, I kept the cities' transliterations. Viquipèdia uses 'Id al-Fitr' and 'Festa del sacrifici', which confirms 'Festa del Sacrifici' as the Catalan generic name. It's capitalised as a festivity name, like 'Festa del Treball'. 'del Eid' becomes 'de l'Eid' with the elided article.",
+    "sources": [
+     "https://ca.wikipedia.org/wiki/Id_al-Fitr",
+     "https://ca.wikipedia.org/wiki/Festa_del_sacrifici",
+     "https://legado.elnotario.es/images/pdf/LAU-N38-14-CAT-Orden-EMO-80-2011.pdf"
+    ]
+   },
+   {
+    "key": "Nuestra Señora de África",
+    "choice": "Mare de Déu d'Àfrica",
+    "why": "Catalan names Marian advocations with 'Mare de Déu de...' (Viquipèdia 'Mare de Déu de les Neus'; Optimot covers the spelling of 'mare de Déu'). I found no Catalan page specific to Ceuta, so this is the standard pattern.",
+    "sources": [
+     "https://ca.wikipedia.org/wiki/Mare_de_D%C3%A9u_de_les_Neus",
+     "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=cerca_generica&input_cercar=Mare+de+D%C3%A9u&tipusCerca=cerca.fitxes"
+    ]
+   },
+   {
+    "key": "Canary advocations",
+    "choice": "Mare de Déu dels Reis / de la Penya / del Pi / de Guadalupe / de les Neus / dels Volcans / de la Candelaria",
+    "why": "The Catalan Viquipèdia 'Illes Canàries' article catalanises the common-noun parts ('del Pi', 'de la Penya', 'dels Reis', 'de les Neus'). It keeps the proper names 'Guadalupe' and 'Candelaria' (article title 'Verge de Candelaria'). I used 'Mare de Déu', the usual Catalan form (Viquipèdia 'Mare de Déu de les Neus'), instead of Viquipèdia's 'La nostra Senyora'. 'Volcanes' becomes 'Volcans' on the same pattern.",
+    "sources": [
+     "https://ca.wikipedia.org/wiki/Illes_Can%C3%A0ries",
+     "https://ca.wikipedia.org/wiki/Verge_de_Candelaria",
+     "https://ca.wikipedia.org/wiki/Mare_de_D%C3%A9u_de_les_Neus",
+     "https://ca.wikipedia.org/wiki/Nostra_Senyora_de_Guadalupe"
+    ]
+   },
+   {
+    "key": "La Bien Aparecida",
+    "choice": "La Bien Aparecida",
+    "why": "This is the proper name of Cantabria's patron Virgin. There is no Catalan form on Viquipèdia, so I kept it untranslated rather than inventing 'la Ben Apareguda'.",
+    "sources": [
+     "https://ca.wikipedia.org/wiki/Illes_Can%C3%A0ries"
+    ]
+   },
+   {
+    "key": "Gran Canaria",
+    "choice": "Gran Canària",
+    "why": "Viquipèdia title. The other islands keep their names with the article capitalised: El Hierro, La Gomera, La Palma, La Graciosa.",
+    "sources": [
+     "https://ca.wikipedia.org/wiki/Gran_Can%C3%A0ria",
+     "https://ca.wikipedia.org/wiki/Illes_Can%C3%A0ries"
+    ]
+   },
+   {
+    "key": "Region: Aragó (in/of)",
+    "choice": "Aragó / a Aragó / d'Aragó",
+    "why": "Optimot (citing the IEC Grammar) says some regions take the article optionally, and lists drop it. The IEC Secció Filològica writes 'a Aragó' and 'd'Aragó', and the Enciclopèdia headword has no article. Press and Viquipèdia often write 'l'Aragó'. If you prefer that, use 'a l'Aragó' and 'de l'Aragó'.",
+    "sources": [
+     "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=detall&input_cercar=Arag%C3%B3+article&numPagina=1&database=FITXES_PUB&idFont=15791&idHit=15791&tipusFont=Fitxes+de+l%27Optimot&numeroResultat=8&clickLink=detall&tipusCerca=cerca.fitxes",
+     "https://sf.iec.cat/wp-content/uploads/2024/07/Declaracio-de-la-SF-sobre-el-catala-a-Arago_acord-del-16-de-febrer-de-2024-1.pdf",
+     "https://ca.wikipedia.org/wiki/Arag%C3%B3",
+     "https://www.elnacional.cat/oneconomia/ca/empreses/calendari-laboral-2027-9-festius-autonomies-tres-caps-setmana-llargs_1708861_102.html"
+    ]
+   },
+   {
+    "key": "Region: Canàries",
+    "choice": "Canàries / a les Canàries / de les Canàries",
+    "why": "Viquipèdia calls the community 'les Canàries' and writes 'a les Canàries' (also 'a Canàries'). Following Optimot, lists drop the article, so the label is bare 'Canàries'.",
+    "sources": [
+     "https://ca.wikipedia.org/wiki/Illes_Can%C3%A0ries",
+     "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=detall&input_cercar=Arag%C3%B3+article&numPagina=1&database=FITXES_PUB&idFont=15791&idHit=15791&tipusFont=Fitxes+de+l%27Optimot&numeroResultat=8&clickLink=detall&tipusCerca=cerca.fitxes",
+     "https://www.elnacional.cat/oneconomia/ca/empreses/calendari-laboral-2027-9-festius-autonomies-tres-caps-setmana-llargs_1708861_102.html"
+    ]
+   },
+   {
+    "key": "Region: Illes Balears",
+    "choice": "Illes Balears / a les Illes Balears / de les Illes Balears",
+    "why": "This is the owner's mandated name. Running text needs the article ('a les Illes Balears'; CAIB writes 'Festes d'àmbit general de les Illes Balears').",
+    "sources": [
+     "https://www.caib.es/sites/calendarilaboral/ca/aao_2026/",
+     "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=detall&input_cercar=Arag%C3%B3+article&numPagina=1&database=FITXES_PUB&idFont=15791&idHit=15791&tipusFont=Fitxes+de+l%27Optimot&numeroResultat=8&clickLink=detall&tipusCerca=cerca.fitxes"
+    ]
+   },
+   {
+    "key": "Region: País Valencià",
+    "choice": "País Valencià / al País Valencià / del País Valencià",
+    "why": "This is the owner's mandated name. It takes the article in running text, so 'al' and 'del' contract.",
+    "sources": [
+     "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=detall&input_cercar=Arag%C3%B3+article&numPagina=1&database=FITXES_PUB&idFont=15791&idHit=15791&tipusFont=Fitxes+de+l%27Optimot&numeroResultat=8&clickLink=detall&tipusCerca=cerca.fitxes",
+     "https://www.elnacional.cat/oneconomia/ca/empreses/calendari-laboral-2027-9-festius-autonomies-tres-caps-setmana-llargs_1708861_102.html"
+    ]
+   },
+   {
+    "key": "Region: La Rioja",
+    "choice": "La Rioja / a La Rioja / de La Rioja",
+    "why": "Catalan Viquipèdia and El Nacional keep the untranslated name with a capitalised article ('de La Rioja'), so it doesn't contract.",
+    "sources": [
+     "https://ca.wikipedia.org/wiki/La_Rioja",
+     "https://www.elnacional.cat/oneconomia/ca/empreses/calendari-laboral-2027-9-festius-autonomies-tres-caps-setmana-llargs_1708861_102.html"
+    ]
+   },
+   {
+    "key": "Region: Castella-la Manxa",
+    "choice": "Castella-la Manxa",
+    "why": "This is the Gran Enciclopèdia Catalana headword, and El Nacional uses it. Viquipèdia spaces the hyphen ('Castella - la Manxa').",
+    "sources": [
+     "https://www.enciclopedia.cat/gran-enciclopedia-catalana/castella-la-manxa",
+     "https://ca.wikipedia.org/wiki/Castella_-_la_Manxa",
+     "https://www.elnacional.cat/oneconomia/ca/empreses/calendari-laboral-2027-9-festius-autonomies-tres-caps-setmana-llargs_1708861_102.html"
+    ]
+   },
+   {
+    "key": "Region: Euskal Herria / Nafarroa / Galiza",
+    "choice": "a Euskal Herria / d'Euskal Herria; a Nafarroa / de Nafarroa; a Galiza / de Galiza",
+    "why": "These are the owner's mandated names, with no article. 'de' elides before the vowel of 'Euskal' (Optimot place-name fitxa).",
+    "sources": [
+     "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=detall&input_cercar=Arag%C3%B3+article&numPagina=1&database=FITXES_PUB&idFont=15791&idHit=15791&tipusFont=Fitxes+de+l%27Optimot&numeroResultat=8&clickLink=detall&tipusCerca=cerca.fitxes"
+    ]
+   },
+   {
+    "key": "Region placeholders in UI strings",
+    "choice": "a {region}",
+    "why": "The Spanish strings use 'en {region}'. 'a {region}' is correct only for names without an article. For comunitat-valenciana, baleares and canarias, the app must replace 'a {region}' with regions[slug].in ('al País Valencià', 'a les Illes Balears', 'a les Canàries'). The press headline 'Calendari laboral 2027 a Catalunya' confirms the construction.",
+    "sources": [
+     "https://www.3cat.cat/3catinfo/calendari-laboral-2027-a-catalunya-dos-ponts-i-tres-festius-que-cauran-en-cap-de-setmana/noticia/3402703/",
+     "https://beteve.cat/economia/calendari-laboral-2027-catalunya-barcelona-festius-ponts/"
+    ]
+   },
+   {
+    "key": "Festivos (noun)",
+    "choice": "Festius",
+    "why": "The DIEC lists 'festiu' only as an adjective ('dia festiu'). But the nominal 'festius' is standard in the press ('els 12 festius', 'dos festius locals'), and Optimot itself writes 'dilluns vinent és festiu'. The DOGC uses 'festes laborals', so I used 'Festa laboral' for the formal string 'Festivo laboral 2027 en {region}'.",
+    "sources": [
+     "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=cerca_generica&input_cercar=festiu&tipusCerca=cerca.tot",
+     "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=cerca_generica&input_cercar=festiu+festa&tipusCerca=cerca.fitxes",
+     "https://www.3cat.cat/3catinfo/calendari-laboral/",
+     "https://www.ara.cat/economia/mercat-laboral/calendari-festius-catalunya_1_4664083.html",
+     "https://portaldogc.gencat.cat/utilsEADOP/AppJava/PdfProviderServlet?documentId=1040896&type=01&language=ca_ES"
+    ]
+   },
+   {
+    "key": "Festivo local",
+    "choice": "Festiu local",
+    "why": "The DOGC says 'festes locals'. The press says 'festiu local' / 'festius locals' (3cat 'és festiu local', Ara 'dos festius locals', betevé 'festius locals'). I chose 'festiu' to stay consistent with 'Festius'.",
+    "sources": [
+     "https://www.3cat.cat/3catinfo/calendari-laboral/",
+     "https://www.ara.cat/economia/mercat-laboral/calendari-festius-catalunya_1_4664083.html",
+     "https://beteve.cat/economia/calendari-laboral-2027-catalunya-barcelona-festius-ponts/",
+     "https://portaldogc.gencat.cat/utilsEADOP/AppJava/PdfProviderServlet?documentId=1040896&type=01&language=ca_ES"
+    ]
+   },
+   {
+    "key": "Nacional (legend) / {n} festivos nacionales",
+    "choice": "Estatal / festius estatals",
+    "why": "In Catalan 'nacional' is ambiguous: 'Diada Nacional de Catalunya' sits next to 'Festa Nacional d'Espanya'. Ara calls Spain-wide holidays 'de caràcter estatal' as against 'els autonòmics'. El Nacional repeats the BOE's 'festes nacionals', but that would confuse readers in Catalonia.",
+    "sources": [
+     "https://www.ara.cat/economia/mercat-laboral/calendari-festius-catalunya_1_4664083.html",
+     "https://www.elnacional.cat/oneconomia/ca/empreses/calendari-laboral-2027-9-festius-autonomies-tres-caps-setmana-llargs_1708861_102.html"
+    ]
+   },
+   {
+    "key": "{n} días laborables / {n} laborables",
+    "choice": "{n} dies feiners / {n} feiners",
+    "why": "TERMCAT (via Optimot) gives 'dia feiner' as the main term, with 'dia laborable' as a synonym. Ara writes 'cauran en dies feiners'.",
+    "sources": [
+     "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=detall&input_cercar=dia+feiner&numPagina=1&database=TERMCAT&idFont=1064794&idHit=1064794&tipusFont=Diccionaris+terminol%C3%B2gics+del+TERMCAT&numeroResultat=2&clickLink=detall&titol=dia+feiner&tematica=Treball&tipusCerca=cerca.tot",
+     "https://www.ub.edu/ubterm/?p=58478",
+     "https://www.ara.cat/economia/mercat-laboral/calendari-festius-catalunya_1_4664083.html"
+    ]
+   },
+   {
+    "key": "Puentes",
+    "choice": "Ponts",
+    "why": "The DIEC has 'pont' with the phrase 'fer pont', and every press source uses 'ponts' and 'fer pont'.",
+    "sources": [
+     "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=cerca_generica&input_cercar=fer+pont&tipusCerca=cerca.tot",
+     "https://beteve.cat/economia/calendari-laboral-2027-catalunya-barcelona-festius-ponts/",
+     "https://www.vilaweb.cat/noticies/calendari-laboral-2026-catalunya-festius-ponts/"
+    ]
+   },
+   {
+    "key": "Coge el {a} y el {b}",
+    "choice": "Agafa festa el {a} i el {b}",
+    "why": "Nació writes 'agafant festa dilluns 7' to make a bridge, and 3cat writes 'Caldria agafar-se dos dies de festa per fer un pont'. A literal 'Agafa el dl. 29' would be unclear in Catalan.",
+    "sources": [
+     "https://naciodigital.cat/societat/ja-es-coneixen-dies-festius-ponts-2026_2095326_102.html",
+     "https://www.3cat.cat/3catinfo/com-queden-els-dies-festius-fins-a-lestiu-que-ve/noticia/3181516/"
+    ]
+   },
+   {
+    "key": "Toca los días que te vas a coger. / Toca los días que te coges.",
+    "choice": "Toca els dies de vacances que agafaràs. / Toca els dies de vacances que agafes.",
+    "why": "3cat uses 'agafa vacances' ('hi ha qui ja agafa vacances'). I added 'de vacances' because a bare 'agafar els dies' doesn't work in Catalan. Imperative 'Toca' in the tu form, matching the Spanish register.",
+    "sources": [
+     "https://www.3cat.cat/3catinfo/com-queden-els-dies-festius-fins-a-lestiu-que-ve/noticia/3181516/",
+     "https://www.softcatala.org/guia-estil-de-softcatala/aspectes-linguistics/"
+    ]
+   },
+   {
+    "key": "sin coger vacaciones",
+    "choice": "sense agafar vacances",
+    "why": "Same collocation, 'agafar vacances' (3cat).",
+    "sources": [
+     "https://www.3cat.cat/3catinfo/com-queden-els-dies-festius-fins-a-lestiu-que-ve/noticia/3181516/"
+    ]
+   },
+   {
+    "key": "Los festivos de 2027 de tu comunidad, tus puentes y cuántos días libres sacas con tus vacaciones. (...)",
+    "choice": "Els festius del 2027 de la teva comunitat, els teus ponts i quants dies de festa seguits pots enllaçar amb les vacances. (...)",
+    "why": "'Sacar días' has no natural Catalan calque. The press phrases it as 'enllaçar ... dies seguits de descans demanant només dos dies de vacances' and 'es poden fer dos caps de setmana llargs'. Years take the article ('del 2027'), as Optimot and betevé show ('el calendari laboral del 2027').",
+    "sources": [
+     "https://beteve.cat/economia/calendari-laboral-2027-catalunya-barcelona-festius-ponts/",
+     "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=cerca_generica&input_cercar=article+anys+2027&tipusCerca=cerca.fitxes",
+     "https://naciodigital.cat/societat/ja-es-coneixen-dies-festius-ponts-2026_2095326_102.html"
+    ]
+   },
+   {
+    "key": "Los {n} festivos de 2027 en {region}, (...)",
+    "choice": "Els {n} festius del 2027 a {region}, amb el dia de la setmana de cadascun, i els {p} ponts de l'any. Segons el BOE del 13 d'octubre de 2026.",
+    "why": "'Del 2027' follows the press (betevé 'tots els 14 festius que podràs gaudir el 2027'; Nació 'del 2026') and Optimot's fitxa on years with the article. Full dates take no article ('13 d'octubre de 2026', El Nacional dateline).",
+    "sources": [
+     "https://beteve.cat/economia/calendari-laboral-2027-catalunya-barcelona-festius-ponts/",
+     "https://naciodigital.cat/societat/ja-es-coneixen-dies-festius-ponts-2026_2095326_102.html",
+     "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=cerca_generica&input_cercar=article+anys+2027&tipusCerca=cerca.fitxes",
+     "https://www.elnacional.cat/oneconomia/ca/empreses/calendari-laboral-2027-9-festius-autonomies-tres-caps-setmana-llargs_1708861_102.html"
+    ]
+   },
+   {
+    "key": "Más los 2 festivos locales de tu municipio.",
+    "choice": "Cal afegir-hi els 2 festius locals del teu municipi.",
+    "why": "A literal 'Més els 2...' isn't natural. The press says 'cada municipi podrà afegir dues festes locals' (Vilaweb) and 'dos festius locals' (Ara), so I built the sentence on 'afegir-hi'.",
+    "sources": [
+     "https://www.vilaweb.cat/noticies/calendari-laboral-2026-catalunya-festius-ponts/",
+     "https://www.ara.cat/economia/mercat-laboral/calendari-festius-catalunya_1_4664083.html",
+     "https://www.3cat.cat/3catinfo/calendari-laboral-2027-a-catalunya-dos-ponts-i-tres-festius-que-cauran-en-cap-de-setmana/noticia/3402703/"
+    ]
+   },
+   {
+    "key": "Faltan {n} días / Falta 1 día",
+    "choice": "Falten {n} dies / Falta 1 dia",
+    "why": "Ara writes 'els dies que falten fins al 24 de desembre'. 'Queden {n} dies' is an equally natural alternative.",
+    "sources": [
+     "https://mengem.ara.cat/receptes/ja-heu-comencat-calendari-advent-nadal-xocolata_1_3062950.html"
+    ]
+   },
+   {
+    "key": "Próximo festivo",
+    "choice": "Pròxim festiu",
+    "why": "Optimot treats 'pròxim' and 'proper' as synonyms. 3cat writes 'els pròxims festius oficials'. 'Proper festiu' is also fine.",
+    "sources": [
+     "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=cerca_generica&input_cercar=proper+pr%C3%B2xim&tipusCerca=cerca.fitxes",
+     "https://www.3cat.cat/3catinfo/com-queden-els-dies-festius-fins-a-lestiu-que-ve/noticia/3181516/"
+    ]
+   },
+   {
+    "key": "Este año no hay puentes.",
+    "choice": "Aquest any no hi ha ponts.",
+    "why": "This mirrors the press 'no hi haurà cap macropont' (Ara). I didn't use the regional 'enguany'.",
+    "sources": [
+     "https://www.ara.cat/economia/mercat-laboral/calendari-festius-catalunya_1_4664083.html"
+    ]
+   },
+   {
+    "key": "Button verbs",
+    "choice": "Marca / Esborra / Esborra-ho tot / Afegeix / Baixa / Comparteix / Imprimeix / Treu / Obre / Tria",
+    "why": "Softcatalà's style guide prescribes the second-person singular imperative for buttons and commands, never the infinitive. Softcatalà addresses the user as 'vós' in messages, but this site's Spanish source uses 'tú' ('Elige tu comunidad'). So I kept 'tu', the register 3cat uses ('Consulta-ho per municipis').",
+    "sources": [
+     "https://www.softcatala.org/guia-estil-de-softcatala/aspectes-linguistics/",
+     "https://www.3cat.cat/3catinfo/calendari-laboral/"
+    ]
+   },
+   {
+    "key": "Descargar .ics",
+    "choice": "Baixa l'.ics",
+    "why": "TERMCAT gives 'baixar' for downloading files, and Softcatalà points to TERMCAT for terminology. 'l'.ics' elides because it's read 'punt ics'. Alternative: 'Baixa el fitxer .ics' (longer).",
+    "sources": [
+     "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=cerca_generica&input_cercar=baixar+descarregar&tipusCerca=cerca.tot",
+     "https://www.softcatala.org/guia-estil-de-softcatala/terminologia/"
+    ]
+   },
+   {
+    "key": "Modo oscuro",
+    "choice": "Mode fosc",
+    "why": "This is the TERMCAT term (via Optimot).",
+    "sources": [
+     "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=cerca_generica&input_cercar=mode+fosc&tipusCerca=cerca.tot"
+    ]
+   },
+   {
+    "key": "Privacidad",
+    "choice": "Privadesa",
+    "why": "Optimot accepts both 'privadesa' and 'privacitat' for this sense. 'Privadesa' is the more established Catalan form.",
+    "sources": [
+     "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=cerca_generica&input_cercar=privadesa&tipusCerca=cerca.tot"
+    ]
+   },
+   {
+    "key": "cookies",
+    "choice": "galetes",
+    "why": "This is the TERMCAT term ('galeta'), and Generalitat sites label their policy 'Política de galetes'.",
+    "sources": [
+     "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=cerca_generica&input_cercar=galeta&tipusCerca=cerca.tot"
+    ]
+   },
+   {
+    "key": "No hay cuentas, ni cookies propias, (...) lo pondremos aquí y te pediremos permiso antes.",
+    "choice": "(...) ho farem constar aquí i abans et demanarem permís.",
+    "why": "I used 'fer constar' instead of a literal 'ho posarem aquí', which sounds colloquial. 'Analítica' and 'publicitat' are the standard terms.",
+    "sources": [
+     "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=cerca_generica&input_cercar=privadesa&tipusCerca=cerca.tot",
+     "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=cerca_generica&input_cercar=galeta&tipusCerca=cerca.tot"
+    ]
+   },
+   {
+    "key": "Privacidad de El Calendario Laboral: (...)",
+    "choice": "Privadesa d'El Calendario Laboral: (...)",
+    "why": "The brand name stays in Spanish. 'de' elides before the brand's article 'El', which stays capitalised because it's part of the name.",
+    "sources": [
+     "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=detall&input_cercar=Arag%C3%B3+article&numPagina=1&database=FITXES_PUB&idFont=15791&idHit=15791&tipusFont=Fitxes+de+l%27Optimot&numeroResultat=8&clickLink=detall&tipusCerca=cerca.fitxes"
+    ]
+   },
+   {
+    "key": "Calendario laboral 2027 {region}: festivos y puentes",
+    "choice": "Calendari laboral 2027 a {region}: festius i ponts",
+    "why": "This copies the exact headline pattern of 3cat and betevé ('Calendari laboral 2027 a Catalunya: ...').",
+    "sources": [
+     "https://www.3cat.cat/3catinfo/calendari-laboral-2027-a-catalunya-dos-ponts-i-tres-festius-que-cauran-en-cap-de-setmana/noticia/3402703/",
+     "https://beteve.cat/economia/calendari-laboral-2027-catalunya-barcelona-festius-ponts/"
+    ]
+   },
+   {
+    "key": "Weekday abbreviations",
+    "choice": "dl. dt. dc. dj. dv. ds. dg.",
+    "why": "Optimot fitxa 'Abreviatures dels dies de la setmana', which also matches CLDR/ICU 'ca'. Catalan has no 3-letter forms, so 'short' uses these.",
+    "sources": [
+     "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=detall&input_cercar=abreviacions+dies+de+la+setmana&numPagina=1&database=FITXES_PUB&idFont=13741&idHit=13741&tipusFont=Fitxes+de+l%27Optimot&numeroResultat=1&clickLink=detall&tipusCerca=cerca.fitxes"
+    ]
+   },
+   {
+    "key": "One-letter weekday header",
+    "choice": "dl dt dc dj dv ds dg (two letters)",
+    "why": "Every Catalan weekday starts with 'd', so a single letter can't tell them apart; Optimot explains this is why the abbreviations use the next consonant. CLDR's 'narrow' form for Catalan is also two letters. Valencian calendars (UV) use 'DL DM X DJ DV DS DI'. Don't copy the Spanish 'L M X J V S D'.",
+    "sources": [
+     "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=detall&input_cercar=abreviacions+dies+de+la+setmana&numPagina=1&database=FITXES_PUB&idFont=13741&idHit=13741&tipusFont=Fitxes+de+l%27Optimot&numeroResultat=1&clickLink=detall&tipusCerca=cerca.fitxes",
+     "https://www.uv.es/pas/nuevaWEB/gdh/2026%20Almanac_UV.pdf"
+    ]
+   },
+   {
+    "key": "Month abbreviations",
+    "choice": "gen. febr. març abr. maig juny jul. ag. set. oct. nov. des.",
+    "why": "Optimot fitxa 'Abreviatures dels mesos de l'any'. 'març', 'maig' and 'juny' aren't abbreviated because they have one syllable. If a fixed width is needed, Optimot also gives codes: GN FB MÇ AB MG JN JL AG ST OC NV DS.",
+    "sources": [
+     "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=detall&input_cercar=abreviatures+dels+mesos&numPagina=1&database=FITXES_PUB&idFont=13889&idHit=13889&tipusFont=Fitxes+de+l%27Optimot&numeroResultat=1&clickLink=detall&tipusCerca=cerca.fitxes"
+    ]
+   },
+   {
+    "key": "Long date pattern",
+    "choice": "{wd} {d} {month_of} -> 'dilluns 29 de març'",
+    "why": "This follows the press: Nació 'dimarts 6 de gener', Ara 'Dilluns 1 d'abril'. No comma, and elision before abril/agost/octubre. Optimot also allows 'dilluns, 29 de març' with an explanatory comma.",
+    "sources": [
+     "https://naciodigital.cat/societat/ja-es-coneixen-dies-festius-ponts-2026_2095326_102.html",
+     "https://www.ara.cat/economia/mercat-laboral/calendari-festius-catalunya_1_4664083.html",
+     "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=detall&input_cercar=abreviacions+dies+de+la+setmana&numPagina=1&database=FITXES_PUB&idFont=13741&idHit=13741&tipusFont=Fitxes+de+l%27Optimot&numeroResultat=1&clickLink=detall&tipusCerca=cerca.fitxes"
+    ]
+   },
+   {
+    "key": "Día de la Comunitat Valenciana",
+    "choice": "Dia del País Valencià",
+    "why": "Owner's rule: the region is named País Valencià in every non-Spanish version, also inside holiday names (gl and eu do the same). The official Valencian name in the DOGV decree is 'Dia de la Comunitat Valenciana'; Catalan press also writes 'Diada del País Valencià' / '9 d'Octubre'.",
+    "sources": [
+     "https://dogv.gva.es/datos/2025/07/07/pdf/2025_24690_va.pdf"
+    ]
+   },
+   {
+    "key": "{region_in}",
+    "choice": "regions.<slug>.ca.in",
+    "why": "Catalan 'a {region}' breaks for País Valencià, Illes Balears, Canàries: templates use {region_in} = 'al País Valencià', 'a les Illes Balears', 'a les Canàries'.",
+    "sources": []
+   },
+   {
+    "key": "regions.<slug>.seo",
+    "choice": "comunitat-valenciana: Comunitat Valenciana, galicia: Galícia, pais-vasco: Euskadi, navarra: Navarra",
+    "why": "Catalan Wikipedia titles/redirects: 'Galícia' and 'Navarra' are the Catalan article titles; 'Euskadi' redirects to 'Comunitat Autònoma del País Basc'; 'Comunitat Valenciana' redirects to 'País Valencià' and is the official name used by the DOGV. Catalunya and Illes Balears are already the usual Catalan forms, so no seo field.",
+    "sources": [
+     "https://ca.wikipedia.org/wiki/Gal%C3%ADcia",
+     "https://ca.wikipedia.org/wiki/Navarra",
+     "https://ca.wikipedia.org/wiki/Comunitat_Valenciana",
+     "https://ca.wikipedia.org/wiki/Euskadi",
+     "https://dogv.gva.es/datos/2025/07/07/pdf/2025_24690_va.pdf"
+    ]
+   }
+  ],
+  "gl": [
+   {
+    "key": "Holiday keys (parentheticals)",
+    "choice": "keys without the trailing context in parentheses",
+    "why": "The list marks context such as '(Melilla)', '(Ceuta)', '(Cantabria)', '(11 Sept)' after some names; those are not part of the BOE names, so the keys drop them (e.g. 'Fiesta del Eid Fitr', 'Nuestra Señora de África', 'Fiesta Nacional de Cataluña'). Re-key if data/2027.json really contains them.",
+    "sources": [
+     "https://www.galiciaconfidencial.com/noticia/6049422-boe-publica-calendario-laboral-2027-nove-festivos-comuns-toda-espana"
+    ]
+   },
+   {
+    "key": "Año Nuevo",
+    "choice": "Aninovo",
+    "why": "The Xunta's 2027 calendar note, the Concello da Coruña labour calendar, Nós Diario and Galicia Confidencial all use 'Aninovo'; the RAG lists it as one word, capitalised in the 1 January sense. 'Ano Novo' is only a cross-reference.",
+    "sources": [
+     "https://www.xunta.gal/notas-de-prensa/-/nova/026293/xunta-galicia-aproba-calendario-laboral-para-2027-19-marzo-17-maio-como-festivos",
+     "https://academia.gal/dicionario/-/termo/busca/aninovo",
+     "https://www.coruna.gal/descarga/1453894201781/Calendario-laboral-para-o-ano-2025.pdf"
+    ]
+   },
+   {
+    "key": "Epifanía del Señor",
+    "choice": "Epifanía do Señor",
+    "why": "The Xunta writes 'Epifanía do Señor (Día de Reis)' and Galicia Confidencial uses 'Epifanía do Señor'. Media use 'Día de Reis' informally, but the official form is kept to match the BOE-based name.",
+    "sources": [
+     "https://www.xunta.gal/notas-de-prensa/-/nova/026293/xunta-galicia-aproba-calendario-laboral-para-2027-19-marzo-17-maio-como-festivos",
+     "https://www.galiciaconfidencial.com/noticia/6049422-boe-publica-calendario-laboral-2027-nove-festivos-comuns-toda-espana",
+     "https://www.nosdiario.gal/articulo/traballo/estes-son-festivos-estatais-2026/20251028152819238014.html"
+    ]
+   },
+   {
+    "key": "Jueves Santo / Viernes Santo",
+    "choice": "Xoves Santo / Venres Santo",
+    "why": "These are the Xunta/DOG forms and the ones Nós Diario uses in its 2026 calendar article. Nós's state-holidays piece used the ordinal 'Quinta feira Santa / Sexta feira Santa', which the RAG also accepts, but the official calendar uses the astronomical names.",
+    "sources": [
+     "https://www.xunta.gal/notas-de-prensa/-/nova/026293/xunta-galicia-aproba-calendario-laboral-para-2027-19-marzo-17-maio-como-festivos",
+     "https://www.nosdiario.gal/articulo/social/xa-oficial-calendario-laboral-da-galicia-2026-seran-festivos-san-xose-san-xoan-25-xullo/20250620113312225784.html",
+     "https://www.nosdiario.gal/articulo/traballo/estes-son-festivos-estatais-2026/20251028152819238014.html",
+     "https://ilg.usc.gal/linguaviva/artigo/34/imprimir"
+    ]
+   },
+   {
+    "key": "Lunes de Pascua",
+    "choice": "Luns de Pascua",
+    "why": "Galicia Confidencial writes 'o 29 de marzo (Luns de Pascua)' in its 2027 calendar article.",
+    "sources": [
+     "https://www.galiciaconfidencial.com/noticia/6049422-boe-publica-calendario-laboral-2027-nove-festivos-comuns-toda-espana"
+    ]
+   },
+   {
+    "key": "Fiesta del Trabajo",
+    "choice": "Festa do Traballo",
+    "why": "The Xunta, the Coruña DOG-based calendar, Nós (2026 calendar) and Galicia Confidencial use 'Festa do Traballo'. 'Día do Traballo' or 'Día Internacional do Traballo' are informal media forms.",
+    "sources": [
+     "https://www.xunta.gal/notas-de-prensa/-/nova/026293/xunta-galicia-aproba-calendario-laboral-para-2027-19-marzo-17-maio-como-festivos",
+     "https://www.galiciaconfidencial.com/noticia/6049422-boe-publica-calendario-laboral-2027-nove-festivos-comuns-toda-espana",
+     "https://blog.mundo-r.com/festivos-galicia-2027/"
+    ]
+   },
+   {
+    "key": "Natividad del Señor",
+    "choice": "Natividade do Señor",
+    "why": "This is the official DOG/Xunta name. 'Nadal' (RAG, capitalised) is the everyday word, but the list follows the BOE's official name. 'Natal' is not RAG standard.",
+    "sources": [
+     "https://www.xunta.gal/notas-de-prensa/-/nova/026293/xunta-galicia-aproba-calendario-laboral-para-2027-19-marzo-17-maio-como-festivos",
+     "https://academia.gal/dicionario/-/termo/busca/nadal",
+     "https://www.coruna.gal/descarga/1453894201781/Calendario-laboral-para-o-ano-2025.pdf"
+    ]
+   },
+   {
+    "key": "Día de la Constitución Española / Inmaculada Concepción / Todos los Santos",
+    "choice": "Día da Constitución Española / Inmaculada Concepción / Todos os Santos",
+    "why": "These are the exact forms in the Coruña DOG-based calendar and the Xunta note. Galicia Confidencial also writes 'Día da Inmaculada Concepción' and 'Festa de Todos os Santos', but the shorter BOE-parallel forms are kept.",
+    "sources": [
+     "https://www.coruna.gal/descarga/1453894201781/Calendario-laboral-para-o-ano-2025.pdf",
+     "https://www.galiciaconfidencial.com/noticia/6049422-boe-publica-calendario-laboral-2027-nove-festivos-comuns-toda-espana"
+    ]
+   },
+   {
+    "key": "Lunes siguiente a la Asunción de la Virgen",
+    "choice": "Luns seguinte á Asunción da Virxe",
+    "why": "Galicia Confidencial: 'o luns 16 de agosto (día seguinte á Asunción da Virxe, que cae en domingo)'. 'Asunción da Virxe' is the DOG name.",
+    "sources": [
+     "https://www.galiciaconfidencial.com/noticia/6049422-boe-publica-calendario-laboral-2027-nove-festivos-comuns-toda-espana",
+     "https://www.coruna.gal/descarga/1453894201781/Calendario-laboral-para-o-ano-2025.pdf"
+    ]
+   },
+   {
+    "key": "Sustitución del 15 de agosto",
+    "choice": "Substitución do 15 de agosto",
+    "why": "Galician official texts use the 'substitu-' family (the Xunta writes 'non substituíbles'), so 'substitución' rather than the also-accepted 'sustitución'.",
+    "sources": [
+     "https://www.xunta.gal/notas-de-prensa/-/nova/026293/xunta-galicia-aproba-calendario-laboral-para-2027-19-marzo-17-maio-como-festivos"
+    ]
+   },
+   {
+    "key": "San Jorge / Día de Aragón",
+    "choice": "San Xurxo / Día de Aragón",
+    "why": "Galipedia names the saint 'San Xurxo' and states that '23 de abril, día de San Xurxo, é festivo en Aragón'.",
+    "sources": [
+     "https://gl.wikipedia.org/wiki/Xurxo_de_Capadocia"
+    ]
+   },
+   {
+    "key": "Día de San Juan",
+    "choice": "Día de San Xoán",
+    "why": "'San Xoán' is the Galician name used by the Xunta and Nós for the 24 June holiday.",
+    "sources": [
+     "https://www.nosdiario.gal/articulo/social/xa-oficial-calendario-laboral-da-galicia-2026-seran-festivos-san-xose-san-xoan-25-xullo/20250620113312225784.html"
+    ]
+   },
+   {
+    "key": "Eid holidays (Ceuta/Melilla)",
+    "choice": "Festa do Eid Fitr / Eidul Adha-Festa do Sacrificio / Festa do Sacrificio-Aid Al Adha",
+    "why": "The cities' own transliterations are kept, as instructed. Only 'Fiesta' becomes 'Festa' and 'del' becomes 'do'; Galipedia confirms 'Festa do Sacrificio' as the Galician name of Eid al-Adha.",
+    "sources": [
+     "https://gl.wikipedia.org/wiki/Eid_al-Adha"
+    ]
+   },
+   {
+    "key": "Virgen de la Candelaria",
+    "choice": "Virxe da Candeloria",
+    "why": "Galipedia's article is 'Nosa Señora da Candeloria' and its lead says 'A Virxe da Candeloria é... a patroa das Illas Canarias'. The RAG has 'candeloria' as the 2 February feast, which is exactly where the advocation's name comes from. Alternative: 'Virxe da Candelaria', which is also used, for example in the basilica's name.",
+    "sources": [
+     "https://gl.wikipedia.org/wiki/Virxe_da_Candelaria",
+     "https://academia.gal/dicionario/-/termo/busca/candeloria"
+    ]
+   },
+   {
+    "key": "Nuestra Señora de las Nieves / de los Reyes / de los Volcanes",
+    "choice": "Nosa Señora das Neves / dos Reis / dos Volcáns",
+    "why": "'Nosa Señora das Neves' is an established Galician advocation (Galipedia). 'Reis' and 'volcán' are ordinary Galician nouns (RAG; regular -n plural gives 'volcáns'). No Galician press uses these specific Canarian names, so this follows the Galipedia pattern of translating the generic part.",
+    "sources": [
+     "https://gl.wikipedia.org/wiki/Nosa_Señora_das_Neves",
+     "https://academia.gal/dicionario/-/termo/busca/volcán",
+     "https://gl.wikipedia.org/wiki/Illas_Canarias"
+    ]
+   },
+   {
+    "key": "Nuestra Señora del Pino / de la Peña / de Guadalupe; La Bien Aparecida",
+    "choice": "Nosa Señora do Pino / da Peña / de Guadalupe; A Bien Aparecida",
+    "why": "'Pino', 'Peña', 'Guadalupe' and 'Bien Aparecida' are proper names of specific images, not translatable common nouns: 'pino' is not even in the RAG dictionary. They are kept, and only the Galician frame (Nosa Señora, article, contraction) is translated, as Galipedia does with Canarian names. 'Ben Aparecida' or 'Nosa Señora do Piñeiro' would be word-for-word inventions with no attested use.",
+    "sources": [
+     "https://academia.gal/dicionario/-/termo/busca/pino",
+     "https://gl.wikipedia.org/wiki/Illas_Canarias"
+    ]
+   },
+   {
+    "key": "Day names containing a region (Comunitat Valenciana, Illes Balears, Cataluña, Gobierno Vasco)",
+    "choice": "Día do País Valencià / Día das Illes Balears / Festa Nacional de Catalunya / Aniversario do primeiro Goberno Vasco",
+    "why": "The owner's region rule is applied inside holiday names too. 'Goberno Vasco' is the name of an institution, not of the region, so it stays as is (capitalised as an institution).",
+    "sources": [
+     "https://www.nosdiario.gal/articulo/traballo/estes-son-festivos-estatais-2026/20251028152819238014.html"
+    ]
+   },
+   {
+    "key": "Island names (El Hierro, La Gomera, La Palma, La Graciosa)",
+    "choice": "kept in Spanish, 'y' -> 'e'",
+    "why": "Galipedia titles and leads use 'El Hierro', 'La Gomera' and 'La Palma' with no Galicianised article, and no redirect from 'O Hierro' or 'A Gomera'.",
+    "sources": [
+     "https://gl.wikipedia.org/wiki/El_Hierro",
+     "https://gl.wikipedia.org/wiki/La_Gomera",
+     "https://gl.wikipedia.org/wiki/Illas_Canarias"
+    ]
+   },
+   {
+    "key": "Arán (Val d'Aran)",
+    "choice": "Arán (Val d'Aran)",
+    "why": "Galipedia: 'O Val de Arán (en aranés e oficialmente: Val d'Aran...), ou simplemente Arán'. The short Galician form is kept, with the official Aranese name in parentheses as in the source.",
+    "sources": [
+     "https://gl.wikipedia.org/wiki/Val_de_Arán"
+    ]
+   },
+   {
+    "key": "Region names (non-owner-rule)",
+    "choice": "Castela-A Mancha, Castela e León, Estremadura, A Rioxa, Principado de Asturias, Comunidade de Madrid, Rexión de Murcia",
+    "why": "Galipedia's article on the autonomous communities uses these forms; the Castela-A Mancha article cites the RAG dictionary and Portal das Palabras. Galicia Confidencial writes 'Castela e León', 'a Comunidade de Madrid' and 'A Rioxa'.",
+    "sources": [
+     "https://gl.wikipedia.org/wiki/Comunidade_autónoma",
+     "https://gl.wikipedia.org/wiki/Castela-A_Mancha",
+     "https://www.galiciaconfidencial.com/noticia/6049422-boe-publica-calendario-laboral-2027-nove-festivos-comuns-toda-espana"
+    ]
+   },
+   {
+    "key": "la-rioja in/of",
+    "choice": "na Rioxa / da Rioxa",
+    "why": "Galician contracts the toponymic article and writes it lowercase mid-sentence. Galipedia's A Rioxa article has 'na Rioxa', 'da Rioxa', 'á Rioxa', and the same applies to 'Día da Rioxa'.",
+    "sources": [
+     "https://gl.wikipedia.org/wiki/A_Rioxa"
+    ]
+   },
+   {
+    "key": "baleares / comunitat-valenciana in/of",
+    "choice": "nas/das Illes Balears; no/do País Valencià",
+    "why": "Galician contracts the preposition with the article of the region name even when the name is in another language. Nós Diario writes 'no País Valencià', and Galicia Confidencial 'nas Baleares'. Short Balearic form 'Balears' follows the owner's Catalan form.",
+    "sources": [
+     "https://www.nosdiario.gal/articulo/traballo/estes-son-festivos-estatais-2026/20251028152819238014.html",
+     "https://www.galiciaconfidencial.com/noticia/6049422-boe-publica-calendario-laboral-2027-nove-festivos-comuns-toda-espana"
+    ]
+   },
+   {
+    "key": "galicia official",
+    "choice": "Galiza",
+    "why": "The owner's rule is used for every field. Nós Diario uses 'Galiza' in body text, for example 'calendario laboral para Galiza'. The statutory name would be 'Comunidade Autónoma de Galicia', which is not used, by rule.",
+    "sources": [
+     "https://www.nosdiario.gal/articulo/social/xa-oficial-calendario-laboral-da-galicia-2026-seran-festivos-san-xose-san-xoan-25-xullo/20250620113312225784.html"
+    ]
+   },
+   {
+    "key": "ceuta / melilla official",
+    "choice": "Cidade Autónoma de Ceuta / de Melilla",
+    "why": "Galipedia: 'Ceuta é unha cidade autónoma española'.",
+    "sources": [
+     "https://gl.wikipedia.org/wiki/Ceuta"
+    ]
+   },
+   {
+    "key": "Puentes",
+    "choice": "Pontes (feminine: a ponte, as pontes)",
+    "why": "The RAG lists 'ponte' as feminine, with the holiday-bridge sense and the example 'a ponte de Todos os Santos'. Nós and Galicia Confidencial write 'a ponte máis longa de 2027' and 'unha ponte de catro días'. GC also has a stray masculine 'catro pontes longos', which is non-standard. Hence 'as {p} pontes', 'Este ano non hai pontes'.",
+    "sources": [
+     "https://academia.gal/dicionario/-/termo/busca/ponte",
+     "https://www.nosdiario.gal/articulo/social/galiza-confirma-seu-calendario-laboral-2027/20261013113427269143.html",
+     "https://www.galiciaconfidencial.com/noticia/6049422-boe-publica-calendario-laboral-2027-nove-festivos-comuns-toda-espana"
+    ]
+   },
+   {
+    "key": "Festivos / Festivo local",
+    "choice": "Festivos / Festivo local / Locais",
+    "why": "The DOG decree title says 'festas', but the Xunta's own note ('como festivos propios'), Praza ('Estes son os festivos no teu concello', 'confirmar un festivo local', 'Os festivos estatais') and Nós ('festivos locais') all use the noun 'festivo(s)'. In the RAG 'festivo' is an adjective plus 'día festivo', but the noun use is the norm in official and press Galician.",
+    "sources": [
+     "https://academia.gal/dicionario/-/termo/busca/festivo",
+     "https://praza.gal/lecer/estes-son-os-festivos-no-teu-concello-en-2026",
+     "https://www.nosdiario.gal/articulo/social/dog-publica-festivos-locais-dos-concellos-galegos-2026-olla-aqui-todas-cada-das-localidades-do-pais/20251030112645238271.html",
+     "https://www.xunta.gal/notas-de-prensa/-/nova/026293/xunta-galicia-aproba-calendario-laboral-para-2027-19-marzo-17-maio-como-festivos"
+    ]
+   },
+   {
+    "key": "Nacional (legend) / {n} festivos nacionales",
+    "choice": "Estatal / festivos estatais",
+    "why": "Galician press calls the state-wide days 'festivos estatais': Praza 'Os festivos estatais son os habituais', Nós's headline 'Estes son os festivos estatais do ano 2026', and 'festivos de carácter estatal'. 'Nacional' is ambiguous in Galician, where 'Día Nacional de Galicia' is the 25 July holiday. The Xunta uses 'nacional' in Castilian-calqued notes.",
+    "sources": [
+     "https://praza.gal/lecer/estes-son-os-festivos-no-teu-concello-en-2026",
+     "https://www.nosdiario.gal/articulo/traballo/estes-son-festivos-estatais-2026/20251028152819238014.html",
+     "https://www.nosdiario.gal/articulo/social/xa-oficial-calendario-laboral-da-galicia-2026-seran-festivos-san-xose-san-xoan-25-xullo/20250620113312225784.html"
+    ]
+   },
+   {
+    "key": "Leyenda",
+    "choice": "Lenda",
+    "why": "RAG 'lenda', sense 4: 'Pé explicativo que acompaña unha imaxe, un mapa, plano etc.'",
+    "sources": [
+     "https://academia.gal/dicionario/-/termo/busca/lenda"
+    ]
+   },
+   {
+    "key": "municipio (Más los 2 festivos locales de tu municipio.)",
+    "choice": "Engádense os 2 festivos locais do teu concello.",
+    "why": "Galician uses 'concello' for the municipality (Praza: 'festivos no teu concello'; Nós: 'dous son elixidos por cada concello'). The sentence is rebuilt on Praza's construction 'Aos dous días festivos que decide cada concello engádense...', rather than calquing 'Máis os...'.",
+    "sources": [
+     "https://praza.gal/lecer/estes-son-os-festivos-no-teu-concello-en-2026",
+     "https://www.nosdiario.gal/articulo/social/dog-publica-festivos-locais-dos-concellos-galegos-2026-olla-aqui-todas-cada-das-localidades-do-pais/20251030112645238271.html"
+    ]
+   },
+   {
+    "key": "Coge el {a} y el {b} / sin coger vacaciones / Toca los días que te (vas a) coges",
+    "choice": "Colle o {a} e o {b} / sen coller vacacións / Toca os días que vas coller / Toca os días que colles",
+    "why": "Galician-language holiday guides write 'se colles o luns 4 e o martes 5 de xaneiro', 'se podes coller o martes 7 libre' and 'Se podes coller días antes ou despois, fas ponte', with no reflexive (Spanish 'cogerse' is colloquial). The periphrastic future drops 'a' in Galician ('vas coller').",
+    "sources": [
+     "https://blog.mundo-r.com/festivos-galicia-2027/",
+     "https://blog.mundo-r.com/festivos-galicia-2026/"
+    ]
+   },
+   {
+    "key": "Faltan {n} días / Falta 1 día",
+    "choice": "Faltan {n} días / Falta {n} día",
+    "why": "The RAG's 'faltar', sense 3 (time remaining) gives 'Faltan dez minutos para comezar a sesión', with 'quedar' as synonym. 'Faltan' is closest to the source and normative.",
+    "sources": [
+     "https://academia.gal/dicionario/-/termo/busca/faltar",
+     "https://blog.mundo-r.com/festivos-galicia-2027/"
+    ]
+   },
+   {
+    "key": "Los festivos de 2027 de tu comunidad, ... cuántos días libres sacas ... (home meta)",
+    "choice": "Os festivos de 2027 da túa comunidade, as túas pontes e cantos días libres consegues coas túas vacacións. Segundo o BOE. Engádeos ao teu calendario.",
+    "why": "'sacar días' is a Castilian colloquialism, so 'conseguir' is used. 'libre' for a day off is attested ('co venres 20 libre farías ponte'). The opening follows Praza and Galicia Confidencial headline patterns ('Estes son os festivos do calendario laboral de 2027'). The enclitic is 'Engádeos'.",
+    "sources": [
+     "https://blog.mundo-r.com/festivos-galicia-2026/",
+     "https://www.galiciaconfidencial.com/noticia/6049422-boe-publica-calendario-laboral-2027-nove-festivos-comuns-toda-espana",
+     "https://praza.gal/lecer/estes-son-os-festivos-no-teu-concello-en-2026"
+    ]
+   },
+   {
+    "key": "{region} placeholder in 'Los {n} festivos de 2027 en {region}...', 'Festivos 2027 en {region}', 'Festivo laboral 2027 en {region}'",
+    "choice": "'en' removed; {region} must be filled with regions[slug].in",
+    "why": "In Galician the preposition contracts with the region's article ('na Rioxa', 'no País Valencià', 'nas Illes Balears'), so a fixed 'en {region}' would give ungrammatical 'en A Rioxa'. Fill {region} with the 'in' form ('en Galiza', 'na Rioxa'). Titles that use the bare name ('Calendario laboral 2027 {region}: ...') take regions[slug].name.",
+    "sources": [
+     "https://gl.wikipedia.org/wiki/A_Rioxa",
+     "https://www.nosdiario.gal/articulo/traballo/estes-son-festivos-estatais-2026/20251028152819238014.html"
+    ]
+   },
+   {
+    "key": "Según el BOE del 13 de octubre de 2026 / Datos: BOE del ...",
+    "choice": "Segundo o BOE do 13 de outubro de 2026",
+    "why": "Galician official style attaches the article to dated references ('Decreto 171/2024, do 8 de xullo'; 'DOG do 20'). 'Segundo' is the standard preposition for 'según'.",
+    "sources": [
+     "https://www.coruna.gal/descarga/1453894201781/Calendario-laboral-para-o-ano-2025.pdf",
+     "https://secretaria.uvigo.gal/uv/web/avisos/aviso/adjunto/get/9fdc7ee543080c583ba3e9e4ac8c37f59a72c4686c067327226fdb165a4d58db"
+    ]
+   },
+   {
+    "key": "¿Cuántos días de vacaciones?",
+    "choice": "Cantos días de vacacións?",
+    "why": "Galician press does not use the opening question mark (Galicia Confidencial headline 'Sabes cal será o calendario de festivos en Galicia en 2026?'). 'vacacións' is the regular -n plural, also in Firefox gl.",
+    "sources": [
+     "https://www.galiciaconfidencial.com/noticia/5919654-19-marzo-e-17-maio-festivos-galicia-2027",
+     "https://blog.mundo-r.com/festivos-galicia-2027/"
+    ]
+   },
+   {
+    "key": "UI verbs (Engadir, Quitar, Borrar, Borrar todo, Compartir, Descargar, Imprimir, Escolle)",
+    "choice": "infinitive buttons, informal 'ti' for instructions",
+    "why": "Mozilla Firefox Galician (Proxecto Trasno conventions) uses 'Engadir', 'Quitar', 'Borrar todo', 'Compartir', 'Descargar', 'Imprimir…', 'Copiar ligazón', and informal 'Escolle o que funciona mellor para a túa busca'. These were checked in the mozilla-l10n/firefox-l10n gl files.",
+    "sources": [
+     "https://github.com/mozilla-l10n/firefox-l10n/tree/main/gl"
+    ]
+   },
+   {
+    "key": "Enlace copiado / Vacaciones borradas / Quitado de tus vacaciones (toasts)",
+    "choice": "Copiouse a ligazón / Borráronse as vacacións / Quitouse das túas vacacións",
+    "why": "Galician UI confirmations use the impersonal 'se' past ('Copiouse o texto ao portapapeis', 'Eliminouse o seu historial recente') rather than a bare participle. 'Ligazón' is the RAG informatics term for a link.",
+    "sources": [
+     "https://github.com/mozilla-l10n/firefox-l10n/tree/main/gl",
+     "https://academia.gal/dicionario/-/termo/busca/ligazón"
+    ]
+   },
+   {
+    "key": "Modo oscuro",
+    "choice": "Tema escuro",
+    "why": "Firefox gl calls the same feature 'Tema escuro' ('Usa un tema escuro para botóns...'). 'Modo escuro' would be understood, but the established localisation term is 'tema'.",
+    "sources": [
+     "https://github.com/mozilla-l10n/firefox-l10n/tree/main/gl"
+    ]
+   },
+   {
+    "key": "ni analítica (privacy)",
+    "choice": "nin ferramentas de análise",
+    "why": "In the RAG, the noun 'analítica' means only a clinical analysis ('Ten que facer analíticas'). The Xunta's cookie policy uses 'cookies propias' and 'con fins analíticos', so the sentence keeps 'cookies propias' and says 'ferramentas de análise'.",
+    "sources": [
+     "https://academia.gal/dicionario/-/termo/busca/analítica",
+     "https://xunta.gal/aviso-legal"
+    ]
+   },
+   {
+    "key": "Privacy paragraphs (pondremos / te pediremos)",
+    "choice": "indicarémolo aquí e pedirémosche permiso antes",
+    "why": "Galician future tense with enclitic pronouns ('-émolo', '-émosche'). 'indicar' is used instead of a calqued 'poñerémolo' for 'say it here'. 'móbil', 'navegador', 'dispositivo' and 'cando queiras' are standard (Firefox gl uses 'dispositivo').",
+    "sources": [
+     "https://github.com/mozilla-l10n/firefox-l10n/tree/main/gl"
+    ]
+   },
+   {
+    "key": "España / en España",
+    "choice": "España",
+    "why": "This is a proper name and was kept. Nós often says 'o Estado', but the UI label names the country and Galicia Confidencial writes 'toda España'.",
+    "sources": [
+     "https://www.galiciaconfidencial.com/noticia/6049422-boe-publica-calendario-laboral-2027-nove-festivos-comuns-toda-espana"
+    ]
+   },
+   {
+    "key": "months.short / weekdays.short",
+    "choice": "xan feb mar abr maio xuño xul ago set out nov dec; luns mar mér xov ven sáb dom",
+    "why": "These are Unicode CLDR Galician abbreviations, without the trailing dot to match the Spanish UI. 'maio', 'xuño' and 'luns' are left whole because they are only 4 letters. Two-letter forms are CLDR 'short' (lu ma mé xo ve sá do).",
+    "sources": [
+     "https://raw.githubusercontent.com/unicode-org/cldr-json/main/cldr-json/cldr-dates-full/main/gl/ca-gregorian.json"
+    ]
+   },
+   {
+    "key": "weekdays.one",
+    "choice": "L M M X V S D",
+    "why": "CLDR Galician narrow forms; the IES Xulián Magariños 2024-25 school calendar (edu.xunta.gal) headers read 'L M Mé X V S D' - the only variation is 'Mé' to tell mércores from martes; for a strict one-letter header CLDR's 'M' is kept (use 'Mé' if the header can take two letters).",
+    "sources": [
+     "https://raw.githubusercontent.com/unicode-org/cldr-json/main/cldr-json/cldr-dates-full/main/gl/ca-gregorian.json",
+     "https://edu.xunta.gal/centros/iesxulianmagarinos/system/files/Calendario%20escolar%2024-25.pdf"
+    ]
+   },
+   {
+    "key": "date_patterns.long",
+    "choice": "{weekday} {day} de {month} (luns 29 de marzo)",
+    "why": "Nós Diario's 2027 calendar article writes dates as 'venres 1 de xaneiro' (lowercase weekday, no comma), and Galician guides write 'o luns 4 e o martes 5 de xaneiro'. 'de' never elides in Galician ('de abril', 'de outubro').",
+    "sources": [
+     "https://www.nosdiario.gal/articulo/social/galiza-confirma-seu-calendario-laboral-2027/20261013113427269143.html",
+     "https://blog.mundo-r.com/festivos-galicia-2027/"
+    ]
+   },
+   {
+    "key": "Isla / General / Zona general / Fiesta de tu isla",
+    "choice": "Illa / Xeral / Zona xeral / Festa da túa illa",
+    "why": "Standard RAG forms 'illa' and 'xeral', as in Galipedia's 'Illas Canarias'. 'Festa' is used for the island feast because the DOG calls the holidays 'festas'.",
+    "sources": [
+     "https://gl.wikipedia.org/wiki/Illas_Canarias",
+     "https://www.coruna.gal/descarga/1453894201781/Calendario-laboral-para-o-ano-2025.pdf"
+    ]
+   },
+   {
+    "key": "Cada isla suma su fiesta insular",
+    "choice": "Cada illa engade a súa festa insular (...)",
+    "why": "Follows Praza's 'engádense' for days added on top of the common ones, rather than a literal 'suma'. 'Orden' becomes 'Orde' (Galician).",
+    "sources": [
+     "https://praza.gal/lecer/estes-son-os-festivos-no-teu-concello-en-2026"
+    ]
+   },
+   {
+    "key": "regions.baleares.short",
+    "choice": "Illes Balears",
+    "why": "Research proposed 'Balears'; the owner's rule names the region 'Illes Balears' in every version, so short = name.",
+    "sources": []
+   },
+   {
+    "key": "regions.<slug>.seo",
+    "choice": "comunitat-valenciana: Comunidade Valenciana, galicia: Galicia, pais-vasco: Euskadi, navarra: Navarra, cataluna: Cataluña, baleares: Illas Baleares",
+    "why": "Galipedia article titles (RAG-normative forms): 'Galicia', 'Comunidade Valenciana' ('País Valenciano' redirects there), 'País Vasco' ('Euskadi' redirects there; Euskadi chosen per coordinator as the common press/search form), 'Navarra', 'Cataluña' ('Catalunya' redirects to it), 'Illas Baleares'.",
+    "sources": [
+     "https://gl.wikipedia.org/wiki/Galicia",
+     "https://gl.wikipedia.org/wiki/Comunidade_Valenciana",
+     "https://gl.wikipedia.org/wiki/Euskadi",
+     "https://gl.wikipedia.org/wiki/Navarra",
+     "https://gl.wikipedia.org/wiki/Catalu%C3%B1a",
+     "https://gl.wikipedia.org/wiki/Illas_Baleares"
+    ]
+   }
+  ],
+  "eu": [
+   {
+    "key": "Año Nuevo",
+    "choice": "Urteberri eguna",
+    "why": "Euskaltzaindia's dictionary spells the day 'Urteberri' (one word) with the example 'Urteberri egunean'; EITB/Orain and Naiz write 'Urteberri eguna'. The 2026/2027 decrees write 'Urte Berri eguna' (two words); I followed the Academy and the press.",
+    "sources": [
+     "https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&view=frontpage&Itemid=410&lang=eu&sarrera=urteberri",
+     "https://hiztegiak.elhuyar.eus/es/a%C3%B1o",
+     "https://orain.eus/eu/aktualitatea/ekonomia/2023/05/30/2024ko-lanegutegia-euskadin-jaiegunak-eta-zubiak/",
+     "https://www.euskadi.eus/web01-bopv/eu/bopv2/datos/2026/07/2603215e.shtml"
+    ]
+   },
+   {
+    "key": "Epifanía del Señor",
+    "choice": "Errege eguna",
+    "why": "The 2027 decree has 'Jaunaren Agerkundea' (2026 decree: 'Jaunaren Epifania'), a literal copy of the Spanish. The Academy's 'epifania' entry points to 'Errege egun', the IVAP style guide gives 'Errege eguna' as its model, and EITB/Orain, Naiz and Euskaltel all write 'Errege eguna'. Alternative if the strictly official label is wanted: 'Jaunaren Agerkundea'.",
+    "sources": [
+     "https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&view=frontpage&Itemid=410&lang=eu&sarrera=epifania",
+     "https://www.ivap.euskadi.eus/contenidos/blog_post/jaiegunenidazkera/eu_def/Gabonak.pdf",
+     "https://orain.eus/eu/aktualitatea/ekonomia/2023/05/30/2024ko-lanegutegia-euskadin-jaiegunak-eta-zubiak/",
+     "https://www.naiz.eus/en/info/noticia/20250408/lakuak-2026ko-lan-egutegia-onartu-du-martxoaren-19a-eta-uztailaren-25a-jai-egunak-izango-dira",
+     "https://www.euskadi.eus/web01-bopv/eu/bopv2/datos/2026/07/2603215e.shtml"
+    ]
+   },
+   {
+    "key": "Capitalisation of 'eguna' in holiday names",
+    "choice": "Religious/saint days: lower-case 'eguna' (Urteberri eguna, Errege eguna, Eguberri eguna, Corpus eguna, San Jose eguna). Civil days and names where 'Eguna' cannot be dropped: capital (Langileen Eguna, Konstituzio Eguna, Santu Guztien Eguna, Andaluziaren Eguna).",
+    "why": "This is Euskaltzaindia's spelling rule 200 (EBO), sections 2.3.10.4.1 and 2.3.10.4.5, with its own examples 'Mendekoste eguna', 'San Ignazio eguna', 'Santu Guztien Eguna', 'Nafarroaren Eguna', 'Langileen Nazioarteko Eguna'. The decrees capitalise inconsistently.",
+    "sources": [
+     "https://euskaltzaindia.eus/dok/arauak/Araua_0200.pdf",
+     "https://www.ivap.euskadi.eus/contenidos/blog_post/jaiegunenidazkera/eu_def/Gabonak.pdf"
+    ]
+   },
+   {
+    "key": "Lunes de Pascua",
+    "choice": "Pazko astelehena",
+    "why": "The decrees have 'Pazko Astelehena', EITB/Naiz/Euskaltel write 'Pazko astelehena', and rule 200 lists 'Pazko astelehena' with 'astelehena' in lower case. 'Pazko bigarrena' (Wikipedia, also in rule 200) is the traditional alternative.",
+    "sources": [
+     "https://euskaltzaindia.eus/dok/arauak/Araua_0200.pdf",
+     "https://www.euskadi.eus/web01-bopv/eu/bopv2/datos/2026/07/2603215e.shtml",
+     "https://orain.eus/eu/aktualitatea/ekonomia/2026/06/09/eaeko-lanegutegia-2027koa/"
+    ]
+   },
+   {
+    "key": "Jueves Santo / Viernes Santo",
+    "choice": "Ostegun Santua / Ostiral Santua",
+    "why": "This form appears in the decree, rule 200 ('Ostegun Santu', 'Ostiral Santu', both capitalised) and all the press sources.",
+    "sources": [
+     "https://www.euskadi.eus/web01-bopv/eu/bopv2/datos/2026/07/2603215e.shtml",
+     "https://euskaltzaindia.eus/dok/arauak/Araua_0200.pdf"
+    ]
+   },
+   {
+    "key": "Fiesta del Trabajo",
+    "choice": "Langileen Eguna",
+    "why": "This is the decree form (2026 and 2027). Rule 200 and Wikipedia use the longer 'Langileen Nazioarteko Eguna'; EITB writes 'Langilearen eguna'. I chose the shorter official name.",
+    "sources": [
+     "https://www.euskadi.eus/web01-bopv/eu/bopv2/datos/2026/07/2603215e.shtml",
+     "https://euskaltzaindia.eus/dok/arauak/Araua_0200.pdf"
+    ]
+   },
+   {
+    "key": "Aniversario del primer Gobierno Vasco",
+    "choice": "Euskadiko lehen Gobernuaren urteurrena",
+    "why": "This is the exact Basque wording of article 1 of Decree 90/2026 (7 October 2027), repeated by EITB/Orain. The suggested 'Lehen Eusko Jaurlaritzaren urteurrena' is good Basque but is not the official label; Euskaltel writes 'Euskadiko lehenengo Jaurlaritzaren urteurrena'.",
+    "sources": [
+     "https://www.euskadi.eus/web01-bopv/eu/bopv2/datos/2026/07/2603215e.shtml",
+     "https://orain.eus/eu/aktualitatea/ekonomia/2026/06/09/eaeko-lanegutegia-2027koa/",
+     "https://blog.euskaltel.com/eu/euskadiko-jaiegunak-2027/"
+    ]
+   },
+   {
+    "key": "Fiesta Nacional de España",
+    "choice": "Espainiako Jai Nazionala",
+    "why": "This is the decree wording for 12 October, also used by EITB ('Espainiako jai nazionala'). Basque Wikipedia has 'Espainiako Egun Nazionala'.",
+    "sources": [
+     "https://www.euskadi.eus/web01-bopv/eu/bopv2/datos/2026/07/2603215e.shtml",
+     "https://orain.eus/eu/aktualitatea/ekonomia/2023/05/30/2024ko-lanegutegia-euskadin-jaiegunak-eta-zubiak/"
+    ]
+   },
+   {
+    "key": "Todos los Santos",
+    "choice": "Santu Guztien Eguna",
+    "why": "The 2027 decree and rule 200 both use this name. 'Domu Santu eguna' (Academy dictionary, EITB 2024) is the popular synonym.",
+    "sources": [
+     "https://www.euskadi.eus/web01-bopv/eu/bopv2/datos/2026/07/2603215e.shtml",
+     "https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&view=frontpage&Itemid=410&lang=eu&sarrera=Domu%20Santu"
+    ]
+   },
+   {
+    "key": "Día de la Constitución Española",
+    "choice": "Konstituzio Eguna",
+    "why": "The 2027 decree turns the Spanish 'Día de la Constitución Española' into 'Konstituzio Eguna', and EITB writes the same. 'Espainiako Konstituzioaren Eguna' (2002 decree, Naiz) is the longer form.",
+    "sources": [
+     "https://www.euskadi.eus/web01-bopv/eu/bopv2/datos/2026/07/2603215e.shtml",
+     "https://www.euskadi.eus/bopv2/datos/2026/07/2603215a.shtml",
+     "https://orain.eus/eu/aktualitatea/ekonomia/2023/05/30/2024ko-lanegutegia-euskadin-jaiegunak-eta-zubiak/"
+    ]
+   },
+   {
+    "key": "Inmaculada Concepción",
+    "choice": "Andre Maria Sortzez Garbiaren Eguna",
+    "why": "This is the decree wording for Spanish 'Inmaculada Concepción', repeated by EITB. A shorter UI form would be 'Sortzez Garbiaren eguna' (Euskaltel).",
+    "sources": [
+     "https://www.euskadi.eus/web01-bopv/eu/bopv2/datos/2026/07/2603215e.shtml",
+     "https://orain.eus/eu/aktualitatea/ekonomia/2026/06/09/eaeko-lanegutegia-2027koa/"
+    ]
+   },
+   {
+    "key": "Natividad del Señor",
+    "choice": "Eguberri eguna",
+    "why": "The decree turns Spanish 'Natividad del Señor' into 'Eguberri Eguna' rather than a literal 'Jaunaren Jaiotza'. I used lower-case 'eguna' following rule 200 and the IVAP guide, which give 'Eguberri eguna' as their example.",
+    "sources": [
+     "https://www.euskadi.eus/bopv2/datos/2026/07/2603215a.shtml",
+     "https://www.euskadi.eus/web01-bopv/eu/bopv2/datos/2026/07/2603215e.shtml",
+     "https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&view=frontpage&Itemid=410&lang=eu&sarrera=Eguberri",
+     "https://www.ivap.euskadi.eus/contenidos/blog_post/jaiegunenidazkera/eu_def/Gabonak.pdf"
+    ]
+   },
+   {
+    "key": "San José",
+    "choice": "San Jose eguna",
+    "why": "Naiz writes 'San Jose eguna' and the 2026 decree 'San Joseren eguna'. Rule 200 has saints' days as '<San X> eguna' with no -ren ('San Ignazio eguna'). Euskaltzaindia's saint-name rule 66 prefers 'Josef' for the saint, but every calendar and press source uses 'San Jose' for the holiday.",
+    "sources": [
+     "https://www.naiz.eus/en/info/noticia/20250408/lakuak-2026ko-lan-egutegia-onartu-du-martxoaren-19a-eta-uztailaren-25a-jai-egunak-izango-dira",
+     "https://www.euskadi.eus/web01-bopv/eu/bopv2/datos/2025/04/2501782e.shtml",
+     "https://euskaltzaindia.eus/dok/arauak/Araua_0200.pdf",
+     "https://www.euskaltzaindia.eus/dok/arauak/Araua_0066.pdf"
+    ]
+   },
+   {
+    "key": "San Jorge / Día de Aragón",
+    "choice": "San Jurgi eguna / Aragoiren Eguna",
+    "why": "Euskaltzaindia's saint-name rule 66 gives Jorge = Jurgi, and Basque Wikipedia's 'San Jorge' page gives 'San Jurgi'. No Basque source names Aragon's day, so I built 'Aragoiren Eguna' on the rule 200 pattern for civil days ('Nafarroaren Eguna'). Not attested.",
+    "sources": [
+     "https://www.euskaltzaindia.eus/dok/arauak/Araua_0066.pdf",
+     "https://eu.wikipedia.org/wiki/San_Jorge",
+     "https://euskaltzaindia.eus/dok/arauak/Araua_0200.pdf"
+    ]
+   },
+   {
+    "key": "Día de San Juan",
+    "choice": "San Joan eguna",
+    "why": "Rule 200 writes 'San Joan' (footnote 18: 'San Joan baina sanjoan(-)lore'). Rule 66 gives 'Joanes edo Joan' for the Baptist. 'Donibane' (Basque Wikipedia 'Donibane jaia') is the traditional and place-name form and a valid alternative.",
+    "sources": [
+     "https://euskaltzaindia.eus/dok/arauak/Araua_0200.pdf",
+     "https://www.euskaltzaindia.eus/dok/arauak/Araua_0066.pdf",
+     "https://eu.wikipedia.org/wiki/Donibane_jaia"
+    ]
+   },
+   {
+    "key": "Corpus Christi",
+    "choice": "Corpus eguna",
+    "why": "Basque Wikipedia names the article 'Corpus eguna', rule 200 lists 'Corpus' (capitalised) among religious feasts, and Elhuyar gives 'Corpus egun' first. 'Gorpuzti' (Bizkaian) and 'Bestaberri' (northern dialects, Navarre) are dialectal.",
+    "sources": [
+     "https://eu.wikipedia.org/wiki/Corpus_Christi",
+     "https://www.euskadi.eus/web01-apelhuya/eu/ab34aElhuyarHiztegiaWar/ab34ahiztegia/melocotn*/G/Hes036702_0",
+     "https://euskaltzaindia.eus/dok/arauak/Araua_0200.pdf"
+    ]
+   },
+   {
+    "key": "Día de Andalucía (and other 'Día de <region>')",
+    "choice": "Andaluziaren Eguna, Gaztela-Mantxaren Eguna, Murtziako Erregioaren Eguna, Errioxaren Eguna, Extremaduraren Eguna, Asturiasen Eguna, Illes Balears-en Eguna, País Valencià-ren Eguna",
+    "why": "Basque Wikipedia has 'Andaluziaren eguna' and rule 200 'Nafarroaren Eguna' (possessive -ren, capital 'Eguna' for civil days), so I applied that pattern to every region. The other common pattern is locative -ko ('Euskadiko Eguna' was the official name of the Basque day per Wikipedia; 'Kataluniako Egun Nazionala'), e.g. 'Asturiasko Eguna'. Possessive after a consonant-final name is -en, hence 'Asturiasen', 'Illes Balears-en'.",
+    "sources": [
+     "https://eu.wikipedia.org/wiki/Andaluziaren_eguna",
+     "https://euskaltzaindia.eus/dok/arauak/Araua_0200.pdf",
+     "https://eu.wikipedia.org/wiki/Euskadiren_Eguna",
+     "https://www.euskaltzaindia.eus/dok/arauak/Araua_0184.pdf"
+    ]
+   },
+   {
+    "key": "Fiesta de Castilla y León",
+    "choice": "Gaztela eta Leongo Jaia",
+    "why": "This uses the genitive 'Gaztela eta Leongo', taken verbatim from Euskaltzaindia's rule 32 (2024), and 'Jaia' for Spanish 'Fiesta', parallel to 'Espainiako Jai Nazionala'. No Basque source names the day.",
+    "sources": [
+     "https://www.euskaltzaindia.eus/dok/arauak/Araua_0032.pdf"
+    ]
+   },
+   {
+    "key": "Día de las Letras Gallegas",
+    "choice": "Galizierazko Letren Eguna",
+    "why": "This is the Basque name in Basque Wikipedia ('Día das Letras Galegas edo Galizierazko Letren Eguna'). It refers to the Galician language, so the owner's 'Galiza' rule for the region name does not apply.",
+    "sources": [
+     "https://eu.wikipedia.org/wiki/D%C3%ADa_das_Letras_Galegas"
+    ]
+   },
+   {
+    "key": "Día de las Instituciones de Cantabria",
+    "choice": "Kantabriako Erakundeen Eguna",
+    "why": "No Basque source found. I built it from the region's genitive 'Kantabriako' and erakunde (= institución), with a capital 'Eguna' as for civil days (rule 200).",
+    "sources": [
+     "https://www.euskaltzaindia.eus/dok/arauak/Araua_0032.pdf",
+     "https://euskaltzaindia.eus/dok/arauak/Araua_0200.pdf"
+    ]
+   },
+   {
+    "key": "Fiesta Nacional de Cataluña (11 Sept)",
+    "choice": "Catalunyako Jai Nazionala (irailaren 11)",
+    "why": "This mirrors the decree's 'Espainiako Jai Nazionala', since both Spanish names are 'Fiesta Nacional', and uses the owner's 'Catalunya'. Basque Wikipedia has 'Kataluniako Egun Nazionala', and rule 200 cites 'Irailaren Hamaika (Kataluniako Diada)', so 'Catalunyako Diada' is the natural alternative. The '(11 Sept)' tag became 'irailaren 11' (no -a after 11, rule 203).",
+    "sources": [
+     "https://www.euskadi.eus/web01-bopv/eu/bopv2/datos/2026/07/2603215e.shtml",
+     "https://eu.wikipedia.org/wiki/Kataluniako_Egun_Nazionala",
+     "https://euskaltzaindia.eus/dok/arauak/Araua_0200.pdf",
+     "https://www.euskaltzaindia.eus/dok/arauak/Araua_0203.pdf"
+    ]
+   },
+   {
+    "key": "Lunes siguiente a la Asunción de la Virgen",
+    "choice": "Ama Birjinaren Jasokundearen hurrengo astelehena",
+    "why": "The 2026 decree names 15 August 'Ama Birjinaren Jasokundea' and rule 200 lists 'Jasokunde'. 'hurrengo' (next/following) is the usual Basque word for this, as in EITB/Naiz 'hurrengo urteko jai-egunak'.",
+    "sources": [
+     "https://www.euskadi.eus/web01-bopv/eu/bopv2/datos/2025/04/2501782e.shtml",
+     "https://euskaltzaindia.eus/dok/arauak/Araua_0200.pdf",
+     "https://www.naiz.eus/en/info/noticia/20250408/lakuak-2026ko-lan-egutegia-onartu-du-martxoaren-19a-eta-uztailaren-25a-jai-egunak-izango-dira"
+    ]
+   },
+   {
+    "key": "Sustitución del 15 de agosto",
+    "choice": "Abuztuaren 15aren ordezkoa",
+    "why": "Basque calendar writers describe Sunday-holiday replacements as 'ordezko' / 'ordez': Euskaltel 'haien ordezkoak martxoaren 19a ... jarri dira', Naiz 'Haien ordez, martxoaren 19a ... jai egunak izango dira'.",
+    "sources": [
+     "https://blog.euskaltel.com/eu/euskadiko-jaiegunak-2026/",
+     "https://www.naiz.eus/en/info/noticia/20250408/lakuak-2026ko-lan-egutegia-onartu-du-martxoaren-19a-eta-uztailaren-25a-jai-egunak-izango-dira"
+    ]
+   },
+   {
+    "key": "Muslim holidays",
+    "choice": "Eid Fitr jaia / Eidul Adha - Sakrifizioaren Jaia / Sakrifizioaren Jaia - Aid Al Adha",
+    "why": "As requested, the cities' transliterations are kept. A Basque Government bulletin writes 'Eid al Fitr jaian', so 'Eid Fitr jaia' follows that. Basque Wikipedia glosses Eid al-Adha as «Sakrifizioaren jaialdia», and I used the shorter 'Sakrifizioaren Jaia' for Spanish 'Fiesta del Sacrificio', capitalised because 'Jaia' is part of the name (rule 200).",
+    "sources": [
+     "https://www.euskadi.eus/contenidos/informacion/comision_ados_intro/eu_def/adjuntos/Euskera-circular-13.pdf",
+     "https://eu.wikipedia.org/wiki/Eid_al-Adha",
+     "https://eu.wikipedia.org/wiki/Eid_al-Fitr",
+     "https://euskaltzaindia.eus/dok/arauak/Araua_0200.pdf"
+    ]
+   },
+   {
+    "key": "Marian advocations (Canarias, Ceuta, Cantabria)",
+    "choice": "<Place/advocation>-ko Andre Maria for 'Nuestra Señora de'; <X>-ko Ama Birjina for 'Virgen de'",
+    "why": "Basque usage translates the advocation when an established equivalent exists. 'Erregeen Andra Maria' is Laguardia's Santa María de los Reyes, 'Elurretako Andre Maria' is a church in Iruzubieta, and 'Guadalupeko Ama Birjina' is Hondarribia's sanctuary. Otherwise it keeps the proper name with -ko: Afrikako, Peñako, Pinoko, Candelariako, Bien Aparecidako. Standard 'Andre Maria' is used, not western 'Andra Mari'.",
+    "sources": [
+     "https://turismo.euskadi.eus/eu/kultur-ondarea/erregeen-andra-maria-eliza/webtur00-content/eu/",
+     "https://www.euskadi.eus/erdotzako-andre-mariaren-baseliza/markina-xemein/done-jakue-bidea/web01-a2donjak/eu/",
+     "https://www.euskadi.eus/guadalupeko-santutegia/hondarribia/done-jakue-bidea/web01-a2donjak/eu/",
+     "https://www.euskaltzaindia.eus/dok/arauak/Araua_0066.pdf"
+    ]
+   },
+   {
+    "key": "Nuestra Señora de los Volcanes (Lanzarote)",
+    "choice": "Sumendietako Andre Maria (Lanzarote)",
+    "why": "Least certain item: no Basque text found. I translated the common noun (sumendi = volcano) on the model of 'Elurretako' (Nieves) and 'Erregeen' (Reyes), because keeping the Spanish would give the awkward 'Los Volcanesko Andre Maria'. Peña and Pino were kept as proper names (Peñako, Pinoko). Translated alternatives would be 'Haitzeko' and 'Pinuko'.",
+    "sources": [
+     "https://www.euskadi.eus/erdotzako-andre-mariaren-baseliza/markina-xemein/done-jakue-bidea/web01-a2donjak/eu/",
+     "https://turismo.euskadi.eus/eu/kultur-ondarea/erregeen-andra-maria-eliza/webtur00-content/eu/"
+    ]
+   },
+   {
+    "key": "Island names (zones)",
+    "choice": "Kanaria Handia; El Hierro, La Gomera, La Palma, La Graciosa, Lanzarote, Fuerteventura, Tenerife unchanged",
+    "why": "Euskaltzaindia rule 32 has a Basque exonym only for Gran Canaria ('Las Palmas Kanaria Handikoa'). Rule 149 says places without a Basque exonym keep their official name, so the Spanish article stays. Basque Wikipedia drops it ('Hierro', 'Gomera', 'Graciosa') but keeps 'La Palma'; that is the alternative.",
+    "sources": [
+     "https://www.euskaltzaindia.eus/dok/arauak/Araua_0032.pdf",
+     "https://www.euskaltzaindia.eus/dok/arauak/Araua_0149.pdf",
+     "https://eu.wikipedia.org/wiki/Kanariak",
+     "https://eu.wikipedia.org/wiki/Hierro"
+    ]
+   },
+   {
+    "key": "Arán / Fiesta de Arán",
+    "choice": "Aran (inessive Aranen, genitive Arango) / Arango Jaia",
+    "why": "Basque Wikipedia uses 'Aran harana' / 'Arango harana'. No Basque name was found for the Hèsta d'Aran; 'Arango Jaia' follows the 'Fiesta de X' -> 'X-ko Jaia' pattern used above.",
+    "sources": [
+     "https://eu.wikipedia.org/wiki/Arango_harana"
+    ]
+   },
+   {
+    "key": "Zone notes (decree citations)",
+    "choice": "'115/2026 Dekretua, 2026ko uztailaren 3ko BOC'; 'EMT/52/2026 Agindua, 2026ko apirilaren 1eko DOGC'",
+    "why": "This follows BOPV practice: number before 'Dekretua'/'Agindua', and a date in -ko before the gazette acronym ('2026-03-13ko EAO'). Gazette acronyms are kept as in the press ('BOEk', 'BOEn'). 'Uharte bakoitzak bere jaieguna gehitzen du' mirrors EITB 'Lurralde historiko bakoitzak jaiegun bat gehituko dio'. 'martxoaren 29aren ordez' mirrors Naiz 'Haien ordez'.",
+    "sources": [
+     "https://www.euskadi.eus/web01-bopv/eu/bopv2/datos/2026/07/2603215e.shtml",
+     "https://orain.eus/eu/tag/lan-egutegia/",
+     "https://www.naiz.eus/en/info/noticia/20250408/lakuak-2026ko-lan-egutegia-onartu-du-martxoaren-19a-eta-uztailaren-25a-jai-egunak-izango-dira"
+    ]
+   },
+   {
+    "key": "Region names: exonyms and León",
+    "choice": "Andaluzia, Aragoi, Asturias, Kanariak, Kantabria, Gaztela-Mantxa, Gaztela eta León, Extremadura, Madril, Murtzia, Errioxa, Ceuta, Melilla",
+    "why": "All of these match Euskaltzaindia rule 32 (updated 23 Feb 2024), which writes 'Gaztela eta León' with the accent, not 'Leon'. Official forms in that rule: 'Asturiasko Printzerria', 'Madrilgo Erkidegoa', 'Murtziako Erregioa'. The owner's six names (Galiza, País Valencià, Illes Balears, Euskal Herria, Nafarroa, Catalunya) are applied as given, including in 'official'. For reference, rule 32's legal names are 'Euskal Autonomia Erkidegoa', 'Nafarroako Foru Komunitatea', 'Valentziako Erkidegoa', 'Balear Uharteak', 'Katalunia', 'Galizia'.",
+    "sources": [
+     "https://www.euskaltzaindia.eus/dok/arauak/Araua_0032.pdf"
+    ]
+   },
+   {
+    "key": "Region declension (in/of)",
+    "choice": "-n/-an/-etan and -ko/-go/-etako as in 'regions'",
+    "why": "Rule 32 itself gives 'Asturiasko', 'Madrilgo', 'Gaztela-Mantxako', 'Gaztela eta Leongo' (accent dropped in the declined form) and 'Las Palmasko' (-s + ko, no epenthetic e). 'Aragoin' comes from the EHU dictionary EEH ('Aragoin mintzatzen dena'). 'Kanarietan' is from Basque Wikipedia. 'Gaztela eta Leonen' is from an EITB/Orain headline.",
+    "sources": [
+     "https://www.euskaltzaindia.eus/dok/arauak/Araua_0032.pdf",
+     "https://www.ehu.eus/eeh/cgi/bila?l=a&z=4129",
+     "https://eu.wikipedia.org/wiki/Kanariak",
+     "https://orain.eus/eu/politika/2026/03/15/gaztela-leongo-hauteskunde-autonomioak-trevinoko-emaitzak-2026-martxoak-15/"
+    ]
+   },
+   {
+    "key": "Illes Balears / País Valencià / Catalunya / Galiza declension",
+    "choice": "Illes Balears-en / Illes Balears-ko; País Valencià-n / País Valencià-ko; Catalunyan / Catalunyako; Galizan / Galizako",
+    "why": "Euskaltzaindia rules 158 (section 3) and 184 (section 3.2): in writing, foreign names are declined by their last written letter, so -s takes consonant endings and -à / -a take vowel endings. The hyphen is optional, a style choice ('Calaisen edo Calais-en'). I used it only for the two Catalan-spelled names so they stay recognisable. Without the hyphen: Illes Balearsen / Illes Balearsko, País Valenciàn / País Valenciàko. Basque press normally uses Balear Uharteak, Valentziako Herrialdea, Katalunia and Galizia, so these declined forms are rule-derived, not attested.",
+    "sources": [
+     "https://www.euskaltzaindia.eus/dok/arauak/Araua_0158.pdf",
+     "https://www.euskaltzaindia.eus/dok/arauak/Araua_0184.pdf",
+     "https://www.euskaltzaindia.eus/dok/arauak/Araua_0032.pdf"
+    ]
+   },
+   {
+    "key": "Calendario laboral 2027 {region}: festivos y puentes",
+    "choice": "2027ko lan-egutegia {region_in}: jaiegunak eta zubiak",
+    "why": "This is EITB's exact headline pattern: '2024ko lan-egutegia Euskadin: jaiegunak eta zubiak', '2021eko lan egutegia Euskadin: Jaiegunak eta zubiak'. The owner's alternative '{region_of} 2027ko lan-egutegia: jaiegunak eta zubiak' is also backed (Euskaltel: 'Nafarroako 2027ko lan-egutegi honetan'). The hyphenated 'lan-egutegia' is the BOPV and EITB spelling.",
+    "sources": [
+     "https://orain.eus/eu/aktualitatea/ekonomia/2023/05/30/2024ko-lanegutegia-euskadin-jaiegunak-eta-zubiak/",
+     "https://orain.eus/eu/tag/lan-egutegia/",
+     "https://blog.euskaltel.com/eu/nafarroako-jaiegunak-2027/"
+    ]
+   },
+   {
+    "key": "Calendario laboral 2027: festivos y puentes por comunidad",
+    "choice": "2027ko lan-egutegia: jaiegunak eta zubiak erkidegoka",
+    "why": "This follows EITB's headline pattern. 'erkidegoka' (by community) is the distributive Euskaltzaindia itself uses in rule 32 ('Espainiako Erresumako probintziak autonomia-erkidegoka').",
+    "sources": [
+     "https://orain.eus/eu/aktualitatea/ekonomia/2023/05/30/2024ko-lanegutegia-euskadin-jaiegunak-eta-zubiak/",
+     "https://www.euskaltzaindia.eus/dok/arauak/Araua_0032.pdf"
+    ]
+   },
+   {
+    "key": "Los {n} festivos de 2027 en {region}... (meta)",
+    "choice": "{region_in} 2027an izango diren {n} jaiegunak, bakoitza asteko zein egunetan den, eta urteko {p} zubiak. 2026ko urriaren 13ko BOEren arabera.",
+    "why": "This mirrors Euskaltel's 'Nafarroan 2027an izango ditugun 14 jaiegunak' and EITB's '12 jaiegun, lau zubi'. The BOE date follows rule 203 (year-ko + month-genitive + day). EITB and Berria keep the acronym 'BOE' ('BOEk ... argitaratu du').",
+    "sources": [
+     "https://blog.euskaltel.com/eu/nafarroako-jaiegunak-2027/",
+     "https://orain.eus/eu/aktualitatea/ekonomia/2025/04/08/2026ko-lanegutegia-eaen-12-jaiegun-lau-zubi-eta-hiru-asteburu-luze/",
+     "https://orain.eus/eu/politika/2026/10/06/boek-azaroaren-29ko-hauteskundeetarako-deia-egiten-duen-dekretua-argitaratu-du/",
+     "https://www.euskaltzaindia.eus/dok/arauak/Araua_0203.pdf"
+    ]
+   },
+   {
+    "key": "Los festivos de 2027 de tu comunidad... (home meta)",
+    "choice": "Zure erkidegoko 2027ko jaiegunak, zure zubiak eta oporrekin zenbat egun libre lortzen dituzun. BOEren arabera. Gehitu zure egutegira.",
+    "why": "The collocations 'oporrak hartu' and 'opor egun' are Academy dictionary sub-entries. The imperative 'Gehitu ...-ra' is the standard Basque UI form (Mastodon eu: 'Gehitu zerrendara').",
+    "sources": [
+     "https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&view=frontpage&Itemid=410&lang=eu&sarrera=opor",
+     "https://raw.githubusercontent.com/mastodon/mastodon/main/app/javascript/mastodon/locales/eu.json"
+    ]
+   },
+   {
+    "key": "Nacional (legend) / {n} festivos nacionales",
+    "choice": "Estatukoa / {n} estatu mailako jaiegun",
+    "why": "The legend marks holidays common to the whole Spanish state. 'Nazionala' would be a calque and, in Basque, 'nazio' usually means the Basque nation, which conflicts with the owner's naming policy. 'Estatuko' follows the administrative register ('Estatuko Aldizkari Ofiziala'). I could not find a press example of a label for this category.",
+    "sources": [
+     "https://orain.eus/eu/politika/2026/10/06/boek-azaroaren-29ko-hauteskundeetarako-deia-egiten-duen-dekretua-argitaratu-du/",
+     "https://www.euskadi.eus/web01-bopv/eu/bopv2/datos/2026/07/2603215e.shtml"
+    ]
+   },
+   {
+    "key": "Autonómico / Local / Festivo local",
+    "choice": "Erkidegokoa / Tokikoa / Tokiko jaieguna",
+    "why": "The decree uses 'tokiko jaiegun izaera', and EITB 'udalerri bakoitzak ... tokiko jaieguna baitu'. 'Erkidego' is the core of Euskaltzaindia's 'autonomia-erkidego'.",
+    "sources": [
+     "https://www.euskadi.eus/web01-bopv/eu/bopv2/datos/2025/04/2501782e.shtml",
+     "https://orain.eus/eu/tag/lan-egutegia/",
+     "https://www.euskaltzaindia.eus/dok/arauak/Araua_0032.pdf"
+    ]
+   },
+   {
+    "key": "jaiegun / lanegun / zubi",
+    "choice": "jaiegun, lanegun, zubi",
+    "why": "The Academy dictionary spells 'jaiegun' and 'lanegun' solid; 'zubi' sense 4 is 'bi jaiegunen arteko ... opor eguna'. Berria's style book lists 'jaiegun, lanegun'. Naiz still writes 'jai-egun', which is now superseded.",
+    "sources": [
+     "https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&view=frontpage&Itemid=410&lang=eu&sarrera=jaiegun",
+     "https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&view=frontpage&Itemid=410&lang=eu&sarrera=lanegun",
+     "https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&view=frontpage&Itemid=410&lang=eu&sarrera=zubi",
+     "https://www.berria.eus/estiloliburua/hiztegia/J"
+    ]
+   },
+   {
+    "key": "Count strings ({n} festivos, {n} puentes, {n} día(s)...)",
+    "choice": "{n} jaiegun / jaiegun 1; {n} zubi / zubi 1",
+    "why": "Numeral + bare noun, as in EITB's headline '12 jaiegun, lau zubi eta hiru asteburu luze'. With 1 the numeral follows the noun ('egun 1'), as the owner noted. If '1' after the noun looks odd in the UI, 'jaiegun bat' / 'zubi bat' is the safe wording.",
+    "sources": [
+     "https://orain.eus/eu/aktualitatea/ekonomia/2025/04/08/2026ko-lanegutegia-eaen-12-jaiegun-lau-zubi-eta-hiru-asteburu-luze/"
+    ]
+   },
+   {
+    "key": "Faltan {n} días / Falta 1 día",
+    "choice": "{n} egun falta dira / Egun bat falta da",
+    "why": "EITB/Orain writes 'hauteskundeak izateko hamabost egun falta direnean' and Berria 'bilera bukatzeko 24 ordu eskas falta direla'. The countdown pattern is 'N egun falta dira'.",
+    "sources": [
+     "https://orain.eus/eu/politika/2024/05/24/europako-hauteskundeetarako-15-egunen-faltan-herritarren-erdiek-baino-gehiagok-ez-dakite-noiz-izango-diren/",
+     "https://www.berria.eus/mundua/erregai-fosilekin-amaitu-edo-ez-azken-eztabaidaren-koxka_2117695_102.html"
+    ]
+   },
+   {
+    "key": "Próximo festivo",
+    "choice": "Hurrengo jaieguna",
+    "why": "'hurrengo' is the press word for 'next' (Naiz 'hurrengo urteko jai-egunak'; Berria in EEH 'hurrengo eguneko').",
+    "sources": [
+     "https://www.naiz.eus/en/info/noticia/20250408/lakuak-2026ko-lan-egutegia-onartu-du-martxoaren-19a-eta-uztailaren-25a-jai-egunak-izango-dira",
+     "https://www.ehu.eus/eeh/cgi/bila?h=jaiegun"
+    ]
+   },
+   {
+    "key": "Coge el {a} y el {b}",
+    "choice": "Hartu libre {a} eta {b}",
+    "why": "Euskaltel's calendar writes 'Ostirala (urriak 8) eta astelehena (urriak 11) libre hartuz gero, zubi luze-luze bat izango duzu', and EITB 'askok zubia hartu dute'. For the date I suggest '{d}a ({wd_short})', giving 'Hartu libre 29a (al.) eta 30a (ar.)', because Basque puts the weekday after the day (rule 203).",
+    "sources": [
+     "https://blog.euskaltel.com/eu/euskadiko-jaiegunak-2027/",
+     "https://orain.eus/eu/tag/lan-egutegia/",
+     "https://www.euskaltzaindia.eus/dok/arauak/Araua_0203.pdf"
+    ]
+   },
+   {
+    "key": "Este año no hay puentes.",
+    "choice": "Aurten ez dago zubirik.",
+    "why": "Euskaltel writes '... ez dago zubirik udan Euskadin' and 'ez dago zubirik, baina bai hiru eguneko asteburua'.",
+    "sources": [
+     "https://blog.euskaltel.com/eu/euskadiko-jaiegunak-2026/"
+    ]
+   },
+   {
+    "key": "Más los 2 festivos locales de tu municipio.",
+    "choice": "Horiei zure udalerriko 2 tokiko jaiegunak gehitu behar zaizkie.",
+    "why": "This mirrors EITB: 'Egun horiei udalek eta aldundiek dekretatu beharreko beste bi jaiegun gehitu behar zaizkie'. A shorter but unattested option: 'Gehi zure udalerriko 2 tokiko jaiegunak.'",
+    "sources": [
+     "https://orain.eus/eu/aktualitatea/ekonomia/2023/05/30/2024ko-lanegutegia-euskadin-jaiegunak-eta-zubiak/"
+    ]
+   },
+   {
+    "key": "sin coger vacaciones / días de vacaciones",
+    "choice": "oporrik hartu gabe / opor egunak",
+    "why": "The Academy 'opor' entry has 'Uda eta negu, oporrik gabe' and the sub-entries 'oporrak hartu' and 'opor egun' (written open).",
+    "sources": [
+     "https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&view=frontpage&Itemid=410&lang=eu&sarrera=opor",
+     "https://hiztegiak.elhuyar.eus/es/vacaci%C3%B3n"
+    ]
+   },
+   {
+    "key": "Toca los días que te vas a coger. / Toca los días que te coges.",
+    "choice": "Sakatu hartuko dituzun egunak. / Sakatu hartzen dituzun egunak.",
+    "why": "Elhuyar gives 'sakatu' for pressing a control, and Basque device manuals use 'Sakatu [...]'. 'ukitu' (touch) is possible but less usual for UI instructions. 'hartu' follows 'oporrak hartu'.",
+    "sources": [
+     "https://hiztegiak.elhuyar.eus/es/pulsar",
+     "https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&view=frontpage&Itemid=410&lang=eu&sarrera=opor"
+    ]
+   },
+   {
+    "key": "UI verbs (Gehitu, Deskargatu, Partekatu, Inprimatu, Ezabatu, Kendu, Aukeratu, Esteka kopiatu da)",
+    "choice": "Gehitu / Deskargatu / Partekatu / Inprimatu / Ezabatu / Kendu / Aukeratu / Esteka kopiatu da",
+    "why": "These are bare-imperative UI conventions from Mastodon's Basque locale ('Gehitu zerrendara', 'Partekatu...', 'Deskargatu fitxategia', 'Ezabatu', 'Kendu irudia', 'Aukeratu bat', '... esteka arbelean kopiatu da'). Elhuyar confirms 'deskargatu' and 'inprimatu'.",
+    "sources": [
+     "https://raw.githubusercontent.com/mastodon/mastodon/main/app/javascript/mastodon/locales/eu.json",
+     "https://hiztegiak.elhuyar.eus/es/descargar",
+     "https://hiztegiak.elhuyar.eus/es/imprimir"
+    ]
+   },
+   {
+    "key": "Añadir a Google Calendar",
+    "choice": "Gehitu Google Calendar-era",
+    "why": "Product names are not translated. The allative is attached by the last written letter, and the hyphen is optional (rule 184). With the hyphen there is no r-doubling; the unhyphenated form would be 'Google Calendarrera'.",
+    "sources": [
+     "https://www.euskaltzaindia.eus/dok/arauak/Araua_0184.pdf"
+    ]
+   },
+   {
+    "key": "Modo oscuro",
+    "choice": "Modu iluna",
+    "why": "Euskaltel's Basque blog uses 'modu iluna' for dark mode ('zure gailuetan modu iluna aktibatzea').",
+    "sources": [
+     "https://blog.euskaltel.com/eu/mugikorren-pantailak-beltz"
+    ]
+   },
+   {
+    "key": "Festivo laboral 2027 en {region}",
+    "choice": "2027ko jaieguna {region_in}",
+    "why": "The Spanish is ambiguous (probably a share title for one holiday). The legal phrase 'lan-ondorioetarako jaieguna' (decree) is too heavy for a title. If it was meant as 'Calendario laboral 2027 en {region}', use '2027ko lan-egutegia {region_in}'.",
+    "sources": [
+     "https://www.euskadi.eus/web01-bopv/eu/bopv2/datos/2026/07/2603215e.shtml"
+    ]
+   },
+   {
+    "key": "19 comunidades",
+    "choice": "19 erkidego",
+    "why": "Numeral + bare noun, as in EITB's '12 jaiegun'. Like the Spanish, it loosely includes the two autonomous cities (rule 32 calls them 'hiri autonomoak').",
+    "sources": [
+     "https://orain.eus/eu/aktualitatea/ekonomia/2025/04/08/2026ko-lanegutegia-eaen-12-jaiegun-lau-zubi-eta-hiru-asteburu-luze/",
+     "https://www.euskaltzaindia.eus/dok/arauak/Araua_0032.pdf"
+    ]
+   },
+   {
+    "key": "Privacy paragraphs",
+    "choice": "see ui",
+    "why": "Plain-register rendering; there is no press equivalent for this genre. 'Pribatutasun-politika' is from Mastodon eu. 'letra-tipo' is the term used in Euskaltzaindia rule 203. 'Googlera' / 'Googlek' are declined by the last letter (rule 184 gives 'Googleren edo Google-ren'). 'Google Fonts-etik' and 'El Calendario Laboral-en' use the optional hyphen for brand names.",
+    "sources": [
+     "https://raw.githubusercontent.com/mastodon/mastodon/main/app/javascript/mastodon/locales/eu.json",
+     "https://www.euskaltzaindia.eus/dok/arauak/Araua_0184.pdf",
+     "https://www.euskaltzaindia.eus/dok/arauak/Araua_0203.pdf"
+    ]
+   },
+   {
+    "key": "Dates",
+    "choice": "long '{month_gen} {d}a, {wd}'; short '{month_short} {d}'; short_wd '{month_short} {d}, {wd_short}'",
+    "why": "Rule 203 (EBO 15.1): weekday in apposition after the date, lower case ('martxoaren 7a, osteguna'). 11 and 31 never take an extra -a ('urriaren 11n', not '11an'). CLDR eu uses 'MMM d' and 'MMM d, E' for the short forms. Ergative month forms ('martxoak 29') are allowed only in apposition.",
+    "sources": [
+     "https://www.euskaltzaindia.eus/dok/arauak/Araua_0203.pdf",
+     "https://raw.githubusercontent.com/unicode-org/cldr-json/main/cldr-json/cldr-dates-full/main/eu/ca-gregorian.json"
+    ]
+   },
+   {
+    "key": "Month and weekday abbreviations",
+    "choice": "urt. ots. mar. api. mai. eka. uzt. abu. ira. urr. aza. abe.; al. ar. az. og. or. lr. ig.",
+    "why": "These are Euskaltzaindia rule 196 (abbreviations list), which matches CLDR eu. Abbreviations end with a full stop; 'or.' also means 'orrialdea' (page). The one-letter header (A A A O O L I, CLDR narrow) is ambiguous, so the two-letter set (al ar az og or lr ig) is the better calendar header.",
+    "sources": [
+     "https://www.euskaltzaindia.eus/dok/arauak/Araua_0196.pdf",
+     "https://raw.githubusercontent.com/unicode-org/cldr-json/main/cldr-json/cldr-dates-full/main/eu/ca-gregorian.json"
+    ]
+   },
+   {
+    "key": "Weekday/month capitalisation",
+    "choice": "lower case",
+    "why": "Rule 200 section III.15: weekdays and months are written in lower case ('urtarrila', 'astelehena').",
+    "sources": [
+     "https://euskaltzaindia.eus/dok/arauak/Araua_0200.pdf"
+    ]
+   },
+   {
+    "key": "plural 'one' forms",
+    "choice": "jaiegun 1 / Egun bat falta da",
+    "why": "Basque puts the numeral 1 ('bat') after the noun, so the singular form is a fixed string without {n}; the app only uses it when n == 1.",
+    "sources": []
+   },
+   {
+    "key": "regions.<slug>.seo",
+    "choice": "comunitat-valenciana: Valentziako Erkidegoa, galicia: Galizia, pais-vasco: Euskadi, cataluna: Katalunia, baleares: Balearrak",
+    "why": "Basque Wikipedia titles: 'Galizia', 'Valentziako Erkidegoa', 'Katalunia', 'Balearrak' ('Balear Uharteak' redirects there); 'Euskadi' is the usual press name for the autonomous community (Wikipedia: 'Euskal Autonomia Erkidegoa'). Nafarroa is already the Basque form, so no seo field.",
+    "sources": [
+     "https://eu.wikipedia.org/wiki/Galizia",
+     "https://eu.wikipedia.org/wiki/Valentziako_Erkidegoa",
+     "https://eu.wikipedia.org/wiki/Katalunia",
+     "https://eu.wikipedia.org/wiki/Balearrak",
+     "https://eu.wikipedia.org/wiki/Euskal_Autonomia_Erkidegoa"
+    ]
+   }
+  ]
+ },
+ "sources": {
+  "ca": [
+   "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=cerca_generica&input_cercar=Mare+de+D%C3%A9u&tipusCerca=cerca.fitxes",
+   "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=cerca_generica&input_cercar=Val+d%27Aran&tipusCerca=cerca.tot",
+   "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=cerca_generica&input_cercar=article+anys+2027&tipusCerca=cerca.fitxes",
+   "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=cerca_generica&input_cercar=baixar+descarregar&tipusCerca=cerca.tot",
+   "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=cerca_generica&input_cercar=fer+pont&tipusCerca=cerca.tot",
+   "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=cerca_generica&input_cercar=festiu&tipusCerca=cerca.tot",
+   "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=cerca_generica&input_cercar=festiu+festa&tipusCerca=cerca.fitxes",
+   "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=cerca_generica&input_cercar=galeta&tipusCerca=cerca.tot",
+   "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=cerca_generica&input_cercar=mode+fosc&tipusCerca=cerca.tot",
+   "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=cerca_generica&input_cercar=privadesa&tipusCerca=cerca.tot",
+   "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=cerca_generica&input_cercar=proper+pr%C3%B2xim&tipusCerca=cerca.fitxes",
+   "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=detall&input_cercar=Arag%C3%B3+article&numPagina=1&database=FITXES_PUB&idFont=15791&idHit=15791&tipusFont=Fitxes+de+l%27Optimot&numeroResultat=8&clickLink=detall&tipusCerca=cerca.fitxes",
+   "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=detall&input_cercar=abreviacions+dies+de+la+setmana&numPagina=1&database=FITXES_PUB&idFont=13741&idHit=13741&tipusFont=Fitxes+de+l%27Optimot&numeroResultat=1&clickLink=detall&tipusCerca=cerca.fitxes",
+   "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=detall&input_cercar=abreviatures+dels+mesos&numPagina=1&database=FITXES_PUB&idFont=13889&idHit=13889&tipusFont=Fitxes+de+l%27Optimot&numeroResultat=1&clickLink=detall&tipusCerca=cerca.fitxes",
+   "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=detall&input_cercar=dia+feiner&numPagina=1&database=TERMCAT&idFont=1064794&idHit=1064794&tipusFont=Diccionaris+terminol%C3%B2gics+del+TERMCAT&numeroResultat=2&clickLink=detall&titol=dia+feiner&tematica=Treball&tipusCerca=cerca.tot",
+   "https://beteve.cat/economia/calendari-laboral-2027-catalunya-barcelona-festius-ponts/",
+   "https://ca.wikipedia.org/wiki/Arag%C3%B3",
+   "https://ca.wikipedia.org/wiki/Castella_-_la_Manxa",
+   "https://ca.wikipedia.org/wiki/Corpus_Christi",
+   "https://ca.wikipedia.org/wiki/Dia_d%27Andalusia",
+   "https://ca.wikipedia.org/wiki/Dia_de_Castella_i_Lle%C3%B3",
+   "https://ca.wikipedia.org/wiki/Dia_de_les_Lletres_Gallegues",
+   "https://ca.wikipedia.org/wiki/Diada_Nacional_del_Pa%C3%ADs_Valenci%C3%A0",
+   "https://ca.wikipedia.org/wiki/Diada_de_les_Illes_Balears",
+   "https://ca.wikipedia.org/wiki/Dilluns_de_Pasqua",
+   "https://ca.wikipedia.org/wiki/Festa_d%27Aran",
+   "https://ca.wikipedia.org/wiki/Festa_del_sacrifici",
+   "https://ca.wikipedia.org/wiki/Govern_Basc",
+   "https://ca.wikipedia.org/wiki/Gran_Can%C3%A0ria",
+   "https://ca.wikipedia.org/wiki/Id_al-Fitr",
+   "https://ca.wikipedia.org/wiki/Illes_Can%C3%A0ries",
+   "https://ca.wikipedia.org/wiki/La_Rioja",
+   "https://ca.wikipedia.org/wiki/Mare_de_D%C3%A9u_de_les_Neus",
+   "https://ca.wikipedia.org/wiki/Nostra_Senyora_de_Guadalupe",
+   "https://ca.wikipedia.org/wiki/Verge_de_Candelaria",
+   "https://cido.diba.cat/legislacio/21344288",
+   "https://dogc.gencat.cat/ca/document-del-dogc/?documentId=1040896",
+   "https://dogv.gva.es/datos/2025/07/07/pdf/2025_24690_va.pdf",
+   "https://legado.elnotario.es/images/pdf/LAU-N38-14-CAT-Orden-EMO-80-2011.pdf",
+   "https://mengem.ara.cat/receptes/ja-heu-comencat-calendari-advent-nadal-xocolata_1_3062950.html",
+   "https://naciodigital.cat/societat/ja-es-coneixen-dies-festius-ponts-2026_2095326_102.html",
+   "https://portaldogc.gencat.cat/utilsEADOP/AppJava/PdfProviderServlet?documentId=1040896&type=01&language=ca_ES",
+   "https://seuelectronica.diba.cat/documents/d/seu-electronica/calendari_festius_2023-pdf",
+   "https://sf.iec.cat/wp-content/uploads/2024/07/Declaracio-de-la-SF-sobre-el-catala-a-Arago_acord-del-16-de-febrer-de-2024-1.pdf",
+   "https://www.3cat.cat/3catinfo/calendari-laboral-2027-a-catalunya-dos-ponts-i-tres-festius-que-cauran-en-cap-de-setmana/noticia/3402703/",
+   "https://www.3cat.cat/3catinfo/calendari-laboral/",
+   "https://www.3cat.cat/3catinfo/com-queden-els-dies-festius-fins-a-lestiu-que-ve/noticia/3181516/",
+   "https://www.alcudia.net/export/sites/default/ajuntament/ca/documentos/documents_d_interes/documents_d_interes/BAN-Calendari-Laboral-any-2027.pdf",
+   "https://www.ara.cat/economia/mercat-laboral/calendari-festius-catalunya_1_4664083.html",
+   "https://www.caib.es/sites/calendarilaboral/ca/aao_2026/",
+   "https://www.elnacional.cat/oneconomia/ca/empreses/calendari-laboral-2027-9-festius-autonomies-tres-caps-setmana-llargs_1708861_102.html",
+   "https://www.enciclopedia.cat/gran-enciclopedia-catalana/castella-la-manxa",
+   "https://www.softcatala.org/guia-estil-de-softcatala/aspectes-linguistics/",
+   "https://www.softcatala.org/guia-estil-de-softcatala/terminologia/",
+   "https://www.ub.edu/ubterm/?p=58478",
+   "https://www.uv.es/pas/nuevaWEB/gdh/2026%20Almanac_UV.pdf",
+   "https://www.vilaweb.cat/noticies/calendari-laboral-2026-catalunya-festius-ponts/"
+  ],
+  "gl": [
+   "https://www.xunta.gal/notas-de-prensa/-/nova/026293/xunta-galicia-aproba-calendario-laboral-para-2027-19-marzo-17-maio-como-festivos",
+   "https://www.coruna.gal/descarga/1453894201781/Calendario-laboral-para-o-ano-2025.pdf",
+   "https://www.nosdiario.gal/articulo/social/galiza-confirma-seu-calendario-laboral-2027/20261013113427269143.html",
+   "https://www.nosdiario.gal/articulo/traballo/estes-son-festivos-estatais-2026/20251028152819238014.html",
+   "https://www.nosdiario.gal/articulo/social/xa-oficial-calendario-laboral-da-galicia-2026-seran-festivos-san-xose-san-xoan-25-xullo/20250620113312225784.html",
+   "https://www.nosdiario.gal/articulo/social/dog-publica-festivos-locais-dos-concellos-galegos-2026-olla-aqui-todas-cada-das-localidades-do-pais/20251030112645238271.html",
+   "https://www.galiciaconfidencial.com/noticia/6049422-boe-publica-calendario-laboral-2027-nove-festivos-comuns-toda-espana",
+   "https://www.galiciaconfidencial.com/noticia/5919654-19-marzo-e-17-maio-festivos-galicia-2027",
+   "https://praza.gal/lecer/estes-son-os-festivos-no-teu-concello-en-2026",
+   "https://blog.mundo-r.com/festivos-galicia-2027/",
+   "https://blog.mundo-r.com/festivos-galicia-2026/",
+   "https://academia.gal/dicionario/-/termo/busca/ponte",
+   "https://academia.gal/dicionario/-/termo/busca/laborable",
+   "https://academia.gal/dicionario/-/termo/busca/festivo",
+   "https://academia.gal/dicionario/-/termo/busca/aninovo",
+   "https://academia.gal/dicionario/-/termo/busca/nadal",
+   "https://academia.gal/dicionario/-/termo/busca/candeloria",
+   "https://academia.gal/dicionario/-/termo/busca/pino",
+   "https://academia.gal/dicionario/-/termo/busca/volcán",
+   "https://academia.gal/dicionario/-/termo/busca/ligazón",
+   "https://academia.gal/dicionario/-/termo/busca/faltar",
+   "https://academia.gal/dicionario/-/termo/busca/lenda",
+   "https://academia.gal/dicionario/-/termo/busca/analítica",
+   "https://gl.wikipedia.org/wiki/Comunidade_autónoma",
+   "https://gl.wikipedia.org/wiki/Castela-A_Mancha",
+   "https://gl.wikipedia.org/wiki/A_Rioxa",
+   "https://gl.wikipedia.org/wiki/Illas_Canarias",
+   "https://gl.wikipedia.org/wiki/El_Hierro",
+   "https://gl.wikipedia.org/wiki/La_Gomera",
+   "https://gl.wikipedia.org/wiki/Virxe_da_Candelaria",
+   "https://gl.wikipedia.org/wiki/Nosa_Señora_das_Neves",
+   "https://gl.wikipedia.org/wiki/Val_de_Arán",
+   "https://gl.wikipedia.org/wiki/Xurxo_de_Capadocia",
+   "https://gl.wikipedia.org/wiki/Eid_al-Adha",
+   "https://gl.wikipedia.org/wiki/Ceuta",
+   "https://ilg.usc.gal/linguaviva/artigo/34/imprimir",
+   "https://secretaria.uvigo.gal/uv/web/avisos/aviso/adjunto/get/9fdc7ee543080c583ba3e9e4ac8c37f59a72c4686c067327226fdb165a4d58db",
+   "https://edu.xunta.gal/centros/iesxulianmagarinos/system/files/Calendario%20escolar%2024-25.pdf",
+   "https://xunta.gal/aviso-legal",
+   "https://raw.githubusercontent.com/unicode-org/cldr-json/main/cldr-json/cldr-dates-full/main/gl/ca-gregorian.json",
+   "https://github.com/mozilla-l10n/firefox-l10n/tree/main/gl"
+  ],
+  "eu": [
+   "https://www.euskadi.eus/web01-bopv/eu/bopv2/datos/2025/04/2501782e.shtml",
+   "https://www.euskadi.eus/web01-bopv/eu/bopv2/datos/2026/07/2603215e.shtml",
+   "https://www.euskadi.eus/bopv2/datos/2026/07/2603215a.shtml",
+   "https://www.euskadi.eus/web01-bopv/eu/bopv2/datos/2026/07/e26_0134.epub",
+   "https://blog.euskaltel.com/eu/euskadiko-jaiegunak-2027/",
+   "https://blog.euskaltel.com/eu/nafarroako-jaiegunak-2027/",
+   "https://blog.euskaltel.com/eu/euskadiko-jaiegunak-2026/",
+   "https://blog.euskaltel.com/eu/mugikorren-pantailak-beltz",
+   "https://orain.eus/eu/aktualitatea/ekonomia/2026/06/09/eaeko-lanegutegia-2027koa/",
+   "https://orain.eus/eu/aktualitatea/ekonomia/2025/04/08/2026ko-lanegutegia-eaen-12-jaiegun-lau-zubi-eta-hiru-asteburu-luze/",
+   "https://orain.eus/eu/aktualitatea/ekonomia/2023/05/30/2024ko-lanegutegia-euskadin-jaiegunak-eta-zubiak/",
+   "https://orain.eus/eu/tag/lan-egutegia/",
+   "https://orain.eus/eu/politika/2026/03/15/gaztela-leongo-hauteskunde-autonomioak-trevinoko-emaitzak-2026-martxoak-15/",
+   "https://orain.eus/eu/politika/2026/10/06/boek-azaroaren-29ko-hauteskundeetarako-deia-egiten-duen-dekretua-argitaratu-du/",
+   "https://orain.eus/eu/politika/2024/05/24/europako-hauteskundeetarako-15-egunen-faltan-herritarren-erdiek-baino-gehiagok-ez-dakite-noiz-izango-diren/",
+   "https://orain.eus/eu/aktualitatea/ekonomia/2024/08/13/abuztuaren-13an-albiste-izango-da-uztaileko-kpia-ukrainako-gerra-eta-greziako-sutea/",
+   "https://www.naiz.eus/en/info/noticia/20250408/lakuak-2026ko-lan-egutegia-onartu-du-martxoaren-19a-eta-uztailaren-25a-jai-egunak-izango-dira",
+   "https://www.berria.eus/mundua/erregai-fosilekin-amaitu-edo-ez-azken-eztabaidaren-koxka_2117695_102.html",
+   "https://www.berria.eus/estiloliburua/hiztegia/J",
+   "https://www.euskaltzaindia.eus/dok/arauak/Araua_0032.pdf",
+   "https://www.euskaltzaindia.eus/dok/arauak/Araua_0066.pdf",
+   "https://www.euskaltzaindia.eus/dok/arauak/Araua_0149.pdf",
+   "https://www.euskaltzaindia.eus/dok/arauak/Araua_0158.pdf",
+   "https://www.euskaltzaindia.eus/dok/arauak/Araua_0184.pdf",
+   "https://www.euskaltzaindia.eus/dok/arauak/Araua_0196.pdf",
+   "https://euskaltzaindia.eus/dok/arauak/Araua_0200.pdf",
+   "https://www.euskaltzaindia.eus/dok/arauak/Araua_0203.pdf",
+   "https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&view=frontpage&Itemid=410&lang=eu&sarrera=urteberri",
+   "https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&view=frontpage&Itemid=410&lang=eu&sarrera=jaiegun",
+   "https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&view=frontpage&Itemid=410&lang=eu&sarrera=lanegun",
+   "https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&view=frontpage&Itemid=410&lang=eu&sarrera=zubi",
+   "https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&view=frontpage&Itemid=410&lang=eu&sarrera=agerkunde",
+   "https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&view=frontpage&Itemid=410&lang=eu&sarrera=Eguberri",
+   "https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&view=frontpage&Itemid=410&lang=eu&sarrera=Domu%20Santu",
+   "https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&view=frontpage&Itemid=410&lang=eu&sarrera=epifania",
+   "https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&view=frontpage&Itemid=410&lang=eu&sarrera=errege",
+   "https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&view=frontpage&Itemid=410&lang=eu&sarrera=opor",
+   "https://www.ivap.euskadi.eus/contenidos/blog_post/jaiegunenidazkera/eu_def/Gabonak.pdf",
+   "https://hiztegiak.elhuyar.eus/es/a%C3%B1o",
+   "https://hiztegiak.elhuyar.eus/es/puente",
+   "https://hiztegiak.elhuyar.eus/es/festivo",
+   "https://hiztegiak.elhuyar.eus/es/descargar",
+   "https://hiztegiak.elhuyar.eus/es/imprimir",
+   "https://hiztegiak.elhuyar.eus/es/vacaci%C3%B3n",
+   "https://hiztegiak.elhuyar.eus/es/pulsar",
+   "https://www.euskadi.eus/web01-apelhuya/eu/ab34aElhuyarHiztegiaWar/ab34ahiztegia/melocotn*/G/Hes036702_0",
+   "https://www.ehu.eus/eeh/cgi/bila?l=a&z=4129",
+   "https://www.ehu.eus/eeh/cgi/bila?h=jaiegun",
+   "https://www.euskadi.eus/web01-a2lurhiz/eu/contenidos/termino/_c03809/eu_l_1526/l1526.html",
+   "https://eu.wikipedia.org/wiki/Corpus_Christi",
+   "https://eu.wikipedia.org/wiki/Andaluziaren_eguna",
+   "https://eu.wikipedia.org/wiki/Kataluniako_Egun_Nazionala",
+   "https://eu.wikipedia.org/wiki/D%C3%ADa_das_Letras_Galegas",
+   "https://eu.wikipedia.org/wiki/Eid_al-Adha",
+   "https://eu.wikipedia.org/wiki/Eid_al-Fitr",
+   "https://eu.wikipedia.org/wiki/Donibane_jaia",
+   "https://eu.wikipedia.org/wiki/Euskadiren_Eguna",
+   "https://eu.wikipedia.org/wiki/Pazko_bigarren",
+   "https://eu.wikipedia.org/wiki/San_Jorge",
+   "https://eu.wikipedia.org/wiki/Kanariak",
+   "https://eu.wikipedia.org/wiki/Hierro",
+   "https://eu.wikipedia.org/wiki/Arango_harana",
+   "https://turismo.euskadi.eus/eu/kultur-ondarea/erregeen-andra-maria-eliza/webtur00-content/eu/",
+   "https://www.euskadi.eus/erdotzako-andre-mariaren-baseliza/markina-xemein/done-jakue-bidea/web01-a2donjak/eu/",
+   "https://www.euskadi.eus/guadalupeko-santutegia/hondarribia/done-jakue-bidea/web01-a2donjak/eu/",
+   "https://www.euskadi.eus/contenidos/informacion/comision_ados_intro/eu_def/adjuntos/Euskera-circular-13.pdf",
+   "https://raw.githubusercontent.com/mastodon/mastodon/main/app/javascript/mastodon/locales/eu.json",
+   "https://raw.githubusercontent.com/unicode-org/cldr-json/main/cldr-json/cldr-dates-full/main/eu/ca-gregorian.json"
+  ]
+ },
+ "ca": {
+  "regions": {
+   "andalucia": "Andalusia",
+   "aragon": "Aragó",
+   "asturias": "Astúries",
+   "baleares": "Illes Balears",
+   "canarias": "Canàries",
+   "cantabria": "Cantàbria",
+   "castilla-la-mancha": "Castella-la Manxa",
+   "castilla-y-leon": "Castella i Lleó",
+   "cataluna": "Catalunya",
+   "extremadura": "Extremadura",
+   "galicia": "Galiza",
+   "madrid": "Madrid",
+   "murcia": "Múrcia",
+   "navarra": "Nafarroa",
+   "pais-vasco": "Euskal Herria",
+   "la-rioja": "La Rioja",
+   "comunitat-valenciana": "País Valencià",
+   "ceuta": "Ceuta",
+   "melilla": "Melilla"
+  },
+  "official": {
+   "andalucia": "Andalusia",
+   "aragon": "Aragó",
+   "asturias": "Principat d'Astúries",
+   "baleares": "Illes Balears",
+   "canarias": "Canàries",
+   "cantabria": "Cantàbria",
+   "castilla-la-mancha": "Castella-la Manxa",
+   "castilla-y-leon": "Castella i Lleó",
+   "cataluna": "Catalunya",
+   "extremadura": "Extremadura",
+   "galicia": "Galiza",
+   "madrid": "Comunitat de Madrid",
+   "murcia": "Regió de Múrcia",
+   "navarra": "Nafarroa",
+   "pais-vasco": "Euskal Herria",
+   "la-rioja": "La Rioja",
+   "comunitat-valenciana": "País Valencià",
+   "ceuta": "Ceuta",
+   "melilla": "Melilla"
+  },
+  "holidays": {
+   "Año Nuevo": "Cap d'Any",
+   "Epifanía del Señor": "Reis",
+   "Día de Andalucía": "Dia d'Andalusia",
+   "Día de les Illes Balears": "Dia de les Illes Balears",
+   "Fiesta del Eid Fitr": "Festa de l'Eid Fitr",
+   "San José": "Sant Josep",
+   "Jueves Santo": "Dijous Sant",
+   "Viernes Santo": "Divendres Sant",
+   "Lunes de Pascua": "Dilluns de Pasqua",
+   "San Jorge / Día de Aragón": "Sant Jordi / Dia d'Aragó",
+   "Fiesta de Castilla y León": "Festa de Castella i Lleó",
+   "Fiesta del Trabajo": "Festa del Treball",
+   "Día de las Letras Gallegas": "Dia de les Lletres Gallegues",
+   "Eidul Adha-Fiesta del Sacrificio": "Eidul Adha-Festa del Sacrifici",
+   "Fiesta del Sacrificio-Aid Al Adha": "Festa del Sacrifici-Aid Al Adha",
+   "Corpus Christi": "Corpus Christi",
+   "Día de Castilla-La Mancha": "Dia de Castella-la Manxa",
+   "Día de la Región de Murcia": "Dia de la Regió de Múrcia",
+   "Día de La Rioja": "Dia de La Rioja",
+   "Día de San Juan": "Sant Joan",
+   "Día de las Instituciones de Cantabria": "Dia de les Institucions de Cantàbria",
+   "Nuestra Señora de África": "Mare de Déu d'Àfrica",
+   "Lunes siguiente a la Asunción de la Virgen": "L'endemà de l'Assumpció",
+   "Día de Asturias": "Dia d'Astúries",
+   "Día de Extremadura": "Dia d'Extremadura",
+   "Fiesta Nacional de Cataluña": "Diada Nacional de Catalunya",
+   "La Bien Aparecida": "La Bien Aparecida",
+   "Aniversario del primer Gobierno Vasco": "Aniversari del primer Govern Basc",
+   "Día de la Comunitat Valenciana": "Dia del País Valencià",
+   "Sustitución del 15 de agosto": "Substitució del 15 d'agost",
+   "Fiesta Nacional de España": "Festa Nacional d'Espanya",
+   "Todos los Santos": "Tots Sants",
+   "Día de la Constitución Española": "Dia de la Constitució",
+   "Inmaculada Concepción": "Immaculada Concepció",
+   "Natividad del Señor": "Nadal",
+   "Nuestra Señora de los Reyes": "Mare de Déu dels Reis",
+   "Nuestra Señora de la Peña": "Mare de Déu de la Penya",
+   "Nuestra Señora del Pino": "Mare de Déu del Pi",
+   "Nuestra Señora de Guadalupe": "Mare de Déu de Guadalupe",
+   "Nuestra Señora de las Nieves": "Mare de Déu de les Neus",
+   "Nuestra Señora de los Volcanes": "Mare de Déu dels Volcans",
+   "Virgen de la Candelaria": "Mare de Déu de la Candelaria",
+   "Fiesta de Arán": "Festa d'Aran"
+  },
+  "zones": {
+   "canarias": "Illa",
+   "canarias.el-hierro": "El Hierro",
+   "canarias.fuerteventura": "Fuerteventura",
+   "canarias.gran-canaria": "Gran Canària",
+   "canarias.la-gomera": "La Gomera",
+   "canarias.la-palma": "La Palma",
+   "canarias.lanzarote": "Lanzarote i La Graciosa",
+   "canarias.tenerife": "Tenerife",
+   "cataluna": "Zona",
+   "cataluna.general": "General",
+   "cataluna.aran": "Aran"
+  }
+ },
+ "gl": {
+  "regions": {
+   "andalucia": "Andalucía",
+   "aragon": "Aragón",
+   "asturias": "Asturias",
+   "baleares": "Illes Balears",
+   "canarias": "Canarias",
+   "cantabria": "Cantabria",
+   "castilla-la-mancha": "Castela-A Mancha",
+   "castilla-y-leon": "Castela e León",
+   "cataluna": "Catalunya",
+   "extremadura": "Estremadura",
+   "galicia": "Galiza",
+   "madrid": "Madrid",
+   "murcia": "Murcia",
+   "navarra": "Nafarroa",
+   "pais-vasco": "Euskal Herria",
+   "la-rioja": "A Rioxa",
+   "comunitat-valenciana": "País Valencià",
+   "ceuta": "Ceuta",
+   "melilla": "Melilla"
+  },
+  "official": {
+   "andalucia": "Andalucía",
+   "aragon": "Aragón",
+   "asturias": "Principado de Asturias",
+   "baleares": "Illes Balears",
+   "canarias": "Canarias",
+   "cantabria": "Cantabria",
+   "castilla-la-mancha": "Castela-A Mancha",
+   "castilla-y-leon": "Castela e León",
+   "cataluna": "Catalunya",
+   "extremadura": "Estremadura",
+   "galicia": "Galiza",
+   "madrid": "Comunidade de Madrid",
+   "murcia": "Rexión de Murcia",
+   "navarra": "Nafarroa",
+   "pais-vasco": "Euskal Herria",
+   "la-rioja": "A Rioxa",
+   "comunitat-valenciana": "País Valencià",
+   "ceuta": "Cidade Autónoma de Ceuta",
+   "melilla": "Cidade Autónoma de Melilla"
+  },
+  "holidays": {
+   "Año Nuevo": "Aninovo",
+   "Epifanía del Señor": "Epifanía do Señor",
+   "Día de Andalucía": "Día de Andalucía",
+   "Día de les Illes Balears": "Día das Illes Balears",
+   "Fiesta del Eid Fitr": "Festa do Eid Fitr",
+   "San José": "San Xosé",
+   "Jueves Santo": "Xoves Santo",
+   "Viernes Santo": "Venres Santo",
+   "Lunes de Pascua": "Luns de Pascua",
+   "San Jorge / Día de Aragón": "San Xurxo / Día de Aragón",
+   "Fiesta de Castilla y León": "Festa de Castela e León",
+   "Fiesta del Trabajo": "Festa do Traballo",
+   "Día de las Letras Gallegas": "Día das Letras Galegas",
+   "Eidul Adha-Fiesta del Sacrificio": "Eidul Adha-Festa do Sacrificio",
+   "Fiesta del Sacrificio-Aid Al Adha": "Festa do Sacrificio-Aid Al Adha",
+   "Corpus Christi": "Corpus Christi",
+   "Día de Castilla-La Mancha": "Día de Castela-A Mancha",
+   "Día de la Región de Murcia": "Día da Rexión de Murcia",
+   "Día de La Rioja": "Día da Rioxa",
+   "Día de San Juan": "Día de San Xoán",
+   "Día de las Instituciones de Cantabria": "Día das Institucións de Cantabria",
+   "Nuestra Señora de África": "Nosa Señora de África",
+   "Lunes siguiente a la Asunción de la Virgen": "Luns seguinte á Asunción da Virxe",
+   "Día de Asturias": "Día de Asturias",
+   "Día de Extremadura": "Día de Estremadura",
+   "Fiesta Nacional de Cataluña": "Festa Nacional de Catalunya",
+   "La Bien Aparecida": "A Bien Aparecida",
+   "Aniversario del primer Gobierno Vasco": "Aniversario do primeiro Goberno Vasco",
+   "Día de la Comunitat Valenciana": "Día do País Valencià",
+   "Sustitución del 15 de agosto": "Substitución do 15 de agosto",
+   "Fiesta Nacional de España": "Festa Nacional de España",
+   "Todos los Santos": "Todos os Santos",
+   "Día de la Constitución Española": "Día da Constitución Española",
+   "Inmaculada Concepción": "Inmaculada Concepción",
+   "Natividad del Señor": "Natividade do Señor",
+   "Nuestra Señora de los Reyes": "Nosa Señora dos Reis",
+   "Nuestra Señora de la Peña": "Nosa Señora da Peña",
+   "Nuestra Señora del Pino": "Nosa Señora do Pino",
+   "Nuestra Señora de Guadalupe": "Nosa Señora de Guadalupe",
+   "Nuestra Señora de las Nieves": "Nosa Señora das Neves",
+   "Nuestra Señora de los Volcanes": "Nosa Señora dos Volcáns",
+   "Virgen de la Candelaria": "Virxe da Candeloria",
+   "Fiesta de Arán": "Festa de Arán"
+  },
+  "zones": {
+   "canarias": "Illa",
+   "canarias.el-hierro": "El Hierro",
+   "canarias.fuerteventura": "Fuerteventura",
+   "canarias.gran-canaria": "Gran Canaria",
+   "canarias.la-gomera": "La Gomera",
+   "canarias.la-palma": "La Palma",
+   "canarias.lanzarote": "Lanzarote e La Graciosa",
+   "canarias.tenerife": "Tenerife",
+   "cataluna": "Zona",
+   "cataluna.general": "Xeral",
+   "cataluna.aran": "Arán"
+  }
+ },
+ "eu": {
+  "regions": {
+   "andalucia": "Andaluzia",
+   "aragon": "Aragoi",
+   "asturias": "Asturias",
+   "baleares": "Illes Balears",
+   "canarias": "Kanariak",
+   "cantabria": "Kantabria",
+   "castilla-la-mancha": "Gaztela-Mantxa",
+   "castilla-y-leon": "Gaztela eta León",
+   "cataluna": "Catalunya",
+   "extremadura": "Extremadura",
+   "galicia": "Galiza",
+   "madrid": "Madril",
+   "murcia": "Murtzia",
+   "navarra": "Nafarroa",
+   "pais-vasco": "Euskal Herria",
+   "la-rioja": "Errioxa",
+   "comunitat-valenciana": "País Valencià",
+   "ceuta": "Ceuta",
+   "melilla": "Melilla"
+  },
+  "official": {
+   "andalucia": "Andaluzia",
+   "aragon": "Aragoi",
+   "asturias": "Asturiasko Printzerria",
+   "baleares": "Illes Balears",
+   "canarias": "Kanariak",
+   "cantabria": "Kantabria",
+   "castilla-la-mancha": "Gaztela-Mantxa",
+   "castilla-y-leon": "Gaztela eta León",
+   "cataluna": "Catalunya",
+   "extremadura": "Extremadura",
+   "galicia": "Galiza",
+   "madrid": "Madrilgo Erkidegoa",
+   "murcia": "Murtziako Erregioa",
+   "navarra": "Nafarroa",
+   "pais-vasco": "Euskal Herria",
+   "la-rioja": "Errioxa",
+   "comunitat-valenciana": "País Valencià",
+   "ceuta": "Ceuta",
+   "melilla": "Melilla"
+  },
+  "holidays": {
+   "Año Nuevo": "Urteberri eguna",
+   "Epifanía del Señor": "Errege eguna",
+   "Día de Andalucía": "Andaluziaren Eguna",
+   "Día de les Illes Balears": "Illes Balears-en Eguna",
+   "Fiesta del Eid Fitr": "Eid Fitr jaia",
+   "San José": "San Jose eguna",
+   "Jueves Santo": "Ostegun Santua",
+   "Viernes Santo": "Ostiral Santua",
+   "Lunes de Pascua": "Pazko astelehena",
+   "San Jorge / Día de Aragón": "San Jurgi eguna / Aragoiren Eguna",
+   "Fiesta de Castilla y León": "Gaztela eta Leongo Jaia",
+   "Fiesta del Trabajo": "Langileen Eguna",
+   "Día de las Letras Gallegas": "Galizierazko Letren Eguna",
+   "Eidul Adha-Fiesta del Sacrificio": "Eidul Adha - Sakrifizioaren Jaia",
+   "Fiesta del Sacrificio-Aid Al Adha": "Sakrifizioaren Jaia - Aid Al Adha",
+   "Corpus Christi": "Corpus eguna",
+   "Día de Castilla-La Mancha": "Gaztela-Mantxaren Eguna",
+   "Día de la Región de Murcia": "Murtziako Erregioaren Eguna",
+   "Día de La Rioja": "Errioxaren Eguna",
+   "Día de San Juan": "San Joan eguna",
+   "Día de las Instituciones de Cantabria": "Kantabriako Erakundeen Eguna",
+   "Nuestra Señora de África": "Afrikako Andre Maria",
+   "Lunes siguiente a la Asunción de la Virgen": "Ama Birjinaren Jasokundearen hurrengo astelehena",
+   "Día de Asturias": "Asturiasen Eguna",
+   "Día de Extremadura": "Extremaduraren Eguna",
+   "Fiesta Nacional de Cataluña": "Catalunyako Jai Nazionala",
+   "La Bien Aparecida": "Bien Aparecidako Andre Maria",
+   "Aniversario del primer Gobierno Vasco": "Euskadiko lehen Gobernuaren urteurrena",
+   "Día de la Comunitat Valenciana": "País Valencià-ren Eguna",
+   "Sustitución del 15 de agosto": "Abuztuaren 15aren ordezkoa",
+   "Fiesta Nacional de España": "Espainiako Jai Nazionala",
+   "Todos los Santos": "Santu Guztien Eguna",
+   "Día de la Constitución Española": "Konstituzio Eguna",
+   "Inmaculada Concepción": "Andre Maria Sortzez Garbiaren Eguna",
+   "Natividad del Señor": "Eguberri eguna",
+   "Nuestra Señora de los Reyes": "Erregeen Andre Maria",
+   "Nuestra Señora de la Peña": "Peñako Andre Maria",
+   "Nuestra Señora del Pino": "Pinoko Andre Maria",
+   "Nuestra Señora de Guadalupe": "Guadalupeko Andre Maria",
+   "Nuestra Señora de las Nieves": "Elurretako Andre Maria",
+   "Nuestra Señora de los Volcanes": "Sumendietako Andre Maria",
+   "Virgen de la Candelaria": "Candelariako Ama Birjina",
+   "Fiesta de Arán": "Arango Jaia"
+  },
+  "zones": {
+   "canarias": "Uhartea",
+   "canarias.el-hierro": "El Hierro",
+   "canarias.fuerteventura": "Fuerteventura",
+   "canarias.gran-canaria": "Kanaria Handia",
+   "canarias.la-gomera": "La Gomera",
+   "canarias.la-palma": "La Palma",
+   "canarias.lanzarote": "Lanzarote eta La Graciosa",
+   "canarias.tenerife": "Tenerife",
+   "cataluna": "Eremua",
+   "cataluna.general": "Orokorra",
+   "cataluna.aran": "Aran"
+  }
+ }
+}
