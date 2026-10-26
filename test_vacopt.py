@@ -153,6 +153,28 @@ for k in range(150):
     check(p is not None and p["total"] == best, f"brute force {k}: dp {p and p['total']} != {best} off={off} n={n} min={mn} max={mx}")
 V.N, V.DAYS = saved
 
+# ---------------------------------------------------------------- generated pages (run build.py first)
+import re  # noqa: E402
+for r in data["regions"]:
+    f = ROOT / "vacaciones-2027" / r["slug"] / "index.html"
+    check(f.exists(), f"falta /vacaciones-2027/{r['slug']}/")
+    if not f.exists():
+        continue
+    h = f.read_text("utf-8")
+    p22 = py[f"{r['slug']}/22"]
+    m = re.search(r'id="vtot">(\d+)<', h)
+    check(m and int(m.group(1)) == p22["total"], f"{r['slug']}: static total {m and m.group(1)} != {p22['total']}")
+    cells = re.findall(r'<td data-d="([\d-]+)" class="([^"]*)"', h)
+    vac = [d for d, c in cells if "v" in c.split()]
+    check(len(vac) == 22, f"{r['slug']}: {len(vac)} vacation cells")
+    check(not [d for d, c in cells if "v" in c.split() and ({"we", "n", "r", "i", "l"} & set(c.split()))], f"{r['slug']}: vacation on a weekend or holiday")
+    check(f"og/vacaciones-2027-{r['slug']}.png" in h and (ROOT / "og" / f"vacaciones-2027-{r['slug']}.png").exists(), f"{r['slug']}: og image")
+    check('hreflang="ca"' not in h.split("</head>")[0], f"{r['slug']}: hreflang to a language it lacks")
+    check(f'href="/vacaciones-2027/{r["slug"]}/"' in (ROOT / r["slug"] / "index.html").read_text("utf-8"), f"{r['slug']}: region page does not link the optimizer")
+hub = ROOT / "vacaciones-2027" / "index.html"
+check(hub.exists() and (ROOT / "og" / "vacaciones-2027.png").exists(), "hub or its og image missing")
+check('href="/vacaciones-2027/"' in (ROOT / "index.html").read_text("utf-8"), "home does not link the optimizer")
+
 print(f"{len(fails)} fallos" if fails else f"OK: {len(cases)} plans equal in Python and JS, all valid; brute force agrees")
 for f in fails[:40]:
     print(" -", f)
