@@ -22,7 +22,7 @@ SNIPPET = ('<iframe src="{src}" title="{title}" width="100%" height="{h}" '
 LINK = '<a href="{href}">{title}</a>'
 DEFAULT = "madrid"
 
-CSS = ("*{box-sizing:border-box}html,body{height:100%;margin:0}"
+CSS = ("*,:before{box-sizing:border-box}html,body{height:100%;margin:0}"
        "body{font:400 14px/1.4 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:#1b1f24;background:#fff;"
        "font-variant-numeric:tabular-nums;-webkit-text-size-adjust:100%}"
        ".w{display:flex;flex-direction:column;height:100%;max-width:600px;padding:12px 14px 10px}"
