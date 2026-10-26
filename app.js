@@ -197,6 +197,8 @@
     return out;
   }
 
+  /* la flecha del selector va pegada a la última palabra: nunca se queda sola en una línea */
+  function keepLast(s) { var k = s.lastIndexOf(' '); return k < 0 ? '<span class="nw">' + esc(s) + '</span>' : esc(s.slice(0, k + 1)) + '<span class="nw">' + esc(s.slice(k + 1)) + '</span>'; }
   function zoneText(z, o) { return !o ? 'Elige tu isla' : o.slug === 'general' ? 'Zona general' : o.name; }
 
   function render() {
@@ -205,13 +207,13 @@
     var lab = paintYear(hols), isCan = S.region === 'canarias' && !S.zone;
     var zn = z && S.zone ? z.options.filter(function (o) { return o.slug === S.zone; })[0] : null;
 
-    $('rn').textContent = r ? r.name : 'España';
+    $('rn').innerHTML = keepLast(r ? r.name : 'España');
     $('region').value = S.region || '';
     if (z) {
       $('zone').setAttribute('aria-label', z.label);
       $('zone').innerHTML = (S.region === 'canarias' ? '<option value="">Elige tu isla</option>' : '') +
         z.options.map(function (o) { return '<option value="' + o.slug + '"' + (S.zone === o.slug ? ' selected' : '') + '>' + esc(o.name) + '</option>'; }).join('');
-      $('zt').textContent = zoneText(z, zn);
+      $('zt').innerHTML = keepLast(zoneText(z, zn));
       $('zone-f').classList.toggle('empty', !zn);
       $('zone-f').hidden = false;
     } else $('zone-f').hidden = true;
@@ -225,7 +227,9 @@
     if (r && free < 0) $('locs').hidden = true;
     var used = vacCount();
     $('k-v').hidden = !used && !S.vmode;
-    $('vcount').textContent = used ? ' · ' + used : '';
+    $('vcount').textContent = used && !S.vmode ? ' · ' + used : '';
+    $('vlabel').textContent = S.vmode ? 'Hecho' : 'Marcar vacaciones';
+    $('vstat').textContent = used ? plural(used, 'día') + ' de vacaciones' : 'Toca los días que te coges.';
     $('vclear').hidden = !used;
 
     if (!r) {
@@ -375,7 +379,7 @@
   // marcar vacaciones en el calendario
   function setVmode(on) {
     S.vmode = on;
-    $('vmode').setAttribute('aria-pressed', String(on));
+    if (on) S.sel = null;
     doc.body.classList.toggle('vmode', on);
     $('vhint').hidden = !on;
     if (!on) Array.prototype.forEach.call(doc.querySelectorAll('.g b[role]'), function (el) {

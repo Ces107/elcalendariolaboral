@@ -287,6 +287,12 @@ def region_page(data, r):
 ZONE_PROMPT = "Elige tu isla"
 
 
+def keep_last(s):
+    """The selector chevron sticks to the last word (same as keepLast in app.js)."""
+    head, _, last = s.rpartition(" ")
+    return (E(head) + " " if head else "") + f'<span class="nw">{E(last)}</span>'
+
+
 def zone_text(slug, opt):
     if opt is None:
         return ZONE_PROMPT
@@ -310,7 +316,7 @@ def app_body(data, r=None):
         cur = None if is_can else zone["options"][0]
         zopts = (f'<option value="">{ZONE_PROMPT}</option>' if is_can else "") + "".join(
             f'<option value="{o["slug"]}"{" selected" if o is cur else ""}>{E(o["name"])}</option>' for o in zone["options"])
-        zone_html = (f'<div class="pick zone" id="zone-f"><span class="pv" id="zt">{E(zone_text(slug, cur))}</span>'
+        zone_html = (f'<div class="pick zone" id="zone-f"><span class="pv" id="zt">{keep_last(zone_text(slug, cur))}</span>'
                      f'<select id="zone" aria-label="{E(zone["label"])}">{zopts}</select></div>')
     else:
         zone_html = '<div class="pick zone" id="zone-f" hidden><span class="pv" id="zt"></span><select id="zone" aria-label="Zona"></select></div>'
@@ -329,7 +335,7 @@ def app_body(data, r=None):
 {top_html()}
 <main>
 <section class="hero wrap">
-  <div class="pick reg"><h1><span class="h1a">Calendario laboral 2027</span> <span class="pv" id="rn">{E(r["name"] if r else "España")}</span></h1><select id="region" aria-label="Comunidad autónoma">{options}</select></div>
+  <div class="pick reg"><h1><span class="h1a">Calendario laboral 2027</span> <span class="pv" id="rn">{keep_last(r["name"] if r else "España")}</span></h1><select id="region" aria-label="Comunidad autónoma">{options}</select></div>
   {zone_html}
   <p class="meta" id="meta">{meta}</p>
 </section>
@@ -339,8 +345,8 @@ def app_body(data, r=None):
   </section>
   <section class="blk" id="puentes" aria-labelledby="h-pts"{hide}><h2 id="h-pts">Puentes</h2><ol class="plist" id="plist">{"".join(puente_li(it, k) for k, it in enumerate(pts))}</ol></section>
   <section class="cal" id="ano" aria-labelledby="h-ano"><h2 class="sr" id="h-ano">Año 2027</h2>
-    <div class="calbar">{key_html(bool(r))}<button class="tbtn" id="vmode" type="button" aria-pressed="false"{hide}>Marcar vacaciones<span id="vcount"></span></button></div>
-    <p class="vhint" id="vhint" hidden>Toca los días que te coges. <button type="button" class="lnk" id="vclear" hidden>Borrar</button></p>
+    <div class="calbar">{key_html(bool(r))}<button class="tbtn" id="vmode" type="button"{hide}><span id="vlabel">Marcar vacaciones</span><span id="vcount"></span></button></div>
+    <p class="vhint" id="vhint" hidden><span id="vstat" aria-live="polite">Toca los días que te coges.</span> <button type="button" class="lnk" id="vclear" hidden>Borrar</button></p>
     {year_html(hmap)}
   </section>
   <section class="blk" id="vacaciones" aria-labelledby="h-vac"{hide}><h2 id="h-vac">Vacaciones</h2>

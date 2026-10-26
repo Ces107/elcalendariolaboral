@@ -1,7 +1,7 @@
 /* Calendario laboral 2027. Un calendario de pared impreso: papel blanco, tinta negra, festivos en rojo. */
 :root {
   --bg: #fff; --ink: #111; --ink2: #3f3f3f; --mut: #6b6b6b; --we: #737373; --line: #e8e8e6; --line2: #d4d4d2;
-  --soft: #f4f4f2; --band: #ededeb;
+  --soft: #f4f4f2; --band: #e6e6e2;
   --red: #d0312d; --red-ink: #c62f2a; --on-red: #fff;
   --amb: #f2b630; --on-amb: #111;
   --vac: #111; --on-vac: #fff;
@@ -11,14 +11,14 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #101010; --ink: #f1f1f0; --ink2: #cfcfcd; --mut: #a2a2a0; --we: #8f8f8d; --line: #262626; --line2: #3a3a3a;
-    --soft: #1b1b1b; --band: #262626;
+    --soft: #1b1b1b; --band: #2c2c2c;
     --red-ink: #ff7a70; --amb: #e6a817; --vac: #f1f1f0; --on-vac: #111;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --bg: #101010; --ink: #f1f1f0; --ink2: #cfcfcd; --mut: #a2a2a0; --we: #8f8f8d; --line: #262626; --line2: #3a3a3a;
-  --soft: #1b1b1b; --band: #262626;
+  --soft: #1b1b1b; --band: #2c2c2c;
   --red-ink: #ff7a70; --amb: #e6a817; --vac: #f1f1f0; --on-vac: #111;
   color-scheme: dark;
 }
@@ -55,7 +55,8 @@ html:not(.js) .pick select { display: none; }
 h1 { margin: 0; font-size: clamp(30px, 4.4vw, 50px); line-height: 1.06; letter-spacing: -.032em; font-weight: 700; }
 .h1a { display: block; }
 .pv { text-decoration: underline; text-decoration-color: transparent; text-decoration-thickness: .06em; text-underline-offset: .14em; }
-.pv::after { content: ""; display: inline-block; width: .3em; height: .3em; margin: 0 .08em 0 .32em; border-right: .085em solid; border-bottom: .085em solid;
+.pv .nw { white-space: nowrap; }
+.pv .nw::after { content: ""; display: inline-block; width: .3em; height: .3em; margin: 0 .08em 0 .32em; border-right: .085em solid; border-bottom: .085em solid;
   transform: translateY(-.24em) rotate(45deg); }
 .pick:hover .pv, .pick:focus-within .pv { text-decoration-color: currentColor; }
 .pick:has(select:focus-visible) .pv { outline: 2px solid var(--ink); outline-offset: 4px; border-radius: 4px; }
@@ -83,7 +84,7 @@ h1 { margin: 0; font-size: clamp(30px, 4.4vw, 50px); line-height: 1.06; letter-s
 .k.v { background: var(--vac); }
 .tbtn { height: 40px; padding: 0 14px; border: 1px solid var(--line2); border-radius: 8px; background: none; cursor: pointer; font-size: 14px; font-weight: 500; white-space: nowrap; }
 .tbtn:hover { border-color: var(--ink); }
-.tbtn[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+body.vmode .tbtn { background: var(--ink); border-color: var(--ink); color: var(--bg); }
 .vhint { margin: -6px 0 18px; font-size: 14px; color: var(--mut); }
 .vhint .lnk { margin-left: 8px; }
 
@@ -110,7 +111,7 @@ h1 { margin: 0; font-size: clamp(30px, 4.4vw, 50px); line-height: 1.06; letter-s
 .g .s0::after { left: 7%; border-top-left-radius: 999px; border-bottom-left-radius: 999px; }
 .g .s1::after { right: 7%; border-top-right-radius: 999px; border-bottom-right-radius: 999px; }
 .g .today { background: radial-gradient(circle at 50% 90%, var(--red) 1.6px, transparent 2.2px); }
-body.vmode .g b { cursor: pointer; }
+body.vmode .g b { cursor: pointer; scroll-margin: 96px 0 24px; }
 body.vmode .g b:is(.we, .n, .r, .l) { cursor: default; opacity: .4; }
 body.vmode .g b:not(.we, .n, .r, .l, .vac):hover::before { background: var(--soft); box-shadow: inset 0 0 0 1px var(--line2); }
 body.vmode .g b:focus-visible { outline-offset: -1px; border-radius: 50%; }
@@ -224,8 +225,12 @@ html:not(.js) .locs { display: none; }
   .body { grid-template-columns: minmax(0, 1fr) 288px; grid-template-areas: none; grid-template-rows: repeat(4, auto) 1fr; column-gap: 64px; }
   #ano { grid-area: auto; grid-column: 1; grid-row: 1 / -1; margin-bottom: 0; }
   #festivos, #puentes, #vacaciones, #exp { grid-area: auto; grid-column: 2; }
-  #exp { align-self: start; }
-  .year, body.vmode .year { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px 28px; }
+  #exp { align-self: start; flex-direction: column; }
+  #exp .btn { width: 100%; }
+  .year, body.vmode .year { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px 28px; }
+  .hero { padding-top: 20px; padding-bottom: 32px; }
+  .h1a { display: inline; }
+  h1 { font-size: 44px; }
   .g, body.vmode .g { font-size: 12.5px; }
 }
 @media (min-width: 1100px) and (min-height: 820px) {
@@ -251,7 +256,7 @@ html:not(.js) .locs { display: none; }
   h1 { font-size: 20pt; letter-spacing: -.02em; }
   .h1a { display: inline; }
   .pv { text-decoration: none; }
-  .pv::after { display: none; }
+  .pv .nw::after { display: none; }
   .zone { margin: 0; font-size: 12pt; }
   .body { display: grid; grid-template-columns: minmax(0, 1fr) 64mm; grid-template-areas: none; grid-template-rows: auto; column-gap: 9mm; padding: 0; }
   #ano { grid-column: 1; grid-row: 1; position: static; margin: 0; }
