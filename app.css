@@ -151,7 +151,7 @@ html:not(.js) .locs { display: none; }
 .strip { display: flex; flex-wrap: wrap; gap: 2px 0; margin: 2px 0 0 -2px; }
 .strip i { position: relative; z-index: 0; display: grid; grid-template-rows: 16px 28px; justify-items: center; align-items: center; width: 30px;
   font-style: normal; font-size: 12.5px; line-height: 1; }
-.strip i span { font-size: 10px; color: var(--mut); }
+.strip i span { font-size: 10px; font-weight: 400; color: var(--mut); }
 .strip i::before { content: ""; position: absolute; z-index: -1; left: 2px; bottom: 1px; width: 26px; height: 26px; border-radius: 50%; }
 .strip .we { color: var(--we); }
 .strip .n { color: var(--on-red); font-weight: 600; }

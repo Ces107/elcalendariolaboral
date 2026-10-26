@@ -27,6 +27,7 @@ Written 2026-10-26 from the research in `seo/keywords.md`. It is a spec for `bui
 | 11 | `/calendario-escolar/2027-2028/` placeholder page that collects links, filled in as orders appear | medium (peak from April 2027) | S | January |
 | 12 | `/2026/` archive (needs `data/2026.json` from the 2026 BOE) | medium now, nil after December | M | optional |
 | 13 | Backlink outreach (§10) | high long-term | ongoing | from launch |
+| 14 | `/ca/` `/gl/` `/eu/` versions with hreflang, per-language sitemaps and a switcher (§13). Catalan first. | high for ca, medium for gl/eu | M | with the redesign |
 
 ## 2. URL structure (canonical)
 
@@ -253,3 +254,147 @@ Pages are about 38 KB of HTML with server-rendered content, which is a good base
 ## 12. Measuring
 
 Per section in Search Console (sitemap split, §7), look at impressions and clicks for: the head terms (`calendario laboral 2027`, `calendario escolar 2026-2027`), `+ comunidad`, city names, `pdf/excel`, and the holiday questions. Expect a ramp of 2–6 weeks after indexing. The December–January peak is the first real test.
+
+## 13. Multilingual: Catalan (`/ca/`), Galician (`/gl/`), Basque (`/eu/`)
+
+The research behind this is in `keywords.md` → "Catalan, Galician and Basque". In short: Catalan has real independent demand, Galician mostly overlaps with Spanish, and Basque is small, with Basque-territory users mostly searching in Spanish. Build all three from the same templates, but **spend content effort in this order: ca > gl ≈ eu**.
+
+### 13.1 URL scheme
+
+```
+Spanish (default, unchanged)   /                /madrid/            /madrid/madrid/          /festivos/   /calendario-escolar/galicia/
+Catalan                        /ca/             /ca/madrid/         /ca/madrid/madrid/       /ca/festivos/ /ca/calendario-escolar/galicia/
+Galician                       /gl/             /gl/madrid/  …
+Basque                         /eu/             /eu/madrid/  …
+```
+- **Spanish stays at the root.** Do not move it to `/es/`, because the existing URLs keep their signals.
+- **Keep the slugs identical across languages; only the prefix changes.** The reasons:
+  1. URL words are a very weak ranking signal, and the visible breadcrumb in the results comes from the localized `BreadcrumbList` names, not the slug.
+  2. The hreflang mapping and the language switcher become a pure prefix swap (`/ca` + path), which leaves no mapping tables to get wrong.
+  3. It keeps contested names (País Valencià vs Comunitat Valenciana, Galiza vs Galicia) out of URLs for good.
+
+  Localized slugs (`/ca/festius/`, `/eu/jaiegunak/`) would be a small CTR gain at best. If ever wanted, add them later as a `slugs` map in `data/i18n.json`, but never change a URL once it is indexed.
+- Every language version of a page is a full translation: the answer line, table headers, holiday names, FAQ, buttons, meta, JSON-LD and OG text. A half-translated page (Spanish table in a Catalan frame) is the one thing that makes Google treat it as a duplicate.
+
+### 13.2 Head tags (every page, every language)
+
+```html
+<html lang="ca">                                   <!-- es | ca | gl | eu -->
+<link rel="canonical" href="https://elcalendariolaboral.es/ca/cataluna/">   <!-- SELF, never the Spanish URL -->
+<link rel="alternate" hreflang="es" href="https://elcalendariolaboral.es/cataluna/">
+<link rel="alternate" hreflang="ca" href="https://elcalendariolaboral.es/ca/cataluna/">
+<link rel="alternate" hreflang="gl" href="https://elcalendariolaboral.es/gl/cataluna/">
+<link rel="alternate" hreflang="eu" href="https://elcalendariolaboral.es/eu/cataluna/">
+<link rel="alternate" hreflang="x-default" href="https://elcalendariolaboral.es/cataluna/">
+<meta property="og:locale" content="ca_ES">       <!-- es_ES | ca_ES | gl_ES | eu_ES -->
+<meta property="og:locale:alternate" content="es_ES"> … (the other three)
+```
+Rules:
+- Use language-only codes `es`, `ca`, `gl`, `eu`, with no region subtag: Spanish speakers anywhere get the Spanish page, and Valencian users get `ca`.
+- The **same full set on every version, including a self-reference** (the reciprocal links are mandatory, or Google ignores the cluster).
+- `x-default` = the Spanish URL.
+- Only emit an alternate if that page exists in that language. If some page type ships in Spanish first, it gets no hreflang until its translations exist, and the translations are then added to every member at once.
+- Builder helper (pseudo):
+  ```python
+  LANGS = ["es", "ca", "gl", "eu"]
+  def url(lang, path): return SITE + ("" if lang == "es" else lang + "/") + path   # path like "cataluna/" or ""
+  def alternates(path): return [(l, url(l, path)) for l in LANGS] + [("x-default", url("es", path))]
+  ```
+- JSON-LD carries `"inLanguage": "ca"` (etc.), localized `name`/`description`/FAQ text, and breadcrumb `item` URLs inside the same language.
+
+### 13.3 Localized title and description patterns (first candidate ≤ 60 chars wins; test the lengths)
+
+`{R}` = region display name in that language from `data/i18n.json`. `{in}` = the locative phrase (ca "a Catalunya", "a la Comunitat Valenciana", "a les Illes Balears"; gl "en Galicia", "na Comunidade Valenciana", "nas Illas Baleares", "no País Vasco"). `{G}` = the Basque genitive-locative ("Euskadiko", "Nafarroako", "Madrilgo", "Valentziako Erkidegoko", "Balear Uharteetako", "Bilboko", "Donostiako", "Gasteizko", "Iruñeko"). **Store `in` and `gen` per region and per city in `i18n.json`; do not generate them.** Catalan articles and Basque declension are irregular (Iruña → Iruñeko).
+
+| Page | Catalan | Galician | Basque |
+|---|---|---|---|
+| home | `Calendari laboral 2027: festius i ponts per comunitats` | `Calendario laboral 2027: festivos e pontes en España` | `2027ko lan-egutegia: jaiegunak eta zubiak` |
+| comunidad | `Calendari laboral 2027 {R}: festius i ponts` → `Calendari laboral 2027 {R}` | `Calendario laboral 2027 {R}: festivos e pontes` → `Festivos 2027 en {R}: calendario laboral` | `{G} 2027ko lan-egutegia: jaiegunak eta zubiak` → `{G} jaiegunak 2027: lan-egutegia` |
+| city | `Festius 2027 {C}: calendari laboral i festes locals` → `Festius 2027 {C}: calendari laboral` | `Festivos 2027 en {C}: calendario laboral e locais` → `Festivos locais 2027 {C}` | `{G} jaiegunak 2027: lan-egutegia` |
+| /festivos/ | `Festius 2027: estatals, per comunitat i locals` | `Festivos 2027: estatais, por comunidade e locais` | `Jaiegunak 2027: estatukoak, erkidegokoak eta tokikoak` |
+| /puentes/ | `Ponts i festius 2027 per comunitats` (never "Ponts 2027" alone: it pulls French results) | `Pontes e festivos 2027 en España` (not "Pontes 2027" alone: Portuguese) | `2027ko zubiak eta jaiegunak, erkidegoka` |
+| /dias-laborables/ | `Dies laborables 2027 per mesos i comunitats` | `Días laborables 2027 por meses e comunidade` | `2027ko lanegunak, hilabeteka eta erkidegoka` |
+| /festivos-locales/ | `Festes locals 2027 de cada municipi` | `Festivos locais 2027 de cada concello` | `Tokiko jaiak 2027, udalerriz udalerri` |
+| /semana-santa/ | `Setmana Santa 2027: dates, festius i vacances` | `Semana Santa 2027: datas, festivos e vacacións` | `Aste Santua 2027: datak, jaiegunak eta oporrak` |
+| /calendario-escolar/ | `Calendari escolar 2026-2027 per comunitats` | `Calendario escolar 2026-2027 por comunidades` | `Eskola-egutegia 2026-2027, erkidegoka` |
+| escolar region | `Calendari escolar 2026-2027 {R}: inici i vacances` → `Calendari escolar 26-27 {R}` | `Calendario escolar 2026-2027 {R}: inicio e vacacións` → `Calendario escolar 26-27 {R}` | `{G} eskola-egutegia 2026-2027: hasiera eta oporrak` → `{G} eskola-egutegia 2026-2027` |
+| Navidad | `Vacances de Nadal 2026 a les escoles, per comunitat` | `Vacacións de Nadal 2026 nos colexios, por comunidade` | `Gabonetako oporrak 2026 ikastetxeetan, erkidegoka` |
+
+Meta description patterns (≤155):
+- **ca, comunidad**: `Els festius de 2027 {in} segons el BOE, amb el dia de la setmana, els ponts i un planificador de vacances. Afegeix-hi les 2 festes locals.`
+- **gl, comunidad**: `Os festivos de 2027 {in} segundo o BOE, co día da semana, as pontes e un planificador de vacacións. Engade os 2 festivos locais do teu concello.`
+- **eu, comunidad**: `{G} 2027ko jaiegunak BOEren arabera: asteko eguna, zubiak eta oporren planifikatzailea. Gehitu zure udalerriko 2 tokiko jaiak.`
+- **ca, escolar**: `Calendari escolar 2026-2027 {in}: inici i final de curs per etapes, vacances de Nadal i Setmana Santa i dies no lectius, segons l'ordre oficial.`
+
+These phrasings follow the ranking pages (3cat, beteve, democrata/ca, Mundo R, Euskaltel, euskadi.eus). The i18n agent's native-reviewed strings take precedence over these if they differ.
+
+Body keyword variants to place once (FAQ or source line): ca `calendari laboral catalunya gencat`, `festius caib`, `calendari escolar gva`; gl `DOG`, `Xunta de Galicia`, `Entroido`; eu `lan egutegia` (spaced form), `jai egunak`, `EAE`, `BOPV`, `BON`.
+
+Dates per language, with day and month names stored in i18n.json:
+- ca `divendres, 26 de març de 2027` (and `d'abril`, `d'agost`, `d'octubre`: elide before a vowel)
+- gl `venres, 26 de marzo de 2027`
+- eu `2027ko martxoaren 26a, ostirala`
+
+### 13.4 Region names (blocking issue for i18n.json)
+
+Use the statutory or official names in titles and H1s:
+- **Comunitat Valenciana** (ca), not "País Valencià".
+- **Galicia** (gl), not "Galiza".
+- **Euskadi** (eu), not "Euskal Herria". Euskal Herria covers Navarra and the French Basque Country, so it is factually wrong for the comunidad autónoma.
+- Nafarroa, Illes Balears and Catalunya are fine.
+
+Evidence (autocomplete, Xunta, euskadi.eus, Euskaltel) is in `keywords.md`. Alternative names may appear once in body text.
+
+### 13.5 Sitemaps
+
+Split by language and reference them from `sitemap_index.xml` (robots.txt points to the index):
+```
+sitemap_index.xml → sitemap-es.xml, sitemap-ca.xml, sitemap-gl.xml, sitemap-eu.xml
+```
+Each `<url>` lists every alternate, including itself:
+```xml
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+ <url>
+  <loc>https://elcalendariolaboral.es/ca/cataluna/</loc>
+  <lastmod>2026-10-26</lastmod>
+  <xhtml:link rel="alternate" hreflang="es" href="https://elcalendariolaboral.es/cataluna/"/>
+  <xhtml:link rel="alternate" hreflang="ca" href="https://elcalendariolaboral.es/ca/cataluna/"/>
+  <xhtml:link rel="alternate" hreflang="gl" href="https://elcalendariolaboral.es/gl/cataluna/"/>
+  <xhtml:link rel="alternate" hreflang="eu" href="https://elcalendariolaboral.es/eu/cataluna/"/>
+  <xhtml:link rel="alternate" hreflang="x-default" href="https://elcalendariolaboral.es/cataluna/"/>
+ </url>
+</urlset>
+```
+Hreflang in both the HTML head and the sitemap is redundant but allowed, as long as the two agree. Generate both from the same helper.
+
+### 13.6 Search Console and Bing
+
+- **One Domain property** (`elcalendariolaboral.es`, DNS TXT) covers every language. Submit `sitemap_index.xml`.
+- Optional but useful: add URL-prefix properties `https://elcalendariolaboral.es/ca/`, `/gl/`, `/eu/`. Under a verified Domain property they verify automatically and give per-language performance reports without filters.
+- Check Search Console → Pages → "Alternate page with proper canonical tag" (expected and fine) vs "Duplicate, Google chose different canonical" (bad: it means a translation is incomplete).
+- Bing: import from Search Console. Bing also uses `<html lang>` and `content-language` rather than relying only on hreflang, so keep `lang` correct.
+
+### 13.7 Language switcher UX (no auto-redirect)
+
+- Put a small switcher in the header, labelled `ES · CA · GL · EU` (in the native forms Español, Català, Galego, Euskara as `title`/`aria-label`). It is a set of plain `<a href>` links to the **equivalent page** (prefix swap), with `hreflang` and `lang` attributes on each link. The current language is marked with `aria-current="true"`.
+- **Never redirect by IP or `Accept-Language`.** Googlebot crawls mostly from the US without Accept-Language, so it would never see the translations, and Google's guidance explicitly advises against this. The root `/` always serves Spanish.
+- Optional and non-intrusive: if `navigator.language` starts with `ca`, `gl` or `eu` and the user is on a Spanish page, show a one-line dismissible bar ("Disponible en català →"). Remember the dismissal in `localStorage` (try/catch). Never move the user automatically.
+- Inside a language, every internal link (nav, footer, related cards, breadcrumbs) stays in that language. The switcher is the only cross-language link.
+
+### 13.8 Which language pages get linked from where
+
+| From | Link to |
+|---|---|
+| Every page (header switcher) | The same page in the other 3 languages |
+| Spanish `/cataluna/`, `/comunitat-valenciana/`, `/baleares/` (and their cities and escolar pages) | A visible "En català" chip next to the H1, besides the switcher. This is where Catalan demand is, so it is worth an extra link. |
+| Spanish `/galicia/` (+ cities, escolar) | "En galego" chip |
+| Spanish `/pais-vasco/`, `/navarra/` (+ cities, escolar) | "Euskaraz" chip |
+| Spanish home footer | "Català · Galego · Euskara" → `/ca/`, `/gl/`, `/eu/` |
+| `/ca/`, `/gl/`, `/eu/` home pages | All 19 comunidades in that language. Catalan lists Catalunya, Comunitat Valenciana and Illes Balears first, Galician lists Galicia first, Basque lists Euskadi and Nafarroa first (the order follows demand, and the rest stay alphabetical). |
+
+### 13.9 Scope and rollout order
+
+1. `/ca/` for every page type (it has real demand). Catalan city pages first for Catalonia (CIDO-diba data), Valencia and Balears.
+2. `/gl/` and `/eu/` for every page type from the same templates. Native strings come from `data/i18n.json`.
+3. Per-language OG images (text in that language). `.ics` event names in that language are optional.
+4. `test_data.py` checks, per page: the hreflang set is complete and reciprocal, the canonical is the self URL, `lang` matches the prefix, and the title and description lengths are within limits for every language.

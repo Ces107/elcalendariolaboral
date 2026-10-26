@@ -105,6 +105,79 @@ Scale used below: **P1** = must have before mid-November 2026. **P2** = before C
 | **Official** (BOE, gva, gencat, jcyl, BOCM, Xunta, ayuntamientos) | Authority. The source of truth for "boe", "gva" and "oficial" queries. | PDFs, no puentes, no planner, nothing that compares comunidades, poor on mobile. We beat them on usability and should link to them generously, since that link is our trust signal. |
 | **cuandoenelmundo.com** | A PDF generator for each comunidad. | We saw a wrong Easter date for 2027 on it. |
 
+## Catalan, Galician and Basque (checked 2026-10-26)
+
+Method: Google autocomplete with `hl=ca` / `hl=gl` / `hl=eu` (`gl=es`), plus the titles and headings of the pages that rank, read directly. The same location bias applies (Comunitat Valenciana).
+
+### Catalan (`/ca/`): real demand, the strongest of the three
+
+Autocomplete returns full lists for every head term, so Catalan is a real search language here, not a courtesy.
+
+| Cluster | Real phrasing (autocomplete / press) | Priority |
+|---|---|---|
+| Labour calendar | `calendari laboral 2027` · `… catalunya` · `… catalunya gencat` · `… comunitat valenciana` · `… barcelona` · `… girona` / `sabadell` / `mataro` / `vic` · `… catalunya per imprimir` · `calendari laboral valencia 2027` | P1 |
+| Holidays | `festius 2027` · `festius 2027 catalunya` · `… barcelona` / `terrassa` / `lleida` / `girona` / `vic` · `festius 2027 balears` · `festius 2027 caib` · `dies festius 2027 catalunya` · `calendari dies festius catalunya 2027` · `festius comunitat valenciana 2027` · `festius desembre 2026` | P1 |
+| Local holidays | `festes locals 2027` · `festes locals barcelona 2027` · `… catalunya` / `manresa` / `girona` / `vic` / `sabadell` / `tortosa` / `lleida` / `amposta` | P1 (city pages) |
+| Puentes | `ponts 2027` **collides with French** ("ponts 2027 france", "ponts mai 2027", "education nationale"). Use `ponts festius 2027` and `ponts i festius 2027`, never `ponts 2027` alone in a title. | P2 |
+| School | `calendari escolar 2026-2027` · `… catalunya` · `… barcelona` / `sabadell` / `terrassa` / `girona` · `… caib` · `… illes balears` · `calendari escolar 26 27 gva` · `calendari escolar 26-27 catalunya` · `… gencat` · `calendari escolar castello de la plana` | P1 |
+| Semana Santa | `setmana santa 2027` · `… catalunya` · `… dates` · `… calendari escolar` · `… festius` · `… illes balears` | P2 |
+| Working days | `dies laborables 2027` (only the bare term, so low) | P3 |
+| Generic | `calendari 2027` · `… catalunya` · `… per imprimir` · `… amb festius` · `… festius catalunya` · `calendari 2027 excel` | P2 |
+
+**Who ranks / phrasing examples:**
+- 3cat (`3cat.cat/3catinfo/calendari-laboral/`; "Calendari escolar 2026-2027: vacances i festius d'aquest curs i dels dos següents").
+- beteve ("Calendari escolar 2026-27 Catalunya: dates, festius i vacances").
+- democrata.es/ca/ ("Calendari laboral 2027: tots els festius, ponts i dies lliures per comunitats autònomes"). This is the only multilingual competitor (es/ca/eu).
+- ara.cat.
+- Official: gencat (Ordre EMT/52/2026), CAIB/BOIB, GVA/DOGV, and **CIDO of the Diputació de Barcelona** (`cido.diba.cat/calendaris-oficials`), the official compilation of Catalan festes locals. Use it as the source of truth for Catalan city data.
+- Valencian users write `comunitat valenciana` and `gva` (both Spanish and Catalan autocomplete). No suggestion uses "País Valencià".
+
+### Galician (`/gl/`): mostly overlaps with Spanish
+
+With `hl=gl`, autocomplete still returns Spanish-form queries: `festivos 2027 galicia`, `calendario laboral 2027 galicia`, `… xunta de galicia`, `calendario escolar galicia 26 27`, `… pdf`, `festivos galicia 2027 dog`, `festivos 2027 vigo`. The Galician-only forms with demand are `festivos locais galicia 2027` and `festivos locais santiago de compostela 2027`. `galiza` returns **no** suggestions. `pontes 2027` returns Portuguese results ("feriados e pontes 2027 portugal").
+
+Several key terms are spelled the same in both languages ("calendario laboral", "calendario escolar", "festivos", "Semana Santa"), so the Galician pages compete with our own Spanish pages for the same words. hreflang (plan §13) decides which one Google shows, based on the user's language settings.
+
+**Who ranks / phrasing examples:**
+- Blog Mundo R ("Todos os festivos en Galicia 2027: calendario laboral"; H2s "Pontes en Galicia 2027", "Festivos locais en Galicia 2027", "Entroido en Galicia 2027").
+- xunta.gal press notes in Galician ("A Xunta de Galicia aproba o calendario laboral para 2027 co 19 de marzo e o 17 de maio como festivos propios").
+- DOG.
+
+Priority: P2 for Galicia pages (Galicia + its cities + escolar Galicia), P3 for the other regions in Galician. Add **Entroido 2027** (school days off at Carnival, a Galician-specific query) to the Galician school page.
+
+### Basque (`/eu/`): low volume, people mostly search in Spanish
+
+| Real phrasing | Note |
+|---|---|
+| `lan egutegia 2027` · `2027ko lan egutegia` · `lan egutegia 2027 euskadi` · `gipuzkoako lan egutegia 2026` | Users type "lan egutegia" with a space. The press and Euskaltzaindia write `lan-egutegia`. Use the hyphen in titles and the spaced form once in the body. |
+| `egutegia 2027` · `egutegia 2027 euskadi` · `2027 ko egutegia` | |
+| `eskola egutegia 26 27` · `eskola egutegia 2026 27` · `eskola egutegia 2026` | School calendar. |
+| `jaiegunak euskadi` · `2027 ko jai egunak` | Holidays. `jaiegunak 2027` alone returns nothing. |
+| `zubiak 2027` | Nothing in autocomplete. Keep it as an H2, not a title lead. |
+
+Basque-territory users mostly search **in Spanish** with the territory name: `calendario laboral 2027 bizkaia` (+ `bob`, `pdf`, `excel`, `gobierno vasco`), `calendario laboral 2027 gipuzkoa` (+ `bog`, `irun`), `calendario laboral euskadi 2027 bopv`, `calendario laboral navarra 2027 bon`. That means **Bizkaia/Gipuzkoa/Araba city pages in Spanish** matter more than the Basque translation.
+
+**Who ranks / phrasing examples:**
+- blog.euskaltel.com/eu/ ("Euskadiko jaiegun guztiak: 2027ko lan-egutegia"; H2s "Euskadiko 2027ko zubiak", "2027ko Euskadiko tokiko jaiak: Bizkaian, Gipuzkoan eta Araban", "Bizkaiko 2027ko jaiegunak"; also "nafarroako jaiegunak 2027" and "nafarroako eskola egutegia").
+- democrata.es/eu/ ("2027ko lan-egutegia: autonomia-erkidegoen arabera festibo guztiak, zubiak eta opor-egunak").
+- euskadi.eus ("2026-2027 ikasturteko eskola-egutegiaren ebazpena").
+- datos.gob.es ("2026eko Euskadiko lan egutegia").
+
+Priority: P2 for Euskadi + Nafarroa pages in Basque, P3 for the rest.
+
+### Region names: what searchers and official sources use
+
+| Comunidad | Catalan | Galician | Basque | Evidence |
+|---|---|---|---|---|
+| Comunitat Valenciana | **Comunitat Valenciana** (not "País Valencià") | Comunidade Valenciana | Valentziako Erkidegoa | Catalan autocomplete: `calendari laboral 2027 comunitat valenciana`, `… gva`. Statutory name. |
+| Galicia | Galícia | **Galicia** (not "Galiza") | Galizia | `galiza` gets zero suggestions. Xunta and Mundo R write "Galicia". |
+| País Vasco | País Basc | País Vasco | **Euskadi** (or Euskal Autonomia Erkidegoa). **Not "Euskal Herria"**, which names the seven Basque territories including Navarra and Iparralde, so it is factually wrong for this comunidad | `lan egutegia 2027 euskadi`; Euskaltel and euskadi.eus write "Euskadi". |
+| Navarra | Navarra | Navarra | **Nafarroa** ✓ | Euskaltel: "Nafarroako jaiegunak 2027". |
+| Baleares | **Illes Balears** ✓ | Illas Baleares | Balear Uharteak | `festius 2027 balears`, `caib`. |
+| Cataluña | **Catalunya** ✓ | Cataluña | Katalunia | |
+
+Recommendation sent to the i18n data: use the official or statutory names in titles and H1s (Comunitat Valenciana, Galicia, Euskadi). Alternative names can appear once in body text if wanted. A wrong region name in a title costs both clicks and trust.
+
 **Takeaways:**
 1. Precision, with a source cited on every page, is a real differentiator. Competitors visibly contradict each other.
 2. City-level labour calendars and comunidad-level school calendars are where demand meets weak supply.
