@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "es.elcalendariolaboral.app",
+      "sha256_cert_fingerprints": [
+        "5D:43:8E:C7:F3:78:71:92:72:3F:C5:50:D5:A0:39:9E:CE:AB:69:C7:7B:18:84:4B:61:D9:AB:42:6D:E0:A5:54"
+      ]
+    }
+  }
+]
