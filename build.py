@@ -430,6 +430,25 @@ CHEV = '<svg class="chev" width="10" height="10" viewBox="0 0 10 10" aria-hidden
 GLOBE = ('<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.3"/>'
          '<path d="M1.5 8h13M8 1.5c2 2 2.8 4.2 2.8 6.5S10 12.5 8 14.5M8 1.5C6 3.5 5.2 5.7 5.2 8S6 12.5 8 14.5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>')
 BURGER = '<svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.8"/></svg>'
+DLOAD = ('<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v8m-3.5-3.5L8 10l3.5-3.5M3 13.5h10" fill="none" '
+         'stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>')
+# PWA install button until the Play app is out: label, iPhone steps, other browsers' steps
+INSTALL = {
+    "es": ("Instalar app", "En iPhone: pulsa Compartir y luego «Añadir a pantalla de inicio».",
+           "En el menú ⋮ del navegador, elige «Instalar aplicación» o «Añadir a pantalla de inicio»."),
+    "ca": ("Instal·la l'app", "A l'iPhone: toca Comparteix i després «Afegeix a la pantalla d'inici».",
+           "Al menú ⋮ del navegador, tria «Instal·la l'aplicació» o «Afegeix a la pantalla d'inici»."),
+    "gl": ("Instalar a app", "No iPhone: toca Compartir e despois «Engadir á pantalla de inicio».",
+           "No menú ⋮ do navegador, escolle «Instalar aplicación» ou «Engadir á pantalla de inicio»."),
+    "eu": ("Instalatu aplikazioa", "iPhonen: sakatu Partekatu eta gero «Gehitu hasierako pantailan».",
+           "Nabigatzailearen ⋮ menuan, aukeratu «Instalatu aplikazioa» edo «Gehitu hasierako pantailan»."),
+}
+
+
+def install_html():
+    label, ios, other = INSTALL.get(LANG, INSTALL["es"])
+    return (f'<details class="dd dd-inst" id="inst" hidden><summary>{DLOAD}<span class="in-l">{label}</span></summary>'
+            f'<div class="menu menu-inst"><p data-os="ios">{ios}</p><p data-os="other">{other}</p></div></details>')
 KINDS = {"n": "k_n", "r": "k_r", "i": "k_i", "l": "k_l"}
 
 PAGE_PATH = ""  # path of the page being written, below the language base (for the language selector)
@@ -455,6 +474,7 @@ def header_html(here=""):
             f'<details class="dd dd-reg"><summary>{t("nav_regions")}{CHEV}</summary><div class="menu menu-reg">{regs}</div></details>'
             f'<a href="{BASE}festivos-locales/"{" aria-current=page" if here == "locals" else ""}>{t("nav_locals")}</a>'
             f'<a href="{pts_href}">{t("nav_bridges")}</a></nav>'
+            f'{install_html()}'
             f'<details class="dd dd-lang"><summary>{GLOBE}<span class="ln-l">{LANG_NAMES[LANG]}</span><span class="ln-s">{LANG.upper()}</span>{CHEV}</summary>'
             f'<div class="menu menu-lang">{lang_links()}</div></details>'
             f'<button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="nav" aria-label="{t("menu")}">{BURGER}</button>'
@@ -474,6 +494,7 @@ def footer_html(data):
             + '</section>'
             f'<section><h2>El Calendario Laboral</h2><ul><li><a href="{s["url"]}" rel="noopener">{t("data_source")}</a></li>'
             f'<li><a href="{ASSETS}widget/"{"" if LANG == "es" else " hreflang=es lang=es"}>Widget para tu web</a></li>'
+            f'<li><a href="#inst" data-install hidden>{INSTALL.get(LANG, INSTALL["es"])[0]}</a></li>'
             f'<li><a href="{BASE}privacidad/">{t("privacy")}</a></li></ul>'
             f'<p class="ft-lang">{lang_links()}</p></section>'
             f'</div><div class="wrap ft-b">© 2026 {HOST}</div></footer>')

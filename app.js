@@ -31,6 +31,35 @@
     if (on) dds.forEach(function (d) { if (d.classList.contains('dd-lang')) d.open = false; });
   });
   all('[data-print]').forEach(function (b) { b.addEventListener('click', function () { window.print(); }); });
+  /* ------------------------------------------------------------ instalar como app (PWA) */
+  var inst = $('inst'), deferred = null;
+  var standalone = (window.matchMedia && matchMedia('(display-mode: standalone)').matches) || navigator.standalone === true;
+  if (inst && !standalone) {
+    var ios = /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    all('[data-os]', inst).forEach(function (p) { p.hidden = (p.getAttribute('data-os') === 'ios') !== ios; });
+    inst.hidden = false;
+    all('[data-install]').forEach(function (a) { a.hidden = false; });
+    var install = function (e) {
+      if (!deferred) return false;
+      if (e) e.preventDefault();
+      deferred.prompt();
+      deferred.userChoice.then(function (c) { if (c.outcome === 'accepted') inst.hidden = true; });
+      deferred = null;
+      return true;
+    };
+    window.addEventListener('beforeinstallprompt', function (e) { e.preventDefault(); deferred = e; });
+    window.addEventListener('appinstalled', function () { inst.hidden = true; all('[data-install]').forEach(function (a) { a.hidden = true; }); });
+    inst.querySelector('summary').addEventListener('click', install);
+    all('[data-install]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        if (install(e)) return;
+        e.preventDefault();
+        window.scrollTo(0, 0);
+        inst.open = true;
+      });
+    });
+  }
+
   if ($('region')) $('region').addEventListener('change', function () { if (this.value) location.href = BASE + this.value + '/'; });
   if ($('city')) $('city').addEventListener('change', function () { location.href = this.value; });
 
