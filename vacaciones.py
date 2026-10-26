@@ -209,7 +209,7 @@ def region_page(f, fs, write):
     head = B.head_html(title, desc, path, f"{B.SITE}{B.ASSETS}og/vacaciones-2027-{slug}.png", lds, langs=ONLY)
     cfg = {**base_cfg(), "region": slug, "name": name, "hols": [[h["date"], h["name"], h["kind"]] for h in hols],
            "zones": zones_of(slug), "cities": cities_of(slug)}
-    main = (f'{hero}<div class="wrap body">{cal}{esc_sec}{rank}{pages.faq_html(qas)}'
+    main = (f'{hero}<div class="wrap body">{B.ad("vac")}{cal}{esc_sec}{rank}{pages.faq_html(qas)}'
             f'<p class="pfoot">{B.HOST}{B.BASE}{path} · {E(DATA["source"]["boe"])}</p></div>{vac_script(cfg)}')
     write(path, B.page(head, "pg vac", "vac", main, DATA, js=False), DATA["updated"], ONLY)
 
@@ -257,7 +257,7 @@ def hub_page(fs, write):
     lds = pages.ld(pages.crumbs_ld(crumbs), pages.faq_ld(qas), app_ld(h1, PATH, desc))
     head = B.head_html(title, desc, PATH, f"{B.SITE}{B.ASSETS}og/vacaciones-2027.png", lds, langs=ONLY)
     cfg = {**base_cfg(), "hub": True, "regions": [r["slug"] for r in DATA["regions"]]}
-    main = f'{hero}<div class="wrap body narrow">{rank}{pages.faq_html(qas)}</div>{vac_script(cfg)}'
+    main = f'{hero}<div class="wrap body narrow">{rank}{B.ad("hub")}{pages.faq_html(qas)}</div>{vac_script(cfg)}'
     write(PATH, B.page(head, "pg vac", "vac", main, DATA, js=False), DATA["updated"], ONLY)
 
 

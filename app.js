@@ -282,6 +282,11 @@
     var webcal = 'webcal://' + HOST + ASSETS + 'ics/' + S.region + suffix + '.ics';
     $('gc').href = 'https://calendar.google.com/calendar/r?cid=' + encodeURIComponent(webcal);
     $('wc').href = webcal;
+    var pk = S.region + suffix;
+    all('[data-pdf]').forEach(function (a) {
+      var fn = 'calendario-laboral-2027-' + pk + a.getAttribute('data-pdf') + '.pdf';
+      a.href = ASSETS + 'pdf/' + pk + '/' + fn; a.download = fn;
+    });
   }
 
   function ics(hols, label) {

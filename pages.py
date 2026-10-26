@@ -245,7 +245,7 @@ def hub_locales(loc, regions, cities):
     h1 = f'{t("nav_locals")} 2027'
     crumbs = [(t("spain"), ""), (h1, "festivos-locales/")]
     main = (f'<div class="hero wrap">{B.crumbs_html(crumbs)}<h1>{E(h1)}</h1>{ctx}</div>'
-            f'<div class="wrap body narrow">{"".join(blocks)}{faq_html(qas)}</div>')
+            f'<div class="wrap body narrow">{"".join(blocks)}{B.ad("hub")}{faq_html(qas)}</div>')
     head = B.head_html(title, desc, "festivos-locales/", f"{B.SITE}{B.ASSETS}og/espana.png", ld(crumbs_ld(crumbs), faq_ld(qas)))
     return B.page(head, "pg", "locals", main, DATA, js=False)
 
@@ -358,7 +358,7 @@ def home_page():
     prow = "".join(B.pts_row(it) for it in B.all_breaks(nat))
     vac = f'<p class="more-l"><a href="{B.BASE}vacaciones-2027/">Maximiza tus vacaciones 2027 →</a></p>' if ES else ""
     pts_sec = B.section("puentes", E(B.fill(t("h_pts"), sp)), f'<table class="tbl pts">{B.pts_head()}<tbody>{prow}</tbody></table>{vac}')
-    main = f'{hero}<div class="wrap body">{cal_sec}{reg_sec}{hol_sec}{pts_sec}{faq_html(qas)}</div>{B.POP}'
+    main = f'{hero}<div class="wrap body">{cal_sec}{B.ad("cal")}{reg_sec}{hol_sec}{pts_sec}{faq_html(qas)}</div>{B.POP}'
     lds = [{"@type": "WebSite", "name": t("site_name"), "alternateName": B.HOST, "url": B.URL, "inLanguage": B.IN_LANG[B.LANG]},
            {"@type": "Organization", "name": t("site_name"), "url": B.URL, "logo": f"{B.SITE}{B.ASSETS}icons/icon-512.png"},
            {"@type": "WebApplication", "name": t("site_name") + " 2027", "url": B.URL, "applicationCategory": "UtilitiesApplication",
@@ -400,6 +400,8 @@ def write_pages(data, fix):
         widget.write_pages(data, write, cities)
         import vacaciones
         vacaciones.write_pages(data, write, cities)
+        import pdfhub
+        pdfhub.write_page(data, write, cities)
     return list(_written)
 
 

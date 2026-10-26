@@ -7,6 +7,7 @@ ics/, csv/, og/, icons/, sitemap.xml (con alternates por idioma), manifest y sw.
 
     CL_SITE=https://elcalendariolaboral.es CL_BASE=/ python build.py          # todo
     CL_SITE=https://elcalendariolaboral.es CL_BASE=/ python build.py --no-img # sin regenerar PNG
+    ... python build.py --no-img --no-pdf                                     # tampoco los PDF (pdfs.py)
 
 Textos: T["es"] aqui; ca/gl/eu salen de data/i18n.json (ver strings()). Si una cadena no existe alli ni se puede
 sacar de un patron de ese idioma, queda en castellano (NO_TR lo lista).
@@ -422,6 +423,29 @@ def pick(limit, *cands):
 
 # ---------------------------------------------------------------- html parts
 
+# Manual ad units (seo/ads.md). OFF until AdSense approves: paste the 4 slot ids, set ADS_ON = True, rebuild, push.
+ADS_ON = False
+AD_CLIENT = "ca-pub-9914165605609514"
+AD_SLOTS = {  # position -> AdSense display unit id (data-ad-slot)
+    "cal": "",   # region/city/home: between the calendar and the next section
+    "list": "",  # region/city: after the holiday list
+    "vac": "",   # vacation optimizer: below the result
+    "hub": "",   # hub pages: festivos locales, PDF, calendario escolar, vacaciones
+}
+
+
+def ad(pos):
+    """One manual ad unit, or nothing while ADS_ON is False or the slot id is missing. Never inside the calendar grid,
+    the share card, print or the widget embeds (those pages don't call this)."""
+    slot = AD_SLOTS.get(pos)
+    if not (ADS_ON and slot):
+        return ""
+    return (f'<aside class="ad ad-{pos}" aria-label="Publicidad"><p class="ad-l">Publicidad</p>'
+            f'<ins class="adsbygoogle" style="display:block" data-ad-client="{AD_CLIENT}" data-ad-slot="{slot}" '
+            f'data-ad-format="auto" data-full-width-responsive="true"></ins>'
+            f'<script>(adsbygoogle=window.adsbygoogle||[]).push({{}});</script></aside>')
+
+
 ADSENSE = ('<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9914165605609514" '
            'crossorigin="anonymous"></script>')
 SW_JS = ("<script>if('serviceWorker'in navigator)addEventListener('load',function(){navigator.serviceWorker.register('"
@@ -488,7 +512,8 @@ def footer_html(data):
     s = data["source"]
     return (f'<footer class="ft"><div class="wrap ft-in">'
             f'<section class="ft-reg"><h2>{t("nav_regions")}</h2><ul class="cols">{regs}</ul></section>'
-            f'<section><h2>{t("nav_locals")}</h2><ul><li><a href="{BASE}festivos-locales/">{t("nav_locals")} 2027</a></li></ul>'
+            f'<section><h2>{t("nav_locals")}</h2><ul><li><a href="{BASE}festivos-locales/">{t("nav_locals")} 2027</a></li>'
+            f'<li><a href="{ASSETS}calendario-laboral-2027-pdf/"{"" if LANG == "es" else " hreflang=es lang=es"}>Calendario laboral 2027 PDF</a></li></ul>'
             + (f'<h2>Calendario escolar</h2><ul><li><a href="{BASE}calendario-escolar/">Calendario escolar 2026-2027</a></li>'
                f'<li><a href="{BASE}vacaciones-escolares/navidad/">Vacaciones de Navidad 2026-2027</a></li>'
                f'<li><a href="{BASE}vacaciones-escolares/semana-santa/">Vacaciones de Semana Santa 2027</a></li>'
@@ -679,10 +704,24 @@ def section(id_, title, body, tools="", cls=""):
             f'{tools}</div>{body}</section>')
 
 
-def tools_html(key=None, ics_name=""):
-    """Print, and for a region or city also the CSV and the calendar menu."""
+PDF_L = {"es": ("Horizontal", "Vertical", "Mensual"), "ca": ("Horitzontal", "Vertical", "Mensual"),
+         "gl": ("Horizontal", "Vertical", "Mensual"), "eu": ("Horizontala", "Bertikala", "Hilekoa")}
+
+
+def pdf_menu(key, monthly=True):
+    """PDF downloads of pdfs.py (A4 landscape, portrait, 12 months). app.js swaps the key when the island or zone changes."""
+    labels = PDF_L.get(LANG, PDF_L["es"])
+    kinds = [("", labels[0]), ("-vertical", labels[1])] + ([("-mensual", labels[2])] if monthly else [])
+    items = "".join(f'<a data-pdf="{k}" href="{ASSETS}pdf/{key}/calendario-laboral-2027-{key}{k}.pdf" '
+                    f'download="calendario-laboral-2027-{key}{k}.pdf" type="application/pdf">{lab}</a>' for k, lab in kinds)
+    return f'<details class="dd dd-cal dd-pdf"><summary class="btn">PDF{CHEV}</summary><div class="menu menu-cal">{items}</div></details>'
+
+
+def tools_html(key=None, ics_name="", monthly=True):
+    """Print, and for a region or city also the PDF and CSV downloads and the calendar menu."""
     out = f'<button class="btn" type="button" data-print>{t("print")}</button>'
     if key:
+        out += pdf_menu(key, monthly)
         webcal = f"webcal://{HOST}{ASSETS}ics/{key}.ics"
         out += (f'<a class="btn" href="{ASSETS}csv/{key}.csv" download="calendario-laboral-2027-{key}.csv">{t("csv")}</a>'
                 f'<details class="dd dd-cal"><summary class="btn">{t("add_cal")}{CHEV}</summary><div class="menu menu-cal">'
@@ -765,7 +804,7 @@ def app_main(data, r, city=None, hero_extra="", more="", cities=(), pending=()):
             f'<div class="pickers">{sel}</div></div>')
 
     kinds = ["n", "r"] + (["i"] if slug == "canarias" else []) + ["l"]
-    cal_sec = section("calendario", t("h_cal"), legend_html(kinds) + year_html(hols), tools_html(key, f'{t("ics_file")}-{key}.ics'), "cal")
+    cal_sec = section("calendario", t("h_cal"), legend_html(kinds) + year_html(hols), tools_html(key, f'{t("ics_file")}-{key}.ics', not city), "cal")
     prow = "".join(pts_row(it) for it in breaks) or f'<tr><td colspan="3">{t("no_bridges")}</td></tr>'
     pts_sec = section("puentes", E(fill(t("h_pts"), pnames)), f'<table class="tbl pts">{pts_head()}<tbody id="plist">{prow}</tbody></table>')
     plan = (f'<div class="step"><label for="vn">{t("how_many")}</label><span class="stepper"><button type="button" id="vm" aria-label="{t("one_less")}">−</button>'
@@ -780,7 +819,7 @@ def app_main(data, r, city=None, hero_extra="", more="", cities=(), pending=()):
                               f'<input type="date" id="locin" min="2027-01-01" max="2027-12-31" aria-label="{t("local_holiday")}" tabindex="-1" class="vh"></div>')
     hol_sec = section("festivos", E(fill(t("h_hol"), pnames)), f'<ol class="hl" id="hlist">{items}</ol>{addloc}')
     foot = f'<p class="pfoot">{HOST}{BASE}{city["path"] if city else slug + "/"} · {E(data["source"]["boe"])}</p>'
-    return f'{hero}<div class="wrap body">{cal_sec}{pts_sec}{vac_sec}{hol_sec}{more}{foot}</div>{POP}'
+    return f'{hero}<div class="wrap body">{cal_sec}{ad("cal")}{pts_sec}{vac_sec}{hol_sec}{ad("list")}{more}{foot}</div>{POP}'
 
 
 POP = '<div class="pop" id="pop" role="dialog" hidden><p class="pop-d" id="pop-d"></p><p class="pop-h" id="pop-h"></p><div class="pop-a" id="pop-a"></div></div>'
@@ -961,6 +1000,9 @@ def main():
         icons(ROOT / "icons")
 
     pages.write_shared(data, "--no-img" not in sys.argv)
+    if "--no-pdf" not in sys.argv:
+        import pdfs
+        pdfs.write_all(data, pages.published_cities(pages.load_locales(), {r["slug"]: r for r in data["regions"]}))
     (ROOT / "404.html").write_text(fix(page_404(data)), "utf-8", newline="\n")
     (ROOT / "sitemap.xml").write_text(sitemap(pages_written), "utf-8", newline="\n")
 

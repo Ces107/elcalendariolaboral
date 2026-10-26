@@ -159,7 +159,20 @@ def one(iso, short=False):
 
 def grid(c):
     """Same month cards as the region pages: days without class tinted 'v', days outside the course left blank."""
-    hmap, items = {}, {}
+    hmap, marks = grid_marks(c)
+    items = {}
+    for iso, cls, day, name in marks:
+        items.setdefault(iso[:7], []).append(f'<li class="{cls}"><b>{day}</b> {E(name)}</li>')
+    months = [(c.y0, m) for m in range(9, 13)] + [(c.y0 + 1, m) for m in range(1, 7)]
+    cards = "".join(B.month_html(m, hmap, [], year=y, idp=None,
+                                 items="".join(items.get(f"{y}-{m:02d}", [])), show_year=True) for y, m in months)
+    legend = f'<ul class="legend" aria-label="{B.t("legend")}"><li>{B.sw("v")}No lectivo</li></ul>'
+    return legend + f'<div class="year">{cards}</div>'
+
+
+def grid_marks(c):
+    """Day tints {iso: {kind, name}} and the lines under each month [(iso, cls, day text, name)], by date (page and PDF)."""
+    hmap = {}
     main_out = c.start and c.end
     for d in days(c.lo, c.hi):
         iso = d.isoformat()
@@ -190,13 +203,7 @@ def grid(c):
         marks.append((c.start, "k-c", str(D(c.start).day), "Primer día de clase"))
     if c.end:
         marks.append((c.end, "k-c", str(D(c.end).day), "Último día de clase"))
-    for iso, cls, day, name in sorted(marks):
-        items.setdefault(iso[:7], []).append(f'<li class="{cls}"><b>{day}</b> {E(name)}</li>')
-    months = [(c.y0, m) for m in range(9, 13)] + [(c.y0 + 1, m) for m in range(1, 7)]
-    cards = "".join(B.month_html(m, hmap, [], year=y, idp=None,
-                                 items="".join(items.get(f"{y}-{m:02d}", [])), show_year=True) for y, m in months)
-    legend = f'<ul class="legend" aria-label="{B.t("legend")}"><li>{B.sw("v")}No lectivo</li></ul>'
-    return legend + f'<div class="year">{cards}</div>'
+    return hmap, sorted(marks)
 
 
 def key_table(c):
@@ -235,10 +242,15 @@ def ctx_line(c):
     return ""
 
 
-def course_sections(c, sfx=""):
+def pdf_tools(slug):
+    f = f"calendario-escolar-2026-2027-{slug}.pdf"
+    return f'<div class="tools"><a class="btn" href="{B.ASSETS}pdf/{slug}/{f}" download="{f}" type="application/pdf">PDF</a></div>'
+
+
+def course_sections(c, sfx="", tools=""):
     """Grid, key dates and stages of one course, as page sections (sfx keeps ids unique on one page)."""
     yrs = f"{c.y0}-{c.y0 + 1}"
-    out = B.section(f"calendario{sfx}", f"Calendario escolar {yrs}", grid(c), cls="cal")
+    out = B.section(f"calendario{sfx}", f"Calendario escolar {yrs}", grid(c), tools, cls="cal")
     out += B.section(f"fechas{sfx}", f"Días sin clase {yrs}", key_table(c))
     st = stage_table(c.e.get("stages") or [])
     if st:
@@ -283,7 +295,7 @@ def region_school_page(r, e, next_e):
     if provinces_mode(e):
         provs = provinces(e)
         chips = "".join(f'<li><a href="#{a}">{E(n)}</a></li>' for n, a, _, _ in provs)
-        body = B.section("provincias", "Provincias", f'<ul class="chips">{chips}</ul>')
+        body = B.section("provincias", "Provincias", f'<ul class="chips">{chips}</ul>', pdf_tools(slug))
         for n, a, c, p in provs:
             st = stage_table(p.get("stages") or [])
             # 8 provinces on one page: the key dates open, the month grid and the stages collapsed
@@ -299,7 +311,7 @@ def region_school_page(r, e, next_e):
     else:
         main_c = Course(e, slug, DATA["course"])
         ctx = ctx_line(main_c)
-        body = course_sections(main_c)
+        body = course_sections(main_c, tools=pdf_tools(slug))
         extra = extra_province_days(e)
         if extra:
             rows = "".join(f'<tr><th scope="row">{E(p["name"])}</th><td>'
@@ -404,7 +416,7 @@ def hub_page():
     ctx = (f'<p class="ctx">Infantil y Primaria · días sin clase con fines de semana · '
            f'<time datetime="{DATA["updated"]}">actualizado {B.dmy(DATA["updated"])}</time></p>')
     main = (f'<div class="hero wrap">{B.crumbs_html(crumbs)}<h1>{E(h1)}</h1>{ctx}</div>'
-            f'<div class="wrap body narrow"><section class="sec" id="comunidades">{table}{more}</section></div>')
+            f'<div class="wrap body narrow"><section class="sec" id="comunidades">{table}{more}</section>{B.ad("hub")}</div>')
     title = "Calendario escolar 2026-2027 en España por comunidad"
     desc = ("Calendario escolar 2026-2027 de las 19 comunidades: primer y último día de clase y vacaciones de Navidad "
             "y Semana Santa, según cada norma oficial.")
