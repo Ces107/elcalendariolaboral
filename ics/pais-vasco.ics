@@ -3,7 +3,7 @@ VERSION:2.0
 PRODID:-//elcalendariolaboral.es//Calendario laboral 2027//ES
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:Festivos 2027 · Euskal Herria
+X-WR-CALNAME:Festivos 2027 · País Vasco
 BEGIN:VEVENT
 UID:20270101-pais-vasco@elcalendariolaboral.es
 DTSTAMP:20261026T000000Z

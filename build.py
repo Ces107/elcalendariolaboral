@@ -255,32 +255,24 @@ def meta_html(n_hol, n_pts, n_lab):
 
 # ---------------------------------------------------------------- region page
 
-def seo_name(r):
-    """'Euskal Herria (País Vasco)' when the display name differs from the usual Spanish one."""
-    seo = r.get("seo") or r["name"]
-    return r["name"] if seo == r["name"] else f'{r["name"]} ({seo})'
-
 
 def region_page(data, r):
-    slug = r["slug"]
-    # Visible text uses r["name"]; title, description and JSON-LD carry the usual Spanish search name too.
-    name = seo_name(r)
+    slug, name = r["slug"], r["name"]
     hols = region_holidays(data, slug)
     pts = puentes(hols)
     n_hol = len(hols) + (1 if slug == "canarias" else 0)
     title = f"Calendario laboral 2027 {name}: festivos y puentes"
-    where = name if name != r["name"] else r["official"]
-    desc = (f"Los {n_hol} festivos de 2027 en {where}, con su día de la semana, y los {len(pts)} puentes del año. "
+    desc = (f"Los {n_hol} festivos de 2027 en {r['official']}, con su día de la semana, y los {len(pts)} puentes del año. "
             f"Según el BOE del 13 de octubre de 2026.")
     canon = f"{URL}{slug}/"
     events = [{"@type": "ListItem", "position": i + 1, "item": {
-        "@type": "Event", "name": f"{h['name']} ({name.replace(' (', ' / ').rstrip(')') if name != r['name'] else name})", "startDate": h["date"], "endDate": h["date"],
+        "@type": "Event", "name": f"{h['name']} ({name})", "startDate": h["date"], "endDate": h["date"],
         "eventStatus": "https://schema.org/EventScheduled",
         "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
         "location": {"@type": "Place", "name": r["official"], "address": {"@type": "PostalAddress", "addressRegion": r["official"], "addressCountry": "ES"}},
         "description": f"Festivo laboral 2027 en {r['official']}"}} for i, h in enumerate(hols)]
     ld = [
-        {"@context": "https://schema.org", "@type": "ItemList", "name": f"Festivos 2027 en {where}",
+        {"@context": "https://schema.org", "@type": "ItemList", "name": f"Festivos 2027 en {r['official']}",
          "numberOfItems": len(events), "itemListElement": events},
         {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Calendario laboral 2027", "item": URL},

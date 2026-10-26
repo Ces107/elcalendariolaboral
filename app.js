@@ -295,8 +295,7 @@
     if (push !== false) {
       try { history.replaceState(null, '', BASE + (S.region ? S.region + '/' : '')); } catch (e) { /* file:// */ }
     }
-    var rg = S.region && REG[slug], nm = rg ? rg.name + (rg.seo && rg.seo !== rg.name ? ' (' + rg.seo + ')' : '') : '';
-    doc.title = S.region ? 'Calendario laboral 2027 ' + nm + ': festivos y puentes' : 'Calendario laboral 2027: festivos y puentes por comunidad';
+    doc.title = S.region ? 'Calendario laboral 2027 ' + REG[slug].name + ': festivos y puentes' : 'Calendario laboral 2027: festivos y puentes por comunidad';
     render();
   }
 
