@@ -1275,11 +1275,17 @@
    "gl": "Non gardamos ningún dato teu en servidores. A túa comunidade, os teus festivos locais e as túas vacacións quedan no teu navegador ou no teu móbil, e podes borralos cando queiras.",
    "eu": "Ez dugu zure daturik gordetzen zerbitzarietan. Zure erkidegoa, zure tokiko jaiegunak eta zure oporrak zure nabigatzailean edo mugikorrean geratzen dira, eta nahi duzunean ezaba ditzakezu."
   },
-  "privacy_p2": {
-   "es": "No hay cuentas, ni cookies propias, ni analítica, ni publicidad. Si algún día añadimos alguna de estas cosas, lo pondremos aquí y te pediremos permiso antes.",
-   "ca": "No hi ha comptes, ni galetes pròpies, ni analítica, ni publicitat. Si algun dia hi afegim alguna d'aquestes coses, ho farem constar aquí i abans et demanarem permís.",
-   "gl": "Non hai contas, nin cookies propias, nin ferramentas de análise, nin publicidade. Se algún día engadimos algunha destas cousas, indicarémolo aquí e pedirémosche permiso antes.",
-   "eu": "Ez dago konturik, ez geure cookierik, ez analitikarik, ez publizitaterik. Egunen batean horietakoren bat gehitzen badugu, hemen jarriko dugu, eta aurretik baimena eskatuko dizugu."
+  "privacy_ads": {
+   "es": "No hay cuentas, ni cookies propias, ni analítica. La web muestra anuncios de Google AdSense. Google puede usar cookies o identificadores para servir y medir anuncios. En la UE, el EEE y el Reino Unido, un aviso de consentimiento de Google te pregunta antes de mostrar anuncios personalizados.",
+   "ca": "No hi ha comptes, ni galetes pròpies, ni analítica. El web mostra anuncis de Google AdSense. Google pot fer servir galetes o identificadors per oferir i mesurar anuncis. A la UE, l'EEE i el Regne Unit, un avís de consentiment de Google et pregunta abans de mostrar-te anuncis personalitzats.",
+   "gl": "Non hai contas, nin cookies propias, nin ferramentas de análise. A web amosa anuncios de Google AdSense. Google pode usar cookies ou identificadores para servir e medir anuncios. Na UE, no EEE e no Reino Unido, un aviso de consentimento de Google pregúntache antes de amosarche anuncios personalizados.",
+   "eu": "Ez dago konturik, ez geure cookierik, ez analitikarik. Webguneak Google AdSense-ren iragarkiak erakusten ditu. Googlek cookieak edo identifikatzaileak erabil ditzake iragarkiak eskaintzeko eta neurtzeko. EBn, EEEn eta Erresuma Batuan, Googleren baimen-ohar batek galdetu egingo dizu iragarki pertsonalizatuak erakutsi aurretik."
+  },
+  "privacy_links": {
+   "es": "Cómo usa Google los datos: <a href=\"https://policies.google.com/technologies/partner-sites\" rel=\"noopener\">policies.google.com</a>. Tus preferencias de anuncios: <a href=\"https://adssettings.google.com\" rel=\"noopener\">adssettings.google.com</a>.",
+   "ca": "Com fa servir Google les dades: <a href=\"https://policies.google.com/technologies/partner-sites?hl=ca\" rel=\"noopener\">policies.google.com</a>. Les teves preferències d'anuncis: <a href=\"https://adssettings.google.com/?hl=ca\" rel=\"noopener\">adssettings.google.com</a>.",
+   "gl": "Como usa Google os datos: <a href=\"https://policies.google.com/technologies/partner-sites?hl=gl\" rel=\"noopener\">policies.google.com</a>. As túas preferencias de anuncios: <a href=\"https://adssettings.google.com/?hl=gl\" rel=\"noopener\">adssettings.google.com</a>.",
+   "eu": "Googlek datuak nola erabiltzen dituen: <a href=\"https://policies.google.com/technologies/partner-sites?hl=eu\" rel=\"noopener\">policies.google.com</a>. Zure iragarki-hobespenak: <a href=\"https://adssettings.google.com/?hl=eu\" rel=\"noopener\">adssettings.google.com</a>."
   },
   "privacy_p3": {
    "es": "La tipografía se carga desde Google Fonts. «Añadir a Google Calendar» te lleva a Google, con su propia política de privacidad. El archivo .ics se crea en tu dispositivo.",
@@ -2360,6 +2366,16 @@
      "https://ca.wikipedia.org/wiki/Euskadi",
      "https://dogv.gva.es/datos/2025/07/07/pdf/2025_24690_va.pdf"
     ]
+   },
+   {
+    "key": "ui.privacy_ads",
+    "choice": "galetes; el web; avís de consentiment",
+    "why": "Replaces ui.privacy_p2, which said the site had no ads. 'Galeta' is the Optimot/TERMCAT term for cookie and the one the Generalitat uses on its own cookie policy; 'el web' (masculine) is the Optimot recommendation for a website. 'Oferir i mesurar anuncis' and 'anuncis personalitzats' follow Google's Catalan policy page. The links point to Google's pages with hl=ca.",
+    "sources": [
+     "https://aplicacions.llengua.gencat.cat/llc/AppJava/index.html?action=Principal&method=cerca_generica&input_cercar=galeta&tipusCerca=cerca.tot",
+     "https://tramits.gencat.cat/ca/ajuda/politica-de-galetes/",
+     "https://policies.google.com/technologies/partner-sites?hl=ca"
+    ]
    }
   ],
   "gl": [
@@ -2790,6 +2806,15 @@
      "https://gl.wikipedia.org/wiki/Navarra",
      "https://gl.wikipedia.org/wiki/Catalu%C3%B1a",
      "https://gl.wikipedia.org/wiki/Illas_Baleares"
+    ]
+   },
+   {
+    "key": "ui.privacy_ads",
+    "choice": "cookies; a web; aviso de consentimento",
+    "why": "Replaces ui.privacy_p2, which said the site had no ads. The Xunta's legal notice for its portal writes 'cookies' (not 'galletas'), the same word already used in this file. 'A web' (feminine) and 'amosar' follow Xunta usage. The links point to Google's pages with hl=gl.",
+    "sources": [
+     "https://xunta.gal/aviso-legal",
+     "https://policies.google.com/technologies/partner-sites?hl=gl"
     ]
    }
   ],
@@ -3343,6 +3368,15 @@
      "https://eu.wikipedia.org/wiki/Balearrak",
      "https://eu.wikipedia.org/wiki/Euskal_Autonomia_Erkidegoa"
     ]
+   },
+   {
+    "key": "ui.privacy_ads",
+    "choice": "cookieak; webgunea; baimen-oharra",
+    "why": "Replaces ui.privacy_p2, which said the site had no ads. euskadi.eus ('Cookie politika euskadi.eus-en') and Google's Basque policy page both write 'cookieak', declined like any noun (cookierik, cookieei). 'Googlek' keeps the spelling already used in ui.privacy_p3 (Google's own page writes 'Google-k'). EB = Europar Batasuna, EEE = Europako Esparru Ekonomikoa. The links point to Google's pages with hl=eu.",
+    "sources": [
+     "https://www.euskadi.eus/informazioa/-/cookie-politika-euskadieus/",
+     "https://policies.google.com/technologies/partner-sites?hl=eu"
+    ]
    }
   ]
  },
@@ -3404,7 +3438,9 @@
    "https://www.softcatala.org/guia-estil-de-softcatala/terminologia/",
    "https://www.ub.edu/ubterm/?p=58478",
    "https://www.uv.es/pas/nuevaWEB/gdh/2026%20Almanac_UV.pdf",
-   "https://www.vilaweb.cat/noticies/calendari-laboral-2026-catalunya-festius-ponts/"
+   "https://www.vilaweb.cat/noticies/calendari-laboral-2026-catalunya-festius-ponts/",
+   "https://tramits.gencat.cat/ca/ajuda/politica-de-galetes/",
+   "https://policies.google.com/technologies/partner-sites?hl=ca"
   ],
   "gl": [
    "https://www.xunta.gal/notas-de-prensa/-/nova/026293/xunta-galicia-aproba-calendario-laboral-para-2027-19-marzo-17-maio-como-festivos",
@@ -3447,7 +3483,8 @@
    "https://edu.xunta.gal/centros/iesxulianmagarinos/system/files/Calendario%20escolar%2024-25.pdf",
    "https://xunta.gal/aviso-legal",
    "https://raw.githubusercontent.com/unicode-org/cldr-json/main/cldr-json/cldr-dates-full/main/gl/ca-gregorian.json",
-   "https://github.com/mozilla-l10n/firefox-l10n/tree/main/gl"
+   "https://github.com/mozilla-l10n/firefox-l10n/tree/main/gl",
+   "https://policies.google.com/technologies/partner-sites?hl=gl"
   ],
   "eu": [
    "https://www.euskadi.eus/web01-bopv/eu/bopv2/datos/2025/04/2501782e.shtml",
@@ -3517,7 +3554,9 @@
    "https://www.euskadi.eus/guadalupeko-santutegia/hondarribia/done-jakue-bidea/web01-a2donjak/eu/",
    "https://www.euskadi.eus/contenidos/informacion/comision_ados_intro/eu_def/adjuntos/Euskera-circular-13.pdf",
    "https://raw.githubusercontent.com/mastodon/mastodon/main/app/javascript/mastodon/locales/eu.json",
-   "https://raw.githubusercontent.com/unicode-org/cldr-json/main/cldr-json/cldr-dates-full/main/eu/ca-gregorian.json"
+   "https://raw.githubusercontent.com/unicode-org/cldr-json/main/cldr-json/cldr-dates-full/main/eu/ca-gregorian.json",
+   "https://www.euskadi.eus/informazioa/-/cookie-politika-euskadieus/",
+   "https://policies.google.com/technologies/partner-sites?hl=eu"
   ]
  },
  "ca": {

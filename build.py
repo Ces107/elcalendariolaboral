@@ -114,7 +114,7 @@ ES_OF = {"pais-vasco": "del País Vasco", "comunitat-valenciana": "de la Comunid
 
 # Strings only Spanish has, aria-only labels without a translation in data/i18n.json. The ca/gl/eu pages keep the
 # Spanish text (or drop an aria-label) for these; the report lists them.
-NO_TR = ["menu", "pending", "pending_short", "unpublished", "privacy_ads", "privacy_links", "h_faq"]
+NO_TR = ["menu", "pending", "pending_short", "unpublished", "h_faq"]
 
 
 def _strip_n(s):
@@ -190,6 +190,7 @@ def strings(lang):
         "ics_calname": f"{hol_word} 2027 · {{label}}", "vac_event": U("vacation"),
         "title_privacy": f'{U("privacy")} · El Calendario Laboral', "desc_privacy": U("privacy_meta"),
         "privacy_p1": U("privacy_p1"), "privacy_p3": U("privacy_p3"),
+        "privacy_ads": U("privacy_ads"), "privacy_links": U("privacy_links"),
         "og_l1": site, "og_home": U("og_title"), "app_desc": U("manifest_description"),
     })
     t["_months"], t["_mon3"], t["_wd"], t["_wd3"] = M["full"], M["short"], W["full"], W["short"]
@@ -773,10 +774,9 @@ def app_attrs(r, city=None):
 def privacy_page(data):
     src = data["source"]
     link = f'<a href="{src["url"]}" rel="noopener">{src["id"]}</a>'
-    es_attr = ' lang="es"' if LANG != "es" else ""
     main = (f'<div class="wrap doc">{crumbs_html([(t("spain"), ""), (t("privacy"), "privacidad/")])}<h1>{t("privacy")}</h1>'
-            f'<p>{E(t("privacy_p1"))}</p><p{es_attr}>{E(ES["privacy_ads"])}</p><p>{E(t("privacy_p3"))}</p>'
-            f'<p{es_attr}>{ES["privacy_links"]}</p>'
+            f'<p>{E(t("privacy_p1"))}</p><p>{E(t("privacy_ads"))}</p><p>{E(t("privacy_p3"))}</p>'
+            f'<p>{t("privacy_links")}</p>'
             f'<p>{t("data_source").split(":")[0]}: {link}, {E(src["boe"])}. '
             f'<a href="mailto:cesar0407p@gmail.com">cesar0407p@gmail.com</a></p></div>')
     head = head_html(t("title_privacy"), t("desc_privacy"), "privacidad/", f"{SITE}{ASSETS}og/espana.png")
