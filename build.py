@@ -538,7 +538,8 @@ def head_html(title, desc, path, og_img, extra="", hreflang=True, langs=None):
     alts = "".join(f'<link rel="alternate" hreflang="{x}" href="{SITE}{lang_base(x)}{path}">' for x in PAGE_LANGS) if hreflang and len(PAGE_LANGS) > 1 else ""
     if len(PAGE_LANGS) > 1 and hreflang:
         alts += f'<link rel="alternate" hreflang="x-default" href="{SITE}{lang_base("es")}{path}">'
-    canon = f'<link rel="canonical" href="{canonical}">' if hreflang else '<meta name="robots" content="noindex">'
+    canon = (f'<link rel="canonical" href="{canonical}"><meta name="robots" content="max-image-preview:large,max-snippet:-1">'
+             if hreflang else '<meta name="robots" content="noindex">')
     return f"""<!doctype html>
 <html lang="{LANG}" data-base="{BASE}" data-assets="{ASSETS}">
 <head>
