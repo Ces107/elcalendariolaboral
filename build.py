@@ -195,7 +195,8 @@ def strings(lang):
     t["_months"], t["_mon3"], t["_wd"], t["_wd3"] = M["full"], M["short"], W["full"], W["short"]
     t["_mof"] = M["gen"] if lang == "eu" else M["of"]
     t["_wdh"] = [x.capitalize() for x in W["two"]]
-    t["_wd1"] = [x.capitalize() if len(x) > 1 else x for x in W["one"]]
+    # Basque one-letter days repeat (A A A O O L I), so phones get the two-letter set
+    t["_wd1"] = t["_wdh"] if lang == "eu" else [x.capitalize() if len(x) > 1 else x for x in W["one"]]
     return t
 
 
