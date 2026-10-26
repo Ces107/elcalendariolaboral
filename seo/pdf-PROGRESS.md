@@ -8,4 +8,4 @@
 - test_pdf.py green; existing checks green
 
 ## Next
-- seo/ads.md, Playwright 390/1440, push, curl live
+- (none) — seo/ads.md written; Playwright 390/1440 clean (region, city, hub, school); live curl checked
