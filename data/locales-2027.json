@@ -3407,7 +3407,7 @@
    "status": "unpublished",
    "holidays": null,
    "source": null,
-   "note": "No official 2027 agreement found on the Ayuntamiento site; the BOCM resolution of 2027 local holidays in the Comunidad de Madrid is not yet published (usually December)."
+   "note": "No official 2027 publication found. Checked: all published Junta de Gobierno Local agreement PDFs for July to September 2026 (October not yet posted), the convocatorias and extracts of the plenos of 24-09, 06-10, 22-10 and 26-10-2026, and the council news pages. None mention the 2027 local holidays. No press pointer found, and no BOCM resolution yet."
   },
   {
    "slug": "alcala-de-henares",
@@ -3418,7 +3418,7 @@
    "status": "unpublished",
    "holidays": null,
    "source": null,
-   "note": "No official 2027 agreement found on the Ayuntamiento site; the BOCM resolution of 2027 local holidays in the Comunidad de Madrid is not yet published (usually December)."
+   "note": "No official 2027 publication found. Council news posts since 09-2026 (searched for festivos, fiestas locales, 2027 and Junta de Gobierno, including the JGL news of 19-10, 21-10 and 26-10-2026) have nothing on 2027 local holidays. Press pointer only: Dream Alcalá (30-09-2026) says they will be Friday 6 August (Santos Niños) and Saturday 9 October (Bautismo de Cervantes), with no municipal approval cited."
   },
   {
    "slug": "fuenlabrada",
@@ -3481,7 +3481,7 @@
    "status": "unpublished",
    "holidays": null,
    "source": null,
-   "note": "No official 2027 agreement found on the Ayuntamiento site; the BOCM resolution of 2027 local holidays in the Comunidad de Madrid is not yet published (usually December). A UC3M course calendar lists 'Fiesta local Getafe provisional 6 y 17 may de 2027' (not an official municipal source)."
+   "note": "No official 2027 publication found. Checked getafe.es news (search and the 'festivos' tag; past announcements such as the 2022 holidays came out in November) and the posts since 09-2026 about the Junta de Gobierno and the pleno. Pointer only: a UC3M senior-course academic calendar for 2026-27 says 'Fiesta local Getafe provisional 6 y 17 may de 2027'; this is not an official council source."
   },
   {
    "slug": "marbella",
@@ -3503,7 +3503,7 @@
    "status": "unpublished",
    "holidays": null,
    "source": null,
-   "note": "No official 2027 agreement found on the Ayuntamiento site; the BOCM resolution of 2027 local holidays in the Comunidad de Madrid is not yet published (usually December)."
+   "note": "No official 2027 publication found. Checked the council site search and the published Junta de Gobierno Local minutes of 01-09, 15-09 and 29-09-2026 (October minutes not yet posted); none mention 2027 local holidays. No press pointer found, and no BOCM resolution yet."
   },
   {
    "slug": "torrejon-de-ardoz",
@@ -3577,7 +3577,202 @@
    "status": "unpublished",
    "holidays": null,
    "source": null,
-   "note": "No official 2027 agreement found on the Ayuntamiento site; the BOCM resolution of 2027 local holidays in the Comunidad de Madrid is not yet published (usually December)."
+   "note": "No official 2027 publication found. The site search on ayuntamientoparla.es finds nothing, and the sede's 'Calendario Laboral' document is still the 2026 one (locals 15 June and 14 September 2026). The JGL and pleno minutes lists on the sede load only through JavaScript and could not be read. No press pointer found."
+  },
+  {
+   "slug": "alcobendas",
+   "name": "Alcobendas",
+   "province": "Madrid",
+   "region": "madrid",
+   "capital": false,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "The council's official calendar page (alcobendas.org/es/calendario-laboral, read in a browser on 2026-10-26 because the site blocks scripted fetches) lists only 2026 and 2025 holidays, and a news search found no 2027 agreement. Press pointer: LaMiradaNorte (03-10-2026) gives 24 January (Virgen de la Paz) and 15 May (San Isidro), but cites no council act, and 24-01-2027 falls on a Sunday."
+  },
+  {
+   "slug": "las-rozas-de-madrid",
+   "name": "Las Rozas de Madrid",
+   "province": "Madrid",
+   "region": "madrid",
+   "capital": false,
+   "status": "ayuntamiento",
+   "holidays": [
+    {
+     "date": "2027-05-03",
+     "name": "La Retamosa",
+     "text": "En el Pleno de octubre se han aprobado también los festivos locales para el próximo año 2027, que serán el lunes 3 de mayo, en el que se celebrará la fiesta de La Retamosa, y el miércoles 29 de septiembre por San Miguel, patrón de la ciudad."
+    },
+    {
+     "date": "2027-09-29",
+     "name": "San Miguel",
+     "text": "En el Pleno de octubre se han aprobado también los festivos locales para el próximo año 2027, que serán el lunes 3 de mayo, en el que se celebrará la fiesta de La Retamosa, y el miércoles 29 de septiembre por San Miguel, patrón de la ciudad."
+    }
+   ],
+   "source": {
+    "title": "Ayuntamiento de Las Rozas de Madrid, news 'El Pleno aprueba los festivos locales de 2027, los días 3 de mayo y 29 de septiembre' (16-10-2026)",
+    "url": "https://www.lasrozas.es/node/12678",
+    "checked": "2026-10-26"
+   },
+   "note": "Approved unanimously by the ordinary Pleno of 15-10-2026 (item 6, 'Aprobación de Calendario Laboral Fiestas Locales 2027', expediente 32453/2026, per the council's video-acta portal sesiones-plenarias.lasrozas.es/es/mopleno/107/1097); official council news of 16-10-2026."
+  },
+  {
+   "slug": "san-sebastian-de-los-reyes",
+   "name": "San Sebastián de los Reyes",
+   "province": "Madrid",
+   "region": "madrid",
+   "capital": false,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "The official agenda of the ordinary Pleno of 15-10-2026 (item 14, 'propuesta para establecer los festivos locales de 2027') is published, but the agenda gives no dates, and the acta or certificate is not out yet (the 2026 certificate was posted on transparencia.ssreyes.org). Press pointers: PressNorte (16-10-2026) and Diario de Sanse (16-10-2026) report the Pleno approved 20 January (San Sebastián Mártir, a Wednesday) and 28 August (Cristo de los Remedios, a Saturday)."
+  },
+  {
+   "slug": "pozuelo-de-alarcon",
+   "name": "Pozuelo de Alarcón",
+   "province": "Madrid",
+   "region": "madrid",
+   "capital": false,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "The council's labour-calendar service (servicios.pozuelodealarcon.org, anio=2027) shows no 2027 data, and a council news search (pozuelodealarcon.org/oficina-de-prensa) shows no item on 2027 local holidays. No press pointer found; the 2026 local holidays were 16 July and 7 September."
+  },
+  {
+   "slug": "rivas-vaciamadrid",
+   "name": "Rivas-Vaciamadrid",
+   "province": "Madrid",
+   "region": "madrid",
+   "capital": false,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "No official 2027 publication found: rivasciudad.es news/search show nothing for 2027 and the 24-09-2026 ordinary pleno convocatoria has no local-holidays item. The next ordinary pleno is scheduled for 29-10-2026 (in 2022 the following year's holidays were approved in late October); no BOCM resolution yet."
+  },
+  {
+   "slug": "coslada",
+   "name": "Coslada",
+   "province": "Madrid",
+   "region": "madrid",
+   "capital": false,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "No official 2027 publication found: the coslada.es 'Calendario de Festivos' page lists only 2025 and 2026, and the convocatorias/acta of the 08-09-2026 and 13-10-2026 ordinary plenos have no local-holidays item. Coslada usually approves them in its November pleno (the 2025 dates were reported by Noticias para Municipios on 14-11-2024); no BOCM resolution yet."
+  },
+  {
+   "slug": "valdemoro",
+   "name": "Valdemoro",
+   "province": "Madrid",
+   "region": "madrid",
+   "capital": false,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "No official 2027 publication found: valdemoro.es/calendario-laboral still shows only the 2026 local holidays, the 24-09-2026 ordinary pleno agenda has no local-holidays item, and the next session listed (03-11-2026, extraordinary) only covers the electoral-table draw. No council news and no BOCM resolution yet."
+  },
+  {
+   "slug": "majadahonda",
+   "name": "Majadahonda",
+   "province": "Madrid",
+   "region": "madrid",
+   "capital": false,
+   "status": "ayuntamiento",
+   "holidays": [
+    {
+     "date": "2027-09-14",
+     "name": "Santísimo Cristo de los Remedios",
+     "text": "los días festivos serán el martes 14 de septiembre de 2027, con motivo de la celebración del día del Santísimo Cristo de los Remedios, y el jueves 25 de noviembre de 2027, día de Santa Catalina, patrona de Majadahonda."
+    },
+    {
+     "date": "2027-11-25",
+     "name": "Santa Catalina",
+     "text": "los días festivos serán el martes 14 de septiembre de 2027, con motivo de la celebración del día del Santísimo Cristo de los Remedios, y el jueves 25 de noviembre de 2027, día de Santa Catalina, patrona de Majadahonda."
+    }
+   ],
+   "source": {
+    "title": "Ayuntamiento de Majadahonda, news 'Majadahonda aprueba sus festivos locales para 2027' (24-09-2026)",
+    "url": "https://www.majadahonda.org/noticias/-/asset_publisher/1vDv8dGUJ8Ho/content/majadahonda-aprueba-sus-festivos-locales-para-2027-",
+    "checked": "2026-10-26"
+   },
+   "note": "Official council news: the Pleno approved the government proposal 'este jueves' (news dated Thursday 24-09-2026)."
+  },
+  {
+   "slug": "collado-villalba",
+   "name": "Collado Villalba",
+   "province": "Madrid",
+   "region": "madrid",
+   "capital": false,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "Not yet approved: the council's news of 26-10-2026 (colladovillalba.es/-/pleno-ordinario-12) lists item 3 'Aprobación, si procede, de la designación de fiestas laborales locales para el año 2027' for the ordinary pleno of Thursday 29-10-2026, without giving dates. Re-check after that session; no BOCM resolution yet."
+  },
+  {
+   "slug": "aranjuez",
+   "name": "Aranjuez",
+   "province": "Madrid",
+   "region": "madrid",
+   "capital": false,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "Not yet approved: the agenda of the pleno of 28-10-2026 (aranjuez.es/transparencia/plenos-municipales/plenos-municipales-ano-2026/pleno-municipal-20261028/) includes item 4 'Propuesta que presenta la Concejala Delegada de Fiestas sobre declaración de fiestas locales para el año 2027', without giving dates. The council usually publishes an 'Aprobados los días festivos para el año ...' news item right after the October pleno; no BOCM resolution yet."
+  },
+  {
+   "slug": "arganda-del-rey",
+   "name": "Arganda del Rey",
+   "province": "Madrid",
+   "region": "madrid",
+   "capital": false,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "No official 2027 publication found: searches on argandadelrey.es news show nothing about 2027 local holidays, the open-data dataset of local holidays only goes up to 2025, and the sede's JGL and pleno listings are not machine-readable (ayto-arganda.es is blocked by its firewall). No press pointer and no BOCM resolution yet."
+  },
+  {
+   "slug": "boadilla-del-monte",
+   "name": "Boadilla del Monte",
+   "province": "Madrid",
+   "region": "madrid",
+   "capital": false,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "No 2027 item on ayuntamientoboadilladelmonte.org. The 2026 holidays (1 June San Babilés, 5 October Virgen del Rosario) were announced in council news on 10-11-2025, so the 2027 news may follow in November. No press pointer found."
+  },
+  {
+   "slug": "pinto",
+   "name": "Pinto",
+   "province": "Madrid",
+   "region": "madrid",
+   "capital": false,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "No official 2027 publication found. Pinto sets its holidays in the ordinary October pleno: the 2026 ones were announced on 31-10-2025 (ayto-pinto.es/-/festivos-locales-pinto-2026). No 2027 equivalent is on the council news or search yet, and the October 2026 pleno appears not to have been held or reported. No press pointer found."
+  },
+  {
+   "slug": "colmenar-viejo",
+   "name": "Colmenar Viejo",
+   "province": "Madrid",
+   "region": "madrid",
+   "capital": false,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "Colmenar Viejo sets its holidays by Pleno (2026 item 54/25, 'Aprobación fechas fiestas locales para 2026'). The council's video-acta portal (colmenarviejo.seneca.tv) has no 2027 item: the last pleno is 24-09-2026, with points 58/26-65/26 and none on holidays. No press pointer found."
+  },
+  {
+   "slug": "tres-cantos",
+   "name": "Tres Cantos",
+   "province": "Madrid",
+   "region": "madrid",
+   "capital": false,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "Tres Cantos sets its holidays in the October Pleno (2025 item 061/2025, 'designación de las fiestas laborales locales... para el año 2026'). The council's video-acta portal (canaltv.trescantos.es) only goes up to the September 2026 pleno, which has no holidays item, and the October 2026 pleno is not posted yet. No press pointer found."
   },
   {
    "slug": "reus",
