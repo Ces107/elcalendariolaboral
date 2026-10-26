@@ -767,6 +767,84 @@
    "note": "Original publication BOP Zamora núm. 87 of 27-VII-2026 (R-202601859) lists the same dates for Zamora capital; BOP 88 republishes the whole annex with corrections."
   },
   {
+   "slug": "santa-marta-de-tormes",
+   "name": "Santa Marta de Tormes",
+   "province": "Salamanca",
+   "region": "castilla-y-leon",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-02-03",
+     "name": "Fiesta local",
+     "text": "SANTA MARTA DE TORMES 3 de febrero y 29 de julio"
+    },
+    {
+     "date": "2027-07-29",
+     "name": "Fiesta local",
+     "text": "SANTA MARTA DE TORMES 3 de febrero y 29 de julio"
+    }
+   ],
+   "source": {
+    "title": "Acuerdo de 1 de julio de 2026, de la Oficina Territorial de Trabajo de Salamanca, para la determinación de las fiestas locales, a efectos laborales, en los municipios de esta provincia para el año 2027 (BOP Salamanca núm. 129, 8-VII-2026)",
+    "url": "https://trabajoyprevencion.jcyl.es/web/jcyl/binarios/686/528/BOP-SA-20260708-001.pdf?blobheader=application%2Fpdf%3Bcharset%3DUTF-8&blobnocache=true",
+    "checked": "2026-10-26"
+   },
+   "note": "Copy of the BOP Salamanca page hosted by the Junta de Castilla y León. Annex gives dates only, no names."
+  },
+  {
+   "slug": "bejar",
+   "name": "Béjar",
+   "province": "Salamanca",
+   "region": "castilla-y-leon",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-09-07",
+     "name": "Fiesta local",
+     "text": "BÉJAR 7 de septiembre y 8 de septiembre"
+    },
+    {
+     "date": "2027-09-08",
+     "name": "Fiesta local",
+     "text": "BÉJAR 7 de septiembre y 8 de septiembre"
+    }
+   ],
+   "source": {
+    "title": "Acuerdo de 1 de julio de 2026, de la Oficina Territorial de Trabajo de Salamanca, para la determinación de las fiestas locales, a efectos laborales, en los municipios de esta provincia para el año 2027 (BOP Salamanca núm. 129, 8-VII-2026)",
+    "url": "https://trabajoyprevencion.jcyl.es/web/jcyl/binarios/686/528/BOP-SA-20260708-001.pdf?blobheader=application%2Fpdf%3Bcharset%3DUTF-8&blobnocache=true",
+    "checked": "2026-10-26"
+   },
+   "note": "Copy of the BOP Salamanca page hosted by the Junta de Castilla y León. Annex gives dates only, no names."
+  },
+  {
+   "slug": "ciudad-rodrigo",
+   "name": "Ciudad Rodrigo",
+   "province": "Salamanca",
+   "region": "castilla-y-leon",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-01-20",
+     "name": "Fiesta local",
+     "text": "CIUDAD RODRIGO 20 de enero y 8 de septiembre"
+    },
+    {
+     "date": "2027-09-08",
+     "name": "Fiesta local",
+     "text": "CIUDAD RODRIGO 20 de enero y 8 de septiembre"
+    }
+   ],
+   "source": {
+    "title": "Acuerdo de 1 de julio de 2026, de la Oficina Territorial de Trabajo de Salamanca, para la determinación de las fiestas locales, a efectos laborales, en los municipios de esta provincia para el año 2027 (BOP Salamanca núm. 129, 8-VII-2026)",
+    "url": "https://trabajoyprevencion.jcyl.es/web/jcyl/binarios/686/528/BOP-SA-20260708-001.pdf?blobheader=application%2Fpdf%3Bcharset%3DUTF-8&blobnocache=true",
+    "checked": "2026-10-26"
+   },
+   "note": "Copy of the BOP Salamanca page hosted by the Junta de Castilla y León. Annex gives dates only, no names."
+  },
+  {
    "slug": "barcelona",
    "name": "Barcelona",
    "province": "Barcelona",
@@ -887,9 +965,9 @@
      "text": "Lugo 09/02/2027 Martes de Entroido"
     },
     {
-     "date": "2027-10-18",
-     "name": "San Lucas",
-     "text": "18/10/2027 San Lucas"
+     "date": "2027-10-05",
+     "name": "San Froilán",
+     "text": "05/10/2027 San Froilán"
     }
    ],
    "source": {
@@ -897,7 +975,7 @@
     "url": "https://www.deputacionlugo.gal/sites/deputacionlugo.org/files/inline-files/26-09-2026.pdf",
     "checked": "2026-10-26"
    },
-   "note": "Signed in Lugo on 23/09/2026. The correction in BOP Lugo of 15/10/2026 only changes Pedrafita, not Lugo city. Note the second day is San Lucas (18 Oct), not San Froilán."
+   "note": "Signed in Lugo on 23/09/2026. The correction in BOP Lugo of 15/10/2026 only changes Pedrafita, not Lugo city. Corrected on 2026-10-26: the second day is San Froilán (5 October); plain text extraction of the PDF shifts the festivity column by one row and had given San Lucas (18 October), which is Mondoñedo's day. Read from word coordinates on Lugo's printed line."
   },
   {
    "slug": "ourense",
@@ -2402,6 +2480,188 @@
     "checked": "2026-10-26"
    },
    "note": "Signed PDF: https://boppo.depo.gal/web/boppo/detalle/-/boppo/2026/10/06/2026071521/an.bop.PONTEVEDRA.20261006.2026071521.pdf"
+  },
+  {
+   "slug": "monforte-de-lemos",
+   "name": "Monforte de Lemos",
+   "province": "Lugo",
+   "region": "galicia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-03-30",
+     "name": "Martes de Pascua",
+     "text": "Monforte de Lemos 30/03/2027 Martes de Pascua"
+    },
+    {
+     "date": "2027-06-14",
+     "name": "San Antón",
+     "text": "14/06/2027 San Antón"
+    }
+   ],
+   "source": {
+    "title": "Resolución sobre o calendario laboral do ano 2027 para a Provincia de Lugo, Dirección Territorial da Consellería de Emprego, Comercio e Emigración (BOP Lugo nº 221, 26/09/2026)",
+    "url": "https://www.deputacionlugo.gal/sites/deputacionlugo.org/files/inline-files/26-09-2026.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "The PDF table is laid out so that plain text extraction shifts the festivity column by one row; the pair was read from word coordinates on the same printed line."
+  },
+  {
+   "slug": "viveiro",
+   "name": "Viveiro",
+   "province": "Lugo",
+   "region": "galicia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-02-09",
+     "name": "Martes de Entroido",
+     "text": "Viveiro 09/02/2027 Martes de Entroido"
+    },
+    {
+     "date": "2027-08-16",
+     "name": "San Roque",
+     "text": "16/08/2027 San Roque"
+    }
+   ],
+   "source": {
+    "title": "Resolución sobre o calendario laboral do ano 2027 para a Provincia de Lugo, Dirección Territorial da Consellería de Emprego, Comercio e Emigración (BOP Lugo nº 221, 26/09/2026)",
+    "url": "https://www.deputacionlugo.gal/sites/deputacionlugo.org/files/inline-files/26-09-2026.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "The PDF table is laid out so that plain text extraction shifts the festivity column by one row; the pair was read from word coordinates on the same printed line."
+  },
+  {
+   "slug": "vilalba",
+   "name": "Vilalba",
+   "province": "Lugo",
+   "region": "galicia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-08-31",
+     "name": "San Ramón, día do patrón",
+     "text": "Día 31 de agosto de 2027 (martes).- San Ramón, día do patrón de Vilalba."
+    },
+    {
+     "date": "2027-09-01",
+     "name": "Santa María, día da patroa",
+     "text": "Día 1 de setembro de 2027 (mércores).- Santa María, día da patroa de Vilalba."
+    }
+   ],
+   "source": {
+    "title": "Resolución sobre o calendario laboral do ano 2027 para a Provincia de Lugo, Dirección Territorial da Consellería de Emprego, Comercio e Emigración (BOP Lugo nº 221, 26/09/2026)",
+    "url": "https://www.deputacionlugo.gal/sites/deputacionlugo.org/files/inline-files/26-09-2026.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "The PDF table is laid out so that plain text extraction shifts the festivity column by one row; the pair was read from word coordinates on the same printed line. The same BOP issue also carries the Concello de Vilalba's own notice with both dates (22/09/2026)."
+  },
+  {
+   "slug": "sarria",
+   "name": "Sarria",
+   "province": "Lugo",
+   "region": "galicia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-06-24",
+     "name": "San Xoán",
+     "text": "Sarria 24/06/2027 San Xoán"
+    },
+    {
+     "date": "2027-09-08",
+     "name": "Virxe dos Remedios",
+     "text": "08/09/2027 Virxe dos Remedios"
+    }
+   ],
+   "source": {
+    "title": "Resolución sobre o calendario laboral do ano 2027 para a Provincia de Lugo, Dirección Territorial da Consellería de Emprego, Comercio e Emigración (BOP Lugo nº 221, 26/09/2026)",
+    "url": "https://www.deputacionlugo.gal/sites/deputacionlugo.org/files/inline-files/26-09-2026.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "The PDF table is laid out so that plain text extraction shifts the festivity column by one row; the pair was read from word coordinates on the same printed line."
+  },
+  {
+   "slug": "o-carballino",
+   "name": "O Carballiño",
+   "province": "Ourense",
+   "region": "galicia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-02-09",
+     "name": "Martes de Entroido",
+     "text": "O CARBALLIÑO 9 de febreiro, Martes de Entroido."
+    },
+    {
+     "date": "2027-09-17",
+     "name": "San Cibrán",
+     "text": "17 de setembro, San Cibrán."
+    }
+   ],
+   "source": {
+    "title": "Calendario laboral 2027 da provincia de Ourense, Departamento Territorial da Consellería de Emprego, Comercio e Emigración (BOP Ourense nº 197, 14/10/2026, R. 2.320)",
+    "url": "https://bop.depourense.es/portalapi/api/edicto/descargar/pdf/352736/idioma/gl",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "verin",
+   "name": "Verín",
+   "province": "Ourense",
+   "region": "galicia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-02-10",
+     "name": "Mércores de Cinza",
+     "text": "VERÍN 10 de febreiro, Mércores de Cinza."
+    },
+    {
+     "date": "2027-09-08",
+     "name": "Nosa Señora dos Remedios",
+     "text": "8 de setembro, Nosa Señora dos Remedios."
+    }
+   ],
+   "source": {
+    "title": "Calendario laboral 2027 da provincia de Ourense, Departamento Territorial da Consellería de Emprego, Comercio e Emigración (BOP Ourense nº 197, 14/10/2026, R. 2.320)",
+    "url": "https://bop.depourense.es/portalapi/api/edicto/descargar/pdf/352736/idioma/gl",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "o-barco-de-valdeorras",
+   "name": "O Barco de Valdeorras",
+   "province": "Ourense",
+   "region": "galicia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-05-24",
+     "name": "Santa Rita",
+     "text": "O BARCO DE VALDEORRAS 24 de maio, Santa Rita."
+    },
+    {
+     "date": "2027-09-14",
+     "name": "Día do Cristo",
+     "text": "14 de setembro, día do Cristo."
+    }
+   ],
+   "source": {
+    "title": "Calendario laboral 2027 da provincia de Ourense, Departamento Territorial da Consellería de Emprego, Comercio e Emigración (BOP Ourense nº 197, 14/10/2026, R. 2.320)",
+    "url": "https://bop.depourense.es/portalapi/api/edicto/descargar/pdf/352736/idioma/gl",
+    "checked": "2026-10-26"
+   },
+   "note": ""
   },
   {
    "slug": "gijon",
