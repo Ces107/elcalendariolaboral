@@ -20,6 +20,7 @@ self.addEventListener('fetch', function (e) {
   if (req.method !== 'GET' || req.url.indexOf(SCOPE) !== 0) return;
   var nav = req.mode === 'navigate';
   var url = new URL(req.url);
+  if (/\/(ads|robots)\.txt$|\.xml$/.test(url.pathname)) return; // siempre de la red, nunca en caché
   var key = nav ? url.origin + url.pathname : req;
   var net = caches.open(VERSION).then(function (c) {
     return fetch(req).then(function (res) {

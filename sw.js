@@ -1,6 +1,6 @@
 /* Calendario laboral 2027 - service worker (generado por build.py desde sw.src.js) */
 'use strict';
-var VERSION = 'cl27-acb6d5608e';
+var VERSION = 'cl27-8aef304f16';
 var SHELL = ["/", "/app.css?v=09adf5ddbd", "/app.js?v=4e70adadbb", "/manifest.webmanifest", "/icons/icon-192.png", "/icons/icon-512.png"];
 var SCOPE = self.registration.scope;
 
@@ -20,6 +20,7 @@ self.addEventListener('fetch', function (e) {
   if (req.method !== 'GET' || req.url.indexOf(SCOPE) !== 0) return;
   var nav = req.mode === 'navigate';
   var url = new URL(req.url);
+  if (/\/(ads|robots)\.txt$|\.xml$/.test(url.pathname)) return; // siempre de la red, nunca en caché
   var key = nav ? url.origin + url.pathname : req;
   var net = caches.open(VERSION).then(function (c) {
     return fetch(req).then(function (res) {

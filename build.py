@@ -93,9 +93,11 @@ T = {"es": {
     "privacy_h1": "Privacidad",
     "privacy_body": [
         "No guardamos ningún dato tuyo en servidores. Tu comunidad, tus festivos locales y tus vacaciones se quedan en tu navegador o en tu móvil, y puedes borrarlos cuando quieras.",
-        "No hay cuentas, ni cookies propias, ni analítica, ni publicidad. Si algún día añadimos alguna de estas cosas, lo pondremos aquí y te pediremos permiso antes.",
+        "No hay cuentas, ni cookies propias, ni analítica.",
+        "La web muestra anuncios de Google AdSense. Google puede usar cookies o identificadores para servir y medir anuncios. En la UE, el EEE y el Reino Unido, un aviso de consentimiento de Google te pregunta antes de mostrar anuncios personalizados.",
         "La tipografía se carga desde Google Fonts. «Google Calendar» te lleva a Google, con su propia política de privacidad. El archivo .ics se crea en tu dispositivo.",
     ],
+    "privacy_ads": 'Cómo usa Google los datos: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">policies.google.com</a>. Tus preferencias de anuncios: <a href="https://adssettings.google.com" rel="noopener">adssettings.google.com</a>.',
     "privacy_src": "Festivos: {link}, {boe}. Contacto: {mail}.",
     # images and manifest
     "og_l1": "Calendario laboral 2027", "og_home": "Festivos y puentes", "og_home_sub": "19 comunidades · BOE 13-10-2026",
@@ -254,6 +256,8 @@ ICON_SHARE = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V3m0 0L
 ICON_PRINT = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 9V3.5h10V9M7 17H4.5V10a1 1 0 0 1 1-1h13a1 1 0 0 1 1 1v7H17M7 14h10v6.5H7z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>'
 ICON_THEME = ('<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" '
               'stroke-width="1.8" stroke-linejoin="round"/></svg>')
+ADSENSE = ('<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9914165605609514" '
+           'crossorigin="anonymous"></script>')
 HEAD_JS = ("<script>try{var t=localStorage.getItem('cl27.theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>")
 THEME_JS = ("<script>(function(){var b=document.getElementById('theme');if(!b)return;var r=document.documentElement,"
             "dk=function(){return r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches};"
@@ -379,6 +383,7 @@ def head_html(title, desc, path, og_img, extra=""):
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="{ASSETS}app.css?v={{CSSV}}">
 {HEAD_JS}
+{ADSENSE}
 {extra}
 </head>
 """
@@ -559,6 +564,7 @@ def privacy_page(data):
 <main class="wrap doc">
 <h1>{t("privacy_h1")}</h1>
 {paras}
+<p>{t("privacy_ads")}</p>
 <p>{t("privacy_src", link=link, boe=E(src["boe"]), mail=mail)}</p>
 </main>
 {footer_html(data)}
