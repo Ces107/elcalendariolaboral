@@ -17,8 +17,18 @@ from build import E, t, tn
 
 SCHEMA = "https://schema.org"
 PUBLISHED = ("boletin", "ayuntamiento")
-CITY_ZONE = {"las-palmas-de-gran-canaria": "gran-canaria", "telde": "gran-canaria",
-             "santa-cruz-de-tenerife": "tenerife", "san-cristobal-de-la-laguna": "tenerife"}
+ISLAND_CITIES = {  # Canarias: each city page adds its island's holiday (test_data.py checks every Canarias city is here)
+    "gran-canaria": ["las-palmas-de-gran-canaria", "telde", "santa-lucia-de-tirajana", "san-bartolome-de-tirajana", "arucas",
+                     "ingenio", "aguimes", "galdar", "mogan"],
+    "tenerife": ["santa-cruz-de-tenerife", "san-cristobal-de-la-laguna", "arona", "adeje", "granadilla-de-abona", "la-orotava",
+                 "los-realejos", "puerto-de-la-cruz", "tacoronte", "candelaria", "icod-de-los-vinos", "san-miguel-de-abona", "guimar"],
+    "lanzarote": ["arrecife", "teguise", "tias"],
+    "fuerteventura": ["puerto-del-rosario", "la-oliva"],
+    "la-palma": ["los-llanos-de-aridane", "santa-cruz-de-la-palma"],
+    "la-gomera": ["san-sebastian-de-la-gomera"],
+    "el-hierro": ["valverde"],
+}
+CITY_ZONE = {c: island for island, cs in ISLAND_CITIES.items() for c in cs}
 VARIANT = {"cataluna": "Catalunya", "pais-vasco": "Euskadi", "comunitat-valenciana": "Comunitat Valenciana, GVA",
            "baleares": "Illes Balears"}
 ES = B.LANG == "es"

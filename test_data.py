@@ -104,13 +104,26 @@ for p in pages:
 
 # páginas de ciudad: solo las publicadas, con sus 2 fechas oficiales
 loc = json.loads((ROOT / "data" / "locales-2027.json").read_text("utf-8"))
+from pages import CITY_ZONE  # noqa: E402
 for c in loc["cities"]:
     f = ROOT / c["region"] / c["slug"] / "index.html"
     published = c["status"] in ("boletin", "ayuntamiento") and c["holidays"]
     check(f.exists() == bool(published), f"{c['region']}/{c['slug']}: página {'falta' if published else 'sobra'}")
+    if c["region"] == "canarias":
+        check(c["slug"] in CITY_ZONE, f"{c['slug']}: falta su isla en pages.ISLAND_CITIES")
+    if c["holidays"]:
+        ds = [x["date"] for x in c["holidays"]]
+        check(ds == sorted(set(ds)), f"{c['slug']}: fechas locales desordenadas o repetidas")
+        check(all(dt.date.fromisoformat(x).weekday() != 6 for x in ds), f"{c['slug']}: un festivo local cae en domingo")
+        if c["region"] == "canarias" and c["slug"] in CITY_ZONE:
+            isla = next(o["add"]["date"] for o in data["zones"]["canarias"]["options"] if o["slug"] == CITY_ZONE[c["slug"]])
+            check(isla not in ds, f"{c['slug']}: un local coincide con la fiesta de su isla")
     if published:
         h = f.read_text("utf-8")
+        # exactly 2 per city; a parish or valley with its own day is explained in "note" (Siero/Lugones, Mieres/Turón)
         check(len(c["holidays"]) == 2, f"{c['slug']}: {len(c['holidays'])} festivos locales")
+        check(c["status"] == "ayuntamiento" or re.search(r"\b(BO[A-Z]*|DO[A-Z]*)\b", c["source"]["title"]),
+              f"{c['slug']}: estado boletin sin boletín en el título de la fuente")
         locs_attr = json.loads(__import__("html").unescape(re.search(r'data-locals="([^"]*)"', h).group(1)))
         check([x["date"] for x in locs_attr] == [x["date"] for x in c["holidays"]], f"{c['slug']}: fechas locales distintas de los datos")
         hl = re.search(r'<ol class="hl" id="hlist">(.*?)</ol>', h, re.S).group(1)

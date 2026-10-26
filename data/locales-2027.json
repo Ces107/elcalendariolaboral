@@ -360,6 +360,188 @@
    "note": "The BOP annex gives dates only; names from the Junta de Gobierno Local agreement of 15 July 2026 as reported by the press (San Ildefonso, 23 January, falls on a Saturday and is moved to San José; second day is Easter Monday)."
   },
   {
+   "slug": "talavera-de-la-reina",
+   "name": "Talavera de la Reina",
+   "province": "Toledo",
+   "region": "castilla-la-mancha",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": "Fiesta local",
+     "text": "TALAVERA DE LA REINA 15 de mayo 8 de septiembre"
+    },
+    {
+     "date": "2027-09-08",
+     "name": "Fiesta local",
+     "text": "TALAVERA DE LA REINA 15 de mayo 8 de septiembre"
+    }
+   ],
+   "source": {
+    "title": "Delegación Provincial de Toledo, Consejería de Economía, Empresas y Empleo. Normas laborales. Fiestas locales 2027 (BOP Toledo núm. 203, 22-X-2026, inserción 4840)",
+    "url": "https://bop.diputoledo.es/webEbop/DocGet?id=26104825%3B0&insert_number=4840&insert_year=2026",
+    "checked": "2026-10-26"
+   },
+   "note": "The BOP annex gives dates only, without festivity names. The PDF lays the table out in columns; the pair was read with table extraction, which gives Toledo city the same pair as its existing entry."
+  },
+  {
+   "slug": "illescas",
+   "name": "Illescas",
+   "province": "Toledo",
+   "region": "castilla-la-mancha",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-03-11",
+     "name": "Fiesta local",
+     "text": "ILLESCAS 11 de marzo 31 de agosto"
+    },
+    {
+     "date": "2027-08-31",
+     "name": "Fiesta local",
+     "text": "ILLESCAS 11 de marzo 31 de agosto"
+    }
+   ],
+   "source": {
+    "title": "Delegación Provincial de Toledo, Consejería de Economía, Empresas y Empleo. Normas laborales. Fiestas locales 2027 (BOP Toledo núm. 203, 22-X-2026, inserción 4840)",
+    "url": "https://bop.diputoledo.es/webEbop/DocGet?id=26104825%3B0&insert_number=4840&insert_year=2026",
+    "checked": "2026-10-26"
+   },
+   "note": "The BOP annex gives dates only, without festivity names. The PDF lays the table out in columns; the pair was read with table extraction, which gives Toledo city the same pair as its existing entry."
+  },
+  {
+   "slug": "sesena",
+   "name": "Seseña",
+   "province": "Toledo",
+   "region": "castilla-la-mancha",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-05-14",
+     "name": "Fiesta local",
+     "text": "SESEÑA 14 de mayo 16 de agosto"
+    },
+    {
+     "date": "2027-08-16",
+     "name": "Fiesta local",
+     "text": "SESEÑA 14 de mayo 16 de agosto"
+    }
+   ],
+   "source": {
+    "title": "Delegación Provincial de Toledo, Consejería de Economía, Empresas y Empleo. Normas laborales. Fiestas locales 2027 (BOP Toledo núm. 203, 22-X-2026, inserción 4840)",
+    "url": "https://bop.diputoledo.es/webEbop/DocGet?id=26104825%3B0&insert_number=4840&insert_year=2026",
+    "checked": "2026-10-26"
+   },
+   "note": "The BOP annex gives dates only, without festivity names. The PDF lays the table out in columns; the pair was read with table extraction, which gives Toledo city the same pair as its existing entry."
+  },
+  {
+   "slug": "puertollano",
+   "name": "Puertollano",
+   "province": "Ciudad Real",
+   "region": "castilla-la-mancha",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-05-13",
+     "name": "Fiesta local",
+     "text": "PUERTOLLANO 08/sep 13/may"
+    },
+    {
+     "date": "2027-09-08",
+     "name": "Fiesta local",
+     "text": "PUERTOLLANO 08/sep 13/may"
+    }
+   ],
+   "source": {
+    "title": "Delegación Provincial de Economía, Empresas y Empleo de Ciudad Real. Fiestas Locales para el año 2027 (BOP Ciudad Real núm. 202, 20-X-2026, anuncio 3389)",
+    "url": "https://se1.dipucr.es:4443/SIGEM_BuscadorDocsWeb/getDocument.do?entidad=005&doc=7828286",
+    "checked": "2026-10-26"
+   },
+   "note": "The BOP annex gives dates only, without festivity names."
+  },
+  {
+   "slug": "tomelloso",
+   "name": "Tomelloso",
+   "province": "Ciudad Real",
+   "region": "castilla-la-mancha",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-08-25",
+     "name": "Fiesta local",
+     "text": "TOMELLOSO 25/ago 31/ago"
+    },
+    {
+     "date": "2027-08-31",
+     "name": "Fiesta local",
+     "text": "TOMELLOSO 25/ago 31/ago"
+    }
+   ],
+   "source": {
+    "title": "Delegación Provincial de Economía, Empresas y Empleo de Ciudad Real. Fiestas Locales para el año 2027 (BOP Ciudad Real núm. 202, 20-X-2026, anuncio 3389)",
+    "url": "https://se1.dipucr.es:4443/SIGEM_BuscadorDocsWeb/getDocument.do?entidad=005&doc=7828286",
+    "checked": "2026-10-26"
+   },
+   "note": "The BOP annex gives dates only, without festivity names."
+  },
+  {
+   "slug": "alcazar-de-san-juan",
+   "name": "Alcázar de San Juan",
+   "province": "Ciudad Real",
+   "region": "castilla-la-mancha",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": "Fiesta local",
+     "text": "ALCAZAR DE SAN JUAN 15/may 08/sep"
+    },
+    {
+     "date": "2027-09-08",
+     "name": "Fiesta local",
+     "text": "ALCAZAR DE SAN JUAN 15/may 08/sep"
+    }
+   ],
+   "source": {
+    "title": "Delegación Provincial de Economía, Empresas y Empleo de Ciudad Real. Fiestas Locales para el año 2027 (BOP Ciudad Real núm. 202, 20-X-2026, anuncio 3389)",
+    "url": "https://se1.dipucr.es:4443/SIGEM_BuscadorDocsWeb/getDocument.do?entidad=005&doc=7828286",
+    "checked": "2026-10-26"
+   },
+   "note": "The BOP annex gives dates only, without festivity names."
+  },
+  {
+   "slug": "valdepenas",
+   "name": "Valdepeñas",
+   "province": "Ciudad Real",
+   "region": "castilla-la-mancha",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-08-02",
+     "name": "Fiesta local",
+     "text": "VALDEPEÑAS 02/ago 08/sep"
+    },
+    {
+     "date": "2027-09-08",
+     "name": "Fiesta local",
+     "text": "VALDEPEÑAS 02/ago 08/sep"
+    }
+   ],
+   "source": {
+    "title": "Delegación Provincial de Economía, Empresas y Empleo de Ciudad Real. Fiestas Locales para el año 2027 (BOP Ciudad Real núm. 202, 20-X-2026, anuncio 3389)",
+    "url": "https://se1.dipucr.es:4443/SIGEM_BuscadorDocsWeb/getDocument.do?entidad=005&doc=7828286",
+    "checked": "2026-10-26"
+   },
+   "note": "The BOP annex gives dates only, without festivity names."
+  },
+  {
    "slug": "avila",
    "name": "Ávila",
    "province": "Ávila",
@@ -915,6 +1097,708 @@
    "note": "31 July is the territory-wide day for all of Gipuzkoa; 20 January is the city's own day (the table lists the municipality as 'SAN SEBASTIÁN' with no festivity name; the name here is descriptive). The rectification of 05/10/2026 (BOG 20/10/2026, anuncio 6579) only changes Anoeta."
   },
   {
+   "slug": "barakaldo",
+   "name": "Barakaldo",
+   "province": "Bizkaia",
+   "region": "pais-vasco",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-07-16",
+     "name": "Nuestra Señora del Carmen",
+     "text": "Barakaldo – 16 de julio (Nuestra Señora del Carmen)"
+    },
+    {
+     "date": "2027-07-31",
+     "name": "San Ignacio de Loyola",
+     "text": "El 31 de Julio, San Ignacio de Loyola, en todo el Territorio Histórico de Bizkaia."
+    }
+   ],
+   "source": {
+    "title": "Resolución, de 12 de septiembre de 2026, de la delegada territorial de Trabajo y Seguridad Social de Bizkaia, por la que se establece el Calendario de Fiestas Locales del Territorio Histórico de Bizkaia para el año 2027 (BOB nº 181, 22/09/2026, BOB-2026a181-(III-145))",
+    "url": "https://www.bizkaia.eus/lehendakaritza/Bao_bob/2026/09/22/III-145_cas.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "31 July is the territory-wide day for all of Bizkaia; the other day is the municipality's own."
+  },
+  {
+   "slug": "getxo",
+   "name": "Getxo",
+   "province": "Bizkaia",
+   "region": "pais-vasco",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-07-31",
+     "name": "San Ignacio de Loyola",
+     "text": "El 31 de Julio, San Ignacio de Loyola, en todo el Territorio Histórico de Bizkaia."
+    },
+    {
+     "date": "2027-09-24",
+     "name": "Las Mercedes",
+     "text": "Getxo – 24 de septiembre (Las Mercedes)"
+    }
+   ],
+   "source": {
+    "title": "Resolución, de 12 de septiembre de 2026, de la delegada territorial de Trabajo y Seguridad Social de Bizkaia, por la que se establece el Calendario de Fiestas Locales del Territorio Histórico de Bizkaia para el año 2027 (BOB nº 181, 22/09/2026, BOB-2026a181-(III-145))",
+    "url": "https://www.bizkaia.eus/lehendakaritza/Bao_bob/2026/09/22/III-145_cas.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "31 July is the territory-wide day for all of Bizkaia; the other day is the municipality's own."
+  },
+  {
+   "slug": "portugalete",
+   "name": "Portugalete",
+   "province": "Bizkaia",
+   "region": "pais-vasco",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-07-31",
+     "name": "San Ignacio de Loyola",
+     "text": "El 31 de Julio, San Ignacio de Loyola, en todo el Territorio Histórico de Bizkaia."
+    },
+    {
+     "date": "2027-08-16",
+     "name": "San Roque",
+     "text": "Portugalete – 16 de agosto (San Roque)"
+    }
+   ],
+   "source": {
+    "title": "Resolución, de 12 de septiembre de 2026, de la delegada territorial de Trabajo y Seguridad Social de Bizkaia, por la que se establece el Calendario de Fiestas Locales del Territorio Histórico de Bizkaia para el año 2027 (BOB nº 181, 22/09/2026, BOB-2026a181-(III-145))",
+    "url": "https://www.bizkaia.eus/lehendakaritza/Bao_bob/2026/09/22/III-145_cas.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "31 July is the territory-wide day for all of Bizkaia; the other day is the municipality's own."
+  },
+  {
+   "slug": "santurtzi",
+   "name": "Santurtzi",
+   "province": "Bizkaia",
+   "region": "pais-vasco",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-07-16",
+     "name": "Virgen del Carmen",
+     "text": "Santurtzi – 16 de julio (Virgen del Carmen)"
+    },
+    {
+     "date": "2027-07-31",
+     "name": "San Ignacio de Loyola",
+     "text": "El 31 de Julio, San Ignacio de Loyola, en todo el Territorio Histórico de Bizkaia."
+    }
+   ],
+   "source": {
+    "title": "Resolución, de 12 de septiembre de 2026, de la delegada territorial de Trabajo y Seguridad Social de Bizkaia, por la que se establece el Calendario de Fiestas Locales del Territorio Histórico de Bizkaia para el año 2027 (BOB nº 181, 22/09/2026, BOB-2026a181-(III-145))",
+    "url": "https://www.bizkaia.eus/lehendakaritza/Bao_bob/2026/09/22/III-145_cas.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "31 July is the territory-wide day for all of Bizkaia; the other day is the municipality's own."
+  },
+  {
+   "slug": "basauri",
+   "name": "Basauri",
+   "province": "Bizkaia",
+   "region": "pais-vasco",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-07-31",
+     "name": "San Ignacio de Loyola",
+     "text": "El 31 de Julio, San Ignacio de Loyola, en todo el Territorio Histórico de Bizkaia."
+    },
+    {
+     "date": "2027-10-13",
+     "name": "San Fausto",
+     "text": "Basauri – 13 de octubre (San Fausto)"
+    }
+   ],
+   "source": {
+    "title": "Resolución, de 12 de septiembre de 2026, de la delegada territorial de Trabajo y Seguridad Social de Bizkaia, por la que se establece el Calendario de Fiestas Locales del Territorio Histórico de Bizkaia para el año 2027 (BOB nº 181, 22/09/2026, BOB-2026a181-(III-145))",
+    "url": "https://www.bizkaia.eus/lehendakaritza/Bao_bob/2026/09/22/III-145_cas.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "31 July is the territory-wide day for all of Bizkaia; the other day is the municipality's own."
+  },
+  {
+   "slug": "leioa",
+   "name": "Leioa",
+   "province": "Bizkaia",
+   "region": "pais-vasco",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-06-24",
+     "name": "San Juan",
+     "text": "Leioa – 24 de junio (San Juan)"
+    },
+    {
+     "date": "2027-07-31",
+     "name": "San Ignacio de Loyola",
+     "text": "El 31 de Julio, San Ignacio de Loyola, en todo el Territorio Histórico de Bizkaia."
+    }
+   ],
+   "source": {
+    "title": "Resolución, de 12 de septiembre de 2026, de la delegada territorial de Trabajo y Seguridad Social de Bizkaia, por la que se establece el Calendario de Fiestas Locales del Territorio Histórico de Bizkaia para el año 2027 (BOB nº 181, 22/09/2026, BOB-2026a181-(III-145))",
+    "url": "https://www.bizkaia.eus/lehendakaritza/Bao_bob/2026/09/22/III-145_cas.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "31 July is the territory-wide day for all of Bizkaia; the other day is the municipality's own."
+  },
+  {
+   "slug": "sestao",
+   "name": "Sestao",
+   "province": "Bizkaia",
+   "region": "pais-vasco",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-06-29",
+     "name": "San Pedro Apóstol",
+     "text": "Sestao – 29 de junio (San Pedro Apóstol)"
+    },
+    {
+     "date": "2027-07-31",
+     "name": "San Ignacio de Loyola",
+     "text": "El 31 de Julio, San Ignacio de Loyola, en todo el Territorio Histórico de Bizkaia."
+    }
+   ],
+   "source": {
+    "title": "Resolución, de 12 de septiembre de 2026, de la delegada territorial de Trabajo y Seguridad Social de Bizkaia, por la que se establece el Calendario de Fiestas Locales del Territorio Histórico de Bizkaia para el año 2027 (BOB nº 181, 22/09/2026, BOB-2026a181-(III-145))",
+    "url": "https://www.bizkaia.eus/lehendakaritza/Bao_bob/2026/09/22/III-145_cas.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "31 July is the territory-wide day for all of Bizkaia; the other day is the municipality's own."
+  },
+  {
+   "slug": "galdakao",
+   "name": "Galdakao",
+   "province": "Bizkaia",
+   "region": "pais-vasco",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-07-31",
+     "name": "San Ignacio de Loyola",
+     "text": "El 31 de Julio, San Ignacio de Loyola, en todo el Territorio Histórico de Bizkaia."
+    },
+    {
+     "date": "2027-09-14",
+     "name": "Exaltación de la Santa Cruz",
+     "text": "Galdakao – 14 de septiembre (Exaltación de la Santa Cruz)"
+    }
+   ],
+   "source": {
+    "title": "Resolución, de 12 de septiembre de 2026, de la delegada territorial de Trabajo y Seguridad Social de Bizkaia, por la que se establece el Calendario de Fiestas Locales del Territorio Histórico de Bizkaia para el año 2027 (BOB nº 181, 22/09/2026, BOB-2026a181-(III-145))",
+    "url": "https://www.bizkaia.eus/lehendakaritza/Bao_bob/2026/09/22/III-145_cas.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "31 July is the territory-wide day for all of Bizkaia; the other day is the municipality's own."
+  },
+  {
+   "slug": "durango",
+   "name": "Durango",
+   "province": "Bizkaia",
+   "region": "pais-vasco",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-07-31",
+     "name": "San Ignacio de Loyola",
+     "text": "El 31 de Julio, San Ignacio de Loyola, en todo el Territorio Histórico de Bizkaia."
+    },
+    {
+     "date": "2027-10-13",
+     "name": "San Fausto",
+     "text": "Durango – 13 de octubre (San Fausto)"
+    }
+   ],
+   "source": {
+    "title": "Resolución, de 12 de septiembre de 2026, de la delegada territorial de Trabajo y Seguridad Social de Bizkaia, por la que se establece el Calendario de Fiestas Locales del Territorio Histórico de Bizkaia para el año 2027 (BOB nº 181, 22/09/2026, BOB-2026a181-(III-145))",
+    "url": "https://www.bizkaia.eus/lehendakaritza/Bao_bob/2026/09/22/III-145_cas.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "31 July is the territory-wide day for all of Bizkaia; the other day is the municipality's own."
+  },
+  {
+   "slug": "erandio",
+   "name": "Erandio",
+   "province": "Bizkaia",
+   "region": "pais-vasco",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-07-31",
+     "name": "San Ignacio de Loyola",
+     "text": "El 31 de Julio, San Ignacio de Loyola, en todo el Territorio Histórico de Bizkaia."
+    },
+    {
+     "date": "2027-08-10",
+     "name": "San Lorenzo",
+     "text": "Erandio – 10 de agosto (San Lorenzo)"
+    }
+   ],
+   "source": {
+    "title": "Resolución, de 12 de septiembre de 2026, de la delegada territorial de Trabajo y Seguridad Social de Bizkaia, por la que se establece el Calendario de Fiestas Locales del Territorio Histórico de Bizkaia para el año 2027 (BOB nº 181, 22/09/2026, BOB-2026a181-(III-145))",
+    "url": "https://www.bizkaia.eus/lehendakaritza/Bao_bob/2026/09/22/III-145_cas.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "31 July is the territory-wide day for all of Bizkaia; the other day is the municipality's own."
+  },
+  {
+   "slug": "amorebieta-etxano",
+   "name": "Amorebieta-Etxano",
+   "province": "Bizkaia",
+   "region": "pais-vasco",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-07-16",
+     "name": "Ntra. Sra. del Carmen",
+     "text": "Amorebieta-Etxano – 16 de julio (Ntra. Sra. del Carmen)"
+    },
+    {
+     "date": "2027-07-31",
+     "name": "San Ignacio de Loyola",
+     "text": "El 31 de Julio, San Ignacio de Loyola, en todo el Territorio Histórico de Bizkaia."
+    }
+   ],
+   "source": {
+    "title": "Resolución, de 12 de septiembre de 2026, de la delegada territorial de Trabajo y Seguridad Social de Bizkaia, por la que se establece el Calendario de Fiestas Locales del Territorio Histórico de Bizkaia para el año 2027 (BOB nº 181, 22/09/2026, BOB-2026a181-(III-145))",
+    "url": "https://www.bizkaia.eus/lehendakaritza/Bao_bob/2026/09/22/III-145_cas.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "31 July is the territory-wide day for all of Bizkaia; the other day is the municipality's own."
+  },
+  {
+   "slug": "bermeo",
+   "name": "Bermeo",
+   "province": "Bizkaia",
+   "region": "pais-vasco",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-07-31",
+     "name": "San Ignacio de Loyola",
+     "text": "El 31 de Julio, San Ignacio de Loyola, en todo el Territorio Histórico de Bizkaia."
+    },
+    {
+     "date": "2027-09-08",
+     "name": "Andra Mari",
+     "text": "Bermeo – 8 de septiembre (Andra Mari)"
+    }
+   ],
+   "source": {
+    "title": "Resolución, de 12 de septiembre de 2026, de la delegada territorial de Trabajo y Seguridad Social de Bizkaia, por la que se establece el Calendario de Fiestas Locales del Territorio Histórico de Bizkaia para el año 2027 (BOB nº 181, 22/09/2026, BOB-2026a181-(III-145))",
+    "url": "https://www.bizkaia.eus/lehendakaritza/Bao_bob/2026/09/22/III-145_cas.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "31 July is the territory-wide day for all of Bizkaia; the other day is the municipality's own."
+  },
+  {
+   "slug": "gernika-lumo",
+   "name": "Gernika-Lumo",
+   "province": "Bizkaia",
+   "region": "pais-vasco",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-07-31",
+     "name": "San Ignacio de Loyola",
+     "text": "El 31 de Julio, San Ignacio de Loyola, en todo el Territorio Histórico de Bizkaia."
+    },
+    {
+     "date": "2027-08-16",
+     "name": "San Roque",
+     "text": "Gernika-Lumo – 16 de agosto (San Roque)"
+    }
+   ],
+   "source": {
+    "title": "Resolución, de 12 de septiembre de 2026, de la delegada territorial de Trabajo y Seguridad Social de Bizkaia, por la que se establece el Calendario de Fiestas Locales del Territorio Histórico de Bizkaia para el año 2027 (BOB nº 181, 22/09/2026, BOB-2026a181-(III-145))",
+    "url": "https://www.bizkaia.eus/lehendakaritza/Bao_bob/2026/09/22/III-145_cas.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "31 July is the territory-wide day for all of Bizkaia; the other day is the municipality's own."
+  },
+  {
+   "slug": "irun",
+   "name": "Irun",
+   "province": "Gipuzkoa",
+   "region": "pais-vasco",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-06-30",
+     "name": "Fiesta local",
+     "text": "IRUN 30 de junio"
+    },
+    {
+     "date": "2027-07-31",
+     "name": "San Ignacio de Loyola",
+     "text": "31 de julio, San Ignacio de Loyola, en todo el Territorio Histórico de Gipuzkoa."
+    }
+   ],
+   "source": {
+    "title": "Resolución de 21 de septiembre de 2026 del delegado territorial de Trabajo y Seguridad Social de Gipuzkoa, por la que se aprueba el calendario de las fiestas locales de Gipuzkoa para el año 2027 (BOG nº 187, 01/10/2026, anuncio 6250)",
+    "url": "https://egoitza.gipuzkoa.eus/gao-bog/castell/bog/2026/10/01/c2606250.htm",
+    "checked": "2026-10-26"
+   },
+   "note": "31 July is the territory-wide day for all of Gipuzkoa; the other day is the municipality's own. The rectification of 05/10/2026 (BOG 20/10/2026, anuncio 6579) only changes Anoeta. The table gives no festivity name for Irun's day (30 June is the San Marcial Alarde)."
+  },
+  {
+   "slug": "eibar",
+   "name": "Eibar",
+   "province": "Gipuzkoa",
+   "region": "pais-vasco",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-06-24",
+     "name": "San Juan",
+     "text": "EIBAR 24 de junio San Juan"
+    },
+    {
+     "date": "2027-07-31",
+     "name": "San Ignacio de Loyola",
+     "text": "31 de julio, San Ignacio de Loyola, en todo el Territorio Histórico de Gipuzkoa."
+    }
+   ],
+   "source": {
+    "title": "Resolución de 21 de septiembre de 2026 del delegado territorial de Trabajo y Seguridad Social de Gipuzkoa, por la que se aprueba el calendario de las fiestas locales de Gipuzkoa para el año 2027 (BOG nº 187, 01/10/2026, anuncio 6250)",
+    "url": "https://egoitza.gipuzkoa.eus/gao-bog/castell/bog/2026/10/01/c2606250.htm",
+    "checked": "2026-10-26"
+   },
+   "note": "31 July is the territory-wide day for all of Gipuzkoa; the other day is the municipality's own. The rectification of 05/10/2026 (BOG 20/10/2026, anuncio 6579) only changes Anoeta."
+  },
+  {
+   "slug": "errenteria",
+   "name": "Errenteria",
+   "province": "Gipuzkoa",
+   "region": "pais-vasco",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-07-22",
+     "name": "Día de la Madalena",
+     "text": "ERRENTERIA 22 de julio Día de la Madalena"
+    },
+    {
+     "date": "2027-07-31",
+     "name": "San Ignacio de Loyola",
+     "text": "31 de julio, San Ignacio de Loyola, en todo el Territorio Histórico de Gipuzkoa."
+    }
+   ],
+   "source": {
+    "title": "Resolución de 21 de septiembre de 2026 del delegado territorial de Trabajo y Seguridad Social de Gipuzkoa, por la que se aprueba el calendario de las fiestas locales de Gipuzkoa para el año 2027 (BOG nº 187, 01/10/2026, anuncio 6250)",
+    "url": "https://egoitza.gipuzkoa.eus/gao-bog/castell/bog/2026/10/01/c2606250.htm",
+    "checked": "2026-10-26"
+   },
+   "note": "31 July is the territory-wide day for all of Gipuzkoa; the other day is the municipality's own. The rectification of 05/10/2026 (BOG 20/10/2026, anuncio 6579) only changes Anoeta."
+  },
+  {
+   "slug": "zarautz",
+   "name": "Zarautz",
+   "province": "Gipuzkoa",
+   "region": "pais-vasco",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-06-26",
+     "name": "San Pelayo",
+     "text": "ZARAUTZ 26 de junio San Pelayo"
+    },
+    {
+     "date": "2027-07-31",
+     "name": "San Ignacio de Loyola",
+     "text": "31 de julio, San Ignacio de Loyola, en todo el Territorio Histórico de Gipuzkoa."
+    }
+   ],
+   "source": {
+    "title": "Resolución de 21 de septiembre de 2026 del delegado territorial de Trabajo y Seguridad Social de Gipuzkoa, por la que se aprueba el calendario de las fiestas locales de Gipuzkoa para el año 2027 (BOG nº 187, 01/10/2026, anuncio 6250)",
+    "url": "https://egoitza.gipuzkoa.eus/gao-bog/castell/bog/2026/10/01/c2606250.htm",
+    "checked": "2026-10-26"
+   },
+   "note": "31 July is the territory-wide day for all of Gipuzkoa; the other day is the municipality's own. The rectification of 05/10/2026 (BOG 20/10/2026, anuncio 6579) only changes Anoeta."
+  },
+  {
+   "slug": "arrasate-mondragon",
+   "name": "Arrasate/Mondragón",
+   "province": "Gipuzkoa",
+   "region": "pais-vasco",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-06-24",
+     "name": "S. Juan Bautista",
+     "text": "MONDRAGON 24 de junio S. Juan Bautista"
+    },
+    {
+     "date": "2027-07-31",
+     "name": "San Ignacio de Loyola",
+     "text": "31 de julio, San Ignacio de Loyola, en todo el Territorio Histórico de Gipuzkoa."
+    }
+   ],
+   "source": {
+    "title": "Resolución de 21 de septiembre de 2026 del delegado territorial de Trabajo y Seguridad Social de Gipuzkoa, por la que se aprueba el calendario de las fiestas locales de Gipuzkoa para el año 2027 (BOG nº 187, 01/10/2026, anuncio 6250)",
+    "url": "https://egoitza.gipuzkoa.eus/gao-bog/castell/bog/2026/10/01/c2606250.htm",
+    "checked": "2026-10-26"
+   },
+   "note": "31 July is the territory-wide day for all of Gipuzkoa; the other day is the municipality's own. The rectification of 05/10/2026 (BOG 20/10/2026, anuncio 6579) only changes Anoeta."
+  },
+  {
+   "slug": "hernani",
+   "name": "Hernani",
+   "province": "Gipuzkoa",
+   "region": "pais-vasco",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-06-24",
+     "name": "San Juan",
+     "text": "HERNANI 24 de junio San Juan"
+    },
+    {
+     "date": "2027-07-31",
+     "name": "San Ignacio de Loyola",
+     "text": "31 de julio, San Ignacio de Loyola, en todo el Territorio Histórico de Gipuzkoa."
+    }
+   ],
+   "source": {
+    "title": "Resolución de 21 de septiembre de 2026 del delegado territorial de Trabajo y Seguridad Social de Gipuzkoa, por la que se aprueba el calendario de las fiestas locales de Gipuzkoa para el año 2027 (BOG nº 187, 01/10/2026, anuncio 6250)",
+    "url": "https://egoitza.gipuzkoa.eus/gao-bog/castell/bog/2026/10/01/c2606250.htm",
+    "checked": "2026-10-26"
+   },
+   "note": "31 July is the territory-wide day for all of Gipuzkoa; the other day is the municipality's own. The rectification of 05/10/2026 (BOG 20/10/2026, anuncio 6579) only changes Anoeta."
+  },
+  {
+   "slug": "tolosa",
+   "name": "Tolosa",
+   "province": "Gipuzkoa",
+   "region": "pais-vasco",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-06-24",
+     "name": "Sn. Juan",
+     "text": "TOLOSA 24 de junio Sn. Juan"
+    },
+    {
+     "date": "2027-07-31",
+     "name": "San Ignacio de Loyola",
+     "text": "31 de julio, San Ignacio de Loyola, en todo el Territorio Histórico de Gipuzkoa."
+    }
+   ],
+   "source": {
+    "title": "Resolución de 21 de septiembre de 2026 del delegado territorial de Trabajo y Seguridad Social de Gipuzkoa, por la que se aprueba el calendario de las fiestas locales de Gipuzkoa para el año 2027 (BOG nº 187, 01/10/2026, anuncio 6250)",
+    "url": "https://egoitza.gipuzkoa.eus/gao-bog/castell/bog/2026/10/01/c2606250.htm",
+    "checked": "2026-10-26"
+   },
+   "note": "31 July is the territory-wide day for all of Gipuzkoa; the other day is the municipality's own. The rectification of 05/10/2026 (BOG 20/10/2026, anuncio 6579) only changes Anoeta."
+  },
+  {
+   "slug": "lasarte-oria",
+   "name": "Lasarte-Oria",
+   "province": "Gipuzkoa",
+   "region": "pais-vasco",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-06-29",
+     "name": "San Pedro",
+     "text": "LASARTE-ORIA 29 de junio San Pedro"
+    },
+    {
+     "date": "2027-07-31",
+     "name": "San Ignacio de Loyola",
+     "text": "31 de julio, San Ignacio de Loyola, en todo el Territorio Histórico de Gipuzkoa."
+    }
+   ],
+   "source": {
+    "title": "Resolución de 21 de septiembre de 2026 del delegado territorial de Trabajo y Seguridad Social de Gipuzkoa, por la que se aprueba el calendario de las fiestas locales de Gipuzkoa para el año 2027 (BOG nº 187, 01/10/2026, anuncio 6250)",
+    "url": "https://egoitza.gipuzkoa.eus/gao-bog/castell/bog/2026/10/01/c2606250.htm",
+    "checked": "2026-10-26"
+   },
+   "note": "31 July is the territory-wide day for all of Gipuzkoa; the other day is the municipality's own. The rectification of 05/10/2026 (BOG 20/10/2026, anuncio 6579) only changes Anoeta."
+  },
+  {
+   "slug": "hondarribia",
+   "name": "Hondarribia",
+   "province": "Gipuzkoa",
+   "region": "pais-vasco",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-07-31",
+     "name": "San Ignacio de Loyola",
+     "text": "31 de julio, San Ignacio de Loyola, en todo el Territorio Histórico de Gipuzkoa."
+    },
+    {
+     "date": "2027-09-08",
+     "name": "N.ª Sra. de Guadalupe",
+     "text": "HONDARRIBIA 8 de septiembre N.ª Sra. de Guadalupe"
+    }
+   ],
+   "source": {
+    "title": "Resolución de 21 de septiembre de 2026 del delegado territorial de Trabajo y Seguridad Social de Gipuzkoa, por la que se aprueba el calendario de las fiestas locales de Gipuzkoa para el año 2027 (BOG nº 187, 01/10/2026, anuncio 6250)",
+    "url": "https://egoitza.gipuzkoa.eus/gao-bog/castell/bog/2026/10/01/c2606250.htm",
+    "checked": "2026-10-26"
+   },
+   "note": "31 July is the territory-wide day for all of Gipuzkoa; the other day is the municipality's own. The rectification of 05/10/2026 (BOG 20/10/2026, anuncio 6579) only changes Anoeta."
+  },
+  {
+   "slug": "azpeitia",
+   "name": "Azpeitia",
+   "province": "Gipuzkoa",
+   "region": "pais-vasco",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-01-20",
+     "name": "San Sebastián",
+     "text": "AZPEITIA 20 de enero San Sebastián"
+    },
+    {
+     "date": "2027-07-31",
+     "name": "San Ignacio de Loyola",
+     "text": "31 de julio, San Ignacio de Loyola, en todo el Territorio Histórico de Gipuzkoa."
+    }
+   ],
+   "source": {
+    "title": "Resolución de 21 de septiembre de 2026 del delegado territorial de Trabajo y Seguridad Social de Gipuzkoa, por la que se aprueba el calendario de las fiestas locales de Gipuzkoa para el año 2027 (BOG nº 187, 01/10/2026, anuncio 6250)",
+    "url": "https://egoitza.gipuzkoa.eus/gao-bog/castell/bog/2026/10/01/c2606250.htm",
+    "checked": "2026-10-26"
+   },
+   "note": "31 July is the territory-wide day for all of Gipuzkoa; the other day is the municipality's own. The rectification of 05/10/2026 (BOG 20/10/2026, anuncio 6579) only changes Anoeta."
+  },
+  {
+   "slug": "bergara",
+   "name": "Bergara",
+   "province": "Gipuzkoa",
+   "region": "pais-vasco",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-07-31",
+     "name": "San Ignacio de Loyola",
+     "text": "31 de julio, San Ignacio de Loyola, en todo el Territorio Histórico de Gipuzkoa."
+    },
+    {
+     "date": "2027-09-16",
+     "name": "San Martin Agirre",
+     "text": "BERGARA 16 de septiembre San Martin Agirre"
+    }
+   ],
+   "source": {
+    "title": "Resolución de 21 de septiembre de 2026 del delegado territorial de Trabajo y Seguridad Social de Gipuzkoa, por la que se aprueba el calendario de las fiestas locales de Gipuzkoa para el año 2027 (BOG nº 187, 01/10/2026, anuncio 6250)",
+    "url": "https://egoitza.gipuzkoa.eus/gao-bog/castell/bog/2026/10/01/c2606250.htm",
+    "checked": "2026-10-26"
+   },
+   "note": "31 July is the territory-wide day for all of Gipuzkoa; the other day is the municipality's own. The rectification of 05/10/2026 (BOG 20/10/2026, anuncio 6579) only changes Anoeta."
+  },
+  {
+   "slug": "beasain",
+   "name": "Beasain",
+   "province": "Gipuzkoa",
+   "region": "pais-vasco",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-05-10",
+     "name": "San Martín de Loinaz",
+     "text": "BEASAIN 10 de mayo San Martín de Loinaz"
+    },
+    {
+     "date": "2027-07-31",
+     "name": "San Ignacio de Loyola",
+     "text": "31 de julio, San Ignacio de Loyola, en todo el Territorio Histórico de Gipuzkoa."
+    }
+   ],
+   "source": {
+    "title": "Resolución de 21 de septiembre de 2026 del delegado territorial de Trabajo y Seguridad Social de Gipuzkoa, por la que se aprueba el calendario de las fiestas locales de Gipuzkoa para el año 2027 (BOG nº 187, 01/10/2026, anuncio 6250)",
+    "url": "https://egoitza.gipuzkoa.eus/gao-bog/castell/bog/2026/10/01/c2606250.htm",
+    "checked": "2026-10-26"
+   },
+   "note": "31 July is the territory-wide day for all of Gipuzkoa; the other day is the municipality's own. The rectification of 05/10/2026 (BOG 20/10/2026, anuncio 6579) only changes Anoeta."
+  },
+  {
+   "slug": "andoain",
+   "name": "Andoain",
+   "province": "Gipuzkoa",
+   "region": "pais-vasco",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-06-24",
+     "name": "San Juan",
+     "text": "ANDOAIN 24 de junio San Juan"
+    },
+    {
+     "date": "2027-07-31",
+     "name": "San Ignacio de Loyola",
+     "text": "31 de julio, San Ignacio de Loyola, en todo el Territorio Histórico de Gipuzkoa."
+    }
+   ],
+   "source": {
+    "title": "Resolución de 21 de septiembre de 2026 del delegado territorial de Trabajo y Seguridad Social de Gipuzkoa, por la que se aprueba el calendario de las fiestas locales de Gipuzkoa para el año 2027 (BOG nº 187, 01/10/2026, anuncio 6250)",
+    "url": "https://egoitza.gipuzkoa.eus/gao-bog/castell/bog/2026/10/01/c2606250.htm",
+    "checked": "2026-10-26"
+   },
+   "note": "31 July is the territory-wide day for all of Gipuzkoa; the other day is the municipality's own. The rectification of 05/10/2026 (BOG 20/10/2026, anuncio 6579) only changes Anoeta."
+  },
+  {
+   "slug": "laudio-llodio",
+   "name": "Laudio/Llodio",
+   "province": "Álava",
+   "region": "pais-vasco",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-04-28",
+     "name": "San Prudencio",
+     "text": "Día de fiesta del territorio histórico: 28 de abril (San Prudencio)."
+    },
+    {
+     "date": "2027-08-16",
+     "name": "San Roque",
+     "text": "Llodio 16 de agosto (San Roque)"
+    }
+   ],
+   "source": {
+    "title": "Resolución de 5 de octubre de 2026 del delegado territorial de Álava del Departamento de Economía, Trabajo y Empleo, que aprueba la determinación de las fiestas locales de Álava para el año 2027 (BOTHA nº 116, 09/10/2026, anuncio 2026-02851)",
+    "url": "https://www.araba.eus/botha/Boletines/2026/116/2026_116_02851_C.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "28 April is the territory-wide day for all of Álava; the other day is the municipality's own."
+  },
+  {
    "slug": "logrono",
    "name": "Logroño",
    "province": "La Rioja",
@@ -1052,6 +1936,474 @@
    ]
   },
   {
+   "slug": "santiago-de-compostela",
+   "name": "Santiago de Compostela",
+   "province": "A Coruña",
+   "region": "galicia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-05-06",
+     "name": "Día da Ascensión",
+     "text": "SANTIAGO DE COMPOSTELA 6 de maio Día da Ascensión"
+    },
+    {
+     "date": "2027-08-16",
+     "name": "San Roque",
+     "text": "16 de agosto San Roque"
+    }
+   ],
+   "source": {
+    "title": "Resolución do Departamento Territorial da Consellería de Emprego, Comercio e Emigración da Coruña sobre as festividades de carácter local na Provincia da Coruña (BOP A Coruña nº 187, 30/09/2026, anuncio 2026/6291)",
+    "url": "https://bop.dacoruna.gal/bopportal/descargarPdf?page=1&fecha=20260930&numRegistro=2026/0000006291.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "The PDF lays the table out in columns; the pair was read with table extraction, which gives A Coruña city the same pair as its existing entry."
+  },
+  {
+   "slug": "ferrol",
+   "name": "Ferrol",
+   "province": "A Coruña",
+   "region": "galicia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-01-07",
+     "name": "San Xiao",
+     "text": "FERROL 7 de xaneiro San Xiao"
+    },
+    {
+     "date": "2027-03-29",
+     "name": "Nosa Señora de Chamorro",
+     "text": "29 de marzo Nosa Señora de Chamorro"
+    }
+   ],
+   "source": {
+    "title": "Resolución do Departamento Territorial da Consellería de Emprego, Comercio e Emigración da Coruña sobre as festividades de carácter local na Provincia da Coruña (BOP A Coruña nº 187, 30/09/2026, anuncio 2026/6291)",
+    "url": "https://bop.dacoruna.gal/bopportal/descargarPdf?page=1&fecha=20260930&numRegistro=2026/0000006291.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "The PDF lays the table out in columns; the pair was read with table extraction, which gives A Coruña city the same pair as its existing entry."
+  },
+  {
+   "slug": "naron",
+   "name": "Narón",
+   "province": "A Coruña",
+   "region": "galicia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-06-24",
+     "name": "San Xoán",
+     "text": "NARÓN 24 de xuño San Xoán"
+    },
+    {
+     "date": "2027-11-23",
+     "name": "Día de Narón",
+     "text": "23 de novembro Día de Narón"
+    }
+   ],
+   "source": {
+    "title": "Resolución do Departamento Territorial da Consellería de Emprego, Comercio e Emigración da Coruña sobre as festividades de carácter local na Provincia da Coruña (BOP A Coruña nº 187, 30/09/2026, anuncio 2026/6291)",
+    "url": "https://bop.dacoruna.gal/bopportal/descargarPdf?page=1&fecha=20260930&numRegistro=2026/0000006291.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "The PDF lays the table out in columns; the pair was read with table extraction, which gives A Coruña city the same pair as its existing entry."
+  },
+  {
+   "slug": "oleiros",
+   "name": "Oleiros",
+   "province": "A Coruña",
+   "region": "galicia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-02-09",
+     "name": "Martes de Entroido",
+     "text": "OLEIROS 9 de febreiro Martes de Entroido"
+    },
+    {
+     "date": "2027-06-24",
+     "name": "San Xoán",
+     "text": "24 de xuño San Xoán"
+    }
+   ],
+   "source": {
+    "title": "Resolución do Departamento Territorial da Consellería de Emprego, Comercio e Emigración da Coruña sobre as festividades de carácter local na Provincia da Coruña (BOP A Coruña nº 187, 30/09/2026, anuncio 2026/6291)",
+    "url": "https://bop.dacoruna.gal/bopportal/descargarPdf?page=1&fecha=20260930&numRegistro=2026/0000006291.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "The PDF lays the table out in columns; the pair was read with table extraction, which gives A Coruña city the same pair as its existing entry."
+  },
+  {
+   "slug": "arteixo",
+   "name": "Arteixo",
+   "province": "A Coruña",
+   "region": "galicia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-02-09",
+     "name": "Martes de Entroido",
+     "text": "ARTEIXO 9 de febreiro Martes de Entroido"
+    },
+    {
+     "date": "2027-07-26",
+     "name": "Festa Patronal Santiago Apóstolo",
+     "text": "26 de xullo Festa Patronal Santiago Apóstolo"
+    }
+   ],
+   "source": {
+    "title": "Resolución do Departamento Territorial da Consellería de Emprego, Comercio e Emigración da Coruña sobre as festividades de carácter local na Provincia da Coruña (BOP A Coruña nº 187, 30/09/2026, anuncio 2026/6291)",
+    "url": "https://bop.dacoruna.gal/bopportal/descargarPdf?page=1&fecha=20260930&numRegistro=2026/0000006291.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "The PDF lays the table out in columns; the pair was read with table extraction, which gives A Coruña city the same pair as its existing entry."
+  },
+  {
+   "slug": "carballo",
+   "name": "Carballo",
+   "province": "A Coruña",
+   "region": "galicia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-06-24",
+     "name": "Festas Patronais de San Xoán Bautista",
+     "text": "CARBALLO 24 de xuño Festas Patronais de San Xoán Bautista"
+    },
+    {
+     "date": "2027-06-25",
+     "name": "Festas Patronais de San Xoán Bautista",
+     "text": "25 de xuño Festas Patronais de San Xoán Bautista"
+    }
+   ],
+   "source": {
+    "title": "Resolución do Departamento Territorial da Consellería de Emprego, Comercio e Emigración da Coruña sobre as festividades de carácter local na Provincia da Coruña (BOP A Coruña nº 187, 30/09/2026, anuncio 2026/6291)",
+    "url": "https://bop.dacoruna.gal/bopportal/descargarPdf?page=1&fecha=20260930&numRegistro=2026/0000006291.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "The PDF lays the table out in columns; the pair was read with table extraction, which gives A Coruña city the same pair as its existing entry."
+  },
+  {
+   "slug": "culleredo",
+   "name": "Culleredo",
+   "province": "A Coruña",
+   "region": "galicia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-02-09",
+     "name": "Martes de Entroido",
+     "text": "CULLEREDO 9 de febreiro Martes de Entroido"
+    },
+    {
+     "date": "2027-06-24",
+     "name": "San Xoán",
+     "text": "24 de xuño San Xoán"
+    }
+   ],
+   "source": {
+    "title": "Resolución do Departamento Territorial da Consellería de Emprego, Comercio e Emigración da Coruña sobre as festividades de carácter local na Provincia da Coruña (BOP A Coruña nº 187, 30/09/2026, anuncio 2026/6291)",
+    "url": "https://bop.dacoruna.gal/bopportal/descargarPdf?page=1&fecha=20260930&numRegistro=2026/0000006291.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "The PDF lays the table out in columns; the pair was read with table extraction, which gives A Coruña city the same pair as its existing entry."
+  },
+  {
+   "slug": "ames",
+   "name": "Ames",
+   "province": "A Coruña",
+   "region": "galicia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-05-06",
+     "name": "A Ascensión",
+     "text": "AMES 6 de maio A Ascensión"
+    },
+    {
+     "date": "2027-06-24",
+     "name": "San Xoán",
+     "text": "24 de xuño San Xoán"
+    }
+   ],
+   "source": {
+    "title": "Resolución do Departamento Territorial da Consellería de Emprego, Comercio e Emigración da Coruña sobre as festividades de carácter local na Provincia da Coruña (BOP A Coruña nº 187, 30/09/2026, anuncio 2026/6291)",
+    "url": "https://bop.dacoruna.gal/bopportal/descargarPdf?page=1&fecha=20260930&numRegistro=2026/0000006291.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "The PDF lays the table out in columns; the pair was read with table extraction, which gives A Coruña city the same pair as its existing entry."
+  },
+  {
+   "slug": "ribeira",
+   "name": "Ribeira",
+   "province": "A Coruña",
+   "region": "galicia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-02-09",
+     "name": "Martes de Entroido",
+     "text": "RIBEIRA 9 de febreiro Martes de Entroido"
+    },
+    {
+     "date": "2027-07-24",
+     "name": "Festividade da Dorna",
+     "text": "24 de xullo Festividade da Dorna"
+    }
+   ],
+   "source": {
+    "title": "Resolución do Departamento Territorial da Consellería de Emprego, Comercio e Emigración da Coruña sobre as festividades de carácter local na Provincia da Coruña (BOP A Coruña nº 187, 30/09/2026, anuncio 2026/6291)",
+    "url": "https://bop.dacoruna.gal/bopportal/descargarPdf?page=1&fecha=20260930&numRegistro=2026/0000006291.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "The PDF lays the table out in columns; the pair was read with table extraction, which gives A Coruña city the same pair as its existing entry."
+  },
+  {
+   "slug": "cambre",
+   "name": "Cambre",
+   "province": "A Coruña",
+   "region": "galicia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-02-09",
+     "name": "Martes de Entroido",
+     "text": "CAMBRE 9 de febreiro Martes de Entroido"
+    },
+    {
+     "date": "2027-06-24",
+     "name": "San Xoán",
+     "text": "24 de xuño San Xoán"
+    }
+   ],
+   "source": {
+    "title": "Resolución do Departamento Territorial da Consellería de Emprego, Comercio e Emigración da Coruña sobre as festividades de carácter local na Provincia da Coruña (BOP A Coruña nº 187, 30/09/2026, anuncio 2026/6291)",
+    "url": "https://bop.dacoruna.gal/bopportal/descargarPdf?page=1&fecha=20260930&numRegistro=2026/0000006291.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "The PDF lays the table out in columns; the pair was read with table extraction, which gives A Coruña city the same pair as its existing entry."
+  },
+  {
+   "slug": "vilagarcia-de-arousa",
+   "name": "Vilagarcía de Arousa",
+   "province": "Pontevedra",
+   "region": "galicia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-05-22",
+     "name": "Festividade de Sta. Rita",
+     "text": "VILAGARCÍA DE AROUSA 22 de maio Festividade de Sta. Rita"
+    },
+    {
+     "date": "2027-08-16",
+     "name": "Festividade de San Roque",
+     "text": "16 de agosto Festividade de San Roque"
+    }
+   ],
+   "source": {
+    "title": "Calendario laboral da provincia de Pontevedra para o ano 2027, Departamento Territorial da Consellería de Emprego, Comercio e Emigración (BOPPO nº 192, 06/10/2026)",
+    "url": "https://boppo.depo.gal/web/boppo/detalle/-/boppo/2026/10/06/2026071521",
+    "checked": "2026-10-26"
+   },
+   "note": "Signed PDF: https://boppo.depo.gal/web/boppo/detalle/-/boppo/2026/10/06/2026071521/an.bop.PONTEVEDRA.20261006.2026071521.pdf"
+  },
+  {
+   "slug": "redondela",
+   "name": "Redondela",
+   "province": "Pontevedra",
+   "region": "galicia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "Luns do Cristo",
+     "text": "REDONDELA 05 de abril Luns do Cristo"
+    },
+    {
+     "date": "2027-05-27",
+     "name": "Xoves da coca",
+     "text": "27 de maio Xoves da coca"
+    }
+   ],
+   "source": {
+    "title": "Calendario laboral da provincia de Pontevedra para o ano 2027, Departamento Territorial da Consellería de Emprego, Comercio e Emigración (BOPPO nº 192, 06/10/2026)",
+    "url": "https://boppo.depo.gal/web/boppo/detalle/-/boppo/2026/10/06/2026071521",
+    "checked": "2026-10-26"
+   },
+   "note": "Signed PDF: https://boppo.depo.gal/web/boppo/detalle/-/boppo/2026/10/06/2026071521/an.bop.PONTEVEDRA.20261006.2026071521.pdf"
+  },
+  {
+   "slug": "marin",
+   "name": "Marín",
+   "province": "Pontevedra",
+   "region": "galicia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-07-16",
+     "name": "Festividade da Virxe do Carme",
+     "text": "MARÍN 16 de xullo Festividade da Virxe do Carme"
+    },
+    {
+     "date": "2027-09-08",
+     "name": "Festividade da Virxe do Porto",
+     "text": "08 de setembro Festividade da Virxe do Porto"
+    }
+   ],
+   "source": {
+    "title": "Calendario laboral da provincia de Pontevedra para o ano 2027, Departamento Territorial da Consellería de Emprego, Comercio e Emigración (BOPPO nº 192, 06/10/2026)",
+    "url": "https://boppo.depo.gal/web/boppo/detalle/-/boppo/2026/10/06/2026071521",
+    "checked": "2026-10-26"
+   },
+   "note": "Signed PDF: https://boppo.depo.gal/web/boppo/detalle/-/boppo/2026/10/06/2026071521/an.bop.PONTEVEDRA.20261006.2026071521.pdf"
+  },
+  {
+   "slug": "ponteareas",
+   "name": "Ponteareas",
+   "province": "Pontevedra",
+   "region": "galicia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-05-31",
+     "name": "Luns seguinte á festividade do Corpus Christi",
+     "text": "PONTEAREAS 31 de maio Luns seguinte á festividade do Corpus Christi"
+    },
+    {
+     "date": "2027-09-29",
+     "name": "Festividade de San Miguel Arcanxo",
+     "text": "29 de setembro Festividade de San Miguel Arcanxo"
+    }
+   ],
+   "source": {
+    "title": "Calendario laboral da provincia de Pontevedra para o ano 2027, Departamento Territorial da Consellería de Emprego, Comercio e Emigración (BOPPO nº 192, 06/10/2026)",
+    "url": "https://boppo.depo.gal/web/boppo/detalle/-/boppo/2026/10/06/2026071521",
+    "checked": "2026-10-26"
+   },
+   "note": "Signed PDF: https://boppo.depo.gal/web/boppo/detalle/-/boppo/2026/10/06/2026071521/an.bop.PONTEVEDRA.20261006.2026071521.pdf"
+  },
+  {
+   "slug": "lalin",
+   "name": "Lalín",
+   "province": "Pontevedra",
+   "region": "galicia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-09-20",
+     "name": "Festas patronais Virxe das Dores",
+     "text": "LALÍN 20 de setembro Festa patronais Virxe das Dores"
+    },
+    {
+     "date": "2027-09-21",
+     "name": "Festas patronais Virxe das Dores",
+     "text": "21 de setembro Festas patronais Virxe das Dores"
+    }
+   ],
+   "source": {
+    "title": "Calendario laboral da provincia de Pontevedra para o ano 2027, Departamento Territorial da Consellería de Emprego, Comercio e Emigración (BOPPO nº 192, 06/10/2026)",
+    "url": "https://boppo.depo.gal/web/boppo/detalle/-/boppo/2026/10/06/2026071521",
+    "checked": "2026-10-26"
+   },
+   "note": "Signed PDF: https://boppo.depo.gal/web/boppo/detalle/-/boppo/2026/10/06/2026071521/an.bop.PONTEVEDRA.20261006.2026071521.pdf"
+  },
+  {
+   "slug": "a-estrada",
+   "name": "A Estrada",
+   "province": "Pontevedra",
+   "region": "galicia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-06-24",
+     "name": "Festas patronais San Paio",
+     "text": "ESTRADA, A 24 de xuño e 25 de xuño Festas patronais San Paio"
+    },
+    {
+     "date": "2027-06-25",
+     "name": "Festas patronais San Paio",
+     "text": "ESTRADA, A 24 de xuño e 25 de xuño Festas patronais San Paio"
+    }
+   ],
+   "source": {
+    "title": "Calendario laboral da provincia de Pontevedra para o ano 2027, Departamento Territorial da Consellería de Emprego, Comercio e Emigración (BOPPO nº 192, 06/10/2026)",
+    "url": "https://boppo.depo.gal/web/boppo/detalle/-/boppo/2026/10/06/2026071521",
+    "checked": "2026-10-26"
+   },
+   "note": "Signed PDF: https://boppo.depo.gal/web/boppo/detalle/-/boppo/2026/10/06/2026071521/an.bop.PONTEVEDRA.20261006.2026071521.pdf"
+  },
+  {
+   "slug": "o-porrino",
+   "name": "O Porriño",
+   "province": "Pontevedra",
+   "region": "galicia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-07-12",
+     "name": "San Bieito",
+     "text": "PORRIÑO, O 12 de xullo San Bieito"
+    },
+    {
+     "date": "2027-09-27",
+     "name": "Festa do Cristo",
+     "text": "27 de setembro Festa do Cristo"
+    }
+   ],
+   "source": {
+    "title": "Calendario laboral da provincia de Pontevedra para o ano 2027, Departamento Territorial da Consellería de Emprego, Comercio e Emigración (BOPPO nº 192, 06/10/2026)",
+    "url": "https://boppo.depo.gal/web/boppo/detalle/-/boppo/2026/10/06/2026071521",
+    "checked": "2026-10-26"
+   },
+   "note": "Signed PDF: https://boppo.depo.gal/web/boppo/detalle/-/boppo/2026/10/06/2026071521/an.bop.PONTEVEDRA.20261006.2026071521.pdf"
+  },
+  {
+   "slug": "sanxenxo",
+   "name": "Sanxenxo",
+   "province": "Pontevedra",
+   "region": "galicia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-03-29",
+     "name": "Romaría de O Con",
+     "text": "SANXENXO 29 de marzo Romaría de O Con"
+    },
+    {
+     "date": "2027-08-16",
+     "name": "San Roque",
+     "text": "16 de agosto San Roque"
+    }
+   ],
+   "source": {
+    "title": "Calendario laboral da provincia de Pontevedra para o ano 2027, Departamento Territorial da Consellería de Emprego, Comercio e Emigración (BOPPO nº 192, 06/10/2026)",
+    "url": "https://boppo.depo.gal/web/boppo/detalle/-/boppo/2026/10/06/2026071521",
+    "checked": "2026-10-26"
+   },
+   "note": "Signed PDF: https://boppo.depo.gal/web/boppo/detalle/-/boppo/2026/10/06/2026071521/an.bop.PONTEVEDRA.20261006.2026071521.pdf"
+  },
+  {
    "slug": "gijon",
    "name": "Gijón",
    "province": "Asturias",
@@ -1073,6 +2425,136 @@
    "source": {
     "title": "Resolución de 22 de mayo de 2026, de la Consejería de Ciencia, Industria y Empleo, calendario de fiestas locales para el año 2027 (BOPA núm. 110, 10-VI-2026, Cód. 2026-04656)",
     "url": "https://www.asturias.es/bopa/2026/06/10/2026-04656.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "aviles",
+   "name": "Avilés",
+   "province": "Asturias",
+   "region": "asturias",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-03-29",
+     "name": "Lunes de Pascua",
+     "text": "29 de marzo Lunes de Pascua"
+    },
+    {
+     "date": "2027-08-28",
+     "name": "San Agustín",
+     "text": "28 de agosto San Agustín"
+    }
+   ],
+   "source": {
+    "title": "Resolución de 22 de mayo de 2026, de la Consejería de Ciencia, Industria y Empleo, calendario de fiestas locales para el año 2027 (BOPA núm. 110, 10-VI-2026, cód. 2026-04656)",
+    "url": "https://miprincipado.asturias.es/bopa/2026/06/10/2026-04656.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "siero",
+   "name": "Siero",
+   "province": "Asturias",
+   "region": "asturias",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-03-30",
+     "name": "Huevos Pintos",
+     "text": "30 de marzo Huevos Pintos, en todo el Concejo"
+    },
+    {
+     "date": "2027-07-19",
+     "name": "El Carmín",
+     "text": "19 de julio El Carmín, en todo el Concejo excepto en la parroquia de Lugones/Llugones"
+    }
+   ],
+   "source": {
+    "title": "Resolución de 22 de mayo de 2026, de la Consejería de Ciencia, Industria y Empleo, calendario de fiestas locales para el año 2027 (BOPA núm. 110, 10-VI-2026, cód. 2026-04656)",
+    "url": "https://miprincipado.asturias.es/bopa/2026/06/10/2026-04656.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "The BOPA lists a third day for one parish only: 30 August, Santa Isabel, in the parroquia of Lugones/Llugones, which has it instead of 19 July (El Carmín). The two days shown are those of the rest of the concejo, including Pola de Siero."
+  },
+  {
+   "slug": "langreo",
+   "name": "Langreo",
+   "province": "Asturias",
+   "region": "asturias",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-02-09",
+     "name": "Martes de Carnaval",
+     "text": "9 de febrero Martes de Carnaval"
+    },
+    {
+     "date": "2027-06-29",
+     "name": "San Pedro",
+     "text": "29 de junio San Pedro"
+    }
+   ],
+   "source": {
+    "title": "Resolución de 22 de mayo de 2026, de la Consejería de Ciencia, Industria y Empleo, calendario de fiestas locales para el año 2027 (BOPA núm. 110, 10-VI-2026, cód. 2026-04656)",
+    "url": "https://miprincipado.asturias.es/bopa/2026/06/10/2026-04656.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "mieres",
+   "name": "Mieres",
+   "province": "Asturias",
+   "region": "asturias",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-06-24",
+     "name": "Festividad de San Juan",
+     "text": "24 de junio Festividad de San Juan, en todo el Municipio excepto en el Valle de Turón"
+    },
+    {
+     "date": "2027-09-27",
+     "name": "Mártires de Valdecuna, San Cosme y San Damián",
+     "text": "27 de septiembre Mártires de Valdecuna, San Cosme y San Damián, en todo el Municipio"
+    }
+   ],
+   "source": {
+    "title": "Resolución de 22 de mayo de 2026, de la Consejería de Ciencia, Industria y Empleo, calendario de fiestas locales para el año 2027 (BOPA núm. 110, 10-VI-2026, cód. 2026-04656)",
+    "url": "https://miprincipado.asturias.es/bopa/2026/06/10/2026-04656.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "The BOPA lists a third day for one valley only: in the Valle de Turón, 14 September (Santísimo Cristo de la Paz) replaces 24 June. The two days shown are those of the rest of the municipality, including Mieres town."
+  },
+  {
+   "slug": "castrillon",
+   "name": "Castrillón",
+   "province": "Asturias",
+   "region": "asturias",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-03-29",
+     "name": "Lunes de Pascua",
+     "text": "29 de marzo Lunes de Pascua"
+    },
+    {
+     "date": "2027-07-05",
+     "name": "Día de Castrillón",
+     "text": "5 de julio Día de Castrillón"
+    }
+   ],
+   "source": {
+    "title": "Resolución de 22 de mayo de 2026, de la Consejería de Ciencia, Industria y Empleo, calendario de fiestas locales para el año 2027 (BOPA núm. 110, 10-VI-2026, cód. 2026-04656)",
+    "url": "https://miprincipado.asturias.es/bopa/2026/06/10/2026-04656.pdf",
     "checked": "2026-10-26"
    },
    "note": ""
@@ -1161,6 +2643,448 @@
    ],
    "source": {
     "title": "Resolución de la Dirección General de Trabajo por la que se publica el calendario de fiestas laborales para el año 2027 (BORM núm. 171, 27/07/2026, anuncio 3718, NPE A-270726-3718)",
+    "url": "https://www.borm.es/services/anuncio/844400/pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "The BORM table gives only weekday and date, no festivity names."
+  },
+  {
+   "slug": "lorca",
+   "name": "Lorca",
+   "province": "Murcia",
+   "region": "murcia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-09-08",
+     "name": "Fiesta local (1er festivo)",
+     "text": "25 LORCA Miércoles 8 Septiembre"
+    },
+    {
+     "date": "2027-11-23",
+     "name": "Fiesta local (2.º festivo)",
+     "text": "Martes 23 Noviembre"
+    }
+   ],
+   "source": {
+    "title": "Resolución de la Dirección General de Trabajo por la que se publica el calendario de fiestas laborales para el año 2027 (BORM nº 171, 27/07/2026, NPE A-270726-3718)",
+    "url": "https://www.borm.es/services/anuncio/844400/pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "The BORM table gives only weekday and date, no festivity names."
+  },
+  {
+   "slug": "molina-de-segura",
+   "name": "Molina de Segura",
+   "province": "Murcia",
+   "region": "murcia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-01-22",
+     "name": "Fiesta local (1er festivo)",
+     "text": "28 MOLINA DE SEGURA Viernes 22 Enero"
+    },
+    {
+     "date": "2027-09-20",
+     "name": "Fiesta local (2.º festivo)",
+     "text": "Lunes 20 Septiembre"
+    }
+   ],
+   "source": {
+    "title": "Resolución de la Dirección General de Trabajo por la que se publica el calendario de fiestas laborales para el año 2027 (BORM nº 171, 27/07/2026, NPE A-270726-3718)",
+    "url": "https://www.borm.es/services/anuncio/844400/pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "The BORM table gives only weekday and date, no festivity names."
+  },
+  {
+   "slug": "alcantarilla",
+   "name": "Alcantarilla",
+   "province": "Murcia",
+   "region": "murcia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-05-14",
+     "name": "Fiesta local (1er festivo)",
+     "text": "5 ALCANTARILLA Viernes 14 Mayo"
+    },
+    {
+     "date": "2027-09-14",
+     "name": "Fiesta local (2.º festivo)",
+     "text": "Martes 14 Septiembre"
+    }
+   ],
+   "source": {
+    "title": "Resolución de la Dirección General de Trabajo por la que se publica el calendario de fiestas laborales para el año 2027 (BORM nº 171, 27/07/2026, NPE A-270726-3718)",
+    "url": "https://www.borm.es/services/anuncio/844400/pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "The BORM table gives only weekday and date, no festivity names."
+  },
+  {
+   "slug": "torre-pacheco",
+   "name": "Torre-Pacheco",
+   "province": "Murcia",
+   "region": "murcia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-10-07",
+     "name": "Fiesta local (1er festivo)",
+     "text": "39 TORRE PACHECO Jueves 7 Octubre"
+    },
+    {
+     "date": "2027-12-27",
+     "name": "Fiesta local (2.º festivo)",
+     "text": "Lunes 27 Diciembre"
+    }
+   ],
+   "source": {
+    "title": "Resolución de la Dirección General de Trabajo por la que se publica el calendario de fiestas laborales para el año 2027 (BORM nº 171, 27/07/2026, NPE A-270726-3718)",
+    "url": "https://www.borm.es/services/anuncio/844400/pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "The BORM table gives only weekday and date, no festivity names."
+  },
+  {
+   "slug": "mazarron",
+   "name": "Mazarrón",
+   "province": "Murcia",
+   "region": "murcia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-06-14",
+     "name": "Fiesta local (1er festivo)",
+     "text": "27 MAZARRON Lunes 14 Junio"
+    },
+    {
+     "date": "2027-11-17",
+     "name": "Fiesta local (2.º festivo)",
+     "text": "Miércoles 17 Noviembre"
+    }
+   ],
+   "source": {
+    "title": "Resolución de la Dirección General de Trabajo por la que se publica el calendario de fiestas laborales para el año 2027 (BORM nº 171, 27/07/2026, NPE A-270726-3718)",
+    "url": "https://www.borm.es/services/anuncio/844400/pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "The BORM table gives only weekday and date, no festivity names."
+  },
+  {
+   "slug": "aguilas",
+   "name": "Águilas",
+   "province": "Murcia",
+   "region": "murcia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-02-09",
+     "name": "Fiesta local (1er festivo)",
+     "text": "3 AGUILAS Martes 9 Febrero"
+    },
+    {
+     "date": "2027-04-30",
+     "name": "Fiesta local (2.º festivo)",
+     "text": "Viernes 30 Abril"
+    }
+   ],
+   "source": {
+    "title": "Resolución de la Dirección General de Trabajo por la que se publica el calendario de fiestas laborales para el año 2027 (BORM nº 171, 27/07/2026, NPE A-270726-3718)",
+    "url": "https://www.borm.es/services/anuncio/844400/pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "The BORM table gives only weekday and date, no festivity names."
+  },
+  {
+   "slug": "yecla",
+   "name": "Yecla",
+   "province": "Murcia",
+   "region": "murcia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-09-13",
+     "name": "Fiesta local (1er festivo)",
+     "text": "45 YECLA Lunes 13 Septiembre"
+    },
+    {
+     "date": "2027-12-07",
+     "name": "Fiesta local (2.º festivo)",
+     "text": "Martes 7 Diciembre"
+    }
+   ],
+   "source": {
+    "title": "Resolución de la Dirección General de Trabajo por la que se publica el calendario de fiestas laborales para el año 2027 (BORM nº 171, 27/07/2026, NPE A-270726-3718)",
+    "url": "https://www.borm.es/services/anuncio/844400/pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "The BORM table gives only weekday and date, no festivity names."
+  },
+  {
+   "slug": "cieza",
+   "name": "Cieza",
+   "province": "Murcia",
+   "region": "murcia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-05-03",
+     "name": "Fiesta local (1er festivo)",
+     "text": "20 CIEZA Lunes 3 Mayo"
+    },
+    {
+     "date": "2027-08-24",
+     "name": "Fiesta local (2.º festivo)",
+     "text": "Martes 24 Agosto"
+    }
+   ],
+   "source": {
+    "title": "Resolución de la Dirección General de Trabajo por la que se publica el calendario de fiestas laborales para el año 2027 (BORM nº 171, 27/07/2026, NPE A-270726-3718)",
+    "url": "https://www.borm.es/services/anuncio/844400/pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "The BORM table gives only weekday and date, no festivity names."
+  },
+  {
+   "slug": "san-javier",
+   "name": "San Javier",
+   "province": "Murcia",
+   "region": "murcia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-02-03",
+     "name": "Fiesta local (1er festivo)",
+     "text": "36 SAN JAVIER Miércoles 3 Febrero"
+    },
+    {
+     "date": "2027-12-03",
+     "name": "Fiesta local (2.º festivo)",
+     "text": "Viernes 3 Diciembre"
+    }
+   ],
+   "source": {
+    "title": "Resolución de la Dirección General de Trabajo por la que se publica el calendario de fiestas laborales para el año 2027 (BORM nº 171, 27/07/2026, NPE A-270726-3718)",
+    "url": "https://www.borm.es/services/anuncio/844400/pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "The BORM table gives only weekday and date, no festivity names."
+  },
+  {
+   "slug": "totana",
+   "name": "Totana",
+   "province": "Murcia",
+   "region": "murcia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-01-07",
+     "name": "Fiesta local (1er festivo)",
+     "text": "41 TOTANA Jueves 7 Enero"
+    },
+    {
+     "date": "2027-12-10",
+     "name": "Fiesta local (2.º festivo)",
+     "text": "Viernes 10 Diciembre"
+    }
+   ],
+   "source": {
+    "title": "Resolución de la Dirección General de Trabajo por la que se publica el calendario de fiestas laborales para el año 2027 (BORM nº 171, 27/07/2026, NPE A-270726-3718)",
+    "url": "https://www.borm.es/services/anuncio/844400/pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "The BORM table gives only weekday and date, no festivity names."
+  },
+  {
+   "slug": "san-pedro-del-pinatar",
+   "name": "San Pedro del Pinatar",
+   "province": "Murcia",
+   "region": "murcia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-06-29",
+     "name": "Fiesta local (1er festivo)",
+     "text": "37 SAN PEDRO DEL PINATAR Martes 29 Junio"
+    },
+    {
+     "date": "2027-07-16",
+     "name": "Fiesta local (2.º festivo)",
+     "text": "Viernes 16 Julio"
+    }
+   ],
+   "source": {
+    "title": "Resolución de la Dirección General de Trabajo por la que se publica el calendario de fiestas laborales para el año 2027 (BORM nº 171, 27/07/2026, NPE A-270726-3718)",
+    "url": "https://www.borm.es/services/anuncio/844400/pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "The BORM table gives only weekday and date, no festivity names."
+  },
+  {
+   "slug": "jumilla",
+   "name": "Jumilla",
+   "province": "Murcia",
+   "region": "murcia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-03-29",
+     "name": "Fiesta local (1er festivo)",
+     "text": "23 JUMILLA Lunes 29 Marzo"
+    },
+    {
+     "date": "2027-07-26",
+     "name": "Fiesta local (2.º festivo)",
+     "text": "Lunes 26 Julio"
+    }
+   ],
+   "source": {
+    "title": "Resolución de la Dirección General de Trabajo por la que se publica el calendario de fiestas laborales para el año 2027 (BORM nº 171, 27/07/2026, NPE A-270726-3718)",
+    "url": "https://www.borm.es/services/anuncio/844400/pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "The BORM table gives only weekday and date, no festivity names."
+  },
+  {
+   "slug": "caravaca-de-la-cruz",
+   "name": "Caravaca de la Cruz",
+   "province": "Murcia",
+   "region": "murcia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-05-03",
+     "name": "Fiesta local (1er festivo)",
+     "text": "16 CARAVACA DE LA CRUZ Lunes 3 Mayo"
+    },
+    {
+     "date": "2027-05-04",
+     "name": "Fiesta local (2.º festivo)",
+     "text": "Martes 4 Mayo"
+    }
+   ],
+   "source": {
+    "title": "Resolución de la Dirección General de Trabajo por la que se publica el calendario de fiestas laborales para el año 2027 (BORM nº 171, 27/07/2026, NPE A-270726-3718)",
+    "url": "https://www.borm.es/services/anuncio/844400/pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "The BORM table gives only weekday and date, no festivity names."
+  },
+  {
+   "slug": "alhama-de-murcia",
+   "name": "Alhama de Murcia",
+   "province": "Murcia",
+   "region": "murcia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-02-02",
+     "name": "Fiesta local (1er festivo)",
+     "text": "9 ALHAMA DE MURCIA Martes 2 Febrero"
+    },
+    {
+     "date": "2027-10-07",
+     "name": "Fiesta local (2.º festivo)",
+     "text": "Jueves 7 Octubre"
+    }
+   ],
+   "source": {
+    "title": "Resolución de la Dirección General de Trabajo por la que se publica el calendario de fiestas laborales para el año 2027 (BORM nº 171, 27/07/2026, NPE A-270726-3718)",
+    "url": "https://www.borm.es/services/anuncio/844400/pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "The BORM table gives only weekday and date, no festivity names."
+  },
+  {
+   "slug": "las-torres-de-cotillas",
+   "name": "Las Torres de Cotillas",
+   "province": "Murcia",
+   "region": "murcia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-03-30",
+     "name": "Fiesta local (1er festivo)",
+     "text": "40 TORRES DE COTILLAS, LAS Martes 30 Marzo"
+    },
+    {
+     "date": "2027-08-27",
+     "name": "Fiesta local (2.º festivo)",
+     "text": "Viernes 27 Agosto"
+    }
+   ],
+   "source": {
+    "title": "Resolución de la Dirección General de Trabajo por la que se publica el calendario de fiestas laborales para el año 2027 (BORM nº 171, 27/07/2026, NPE A-270726-3718)",
+    "url": "https://www.borm.es/services/anuncio/844400/pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "The BORM table gives only weekday and date, no festivity names."
+  },
+  {
+   "slug": "la-union",
+   "name": "La Unión",
+   "province": "Murcia",
+   "region": "murcia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-07-26",
+     "name": "Fiesta local (1er festivo)",
+     "text": "43 UNION, LA Lunes 26 Julio"
+    },
+    {
+     "date": "2027-10-07",
+     "name": "Fiesta local (2.º festivo)",
+     "text": "Jueves 7 Octubre"
+    }
+   ],
+   "source": {
+    "title": "Resolución de la Dirección General de Trabajo por la que se publica el calendario de fiestas laborales para el año 2027 (BORM nº 171, 27/07/2026, NPE A-270726-3718)",
+    "url": "https://www.borm.es/services/anuncio/844400/pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "The BORM table gives only weekday and date, no festivity names."
+  },
+  {
+   "slug": "archena",
+   "name": "Archena",
+   "province": "Murcia",
+   "region": "murcia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-05-27",
+     "name": "Fiesta local (1er festivo)",
+     "text": "10 ARCHENA Jueves 27 Mayo"
+    },
+    {
+     "date": "2027-09-01",
+     "name": "Fiesta local (2.º festivo)",
+     "text": "Miércoles 1 Septiembre"
+    }
+   ],
+   "source": {
+    "title": "Resolución de la Dirección General de Trabajo por la que se publica el calendario de fiestas laborales para el año 2027 (BORM nº 171, 27/07/2026, NPE A-270726-3718)",
     "url": "https://www.borm.es/services/anuncio/844400/pdf",
     "checked": "2026-10-26"
    },
@@ -1495,6 +3419,708 @@
    "source": {
     "title": "Orden de 7 de agosto de 2026, por la que se determinan las fiestas locales propias de cada municipio de la Comunidad Autónoma de Canarias para el año 2027 (BOC nº 168, 21-08-2026, anuncio 3035)",
     "url": "https://www.gobiernodecanarias.org/boc/2026/168/3035.html",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "santa-lucia-de-tirajana",
+   "name": "Santa Lucía de Tirajana",
+   "province": "Las Palmas",
+   "region": "canarias",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-02-09",
+     "name": "Martes de Carnaval",
+     "text": "9 de febrero: Martes de Carnaval."
+    },
+    {
+     "date": "2027-12-13",
+     "name": "Festividad de Santa Lucía",
+     "text": "13 de diciembre: Festividad de Santa Lucía."
+    }
+   ],
+   "source": {
+    "title": "Orden de 7 de agosto de 2026, fiestas locales propias de cada municipio de la Comunidad Autónoma de Canarias para el año 2027 (BOC núm. 168, 21-VIII-2026, anuncio 3035)",
+    "url": "https://sede.gobiernodecanarias.org/boc/boc-a-2026-168-3035.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "san-bartolome-de-tirajana",
+   "name": "San Bartolomé de Tirajana",
+   "province": "Las Palmas",
+   "region": "canarias",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-03-12",
+     "name": "Día del Turista",
+     "text": "12 de marzo: Día del Turista."
+    },
+    {
+     "date": "2027-08-24",
+     "name": "Festividad de San Bartolomé",
+     "text": "24 de agosto: Festividad de San Bartolomé."
+    }
+   ],
+   "source": {
+    "title": "Orden de 7 de agosto de 2026, fiestas locales propias de cada municipio de la Comunidad Autónoma de Canarias para el año 2027 (BOC núm. 168, 21-VIII-2026, anuncio 3035)",
+    "url": "https://sede.gobiernodecanarias.org/boc/boc-a-2026-168-3035.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "arucas",
+   "name": "Arucas",
+   "province": "Las Palmas",
+   "region": "canarias",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-02-09",
+     "name": "Martes de Carnaval",
+     "text": "9 de febrero: Martes de Carnaval."
+    },
+    {
+     "date": "2027-06-24",
+     "name": "Festividad de San Juan Bautista",
+     "text": "24 de junio: Festividad de San Juan Bautista."
+    }
+   ],
+   "source": {
+    "title": "Orden de 7 de agosto de 2026, fiestas locales propias de cada municipio de la Comunidad Autónoma de Canarias para el año 2027 (BOC núm. 168, 21-VIII-2026, anuncio 3035)",
+    "url": "https://sede.gobiernodecanarias.org/boc/boc-a-2026-168-3035.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "ingenio",
+   "name": "Ingenio",
+   "province": "Las Palmas",
+   "region": "canarias",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-02-02",
+     "name": "Festividad de Nuestra Señora de la Candelaria",
+     "text": "2 de febrero: Festividad de Nuestra Señora de la Candelaria."
+    },
+    {
+     "date": "2027-06-29",
+     "name": "Festividad del Apóstol San Pedro",
+     "text": "29 de junio: Festividad del Apóstol San Pedro."
+    }
+   ],
+   "source": {
+    "title": "Orden de 7 de agosto de 2026, fiestas locales propias de cada municipio de la Comunidad Autónoma de Canarias para el año 2027 (BOC núm. 168, 21-VIII-2026, anuncio 3035)",
+    "url": "https://sede.gobiernodecanarias.org/boc/boc-a-2026-168-3035.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "aguimes",
+   "name": "Agüimes",
+   "province": "Las Palmas",
+   "region": "canarias",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-01-20",
+     "name": "Festividad de San Sebastián",
+     "text": "20 de enero: Festividad de San Sebastián."
+    },
+    {
+     "date": "2027-02-11",
+     "name": "Jueves de Carnaval",
+     "text": "11 de febrero: Jueves de Carnaval."
+    }
+   ],
+   "source": {
+    "title": "Orden de 7 de agosto de 2026, fiestas locales propias de cada municipio de la Comunidad Autónoma de Canarias para el año 2027 (BOC núm. 168, 21-VIII-2026, anuncio 3035)",
+    "url": "https://sede.gobiernodecanarias.org/boc/boc-a-2026-168-3035.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "galdar",
+   "name": "Gáldar",
+   "province": "Las Palmas",
+   "region": "canarias",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": "Festividad de San Isidro Labrador",
+     "text": "15 de mayo: Festividad de San Isidro Labrador."
+    },
+    {
+     "date": "2027-07-26",
+     "name": "Festividad de Santa Ana",
+     "text": "26 de julio: Festividad de Santa Ana."
+    }
+   ],
+   "source": {
+    "title": "Orden de 7 de agosto de 2026, fiestas locales propias de cada municipio de la Comunidad Autónoma de Canarias para el año 2027 (BOC núm. 168, 21-VIII-2026, anuncio 3035)",
+    "url": "https://sede.gobiernodecanarias.org/boc/boc-a-2026-168-3035.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "mogan",
+   "name": "Mogán",
+   "province": "Las Palmas",
+   "region": "canarias",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-06-14",
+     "name": "Festividad de San Antonio de Padua en Domingo",
+     "text": "14 de junio: Festividad de San Antonio de Padua en Domingo."
+    },
+    {
+     "date": "2027-07-16",
+     "name": "Festividad de la Virgen del Carmen",
+     "text": "16 de julio: Festividad de la Virgen del Carmen."
+    }
+   ],
+   "source": {
+    "title": "Orden de 7 de agosto de 2026, fiestas locales propias de cada municipio de la Comunidad Autónoma de Canarias para el año 2027 (BOC núm. 168, 21-VIII-2026, anuncio 3035)",
+    "url": "https://sede.gobiernodecanarias.org/boc/boc-a-2026-168-3035.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "arrecife",
+   "name": "Arrecife",
+   "province": "Las Palmas",
+   "region": "canarias",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-02-09",
+     "name": "Martes de Carnaval",
+     "text": "9 de febrero: Martes de Carnaval."
+    },
+    {
+     "date": "2027-08-25",
+     "name": "Festividad de San Ginés",
+     "text": "25 de agosto: Festividad de San Ginés."
+    }
+   ],
+   "source": {
+    "title": "Orden de 7 de agosto de 2026, fiestas locales propias de cada municipio de la Comunidad Autónoma de Canarias para el año 2027 (BOC núm. 168, 21-VIII-2026, anuncio 3035)",
+    "url": "https://sede.gobiernodecanarias.org/boc/boc-a-2026-168-3035.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "teguise",
+   "name": "Teguise",
+   "province": "Las Palmas",
+   "region": "canarias",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-07-16",
+     "name": "Festividad Nuestra Señora del Carmen",
+     "text": "16 de julio: Festividad Nuestra Señora del Carmen."
+    },
+    {
+     "date": "2027-08-05",
+     "name": "Festividad Nuestra Señora de Las Nieves",
+     "text": "5 de agosto: Festividad Nuestra Señora de Las Nieves."
+    }
+   ],
+   "source": {
+    "title": "Orden de 7 de agosto de 2026, fiestas locales propias de cada municipio de la Comunidad Autónoma de Canarias para el año 2027 (BOC núm. 168, 21-VIII-2026, anuncio 3035)",
+    "url": "https://sede.gobiernodecanarias.org/boc/boc-a-2026-168-3035.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "tias",
+   "name": "Tías",
+   "province": "Las Palmas",
+   "region": "canarias",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-02-02",
+     "name": "Festividad Nuestra Señora la Candelaria",
+     "text": "2 de febrero: Festividad Nuestra Señora la Candelaria."
+    },
+    {
+     "date": "2027-02-09",
+     "name": "Martes de Carnaval",
+     "text": "9 de febrero: Martes de Carnaval."
+    }
+   ],
+   "source": {
+    "title": "Orden de 7 de agosto de 2026, fiestas locales propias de cada municipio de la Comunidad Autónoma de Canarias para el año 2027 (BOC núm. 168, 21-VIII-2026, anuncio 3035)",
+    "url": "https://sede.gobiernodecanarias.org/boc/boc-a-2026-168-3035.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "puerto-del-rosario",
+   "name": "Puerto del Rosario",
+   "province": "Las Palmas",
+   "region": "canarias",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-02-16",
+     "name": "Martes de Carnaval",
+     "text": "16 de febrero: Martes de Carnaval."
+    },
+    {
+     "date": "2027-10-07",
+     "name": "Festividad de Nuestra Señora del Rosario",
+     "text": "7 de octubre: Festividad de Nuestra Señora del Rosario."
+    }
+   ],
+   "source": {
+    "title": "Orden de 7 de agosto de 2026, fiestas locales propias de cada municipio de la Comunidad Autónoma de Canarias para el año 2027 (BOC núm. 168, 21-VIII-2026, anuncio 3035)",
+    "url": "https://sede.gobiernodecanarias.org/boc/boc-a-2026-168-3035.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "la-oliva",
+   "name": "La Oliva",
+   "province": "Las Palmas",
+   "region": "canarias",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-02-02",
+     "name": "Festividad Nuestra Señora de la Candelaria",
+     "text": "2 de febrero: Festividad Nuestra Señora de la Candelaria."
+    },
+    {
+     "date": "2027-07-16",
+     "name": "Festividad Nuestra Señora del Carmen",
+     "text": "16 de julio: Festividad Nuestra Señora del Carmen."
+    }
+   ],
+   "source": {
+    "title": "Orden de 7 de agosto de 2026, fiestas locales propias de cada municipio de la Comunidad Autónoma de Canarias para el año 2027 (BOC núm. 168, 21-VIII-2026, anuncio 3035)",
+    "url": "https://sede.gobiernodecanarias.org/boc/boc-a-2026-168-3035.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "arona",
+   "name": "Arona",
+   "province": "Santa Cruz de Tenerife",
+   "region": "canarias",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-02-09",
+     "name": "Martes de Carnaval",
+     "text": "9 de febrero: Martes de Carnaval."
+    },
+    {
+     "date": "2027-10-04",
+     "name": "Festividad del Santísimo Cristo de la Salud",
+     "text": "4 de octubre: Festividad del Santísimo Cristo de la Salud."
+    }
+   ],
+   "source": {
+    "title": "Orden de 7 de agosto de 2026, fiestas locales propias de cada municipio de la Comunidad Autónoma de Canarias para el año 2027 (BOC núm. 168, 21-VIII-2026, anuncio 3035)",
+    "url": "https://sede.gobiernodecanarias.org/boc/boc-a-2026-168-3035.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "adeje",
+   "name": "Adeje",
+   "province": "Santa Cruz de Tenerife",
+   "region": "canarias",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-01-20",
+     "name": "Festividad de San Sebastián",
+     "text": "20 de enero: Festividad de San Sebastián."
+    },
+    {
+     "date": "2027-10-11",
+     "name": "Festividad de Santa Úrsula",
+     "text": "11 de octubre: Festividad de Santa Úrsula."
+    }
+   ],
+   "source": {
+    "title": "Orden de 7 de agosto de 2026, fiestas locales propias de cada municipio de la Comunidad Autónoma de Canarias para el año 2027 (BOC núm. 168, 21-VIII-2026, anuncio 3035)",
+    "url": "https://sede.gobiernodecanarias.org/boc/boc-a-2026-168-3035.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "granadilla-de-abona",
+   "name": "Granadilla de Abona",
+   "province": "Santa Cruz de Tenerife",
+   "region": "canarias",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-02-09",
+     "name": "Martes de Carnaval",
+     "text": "9 de febrero: Martes de Carnaval."
+    },
+    {
+     "date": "2027-06-14",
+     "name": "Festividad de San Antonio de Padua",
+     "text": "14 de junio: Festividad de San Antonio de Padua."
+    }
+   ],
+   "source": {
+    "title": "Orden de 7 de agosto de 2026, fiestas locales propias de cada municipio de la Comunidad Autónoma de Canarias para el año 2027 (BOC núm. 168, 21-VIII-2026, anuncio 3035)",
+    "url": "https://sede.gobiernodecanarias.org/boc/boc-a-2026-168-3035.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "la-orotava",
+   "name": "La Orotava",
+   "province": "Santa Cruz de Tenerife",
+   "region": "canarias",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-02-09",
+     "name": "Martes de Carnaval",
+     "text": "9 de febrero: Martes de Carnaval."
+    },
+    {
+     "date": "2027-06-03",
+     "name": "Infraoctava del Corpus Christi",
+     "text": "3 de junio: Infraoctava del Corpus Christi."
+    }
+   ],
+   "source": {
+    "title": "Orden de 7 de agosto de 2026, fiestas locales propias de cada municipio de la Comunidad Autónoma de Canarias para el año 2027 (BOC núm. 168, 21-VIII-2026, anuncio 3035)",
+    "url": "https://sede.gobiernodecanarias.org/boc/boc-a-2026-168-3035.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "los-realejos",
+   "name": "Los Realejos",
+   "province": "Santa Cruz de Tenerife",
+   "region": "canarias",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-01-22",
+     "name": "Festividad de San Vicente",
+     "text": "22 de enero: Festividad de San Vicente."
+    },
+    {
+     "date": "2027-05-03",
+     "name": "Exaltación de la Santa Cruz",
+     "text": "3 de mayo: Exaltación de la Santa Cruz."
+    }
+   ],
+   "source": {
+    "title": "Orden de 7 de agosto de 2026, fiestas locales propias de cada municipio de la Comunidad Autónoma de Canarias para el año 2027 (BOC núm. 168, 21-VIII-2026, anuncio 3035)",
+    "url": "https://sede.gobiernodecanarias.org/boc/boc-a-2026-168-3035.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "puerto-de-la-cruz",
+   "name": "Puerto de la Cruz",
+   "province": "Santa Cruz de Tenerife",
+   "region": "canarias",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-05-03",
+     "name": "Festividad de la Exaltación de la Santa Cruz",
+     "text": "3 de mayo: Festividad de la Exaltación de la Santa Cruz."
+    },
+    {
+     "date": "2027-07-13",
+     "name": "Festividad de la Virgen del Carmen",
+     "text": "13 de julio: Festividad de la Virgen del Carmen."
+    }
+   ],
+   "source": {
+    "title": "Orden de 7 de agosto de 2026, fiestas locales propias de cada municipio de la Comunidad Autónoma de Canarias para el año 2027 (BOC núm. 168, 21-VIII-2026, anuncio 3035)",
+    "url": "https://sede.gobiernodecanarias.org/boc/boc-a-2026-168-3035.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "tacoronte",
+   "name": "Tacoronte",
+   "province": "Santa Cruz de Tenerife",
+   "region": "canarias",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-02-09",
+     "name": "Martes de Carnaval",
+     "text": "9 de febrero: Martes de Carnaval."
+    },
+    {
+     "date": "2027-11-25",
+     "name": "Festividad de Santa Catalina",
+     "text": "25 de noviembre: Festividad de Santa Catalina."
+    }
+   ],
+   "source": {
+    "title": "Orden de 7 de agosto de 2026, fiestas locales propias de cada municipio de la Comunidad Autónoma de Canarias para el año 2027 (BOC núm. 168, 21-VIII-2026, anuncio 3035)",
+    "url": "https://sede.gobiernodecanarias.org/boc/boc-a-2026-168-3035.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "candelaria",
+   "name": "Candelaria",
+   "province": "Santa Cruz de Tenerife",
+   "region": "canarias",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-02-23",
+     "name": "Martes de Carnaval",
+     "text": "23 de febrero: Martes de Carnaval."
+    },
+    {
+     "date": "2027-07-26",
+     "name": "Festividad de Santa Ana",
+     "text": "26 de julio: Festividad de Santa Ana."
+    }
+   ],
+   "source": {
+    "title": "Orden de 7 de agosto de 2026, fiestas locales propias de cada municipio de la Comunidad Autónoma de Canarias para el año 2027 (BOC núm. 168, 21-VIII-2026, anuncio 3035)",
+    "url": "https://sede.gobiernodecanarias.org/boc/boc-a-2026-168-3035.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "icod-de-los-vinos",
+   "name": "Icod de los Vinos",
+   "province": "Santa Cruz de Tenerife",
+   "region": "canarias",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-02-23",
+     "name": "Martes de Carnaval",
+     "text": "23 de febrero: Martes de Carnaval."
+    },
+    {
+     "date": "2027-04-26",
+     "name": "Lunes posterior a la Festividad de San Marcos Evangelista",
+     "text": "26 de abril: Lunes posterior a la Festividad de San Marcos Evangelista."
+    }
+   ],
+   "source": {
+    "title": "Orden de 7 de agosto de 2026, fiestas locales propias de cada municipio de la Comunidad Autónoma de Canarias para el año 2027 (BOC núm. 168, 21-VIII-2026, anuncio 3035)",
+    "url": "https://sede.gobiernodecanarias.org/boc/boc-a-2026-168-3035.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "san-miguel-de-abona",
+   "name": "San Miguel de Abona",
+   "province": "Santa Cruz de Tenerife",
+   "region": "canarias",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-02-09",
+     "name": "Martes de Carnaval",
+     "text": "9 de febrero: Martes de Carnaval."
+    },
+    {
+     "date": "2027-09-29",
+     "name": "Festividad de San Miguel Arcángel",
+     "text": "29 de septiembre: Festividad de San Miguel Arcángel."
+    }
+   ],
+   "source": {
+    "title": "Orden de 7 de agosto de 2026, fiestas locales propias de cada municipio de la Comunidad Autónoma de Canarias para el año 2027 (BOC núm. 168, 21-VIII-2026, anuncio 3035)",
+    "url": "https://sede.gobiernodecanarias.org/boc/boc-a-2026-168-3035.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "guimar",
+   "name": "Güímar",
+   "province": "Santa Cruz de Tenerife",
+   "region": "canarias",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-06-29",
+     "name": "Festividad de San Pedro Apóstol",
+     "text": "29 de junio: Festividad de San Pedro Apóstol."
+    },
+    {
+     "date": "2027-09-07",
+     "name": "Festividad de Nuestra Señora del Socorro",
+     "text": "7 de septiembre: Festividad de Nuestra Señora del Socorro."
+    }
+   ],
+   "source": {
+    "title": "Orden de 7 de agosto de 2026, fiestas locales propias de cada municipio de la Comunidad Autónoma de Canarias para el año 2027 (BOC núm. 168, 21-VIII-2026, anuncio 3035)",
+    "url": "https://sede.gobiernodecanarias.org/boc/boc-a-2026-168-3035.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "los-llanos-de-aridane",
+   "name": "Los Llanos de Aridane",
+   "province": "Santa Cruz de Tenerife",
+   "region": "canarias",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-02-09",
+     "name": "Martes de Carnaval",
+     "text": "9 de febrero: Martes de Carnaval."
+    },
+    {
+     "date": "2027-07-02",
+     "name": "Festividad de Nuestra Señora de los Remedios",
+     "text": "2 de julio: Festividad de Nuestra Señora de los Remedios."
+    }
+   ],
+   "source": {
+    "title": "Orden de 7 de agosto de 2026, fiestas locales propias de cada municipio de la Comunidad Autónoma de Canarias para el año 2027 (BOC núm. 168, 21-VIII-2026, anuncio 3035)",
+    "url": "https://sede.gobiernodecanarias.org/boc/boc-a-2026-168-3035.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "santa-cruz-de-la-palma",
+   "name": "Santa Cruz de La Palma",
+   "province": "Santa Cruz de Tenerife",
+   "region": "canarias",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-02-09",
+     "name": "Martes de Carnaval",
+     "text": "9 de febrero: Martes de Carnaval."
+    },
+    {
+     "date": "2027-05-03",
+     "name": "Festividad de la Santa Cruz",
+     "text": "3 de mayo: Festividad de la Santa Cruz."
+    }
+   ],
+   "source": {
+    "title": "Orden de 7 de agosto de 2026, fiestas locales propias de cada municipio de la Comunidad Autónoma de Canarias para el año 2027 (BOC núm. 168, 21-VIII-2026, anuncio 3035)",
+    "url": "https://sede.gobiernodecanarias.org/boc/boc-a-2026-168-3035.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "san-sebastian-de-la-gomera",
+   "name": "San Sebastián de La Gomera",
+   "province": "Santa Cruz de Tenerife",
+   "region": "canarias",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-01-20",
+     "name": "Festividad de San Sebastián",
+     "text": "20 de enero: Festividad de San Sebastián."
+    },
+    {
+     "date": "2027-02-09",
+     "name": "Martes de Carnaval",
+     "text": "9 de febrero: Martes de Carnaval."
+    }
+   ],
+   "source": {
+    "title": "Orden de 7 de agosto de 2026, fiestas locales propias de cada municipio de la Comunidad Autónoma de Canarias para el año 2027 (BOC núm. 168, 21-VIII-2026, anuncio 3035)",
+    "url": "https://sede.gobiernodecanarias.org/boc/boc-a-2026-168-3035.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "valverde",
+   "name": "Valverde",
+   "province": "Santa Cruz de Tenerife",
+   "region": "canarias",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": "Festividad de San Isidro Labrador",
+     "text": "15 de mayo: Festividad de San Isidro Labrador."
+    },
+    {
+     "date": "2027-06-29",
+     "name": "Festividad de San Pedro",
+     "text": "29 de junio: Festividad de San Pedro."
+    }
+   ],
+   "source": {
+    "title": "Orden de 7 de agosto de 2026, fiestas locales propias de cada municipio de la Comunidad Autónoma de Canarias para el año 2027 (BOC núm. 168, 21-VIII-2026, anuncio 3035)",
+    "url": "https://sede.gobiernodecanarias.org/boc/boc-a-2026-168-3035.pdf",
     "checked": "2026-10-26"
    },
    "note": ""
