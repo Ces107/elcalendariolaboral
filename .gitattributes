@@ -1,2 +1,4 @@
 *.ics -text
 *.csv -text
+*.pdf binary
+*.ttf binary
