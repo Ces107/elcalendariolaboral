@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """Calendario laboral 2027 - generador.
 
-Lee data/2027.json y escribe: index.html (portada con las 19 comunidades), <slug>/index.html (la app con la
-comunidad elegida), privacidad/, ics/*.ics, og/*.png, icons/*.png, sitemap.xml, manifest y sw.js.
+Lee data/2027.json y escribe, para cada idioma (es en la raiz; ca, gl y eu en /ca/, /gl/, /eu/ con los mismos slugs):
+portada, 19 comunidades, paginas de ciudad, /festivos-locales/ y privacidad. El castellano escribe ademas lo comun:
+ics/, csv/, og/, icons/, sitemap.xml (con alternates por idioma), manifest y sw.js.
 
-    python build.py          # genera todo
-    python build.py --no-img # sin regenerar PNG
+    CL_SITE=https://elcalendariolaboral.es CL_BASE=/ python build.py          # todo
+    CL_SITE=https://elcalendariolaboral.es CL_BASE=/ python build.py --no-img # sin regenerar PNG
 
-Idiomas: todo texto visible sale de T[LANG] (solo "es" esta lleno; lo que falte cae al castellano) y los
-nombres de comunidades, zonas y festivos de data/i18n.json si existe (ver localize()).
-    CL_LANG=ca CL_LANGS=es,ca python build.py   # escribiria /ca/ con hreflang a / y /ca/
+Textos: T["es"] aqui; ca/gl/eu salen de data/i18n.json (ver strings()). Si una cadena no existe alli ni se puede
+sacar de un patron de ese idioma, queda en castellano (NO_TR lo lista).
 """
 import copy
 import datetime as dt
@@ -17,120 +17,34 @@ import hashlib
 import html
 import json
 import os
+import subprocess
 import sys
 from pathlib import Path
 from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parent
-# Where the site is served. Defaults: ces107.github.io/calendario-laboral-2027/. For the own domain:
-#   CL_SITE=https://elcalendariolaboral.es CL_BASE=/ python build.py
 SITE = os.environ.get("CL_SITE", "https://ces107.github.io").rstrip("/")
 ASSETS = os.environ.get("CL_BASE", "/calendario-laboral-2027/")  # css, js, ics, og, icons: shared by every language
 HOST = SITE.split("://", 1)[1]
 LANG = os.environ.get("CL_LANG", "es")
-LANGS = [x for x in os.environ.get("CL_LANGS", "es").split(",") if x] or ["es"]  # trees that exist, for hreflang
+LANGS = [x for x in os.environ.get("CL_LANGS", "es,ca,gl,eu").split(",") if x] or ["es"]
 if LANG not in LANGS:
     LANGS.append(LANG)
+LANG_NAMES = {"es": "Español", "ca": "Català", "gl": "Galego", "eu": "Euskara"}
+IN_LANG = {"es": "es-ES", "ca": "ca-ES", "gl": "gl-ES", "eu": "eu-ES"}
 
 
 def lang_base(lang):
     return ASSETS if lang == "es" else f"{ASSETS}{lang}/"
 
 
-BASE = lang_base(LANG)  # pages of this language
+BASE = lang_base(LANG)
 URL = SITE + BASE
 OUT = ROOT if LANG == "es" else ROOT / LANG
 YEAR = 2027
 DAYS = [dt.date(YEAR, 1, 1) + dt.timedelta(i) for i in range(365)]
 E = html.escape
 
-# ---------------------------------------------------------------- strings
-# One table per language. Only "es" is filled; t() falls back to it key by key.
-T = {"es": {
-    "og_locale": "es_ES", "site_name": "El Calendario Laboral",
-    "months": ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"],
-    "mon3": ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"],
-    "wd": ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"],
-    "wd3": ["lun", "mar", "mié", "jue", "vie", "sáb", "dom"],
-    "wd1": "LMXJVSD",
-    "long_day": "{wd} {d} de {m}",
-    # head
-    "title_home": "Calendario laboral 2027: festivos y puentes en España",
-    "desc_home": "Calendario laboral 2027 de España según el BOE: festivos de tu comunidad y tu ciudad, puentes y un planificador que te dice cuántos días libras.",
-    "title_region": "Calendario laboral 2027 {name}: festivos y puentes",
-    "title_region2": "Calendario laboral 2027 {name}: festivos",
-    "desc_region": "Festivos 2027 en {name}: los {n} del BOE con su día, {p} puentes y planificador de vacaciones. Añade los 2 locales de tu ciudad y expórtalo.",
-    "ld_app": "El Calendario Laboral 2027", "ld_list": "Festivos 2027 en {place}",
-    "crumb_home": "España",
-    "h_fest_r": "Festivos 2027 en {name}", "h_pts_r": "Puentes 2027 en {name}", "h_fest_home": "Festivos 2027 en España",
-    "csv_btn": "Excel (CSV)", "print_btn": "Imprimir",
-    "sub_note_city": "Google y Apple: los festivos de {name}, sin tus vacaciones.",
-    "updated": "actualizado {d}",
-    "title_privacy": "Privacidad · El Calendario Laboral",
-    "desc_privacy": "Privacidad de El Calendario Laboral: no guardamos datos tuyos en servidores.",
-    # page
-    "share": "Compartir", "print": "Imprimir", "theme": "Modo oscuro",
-    "h1": "Calendario laboral 2027", "spain": "España", "region_label": "Comunidad autónoma",
-    "home_grid": "Elige tu comunidad", "home_meta": "{n} festivos nacionales",
-    "zone_prompt": "Elige tu isla", "zone_general": "Zona general", "zone_label": "Zona", "island_feast": "Fiesta de tu isla",
-    "meta_fest": "{n} festivos", "meta_isle": "+ 1 de tu isla", "meta_loc": "+ 2 locales",
-    "meta_pts1": "{n} puente", "meta_pts": "{n} puentes", "meta_lab": "{n} días laborables (lun–vie)",
-    "src": "BOE 13 oct 2026", "src_title": "Datos revisados el {d}",
-    "legend": "Leyenda", "k_f": "Festivo", "k_v": "Vacaciones",
-    "lbl_r": "De tu comunidad", "lbl_l": "Local", "lbl_6": "en sábado", "lbl_7": "en domingo",
-    "h_fest": "Festivos", "h_pts": "Puentes", "h_lw": "Fines de semana largos", "h_year": "Año 2027", "h_vac": "Vacaciones",
-    "loc_more": "de tu municipio", "loc_aria": "Festivo local", "loc_out": "Elige un día de 2027",
-    "local_name": "Festivo local", "local_rm_aria": "Quitar festivo local del {d}",
-    "vmode": "Marcar vacaciones", "done": "Hecho", "vhint": "Marca los días que te coges.", "vclear": "Borrar",
-    "vac_days1": "{n} día de vacaciones", "vac_days": "{n} días de vacaciones",
-    "step_minus": "Un día menos", "step_plus": "Un día más", "step_input": "Días laborables de vacaciones",
-    "step_lbl": "días laborables de vacaciones", "plan_h": "Mejores opciones",
-    "days": "días", "free": "libres", "cost1": "{n} día", "cost": "{n} días", "trade_sr": "{c} de vacaciones, {n} días libres",
-    "take1": "Coge {a}", "take2": "Coge {a} y {b}", "take_r": "Coge {a}–{b}", "take_rx": "Coge {a} – {b}",
-    "add_vac": "Añadir a mis vacaciones", "rm_vac": "Quitar de mis vacaciones", "no_bridges": "Este año no hay puentes.",
-    "ics_btn": "Descargar .ics", "gcal": "Google Calendar", "apple": "Apple / Outlook",
-    "sub_note": "Google y Apple: solo los festivos oficiales, sin tus locales ni vacaciones.",
-    "ics_file": "festivos-2027", "ics_calname": "Festivos 2027 · {label}", "vac_event": "Vacaciones",
-    "toast_add": "Añadido · {t}", "toast_rm": "Quitado · {t}",
-    "toast_local": "Festivo local: {d}", "toast_cleared": "Vacaciones borradas", "toast_copied": "Enlace copiado",
-    "foot_regions": "Por comunidad", "foot_data": "Datos:", "foot_boe": "BOE del 13 de octubre de 2026", "foot_privacy": "Privacidad",
-    "print_src": "Festivos: {boe}", "privacy_slug": "privacidad",
-    "privacy_h1": "Privacidad",
-    "privacy_body": [
-        "No guardamos ningún dato tuyo en servidores. Tu comunidad, tus festivos locales y tus vacaciones se quedan en tu navegador o en tu móvil, y puedes borrarlos cuando quieras.",
-        "No hay cuentas, ni cookies propias, ni analítica.",
-        "La web muestra anuncios de Google AdSense. Google puede usar cookies o identificadores para servir y medir anuncios. En la UE, el EEE y el Reino Unido, un aviso de consentimiento de Google te pregunta antes de mostrar anuncios personalizados.",
-        "La tipografía se carga desde Google Fonts. «Google Calendar» te lleva a Google, con su propia política de privacidad. El archivo .ics se crea en tu dispositivo.",
-    ],
-    "privacy_ads": 'Cómo usa Google los datos: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">policies.google.com</a>. Tus preferencias de anuncios: <a href="https://adssettings.google.com" rel="noopener">adssettings.google.com</a>.',
-    "privacy_src": "Festivos: {link}, {boe}. Contacto: {mail}.",
-    # images and manifest
-    "og_l1": "Calendario laboral 2027", "og_home": "Festivos y puentes", "og_home_sub": "19 comunidades · BOE 13-10-2026",
-    "og_sub": "{n} festivos · {p} puentes",
-    "app_name": "Calendario laboral 2027", "app_short": "Laboral 2027", "app_desc": "Festivos, puentes y vacaciones 2027 por comunidad.",
-}}
-# Strings app.js needs (embedded as #cal-i18n).
-JS_KEYS = ["months", "mon3", "wd", "wd3", "wd1", "long_day", "title_region", "title_region2", "h_fest_r", "h_pts_r", "spain", "zone_prompt", "zone_general",
-           "island_feast", "h_lw", "meta_fest", "meta_isle", "meta_loc", "meta_pts1", "meta_pts", "meta_lab", "home_meta",
-           "lbl_r", "lbl_l", "lbl_6", "lbl_7", "loc_more", "loc_out", "local_name", "local_rm_aria",
-           "vmode", "done", "vhint", "vac_days1", "vac_days", "days", "free", "cost1", "cost", "trade_sr",
-           "take1", "take2", "take_r", "take_rx", "add_vac", "rm_vac", "no_bridges",
-           "ics_file", "ics_calname", "vac_event", "toast_add", "toast_rm", "toast_local", "toast_cleared", "toast_copied"]
-
-
-def t(key, **kw):
-    s = T.get(LANG, {}).get(key)
-    if s is None:
-        s = T["es"][key]
-    return s.format(**kw) if kw else s
-
-
-def tn(key, n, **kw):
-    """Singular key <key>1 when n == 1."""
-    return t(key + "1" if n == 1 and (key + "1") in T["es"] else key, n=n, **kw)
-
-
-# ---------------------------------------------------------------- data
 
 def load():
     return json.loads((ROOT / "data" / "2027.json").read_text("utf-8"))
@@ -141,13 +55,239 @@ def load_i18n():
     return json.loads(p.read_text("utf-8")) if p.exists() else {}
 
 
+I18N = load_i18n()
+
+# ---------------------------------------------------------------- strings
+# Spanish. Plural values are {"one": ..., "other": ...}.
+ES = {
+    "og_locale": "es_ES", "site_name": "El Calendario Laboral",
+    "title_home": "Calendario laboral 2027: festivos y puentes en España",
+    "desc_home": "Calendario laboral 2027 de España según el BOE: festivos de tu comunidad y tu ciudad, puentes y un planificador que te dice cuántos días libras.",
+    "title_region": "Calendario laboral 2027 {region}: festivos y puentes",
+    "title_region2": "Calendario laboral 2027 {region}: festivos",
+    "desc_region": "Festivos 2027 en {region}: los {n} del BOE con su día, {p} puentes y planificador de vacaciones. Añade los 2 locales de tu ciudad y expórtalo.",
+    "h1": "Calendario laboral 2027", "h1_region": "Calendario laboral 2027 {region_of}",
+    "spain": "España", "in_spain": "en España",
+    "nav_regions": "Comunidades", "nav_locals": "Festivos locales", "nav_bridges": "Puentes",
+    "region_label": "Comunidad autónoma", "pick_region": "Elige tu comunidad",
+    "h_hol": "Festivos 2027 en {region}", "h_pts": "Puentes 2027 en {region}", "h_loc": "Festivos locales 2027 en {region}",
+    "h_cal": "Calendario 2027", "h_vac": "Vacaciones", "h_faq": "Preguntas frecuentes",
+    "col_date": "Fecha", "col_day": "Día", "col_hol": "Festivo", "col_scope": "Ámbito", "col_bridge": "Puente",
+    "col_free": "Días libres", "col_vac": "Días de vacaciones", "col_city": "Ciudad", "col_src": "Fuente",
+    "k_n": "Nacional", "k_r": "Autonómico", "k_l": "Local", "k_v": "Vacaciones", "legend": "Leyenda",
+    "mark": "Marcar mis vacaciones", "clear": "Borrar", "vac_cleared": "Vacaciones borradas",
+    "vac_days": {"one": "{n} día de vacaciones", "other": "{n} días de vacaciones"},
+    "vac_added": {"one": "{n} día en tus vacaciones", "other": "{n} días en tus vacaciones"},
+    "vac_removed": "Quitado de tus vacaciones",
+    "add_vac": "Añadir a mis vacaciones", "rm_vac": "Quitar de mis vacaciones",
+    "no_vac": "sin coger vacaciones", "no_bridges": "Este año no hay puentes.",
+    "how_many": "¿Cuántos días de vacaciones?", "one_more": "Un día más", "one_less": "Un día menos",
+    "print": "Imprimir", "csv": "Excel (CSV)", "add_cal": "Añadir a tu calendario", "ics_dl": "Descargar .ics",
+    "gcal": "Añadir a Google Calendar", "apple": "Apple / Outlook",
+    "next_hol": "Próximo festivo", "days_left": {"one": "Falta {n} día", "other": "Faltan {n} días"},
+    "tomorrow": "Mañana", "today": "Hoy",
+    "add_local": "Añadir festivo local", "remove_local": "Quitar festivo local", "local_holiday": "Festivo local",
+    "local_toast": "Festivo local: {date}",
+    "island": "Isla", "zone": "Zona", "zone_general": "Zona general", "pick_island": "Elige tu isla", "island_holiday": "Fiesta de tu isla",
+    "privacy": "Privacidad", "data_source": "Datos: BOE del 13 de octubre de 2026", "locals": "Locales",
+    "n_hol": {"one": "{n} festivo", "other": "{n} festivos"}, "n_pts": {"one": "{n} puente", "other": "{n} puentes"},
+    "n_lab": {"one": "{n} día laborable", "other": "{n} días laborables"},
+    "n_nat": {"one": "{n} festivo nacional", "other": "{n} festivos nacionales"},
+    "menu": "Menú", "crumbs": "Migas de pan", "pending": "aprobado por el pleno, pendiente del boletín",
+    "unpublished": "pendiente de publicar",
+    "ics_file": "festivos-2027", "ics_calname": "Festivos 2027 · {label}", "vac_event": "Vacaciones",
+    "title_privacy": "Privacidad · El Calendario Laboral",
+    "desc_privacy": "Privacidad de El Calendario Laboral: no guardamos datos tuyos en servidores.",
+    "privacy_p1": "No guardamos ningún dato tuyo en servidores. Tu comunidad, tus festivos locales y tus vacaciones se quedan en tu navegador o en tu móvil, y puedes borrarlos cuando quieras.",
+    "privacy_ads": "No hay cuentas, ni cookies propias, ni analítica. La web muestra anuncios de Google AdSense. Google puede usar cookies o identificadores para servir y medir anuncios. En la UE, el EEE y el Reino Unido, un aviso de consentimiento de Google te pregunta antes de mostrar anuncios personalizados.",
+    "privacy_p3": "La tipografía se carga desde Google Fonts. «Añadir a Google Calendar» te lleva a Google, con su propia política de privacidad. El archivo .ics se crea en tu dispositivo.",
+    "privacy_links": 'Cómo usa Google los datos: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">policies.google.com</a>. Tus preferencias de anuncios: <a href="https://adssettings.google.com" rel="noopener">adssettings.google.com</a>.',
+    "og_l1": "Calendario laboral 2027", "og_home": "Festivos y puentes", "og_home_sub": "19 comunidades · BOE 13-10-2026",
+    "og_sub": "{n} festivos · {p} puentes",
+    "app_name": "Calendario laboral 2027", "app_short": "Laboral 2027", "app_desc": "Festivos, puentes y vacaciones 2027 por comunidad.",
+}
+# Spanish "de <comunidad>" for the H1
+ES_OF = {"pais-vasco": "del País Vasco", "comunitat-valenciana": "de la Comunidad Valenciana"}
+
+# Strings only Spanish has, aria-only labels without a translation in data/i18n.json. The ca/gl/eu pages keep the
+# Spanish text (or drop an aria-label) for these; the report lists them.
+NO_TR = ["menu", "pending", "unpublished", "privacy_ads", "privacy_links", "h_faq"]
+
+
+def _strip_n(s):
+    return s.replace("{n} ", "").replace(" {n}", "").replace("{n}", "").strip()
+
+
+def strings(lang):
+    """T for one language. ca/gl/eu: i18n.json ui keys verbatim, or derived from a pattern of the same language
+    (noted inline); anything else falls back to Spanish."""
+    if lang == "es" or not I18N:
+        return dict(ES)
+    U = lambda k: I18N["ui"][k][lang]  # noqa: E731
+    M, W = I18N["months"][lang], I18N["weekdays"][lang]
+    nreg = U("n_regions")
+    locals_word = {"ca": "Festius locals", "gl": "Festivos locais", "eu": "Tokiko jaiegunak"}[lang]  # as written in ui.plus_two_local
+    hol_word = U("holidays")
+    h_hol = U("holidays_in_region")
+
+    def swap(word):  # ui.holidays_in_region with "Festius" replaced by another noun of the same language
+        k = h_hol.lower().find(hol_word.lower())
+        out = h_hol[:k] + (word if k == 0 else word.lower()) + h_hol[k + len(hol_word):]
+        return out[0].upper() + out[1:]
+
+    site = U("site_title")
+    t = dict(ES)
+    t.update({
+        "og_locale": {"ca": "ca_ES", "gl": "gl_ES", "eu": "eu_ES"}[lang],
+        "title_home": U("title_home"), "desc_home": U("meta_home"),
+        "title_region": U("title_region"), "title_region2": U("title_region").split(":")[0],
+        "desc_region": U("meta_region"),
+        "h1": site, "h1_region": U("title_region").split(":")[0],
+        "spain": U("spain"), "in_spain": U("in_spain"),
+        # ui.n_regions without the number; Basque has no bare plural there, so ui.by_region
+        "nav_regions": U("by_region") if lang == "eu" else _strip_n(nreg.replace("19", "{n}")).capitalize(),
+        "nav_locals": locals_word, "nav_bridges": U("bridges"),
+        "region_label": U("region_label"), "pick_region": U("pick_region"),
+        "h_hol": h_hol, "h_pts": swap(U("bridges")), "h_loc": swap(locals_word.lower() if lang != "eu" else "tokiko jaiegunak"),
+        # ui.site_title without "laboral" / "lan-"
+        "h_cal": {"ca": site.replace(" laboral", ""), "gl": site.replace(" laboral", ""), "eu": site.replace("lan-", "")}[lang],
+        "h_vac": U("vacation"),
+        "col_date": "2027", "col_day": {"ca": "Dia", "gl": "Día", "eu": "Eguna"}[lang],  # ui.n_days / holiday names ("Errege eguna")
+        "col_hol": {"ca": "Festiu", "gl": "Festivo", "eu": "Jaieguna"}[lang],  # ui.n_holidays one / ui.local_holiday
+        "col_scope": "",
+        "col_bridge": {"ca": "Pont", "gl": "Ponte", "eu": "Zubia"}[lang],  # ui.n_bridges one
+        "col_free": {"ca": "Dies de festa", "gl": "Días libres", "eu": "Egun libreak"}[lang],  # ui.meta_home
+        "col_vac": U("vacation_days"),
+        "col_city": {"ca": "Municipi", "gl": "Concello", "eu": "Udalerria"}[lang],  # ui.plus_two_local
+        "col_src": U("data_source").split(":")[0],
+        "k_n": U("key_national"), "k_r": U("key_regional"), "k_l": U("key_local"), "k_v": U("vacation"), "legend": U("legend"),
+        "mark": U("mark_vacation"), "clear": U("clear"), "vac_cleared": U("vacation_cleared"),
+        "vac_days": U("n_vacation_days"), "vac_added": U("added_to_vacation"), "vac_removed": U("removed_from_vacation"),
+        "add_vac": U("add_to_vacation"), "rm_vac": U("remove_from_vacation"),
+        "no_vac": U("no_vacation"), "no_bridges": U("no_bridges"),
+        "how_many": U("how_many_days"), "one_more": U("one_more_day"), "one_less": U("one_less_day"),
+        "print": U("print"),
+        # ui.meta_home "Afegeix-los al teu calendari" / "Engádeos ao teu calendario" / "Gehitu zure egutegira", as a command
+        "add_cal": {"ca": "Afegeix al teu calendari", "gl": "Engadir ao teu calendario", "eu": "Gehitu zure egutegira"}[lang],
+        "ics_dl": U("download_ics"), "gcal": U("add_gcal"),
+        "next_hol": U("next_holiday"), "days_left": U("days_left"), "tomorrow": U("tomorrow"), "today": U("today"),
+        "add_local": U("add_local"), "remove_local": U("remove_local"), "local_holiday": U("local_holiday"),
+        "local_toast": U("local_toast"),
+        "island": U("island"), "zone": U("zone"), "zone_general": U("zone_general"), "pick_island": U("pick_island"),
+        "island_holiday": U("island_holiday"),
+        "privacy": U("privacy"), "data_source": U("data_source"), "locals": U("locals"),
+        "n_hol": U("n_holidays"), "n_pts": U("n_bridges"), "n_lab": U("n_workdays"), "n_nat": U("n_national"),
+        "crumbs": None,
+        "ics_calname": f"{hol_word} 2027 · {{label}}", "vac_event": U("vacation"),
+        "title_privacy": f'{U("privacy")} · El Calendario Laboral', "desc_privacy": U("privacy_meta"),
+        "privacy_p1": U("privacy_p1"), "privacy_p3": U("privacy_p3"),
+        "og_l1": site, "og_home": U("og_title"), "app_desc": U("manifest_description"),
+    })
+    t["_months"], t["_mon3"], t["_wd"], t["_wd3"] = M["full"], M["short"], W["full"], W["short"]
+    t["_mof"] = M["gen"] if lang == "eu" else M["of"]
+    t["_wdh"] = [x.capitalize() for x in (W["short"] if lang == "gl" else W["two"])]
+    return t
+
+
+def _es_dates(t):
+    M, W = I18N["months"]["es"], I18N["weekdays"]["es"]
+    t["_months"], t["_mon3"], t["_wd"], t["_wd3"], t["_mof"] = M["full"], M["short"], W["full"], W["short"], M["of"]
+    t["_wdh"] = [x.capitalize() for x in W["short"]]
+
+
+T = strings(LANG)
+if LANG == "es":
+    _es_dates(T)
+
+
+def t(key, **kw):
+    s = T.get(key)
+    if s is None:
+        s = ES.get(key, "")
+    return s.format(**kw) if kw else s
+
+
+def tn(key, n, **kw):
+    v = T.get(key) or ES[key]
+    s = v["one"] if n == 1 else v["other"]
+    return s.format(n=n, **kw)
+
+
+def R(r):
+    """Region names for templates: region, region_in, region_of (+ seo, the usual form in this language, or None)."""
+    slug = r["slug"]
+    if LANG == "es":
+        return {"region": r["name"], "region_in": f'en {r["name"]}', "region_of": ES_OF.get(slug, f'de {r["name"]}'), "seo": None}
+    x = I18N["regions"][slug][LANG]
+    return {"region": x["name"], "region_in": x["in"], "region_of": x["of"], "seo": x.get("seo")}
+
+
+def fill(s, names, **kw):
+    return s.format(**names, **kw) if "{" in s else s
+
+
+# ---------------------------------------------------------------- dates in this language
+
+def _d(x):
+    return x if isinstance(x, dt.date) else dt.date.fromisoformat(x)
+
+
+def eu_da(n):
+    return str(n) if n in (11, 31) else f"{n}a"  # Basque day with article, bare for 11 and 31 (i18n date_patterns.eu)
+
+
+def dm(x):
+    """1 de enero · 1 de gener · 1 de xaneiro · urtarrilaren 1a"""
+    d = _d(x)
+    m = T["_mof"][d.month - 1]
+    return f"{m} {eu_da(d.day)}" if LANG == "eu" else f"{d.day} {m}"
+
+
+def dlong(x):
+    d = _d(x)
+    wd = T["_wd"][d.weekday()]
+    return f"{dm(d)}, {wd}" if LANG == "eu" else f"{wd} {dm(d)}"
+
+
+def dshort(x):
+    """vie 1 ene · dv. 1 gen. · urt. 1, or."""
+    d = _d(x)
+    w, m = T["_wd3"][d.weekday()], T["_mon3"][d.month - 1]
+    return f"{m} {d.day}, {w}" if LANG == "eu" else f"{w} {d.day} {m}"
+
+
+def dmon(x):
+    d = _d(x)
+    m = T["_mon3"][d.month - 1]
+    return f"{m} {d.day}" if LANG == "eu" else f"{d.day} {m}"
+
+
+def drange(i, j):
+    a, b = DAYS[i], DAYS[j]
+    if a.month == b.month and LANG != "eu":
+        return f'{T["_wd3"][a.weekday()]} {a.day} – {dshort(b)}'
+    return f"{dshort(a)} – {dshort(b)}"
+
+
+def dlist(idx):
+    """Days to take: 'lun 4, mar 5 ene' (same as dlist() in app.js)."""
+    if len(idx) == 2 and DAYS[idx[0]].month == DAYS[idx[1]].month and LANG != "eu":
+        a = DAYS[idx[0]]
+        return f'{T["_wd3"][a.weekday()]} {a.day}, {dshort(DAYS[idx[1]])}'
+    return ", ".join(dshort(DAYS[i]) for i in idx)
+
+
+def dmy(iso):
+    d = _d(iso)
+    return f'{d.day} {T["_mon3"][d.month - 1]} {d.year}'
+
+
+# ---------------------------------------------------------------- data
+
 def localize(data, lang=LANG, i18n=None):
-    """Copy of data with names in `lang`, read from data/i18n.json:
-    {"ca": {"regions": {"cataluna": "Catalunya"}, "official": {"madrid": "..."},
-            "holidays": {"<nombre en castellano>": "..."}, "zones": {"canarias": "Illa", "canarias.tenerife": "Tenerife"}}}
-    Anything missing keeps the Spanish name."""
-    tr = (load_i18n() if i18n is None else i18n).get(lang, {})
-    if not tr:
+    """Copy of data with names in `lang` (data/i18n.json top-level views). Missing names stay Spanish."""
+    tr = (I18N if i18n is None else i18n).get(lang, {})
+    if not tr or lang == "es":
         return data
     d = copy.deepcopy(data)
     for r in d["regions"]:
@@ -185,7 +325,6 @@ def region_holidays(data, slug, zone=None):
 
 
 def runs(off):
-    """Tramos consecutivos [inicio, fin, libre]."""
     res, s = [], 0
     for i in range(1, len(off) + 1):
         if i == len(off) or off[i] != off[s]:
@@ -234,144 +373,96 @@ def puentes(hols):
 
 
 def long_weekends(hols):
-    """Fines de semana largos sin coger nada, salvo los que ya caen dentro de un puente. Igual que longWeekends() en app.js."""
+    """Fines de semana largos sin coger nada, salvo los que ya caen dentro de un puente."""
     items = _bridge_items(hols)
     pts = [it for it in items if it["cost"]]
     return [it for it in items if not it["cost"] and not any(p["s"] <= it["s"] and it["e"] <= p["e"] for p in pts)]
 
 
-def fmt_day(d):
-    return f'{t("wd3")[d.weekday()]} {d.day} {t("mon3")[d.month - 1]}'
+def all_breaks(hols):
+    """Puentes and long weekends in one list, by date (the puentes table)."""
+    return sorted(puentes(hols) + long_weekends(hols), key=lambda it: (it["s"], it["e"]))
 
 
-def fmt_range(i, j):
-    a, b = DAYS[i], DAYS[j]
-    if a.month == b.month:
-        return f'{t("wd3")[a.weekday()]} {a.day} – {t("wd3")[b.weekday()]} {b.day} {t("mon3")[b.month - 1]}'
-    return f"{fmt_day(a)} – {fmt_day(b)}"
+def workdays(hols, minus=0):
+    hd = {h["date"] for h in hols}
+    return sum(1 for d in DAYS if d.weekday() < 5 and d.isoformat() not in hd) - minus
 
 
-# ---------------------------------------------------------------- html parts
-
-LOGO = ('<svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1.5" y="3.5" width="23" height="21" rx="4" fill="none" '
-        'stroke="currentColor" stroke-width="2"/><path d="M1.5 9.5h23" stroke="currentColor" stroke-width="2"/>'
-        '<path d="M7.5 1.5v4M18.5 1.5v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>'
-        '<circle cx="13" cy="16.5" r="3.6" style="fill:var(--red)"/></svg>')
-ICON_SHARE = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V3m0 0L7.5 7.5M12 3l4.5 4.5M5 12v7a1.5 1.5 0 0 0 1.5 1.5h11A1.5 1.5 0 0 0 19 19v-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>'
-ICON_PRINT = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 9V3.5h10V9M7 17H4.5V10a1 1 0 0 1 1-1h13a1 1 0 0 1 1 1v7H17M7 14h10v6.5H7z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>'
-ICON_THEME = ('<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" '
-              'stroke-width="1.8" stroke-linejoin="round"/></svg>')
-ADSENSE = ('<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9914165605609514" '
-           'crossorigin="anonymous"></script>')
-HEAD_JS = ("<script>try{var t=localStorage.getItem('cl27.theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>")
-THEME_JS = ("<script>(function(){var b=document.getElementById('theme');if(!b)return;var r=document.documentElement,"
-            "dk=function(){return r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches};"
-            "b.setAttribute('aria-pressed',String(dk()));b.onclick=function(){var n=dk()?'light':'dark';r.dataset.theme=n;"
-            "b.setAttribute('aria-pressed',String(n==='dark'));try{localStorage.setItem('cl27.theme',n)}catch(e){}}})();"
-            "if('serviceWorker'in navigator)addEventListener('load',function(){navigator.serviceWorker.register('" + ASSETS + "sw.js',{scope:'" + ASSETS + "'}).catch(function(){})});</script>")
-
-
-def top_html(app=True):
-    tools = ""
-    if app:
-        tools += (f'<button class="ib" id="sh" type="button" aria-label="{t("share")}" title="{t("share")}">{ICON_SHARE}</button>'
-                  f'<button class="ib" id="pr" type="button" aria-label="{t("print")}" title="{t("print")}">{ICON_PRINT}</button>')
-    tools += f'<button class="ib" id="theme" type="button" aria-label="{t("theme")}" title="{t("theme")}">{ICON_THEME}</button>'
-    return (f'<header class="top"><div class="wrap top-in"><a class="logo" href="{BASE}">{LOGO}<span>elcalendariolaboral<i>.es</i></span></a>'
-            f'<div class="tools">{tools}</div></div></header>')
-
-
-def key_html():
-    return (f'<ul class="key" aria-label="{t("legend")}"><li><i class="k f"></i>{t("k_f")}</li>'
-            f'<li id="k-v" hidden><i class="k v"></i>{t("k_v")}</li></ul>')
-
-
-def month_html(m, hmap):
-    first = dt.date(YEAR, m, 1)
-    nd = ((dt.date(YEAR + (m == 12), m % 12 + 1, 1)) - first).days
-    cells = [f'<span class="wd">{c}</span>' for c in t("wd1")]
-    cells += ["<i></i>"] * first.weekday()
-    for d in range(1, nd + 1):
-        day = dt.date(YEAR, m, d)
-        iso = day.isoformat()
-        cls = ["we"] if day.weekday() >= 5 else []
-        tt = ""
-        if iso in hmap:
-            cls.append(hmap[iso]["kind"])
-            tt = f' title="{E(hmap[iso]["name"])}"'
-        c = f' class="{" ".join(cls)}"' if cls else ""
-        cells.append(f'<b data-d="{iso}"{c}{tt}>{d}</b>')
-    cells += ["<i></i>"] * (42 - first.weekday() - nd)
-    return f'<section class="m" id="m{m}"><h3>{t("months")[m - 1].capitalize()}</h3><div class="g">{"".join(cells)}</div></section>'
-
-
-def year_html(hmap):
-    # the grid is a picture of the list next to it; screen readers get the list (app.js lifts this while marking)
-    return '<div class="year" id="year" aria-hidden="true">' + "".join(month_html(m, hmap) for m in range(1, 13)) + "</div>"
-
-
-def hol_li(h):
-    """Same markup as hlist() in app.js."""
-    d = dt.date.fromisoformat(h["date"])
-    lbl = [x for x in ({"r": t("lbl_r"), "l": t("lbl_l")}.get(h["kind"]), t(f"lbl_{d.weekday() + 1}") if d.weekday() >= 5 else None) if x]
-    cls = h["kind"] + (" wk" if d.weekday() >= 5 else "")
-    small = f'<small>{" · ".join(lbl)}</small>' if lbl else ""
-    return (f'<li class="{cls}"><time datetime="{h["date"]}">{d.day} {t("mon3")[d.month - 1]}</time>'
-            f'<span>{E(h["name"])}{small}</span><em>{t("wd3")[d.weekday()]}</em></li>')
-
-
-def take_txt(take):
-    days = [f'{t("wd3")[DAYS[i].weekday()]} {DAYS[i].day}' for i in take]
-    return t("take1", a=days[0]) if len(days) == 1 else t("take2", a=days[0], b=days[1])
-
-
-def trade_html(cost, n):
-    c = tn("cost", cost)
-    return (f'<span class="z"><span class="c">{c} →</span><span class="g2"><b>{n}</b> {t("free")}</span>'
-            f'<span class="sr">{t("trade_sr", c=c, n=n)}</span></span>')
-
-
-def puente_li(it, k):
-    """Same markup as item() in app.js, so the page does not jump when the script takes over."""
-    return (f'<li><button type="button" class="it" data-k="p{k}" aria-expanded="false"><span class="a">'
-            f'<time>{fmt_range(it["s"], it["e"])}</time><small>{E(take_txt(it["take"]))}</small></span>'
-            f'{trade_html(it["cost"], it["len"])}</button></li>')
-
-
-def lw_html(items):
-    """Long weekends: no count, one quiet line each (same as lwList() in app.js)."""
-    if not items:
-        return ""
-    li = "".join(f'<li><time>{fmt_range(it["s"], it["e"])}</time><span>{it["len"]} {t("days")}</span></li>' for it in items)
-    return f'<h3 class="sub">{t("h_lw")}</h3><ul class="lw">{li}</ul>'
-
-
-HUBS = [("festivos/", "Festivos 2027"), ("puentes/", "Puentes 2027"), ("dias-laborables/", "Días laborables 2027"),
-        ("festivos-locales/", "Festivos locales 2027"), ("calendario-escolar/", "Calendario escolar 2026-2027"),
-        ("vacaciones-escolares/navidad/", "Navidad en los colegios")]
+def page_holidays(data, r=None, city=None):
+    if not r:
+        return [h for h in region_holidays(data, "madrid") if h["kind"] == "n"]
+    hols = region_holidays(data, r["slug"], city["zone"] if city else None)
+    if city:
+        hols = sorted(hols + [{"date": h["date"], "name": h["name"], "code": 0, "kind": "l"} for h in city["holidays"]],
+                      key=lambda h: h["date"])
+    return hols
 
 
 def pick(limit, *cands):
     """First candidate that fits in `limit` characters (titles 60, descriptions 155); else the shortest."""
     for c in cands:
-        if len(c) <= limit:
+        if c and len(c) <= limit:
             return c
-    return min(cands, key=len)
+    return min((c for c in cands if c), key=len)
 
 
-def footer_html(data, current=None):
-    regs = "".join(f'<a href="{BASE}{r["slug"]}/"{" aria-current=page" if r["slug"] == current else ""}>{E(r["name"])}</a>'
-                   for r in data["regions"])
-    hubs = "".join(f'<a href="{BASE}{p}"{" aria-current=page" if p == current else ""}>{E(n)}</a>' for p, n in HUBS)
+# ---------------------------------------------------------------- html parts
+
+ADSENSE = ('<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9914165605609514" '
+           'crossorigin="anonymous"></script>')
+SW_JS = ("<script>if('serviceWorker'in navigator)addEventListener('load',function(){navigator.serviceWorker.register('"
+         + ASSETS + "sw.js',{scope:'" + ASSETS + "'}).catch(function(){})});</script>")
+LOGO = ('<svg class="logo-i" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="3" width="22" height="20" rx="3" fill="#0b4f8c"/>'
+        '<rect x="3" y="8" width="18" height="13" rx="1" fill="#fff"/><path d="M7 1v4M17 1v4" stroke="#0b4f8c" stroke-width="2" stroke-linecap="round"/>'
+        '<rect x="13" y="14" width="5" height="4" fill="#c62828"/></svg>')
+CHEV = '<svg class="chev" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1.5 3.5 5 7l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>'
+GLOBE = ('<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.3"/>'
+         '<path d="M1.5 8h13M8 1.5c2 2 2.8 4.2 2.8 6.5S10 12.5 8 14.5M8 1.5C6 3.5 5.2 5.7 5.2 8S6 12.5 8 14.5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>')
+BURGER = '<svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.8"/></svg>'
+
+PAGE_PATH = ""  # path of the page being written, below the language base (for the language selector)
+REGIONS = []    # localized regions, for the header menu and footer
+
+
+def lang_links(cls=""):
+    return "".join(f'<a href="{lang_base(x)}{PAGE_PATH}" hreflang="{x}" lang="{x}"{" aria-current=true" if x == LANG else ""}{cls}>{LANG_NAMES[x]}</a>'
+                   for x in LANGS)
+
+
+def header_html(here=""):
+    """Wordmark, nav (Comunidades menu, Festivos locales, Puentes) and the language menu. `here`: 'locals' marks the nav item."""
+    regs = "".join(f'<a href="{BASE}{r["slug"]}/">{E(r["name"])}</a>' for r in REGIONS)
+    pts_href = "#puentes" if here == "app" else f"{BASE}#puentes"
+    menu_aria = f' aria-label="{t("menu")}"'
+    return (f'<header class="hd"><div class="wrap hd-in">'
+            f'<a class="brand" href="{BASE}">{LOGO}<span>elcalendariolaboral<span class="tld">.es</span></span></a>'
+            f'<nav class="nav" id="nav">'
+            f'<details class="dd dd-reg"><summary>{t("nav_regions")}{CHEV}</summary><div class="menu menu-reg">{regs}</div></details>'
+            f'<a href="{BASE}festivos-locales/"{" aria-current=page" if here == "locals" else ""}>{t("nav_locals")}</a>'
+            f'<a href="{pts_href}">{t("nav_bridges")}</a><div class="nav-lang">{lang_links()}</div></nav>'
+            f'<details class="dd dd-lang"><summary>{GLOBE}<span class="ln-l">{LANG_NAMES[LANG]}</span><span class="ln-s">{LANG.upper()}</span>{CHEV}</summary>'
+            f'<div class="menu menu-lang">{lang_links()}</div></details>'
+            f'<button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="nav"{menu_aria}>{BURGER}</button>'
+            f'</div></header>')
+
+
+def footer_html(data):
+    regs = "".join(f'<li><a href="{BASE}{r["slug"]}/">{E(r["name"])}</a></li>' for r in REGIONS)
     s = data["source"]
-    return (f'<footer class="foot"><div class="wrap"><nav class="regs hubs" aria-label="Calendarios">{hubs}</nav>'
-            f'<nav class="regs" aria-label="{t("foot_regions")}">{regs}</nav>'
-            f'<p>{t("foot_data")} <a href="{s["url"]}" rel="noopener">{t("foot_boe")}</a> · '
-            f'<a href="{BASE}{t("privacy_slug")}/">{t("foot_privacy")}</a></p></div></footer>')
+    return (f'<footer class="ft"><div class="wrap ft-in">'
+            f'<section class="ft-reg"><h2>{t("nav_regions")}</h2><ul class="cols">{regs}</ul></section>'
+            f'<section><h2>{t("nav_locals")}</h2><ul><li><a href="{BASE}festivos-locales/">{t("nav_locals")} 2027</a></li></ul></section>'
+            f'<section><h2>El Calendario Laboral</h2><ul><li><a href="{s["url"]}" rel="noopener">{t("data_source")}</a></li>'
+            f'<li><a href="{BASE}privacidad/">{t("privacy")}</a></li></ul>'
+            f'<p class="ft-lang">{lang_links()}</p></section>'
+            f'</div><div class="wrap ft-b">© 2026 {HOST}</div></footer>')
 
 
 def head_html(title, desc, path, og_img, extra=""):
-    """path: page path below the language base ('' for the home, 'madrid/', ...). Emits hreflang for every LANGS tree."""
+    """path: page path below the language base ('' for the home). hreflang for every language + x-default."""
+    global PAGE_PATH
+    PAGE_PATH = path
     canonical = URL + path
     alts = "".join(f'<link rel="alternate" hreflang="{x}" href="{SITE}{lang_base(x)}{path}">' for x in LANGS)
     if len(LANGS) > 1:
@@ -384,8 +475,7 @@ def head_html(title, desc, path, og_img, extra=""):
 <title>{E(title)}</title>
 <meta name="description" content="{E(desc)}">
 <link rel="canonical" href="{canonical}">{alts}
-<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#101010" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="{t("og_locale")}">
 <meta property="og:site_name" content="{t("site_name")}">
@@ -400,13 +490,24 @@ def head_html(title, desc, path, og_img, extra=""):
 <link rel="icon" href="{ASSETS}icons/icon-192.png" type="image/png">
 <link rel="apple-touch-icon" href="{ASSETS}icons/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&display=swap">
 <link rel="stylesheet" href="{ASSETS}app.css?v={{CSSV}}">
-{HEAD_JS}
 {ADSENSE}
 {extra}
 </head>
 """
+
+
+def crumbs_html(items):
+    """items: [(name, path)] below the language base; the last one is the current page."""
+    out = []
+    for k, (name, path) in enumerate(items):
+        if k == len(items) - 1:
+            out.append(f'<li aria-current="page">{E(name)}</li>')
+        else:
+            out.append(f'<li><a href="{BASE}{path}">{E(name)}</a></li>')
+    aria = f' aria-label="{t("crumbs")}"' if T.get("crumbs") else ""
+    return f'<nav class="crumbs"{aria}><ol>{"".join(out)}</ol></nav>'
 
 
 def ics_text(hols, label, slug_key):
@@ -423,194 +524,224 @@ def ics_text(hols, label, slug_key):
     return "\r\n".join(lines) + "\r\n"
 
 
-SEP = '<span class="sep" aria-hidden="true"> · </span>'
+# ---------------------------------------------------------------- tables (same markup as app.js)
+
+def sw(kind):
+    return f'<i class="sw {kind}" aria-hidden="true"></i>'
 
 
-def meta_html(n_boe, can, n_pts, n_lab):
-    """Same as meta() in app.js. Separators are real text (copy/paste) but hidden from screen readers."""
-    fest = t("meta_fest", n=n_boe) + (" " + t("meta_isle") if can else "") + " " + t("meta_loc")
-    return (f'<a href="#festivos">{fest}</a>{SEP}<a href="#puentes">{tn("meta_pts", n_pts)}</a>{SEP}'
-            f'<span>{t("meta_lab", n=n_lab)}</span>')
+def scope_txt(kind):
+    return t({"n": "k_n", "r": "k_r", "l": "k_l"}[kind])
 
 
-def dmy(iso):
-    """'2026-10-26' -> '26 oct 2026'"""
-    d = dt.date.fromisoformat(iso)
-    return f'{d.day} {t("mon3")[d.month - 1]} {d.year}'
+def hol_head(scope=True):
+    sc = f'<th scope="col" class="c-s">{t("col_scope")}</th>' if scope else ""
+    return (f'<thead><tr><th scope="col" class="c-d">{t("col_date")}</th><th scope="col" class="c-w">{t("col_day")}</th>'
+            f'<th scope="col" class="c-h">{t("col_hol")}</th>{sc}</tr></thead>')
 
 
-def src_html(data, extra=""):
-    return (f'<p class="src"><a href="{data["source"]["url"]}" rel="noopener">{t("src")}</a>{extra}{SEP}'
-            f'<time datetime="{data["updated"]}">{t("updated", d=dmy(data["updated"]))}</time></p>')
+def hol_row(h, scope=True):
+    """Same markup as holRow() in app.js."""
+    d = _d(h["date"])
+    we = " we" if d.weekday() >= 5 else ""
+    wd = T["_wd"][d.weekday()]
+    k = h["kind"]
+    sc = f'<td class="c-s">{sw(k)}{scope_txt(k)}</td>' if scope else ""
+    sm = f'<span class="m">{sw(k)}{scope_txt(k)}</span>' if scope else ""
+    return (f'<tr class="k-{k}"><td class="c-d"><time datetime="{h["date"]}">{dm(d)}</time><span class="m{we}">{wd}</span></td>'
+            f'<td class="c-w{we}">{wd}</td><td class="c-h">{E(h["name"])}{sm}</td>{sc}</tr>')
 
 
-# ---------------------------------------------------------------- app body (home, every region page and every city page)
-
-def crumbs_html(items):
-    """items: [(name, path)] below the language base; the last one is the current page."""
-    out = []
-    for k, (name, path) in enumerate(items):
-        if k == len(items) - 1:
-            out.append(f'<span aria-current="page">{E(name)}</span>')
-        else:
-            out.append(f'<a href="{BASE}{path}">{E(name)}</a>')
-    return '<nav class="crumbs" aria-label="Migas de pan">' + '<span aria-hidden="true"> › </span>'.join(out) + '</nav>'
+def island_row():
+    """Canarias before an island is chosen (same as app.js)."""
+    return (f'<tr class="k-z"><td class="c-d">+1</td><td class="c-w"></td><td class="c-h">{t("island_holiday")} '
+            f'<button type="button" class="lnk" data-zone>{t("pick_island")}</button><span class="m">{sw("r")}{t("k_r")}</span></td>'
+            f'<td class="c-s">{sw("r")}{t("k_r")}</td></tr>')
 
 
-def keep_last(s):
-    """The selector chevron sticks to the last word (same as keepLast in app.js)."""
-    head, _, last = s.rpartition(" ")
-    return (E(head) + " " if head else "") + f'<span class="nw">{E(last)}</span>'
+def pts_head():
+    return (f'<thead><tr><th scope="col">{t("col_bridge")}</th><th scope="col" class="num">{t("col_free")}</th>'
+            f'<th scope="col">{t("col_vac")}</th></tr></thead>')
 
 
-def zone_text(opt):
-    if opt is None:
-        return t("zone_prompt")
-    return t("zone_general") if opt["slug"] == "general" else opt["name"]
+def pts_row(it):
+    """Same markup as ptsRow() in app.js."""
+    nm = " · ".join(it["names"])
+    vac = (f'<b>{it["cost"]}</b> <span class="m">{E(dlist(it["take"]))}</span>' if it["cost"]
+           else f'<b>0</b> <span class="m">{t("no_vac")}</span>')
+    return (f'<tr{" class=lw" if not it["cost"] else ""}><td><span class="rng">{drange(it["s"], it["e"])}</span><span class="m">{E(nm)}</span></td>'
+            f'<td class="num"><b>{it["len"]}</b></td><td>{vac}</td></tr>')
 
 
-def hero_html(data, r, hols, pts, lab, city=None):
-    """Region page: the title carries the region selector. City page: plain title, answer line and both sources.
-    Home: plain title and the 19 regions as links."""
-    if not r:
-        grid = "".join(f'<a href="{BASE}{x["slug"]}/" data-slug="{x["slug"]}">{E(x["name"])}</a>' for x in data["regions"])
-        return (f'<section class="hero wrap"><h1>{t("h1")}</h1><p class="meta" id="meta"><span>{t("home_meta", n=len(hols))}</span></p>'
-                f'{src_html(data)}<nav class="ccaa" id="ccaa" aria-label="{t("home_grid")}">{grid}</nav></section>')
+def month_html(m, hmap):
+    first = dt.date(YEAR, m, 1)
+    nd = ((dt.date(YEAR + (m == 12), m % 12 + 1, 1)) - first).days
+    cells = [""] * first.weekday()
+    for d in range(1, nd + 1):
+        day = dt.date(YEAR, m, d)
+        iso = day.isoformat()
+        cls = ["we"] if day.weekday() >= 5 else []
+        tt = ""
+        if iso in hmap:
+            cls.append(hmap[iso]["kind"])
+            tt = f' title="{E(hmap[iso]["name"])}"'
+        c = f' class="{" ".join(cls)}"' if cls else ""
+        cells.append(f'<td data-d="{iso}"{c}{tt}>{d}</td>')
+    cells += [""] * (42 - len(cells))
+    rows = "".join("<tr>" + "".join(c or "<td></td>" for c in cells[w * 7:w * 7 + 7]) + "</tr>" for w in range(6))
+    head = "".join(f'<th scope="col" abbr="{T["_wd"][k]}">{x}</th>' for k, x in enumerate(T["_wdh"]))
+    return f'<div class="mon" id="m{m}"><table><caption>{T["_months"][m - 1].capitalize()}</caption><thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table></div>'
+
+
+def year_html(hmap):
+    # a picture of the holidays table above it; screen readers get the table (app.js lifts this while marking)
+    return '<div class="year" id="year" aria-hidden="true">' + "".join(month_html(m, hmap) for m in range(1, 13)) + "</div>"
+
+
+def legend_html(local=True):
+    items = [("n", t("k_n")), ("r", t("k_r"))] + ([("l", t("k_l"))] if local else [])
+    li = "".join(f'<li>{sw(k)}{v}</li>' for k, v in items)
+    return f'<ul class="legend" aria-label="{t("legend")}">{li}<li id="k-v" hidden>{sw("v")}{t("k_v")}</li></ul>'
+
+
+JS_KEYS = ["k_n", "k_r", "k_l", "no_vac", "no_bridges", "island_holiday", "pick_island", "remove_local", "local_holiday",
+           "local_toast", "vac_days", "vac_added", "vac_removed", "vac_cleared", "add_vac", "rm_vac", "n_hol", "n_pts", "n_lab",
+           "next_hol", "days_left", "tomorrow", "today", "ics_file", "ics_calname", "vac_event", "h_hol", "h_pts", "add_local"]
+
+
+def js_strings():
+    out = {k: (T.get(k) if T.get(k) is not None else ES[k]) for k in JS_KEYS}
+    out.update({"months": T["_months"], "mon3": T["_mon3"], "wd": T["_wd"], "wd3": T["_wd3"], "mof": T["_mof"], "eu": LANG == "eu"})
+    return json.dumps(out, ensure_ascii=False, separators=(",", ":"))
+
+
+def next_html():
+    """Filled by app.js from today's date."""
+    return '<p class="next" id="next" hidden></p>'
+
+
+def section(id_, title, body, tools="", cls=""):
+    return (f'<section class="sec{" " + cls if cls else ""}" id="{id_}" aria-labelledby="h-{id_}"><div class="sec-h"><h2 id="h-{id_}">{title}</h2>'
+            f'{tools}</div>{body}</section>')
+
+
+def tools_html(key, ics_name, csv=True):
+    webcal = f"webcal://{HOST}{ASSETS}ics/{key}.ics"
+    c = (f'<a class="btn" href="{ASSETS}csv/{key}.csv" download="calendario-laboral-2027-{key}.csv">{t("csv")}</a>' if csv else "")
+    return (f'<div class="tools"><button class="btn" type="button" data-print>{t("print")}</button>{c}'
+            f'<details class="dd dd-cal"><summary class="btn">{t("add_cal")}{CHEV}</summary><div class="menu menu-cal">'
+            f'<a id="dl" href="{ASSETS}ics/{key}.ics" download="{ics_name}">{t("ics_dl")}</a>'
+            f'<a id="gc" href="https://calendar.google.com/calendar/r?cid={quote(webcal, safe="")}" rel="noopener" target="_blank">{t("gcal")}</a>'
+            f'<a id="wc" href="{webcal}">{t("apple")}</a></div></details></div>')
+
+
+def scripts(data):
+    compact = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
+    return (f'<script id="cal-data" type="application/json">{compact}</script>\n'
+            f'<script id="cal-i18n" type="application/json">{js_strings()}</script>\n'
+            f'<script src="{ASSETS}app.js?v={{JSV}}"></script>\n{SW_JS}')
+
+
+def page(head, body_cls, header_here, main, data, attrs="", js=True):
+    return head + f"""<body class="{body_cls}"{attrs}>
+<a class="skip" href="#main">{E(t("h1"))}</a>
+{header_html(header_here)}
+<main id="main">
+{main}
+</main>
+{footer_html(data)}
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+{scripts(data) if js else f'<script src="{ASSETS}app.js?v={{JSV}}"></script>' + chr(10) + SW_JS}
+</body>
+</html>
+"""
+
+
+# ---------------------------------------------------------------- app page (region and city)
+
+def app_main(data, r, city=None, hero_extra="", more=""):
+    """Region or city page: hero, holidays table, calendar, puentes, planner, then `more` (locals, FAQ)."""
     slug = r["slug"]
-    boe = len([h for h in hols if h["kind"] != "l"])
-    if city:
-        return (f'<section class="hero wrap">{city["crumbs"]}<h1><span class="h1a">{t("h1")}</span> {E(city["title_name"])}</h1>'
-                f'<p class="ans">{city["ans"]}</p><p class="meta" id="meta">{meta_html(boe, False, len(pts), lab)}</p>'
-                f'{city["src"]}</section>')
-    zone = data["zones"].get(slug)
-    is_can = slug == "canarias"
-    options = f'<option value="">{t("spain")}</option>' + "".join(
-        f'<option value="{x["slug"]}"{" selected" if x["slug"] == slug else ""}>{E(x["name"])}</option>' for x in data["regions"])
-    if zone:
-        cur = None if is_can else zone["options"][0]
-        zopts = (f'<option value="">{t("zone_prompt")}</option>' if is_can else "") + "".join(
-            f'<option value="{o["slug"]}"{" selected" if o is cur else ""}>{E(o["name"])}</option>' for o in zone["options"])
-        zone_html = (f'<div class="pick zone" id="zone-f"><span class="pv" id="zt">{keep_last(zone_text(cur))}</span>'
-                     f'<select id="zone" aria-label="{E(zone["label"])}">{zopts}</select></div>')
-    else:
-        zone_html = f'<div class="pick zone" id="zone-f" hidden><span class="pv" id="zt"></span><select id="zone" aria-label="{t("zone_label")}"></select></div>'
-    return (f'<section class="hero wrap"><div class="pick reg" id="reg-f"><h1><span class="h1a">{t("h1")}</span> '
-            f'<span class="pv" id="rn">{keep_last(r["name"])}</span></h1><select id="region" aria-label="{t("region_label")}">{options}</select></div>'
-            f'{zone_html}<p class="meta" id="meta">{meta_html(boe, is_can, len(pts), lab)}</p>{src_html(data)}</section>')
-
-
-def page_holidays(data, r=None, city=None):
-    """What the tool shows first: national (home), the region's BOE list, or the region (island if any) plus the city's 2 locals."""
-    if not r:
-        return [h for h in region_holidays(data, "madrid") if h["kind"] == "n"]
-    hols = region_holidays(data, r["slug"], city["zone"] if city else None)
-    if city:
-        hols = sorted(hols + [{"date": h["date"], "name": h["name"], "code": 0, "kind": "l"} for h in city["holidays"]],
-                      key=lambda h: h["date"])
-    return hols
-
-
-def workdays(hols, minus=0):
-    hd = {h["date"] for h in hols}
-    return sum(1 for d in DAYS if d.weekday() < 5 and d.isoformat() not in hd) - minus
-
-
-def app_body(data, r=None, city=None, more=""):
-    """One app: the home has no region (national holidays + the 19 regions), a region page has it chosen, a city page
-    has the region plus the city's 2 local holidays fixed. Lists are rendered here too, so the content is in the HTML
-    before app.js runs. `more` is the static block below the tool (links and FAQ)."""
-    slug = r["slug"] if r else ""
+    names = R(r)
     hols = page_holidays(data, r, city)
     hmap = {}
     for h in hols:
         hmap.setdefault(h["date"], h)
     is_can = slug == "canarias" and not city
-    hide = "" if r else " hidden"
-    pts = puentes(hols) if r else []
-    lab = workdays(hols, 1 if is_can else 0)
-    hl = "".join(hol_li(h) for h in hols)
-    if is_can:
-        hl += f'<li class="z"><time>+1</time><span><button type="button" class="lnk" data-zone>{t("island_feast")}</button></span><em></em></li>'
-    if r and not city:
-        hl += f'<li class="z"><time>+2</time><span><button type="button" class="lnk" data-addloc>{t("loc_more")}</button></span><em></em></li>'
-    compact = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
-    strings = json.dumps({k: t(k) for k in JS_KEYS}, ensure_ascii=False, separators=(",", ":"))
+    zone = data["zones"].get(slug) if not city else None
+    breaks = all_breaks(hols)
+    n_pts = len(puentes(hols))
+    n = len(hols) + (1 if is_can else 0)
     key = f'{slug}-{city["slug"]}' if city else slug
-    ics = f"ics/{key}.ics"
-    webcal = f"webcal://{HOST}{ASSETS}{ics}"
-    name = city["title_name"] if city else (r["name"] if r else "")
-    h_fest = t("h_fest_r", name=name) if r else t("h_fest_home")
-    h_pts = t("h_pts_r", name=name) if r else t("h_pts")
-    attrs = f' data-region="{slug}"'
+    place = city["title_name"] if city else names["region"]
+    pnames = {**names, "region": place, "region_in": city["in"] if city else names["region_in"]}
+
+    # hero
+    if city:
+        h1 = city["h1"]
+        crumbs = city["crumbs"]
+    else:
+        h1 = fill(t("h1_region"), names)
+        crumbs = crumbs_html([(t("spain"), ""), (r["name"], f"{slug}/")])
+    ctx = (f'<p class="ctx"><span>{E(r["official"])}</span> · <span id="c-n">{tn("n_hol", n)}</span> · '
+           f'<span id="c-p">{tn("n_pts", n_pts)}</span></p>')
+    sel = ""
+    if not city:
+        opts = "".join(f'<option value="{x["slug"]}"{" selected" if x["slug"] == slug else ""}>{E(x["name"])}</option>' for x in REGIONS)
+        sel = f'<div class="field"><label for="region">{t("region_label")}</label><select id="region">{opts}</select></div>'
+        if zone:
+            zopts = (f'<option value="">{t("pick_island")}</option>' if is_can else "") + "".join(
+                f'<option value="{o["slug"]}">{E(t("zone_general") if o["slug"] == "general" else o["name"])}</option>' for o in zone["options"])
+            sel += f'<div class="field"><label for="zone">{t("island") if is_can else t("zone")}</label><select id="zone">{zopts}</select></div>'
+        sel = f'<div class="pickers">{sel}</div>'
+    hero = (f'<div class="hero wrap">{crumbs}<h1>{E(h1)}</h1>{ctx}{hero_extra}{sel}</div>')
+
+    # holidays
+    rows = "".join(hol_row(h) for h in hols) + (island_row() if is_can else "")
+    addloc = "" if city else (f'<div class="tbl-f"><button type="button" class="btn" id="addloc">+ {t("add_local")}</button>'
+                              f'<input type="date" id="locin" min="2027-01-01" max="2027-12-31" aria-label="{t("local_holiday")}" tabindex="-1" class="vh"></div>')
+    hol_sec = section("festivos", E(fill(t("h_hol"), pnames)),
+                      f'{next_html()}<table class="tbl hol">{hol_head()}<tbody id="hlist">{rows}</tbody></table>{addloc}',
+                      tools_html(key, f'{t("ics_file")}-{key}.ics'))
+    # calendar
+    cal_tools = (f'<div class="tools">{legend_html()}<button class="btn" type="button" id="vmode" aria-pressed="false">{t("mark")}</button>'
+                 f'<span class="vstat" id="vstat" hidden><span id="vcount" aria-live="polite"></span> <button type="button" class="lnk" id="vclear">{t("clear")}</button></span></div>')
+    cal_sec = section("calendario", t("h_cal"), year_html(hmap), cal_tools, "cal")
+    # puentes
+    prow = "".join(pts_row(it) for it in breaks) or f'<tr><td colspan="3">{t("no_bridges")}</td></tr>'
+    pts_sec = section("puentes", E(fill(t("h_pts"), pnames)), f'<table class="tbl pts">{pts_head()}<tbody id="plist">{prow}</tbody></table>')
+    # planner
+    plan = (f'<div class="step"><label for="vn">{t("how_many")}</label><span class="stepper"><button type="button" id="vm" aria-label="{t("one_less")}">−</button>'
+            f'<input id="vn" type="number" inputmode="numeric" min="1" max="30" value="4"><button type="button" id="vp" aria-label="{t("one_more")}">+</button></span></div>'
+            f'<table class="tbl pts plan"><thead><tr><th scope="col">{t("col_vac")}</th><th scope="col" class="num">{t("col_free")}</th><td></td><td></td></tr></thead>'
+            f'<tbody id="vlist"></tbody></table>')
+    vac_sec = section("vacaciones", t("h_vac"), plan)
+    foot = f'<p class="pfoot">{HOST}{BASE}{city["path"] if city else slug + "/"} · {E(data["source"]["boe"])}</p>'
+    return (f'{hero}<div class="wrap body">{hol_sec}{cal_sec}{pts_sec}{vac_sec}{more}{foot}</div>')
+
+
+def app_attrs(r, city=None):
+    a = f' data-region="{r["slug"]}"'
     if city:
         locs = [{"date": h["date"], "name": h["name"]} for h in city["holidays"]]
-        attrs += (f' data-city="{city["slug"]}" data-cityname="{E(city["title_name"])}" data-zone="{city["zone"] or ""}"'
-                  f' data-locals="{E(json.dumps(locs, ensure_ascii=False, separators=(",", ":")))}"')
-    note = t("sub_note_city", name=E(city["title_name"])) if city else t("sub_note")
-    path = (f'{slug}/{city["slug"]}/' if city else f"{slug}/") if r else ""
-    exp = ""
-    if r:
-        exp = (f'<a class="btn" href="{ASSETS}csv/{key}.csv" download="calendario-laboral-2027-{key}.csv">{t("csv_btn")}</a>'
-               f'<button class="btn" type="button" data-print>{t("print_btn")}</button>')
-    return f"""<body class="app{" home" if not r else ""}"{attrs}>
-{top_html()}
-<main>
-{hero_html(data, r, hols, pts, lab, city)}
-<div class="wrap body">
-  <div class="side">
-    <section class="blk" id="festivos" aria-labelledby="h-fest"><h2 id="h-fest">{E(h_fest)}</h2><ol class="hlist" id="hlist">{hl}</ol>
-      <div class="locin" id="locin"{hide}><input type="date" id="l0" min="2027-01-01" max="2027-12-31" tabindex="-1" aria-hidden="true" aria-label="{t("loc_aria")}"><input type="date" id="l1" min="2027-01-01" max="2027-12-31" tabindex="-1" aria-hidden="true" aria-label="{t("loc_aria")}"></div>
-    </section>
-    <section class="blk" id="puentes" aria-labelledby="h-pts"{hide}><h2 id="h-pts">{E(h_pts)}</h2><ol class="plist" id="plist">{"".join(puente_li(it, k) for k, it in enumerate(pts))}</ol>
-      <div id="lw">{lw_html(long_weekends(hols)) if r else ""}</div></section>
-    <section class="blk" id="vacaciones" aria-labelledby="h-vac"{hide}><h2 id="h-vac">{t("h_vac")}</h2>
-      <div class="step"><button type="button" id="vm" aria-label="{t("step_minus")}">−</button><input id="vn" type="number" inputmode="numeric" min="1" max="30" value="4" aria-label="{t("step_input")}"><button type="button" id="vp" aria-label="{t("step_plus")}">+</button><span aria-hidden="true">{t("step_lbl")}</span></div>
-      <h3 class="sub">{t("plan_h")}</h3><ol class="plist" id="vlist"></ol>
-    </section>
-  </div>
-  <div class="main" id="mainc">
-    <section class="cal" id="ano" aria-labelledby="h-ano"><h2 class="sr" id="h-ano">{t("h_year")}</h2>
-      <div class="calbar">{key_html()}<p class="vhint" id="vhint" hidden><span id="vstat" aria-live="polite">{t("vhint")}</span> <button type="button" class="lnk" id="vclear" hidden>{t("vclear")}</button></p><button class="tbtn" id="vmode" type="button"{hide}><span id="vlabel">{t("vmode")}</span><span id="vcount"></span></button></div>
-      {year_html(hmap)}
-    </section>
-    <div class="exp" id="exp"{hide}><a class="btn p" id="dl" href="{ASSETS}{ics}" download="{t("ics_file")}-{key}.ics">{t("ics_btn")}</a><a class="btn" id="gc" href="https://calendar.google.com/calendar/r?cid={quote(webcal, safe="")}" rel="noopener" target="_blank">{t("gcal")}</a><a class="btn" id="wc" href="{webcal}">{t("apple")}</a>{exp}<p class="note">{note}</p></div>
-    <p class="pfoot">{HOST}{BASE}{path} · {t("print_src", boe=E(data["source"]["boe"]))}</p>
-  </div>
-</div>
-{more}
-</main>
-{footer_html(data, slug or None)}
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script id="cal-data" type="application/json">{compact}</script>
-<script id="cal-i18n" type="application/json">{strings}</script>
-<script src="{ASSETS}app.js?v={{JSV}}"></script>
-{THEME_JS}
-</body>
-</html>
-"""
+        a += (f' data-city="{city["slug"]}" data-cityname="{E(city["title_name"])}" data-zone="{city["zone"] or ""}"'
+              f' data-locals="{E(json.dumps(locs, ensure_ascii=False, separators=(",", ":")))}"')
+    return a
 
 
 # ---------------------------------------------------------------- privacy page
 
 def privacy_page(data):
     src = data["source"]
-    paras = "".join(f"<p>{E(p)}</p>" for p in t("privacy_body"))
     link = f'<a href="{src["url"]}" rel="noopener">{src["id"]}</a>'
-    mail = '<a href="mailto:cesar0407p@gmail.com">cesar0407p@gmail.com</a>'
-    body = f"""<body>
-{top_html(app=False)}
-<main class="wrap doc">
-<h1>{t("privacy_h1")}</h1>
-{paras}
-<p>{t("privacy_ads")}</p>
-<p>{t("privacy_src", link=link, boe=E(src["boe"]), mail=mail)}</p>
-</main>
-{footer_html(data)}
-{THEME_JS}
-</body>
-</html>
-"""
-    return head_html(t("title_privacy"), t("desc_privacy"), f'{t("privacy_slug")}/', f"{SITE}{ASSETS}og/espana.png") + body
+    es_attr = ' lang="es"' if LANG != "es" else ""
+    main = (f'<div class="wrap doc">{crumbs_html([(t("spain"), ""), (t("privacy"), "privacidad/")])}<h1>{t("privacy")}</h1>'
+            f'<p>{E(t("privacy_p1"))}</p><p{es_attr}>{E(ES["privacy_ads"])}</p><p>{E(t("privacy_p3"))}</p>'
+            f'<p{es_attr}>{ES["privacy_links"]}</p>'
+            f'<p>{t("data_source").split(":")[0]}: {link}, {E(src["boe"])}. '
+            f'<a href="mailto:cesar0407p@gmail.com">cesar0407p@gmail.com</a></p></div>')
+    head = head_html(t("title_privacy"), t("desc_privacy"), "privacidad/", f"{SITE}{ASSETS}og/espana.png")
+    return page(head, "pg", "", main, data, js=False)
 
 
 # ---------------------------------------------------------------- images
@@ -626,45 +757,44 @@ def font(size, weight="b"):
     return ImageFont.load_default(size)
 
 
-INK, BG, MUT, LINE, WE = (17, 17, 17), (255, 255, 255), (107, 107, 107), (226, 226, 222), (242, 242, 240)
-NAT, BRAND = (208, 49, 45), (17, 17, 17)
+INK, BG, MUT, LINE, WE = (27, 31, 36), (255, 255, 255), (90, 98, 112), (216, 220, 226), (243, 244, 246)
+NAT, REG, BRAND = (233, 170, 166), (240, 205, 130), (11, 79, 140)
 
 
 def og_image(path, label, sub, hols):
-    """Same language as the page: black type on white, every holiday a red disc."""
+    """Same look as the page: dark type on white, a blue rule, holidays as tinted squares on a year grid."""
     from PIL import Image, ImageDraw
     W, H, S = 1200, 630, 2
     im = Image.new("RGB", (W * S, H * S), BG)
     d = ImageDraw.Draw(im)
+    d.rectangle((0, 0, W * S, 10 * S), fill=BRAND)
     X = 72 * S
-    d.text((X, 76 * S), t("og_l1"), font=font(44 * S, "bl"), fill=INK)
-    size = 80 if len(label) <= 11 else (62 if len(label) <= 16 else (48 if len(label) <= 20 else 36))
-    d.text((X, 150 * S), label, font=font(size * S, "bl"), fill=INK)
-    d.text((X, 286 * S), sub, font=font(30 * S, "sb"), fill=MUT)
-    d.text((X, 548 * S), (HOST + lang_base(LANG)).rstrip("/"), font=font(24 * S, "r"), fill=MUT)
+    d.text((X, 80 * S), t("og_l1"), font=font(40 * S, "sb"), fill=MUT)
+    size = 76 if len(label) <= 11 else (60 if len(label) <= 16 else (46 if len(label) <= 20 else 34))
+    d.text((X, 140 * S), label, font=font(size * S, "b"), fill=INK)
+    d.text((X, 270 * S), sub, font=font(30 * S, "sb"), fill=MUT)
+    d.text((X, 548 * S), HOST, font=font(24 * S, "r"), fill=BRAND)
     kind = {h["date"]: h["kind"] for h in hols}
     x0, y0, c, gx, gy = 700 * S, 58 * S, 17 * S, 30 * S, 22 * S
-    dot = 5 * S
     for m in range(12):
         col, row = m % 3, m // 3
         ox, oy = x0 + col * (7 * c + gx), y0 + row * (6 * c + gy + 24 * S)
-        d.text((ox, oy - 4 * S), t("months")[m][:3].capitalize(), font=font(15 * S, "b"), fill=INK)
+        d.text((ox, oy - 4 * S), T["_months"][m][:3].capitalize(), font=font(15 * S, "b"), fill=INK)
         first = dt.date(YEAR, m + 1, 1)
         nd = ((dt.date(YEAR + (m == 11), (m + 1) % 12 + 1, 1)) - first).days
         for dd in range(nd):
             day = first + dt.timedelta(dd)
             idx = first.weekday() + dd
-            cx, cy = ox + (idx % 7) * c + c // 2, oy + 24 * S + (idx // 7) * c + c // 2
-            if kind.get(day.isoformat()):
-                d.ellipse((cx - 7 * S, cy - 7 * S, cx + 7 * S, cy + 7 * S), fill=NAT)
-            else:
-                d.ellipse((cx - dot // 2, cy - dot // 2, cx + dot // 2, cy + dot // 2), fill=WE if day.weekday() >= 5 else LINE)
+            cx, cy = ox + (idx % 7) * c, oy + 24 * S + (idx // 7) * c
+            k = kind.get(day.isoformat())
+            fill_ = NAT if k == "n" else REG if k else (WE if day.weekday() >= 5 else BG)
+            d.rectangle((cx + S, cy + S, cx + c - S, cy + c - S), fill=fill_, outline=LINE)
     im = im.resize((W, H), Image.LANCZOS).quantize(colors=64, method=Image.Quantize.MEDIANCUT)
     im.save(path, optimize=True)
 
 
 def icons(out):
-    """Black tile, white page, one red day: the logo."""
+    """Blue tile, white page, one red day: the logo."""
     from PIL import Image, ImageDraw
 
     def draw(size, maskable=False, bg_full=False):
@@ -673,26 +803,18 @@ def icons(out):
         d = ImageDraw.Draw(im)
         if maskable or bg_full:
             d.rectangle((0, 0, S, S), fill=BRAND)
-            pad = int(S * (0.22 if maskable else 0.14))
+            pad = int(S * (0.22 if maskable else 0.16))
         else:
-            d.rounded_rectangle((0, 0, S - 1, S - 1), int(S * 0.22), fill=BRAND)
-            pad = int(S * 0.16)
-        x0, y0, x1, y1 = pad, int(pad * 1.25), S - pad, S - pad
+            d.rounded_rectangle((0, 0, S - 1, S - 1), int(S * 0.18), fill=BRAND)
+            pad = int(S * 0.18)
+        x0, y0, x1, y1 = pad, int(pad * 1.3), S - pad, S - pad
         w = x1 - x0
-        d.rounded_rectangle((x0, y0, x1, y1), int(w * 0.14), fill=BG)
-        rw = int(w * 0.09)
-        for fx in (0.27, 0.73):
-            cx = x0 + int(w * fx)
-            d.rounded_rectangle((cx - rw // 2, y0 - int(w * 0.12), cx + rw // 2, y0 + int(w * 0.12)), rw // 2, fill=BG)
-        g0x, g0y = x0 + int(w * 0.14), y0 + int((y1 - y0) * 0.26)
-        tw, gap = int(w * 0.2), int(w * 0.07)
-        for i in range(6):
+        d.rectangle((x0, y0, x1, y1), fill=BG)
+        tw, gap = int(w * 0.22), int(w * 0.06)
+        g0x, g0y = x0 + int(w * 0.11), y0 + int((y1 - y0) * 0.16)
+        for i in range(9):
             cx, cy = g0x + (i % 3) * (tw + gap), g0y + (i // 3) * (tw + gap)
-            if i == 1:
-                d.ellipse((cx, cy, cx + tw, cy + tw), fill=NAT)
-            else:
-                q = int(tw * 0.32)
-                d.ellipse((cx + q, cy + q, cx + tw - q, cy + tw - q), fill=LINE)
+            d.rectangle((cx, cy, cx + tw, cy + tw), fill=(198, 40, 40) if i == 5 else (226, 230, 236))
         return im.resize((size, size), Image.LANCZOS)
 
     draw(192).save(out / "icon-192.png", optimize=True)
@@ -710,22 +832,41 @@ def short_hash(*paths):
     return h.hexdigest()[:10]
 
 
+def sitemap(urls_by_path):
+    """One sitemap, every language, each url with its xhtml:link alternates."""
+    sm = ['<?xml version="1.0" encoding="UTF-8"?>',
+          '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">']
+    for p, lm in urls_by_path:
+        alts = "".join(f'<xhtml:link rel="alternate" hreflang="{x}" href="{SITE}{lang_base(x)}{p}"/>' for x in LANGS)
+        alts += f'<xhtml:link rel="alternate" hreflang="x-default" href="{SITE}{lang_base("es")}{p}"/>'
+        for x in LANGS:
+            sm.append(f"  <url><loc>{SITE}{lang_base(x)}{p}</loc><lastmod>{lm}</lastmod>{alts}</url>")
+    sm.append("</urlset>")
+    return "\n".join(sm) + "\n"
+
+
 def main():
+    global REGIONS
+    if LANG == "es" and not os.environ.get("CL_CHILD"):
+        for x in LANGS:
+            if x != "es":
+                env = {**os.environ, "CL_LANG": x, "CL_CHILD": "1", "CL_LANGS": ",".join(LANGS)}
+                subprocess.run([sys.executable, str(Path(__file__).resolve()), *sys.argv[1:]], env=env, check=True)
     data = localize(load())
+    REGIONS = data["regions"]
     cssv, jsv = short_hash(ROOT / "app.css"), short_hash(ROOT / "app.js")
-    fix = lambda s: s.replace("{CSSV}", cssv).replace("{JSV}", jsv)
+    fix = lambda s: s.replace("{CSSV}", cssv).replace("{JSV}", jsv)  # noqa: E731
 
     OUT.mkdir(exist_ok=True)
-    (OUT / t("privacy_slug")).mkdir(exist_ok=True)
-    (OUT / t("privacy_slug") / "index.html").write_text(fix(privacy_page(data)), "utf-8", newline="\n")
-    sys.modules.setdefault("build", sys.modules[__name__])  # pages.py does "import build": reuse this module, not a second copy
+    (OUT / "privacidad").mkdir(exist_ok=True)
+    (OUT / "privacidad" / "index.html").write_text(fix(privacy_page(data)), "utf-8", newline="\n")
+    sys.modules.setdefault("build", sys.modules[__name__])  # pages.py does "import build": reuse this module
     import pages
-    pages_written = pages.write_pages(data, fix)  # home, regions, cities, hubs, school pages: [(path, lastmod)]
+    pages_written = pages.write_pages(data, fix)
     if LANG != "es":
         print(f"ok · {LANG} · {len(pages_written) + 1} pages in {OUT}")
         return
 
-    # shared files: written once, by the Spanish build
     ics = ROOT / "ics"
     ics.mkdir(exist_ok=True)
     for r in data["regions"]:
@@ -746,12 +887,8 @@ def main():
             og_image(ROOT / "og" / f"{r['slug']}.png", r["name"], t("og_sub", n=n, p=len(puentes(hols))), hols)
         icons(ROOT / "icons")
 
-    pages.write_shared(data, "--no-img" not in sys.argv)  # city .ics, every .csv, city og images, 404
-    urls = [(SITE + lang_base(x) + p, lm) for x in LANGS for p, lm in pages_written]
-    sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    sm += [f"  <url><loc>{u}</loc><lastmod>{lm}</lastmod></url>" for u, lm in urls]
-    sm.append("</urlset>")
-    (ROOT / "sitemap.xml").write_text("\n".join(sm) + "\n", "utf-8", newline="\n")
+    pages.write_shared(data, "--no-img" not in sys.argv)
+    (ROOT / "sitemap.xml").write_text(sitemap(pages_written), "utf-8", newline="\n")
 
     manifest = {
         "name": t("app_name"), "short_name": t("app_short"), "lang": LANG, "description": t("app_desc"),
@@ -763,12 +900,12 @@ def main():
     }
     (ROOT / "manifest.webmanifest").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", "utf-8", newline="\n")
 
-    ver = short_hash(ROOT / "index.html", ROOT / "app.css", ROOT / "app.js", ROOT / "data" / "2027.json")
-    shell = [ASSETS, f"{ASSETS}app.css?v={cssv}", f"{ASSETS}app.js?v={jsv}", f"{ASSETS}manifest.webmanifest",
+    ver = "v4-" + short_hash(ROOT / "index.html", ROOT / "app.css", ROOT / "app.js", ROOT / "data" / "2027.json")
+    shell = [f"{ASSETS}app.css?v={cssv}", f"{ASSETS}app.js?v={jsv}", f"{ASSETS}manifest.webmanifest",
              f"{ASSETS}icons/icon-192.png", f"{ASSETS}icons/icon-512.png"]
     sw = (ROOT / "sw.src.js").read_text("utf-8").replace("__VERSION__", ver).replace("__SHELL__", json.dumps(shell))
     (ROOT / "sw.js").write_text(sw, "utf-8", newline="\n")
-    print(f"ok · {len(urls)} urls · sw {ver}")
+    print(f"ok · {len(pages_written) * len(LANGS)} urls · sw {ver}")
 
 
 if __name__ == "__main__":

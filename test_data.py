@@ -107,9 +107,9 @@ for c in loc["cities"]:
         check(len(c["holidays"]) == 2, f"{c['slug']}: {len(c['holidays'])} festivos locales")
         locs_attr = json.loads(__import__("html").unescape(re.search(r'data-locals="([^"]*)"', h).group(1)))
         check([x["date"] for x in locs_attr] == [x["date"] for x in c["holidays"]], f"{c['slug']}: fechas locales distintas de los datos")
-        hl = re.search(r'<ol class="hlist" id="hlist">(.*?)</ol>', h, re.S).group(1)
+        hl = re.search(r'<tbody id="hlist">(.*?)</tbody>', h, re.S).group(1)
         for x in c["holidays"]:
-            check(f'<li class="l' in hl and f'datetime="{x["date"]}"' in hl, f"{c['slug']}: {x['date']} no está en la lista")
+            check('<tr class="k-l"' in hl and f'datetime="{x["date"]}"' in hl, f"{c['slug']}: {x['date']} no está en la lista")
         reg = {x["date"] for x in build.region_holidays(data, c["region"])}
         check(not reg & {x["date"] for x in c["holidays"]}, f"{c['slug']}: un local coincide con un festivo de la comunidad")
         check(c["source"]["url"] in h, f"{c['slug']}: falta la fuente")

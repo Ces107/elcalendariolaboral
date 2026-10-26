@@ -1,10 +1,9 @@
 """Pages built from data, called by build.py: home, the 19 regions, city pages and the /festivos-locales/ hub.
 
-Each page type has a data function (what the page says, plain dicts) and an HTML function (how it looks), so a
-redesign can restyle the HTML without touching the data logic. Shared components (head, header, app body, footer)
-stay in build.py.
+Each page type has a data part (what it says) and an HTML part; shared components (head, header, tables, footer)
+are in build.py. The FAQ and the explanatory sentences exist only in Spanish: the ca/gl/eu pages leave them out
+instead of mixing languages.
 
-    Data used
     data/2027.json          home, regions, cities (BOE holidays, islands, Arán)
     data/locales-2027.json  cities: only status "boletin" or "ayuntamiento" get a page; "unpublished" only appear in the hub
 """
@@ -14,22 +13,19 @@ import json
 import re
 
 import build as B
-from build import E, t
+from build import E, t, tn
 
 SCHEMA = "https://schema.org"
 PUBLISHED = ("boletin", "ayuntamiento")
-# Canary cities: the island whose insular holiday applies (geography, not data that changes)
 CITY_ZONE = {"las-palmas-de-gran-canaria": "gran-canaria", "telde": "gran-canaria",
              "santa-cruz-de-tenerife": "tenerife", "san-cristobal-de-la-laguna": "tenerife"}
-# name variants people search for, placed once in the FAQ (plan §3.2)
 VARIANT = {"cataluna": "Catalunya", "pais-vasco": "Euskadi", "comunitat-valenciana": "Comunitat Valenciana, GVA",
            "baleares": "Illes Balears"}
+ES = B.LANG == "es"
 
 _written = []
 _fix = None
 
-
-# ---------------------------------------------------------------- small helpers
 
 def load_locales():
     return json.loads((B.ROOT / "data" / "locales-2027.json").read_text("utf-8"))
@@ -39,22 +35,19 @@ def D(iso):
     return dt.date.fromisoformat(iso)
 
 
-def dm(iso):
-    d = D(iso)
-    return f'{d.day} {t("mon3")[d.month - 1]}'
-
-
-def dlong(iso):
-    d = D(iso)
-    return f'{t("wd")[d.weekday()]} {d.day} de {t("months")[d.month - 1]}'
-
-
 def tm(iso, txt):
     return f'<time datetime="{iso}">{txt}</time>'
 
 
 def strip(s):
     return html.unescape(re.sub(r"<[^>]+>", "", s))
+
+
+def first_sentences(s, limit):
+    """Drop trailing sentences until the text fits (meta descriptions)."""
+    while len(s) > limit and ". " in s.rstrip(". "):
+        s = s.rstrip(". ").rsplit(". ", 1)[0] + "."
+    return s
 
 
 def ld(*objs):
@@ -68,26 +61,30 @@ def crumbs_ld(items):
 
 
 def faq_ld(qas):
+    if not qas:
+        return None
     return {"@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": strip(a)}} for q, a in qas]}
 
 
 def list_ld(name, hols):
     return {"@type": "ItemList", "name": name, "numberOfItems": len(hols), "itemListElement": [
-        {"@type": "ListItem", "position": k + 1, "name": f'{h["name"]} · {dlong(h["date"])} de 2027'} for k, h in enumerate(hols)]}
+        {"@type": "ListItem", "position": k + 1, "name": f'{h["name"]} · {B.dlong(h["date"])} 2027'} for k, h in enumerate(hols)]}
 
 
 def dataset_ld(name, desc, path, place, based_on, downloads):
-    return {"@type": "Dataset", "name": name, "description": desc, "url": B.URL + path, "inLanguage": "es-ES",
+    return {"@type": "Dataset", "name": name, "description": desc, "url": B.URL + path, "inLanguage": B.IN_LANG[B.LANG],
             "dateModified": DATA["updated"], "temporalCoverage": "2027-01-01/2027-12-31",
-            "spatialCoverage": {"@type": "Place", "name": f"{place}, España"}, "isBasedOn": based_on,
+            "spatialCoverage": {"@type": "Place", "name": f'{place}, {t("spain")}'}, "isBasedOn": based_on,
             "creator": {"@type": "Organization", "name": t("site_name")},
             "distribution": [{"@type": "DataDownload", "encodingFormat": f, "contentUrl": f"{B.SITE}{B.ASSETS}{u}"} for f, u in downloads]}
 
 
 def faq_html(qas):
+    if not qas:
+        return ""
     items = "".join(f'<details><summary>{E(q)}</summary><p>{a}</p></details>' for q, a in qas)
-    return f'<section class="faq" aria-labelledby="h-faq"><h2 id="h-faq">Preguntas frecuentes</h2>{items}</section>'
+    return B.section("faq", t("h_faq"), f'<div class="faq">{items}</div>')
 
 
 def write(path, page, lastmod):
@@ -97,32 +94,21 @@ def write(path, page, lastmod):
     _written.append((path, lastmod))
 
 
-def shell(title, desc, path, crumbs, body, lds=(), og="espana", current=None):
-    """A static page (hubs): same header and footer as the app, content in .pg."""
-    head = B.head_html(title, desc, path, f"{B.SITE}{B.ASSETS}og/{og}.png", ld(crumbs_ld(crumbs), *lds))
-    return head + f"""<body class="pg">
-{B.top_html(app=False)}
-<main class="wrap pg-in">
-{B.crumbs_html(crumbs)}
-{body}
-</main>
-{B.footer_html(DATA, current)}
-{B.THEME_JS}
-</body>
-</html>
-"""
+def city_list(cities):
+    """Links to city pages with their 2 local holidays."""
+    li = "".join(f'<li><a href="{B.BASE}{x["path"]}">{E(x["title_name"])}</a><span class="m">{B.dmon(x["holidays"][0]["date"])} · '
+                 f'{B.dmon(x["holidays"][1]["date"])}</span></li>' for x in cities)
+    return f'<ul class="links">{li}</ul>' if li else ""
 
 
 # ---------------------------------------------------------------- cities: data
 
 def city_name(c, regions):
-    """'Madrid capital' when a capital shares its name with its province or comunidad (plan §3.3)."""
     same = c["name"] == c["province"] or c["name"] == regions[c["region"]]["name"]
-    return f'{c["name"]} capital' if c.get("capital") and same else c["name"]
+    return f'{c["name"]} capital' if c.get("capital") and same and ES else c["name"]
 
 
 def source_label(c):
-    """Short visible label for the local-holiday source; the full title goes in the link title."""
     if c["status"] == "ayuntamiento":
         return f'Pleno del Ayuntamiento de {c["name"]}'
     m = re.search(r"\(([^()]*\b(?:BO[A-Z]*|DO[A-Z]*)\b[^()]*)\)\s*$", c["source"]["title"])
@@ -130,7 +116,6 @@ def source_label(c):
 
 
 def city_ctx(c, regions):
-    """Everything a city page needs, as data."""
     r = regions[c["region"]]
     zone = CITY_ZONE.get(c["slug"]) or ("general" if c["region"] == "cataluna" else None)
     name = city_name(c, regions)
@@ -138,7 +123,9 @@ def city_ctx(c, regions):
     return {"c": c, "r": r, "slug": c["slug"], "zone": zone, "title_name": name, "holidays": c["holidays"],
             "path": f'{r["slug"]}/{c["slug"]}/', "hols": hols, "n": len(hols), "boe": len(hols) - 2,
             "pts": B.puentes(hols), "lab": B.workdays(hols), "src_label": source_label(c),
-            "pending_bulletin": c["status"] == "ayuntamiento"}
+            "pending_bulletin": c["status"] == "ayuntamiento",
+            "in": f"en {name}" if ES else f"· {name}",
+            "h1": f'{t("h1")} de {name}' if ES else f'{t("h1")}: {name}'}
 
 
 def published_cities(loc, regions):
@@ -150,47 +137,51 @@ def published_cities(loc, regions):
 def city_page(x, siblings):
     c, r, name = x["c"], x["r"], x["title_name"]
     h1, h2 = x["holidays"]
-    title = B.pick(60, f"Calendario laboral 2027 {name}: festivos y puentes", f"Calendario laboral 2027 {name}: festivos locales",
-                   f"Festivos 2027 {name}: calendario laboral", f"Calendario laboral 2027 {name}")
-    desc = B.pick(155,
-                  f'Festivos 2027 en {name}: los {x["boe"]} de {r["name"]} y los 2 locales ({dlong(h1["date"])} y {dlong(h2["date"])}), con puentes, días laborables y descarga a tu calendario.',
-                  f'Festivos 2027 en {name}: los {x["boe"]} de {r["name"]} y los 2 locales ({dm(h1["date"])} y {dm(h2["date"])}), con puentes, días laborables y descarga a tu calendario.',
-                  f'Festivos 2027 en {name}: los {x["boe"]} de {r["name"]} y los 2 locales ({dm(h1["date"])} y {dm(h2["date"])}), con puentes y descarga a tu calendario.',
-                  f'Festivos 2027 en {name}: {x["boe"]} del BOE y 2 locales ({dm(h1["date"])} y {dm(h2["date"])}).')
-    crumbs = [(t("crumb_home"), ""), (r["name"], f'{r["slug"]}/'), (name, x["path"])]
+    if ES:
+        title = B.pick(60, f"Calendario laboral 2027 {name}: festivos y puentes", f"Calendario laboral 2027 {name}: festivos locales",
+                       f"Festivos 2027 {name}: calendario laboral", f"Calendario laboral 2027 {name}")
+        desc = B.pick(155,
+                      f'Festivos 2027 en {name}: los {x["boe"]} de {r["name"]} y los 2 locales ({B.dlong(h1["date"])} y {B.dlong(h2["date"])}), con puentes, días laborables y descarga a tu calendario.',
+                      f'Festivos 2027 en {name}: los {x["boe"]} de {r["name"]} y los 2 locales ({B.dmon(h1["date"])} y {B.dmon(h2["date"])}), con puentes, días laborables y descarga a tu calendario.',
+                      f'Festivos 2027 en {name}: los {x["boe"]} de {r["name"]} y los 2 locales ({B.dmon(h1["date"])} y {B.dmon(h2["date"])}), con puentes y descarga a tu calendario.',
+                      f'Festivos 2027 en {name}: {x["boe"]} del BOE y 2 locales ({B.dmon(h1["date"])} y {B.dmon(h2["date"])}).')
+    else:
+        suffix = t("title_region").split(":", 1)[1].strip()
+        title = B.pick(60, f'{t("h1")} · {name}: {suffix}', f'{t("h1")} · {name}', name)
+        per_boe = B.I18N["ui"]["per_boe"][B.LANG]
+        desc = B.pick(155, f'{name}: {tn("n_hol", x["n"])}, {tn("n_pts", len(x["pts"]))}. {t("locals")}: {B.dm(h1["date"])}, {B.dm(h2["date"])}. {per_boe}',
+                      f'{name}: {tn("n_hol", x["n"])}, {tn("n_pts", len(x["pts"]))}. {t("locals")}: {B.dm(h1["date"])}, {B.dm(h2["date"])}.')
+    crumbs = [(t("spain"), ""), (r["name"], f'{r["slug"]}/'), (name, x["path"])]
     src = c["source"]
-    status = '<span class="sep" aria-hidden="true"> · </span>aprobado por el pleno, pendiente del boletín' if x["pending_bulletin"] else ""
-    src_html = B.src_html(DATA, extra="").replace(
-        '<p class="src">',
-        f'<p class="src">Locales: <a href="{E(src["url"])}" rel="noopener" title="{E(src["title"])}">{E(x["src_label"])}</a>{status}'
-        f'<span class="sep" aria-hidden="true"> · </span>Festivos: ', 1)
-    ans = (f'Festivos locales de {E(c["name"])} en 2027: {tm(h1["date"], dlong(h1["date"]))} ({E(h1["name"])}) y '
-           f'{tm(h2["date"], dlong(h2["date"]))} ({E(h2["name"])}). En total, {x["n"]} festivos.')
-    how = ("Los aprobó el pleno del ayuntamiento; falta su publicación en el boletín oficial." if x["pending_bulletin"]
-           else f'Publicados en el {E(x["src_label"])}.')
-    qas = [
-        (f"¿Cuáles son los festivos locales de {name} en 2027?",
-         f'{dlong(h1["date"]).capitalize()}, {E(h1["name"])}, y {dlong(h2["date"])}, {E(h2["name"])}. {how} '
-         f'<a href="{E(src["url"])}" rel="noopener">Fuente</a>.'),
-        (f"¿Cuántos días laborables tiene {name} en 2027?",
-         f'{x["lab"]} días de lunes a viernes, una vez descontados los festivos que caen entre semana.'),
-        (f'¿El {dm(h1["date"])} es festivo en toda la provincia de {c["province"]}?',
-         f'No. Los festivos locales solo valen en el municipio de {E(c["name"])}.'),
-    ]
-    sib = "".join(f'<li><a href="{B.BASE}{s["path"]}">{E(s["title_name"])}</a><span>{dm(s["holidays"][0]["date"])} · {dm(s["holidays"][1]["date"])}</span></li>'
-                  for s in siblings)
-    more = (f'<section class="more wrap" id="more"><div class="more-in">'
-            f'<section aria-labelledby="h-near"><h2 id="h-near">Otras ciudades de {E(r["name"])}</h2><ul class="links">{sib}'
-            f'<li><a href="{B.BASE}{r["slug"]}/">Calendario laboral 2027 {E(r["name"])}</a></li>'
-            f'<li><a href="{B.BASE}festivos-locales/">Festivos locales de todas las ciudades</a></li></ul></section>'
-            f'{faq_html(qas)}</div></section>')
+    status = f' · {t("pending")}' if x["pending_bulletin"] and ES else ""
+    srcline = (f'<p class="src">{t("locals")}: <a href="{E(src["url"])}" rel="noopener" title="{E(src["title"])}">{E(x["src_label"])}</a>{status}'
+               f' · <a href="{DATA["source"]["url"]}" rel="noopener">{t("data_source")}</a></p>')
+    qas = []
+    if ES:
+        how = ("Los aprobó el pleno del ayuntamiento; falta su publicación en el boletín oficial." if x["pending_bulletin"]
+               else f'Publicados en el {E(x["src_label"])}.')
+        qas = [
+            (f"¿Cuáles son los festivos locales de {name} en 2027?",
+             f'{B.dlong(h1["date"]).capitalize()}, {E(h1["name"])}, y {B.dlong(h2["date"])}, {E(h2["name"])}. {how} '
+             f'<a href="{E(src["url"])}" rel="noopener">Fuente</a>.'),
+            (f"¿Cuántos días laborables tiene {name} en 2027?",
+             f'{x["lab"]} días de lunes a viernes, una vez descontados los festivos que caen entre semana.'),
+            (f'¿El {B.dmon(h1["date"])} es festivo en toda la provincia de {c["province"]}?',
+             f'No. Los festivos locales solo valen en el municipio de {E(c["name"])}.'),
+        ]
+    rnames = B.R(r)
+    near = B.section("locales", E(B.fill(t("h_loc"), rnames)),
+                     city_list(siblings) + f'<p class="more-l"><a href="{B.BASE}{r["slug"]}/">{E(B.fill(t("h1_region"), rnames))}</a> · '
+                     f'<a href="{B.BASE}festivos-locales/">{t("nav_locals")} 2027</a></p>')
     key = f'{r["slug"]}-{c["slug"]}'
-    lds = [crumbs_ld(crumbs), list_ld(f"Festivos 2027 en {name}", x["hols"]),
-           dataset_ld(f"Festivos laborales 2027 en {name}", f'Los {x["n"]} festivos laborales de 2027 en {c["name"]}: {x["boe"]} del BOE y 2 locales.',
+    lds = [crumbs_ld(crumbs), list_ld(B.fill(t("h_hol"), {**rnames, "region": name, "region_in": x["in"]}), x["hols"]),
+           dataset_ld(B.fill(t("h_hol"), {**rnames, "region": name, "region_in": x["in"]}), desc,
                       x["path"], c["name"], [DATA["source"]["url"], src["url"]], [("text/calendar", f"ics/{key}.ics"), ("text/csv", f"csv/{key}.csv")]),
            faq_ld(qas)]
-    ctx = {**x, "crumbs": B.crumbs_html(crumbs), "ans": ans, "src": src_html}
-    return B.head_html(title, desc, x["path"], f"{B.SITE}{B.ASSETS}og/{key}.png", ld(*lds)) + B.app_body(DATA, r, ctx, more)
+    ctx = {**x, "crumbs": B.crumbs_html(crumbs)}
+    head = B.head_html(title, desc, x["path"], f"{B.SITE}{B.ASSETS}og/{key}.png", ld(*lds))
+    main = B.app_main(DATA, r, ctx, srcline, near + faq_html(qas))
+    return B.page(head, "app", "app", main, DATA, B.app_attrs(r, ctx))
 
 
 def hub_locales(loc, regions, cities):
@@ -205,30 +196,38 @@ def hub_locales(loc, regions, cities):
             if x:
                 h1, h2 = x["holidays"]
                 src = c["source"]
-                kind = "Pleno" if x["pending_bulletin"] else "Boletín"
+                kind = ("Pleno" if x["pending_bulletin"] else "Boletín") if ES else x["src_label"]
                 rows.append(f'<tr><th scope="row"><a href="{B.BASE}{x["path"]}">{E(x["title_name"])}</a></th>'
-                            f'<td>{tm(h1["date"], dm(h1["date"]))} · {tm(h2["date"], dm(h2["date"]))}</td>'
-                            f'<td><a href="{E(src["url"])}" rel="noopener" title="{E(src["title"])}">{kind}</a></td></tr>')
+                            f'<td>{tm(h1["date"], B.dm(h1["date"]))}<br>{tm(h2["date"], B.dm(h2["date"]))}</td>'
+                            f'<td><a href="{E(src["url"])}" rel="noopener" title="{E(src["title"])}">{E(kind)}</a></td></tr>')
             else:
-                rows.append(f'<tr class="pend"><th scope="row">{E(c["name"])}</th><td>pendiente de publicar</td><td></td></tr>')
+                rows.append(f'<tr class="pend"><th scope="row">{E(c["name"])}</th><td>{t("unpublished") if ES else "—"}</td><td></td></tr>')
         if rows:
-            blocks.append(f'<section class="sec" id="{r["slug"]}" aria-labelledby="h-{r["slug"]}"><h2 id="h-{r["slug"]}">'
-                          f'<a href="{B.BASE}{r["slug"]}/">{E(r["name"])}</a></h2><table class="tbl">'
-                          f'<thead><tr><th scope="col">Ciudad</th><th scope="col">Festivos locales</th><th scope="col">Fuente</th></tr></thead>'
+            blocks.append(f'<section class="sec" id="{r["slug"]}" aria-labelledby="h-{r["slug"]}"><div class="sec-h"><h2 id="h-{r["slug"]}">'
+                          f'<a href="{B.BASE}{r["slug"]}/">{E(r["name"])}</a></h2></div><table class="tbl hub">'
+                          f'<thead><tr><th scope="col">{t("col_city")}</th><th scope="col">{t("nav_locals")}</th><th scope="col">{t("col_src")}</th></tr></thead>'
                           f'<tbody>{"".join(rows)}</tbody></table></section>')
-    qas = [("¿Quién fija los festivos locales?",
-            "Cada ayuntamiento propone 2 días al año y la autoridad laboral de la comunidad los publica en el boletín oficial."),
-           ("¿Por qué no sale mi ciudad?",
-            "Porque aún no hay publicación oficial. Solo damos fechas de un boletín o de un acuerdo del pleno publicado por el ayuntamiento.")]
-    title = "Festivos locales 2027 por ciudad: fechas oficiales"
-    desc = (f"Los 2 festivos locales de 2027 de {n_pub} ciudades, con su fuente oficial: boletín o acuerdo del pleno. "
-            f"Las demás, en cuanto se publiquen.")
-    body = (f'<h1>Festivos locales 2027</h1><p class="ans">{n_pub} ciudades con sus 2 festivos locales de 2027 aprobados; {n_pen} pendientes de publicar.</p>'
-            f'<p class="src">Fuentes: boletines oficiales y plenos municipales<span class="sep" aria-hidden="true"> · </span>'
-            f'<time datetime="{loc["updated"]}">{t("updated", d=B.dmy(loc["updated"]))}</time></p>'
-            + "".join(blocks) + faq_html(qas))
-    crumbs = [(t("crumb_home"), ""), ("Festivos locales 2027", "festivos-locales/")]
-    return shell(title, desc, "festivos-locales/", crumbs, body, [faq_ld(qas)], current="festivos-locales/")
+    qas = []
+    if ES:
+        qas = [("¿Quién fija los festivos locales?",
+                "Cada ayuntamiento propone 2 días al año y la autoridad laboral de la comunidad los publica en el boletín oficial."),
+               ("¿Por qué no sale mi ciudad?",
+                "Porque aún no hay publicación oficial. Solo damos fechas de un boletín o de un acuerdo del pleno publicado por el ayuntamiento.")]
+        title = "Festivos locales 2027 por ciudad: fechas oficiales"
+        desc = (f"Los 2 festivos locales de 2027 de {n_pub} ciudades, con su fuente oficial: boletín o acuerdo del pleno. "
+                f"Las demás, en cuanto se publiquen.")
+        ctx = f'<p class="ctx">{n_pub} ciudades publicadas · {n_pen} pendientes · <time datetime="{loc["updated"]}">actualizado {B.dmy(loc["updated"])}</time></p>'
+    else:
+        title = f'{t("nav_locals")} 2027 · El Calendario Laboral'
+        names = ", ".join(x["title_name"] for x in cities)
+        desc = B.pick(155, f'{t("nav_locals")} 2027: {names}', f'{t("nav_locals")} 2027: {names[:120].rsplit(", ", 1)[0]}…')
+        ctx = f'<p class="ctx">{t("col_city")}: {n_pub}</p>' if B.LANG != "eu" else ""
+    h1 = f'{t("nav_locals")} 2027'
+    crumbs = [(t("spain"), ""), (h1, "festivos-locales/")]
+    main = (f'<div class="hero wrap">{B.crumbs_html(crumbs)}<h1>{E(h1)}</h1>{ctx}</div>'
+            f'<div class="wrap body narrow">{"".join(blocks)}{faq_html(qas)}</div>')
+    head = B.head_html(title, desc, "festivos-locales/", f"{B.SITE}{B.ASSETS}og/espana.png", ld(crumbs_ld(crumbs), faq_ld(qas)))
+    return B.page(head, "pg", "locals", main, DATA, js=False)
 
 
 # ---------------------------------------------------------------- home and regions
@@ -239,87 +238,116 @@ def region_facts(r):
             "pts": B.puentes(hols), "can": r["slug"] == "canarias"}
 
 
+def region_titles(r, f):
+    names = B.R(r)
+    if ES:
+        title = B.pick(60, t("title_region", region=r["name"]), t("title_region2", region=r["name"]))
+        desc = B.pick(155, t("desc_region", region=r["name"], n=f["n"], p=len(f["pts"])),
+                      f'Festivos 2027 en {r["name"]}: los {f["n"]} del BOE con su día, {len(f["pts"])} puentes y planificador. Añade tus 2 locales.')
+        return title, desc
+    cands = []
+    if names["seo"]:
+        seo = {k: (f'{v} ({names["seo"]})' if k in ("region", "region_in") else v) for k, v in names.items()}
+        cands += [B.fill(t("title_region"), seo), B.fill(t("title_region2"), seo)]
+    cands += [B.fill(t("title_region"), names), B.fill(t("title_region2"), names)]
+    title = B.pick(60, *cands)
+    desc = first_sentences(B.fill(t("desc_region"), names, n=f["n"] + (1 if f["can"] else 0), p=len(f["pts"])), 155)
+    return title, desc
+
+
 def region_page(r, cities, pending):
     f = region_facts(r)
     slug, name = r["slug"], r["name"]
-    title = B.pick(60, t("title_region", name=name), t("title_region2", name=name))
-    n_txt = f'{f["n"]}' + (" (más la fiesta de tu isla)" if f["can"] else "")
-    desc = B.pick(155, t("desc_region", name=name, n=f["n"], p=len(f["pts"])),
-                  f'Festivos 2027 en {name}: los {f["n"]} del BOE con su día, {len(f["pts"])} puentes y planificador. Añade tus 2 locales.')
-    own = ", ".join(f'{E(h["name"])} ({dm(h["date"])})' for h in f["own"])
-    var = f' ({VARIANT[slug]})' if slug in VARIANT else ""
-    dates = {h["date"] for h in f["hols"]}
-    if "2027-03-29" in dates:
-        q2 = (f"¿Es festivo el Lunes de Pascua en {name}?", "Sí, el lunes 29 de marzo de 2027.")
-    else:
-        q2 = (f"¿Es festivo el Jueves Santo en {name}?",
-              "Sí, el jueves 25 de marzo de 2027." if "2027-03-25" in dates else "No. El 25 de marzo de 2027 es laborable; el Viernes Santo (26 de marzo) sí es festivo.")
-    if "2027-08-16" in dates:
-        a3 = f"Cae en domingo y {name} lo pasa al lunes 16 de agosto."
-    elif "2027-10-11" in dates:
-        a3 = f"Cae en domingo y {name} lo pasa al lunes 11 de octubre."
-    else:
-        a3 = f"Cae en domingo y {name} no lo traslada, así que no hay festivo extra."
-    qas = [(f"¿Cuántos festivos tiene {name} en 2027?",
-            f'{n_txt} según el BOE: {len(f["nat"])} comunes a toda España y {len(f["own"])} propios de {E(name)}{E(var)}: {own}. '
-            f'Además, cada municipio tiene 2 festivos locales.'),
-           q2, (f"¿Qué pasa con el 15 de agosto de 2027 en {name}?", a3),
-           (f"¿Dónde veo los festivos de mi municipio en {name}?",
-            f'Cada ayuntamiento fija 2. Aquí están los de las ciudades ya publicadas: <a href="{B.BASE}festivos-locales/#{slug}">festivos locales 2027</a>.')]
-    rows = "".join(f'<li><a href="{B.BASE}{x["path"]}">{E(x["title_name"])}</a><span>{dm(x["holidays"][0]["date"])} · {dm(x["holidays"][1]["date"])}</span></li>'
-                   for x in cities)
-    pend = (f'<p class="mut">Pendientes de publicar: {E(", ".join(pending))}.</p>' if pending else "")
-    more = (f'<section class="more wrap" id="more"><div class="more-in">'
-            f'<section aria-labelledby="h-loc"><h2 id="h-loc">Festivos locales 2027 en {E(name)}</h2>'
-            f'{"<ul class=links>" + rows + "</ul>" if rows else ""}{pend}'
-            f'<ul class="links"><li><a href="{B.BASE}festivos-locales/">Festivos locales de todas las ciudades</a></li></ul></section>'
-            f'{faq_html(qas)}</div></section>')
-    crumbs = [(t("crumb_home"), ""), (name, f"{slug}/")]
-    lds = [crumbs_ld(crumbs), list_ld(t("ld_list", place=r["official"]), f["hols"]),
-           dataset_ld(f'Festivos laborales 2027 en {r["official"]}', f'Los {f["n"]} festivos laborales de 2027 en {r["official"]} según el {DATA["source"]["id"]}, con día de la semana.',
-                      f"{slug}/", r["official"], DATA["source"]["url"], [("text/calendar", f"ics/{slug}.ics"), ("text/csv", f"csv/{slug}.csv")]),
+    title, desc = region_titles(r, f)
+    qas = []
+    if ES:
+        n_txt = f'{f["n"]}' + (" (más la fiesta de tu isla)" if f["can"] else "")
+        own = ", ".join(f'{E(h["name"])} ({B.dmon(h["date"])})' for h in f["own"])
+        var = f' ({VARIANT[slug]})' if slug in VARIANT else ""
+        dates = {h["date"] for h in f["hols"]}
+        if "2027-03-29" in dates:
+            q2 = (f"¿Es festivo el Lunes de Pascua en {name}?", "Sí, el lunes 29 de marzo de 2027.")
+        else:
+            q2 = (f"¿Es festivo el Jueves Santo en {name}?",
+                  "Sí, el jueves 25 de marzo de 2027." if "2027-03-25" in dates else "No. El 25 de marzo de 2027 es laborable; el Viernes Santo (26 de marzo) sí es festivo.")
+        if "2027-08-16" in dates:
+            a3 = f"Cae en domingo y {name} lo pasa al lunes 16 de agosto."
+        elif "2027-10-11" in dates:
+            a3 = f"Cae en domingo y {name} lo pasa al lunes 11 de octubre."
+        else:
+            a3 = f"Cae en domingo y {name} no lo traslada, así que no hay festivo extra."
+        qas = [(f"¿Cuántos festivos tiene {name} en 2027?",
+                f'{n_txt} según el BOE: {len(f["nat"])} comunes a toda España y {len(f["own"])} propios de {E(name)}{E(var)}: {own}. '
+                f'Además, cada municipio tiene 2 festivos locales.'),
+               q2, (f"¿Qué pasa con el 15 de agosto de 2027 en {name}?", a3),
+               (f"¿Dónde veo los festivos de mi municipio en {name}?",
+                f'Cada ayuntamiento fija 2. Aquí están los de las ciudades ya publicadas: <a href="{B.BASE}festivos-locales/#{slug}">festivos locales 2027</a>.')]
+    names = B.R(r)
+    pend = f'<p class="m">Pendientes de publicar: {E(", ".join(pending))}.</p>' if pending and ES else ""
+    locs = B.section("locales", E(B.fill(t("h_loc"), names)),
+                     city_list(cities) + pend + f'<p class="more-l"><a href="{B.BASE}festivos-locales/">{t("nav_locals")} 2027</a></p>')
+    crumbs = [(t("spain"), ""), (name, f"{slug}/")]
+    hname = B.fill(t("h_hol"), names)
+    lds = [crumbs_ld(crumbs), list_ld(hname, f["hols"]),
+           dataset_ld(hname, desc, f"{slug}/", r["official"], DATA["source"]["url"],
+                      [("text/calendar", f"ics/{slug}.ics"), ("text/csv", f"csv/{slug}.csv")]),
            faq_ld(qas)]
-    return B.head_html(title, desc, f"{slug}/", f"{B.SITE}{B.ASSETS}og/{slug}.png", ld(*lds)) + B.app_body(DATA, r, None, more)
+    head = B.head_html(title, desc, f"{slug}/", f"{B.SITE}{B.ASSETS}og/{slug}.png", ld(*lds))
+    main = B.app_main(DATA, r, None, "", locs + faq_html(qas))
+    return B.page(head, "app", "app", main, DATA, B.app_attrs(r))
 
 
 def home_page():
     regs = {r["slug"]: region_facts(r) for r in DATA["regions"]}
     nat = regs["madrid"]["nat"]
-    counts = sorted({(f["n"]) for s, f in regs.items() if s != "canarias"})
-    weekend = [h for h in nat if D(h["date"]).weekday() >= 5]
-    labs = [B.workdays(f["hols"], 1 if f["can"] else 0) for f in regs.values()]
-    moved16 = [DATA["regions"][k]["name"] for k, (s, f) in enumerate(regs.items()) if any(h["date"] == "2027-08-16" for h in f["hols"])]
-    moved11 = [DATA["regions"][k]["name"] for k, (s, f) in enumerate(regs.items()) if any(h["date"] == "2027-10-11" for h in f["hols"])]
-    src = DATA["source"]
-    qas = [("¿Cuántos festivos hay en 2027?",
-            f'{len(nat)} comunes a toda España y {"/".join(map(str, counts))} en cada comunidad (en Canarias, {regs["canarias"]["n"]} más la fiesta de cada isla). '
-            f'Además, cada municipio tiene 2 festivos locales.'),
-           ("¿Cuándo se publicó el calendario laboral 2027?",
-            f'En el BOE del 13 de octubre de 2026: <a href="{src["url"]}" rel="noopener">{src["id"]}</a>.'),
-           ("¿Qué festivos caen en fin de semana en 2027?",
-            " y ".join(f'{E(h["name"])} ({dlong(h["date"])})' for h in weekend) + ". "
-            f'El 15 de agosto es domingo: lo pasan al lunes 16 {", ".join(moved16)}' + (f'; {", ".join(moved11)} al 11 de octubre.' if moved11 else ".")),
-           ("¿Cuántos días laborables tiene 2027?",
-            f"261 de lunes a viernes. Restando los festivos quedan entre {min(labs)} y {max(labs)}, según la comunidad, sin contar los 2 locales."),
-           ("¿Cuándo es Semana Santa 2027?", "Del domingo 21 al domingo 28 de marzo. Jueves Santo es el 25 y Viernes Santo el 26.")]
-    more = (f'<section class="more wrap" id="more"><div class="more-in">'
-            f'<section aria-labelledby="h-hubs"><h2 id="h-hubs">Más calendarios</h2><ul class="links">'
-            + "".join(f'<li><a href="{B.BASE}{p}">{E(n)}</a></li>' for p, n in B.HUBS if p in BUILT_HUBS)
-            + f'</ul></section>{faq_html(qas)}</div></section>')
-    title, desc = t("title_home"), t("desc_home")
-    lds = [{"@type": "WebSite", "name": t("site_name"), "alternateName": B.HOST, "url": B.URL, "inLanguage": "es-ES"},
+    qas = []
+    if ES:
+        counts = sorted({(f["n"]) for s, f in regs.items() if s != "canarias"})
+        weekend = [h for h in nat if D(h["date"]).weekday() >= 5]
+        labs = [B.workdays(f["hols"], 1 if f["can"] else 0) for f in regs.values()]
+        moved16 = [DATA["regions"][k]["name"] for k, (s, f) in enumerate(regs.items()) if any(h["date"] == "2027-08-16" for h in f["hols"])]
+        moved11 = [DATA["regions"][k]["name"] for k, (s, f) in enumerate(regs.items()) if any(h["date"] == "2027-10-11" for h in f["hols"])]
+        src = DATA["source"]
+        qas = [("¿Cuántos festivos hay en 2027?",
+                f'{len(nat)} comunes a toda España y {"/".join(map(str, counts))} en cada comunidad (en Canarias, {regs["canarias"]["n"]} más la fiesta de cada isla). '
+                f'Además, cada municipio tiene 2 festivos locales.'),
+               ("¿Cuándo se publicó el calendario laboral 2027?",
+                f'En el BOE del 13 de octubre de 2026: <a href="{src["url"]}" rel="noopener">{src["id"]}</a>.'),
+               ("¿Qué festivos caen en fin de semana en 2027?",
+                " y ".join(f'{E(h["name"])} ({B.dlong(h["date"])})' for h in weekend) + ". "
+                f'El 15 de agosto es domingo: lo pasan al lunes 16 {", ".join(moved16)}' + (f'; {", ".join(moved11)} al 11 de octubre.' if moved11 else ".")),
+               ("¿Cuántos días laborables tiene 2027?",
+                f"261 de lunes a viernes. Restando los festivos quedan entre {min(labs)} y {max(labs)}, según la comunidad, sin contar los 2 locales."),
+               ("¿Cuándo es Semana Santa 2027?", "Del domingo 21 al domingo 28 de marzo. Jueves Santo es el 25 y Viernes Santo el 26.")]
+    if ES:
+        title, desc = t("title_home"), t("desc_home")
+    else:
+        title, desc = B.pick(60, t("title_home"), t("h1")), first_sentences(t("desc_home"), 155)
+    sp = {"region": t("spain"), "region_in": t("in_spain"), "region_of": t("spain")}
+    grid = "".join(f'<li><a href="{B.BASE}{r["slug"]}/">{E(r["name"])}</a></li>'
+                   for r in DATA["regions"])
+    n_regions = B.I18N["ui"]["n_regions"][B.LANG] if B.I18N else "19 comunidades"
+    hero = (f'<div class="hero wrap"><h1>{E(t("h1"))}</h1><p class="ctx">{E(n_regions)} · '
+            f'<a href="{DATA["source"]["url"]}" rel="noopener">{t("data_source")}</a></p></div>')
+    reg_sec = B.section("comunidades", t("pick_region"), f'<ul class="regs">{grid}</ul>')
+    hol_sec = B.section("festivos", E(B.fill(t("h_hol"), sp)),
+                        f'{B.next_html()}<table class="tbl hol">{B.hol_head(False)}<tbody>{"".join(B.hol_row(h, False) for h in nat)}</tbody></table>')
+    prow = "".join(B.pts_row(it) for it in B.all_breaks(nat))
+    pts_sec = B.section("puentes", E(B.fill(t("h_pts"), sp)), f'<table class="tbl pts">{B.pts_head()}<tbody>{prow}</tbody></table>')
+    main = f'{hero}<div class="wrap body">{reg_sec}{hol_sec}{pts_sec}{faq_html(qas)}</div>'
+    lds = [{"@type": "WebSite", "name": t("site_name"), "alternateName": B.HOST, "url": B.URL, "inLanguage": B.IN_LANG[B.LANG]},
            {"@type": "Organization", "name": t("site_name"), "url": B.URL, "logo": f"{B.SITE}{B.ASSETS}icons/icon-512.png"},
-           {"@type": "WebApplication", "name": t("ld_app"), "url": B.URL, "applicationCategory": "UtilitiesApplication",
+           {"@type": "WebApplication", "name": t("site_name") + " 2027", "url": B.URL, "applicationCategory": "UtilitiesApplication",
             "operatingSystem": "Web, Android", "inLanguage": B.LANG, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
             "description": desc},
            faq_ld(qas)]
-    return B.head_html(title, desc, "", f"{B.SITE}{B.ASSETS}og/espana.png", ld(*lds)) + B.app_body(DATA, None, None, more)
+    head = B.head_html(title, desc, "", f"{B.SITE}{B.ASSETS}og/espana.png", ld(*lds))
+    return B.page(head, "home", "", main, DATA)
 
 
 # ---------------------------------------------------------------- entry points
 
 DATA = None
-BUILT_HUBS = {"festivos-locales/"}  # hubs that exist so far; the footer and home only link these
 
 
 def write_pages(data, fix):
@@ -327,7 +355,6 @@ def write_pages(data, fix):
     global DATA, _fix
     DATA, _fix = data, fix
     _written.clear()
-    B.HUBS[:] = [h for h in B.HUBS if h[0] in BUILT_HUBS]
     regions = {r["slug"]: r for r in data["regions"]}
     loc = load_locales()
     cities = published_cities(loc, regions)
@@ -348,7 +375,7 @@ def csv_text(rows):
     out = ["Fecha;Día;Festivo;Ámbito"]
     for iso, name, scope in rows:
         d = D(iso)
-        cells = [d.strftime("%d/%m/%Y"), t("wd")[d.weekday()], name, scope]
+        cells = [d.strftime("%d/%m/%Y"), B.T["_wd"][d.weekday()], name, scope]
         out.append(";".join('"' + c.replace('"', '""') + '"' if any(x in c for x in ';"\n') else c for c in cells))
     return "﻿" + "\r\n".join(out) + "\r\n"
 
@@ -365,7 +392,7 @@ def region_csv_rows(r):
 
 
 def write_shared(data, img=True):
-    """Files shared by every language: .csv for regions and cities, .ics and og images for cities."""
+    """Files shared by every language (Spanish build only): .csv for regions and cities, .ics and og images for cities."""
     regions = {r["slug"]: r for r in data["regions"]}
     cities = published_cities(load_locales(), regions)
     (B.ROOT / "csv").mkdir(exist_ok=True)

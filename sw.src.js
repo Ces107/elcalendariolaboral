@@ -14,24 +14,28 @@ self.addEventListener('activate', function (e) {
   }).then(function () { return self.clients.claim(); }));
 });
 
-// Cache-first para esta carpeta; la red refresca la copia en segundo plano.
+// Páginas: siempre de la red (copia solo para ir sin conexión). css/js/imágenes: caché primero (llevan ?v=).
 self.addEventListener('fetch', function (e) {
   var req = e.request;
   if (req.method !== 'GET' || req.url.indexOf(SCOPE) !== 0) return;
-  var nav = req.mode === 'navigate';
   var url = new URL(req.url);
-  if (/\/(ads|robots)\.txt$|\.xml$/.test(url.pathname)) return; // siempre de la red, nunca en caché
-  var key = nav ? url.origin + url.pathname : req;
-  var net = caches.open(VERSION).then(function (c) {
-    return fetch(req).then(function (res) {
-      if (res && res.ok && res.type === 'basic') c.put(key, res.clone());
+  if (/\/(ads|robots)\.txt$|\.xml$|\.ics$|\.csv$/.test(url.pathname)) return; // siempre de la red
+  if (req.mode === 'navigate') {
+    var key = url.origin + url.pathname;
+    e.respondWith(fetch(req).then(function (res) {
+      if (res && res.ok && res.type === 'basic') { var cp = res.clone(); caches.open(VERSION).then(function (c) { c.put(key, cp); }); }
       return res;
-    });
-  });
+    }).catch(function () {
+      return caches.open(VERSION).then(function (c) { return c.match(key).then(function (hit) { return hit || Response.error(); }); });
+    }));
+    return;
+  }
   e.respondWith(caches.open(VERSION).then(function (c) {
-    return c.match(key).then(function (hit) {
-      return hit || net.catch(function () { return nav ? c.match(SCOPE) : Response.error(); });
+    return c.match(req).then(function (hit) {
+      return hit || fetch(req).then(function (res) {
+        if (res && res.ok && res.type === 'basic') c.put(req, res.clone());
+        return res;
+      });
     });
   }));
-  e.waitUntil(net.catch(function () {}));
 });
