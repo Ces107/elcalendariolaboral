@@ -350,3 +350,43 @@ select option:disabled { color: #8a929e; }
   .mon, .mon td, .sw, .mh li::before { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .pfoot { display: block; color: var(--mut); font-size: 8pt; margin-top: 3mm; }
 }
+
+/* ---------------------------------------------------------------- vacation optimizer (/vacaciones-2027/) */
+.vac .pickers { align-items: flex-end; }
+.vac .field .stepper { align-self: flex-start; }
+.vopt { margin-top: 16px; }
+.vopt > summary { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; font-weight: 600; color: var(--brand); cursor: pointer; list-style: none; }
+.vopt > summary::-webkit-details-marker { display: none; }
+.vopt[open] .chev { transform: rotate(180deg); }
+.vopt-b { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px 16px; padding-top: 8px; }
+.vopt-b select { min-width: 140px; }
+.flabel { font-size: 13px; font-weight: 600; color: var(--ink2); }
+.mchips { display: grid; grid-template-columns: repeat(6, 52px); gap: 6px; }
+.mchips .btn { padding: 0; }
+.mchips .btn[aria-pressed="true"] { border-color: var(--n-b); background: #fdf0ee; color: var(--n-i); text-decoration: line-through; }
+.vres { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; margin-top: 24px; padding: 20px 24px; background: var(--bg2); border-radius: 6px; }
+.vres-t { flex: 1 1 320px; min-width: 0; }
+.vhd { margin: 0; display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 12px; }
+.vh-n { font-size: 72px; line-height: 1; font-weight: 700; letter-spacing: -.03em; }
+.vh-t { font-size: 24px; font-weight: 700; }
+.vh-s { margin: 6px 0 16px; color: var(--mut); }
+.vcard { display: block; width: 216px; height: 270px; border: 1px solid var(--line); border-radius: 6px; background: #fff; }
+.vshare .menu-cal { left: 0; right: auto; }
+.mon td.br:not(.v):not(.n):not(.r):not(.i):not(.l) { background: #dde9f8; color: var(--v-i); }
+.mon td.we.br.n, .mon td.we.br.r, .mon td.we.br.i, .mon td.we.br.l { background: #dde9f8; }
+.mon td.tk { box-shadow: inset 0 0 0 2px var(--v-i); }
+.mon.mx { opacity: .5; }
+.sw.tk { background: var(--v); border: 2px solid var(--v-i); }
+.vrank .num { width: 110px; text-align: right; }
+.vrank tr.on th, .vrank tr.on td { background: #f2f7fd; }
+@media (max-width: 640px) {
+  .vac .pickers { align-items: stretch; }
+  .vh-n { font-size: 56px; }
+  .vh-t { font-size: 20px; }
+  .vres { padding: 16px; }
+  .vcard { width: 100%; max-width: 264px; height: auto; aspect-ratio: 4 / 5; }
+  .vopt-b select { width: 100%; }
+  .vopt-b .field { width: 100%; }
+  .mchips { grid-template-columns: repeat(6, 1fr); }
+  .vrank .num { width: 64px; }
+}

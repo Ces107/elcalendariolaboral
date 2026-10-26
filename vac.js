@@ -160,7 +160,7 @@
   }
   function place() {
     var nm = D.name;
-    D.cities.forEach(function (c) { if (c[0] === S.m) nm = c[1]; });
+    D.cities.forEach(function (c) { if (c[0] === S.m) nm = c[4] || c[1]; });
     D.zones.forEach(function (z) { if (z[0] === S.m && z[2]) nm = z[1]; });
     return nm;
   }
@@ -286,13 +286,13 @@
   function absUrl() { return D.site + shareUrl(); }
   function challenge() { return '¿Cuántos días libres sacas tú en 2027? Yo ' + R.total + ' con ' + R.used + ' de vacaciones 👉 ' + absUrl(); }
 
-  function strip(g, x0, y0, w, rows) {
+  function strip(g, x0, y0, w, rows, maxH) {
     /* the year as weeks (columns) x weekdays (rows), split in `rows` bands; returns the height used */
     var kind = {}, vac = {}, br = {};
     HOLS.forEach(function (h) { kind[IDX[h.date]] = h.kind; });
     R.breaks.forEach(function (b) { for (var x = b.s; x <= b.e; x++) { br[x] = 1; if (!OFF[x]) vac[x] = 1; } });
     var start = WD[0], weeks = Math.ceil((N + start) / 7), per = Math.ceil(weeks / rows);
-    var c = Math.floor(w / per), gap = Math.max(2, Math.round(c * 0.14)), lab = Math.round(c * 0.9), y = y0;
+    var c = Math.min(Math.floor(w / per), Math.floor(maxH / (rows * 8.7))), gap = Math.max(2, Math.round(c * 0.14)), lab = Math.round(c * 0.9), y = y0;
     for (var band = 0; band < rows; band++) {
       var wk0 = band * per;
       g.font = '600 ' + Math.round(c * 0.62) + 'px ' + FONT; g.textBaseline = 'alphabetic';
@@ -329,12 +329,12 @@
     var nm = place(), used = ndays(R.used), big = String(R.total);
     g.textBaseline = 'alphabetic';
     if (tall) {
-      fit(g, 'Con ' + used + ' de vacaciones tengo', '600', 54, w - 2 * M); g.fillStyle = COL.mut; g.fillText('Con ' + used + ' de vacaciones tengo', M, 300);
-      g.font = '700 300px ' + FONT; g.fillStyle = COL.ink; g.fillText(big, M - 12, 590);
+      fit(g, 'Con ' + used + ' de vacaciones tengo', '600', 54, w - 2 * M); g.fillStyle = COL.mut; g.fillText('Con ' + used + ' de vacaciones tengo', M, 262);
+      g.font = '700 290px ' + FONT; g.fillStyle = COL.ink; g.fillText(big, M - 12, 535);
       var bw = g.measureText(big).width;
-      g.font = '700 76px ' + FONT; g.fillText('días', M + bw + 16, 505); g.fillText('libres', M + bw + 16, 588);
-      fit(g, 'en 2027 · ' + nm, '700', 60, w - 2 * M); g.fillStyle = COL.ink; g.fillText('en 2027 · ' + nm, M, 690);
-      strip(g, M, 770, w - 2 * M, 2);
+      g.font = '700 76px ' + FONT; g.fillText('días', M + bw + 16, 452); g.fillText('libres', M + bw + 16, 533);
+      fit(g, 'en 2027 · ' + nm, '700', 60, w - 2 * M); g.fillStyle = COL.ink; g.fillText('en 2027 · ' + nm, M, 630);
+      strip(g, M, 690, w - 2 * M, 2, h - 150 - 690);
       g.font = '700 38px ' + FONT; g.fillStyle = COL.ink; g.fillText(D.host + '/vacaciones-2027', M, h - 72);
     } else {
       fit(g, 'Con ' + used + ' de vacaciones tengo', '600', 40, w - 2 * M); g.fillStyle = COL.mut; g.fillText('Con ' + used + ' de vacaciones tengo', M, 190);
@@ -342,7 +342,7 @@
       var bw2 = g.measureText(big).width;
       g.font = '700 60px ' + FONT; g.fillText('días libres', M + bw2 + 20, 345);
       fit(g, 'en 2027 · ' + nm, '700', 44, w - 2 * M - 300); g.fillText('en 2027 · ' + nm, M, 408);
-      strip(g, M, 440, w - 2 * M, 1);
+      strip(g, M, 440, w - 2 * M, 1, h - 440 - 24);
       g.font = '700 28px ' + FONT; g.fillStyle = COL.ink;
       var u = D.host + '/vacaciones-2027'; g.fillText(u, w - M - g.measureText(u).width, M + 40);
     }
@@ -362,7 +362,7 @@
           cardBlob = b;
           if (cardUrl) URL.revokeObjectURL(cardUrl);
           cardUrl = URL.createObjectURL(b);
-          var im = $('vcard'); if (im) { im.src = cardUrl; im.alt = headline(); }
+          var im = $('vcard'); if (im) { im.src = cardUrl; im.alt = headline(); im.hidden = false; }
         }, 'image/png');
       });
     }, 120);

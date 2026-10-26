@@ -111,6 +111,10 @@ def optimize(off, n, taken=(), blocked_months=(), max_len=0, min_len=MIN_BREAK):
 
 # ---------------------------------------------------------------- labels (same as breakName() in vac.js)
 
+SHORT = {"Lunes siguiente a la Asunción de la Virgen": "Asunción", "Sustitución del 15 de agosto": "Asunción",
+         "Fiesta Nacional de España": "Fiesta Nacional", "Día de la Constitución Española": "Constitución",
+         "Inmaculada Concepción": "Inmaculada"}
+
 def break_name(b, hols):
     """'Semana Santa', 'Navidad', the holidays in the break joined by ' · ', or the month(s)."""
     s, e = DAYS[b["s"]].isoformat(), DAYS[b["e"]].isoformat()
@@ -118,7 +122,7 @@ def break_name(b, hols):
         return "Semana Santa"
     if e >= "2027-12-24" or s <= "2027-01-06":
         return "Navidad"
-    names = [h["name"] for h in hols if s <= h["date"] <= e and DAYS.__getitem__(_idx(h["date"])).weekday() < 5]
+    names = [SHORT.get(h["name"], h["name"]) for h in hols if s <= h["date"] <= e and DAYS[_idx(h["date"])].weekday() < 5]
     if names:
         return " · ".join(dict.fromkeys(names))
     ms = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]

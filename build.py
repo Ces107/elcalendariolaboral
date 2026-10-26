@@ -473,7 +473,9 @@ def header_html(here=""):
             f'<nav class="nav" id="nav">'
             f'<details class="dd dd-reg"><summary>{t("nav_regions")}{CHEV}</summary><div class="menu menu-reg">{regs}</div></details>'
             f'<a href="{BASE}festivos-locales/"{" aria-current=page" if here == "locals" else ""}>{t("nav_locals")}</a>'
-            f'<a href="{pts_href}">{t("nav_bridges")}</a></nav>'
+            f'<a href="{pts_href}">{t("nav_bridges")}</a>'
+            + (f'<a href="{BASE}vacaciones-2027/"{" aria-current=page" if here == "vac" else ""}>Vacaciones</a>' if LANG == "es" else "")
+            + '</nav>'
             f'{install_html()}'
             f'<details class="dd dd-lang"><summary>{GLOBE}<span class="ln-l">{LANG_NAMES[LANG]}</span><span class="ln-s">{LANG.upper()}</span>{CHEV}</summary>'
             f'<div class="menu menu-lang">{lang_links()}</div></details>'
@@ -490,7 +492,8 @@ def footer_html(data):
             + (f'<h2>Calendario escolar</h2><ul><li><a href="{BASE}calendario-escolar/">Calendario escolar 2026-2027</a></li>'
                f'<li><a href="{BASE}vacaciones-escolares/navidad/">Vacaciones de Navidad 2026-2027</a></li>'
                f'<li><a href="{BASE}vacaciones-escolares/semana-santa/">Vacaciones de Semana Santa 2027</a></li>'
-               f'<li><a href="{BASE}vacaciones-escolares/carnaval/">Carnaval y semana blanca 2027</a></li></ul>' if LANG == "es" else "")
+               f'<li><a href="{BASE}vacaciones-escolares/carnaval/">Carnaval y semana blanca 2027</a></li></ul>'
+               f'<h2>Vacaciones</h2><ul><li><a href="{BASE}vacaciones-2027/">Maximiza tus vacaciones 2027</a></li></ul>' if LANG == "es" else "")
             + '</section>'
             f'<section><h2>El Calendario Laboral</h2><ul><li><a href="{s["url"]}" rel="noopener">{t("data_source")}</a></li>'
             f'<li><a href="{ASSETS}widget/"{"" if LANG == "es" else " hreflang=es lang=es"}>Widget para tu web</a></li>'
@@ -769,6 +772,8 @@ def app_main(data, r, city=None, hero_extra="", more="", cities=(), pending=()):
             f'<input id="vn" type="number" inputmode="numeric" min="1" max="30" value="4"><button type="button" id="vp" aria-label="{t("one_more")}">+</button></span></div>'
             f'<table class="tbl plan"><thead><tr><th scope="col">{t("col_vac")}</th><th scope="col" class="num">{t("col_free")}</th><td></td><td></td></tr></thead>'
             f'<tbody id="vlist"></tbody></table>')
+    if LANG == "es":
+        plan += f'<p class="more-l"><a href="{BASE}vacaciones-2027/{slug}/{"?m=" + city["slug"] if city else ""}">Optimizar todo el año →</a></p>'
     vac_sec = section("vacaciones", t("h_vac"), plan)
     items = "".join(hol_item(h) for h in hols) + (island_item() if is_can else "")
     addloc = "" if city else (f'<div class="tbl-f"><button type="button" class="btn" id="addloc">+ {t("add_local")}</button>'

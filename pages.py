@@ -356,7 +356,8 @@ def home_page():
     reg_sec = B.section("comunidades", t("pick_region"), f'<ul class="chips">{chips}</ul>{school}')
     hol_sec = B.section("festivos", E(B.fill(t("h_hol"), sp)), f'<ol class="hl">{"".join(B.hol_item(h) for h in nat)}</ol>')
     prow = "".join(B.pts_row(it) for it in B.all_breaks(nat))
-    pts_sec = B.section("puentes", E(B.fill(t("h_pts"), sp)), f'<table class="tbl pts">{B.pts_head()}<tbody>{prow}</tbody></table>')
+    vac = f'<p class="more-l"><a href="{B.BASE}vacaciones-2027/">Maximiza tus vacaciones 2027 →</a></p>' if ES else ""
+    pts_sec = B.section("puentes", E(B.fill(t("h_pts"), sp)), f'<table class="tbl pts">{B.pts_head()}<tbody>{prow}</tbody></table>{vac}')
     main = f'{hero}<div class="wrap body">{cal_sec}{reg_sec}{hol_sec}{pts_sec}{faq_html(qas)}</div>{B.POP}'
     lds = [{"@type": "WebSite", "name": t("site_name"), "alternateName": B.HOST, "url": B.URL, "inLanguage": B.IN_LANG[B.LANG]},
            {"@type": "Organization", "name": t("site_name"), "url": B.URL, "logo": f"{B.SITE}{B.ASSETS}icons/icon-512.png"},
@@ -397,6 +398,8 @@ def write_pages(data, fix):
         escolar.write_pages(data, write)
         import widget
         widget.write_pages(data, write, cities)
+        import vacaciones
+        vacaciones.write_pages(data, write, cities)
     return list(_written)
 
 
@@ -438,3 +441,5 @@ def write_shared(data, img=True):
     if img and ES:
         import escolar
         escolar.og_images()
+        import vacaciones
+        vacaciones.og_images(data)
