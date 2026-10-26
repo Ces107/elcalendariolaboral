@@ -77,7 +77,7 @@ import json  # noqa: E402
 import re  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent
-SKIP = {".git", ".well-known", "data", "seo", "icons", "og", "ics", "csv", "privacidad", "__pycache__"}
+SKIP = {".git", ".well-known", "data", "seo", "icons", "og", "ics", "csv", "privacidad", "__pycache__", "embed"}
 pages = sorted(p for p in ROOT.rglob("index.html") if not SKIP & set(p.relative_to(ROOT).parts[:-1]))
 sm = (ROOT / "sitemap.xml").read_text("utf-8")
 locs = re.findall(r"<loc>([^<]+)</loc>", sm)
@@ -167,6 +167,33 @@ for r in esc["regions"]:
 cat = json.loads((ROOT / "data" / "escolar-2027-28.json").read_text("utf-8"))["regions"][0]
 hc = (ROOT / "calendario-escolar" / "cataluna" / "index.html").read_text("utf-8")
 check('id="curso-2027-2028"' in hc and f'datetime="{cat["stages"][0]["start"]}"' in hc, "cataluña: falta el curso 2027-2028")
+
+# widget: la página en el sitemap; un embed por comunidad, isla y ciudad publicada, con el enlace de crédito visible
+CREDIT = "Calendario laboral 2027 · elcalendariolaboral.es"
+check("/widget/" in paths_in_sm, "/widget/ no está en sitemap.xml")
+wp = ROOT / "widget" / "index.html"
+check(wp.exists() and 'id="wprev"' in wp.read_text("utf-8") and CREDIT in _h.unescape(wp.read_text("utf-8")), "widget: falta la vista previa o el crédito en el código")
+emb = ROOT / "widget" / "embed"
+keys = slugs + [f"{c['region']}-{c['slug']}" for c in loc["cities"] if c["status"] in ("boletin", "ayuntamiento") and c["holidays"]] \
+    + [f"{s}-{o['slug']}" for s, z in data["zones"].items() for o in z["options"] if "add" in o]
+for k in keys:
+    f = emb / k / "index.html"
+    check(f.exists(), f"widget: falta /widget/embed/{k}/")
+    if not f.exists():
+        continue
+    h = f.read_text("utf-8")
+    cr = re.search(r'<p class="cr"><a href="([^"]+)" target="_blank" rel="noopener">([^<]+)</a></p>', h)
+    check(bool(cr) and cr.group(2) == CREDIT and cr.group(1).startswith(site + "/"), f"widget {k}: enlace de crédito")
+    check("<noscript" not in h and "nofollow" not in h, f"widget {k}: el crédito debe ser un enlace normal")
+    check('<meta name="robots" content="noindex">' in h and f'<link rel="canonical" href="{cr.group(1) if cr else ""}">' in h, f"widget {k}: noindex y canonical")
+    check(not re.search(r'(src|href)="(https?:)?//(?!' + re.escape(site.split("://")[-1]) + ')', h), f"widget {k}: petición externa")
+    check("adsbygoogle" not in h and len(h.encode()) < 12000, f"widget {k}: sin anuncios y ligero ({len(h.encode())} B)")
+    if k in slugs:
+        exp = [x["date"] for x in build.region_holidays(data, k)]
+        check(re.findall(r'data-d="([\d-]+)"', h) == exp, f"widget {k}: festivos distintos de los datos")
+check(len(list(emb.iterdir())) == len(keys), f"widget: {len(list(emb.iterdir()))} embeds != {len(keys)}")
+for p in pages:
+    check("/widget/" in p.read_text("utf-8").split('<footer', 1)[-1], f"{p.relative_to(ROOT)}: falta «Widget para tu web» en el pie")
 
 print(f"{len(fails)} fallos" if fails else f"OK: 19 comunidades, 12 festivos cada una, días de la semana correctos; {len(pages)} páginas en el sitemap")
 for f in fails:

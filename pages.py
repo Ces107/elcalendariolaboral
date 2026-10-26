@@ -384,6 +384,8 @@ def write_pages(data, fix):
     if ES:
         import escolar
         escolar.write_pages(data, write)
+        import widget
+        widget.write_pages(data, write, cities)
     return list(_written)
 
 
