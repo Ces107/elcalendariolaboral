@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Calendario laboral 2027 - generador.
 
-Lee data/2027.json y escribe: index.html (app), <slug>/index.html (19 paginas de comunidad, la misma app
-con la comunidad elegida), privacidad/, ics/*.ics, og/*.png, icons/*.png, sitemap.xml, manifest y sw.js.
+Lee data/2027.json y escribe: index.html (portada con las 19 comunidades), <slug>/index.html (la app con la
+comunidad elegida), privacidad/, ics/*.ics, og/*.png, icons/*.png, sitemap.xml, manifest y sw.js.
 
     python build.py          # genera todo
     python build.py --no-img # sin regenerar PNG
@@ -19,6 +19,7 @@ import json
 import os
 import sys
 from pathlib import Path
+from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parent
 # Where the site is served. Defaults: ces107.github.io/calendario-laboral-2027/. For the own domain:
@@ -65,29 +66,35 @@ T = {"es": {
     # page
     "share": "Compartir", "print": "Imprimir", "theme": "Modo oscuro",
     "h1": "Calendario laboral 2027", "spain": "España", "region_label": "Comunidad autónoma",
+    "home_grid": "Elige tu comunidad", "home_meta": "{n} festivos nacionales",
     "zone_prompt": "Elige tu isla", "zone_general": "Zona general", "zone_label": "Zona", "island_feast": "Fiesta de tu isla",
-    "meta_fest": "{n} festivos", "meta_pts1": "{n} puente", "meta_pts": "{n} puentes", "meta_lab": "{n} laborables",
-    "meta_nat": "{n} festivos nacionales", "pick_region": "Elige tu comunidad",
-    "legend": "Leyenda", "k_n": "Nacional", "k_r": "Autonómico", "k_l": "Local", "k_v": "Vacaciones",
-    "h_fest": "Festivos", "h_pts": "Puentes", "h_year": "Año 2027", "h_vac": "Vacaciones",
-    "local_add": "+ Festivo local", "local_add_aria": "Añadir festivo local", "local_add2_aria": "Añadir otro festivo local",
+    "meta_fest": "{n} festivos", "meta_isle": "+ 1 de tu isla", "meta_loc": "+ 2 locales",
+    "meta_pts1": "{n} puente", "meta_pts": "{n} puentes", "meta_lab": "{n} días laborables (lun–vie)",
+    "src": "BOE 13 oct 2026", "src_title": "Datos revisados el {d}",
+    "legend": "Leyenda", "k_f": "Festivo", "k_v": "Vacaciones",
+    "lbl_r": "De tu comunidad", "lbl_l": "Local", "lbl_6": "en sábado", "lbl_7": "en domingo",
+    "h_fest": "Festivos", "h_pts": "Puentes", "h_lw": "Fines de semana largos", "h_year": "Año 2027", "h_vac": "Vacaciones",
+    "loc_more": "de tu municipio", "loc_aria": "Festivo local", "loc_out": "Elige un día de 2027",
     "local_name": "Festivo local", "local_rm_aria": "Quitar festivo local del {d}",
-    "vmode": "Marcar vacaciones", "done": "Hecho", "vhint": "Toca los días que te coges.", "vclear": "Borrar",
+    "vmode": "Marcar vacaciones", "done": "Hecho", "vhint": "Marca los días que te coges.", "vclear": "Borrar",
     "vac_days1": "{n} día de vacaciones", "vac_days": "{n} días de vacaciones",
-    "step_minus": "Un día menos", "step_plus": "Un día más", "step_input": "Días de vacaciones", "days": "días",
-    "take1": "Coge el {a}", "take2": "Coge el {a} y el {b}",
+    "step_minus": "Un día menos", "step_plus": "Un día más", "step_input": "Días laborables de vacaciones",
+    "step_lbl": "días laborables de vacaciones", "plan_h": "Mejores opciones",
+    "days": "días", "free": "libres", "cost1": "{n} día", "cost": "{n} días", "trade_sr": "{c} de vacaciones, {n} días libres",
+    "take1": "Coge {a}", "take2": "Coge {a} y {b}", "take_r": "Coge {a}–{b}", "take_rx": "Coge {a} – {b}",
     "add_vac": "Añadir a mis vacaciones", "rm_vac": "Quitar de mis vacaciones", "no_bridges": "Este año no hay puentes.",
-    "gcal": "Añadir a Google Calendar", "ics_btn": "Descargar .ics", "ics_file": "festivos-2027",
-    "ics_calname": "Festivos 2027 · {label}", "vac_event": "Vacaciones",
-    "toast_added1": "{n} día en tus vacaciones", "toast_added": "{n} días en tus vacaciones", "toast_removed": "Quitado de tus vacaciones",
+    "ics_btn": "Descargar .ics", "gcal": "Google Calendar", "apple": "Apple / Outlook",
+    "sub_note": "Google y Apple: solo los festivos oficiales, sin tus locales ni vacaciones.",
+    "ics_file": "festivos-2027", "ics_calname": "Festivos 2027 · {label}", "vac_event": "Vacaciones",
+    "toast_add": "Añadido · {t}", "toast_rm": "Quitado · {t}",
     "toast_local": "Festivo local: {d}", "toast_cleared": "Vacaciones borradas", "toast_copied": "Enlace copiado",
     "foot_regions": "Por comunidad", "foot_data": "Datos:", "foot_boe": "BOE del 13 de octubre de 2026", "foot_privacy": "Privacidad",
-    "privacy_slug": "privacidad",
+    "print_src": "Festivos: {boe}", "privacy_slug": "privacidad",
     "privacy_h1": "Privacidad",
     "privacy_body": [
         "No guardamos ningún dato tuyo en servidores. Tu comunidad, tus festivos locales y tus vacaciones se quedan en tu navegador o en tu móvil, y puedes borrarlos cuando quieras.",
         "No hay cuentas, ni cookies propias, ni analítica, ni publicidad. Si algún día añadimos alguna de estas cosas, lo pondremos aquí y te pediremos permiso antes.",
-        "La tipografía se carga desde Google Fonts. «Añadir a Google Calendar» te lleva a Google, con su propia política de privacidad. El archivo .ics se crea en tu dispositivo.",
+        "La tipografía se carga desde Google Fonts. «Google Calendar» te lleva a Google, con su propia política de privacidad. El archivo .ics se crea en tu dispositivo.",
     ],
     "privacy_src": "Festivos: {link}, {boe}. Contacto: {mail}.",
     # images and manifest
@@ -96,11 +103,12 @@ T = {"es": {
     "app_name": "Calendario laboral 2027", "app_short": "Laboral 2027", "app_desc": "Festivos, puentes y vacaciones 2027 por comunidad.",
 }}
 # Strings app.js needs (embedded as #cal-i18n).
-JS_KEYS = ["months", "mon3", "wd", "wd3", "wd1", "long_day", "title_home", "title_region", "spain", "zone_prompt", "zone_general",
-           "island_feast", "meta_fest", "meta_pts1", "meta_pts", "meta_lab", "meta_nat", "pick_region", "local_name", "local_rm_aria",
-           "vmode", "done", "vhint", "vac_days1", "vac_days", "days", "take1", "take2", "add_vac", "rm_vac", "no_bridges",
-           "ics_file", "ics_calname", "vac_event", "toast_added1", "toast_added", "toast_removed", "toast_local", "toast_cleared",
-           "toast_copied"]
+JS_KEYS = ["months", "mon3", "wd", "wd3", "wd1", "long_day", "title_region", "spain", "zone_prompt", "zone_general",
+           "island_feast", "h_lw", "meta_fest", "meta_isle", "meta_loc", "meta_pts1", "meta_pts", "meta_lab", "home_meta",
+           "lbl_r", "lbl_l", "lbl_6", "lbl_7", "loc_more", "loc_out", "local_name", "local_rm_aria",
+           "vmode", "done", "vhint", "vac_days1", "vac_days", "days", "free", "cost1", "cost", "trade_sr",
+           "take1", "take2", "take_r", "take_rx", "add_vac", "rm_vac", "no_bridges",
+           "ics_file", "ics_calname", "vac_event", "toast_add", "toast_rm", "toast_local", "toast_cleared", "toast_copied"]
 
 
 def t(key, **kw):
@@ -179,9 +187,8 @@ def runs(off):
     return res
 
 
-def puentes(hols):
-    """Fines de semana largos (0 dias) y puentes de 1-2 dias de vacaciones.
-    Misma logica que app.js (bridges)."""
+def _bridge_items(hols):
+    """Todos los tramos: fines de semana largos (coste 0) y huecos de 1-2 laborables junto a un festivo."""
     hd = {h["date"] for h in hols}
     off = [d.weekday() >= 5 or d.isoformat() in hd for d in DAYS]
     rs = runs(off)
@@ -214,6 +221,18 @@ def puentes(hols):
     return items
 
 
+def puentes(hols):
+    """Puentes de verdad: cogiendo 1 o 2 laborables. Misma logica que bridges() en app.js."""
+    return [it for it in _bridge_items(hols) if it["cost"]]
+
+
+def long_weekends(hols):
+    """Fines de semana largos sin coger nada, salvo los que ya caen dentro de un puente. Igual que longWeekends() en app.js."""
+    items = _bridge_items(hols)
+    pts = [it for it in items if it["cost"]]
+    return [it for it in items if not it["cost"] and not any(p["s"] <= it["s"] and it["e"] <= p["e"] for p in pts)]
+
+
 def fmt_day(d):
     return f'{t("wd3")[d.weekday()]} {d.day} {t("mon3")[d.month - 1]}'
 
@@ -233,29 +252,28 @@ LOGO = ('<svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rec
         '<circle cx="13" cy="16.5" r="3.6" style="fill:var(--red)"/></svg>')
 ICON_SHARE = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V3m0 0L7.5 7.5M12 3l4.5 4.5M5 12v7a1.5 1.5 0 0 0 1.5 1.5h11A1.5 1.5 0 0 0 19 19v-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 ICON_PRINT = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 9V3.5h10V9M7 17H4.5V10a1 1 0 0 1 1-1h13a1 1 0 0 1 1 1v7H17M7 14h10v6.5H7z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>'
-ICON_THEME = ('<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.8"/>'
-              '<path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg>')
+ICON_THEME = ('<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" '
+              'stroke-width="1.8" stroke-linejoin="round"/></svg>')
 HEAD_JS = ("<script>try{var t=localStorage.getItem('cl27.theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>")
-THEME_JS = ("<script>(function(){var b=document.getElementById('theme');if(!b)return;b.onclick=function(){var r=document.documentElement,"
-            "d=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches,n=d?'light':'dark';r.dataset.theme=n;"
-            "try{localStorage.setItem('cl27.theme',n)}catch(e){}}})();"
+THEME_JS = ("<script>(function(){var b=document.getElementById('theme');if(!b)return;var r=document.documentElement,"
+            "dk=function(){return r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches};"
+            "b.setAttribute('aria-pressed',String(dk()));b.onclick=function(){var n=dk()?'light':'dark';r.dataset.theme=n;"
+            "b.setAttribute('aria-pressed',String(n==='dark'));try{localStorage.setItem('cl27.theme',n)}catch(e){}}})();"
             "if('serviceWorker'in navigator)addEventListener('load',function(){navigator.serviceWorker.register('" + ASSETS + "sw.js',{scope:'" + ASSETS + "'}).catch(function(){})});</script>")
 
 
 def top_html(app=True):
     tools = ""
     if app:
-        tools += (f'<button class="ib" id="sh" type="button" aria-label="{t("share")}">{ICON_SHARE}</button>'
-                  f'<button class="ib" id="pr" type="button" aria-label="{t("print")}">{ICON_PRINT}</button>')
-    tools += f'<button class="ib" id="theme" type="button" aria-label="{t("theme")}">{ICON_THEME}</button>'
+        tools += (f'<button class="ib" id="sh" type="button" aria-label="{t("share")}" title="{t("share")}">{ICON_SHARE}</button>'
+                  f'<button class="ib" id="pr" type="button" aria-label="{t("print")}" title="{t("print")}">{ICON_PRINT}</button>')
+    tools += f'<button class="ib" id="theme" type="button" aria-label="{t("theme")}" title="{t("theme")}">{ICON_THEME}</button>'
     return (f'<header class="top"><div class="wrap top-in"><a class="logo" href="{BASE}">{LOGO}<span>elcalendariolaboral<i>.es</i></span></a>'
             f'<div class="tools">{tools}</div></div></header>')
 
 
-def key_html(region=True):
-    hide = "" if region else " hidden"
-    return (f'<ul class="key" aria-label="{t("legend")}"><li><i class="k n"></i>{t("k_n")}</li>'
-            f'<li id="k-r"{hide}><i class="k r"></i>{t("k_r")}</li><li id="k-l" hidden><i class="k l"></i>{t("k_l")}</li>'
+def key_html():
+    return (f'<ul class="key" aria-label="{t("legend")}"><li><i class="k f"></i>{t("k_f")}</li>'
             f'<li id="k-v" hidden><i class="k v"></i>{t("k_v")}</li></ul>')
 
 
@@ -279,13 +297,18 @@ def month_html(m, hmap):
 
 
 def year_html(hmap):
-    return '<div class="year" id="year">' + "".join(month_html(m, hmap) for m in range(1, 13)) + "</div>"
+    # the grid is a picture of the list next to it; screen readers get the list (app.js lifts this while marking)
+    return '<div class="year" id="year" aria-hidden="true">' + "".join(month_html(m, hmap) for m in range(1, 13)) + "</div>"
 
 
 def hol_li(h):
+    """Same markup as hlist() in app.js."""
     d = dt.date.fromisoformat(h["date"])
-    return (f'<li class="{h["kind"]}"><time datetime="{h["date"]}">{d.day} {t("mon3")[d.month - 1]}</time>'
-            f'<span>{E(h["name"])}</span><em>{t("wd3")[d.weekday()]}</em></li>')
+    lbl = [x for x in ({"r": t("lbl_r"), "l": t("lbl_l")}.get(h["kind"]), t(f"lbl_{d.weekday() + 1}") if d.weekday() >= 5 else None) if x]
+    cls = h["kind"] + (" wk" if d.weekday() >= 5 else "")
+    small = f'<small>{" · ".join(lbl)}</small>' if lbl else ""
+    return (f'<li class="{cls}"><time datetime="{h["date"]}">{d.day} {t("mon3")[d.month - 1]}</time>'
+            f'<span>{E(h["name"])}{small}</span><em>{t("wd3")[d.weekday()]}</em></li>')
 
 
 def take_txt(take):
@@ -293,12 +316,25 @@ def take_txt(take):
     return t("take1", a=days[0]) if len(days) == 1 else t("take2", a=days[0], b=days[1])
 
 
+def trade_html(cost, n):
+    c = tn("cost", cost)
+    return (f'<span class="z"><span class="c">{c} →</span><span class="g2"><b>{n}</b> {t("free")}</span>'
+            f'<span class="sr">{t("trade_sr", c=c, n=n)}</span></span>')
+
+
 def puente_li(it, k):
     """Same markup as item() in app.js, so the page does not jump when the script takes over."""
-    sub = take_txt(it["take"]) if it["cost"] else " · ".join(it["names"])
     return (f'<li><button type="button" class="it" data-k="p{k}" aria-expanded="false"><span class="a">'
-            f'<time>{fmt_range(it["s"], it["e"])}</time><small>{E(sub)}</small></span>'
-            f'<span class="z"><b>{it["len"]}</b> {t("days")}</span></button></li>')
+            f'<time>{fmt_range(it["s"], it["e"])}</time><small>{E(take_txt(it["take"]))}</small></span>'
+            f'{trade_html(it["cost"], it["len"])}</button></li>')
+
+
+def lw_html(items):
+    """Long weekends: no count, one quiet line each (same as lwList() in app.js)."""
+    if not items:
+        return ""
+    li = "".join(f'<li><time>{fmt_range(it["s"], it["e"])}</time><span>{it["len"]} {t("days")}</span></li>' for it in items)
+    return f'<h3 class="sub">{t("h_lw")}</h3><ul class="lw">{li}</ul>'
 
 
 def footer_html(data, current=None):
@@ -362,9 +398,18 @@ def ics_text(hols, label, slug_key):
     return "\r\n".join(lines) + "\r\n"
 
 
-def meta_html(n_hol, n_pts, n_lab):
-    return (f'<a href="#festivos">{t("meta_fest", n=n_hol)}</a><a href="#puentes">{tn("meta_pts", n_pts)}</a>'
+SEP = '<span class="sep" aria-hidden="true"> · </span>'
+
+
+def meta_html(n_boe, can, n_pts, n_lab):
+    """Same as meta() in app.js. Separators are real text (copy/paste) but hidden from screen readers."""
+    fest = t("meta_fest", n=n_boe) + (" " + t("meta_isle") if can else "") + " " + t("meta_loc")
+    return (f'<a href="#festivos">{fest}</a>{SEP}<a href="#puentes">{tn("meta_pts", n_pts)}</a>{SEP}'
             f'<span>{t("meta_lab", n=n_lab)}</span>')
+
+
+def src_html(data):
+    return (f'<p class="src"><a href="{data["source"]["url"]}" rel="noopener" title="{t("src_title", d=data["updated"])}">{t("src")}</a></p>')
 
 
 # ---------------------------------------------------------------- region page
@@ -408,17 +453,15 @@ def zone_text(opt):
     return t("zone_general") if opt["slug"] == "general" else opt["name"]
 
 
-def app_body(data, r=None):
-    """One page for everything: the home is the app with no region, a region page is the app with it chosen.
-    The lists are rendered here too, so the content is in the HTML before app.js runs."""
-    slug = r["slug"] if r else ""
-    hols = region_holidays(data, slug) if r else [h for h in region_holidays(data, "madrid") if h["kind"] == "n"]
-    hmap = {}
-    for h in hols:
-        hmap.setdefault(h["date"], h)
+def hero_html(data, r, hols, pts, lab):
+    """Region page: the title carries the region selector. Home: plain title and the 19 regions as links."""
+    if not r:
+        grid = "".join(f'<a href="{BASE}{x["slug"]}/" data-slug="{x["slug"]}">{E(x["name"])}</a>' for x in data["regions"])
+        return (f'<section class="hero wrap"><h1>{t("h1")}</h1><p class="meta" id="meta"><span>{t("home_meta", n=len(hols))}</span></p>'
+                f'{src_html(data)}<nav class="ccaa" id="ccaa" aria-label="{t("home_grid")}">{grid}</nav></section>')
+    slug = r["slug"]
     zone = data["zones"].get(slug)
     is_can = slug == "canarias"
-    hide = "" if r else " hidden"
     options = f'<option value="">{t("spain")}</option>' + "".join(
         f'<option value="{x["slug"]}"{" selected" if x["slug"] == slug else ""}>{E(x["name"])}</option>' for x in data["regions"])
     if zone:
@@ -429,41 +472,57 @@ def app_body(data, r=None):
                      f'<select id="zone" aria-label="{E(zone["label"])}">{zopts}</select></div>')
     else:
         zone_html = f'<div class="pick zone" id="zone-f" hidden><span class="pv" id="zt"></span><select id="zone" aria-label="{t("zone_label")}"></select></div>'
-    if r:
-        pts = puentes(hols)
-        n_lab = sum(1 for d in DAYS if d.weekday() < 5 and d.isoformat() not in hmap) - (1 if is_can else 0)
-        meta = meta_html(len(hols) + (1 if is_can else 0), len(pts), n_lab)
-    else:
-        pts = []
-        meta = f'<span>{t("meta_nat", n=len(hols))}</span><button type="button" class="lnk" id="pickr">{t("pick_region")}</button>'
+    boe = len(hols)
+    return (f'<section class="hero wrap"><div class="pick reg" id="reg-f"><h1><span class="h1a">{t("h1")}</span> '
+            f'<span class="pv" id="rn">{keep_last(r["name"])}</span></h1><select id="region" aria-label="{t("region_label")}">{options}</select></div>'
+            f'{zone_html}<p class="meta" id="meta">{meta_html(boe, is_can, len(pts), lab)}</p>{src_html(data)}</section>')
+
+
+def app_body(data, r=None):
+    """One app: the home has no region (national holidays + the 19 regions), a region page has it chosen.
+    Lists are rendered here too, so the content is in the HTML before app.js runs."""
+    slug = r["slug"] if r else ""
+    hols = region_holidays(data, slug) if r else [h for h in region_holidays(data, "madrid") if h["kind"] == "n"]
+    hmap = {}
+    for h in hols:
+        hmap.setdefault(h["date"], h)
+    is_can = slug == "canarias"
+    hide = "" if r else " hidden"
+    pts = puentes(hols) if r else []
+    lab = sum(1 for d in DAYS if d.weekday() < 5 and d.isoformat() not in hmap) - (1 if is_can else 0)
     hl = "".join(hol_li(h) for h in hols)
     if is_can:
         hl += f'<li class="z"><time>+1</time><span><button type="button" class="lnk" data-zone>{t("island_feast")}</button></span><em></em></li>'
+    if r:
+        hl += f'<li class="z"><time>+2</time><span><button type="button" class="lnk" data-addloc>{t("loc_more")}</button></span><em></em></li>'
     compact = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
     strings = json.dumps({k: t(k) for k in JS_KEYS}, ensure_ascii=False, separators=(",", ":"))
-    return f"""<body class="app" data-region="{slug}">
+    ics = f"ics/{slug}.ics"
+    webcal = f"webcal://{HOST}{ASSETS}{ics}"
+    return f"""<body class="app{" home" if not r else ""}" data-region="{slug}">
 {top_html()}
 <main>
-<section class="hero wrap">
-  <div class="pick reg"><h1><span class="h1a">{t("h1")}</span> <span class="pv" id="rn">{keep_last(r["name"] if r else t("spain"))}</span></h1><select id="region" aria-label="{t("region_label")}">{options}</select></div>
-  {zone_html}
-  <p class="meta" id="meta">{meta}</p>
-</section>
+{hero_html(data, r, hols, pts, lab)}
 <div class="wrap body">
-  <section class="blk" id="festivos" aria-labelledby="h-fest"><h2 id="h-fest">{t("h_fest")}</h2><ol class="hlist" id="hlist">{hl}</ol>
-    <div class="locs" id="locs"{hide}><span aria-hidden="true">{t("local_add")}</span><input type="date" id="l0" min="2027-01-01" max="2027-12-31" aria-label="{t("local_add_aria")}"><input type="date" id="l1" min="2027-01-01" max="2027-12-31" aria-label="{t("local_add2_aria")}"></div>
-  </section>
-  <section class="blk" id="puentes" aria-labelledby="h-pts"{hide}><h2 id="h-pts">{t("h_pts")}</h2><ol class="plist" id="plist">{"".join(puente_li(it, k) for k, it in enumerate(pts))}</ol></section>
-  <section class="cal" id="ano" aria-labelledby="h-ano"><h2 class="sr" id="h-ano">{t("h_year")}</h2>
-    <div class="calbar">{key_html(bool(r))}<button class="tbtn" id="vmode" type="button"{hide}><span id="vlabel">{t("vmode")}</span><span id="vcount"></span></button></div>
-    <p class="vhint" id="vhint" hidden><span id="vstat" aria-live="polite">{t("vhint")}</span> <button type="button" class="lnk" id="vclear" hidden>{t("vclear")}</button></p>
-    {year_html(hmap)}
-  </section>
-  <section class="blk" id="vacaciones" aria-labelledby="h-vac"{hide}><h2 id="h-vac">{t("h_vac")}</h2>
-    <div class="step"><button type="button" id="vm" aria-label="{t("step_minus")}">−</button><input id="vn" type="number" inputmode="numeric" min="1" max="30" value="4" aria-label="{t("step_input")}" aria-describedby="h-vac"><button type="button" id="vp" aria-label="{t("step_plus")}">+</button><span aria-hidden="true">{t("days")}</span></div>
-    <ol class="plist" id="vlist"></ol>
-  </section>
-  <p class="exp" id="exp"{hide}><a class="btn p" id="gc" href="#" rel="noopener" target="_blank">{t("gcal")}</a><a class="btn" id="dl" href="#" download="{t("ics_file")}.ics">{t("ics_btn")}</a></p>
+  <div class="side">
+    <section class="blk" id="festivos" aria-labelledby="h-fest"><h2 id="h-fest">{t("h_fest")}</h2><ol class="hlist" id="hlist">{hl}</ol>
+      <div class="locin" id="locin"{hide}><input type="date" id="l0" min="2027-01-01" max="2027-12-31" tabindex="-1" aria-hidden="true" aria-label="{t("loc_aria")}"><input type="date" id="l1" min="2027-01-01" max="2027-12-31" tabindex="-1" aria-hidden="true" aria-label="{t("loc_aria")}"></div>
+    </section>
+    <section class="blk" id="puentes" aria-labelledby="h-pts"{hide}><h2 id="h-pts">{t("h_pts")}</h2><ol class="plist" id="plist">{"".join(puente_li(it, k) for k, it in enumerate(pts))}</ol>
+      <div id="lw">{lw_html(long_weekends(hols)) if r else ""}</div></section>
+    <section class="blk" id="vacaciones" aria-labelledby="h-vac"{hide}><h2 id="h-vac">{t("h_vac")}</h2>
+      <div class="step"><button type="button" id="vm" aria-label="{t("step_minus")}">−</button><input id="vn" type="number" inputmode="numeric" min="1" max="30" value="4" aria-label="{t("step_input")}"><button type="button" id="vp" aria-label="{t("step_plus")}">+</button><span aria-hidden="true">{t("step_lbl")}</span></div>
+      <h3 class="sub">{t("plan_h")}</h3><ol class="plist" id="vlist"></ol>
+    </section>
+  </div>
+  <div class="main" id="mainc">
+    <section class="cal" id="ano" aria-labelledby="h-ano"><h2 class="sr" id="h-ano">{t("h_year")}</h2>
+      <div class="calbar">{key_html()}<p class="vhint" id="vhint" hidden><span id="vstat" aria-live="polite">{t("vhint")}</span> <button type="button" class="lnk" id="vclear" hidden>{t("vclear")}</button></p><button class="tbtn" id="vmode" type="button"{hide}><span id="vlabel">{t("vmode")}</span><span id="vcount"></span></button></div>
+      {year_html(hmap)}
+    </section>
+    <div class="exp" id="exp"{hide}><a class="btn p" id="dl" href="{ASSETS}{ics}" download="{t("ics_file")}.ics">{t("ics_btn")}</a><a class="btn" id="gc" href="https://calendar.google.com/calendar/r?cid={quote(webcal, safe="")}" rel="noopener" target="_blank">{t("gcal")}</a><a class="btn" id="wc" href="{webcal}">{t("apple")}</a><p class="note">{t("sub_note")}</p></div>
+    <p class="pfoot">{SITE.split("://", 1)[1]}{BASE}{slug + "/" if slug else ""} · {t("print_src", boe=E(data["source"]["boe"]))}</p>
+  </div>
 </div>
 </main>
 {footer_html(data, slug or None)}
@@ -524,11 +583,11 @@ def font(size, weight="b"):
 
 
 INK, BG, MUT, LINE, WE = (17, 17, 17), (255, 255, 255), (107, 107, 107), (226, 226, 222), (242, 242, 240)
-NAT, REG, BRAND = (208, 49, 45), (208, 49, 45), (17, 17, 17)
+NAT, BRAND = (208, 49, 45), (17, 17, 17)
 
 
 def og_image(path, label, sub, hols):
-    """Same language as the page: black type on white, national = red disc, regional = red ring."""
+    """Same language as the page: black type on white, every holiday a red disc."""
     from PIL import Image, ImageDraw
     W, H, S = 1200, 630, 2
     im = Image.new("RGB", (W * S, H * S), BG)
@@ -538,14 +597,7 @@ def og_image(path, label, sub, hols):
     size = 80 if len(label) <= 11 else (62 if len(label) <= 16 else 48)
     d.text((X, 150 * S), label, font=font(size * S, "bl"), fill=INK)
     d.text((X, 286 * S), sub, font=font(30 * S, "sb"), fill=MUT)
-    r = 11 * S
-    d.ellipse((X, 470 * S, X + 2 * r, 470 * S + 2 * r), fill=NAT)
-    d.text((X + 36 * S, 465 * S), t("k_n"), font=font(26 * S, "sb"), fill=INK)
-    x2 = X + 210 * S
-    d.ellipse((x2, 470 * S, x2 + 2 * r, 470 * S + 2 * r), outline=REG, width=3 * S)
-    d.text((x2 + 36 * S, 465 * S), t("k_r"), font=font(26 * S, "sb"), fill=INK)
     d.text((X, 548 * S), (HOST + lang_base(LANG)).rstrip("/"), font=font(24 * S, "r"), fill=MUT)
-    # the year: 3 columns x 4 rows of mini months, one dot per day
     kind = {h["date"]: h["kind"] for h in hols}
     x0, y0, c, gx, gy = 700 * S, 58 * S, 17 * S, 30 * S, 22 * S
     dot = 5 * S
@@ -559,19 +611,16 @@ def og_image(path, label, sub, hols):
             day = first + dt.timedelta(dd)
             idx = first.weekday() + dd
             cx, cy = ox + (idx % 7) * c + c // 2, oy + 24 * S + (idx // 7) * c + c // 2
-            k = kind.get(day.isoformat())
-            if k == "n":
+            if kind.get(day.isoformat()):
                 d.ellipse((cx - 7 * S, cy - 7 * S, cx + 7 * S, cy + 7 * S), fill=NAT)
-            elif k == "r":
-                d.ellipse((cx - 7 * S, cy - 7 * S, cx + 7 * S, cy + 7 * S), outline=REG, width=2 * S)
             else:
-                d.ellipse((cx - dot // 2 * 1, cy - dot // 2, cx + dot // 2, cy + dot // 2), fill=WE if day.weekday() >= 5 else LINE)
+                d.ellipse((cx - dot // 2, cy - dot // 2, cx + dot // 2, cy + dot // 2), fill=WE if day.weekday() >= 5 else LINE)
     im = im.resize((W, H), Image.LANCZOS).quantize(colors=64, method=Image.Quantize.MEDIANCUT)
     im.save(path, optimize=True)
 
 
 def icons(out):
-    """Black tile, white page, one red disc and one red ring: the logo's day marks."""
+    """Black tile, white page, one red day: the logo."""
     from PIL import Image, ImageDraw
 
     def draw(size, maskable=False, bg_full=False):
@@ -597,8 +646,6 @@ def icons(out):
             cx, cy = g0x + (i % 3) * (tw + gap), g0y + (i // 3) * (tw + gap)
             if i == 1:
                 d.ellipse((cx, cy, cx + tw, cy + tw), fill=NAT)
-            elif i == 5:
-                d.ellipse((cx, cy, cx + tw, cy + tw), outline=REG, width=max(2, int(tw * 0.14)))
             else:
                 q = int(tw * 0.32)
                 d.ellipse((cx + q, cy + q, cx + tw - q, cy + tw - q), fill=LINE)

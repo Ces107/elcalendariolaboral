@@ -58,12 +58,19 @@ WEEKDAYS = {"2027-01-01": "vie", "2027-01-06": "mié", "2027-03-25": "jue", "202
 for d, w in WEEKDAYS.items():
     check(WD[dt.date.fromisoformat(d).weekday()] == w, f"{d} no es {w}")
 
-# puentes: casos calculados a mano (Madrid)
+# puentes: casos calculados a mano (Madrid). Un puente cuesta al menos un laborable;
+# los fines de semana largos van aparte y no se repiten si caen dentro de un puente.
 mad = build.region_holidays(data, "madrid")
-p = {(build.DAYS[i["s"]].isoformat(), build.DAYS[i["e"]].isoformat(), i["cost"]) for i in build.puentes(mad)}
-for exp in [("2027-12-04", "2027-12-08", 1), ("2027-03-25", "2027-03-28", 0), ("2027-08-14", "2027-08-16", 0),
-            ("2027-01-01", "2027-01-03", 0), ("2027-10-09", "2027-10-12", 1)]:
+span = lambda it: (build.DAYS[it["s"]].isoformat(), build.DAYS[it["e"]].isoformat(), it["cost"])
+p = {span(i) for i in build.puentes(mad)}
+lw = {span(i) for i in build.long_weekends(mad)}
+for exp in [("2027-12-04", "2027-12-08", 1), ("2027-10-09", "2027-10-12", 1), ("2027-01-01", "2027-01-06", 2)]:
     check(exp in p, f"madrid puente {exp} no encontrado")
+check(all(c > 0 for _, _, c in p), "puente sin coste")
+for exp in [("2027-03-25", "2027-03-28", 0), ("2027-08-14", "2027-08-16", 0)]:
+    check(exp in lw, f"madrid fin de semana largo {exp} no encontrado")
+for gone in [("2027-01-01", "2027-01-03", 0), ("2027-12-04", "2027-12-06", 0)]:
+    check(gone not in lw, f"madrid {gone} esta dentro de un puente y no debe salir")
 
 print(f"{len(fails)} fallos" if fails else "OK: 19 comunidades, 12 festivos cada una, días de la semana correctos")
 for f in fails:

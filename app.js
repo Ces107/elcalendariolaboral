@@ -8,22 +8,24 @@
   var Y = D.year, N = 365, BASE = html.getAttribute('data-base') || '/';
   var ASSETS = html.getAttribute('data-assets') || BASE;
   var HOST = location.host || 'elcalendariolaboral.es';
+  var PAGE = doc.body.getAttribute('data-region') || '', HOME = !PAGE;
   /* textos: build.py los incrusta en #cal-i18n desde su tabla T[idioma] */
   var T = JSON.parse($('cal-i18n').textContent);
   var f = function (s, o) { return s.replace(/\{(\w+)\}/g, function (m, k) { return o[k] != null ? o[k] : m; }); };
   var sun = function (a) { return [a[6]].concat(a.slice(0, 6)); }; // T trae la semana de lunes a domingo; getUTCDay() empieza en domingo
-  var PAGE = doc.body.getAttribute('data-region') || '';
   var MON3 = T.mon3, MONL = T.months, WD3 = sun(T.wd3), WDL = sun(T.wd), WD1 = sun(T.wd1.split('')).join('');
   var ISO = [], WDAY = [], MON = [], DOM = [];
   for (var i = 0; i < N; i++) {
-    var t = new Date(Date.UTC(Y, 0, 1 + i));
-    ISO.push(t.toISOString().slice(0, 10)); WDAY.push(t.getUTCDay()); MON.push(t.getUTCMonth()); DOM.push(t.getUTCDate());
+    var dd = new Date(Date.UTC(Y, 0, 1 + i));
+    ISO.push(dd.toISOString().slice(0, 10)); WDAY.push(dd.getUTCDay()); MON.push(dd.getUTCMonth()); DOM.push(dd.getUTCDate());
   }
   var IDX = {}; ISO.forEach(function (s, k) { IDX[s] = k; });
   var REG = {}; D.regions.forEach(function (r) { REG[r.slug] = r; });
   var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
   var weekend = function (i) { return WDAY[i] === 0 || WDAY[i] === 6; };
   var tn = function (k, n) { return f(n === 1 && T[k + '1'] ? T[k + '1'] : T[k], { n: n }); };
+  var SEP = '<span class="sep" aria-hidden="true"> · </span>';
+  var smooth = function () { return matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'; };
 
   function get(k) { try { return localStorage.getItem('cl27.' + k); } catch (e) { return null; } }
   function put(k, v) { try { if (v == null) localStorage.removeItem('cl27.' + k); else localStorage.setItem('cl27.' + k, v); } catch (e) { /* sin almacenamiento */ } }
@@ -51,10 +53,10 @@
     return out;
   }
 
-  function offDays(hols) {
+  function offDays(hols, withVac) {
     var hd = {}; hols.forEach(function (h) { hd[h.date] = h.kind; });
     var off = [];
-    for (var i = 0; i < N; i++) off.push(weekend(i) || !!hd[ISO[i]]);
+    for (var i = 0; i < N; i++) off.push(weekend(i) || !!hd[ISO[i]] || (!!withVac && !!S.vac[ISO[i]]));
     return { off: off, hd: hd };
   }
 
@@ -64,8 +66,8 @@
     return res;
   }
 
-  /* Puentes: fines de semana largos (0 días) y huecos de 1-2 días laborables junto a un festivo. Igual que build.py. */
-  function bridges(hols) {
+  /* Todos los tramos: fines de semana largos (0 días) y huecos de 1-2 laborables junto a un festivo. Igual que build.py. */
+  function bridgeItems(hols) {
     var o = offDays(hols), rs = runs(o.off), items = [], covered = {};
     function hasHol(r) { for (var i = r[0]; i <= r[1]; i++) if (o.hd[ISO[i]]) return true; return false; }
     rs.forEach(function (r, k) {
@@ -94,11 +96,18 @@
     items.forEach(function (it) { it.len = it.e - it.s + 1; });
     return items;
   }
+  /* Puentes de verdad: cuestan 1 o 2 laborables (build.py: puentes) */
+  function bridges(hols) { return bridgeItems(hols).filter(function (it) { return it.cost > 0; }); }
+  /* Fines de semana largos sin coste, salvo los que caen dentro de un puente (build.py: long_weekends) */
+  function longWeekends(hols) {
+    var all = bridgeItems(hols), pts = all.filter(function (it) { return it.cost > 0; });
+    return all.filter(function (it) { return !it.cost && !pts.some(function (p) { return p.s <= it.s && it.e <= p.e; }); });
+  }
 
-  /* Vacaciones: cada ventana de n días laborables seguidos se extiende a los libres de alrededor;
-     se ordenan por días libres y se toman las mejores sin solaparse. */
+  /* Vacaciones: cada ventana de n laborables seguidos (sin contar los ya marcados) se extiende a los libres de
+     alrededor; se ordenan por días libres y se toman las mejores sin solaparse. */
   function plan(hols, n, max) {
-    var off = offDays(hols).off, W = [];
+    var off = offDays(hols, true).off, W = [];
     for (var i = 0; i < N; i++) if (!off[i]) W.push(i);
     n = Math.max(1, Math.min(n, W.length));
     var c = [];
@@ -127,26 +136,36 @@
     var d = take.map(function (x) { return WD3[WDAY[x]] + ' ' + DOM[x]; });
     return d.length === 1 ? f(T.take1, { a: d[0] }) : f(T.take2, { a: d[0], b: d[1] });
   }
+  function takeRange(take) {
+    var a = take[0], b = take[take.length - 1];
+    if (a === b) return f(T.take1, { a: WD3[WDAY[a]] + ' ' + DOM[a] });
+    return MON[a] === MON[b] ? f(T.take_r, { a: DOM[a], b: DOM[b] + ' ' + MON3[MON[b]] }) : f(T.take_rx, { a: DOM[a] + ' ' + MON3[MON[a]], b: DOM[b] + ' ' + MON3[MON[b]] });
+  }
   function same(a, b) { return !!(a && b && a.s === b.s && a.e === b.e && a.cost === b.cost); }
   function taken(it) { return it.take.length > 0 && it.take.every(function (x) { return S.vac[ISO[x]]; }); }
+  function trade(cost, n) {
+    var c = tn('cost', cost);
+    return '<span class="z"><span class="c">' + c + ' →</span><span class="g2"><b>' + n + '</b> ' + T.free + '</span><span class="sr">' +
+      f(T.trade_sr, { c: c, n: n }) + '</span></span>';
+  }
 
-  /* Una fila: fechas, una línea de apoyo y los días libres. Abierta: los días en pequeño y el botón de añadir. */
-  function item(it, sub, id, hd) {
+  /* Una fila: fechas, qué coger y lo que ganas. Abierta: los días en pequeño, los festivos y el botón de añadir. */
+  function item(it, sub, id, hols, hd) {
     var on = same(S.sel, it), x = '';
     if (on) {
       var tk = {}, cells = '';
       it.take.forEach(function (d) { tk[d] = 1; });
       for (var d = it.s; d <= it.e; d++) {
-        var c = hd[ISO[d]] || (S.vac[ISO[d]] && !weekend(d) ? 'vac' : tk[d] ? 'pk' : weekend(d) ? 'we' : '');
+        var c = hd[ISO[d]] ? 'h' : (S.vac[ISO[d]] && !weekend(d) ? 'vac' : tk[d] ? 'pk' : weekend(d) ? 'we' : '');
         cells += '<i class="' + c + '"><span>' + WD1.charAt(WDAY[d]) + '</span>' + DOM[d] + '</i>';
       }
-      x = '<div class="x"><div class="strip" aria-hidden="true">' + cells + '</div>' + (it.cost ? (taken(it)
-        ? '<button class="btn" type="button" data-rm="' + id + '">' + T.rm_vac + '</button>'
-        : '<button class="btn p" type="button" data-add="' + id + '">' + T.add_vac + '</button>') : '') + '</div>';
+      var nm = names(hols, it);
+      x = '<div class="x"><div class="strip" aria-hidden="true">' + cells + '</div>' + (nm ? '<p class="nm">' + esc(nm) + '</p>' : '') +
+        (taken(it) ? '<button class="btn" type="button" data-rm="' + id + '">' + T.rm_vac + '</button>'
+          : '<button class="btn p" type="button" data-add="' + id + '">' + T.add_vac + '</button>') + '</div>';
     }
     return '<li' + (on ? ' class="on"' : '') + '><button type="button" class="it" data-k="' + id + '" aria-expanded="' + on + '">' +
-      '<span class="a"><time>' + frange(it.s, it.e) + '</time>' + (sub ? '<small>' + esc(sub) + '</small>' : '') + '</span>' +
-      '<span class="z"><b>' + it.len + '</b> ' + T.days + '</span></button>' + x + '</li>';
+      '<span class="a"><time>' + frange(it.s, it.e) + '</time><small>' + esc(sub) + '</small></span>' + trade(it.cost, it.len) + '</button>' + x + '</li>';
   }
 
   /* ------------------------------------------------------------ render */
@@ -193,18 +212,39 @@
   }
 
   function hlist(hols) {
+    var hasLoc = false;
     var out = hols.map(function (h) {
-      var i = IDX[h.date], k = h.kind === 'l' ? S.locals.indexOf(h.date) : -1;
+      var i = IDX[h.date], k = h.kind === 'l' ? S.locals.indexOf(h.date) : -1, lbl = [];
+      if (h.kind === 'r') lbl.push(T.lbl_r);
+      if (h.kind === 'l') { lbl.push(T.lbl_l); hasLoc = true; }
+      if (weekend(i)) lbl.push(WDAY[i] === 6 ? T.lbl_6 : T.lbl_7);
       var rm = k >= 0 ? '<button type="button" class="rm" data-rmloc="' + k + '" aria-label="' + esc(f(T.local_rm_aria, { d: longDay(i) })) + '">×</button>' : '';
-      return '<li class="' + h.kind + '"><time datetime="' + h.date + '">' + DOM[i] + ' ' + MON3[MON[i]] + '</time><span>' + esc(h.name) + '</span><em>' + WD3[WDAY[i]] + rm + '</em></li>';
+      return '<li class="' + h.kind + (weekend(i) ? ' wk' : '') + '"><time datetime="' + h.date + '">' + DOM[i] + ' ' + MON3[MON[i]] + '</time><span>' + esc(h.name) +
+        (lbl.length ? '<small>' + lbl.join(' · ') + '</small>' : '') + '</span><em>' + WD3[WDAY[i]] + '</em>' + rm + '</li>';
     }).join('');
     if (S.region === 'canarias' && !S.zone) out += '<li class="z"><time>+1</time><span><button type="button" class="lnk" data-zone>' + T.island_feast + '</button></span><em></em></li>';
+    var free = S.locals.filter(function (d) { return !d; }).length;
+    if (S.region && free) out += '<li class="z"><time>+' + free + '</time><span><button type="button" class="lnk" data-addloc>' + T.loc_more + '</button></span><em></em></li>';
+    $('hlist').classList.toggle('hl-x', hasLoc);
     return out;
   }
 
-  /* la flecha del selector va pegada a la última palabra: nunca se queda sola en una línea */
   function keepLast(s) { var k = s.lastIndexOf(' '); return k < 0 ? '<span class="nw">' + esc(s) + '</span>' : esc(s.slice(0, k + 1)) + '<span class="nw">' + esc(s.slice(k + 1)) + '</span>'; }
-  function zoneText(z, o) { return !o ? T.zone_prompt : o.slug === 'general' ? T.zone_general : o.name; }
+  function zoneText(o) { return !o ? T.zone_prompt : o.slug === 'general' ? T.zone_general : o.name; }
+
+  /* el selector invisible cubre solo el nombre de la comunidad y la flecha, no todo el título */
+  function placePick() {
+    var sel = $('region'), rn = $('rn');
+    if (!sel || !rn) return;
+    var box = $('reg-f').getBoundingClientRect(), r = rn.getBoundingClientRect();
+    sel.style.left = (r.left - box.left) + 'px'; sel.style.top = (r.top - box.top) + 'px';
+    sel.style.width = r.width + 'px'; sel.style.height = r.height + 'px';
+  }
+
+  function meta(hols, isCan, lab) {
+    return '<a href="#festivos">' + f(T.meta_fest, { n: hols.boe }) + (isCan ? ' ' + T.meta_isle : '') + ' ' + T.meta_loc + '</a>' + SEP +
+      '<a href="#puentes">' + tn('meta_pts', PITEMS.length) + '</a>' + SEP + '<span>' + f(T.meta_lab, { n: lab }) + '</span>';
+  }
 
   function render() {
     var hols = holidays(), r = S.region && REG[S.region], z = r && D.zones[S.region];
@@ -212,50 +252,45 @@
     var lab = paintYear(hols), isCan = S.region === 'canarias' && !S.zone;
     var zn = z && S.zone ? z.options.filter(function (o) { return o.slug === S.zone; })[0] : null;
 
-    $('rn').innerHTML = keepLast(r ? r.name : T.spain);
-    $('region').value = S.region || '';
-    if (z) {
-      $('zone').setAttribute('aria-label', z.label);
-      $('zone').innerHTML = (S.region === 'canarias' ? '<option value="">' + T.zone_prompt + '</option>' : '') +
-        z.options.map(function (o) { return '<option value="' + o.slug + '"' + (S.zone === o.slug ? ' selected' : '') + '>' + esc(o.name) + '</option>'; }).join('');
-      $('zt').innerHTML = keepLast(zoneText(z, zn));
-      $('zone-f').classList.toggle('empty', !zn);
-      $('zone-f').hidden = false;
-    } else $('zone-f').hidden = true;
-
     $('hlist').innerHTML = hlist(hols);
-    ['locs', 'puentes', 'vacaciones', 'exp', 'vmode', 'k-r'].forEach(function (id) { $(id).hidden = !r; });
-    $('k-l').hidden = !hols.some(function (h) { return h.kind === 'l'; });
-    // "+ Festivo local": el primer campo vacío queda debajo del texto; con los dos puestos, desaparece
-    var free = S.locals[0] ? (S.locals[1] ? -1 : 1) : 0;
-    $('l0').hidden = free !== 0; $('l1').hidden = free !== 1;
-    if (r && free < 0) $('locs').hidden = true;
     var used = vacCount();
     $('k-v').hidden = !used && !S.vmode;
     $('vcount').textContent = used && !S.vmode ? ' · ' + used : '';
     $('vlabel').textContent = S.vmode ? T.done : T.vmode;
     $('vstat').textContent = used ? tn('vac_days', used) : T.vhint;
     $('vclear').hidden = !used;
+    if (!r) return;
 
-    if (!r) {
-      $('meta').innerHTML = '<span>' + f(T.meta_nat, { n: hols.length }) + '</span><button type="button" class="lnk" id="pickr">' + T.pick_region + '</button>';
-      PITEMS = []; VITEMS = [];
-      return;
-    }
+    $('rn').innerHTML = keepLast(r.name);
+    $('region').value = S.region;
+    if (z) {
+      $('zone').setAttribute('aria-label', z.label);
+      $('zone').innerHTML = (S.region === 'canarias' ? '<option value="">' + T.zone_prompt + '</option>' : '') +
+        z.options.map(function (o) { return '<option value="' + o.slug + '"' + (S.zone === o.slug ? ' selected' : '') + '>' + esc(o.name) + '</option>'; }).join('');
+      $('zt').innerHTML = keepLast(zoneText(zn));
+      $('zone-f').hidden = false;
+    } else $('zone-f').hidden = true;
+    placePick();
+
     PITEMS = bridges(hols);
-    $('meta').innerHTML = '<a href="#festivos">' + f(T.meta_fest, { n: hols.length + (isCan ? 1 : 0) }) + '</a><a href="#puentes">' + tn('meta_pts', PITEMS.length) +
-      '</a><span>' + f(T.meta_lab, { n: lab - (isCan ? 1 : 0) }) + '</span>';
-    $('plist').innerHTML = PITEMS.map(function (it, k) { return item(it, it.cost ? takeTxt(it.take) : names(hols, it), 'p' + k, HD); }).join('') || '<li class="none">' + T.no_bridges + '</li>';
+    $('meta').innerHTML = meta(hols, isCan, lab - (isCan ? 1 : 0));
+    $('plist').innerHTML = PITEMS.map(function (it, k) { return item(it, takeTxt(it.take), 'p' + k, hols, HD); }).join('') || '<li class="none">' + T.no_bridges + '</li>';
+    var lw = longWeekends(hols);
+    $('lw').innerHTML = lw.length ? '<h3 class="sub">' + T.h_lw + '</h3><ul class="lw">' + lw.map(function (it) {
+      return '<li><time>' + frange(it.s, it.e) + '</time><span>' + it.len + ' ' + T.days + '</span></li>';
+    }).join('') + '</ul>' : '';
     VITEMS = plan(hols, S.n, 4);
-    $('vlist').innerHTML = VITEMS.map(function (it, k) { return item(it, names(hols, it), 'v' + k, HD); }).join('');
+    $('vlist').innerHTML = VITEMS.map(function (it, k) { return item(it, takeRange(it.take), 'v' + k, hols, HD); }).join('');
 
-    // exportar
+    // exportar: la descarga lleva tus locales y vacaciones; las suscripciones, solo lo oficial
     if (icsUrl) URL.revokeObjectURL(icsUrl);
     var label = r.name + (zn && zn.slug !== 'general' ? ' · ' + zn.name : '');
     var suffix = S.zone && S.zone !== 'general' ? '-' + S.zone : '';
     icsUrl = URL.createObjectURL(new Blob([ics(hols, label)], { type: 'text/calendar;charset=utf-8' }));
     $('dl').href = icsUrl; $('dl').download = T.ics_file + '-' + S.region + suffix + '.ics';
-    $('gc').href = 'https://calendar.google.com/calendar/r?cid=' + encodeURIComponent('webcal://' + HOST + ASSETS + 'ics/' + S.region + suffix + '.ics');
+    var webcal = 'webcal://' + HOST + ASSETS + 'ics/' + S.region + suffix + '.ics';
+    $('gc').href = 'https://calendar.google.com/calendar/r?cid=' + encodeURIComponent(webcal);
+    $('wc').href = webcal;
   }
 
   function ics(hols, label) {
@@ -298,14 +333,14 @@
   function saveVac() { put('vac.' + key(), JSON.stringify(Object.keys(S.vac).filter(function (d) { return S.vac[d]; }))); }
 
   function setRegion(slug, push) {
-    if (slug && !REG[slug]) return;
-    S.region = slug || null; S.sel = null;
-    put('region', slug || null);
-    if (S.region) loadRegionState(); else { S.locals = ['', '']; S.zone = null; loadVac(); if (S.vmode) setVmode(false); }
+    if (!REG[slug]) return;
+    S.region = slug; S.sel = null;
+    put('region', slug);
+    loadRegionState();
     if (push !== false) {
-      try { history.replaceState(null, '', BASE + (S.region ? S.region + '/' : '')); } catch (e) { /* file:// */ }
+      try { history.replaceState(null, '', BASE + slug + '/'); } catch (e) { /* file:// */ }
+      doc.title = f(T.title_region, { name: REG[slug].name });
     }
-    doc.title = S.region ? f(T.title_region, { name: REG[slug].name }) : T.title_home;
     render();
   }
 
@@ -320,23 +355,60 @@
     try { if (sel.showPicker) sel.showPicker(); } catch (e) { /* sin showPicker o sin gesto */ }
   }
 
+  /* lleva a la vista el mes de la fila elegida, si el calendario está al lado y ese mes no se ve */
+  function showSel() {
+    if (!S.sel || innerWidth < 1100) return;
+    var m = $('m' + (MON[S.sel.s] + 1)), box = $('mainc').getBoundingClientRect(), r = m.getBoundingClientRect();
+    if (r.top < Math.max(0, box.top) || r.bottom > Math.min(innerHeight, box.bottom)) m.scrollIntoView({ block: 'nearest', behavior: smooth() });
+  }
+
   /* ------------------------------------------------------------ eventos */
-  $('region').addEventListener('change', function () { setRegion(this.value); });
-  $('zone').addEventListener('change', function () {
-    S.zone = this.value || null; S.sel = null;
-    put('zone.' + S.region, S.zone);
-    render();
-  });
-  $('meta').addEventListener('click', function (e) { if (e.target.id === 'pickr') openPicker($('region')); });
+  if (!HOME) {
+    $('region').addEventListener('change', function () {
+      if (!this.value) { location.href = BASE; return; }
+      setRegion(this.value);
+    });
+    $('zone').addEventListener('change', function () {
+      S.zone = this.value || null; S.sel = null;
+      put('zone.' + S.region, S.zone);
+      render();
+    });
+    addEventListener('resize', placePick);
+    if (doc.fonts && doc.fonts.ready) doc.fonts.ready.then(placePick);
+  }
+
+  // festivos locales: "+2 de tu municipio" abre el selector de fecha; fuera de 2027 se avisa
+  function addLocal() {
+    var k = S.locals[0] ? 1 : 0, inp = $('l' + k);
+    try { if (inp.showPicker) { inp.showPicker(); return; } } catch (e) { /* sin showPicker: se enseña el campo */ }
+    $('locin').classList.add('show');
+    inp.removeAttribute('tabindex'); inp.removeAttribute('aria-hidden');
+    inp.focus();
+  }
   $('hlist').addEventListener('click', function (e) {
     if (e.target.closest('[data-zone]')) { openPicker($('zone')); return; }
+    if (e.target.closest('[data-addloc]')) { addLocal(); return; }
     var b = e.target.closest('[data-rmloc]');
     if (!b) return;
     var k = +b.getAttribute('data-rmloc');
     S.locals[k] = ''; $('l' + k).value = '';
     put('loc.' + S.region, JSON.stringify(S.locals));
     render();
-    $('l' + k).focus();
+    var add = doc.querySelector('[data-addloc]'); if (add) add.focus();
+  });
+  [0, 1].forEach(function (k) {
+    $('l' + k).addEventListener('change', function () {
+      var v = this.value;
+      if (v && IDX[v] == null) { this.value = ''; toast(T.loc_out); return; }
+      S.locals[k] = v || '';
+      if (S.locals[k] && S.vac[v]) { delete S.vac[v]; saveVac(); }
+      put('loc.' + S.region, JSON.stringify(S.locals));
+      $('locin').classList.remove('show');
+      this.setAttribute('tabindex', '-1'); this.setAttribute('aria-hidden', 'true');
+      render();
+      if (S.locals[k]) toast(f(T.toast_local, { d: longDay(IDX[v]) }));
+      var add = doc.querySelector('[data-addloc]'); if (add) add.focus();
+    });
   });
 
   function onPick(list) {
@@ -346,7 +418,7 @@
         var add = b.hasAttribute('data-add'), it = list()[+(b.getAttribute('data-add') || b.getAttribute('data-rm')).slice(1)];
         it.take.forEach(function (x) { if (add) S.vac[ISO[x]] = 1; else delete S.vac[ISO[x]]; });
         saveVac(); render();
-        toast(add ? tn('toast_added', it.take.length) : T.toast_removed);
+        toast(f(add ? T.toast_add : T.toast_rm, { t: tn('vac_days', vacCount()) }));
         var again = doc.querySelector('[data-' + (add ? 'rm' : 'add') + ']'); if (again) again.focus();
         return;
       }
@@ -356,6 +428,7 @@
       S.sel = same(S.sel, x) ? null : x;
       render();
       var back = doc.querySelector('[data-k="' + id + '"]'); if (back) back.focus();
+      showSel();
     };
   }
   $('plist').addEventListener('click', onPick(function () { return PITEMS; }));
@@ -370,32 +443,18 @@
   $('vp').addEventListener('click', function () { setN(S.n + 1); });
   $('vn').addEventListener('change', function () { setN(this.value); });
 
-  [0, 1].forEach(function (k) {
-    $('l' + k).addEventListener('change', function () {
-      var v = this.value;
-      S.locals[k] = IDX[v] != null ? v : '';
-      if (S.locals[k] && S.vac[v]) { delete S.vac[v]; saveVac(); }
-      put('loc.' + S.region, JSON.stringify(S.locals));
-      render();
-      if (S.locals[k]) toast(f(T.toast_local, { d: longDay(IDX[v]) }));
-    });
-    $('l' + k).addEventListener('click', function () { try { if (this.showPicker) this.showPicker(); } catch (e) { /* el navegador abre el suyo */ } });
-  });
-
   // marcar vacaciones en el calendario
   function setVmode(on) {
     S.vmode = on;
     if (on) S.sel = null;
     doc.body.classList.toggle('vmode', on);
     $('vhint').hidden = !on;
+    if (on) $('year').removeAttribute('aria-hidden'); else $('year').setAttribute('aria-hidden', 'true');
     if (!on) Array.prototype.forEach.call(doc.querySelectorAll('.g b[role]'), function (el) {
       el.removeAttribute('role'); el.removeAttribute('aria-pressed'); el.removeAttribute('aria-label'); el.removeAttribute('tabindex');
     });
     render();
-    if (on) {
-      var smooth = !matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (innerWidth < 1100) $('ano').scrollIntoView({ behavior: smooth ? 'smooth' : 'auto', block: 'start' });
-    }
+    if (on && innerWidth < 1100) $('ano').scrollIntoView({ behavior: smooth(), block: 'start' });
   }
   $('vmode').addEventListener('click', function () { setVmode(!S.vmode); });
   function toggleDay(i) {
@@ -422,7 +481,7 @@
     if (j < 0 || j >= N) return;
     c.tabIndex = -1; CELLS[j].tabIndex = 0; CELLS[j].focus();
   });
-  $('vclear').addEventListener('click', function () { S.vac = {}; saveVac(); render(); toast(T.toast_cleared); });
+  $('vclear').addEventListener('click', function () { S.vac = {}; saveVac(); render(); if (!S.vmode) toast(T.toast_cleared); });
   doc.addEventListener('keydown', function (e) { if (e.key === 'Escape' && S.vmode) { setVmode(false); $('vmode').focus(); } });
 
   $('pr').addEventListener('click', function () { window.print(); });
@@ -434,13 +493,19 @@
   });
 
   /* ------------------------------------------------------------ inicio */
-  var q = null;
-  try { q = new URLSearchParams(location.search).get('ccaa'); } catch (e) { q = null; }
   var n0 = parseInt(get('n'), 10);
   if (n0 >= 1 && n0 <= 30) { S.n = n0; $('vn').value = n0; }
-  var start = REG[PAGE] ? PAGE : REG[q] ? q : (REG[get('region')] ? get('region') : null);
-  setRegion(start, false);
+  if (HOME) {
+    var q = null;
+    try { q = new URLSearchParams(location.search).get('ccaa'); } catch (e) { q = null; }
+    if (REG[q]) { location.replace(BASE + q + '/'); return; } // enlaces antiguos ?ccaa=
+    var mine = REG[get('region')] && doc.querySelector('#ccaa [data-slug="' + get('region') + '"]');
+    if (mine) mine.classList.add('mine');
+    loadVac();
+    render();
+  } else setRegion(PAGE, false);
 
   // para pruebas automáticas
-  window.CL27 = { plan: function (n) { return plan(holidays(), n, 5); }, bridges: function () { return bridges(holidays()); }, holidays: holidays, iso: ISO, ics: function () { return ics(holidays(), 'test'); } };
+  window.CL27 = { plan: function (n) { return plan(holidays(), n, 5); }, bridges: function () { return bridges(holidays()); },
+    longWeekends: function () { return longWeekends(holidays()); }, holidays: holidays, iso: ISO, ics: function () { return ics(holidays(), 'test'); } };
 })();
