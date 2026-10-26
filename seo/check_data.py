@@ -20,8 +20,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 ISO = re.compile(r"^\d{4}-\d{2}-\d{2}$")
-STAGES = {"infantil", "primaria", "eso", "bachillerato", "fp", "fp_basica", "epa", "eoi", "musica", "danza",
-          "artisticas", "especial", "escuelas_infantiles", "deportivas", "idiomas", "adultos"}
+STAGES = {"infantil", "infantil_0_3", "primaria", "eso", "bachillerato", "bachillerato_2", "fp", "fp_basica",
+          "fp_especializacion", "fp_virtual", "educacion_especial", "epa", "eoi", "musica", "danza",
+          "artes_plasticas", "artisticas_superiores", "deportivas"}
 BREAKS = {"navidad", "semana_santa", "otro"}
 errors, warnings = [], []
 

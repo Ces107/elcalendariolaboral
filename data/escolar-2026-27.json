@@ -15,7 +15,16 @@
   "fp_basica": "FP Básica / Grado Básico",
   "epa": "Educación de personas adultas",
   "eoi": "Escuelas Oficiales de Idiomas",
-  "especial": "Educación Especial"
+  "infantil_0_3": "Educación Infantil 1.er ciclo (0-3 años)",
+  "bachillerato_2": "2.º de Bachillerato (cuando difiere)",
+  "fp_especializacion": "Cursos de especialización de FP",
+  "fp_virtual": "FP a distancia/virtual",
+  "educacion_especial": "Educación Especial",
+  "musica": "Enseñanzas de Música",
+  "danza": "Enseñanzas de Danza",
+  "artes_plasticas": "Artes Plásticas y Diseño",
+  "artisticas_superiores": "Enseñanzas Artísticas Superiores",
+  "deportivas": "Enseñanzas Deportivas"
  },
  "break_types": {
   "navidad": "Vacaciones de Navidad",
@@ -31,12 +40,781 @@
   {
    "slug": "andalucia",
    "name": "Andalucía",
-   "status": "unpublished",
-   "source": null,
+   "status": "partial",
+   "source": {
+    "title": "Decreto 301/2009, de 14 de julio, por el que se regula el calendario y la jornada escolar en los centros docentes, a excepción de los universitarios (BOJA núm. 139, de 20-VII-2009), marco regional modificado por los Decretos 499/2019 y 183/2020 y el Decreto-ley 6/2023",
+    "url": "https://www.juntadeandalucia.es/boja/2009/139/1",
+    "checked": "2026-10-26"
+   },
    "stages": [],
    "breaks": [],
    "non_teaching_days": [],
-   "note": "No investigado / no verificado."
+   "provinces": [
+    {
+     "name": "Almería",
+     "source": {
+      "title": "Resolución de la Delegación Territorial de Desarrollo Educativo y FP y de Universidad, Investigación e Innovación en Almería, por la que se aprueba el calendario escolar ... para el curso académico 2026-2027 (firmada 28/05/2026)",
+      "url": "https://www.juntadeandalucia.es/educacion/portales/documents/1183913/3343033/Resoluci%C3%B3n_calendario_escolar_26_27_Almer%C3%ADa%28F%29.pdf/fb0a8b29-7d79-13a6-dd6d-caf9340047ef",
+      "checked": "2026-10-26"
+     },
+     "stages": [
+      {
+       "stages": [
+        "infantil",
+        "primaria",
+        "educacion_especial"
+       ],
+       "start": "2026-09-10",
+       "end": "2027-06-22",
+       "text": "el régimen ordinario de clases comenzará el día 10 de septiembre de 2026, finalizando el 22 de junio de 2027, siendo 178 el número de días lectivos."
+      },
+      {
+       "stages": [
+        "eso",
+        "bachillerato",
+        "epa"
+       ],
+       "start": "2026-09-15",
+       "end": "2027-06-22",
+       "text": "En Educación Secundaria Obligatoria, primer curso de Bachillerato y Educación Permanente de Personas Adultas, el régimen ordinario de clases comenzará el 15 de septiembre de 2026, finalizando el 22 de junio de 2027"
+      },
+      {
+       "stages": [
+        "bachillerato_2"
+       ],
+       "start": "2026-09-15",
+       "end": "2027-05-24",
+       "text": "Para el segundo curso de Bachillerato, la finalización del régimen ordinario de clases será el 24 de mayo de 2027."
+      },
+      {
+       "stages": [
+        "fp"
+       ],
+       "start": "2026-09-15",
+       "end": null,
+       "text": "En Formación Profesional, el régimen ordinario de clases comenzará el 15 de septiembre de 2026."
+      },
+      {
+       "stages": [
+        "musica",
+        "danza"
+       ],
+       "start": "2026-09-15",
+       "end": "2027-06-22",
+       "text": "En Enseñanzas Artísticas Elementales y Profesionales, el régimen ordinario de clases comenzará el 15 de septiembre de 2026, finalizando el 22 de junio de 2027 (6º de Enseñanzas Profesionales de Música y Danza: 31 de mayo de 2027)."
+      },
+      {
+       "stages": [
+        "eoi"
+       ],
+       "start": "2026-09-21",
+       "end": null,
+       "text": "En las Enseñanzas de Idiomas el régimen ordinario de clases comenzará el 21 de septiembre de 2026, finalizando el 22 de junio de 2026 [sic], excepto en los cursos conducentes a ... certificados oficiales ... 31 de mayo de 2027."
+      }
+     ],
+     "breaks": [
+      {
+       "type": "navidad",
+       "start": "2026-12-24",
+       "end": "2027-01-06",
+       "text": "Las vacaciones de Navidad comprenderán desde el día 24 de diciembre de 2026 hasta el día 6 de enero de 2027, ambos inclusive."
+      },
+      {
+       "type": "semana_santa",
+       "start": "2027-03-21",
+       "end": "2027-03-28",
+       "text": "Las vacaciones de Semana Santa comprenderán desde el día 21 de marzo hasta el día 28 de marzo de 2027."
+      }
+     ],
+     "non_teaching_days": [
+      {
+       "date": "2026-10-09",
+       "name": "Día no lectivo",
+       "text": "se considerarán días no lectivos: a) 9 de octubre de 2026."
+      },
+      {
+       "date": "2026-10-12",
+       "name": "Fiesta Nacional de España",
+       "text": "a) 12 de octubre de 2026, Fiesta Nacional de España."
+      },
+      {
+       "date": "2026-10-30",
+       "name": "Día no lectivo",
+       "text": "b) 30 de octubre de 2026."
+      },
+      {
+       "date": "2026-11-02",
+       "name": "Todos los Santos (festivo)",
+       "text": "b) 2 de noviembre de 2026, festivo por Todos los Santos."
+      },
+      {
+       "date": "2026-12-07",
+       "name": "Día de la Constitución (festivo)",
+       "text": "c) 7 de diciembre de 2026, festivo por Día de la Constitución."
+      },
+      {
+       "date": "2026-12-08",
+       "name": "Inmaculada Concepción",
+       "text": "d) 8 de diciembre de 2026, Inmaculada Concepción"
+      },
+      {
+       "date": "2026-12-23",
+       "name": "Día no lectivo",
+       "text": "c) 23 de diciembre de 2026."
+      },
+      {
+       "date": "2027-02-26",
+       "name": "Día de la Comunidad Educativa",
+       "text": "e) 26 de febrero de 2027, día de la Comunidad Educativa."
+      },
+      {
+       "date": "2027-03-01",
+       "name": "Día de Andalucía (festivo)",
+       "text": "e) 1 de marzo de 2027, festivo por Día de Andalucía."
+      },
+      {
+       "date": "2027-03-29",
+       "name": "Día no lectivo",
+       "text": "f) 29 de marzo de 2027."
+      },
+      {
+       "date": "2027-04-30",
+       "name": "Día no lectivo",
+       "text": "g) 30 de abril de 2027."
+      }
+     ],
+     "note": "No aplica al primer ciclo de Educación Infantil. Los días no lectivos 9-X, 30-X, 23-XII, 26-II, 29-III y 30-IV pueden permutarse por fiestas locales que caigan en día lectivo (solicitud antes del 1-II-2027). La resolución dice '22 de junio de 2026' para el fin de idiomas (errata evidente; se deja null). FP: sin fecha de fin general (según la duración de cada ciclo)."
+    },
+    {
+     "name": "Cádiz",
+     "source": {
+      "title": "Resolución de la Delegación Territorial de Desarrollo Educativo y FP y de Universidad, Investigación e Innovación en Cádiz, por la que se aprueba el calendario y la jornada escolar ... para el curso académico 2026/2027 (firmada 29/05/2026)",
+      "url": "https://www.juntadeandalucia.es/educacion/portales/documents/1197071/0/Resoluci%C3%B3n%20calendario%20escolar%202026_2027.pdf/5c97e0d2-d79a-e80a-9433-d3f1e305f8fd",
+      "checked": "2026-10-26"
+     },
+     "stages": [
+      {
+       "stages": [
+        "infantil_0_3"
+       ],
+       "start": "2026-09-03",
+       "end": null,
+       "text": "El día 3 de septiembre de 2026, jueves, en Primer Ciclo de Educación Infantil."
+      },
+      {
+       "stages": [
+        "infantil",
+        "primaria",
+        "educacion_especial"
+       ],
+       "start": "2026-09-10",
+       "end": "2027-06-23",
+       "text": "El día 10 de septiembre de 2026, jueves, en Segundo Ciclo de Educación Infantil, Educación Primaria y Educación Especial ... La finalización del régimen ordinario de clases será el día 23 de junio de 2027, miércoles, en todas las enseñanzas, excepto..."
+      },
+      {
+       "stages": [
+        "eso",
+        "bachillerato",
+        "fp",
+        "musica",
+        "danza",
+        "artes_plasticas",
+        "epa"
+       ],
+       "start": "2026-09-15",
+       "end": "2027-06-23",
+       "text": "El día 15 de septiembre de 2026, martes, en Educación Secundaria Obligatoria, Bachillerato, Ciclos Formativos de Formación Profesional Inicial, Enseñanzas Artísticas y Educación Permanente para Personas Adultas ... finalización ... 23 de junio de 2027 ... en todas las enseñanzas"
+      },
+      {
+       "stages": [
+        "bachillerato_2"
+       ],
+       "start": "2026-09-15",
+       "end": "2027-05-24",
+       "text": "excepto segundo de Bachillerato, que lo hará el día 24 de mayo de 2027, lunes (2º de Bachillerato para Personas Adultas: 21 de mayo de 2027)"
+      },
+      {
+       "stages": [
+        "eoi"
+       ],
+       "start": "2026-09-21",
+       "end": "2027-06-23",
+       "text": "En las Enseñanzas de Idiomas de Régimen Especial, el régimen ordinario de clase comenzará el día 21 de septiembre de 2026 ... (cursos conducentes a certificación: 28 de mayo de 2027)"
+      }
+     ],
+     "breaks": [
+      {
+       "type": "navidad",
+       "start": "2026-12-23",
+       "end": "2027-01-08",
+       "text": "Desde el 23 de diciembre de 2026 hasta el 8 de enero de 2027, ambos inclusive (vacaciones de Navidad)."
+      },
+      {
+       "type": "semana_santa",
+       "start": "2027-03-22",
+       "end": "2027-03-28",
+       "text": "Desde el 22 hasta el 28 de marzo de 2027, ambos inclusive (vacaciones de Semana Santa)."
+      }
+     ],
+     "non_teaching_days": [
+      {
+       "date": "2026-10-12",
+       "name": "Fiesta Nacional de España",
+       "text": "12 de octubre de 2026 (lunes): Fiesta Nacional de España."
+      },
+      {
+       "date": "2026-12-07",
+       "name": "Día de la Constitución (traslado)",
+       "text": "Por coincidir con domingo se traslada al lunes, día 7 de diciembre de 2026"
+      },
+      {
+       "date": "2026-12-08",
+       "name": "Inmaculada Concepción",
+       "text": "8 de diciembre de 2026 (martes): Día de la Inmaculada Concepción."
+      },
+      {
+       "date": "2027-03-01",
+       "name": "Día de Andalucía (traslado)",
+       "text": "Por coincidir con domingo se traslada al lunes, día 1 de marzo de 2027"
+      },
+      {
+       "date": "2027-04-30",
+       "name": "Día de la Comunidad Educativa",
+       "text": "Se establecen como días no lectivos, a nivel provincial, para todos los niveles educativos: 30 de abril (viernes): Día de la Comunidad Educativa."
+      }
+     ],
+     "note": "Los Ayuntamientos pueden solicitar días no lectivos locales antes del 30-IX-2026."
+    },
+    {
+     "name": "Córdoba",
+     "source": {
+      "title": "Resolución de la Delegación Territorial de Desarrollo Educativo y FP y de Universidad, Investigación e Innovación en Córdoba, por la que se aprueban el calendario y la jornada escolar ... para el curso académico 2026/2027 (firmada 21/05/2026)",
+      "url": "https://www.juntadeandalucia.es/educacion/portales/documents/1197067/4486666/Resoluci%C3%B3n%20Calendario%20Escolar%202026_2027%28F%29.pdf/92aee8f6-6e23-e2c8-0f0e-a118ecf2e271",
+      "checked": "2026-10-26"
+     },
+     "stages": [
+      {
+       "stages": [
+        "infantil",
+        "primaria",
+        "educacion_especial"
+       ],
+       "start": "2026-09-10",
+       "end": "2027-06-22",
+       "text": "En segundo ciclo de Educación Infantil, Educación Primaria y Educación Especial, el régimen ordinario de clases comenzará el día 10 de septiembre de 2026 ... finalización ... será el 22 de junio de 2027."
+      },
+      {
+       "stages": [
+        "eso",
+        "bachillerato",
+        "fp",
+        "musica",
+        "danza",
+        "artes_plasticas",
+        "epa"
+       ],
+       "start": "2026-09-15",
+       "end": "2027-06-22",
+       "text": "En Educación Secundaria Obligatoria, Bachillerato, Formación Profesional, Enseñanzas Artísticas y Educación Permanente para Personas Adultas, el régimen ordinario de clases comenzará el día 15 de septiembre de 2026 ... finalización ... será el 22 de junio de 2027."
+      },
+      {
+       "stages": [
+        "bachillerato_2"
+       ],
+       "start": "2026-09-15",
+       "end": null,
+       "text": "Para el segundo curso de Bachillerato, Segundo Curso de Ciclos Formativos de Grado Superior y segundo curso de Bachillerato para personas adultas será el día 22 de mayo de cada año o el último día laborable anterior en caso de que sea sábado o festivo."
+      },
+      {
+       "stages": [
+        "eoi"
+       ],
+       "start": "2026-09-21",
+       "end": "2027-06-22",
+       "text": "En las Enseñanzas de Idiomas de Régimen Especial, el régimen ordinario de clase comenzará el día 21 de septiembre de 2026 ... será el 22 de junio de 2027."
+      }
+     ],
+     "breaks": [
+      {
+       "type": "navidad",
+       "start": "2026-12-23",
+       "end": "2027-01-06",
+       "text": "Desde el 23 de diciembre de 2026 al 6 de enero de 2027, ambos inclusive."
+      },
+      {
+       "type": "semana_santa",
+       "start": "2027-03-22",
+       "end": "2027-03-28",
+       "text": "Desde el 22 de marzo al 28 de marzo de 2027, ambos inclusive."
+      }
+     ],
+     "non_teaching_days": [
+      {
+       "date": "2027-01-07",
+       "name": "Día no lectivo provincial",
+       "text": "Días no lectivos provinciales para todos los niveles educativos: el 7 de enero de 2027."
+      },
+      {
+       "date": "2027-02-26",
+       "name": "Día de la Comunidad Educativa",
+       "text": "\"Día de la Comunidad Educativa\" para todos los niveles y miembros de la Comunidad Educativa el 26 de febrero de 2027."
+      }
+     ],
+     "note": "Fin de 2º de Bachillerato/2º CFGS: '22 de mayo ... o el último día laborable anterior' (el 22-V-2027 es sábado); se deja null. Los Ayuntamientos pueden solicitar hasta 3 días no lectivos si las fiestas locales no caen en periodo lectivo."
+    },
+    {
+     "name": "Granada",
+     "source": {
+      "title": "Resolución de 27 de mayo de 2026 de la Delegación Territorial de la Consejería de Desarrollo Educativo y FP en Granada por la que se dictan las normas que han de regir el calendario escolar para el curso escolar 2026-2027",
+      "url": "https://www.juntadeandalucia.es/educacion/portales/documents/1197087/4286700/Resoluci%C3%B3n%2027%20mayo%202026%20calendario%20escolar%20curso%202026-2027%20Granada%20-%20con%20anexos.pdf/f7a1efc3-e16c-b891-4179-8c29ab1288cf",
+      "checked": "2026-10-26"
+     },
+     "stages": [
+      {
+       "stages": [
+        "infantil",
+        "primaria",
+        "educacion_especial"
+       ],
+       "start": "2026-09-10",
+       "end": "2027-06-22",
+       "text": "El régimen ordinario de clases lectivas dará comienzo el día 10 de septiembre de 2026 en segundo ciclo de educación infantil, educación primaria y educación especial ... La finalización del régimen ordinario de clase será el 22 de junio de 2027."
+      },
+      {
+       "stages": [
+        "eso",
+        "bachillerato",
+        "fp"
+       ],
+       "start": "2026-09-15",
+       "end": "2027-06-22",
+       "text": "En educación secundaria obligatoria, bachillerato, ciclos formativos de grado D y E ... comenzará el día 15 de septiembre de 2026 ... La finalización ... para educación secundaria obligatoria y el primer curso de bachillerato será el día 22 de junio de 2027."
+      },
+      {
+       "stages": [
+        "bachillerato_2"
+       ],
+       "start": "2026-09-15",
+       "end": "2027-05-24",
+       "text": "El segundo curso de bachillerato terminará el día 24 de mayo de 2027."
+      },
+      {
+       "stages": [
+        "musica",
+        "danza",
+        "artes_plasticas"
+       ],
+       "start": "2026-09-15",
+       "end": "2027-06-22",
+       "text": "... ciclos formativos de grado medio y superior de artes plásticas y diseño, el régimen ordinario de clase comenzará el 15 de septiembre de 2026. La finalización ... será el día 22 de junio de 2027, con excepción del sexto curso de las enseñanzas profesionales de música y de danza, que será el día 31 de mayo de 2027."
+      },
+      {
+       "stages": [
+        "epa"
+       ],
+       "start": "2026-09-15",
+       "end": "2027-06-22",
+       "text": "planes educativos, educación secundaria obligatoria y bachillerato para personas adultas ... comenzará el día 15 de septiembre de 2026 ... será el día 22 de junio de 2027."
+      },
+      {
+       "stages": [
+        "eoi"
+       ],
+       "start": "2026-09-21",
+       "end": "2027-06-22",
+       "text": "El régimen ordinario de clases comenzará el día 21 de septiembre de 2026 ... será el día 22 de junio de 2027. En los cursos conducentes a dichas pruebas, será el día 31 de mayo de 2027."
+      }
+     ],
+     "breaks": [
+      {
+       "type": "navidad",
+       "start": "2026-12-23",
+       "end": "2027-01-06",
+       "text": "El periodo no lectivo de Navidad estará comprendido entre los días 23 de diciembre de 2026 y el 6 de enero de 2027, ambos inclusive."
+      },
+      {
+       "type": "semana_santa",
+       "start": "2027-03-22",
+       "end": "2027-03-28",
+       "text": "El periodo no lectivo de Semana Santa comprenderá desde el día 22 al 28 de marzo de 2027, ambos inclusive. Para centros de Primer ciclo de educación infantil comprenderá del 25 al 28 de marzo."
+      }
+     ],
+     "non_teaching_days": [
+      {
+       "date": "2027-02-26",
+       "name": "Día de la Comunidad Educativa",
+       "text": "26 de febrero de 2027, día de la Comunidad Educativa (para todos los niveles educativos)."
+      },
+      {
+       "date": "2027-05-28",
+       "name": "Día no lectivo provincial",
+       "text": "28 de mayo de 2027, día no lectivo provincial."
+      }
+     ],
+     "note": "Los Consejos Escolares Municipales (o de centro) pueden fijar hasta 3 días no lectivos adicionales."
+    },
+    {
+     "name": "Huelva",
+     "source": {
+      "title": "Resolución de 29 de mayo de 2026 de la Delegación Territorial ... en Huelva, por la que se aprueba el calendario escolar en los centros docentes no universitarios para el curso académico 2026/2027",
+      "url": "https://www.juntadeandalucia.es/educacion/portales/documents/1197074/4609198/Resoluci%C3%B3n%20calendario%20Huelva%2026-27.pdf/4338f98f-b951-7f3a-7921-052dcc0a1ffb",
+      "checked": "2026-10-26"
+     },
+     "stages": [
+      {
+       "stages": [
+        "infantil",
+        "primaria",
+        "educacion_especial"
+       ],
+       "start": "2026-09-10",
+       "end": "2027-06-22",
+       "text": "El régimen ordinario de clases lectivas dará comienzo el día 10 de septiembre de 2026 en segundo ciclo de educación infantil, educación primaria y educación especial ... El último día lectivo será el 22 de junio de 2027."
+      },
+      {
+       "stages": [
+        "eso",
+        "bachillerato",
+        "fp"
+       ],
+       "start": "2026-09-15",
+       "end": "2027-06-22",
+       "text": "El régimen ordinario de clases lectivas comenzará el 15 de septiembre de 2026. El número de días lectivos para educación secundaria obligatoria y bachillerato y ciclos formativos será de 175 ... El último día lectivo para educación secundaria obligatoria y el 1º curso de bachillerato será el día 22 de junio de 2027."
+      },
+      {
+       "stages": [
+        "bachillerato_2"
+       ],
+       "start": "2026-09-15",
+       "end": null,
+       "text": "El 2º curso de bachillerato terminará el día 22 de mayo de 2027 o el último día laborable anterior en caso de que sea sábado o festivo."
+      },
+      {
+       "stages": [
+        "musica",
+        "danza",
+        "artes_plasticas"
+       ],
+       "start": "2026-09-15",
+       "end": "2027-06-22",
+       "text": "... el régimen ordinario de clase comenzará el 15 de septiembre de 2026. La finalización ... será el día 22 de junio de 2027, con excepción del sexto curso de las enseñanzas profesionales de música y de danza, que será el día 31 de mayo de 2027."
+      },
+      {
+       "stages": [
+        "epa"
+       ],
+       "start": "2026-09-15",
+       "end": "2027-06-22",
+       "text": "planes educativos, educación secundaria obligatoria y bachillerato para personas adultas ... comenzará el día 15 de septiembre de 2026 ... será el día 22 de junio de 2027."
+      },
+      {
+       "stages": [
+        "eoi"
+       ],
+       "start": "2026-09-21",
+       "end": "2027-06-22",
+       "text": "El régimen ordinario de clases comenzará el día 21 de septiembre de 2026 ... será el día 22 de junio de 2027. En los cursos conducentes a dichas pruebas, será el día 31 de mayo de 2027."
+      }
+     ],
+     "breaks": [
+      {
+       "type": "navidad",
+       "start": "2026-12-23",
+       "end": "2027-01-07",
+       "text": "Las vacaciones de Navidad comprenderán el período entre el 23 de diciembre de 2026 y el 7 de enero de 2027, ambos inclusive."
+      },
+      {
+       "type": "semana_santa",
+       "start": "2027-03-22",
+       "end": "2027-03-28",
+       "text": "Las vacaciones de Semana Santa comprenderán el período entre el 22 de marzo y el 28 de marzo de 2027, ambos inclusive."
+      }
+     ],
+     "non_teaching_days": [
+      {
+       "date": "2027-02-26",
+       "name": "Día de la Comunidad Educativa",
+       "text": "Se establece como Día de la Comunidad Educativa (día no lectivo de ámbito provincial) el 26 de febrero de 2027."
+      }
+     ],
+     "note": "Los Consejos Escolares Municipales pueden fijar otros días vacacionales locales (hasta cinco, incluidas las dos fiestas locales). El apartado 9 de la resolución conserva por error referencias al curso 2025/2026. Fin de 2º de Bachillerato: '22 de mayo ... o el último día laborable anterior' (sábado en 2027); se deja null."
+    },
+    {
+     "name": "Jaén",
+     "source": {
+      "title": "Ayuntamiento de Jaén, Concejalía de Educación – Calendario escolar 2026-2027 (PDF, Jaén capital)",
+      "url": "https://www.aytojaen.es/portal/RecursosWeb/DOCUMENTOS/1/0_35595_1.pdf",
+      "checked": "2026-10-26"
+     },
+     "stages": [
+      {
+       "stages": [
+        "infantil_0_3"
+       ],
+       "start": "2026-09-03",
+       "end": "2027-07-29",
+       "text": "03 Inicio 1º Ciclo Educación Infantil ... 29 Final curso de 1º Ciclo de Educación infantil"
+      },
+      {
+       "stages": [
+        "infantil",
+        "primaria",
+        "educacion_especial"
+       ],
+       "start": "2026-09-10",
+       "end": "2027-06-22",
+       "text": "10 Inicio 2º Ciclo Ed.Inf.Prim y E.E ... 22 FINAL DE CURSO Ed. Inf; Prim. y E.E; E.S.O; Bach, Artes, C Form; Idiomas y Ed Permanente"
+      },
+      {
+       "stages": [
+        "eso",
+        "bachillerato",
+        "fp",
+        "artes_plasticas",
+        "musica",
+        "danza",
+        "epa"
+       ],
+       "start": "2026-09-15",
+       "end": "2027-06-22",
+       "text": "15 Inicio curso E.S.O; Bach, Artes, Ciclos Formativos y Ed Permanente ... 22 FINAL DE CURSO"
+      },
+      {
+       "stages": [
+        "bachillerato_2"
+       ],
+       "start": "2026-09-15",
+       "end": "2027-05-21",
+       "text": "21 Final de curso 2º de Bachillerato"
+      },
+      {
+       "stages": [
+        "eoi"
+       ],
+       "start": "2026-09-21",
+       "end": "2027-06-22",
+       "text": "21 Inicio curso Idiomas y Ens.Art.Sup ... 22 FINAL DE CURSO ... Idiomas"
+      }
+     ],
+     "breaks": [
+      {
+       "type": "navidad",
+       "start": "2026-12-23",
+       "end": "2027-01-07",
+       "text": "23-31 Vacaciones de Navidad / 1-7 Vacaciones de Navidad"
+      },
+      {
+       "type": "semana_santa",
+       "start": "2027-03-22",
+       "end": "2027-03-28",
+       "text": "22-28 Vacaciones Semana Santa"
+      }
+     ],
+     "non_teaching_days": [
+      {
+       "date": "2027-02-26",
+       "name": "Día de la Comunidad Escolar",
+       "text": "26 Día de la Comunidad Escolar"
+      }
+     ],
+     "note": "NO es la resolución provincial: es el calendario del Ayuntamiento de Jaén para la capital (incluye además sus fiestas locales y un día no lectivo municipal el 3-V-2027). La Resolución de 27-V-2026 de la Delegación Territorial en Jaén no se ha podido abrir en un dominio oficial (la Delegación no la publicó en su web; solo hay copias en webs sindicales). Fechas provinciales sin verificar."
+    },
+    {
+     "name": "Málaga",
+     "source": {
+      "title": "Resolución de 20 de mayo de 2026 de la Delegación Territorial de la Consejería de Desarrollo Educativo y FP en Málaga por la que se dictan las normas que han de regir el calendario escolar para el curso escolar 2026/2027",
+      "url": "https://www.juntadeandalucia.es/educacion/portales/documents/2854624/4501041/RESOLUCION%20CALENDARIO%20ESCOLAR%202026_27%20MALAGA.pdf/6f0af8f4-b17b-3b67-2797-e53eb85376e9",
+      "checked": "2026-10-26"
+     },
+     "stages": [
+      {
+       "stages": [
+        "infantil_0_3"
+       ],
+       "start": "2026-09-03",
+       "end": "2027-07-29",
+       "text": "El régimen ordinario de clase comenzará el tercer día hábil del mes de septiembre de cada año (Día 3 de septiembre) ... finalizará el penúltimo día hábil del mes de julio de cada año (Día 29 de julio)."
+      },
+      {
+       "stages": [
+        "infantil",
+        "primaria",
+        "educacion_especial"
+       ],
+       "start": "2026-09-10",
+       "end": "2027-06-24",
+       "text": "El régimen ordinario de clases lectivas dará comienzo el día 10 de septiembre de 2026 en segundo ciclo de educación infantil, educación primaria y educación especial ... El último día lectivo será el 24 de junio de 2027."
+      },
+      {
+       "stages": [
+        "eso",
+        "bachillerato",
+        "fp_basica",
+        "fp"
+       ],
+       "start": "2026-09-15",
+       "end": "2027-06-24",
+       "text": "En educación secundaria obligatoria, bachillerato, ciclos formativos de grado básico y formación profesional grados D y E: El régimen ordinario de clases lectivas comenzará el día 15 de septiembre de 2026 ... El último día lectivo para educación secundaria obligatoria y el 1º curso de bachillerato será el día 24 de junio de 2027."
+      },
+      {
+       "stages": [
+        "bachillerato_2"
+       ],
+       "start": "2026-09-15",
+       "end": "2027-05-24",
+       "text": "El 2º curso de bachillerato terminará el día 24 de mayo de 2027."
+      },
+      {
+       "stages": [
+        "musica",
+        "danza",
+        "artes_plasticas"
+       ],
+       "start": "2026-09-15",
+       "end": "2027-06-24",
+       "text": "... el régimen ordinario de clase comenzará el 15 de septiembre de 2026. La finalización ... será el día 24 de junio de 2027, con excepción del sexto curso de las enseñanzas profesionales de música y de danza, que será el día 31 de mayo de 2027."
+      },
+      {
+       "stages": [
+        "epa"
+       ],
+       "start": "2026-09-15",
+       "end": "2027-06-24",
+       "text": "planes educativos, educación secundaria obligatoria y bachillerato para personas adultas ... comenzará el día 15 de septiembre de 2026 ... será el día 24 de junio de 2027."
+      },
+      {
+       "stages": [
+        "eoi"
+       ],
+       "start": "2026-09-21",
+       "end": "2027-06-24",
+       "text": "El régimen ordinario de clases comenzará el día 21 de septiembre de 2026 ... será el día 24 de junio de 2027. En los cursos conducentes a dichas pruebas, será el día 31 de mayo de 2027."
+      }
+     ],
+     "breaks": [
+      {
+       "type": "navidad",
+       "start": "2026-12-23",
+       "end": "2027-01-06",
+       "text": "El periodo no lectivo de Navidad estará comprendido entre los días 23 de diciembre de 2026 al 6 de enero de 2027, ambos inclusive."
+      },
+      {
+       "type": "otro",
+       "name": "Semana blanca",
+       "start": "2027-02-22",
+       "end": "2027-02-26",
+       "text": "SEMANA BLANCA: Se considerará no lectivos los días comprendidos entre el 22 y el 26 de febrero de 2027, ambos inclusive."
+      },
+      {
+       "type": "semana_santa",
+       "start": "2027-03-22",
+       "end": "2027-03-28",
+       "text": "El periodo no lectivo de Semana Santa comprenderá desde el día 22 al 28 de marzo de 2027, ambos inclusive."
+      }
+     ],
+     "non_teaching_days": [
+      {
+       "date": "2027-02-26",
+       "name": "Día de la Comunidad Educativa",
+       "text": "26 de febrero de 2027, día de la Comunidad Educativa (para todos los niveles educativos)."
+      }
+     ],
+     "note": "Días condicionados a las fiestas locales: si ninguna de las dos fiestas locales cae en periodo lectivo, son no lectivos el 29-III-2027 y el 3-V-2027; si cae una, solo el 3-V-2027; si caen las dos, ninguno. La resolución advierte que las festividades tienen carácter provisional."
+    },
+    {
+     "name": "Sevilla",
+     "source": {
+      "title": "Resolución del Delegado Territorial de Desarrollo Educativo y FP y de Universidad, Investigación e Innovación en Sevilla, por la que se aprueba el calendario y la jornada escolar ... para el curso académico 2026/2027 (firmada 28/05/2026)",
+      "url": "https://www.juntadeandalucia.es/educacion/portales/documents/1176698/3340178/RESOL%20CALEND%2026_27%28F%29.pdf/8c2fd440-3e04-a1c5-d497-2170af36e265",
+      "checked": "2026-10-26"
+     },
+     "stages": [
+      {
+       "stages": [
+        "infantil",
+        "primaria",
+        "educacion_especial"
+       ],
+       "start": "2026-09-10",
+       "end": "2027-06-23",
+       "text": "El régimen ordinario de clases comenzará el día 10 de septiembre de 2026 ... La finalización del régimen ordinario de clases para el segundo ciclo de Educación Infantil, Educación Primaria y Educación Especial, será el 23 de junio de 2027."
+      },
+      {
+       "stages": [
+        "eso",
+        "bachillerato",
+        "fp",
+        "epa"
+       ],
+       "start": "2026-09-15",
+       "end": "2027-06-23",
+       "text": "Educación Secundaria Obligatoria, Bachillerato, Formación Profesional Inicial ..., Educación Permanente para Personas Adultas: El régimen ordinario de clases comenzará el día 15 de septiembre de 2026 ... La finalización ... para Educación Secundaria Obligatoria, primer curso de Bachillerato, Educación Permanente para personas Adultas será el 23 de junio de 2027."
+      },
+      {
+       "stages": [
+        "bachillerato_2"
+       ],
+       "start": "2026-09-15",
+       "end": "2027-05-24",
+       "text": "Para el segundo curso de Bachillerato, la finalización será el 24 de mayo de 2027."
+      },
+      {
+       "stages": [
+        "musica",
+        "danza",
+        "artes_plasticas"
+       ],
+       "start": "2026-09-15",
+       "end": "2027-06-23",
+       "text": "En enseñanzas artísticas ... el régimen ordinario de clases comenzará el 15 de septiembre de 2026 ... será el 23 de junio de 2027, con excepción del sexto curso de las enseñanzas profesionales de música y de danza, que será el día 31 de mayo 2027."
+      },
+      {
+       "stages": [
+        "artisticas_superiores"
+       ],
+       "start": "2026-09-21",
+       "end": null,
+       "text": "En las Enseñanzas Artísticas Superiores ... el régimen ordinario de clases comenzará el día 21 de septiembre de 2026. La finalización del régimen ordinario de clase no será anterior al día 20 de junio de cada año."
+      },
+      {
+       "stages": [
+        "eoi"
+       ],
+       "start": "2026-09-21",
+       "end": "2027-06-23",
+       "text": "El régimen ordinario de clases comenzará el día 21 de septiembre de 2026 ... La finalización ... será el 23 de junio de 2027, con excepción en los cursos conducentes a las pruebas específicas de certificación, que será el día 31 de mayo 2027."
+      }
+     ],
+     "breaks": [
+      {
+       "type": "navidad",
+       "start": "2026-12-24",
+       "end": "2027-01-07",
+       "text": "Desde el 24 de diciembre de 2026 al 7 de enero de 2027, ambos inclusive."
+      },
+      {
+       "type": "semana_santa",
+       "start": "2027-03-22",
+       "end": "2027-03-28",
+       "text": "Desde el 22 al 28 de marzo 2027, ambos inclusive."
+      }
+     ],
+     "non_teaching_days": [
+      {
+       "date": "2027-01-08",
+       "name": "Día no lectivo provincial",
+       "text": "Como \"Día no lectivo provincial\", para todos los niveles y miembros de la Comunidad Educativa, a excepción del primer ciclo de Educación Infantil, el 8 de enero de 2027."
+      },
+      {
+       "date": "2027-02-26",
+       "name": "Día de la Comunidad Educativa",
+       "text": "Como \"Día de la Comunidad Educativa\", para todos los niveles y miembros de la Comunidad Educativa, el 26 de febrero de 2027."
+      }
+     ],
+     "note": "Los periodos vacacionales no aplican al primer ciclo de Educación Infantil. Los Consejos Escolares Municipales pueden acordar hasta dos días de libre disposición (propuesta antes del 15-X-2026)."
+    }
+   ],
+   "note": "En Andalucía cada Delegación Territorial aprueba el calendario provincial; no hay fechas regionales únicas (el Decreto 301/2009, en su texto original, fija el 10-IX para infantil/primaria y el 15-IX para secundaria, fin no anterior al 22-VI y Navidad al menos del 24-XII al 6-I; no se ha leído el texto consolidado con sus modificaciones). Siete provincias verificadas en juntadeandalucia.es; Jaén solo con el calendario municipal del Ayuntamiento de Jaén (capital). Además de lo listado: festivos nacionales/autonómicos y dos fiestas locales por municipio; los consejos escolares municipales pueden fijar días de libre disposición."
   },
   {
    "slug": "aragon",
@@ -520,32 +1298,1089 @@
   {
    "slug": "canarias",
    "name": "Canarias",
-   "status": "unpublished",
-   "source": null,
-   "stages": [],
-   "breaks": [],
-   "non_teaching_days": [],
-   "note": "No investigado / no verificado."
+   "status": "verified",
+   "source": {
+    "title": "Resolución de 17 de marzo de 2026, de la Dirección General de Administración de Centros, Escolarización y Servicios Complementarios, por la que se establece el calendario escolar ... del curso 2026-2027 (BOC núm. 61, de 30 de marzo de 2026, anuncio 1025)",
+    "url": "https://sede.gobiernodecanarias.org/boc/boc-a-2026-061-1025.pdf",
+    "checked": "2026-10-26"
+   },
+   "extra_sources": [
+    {
+     "title": "Resolución de 10 de abril de 2026, por la que se corrige error en la Resolución de 17 de marzo de 2026 (BOC núm. 75, de 20 de abril de 2026, anuncio 1240) — corrige las fechas de Navidad",
+     "url": "https://www.gobiernodecanarias.org/boc/2026/075/1240.html",
+     "checked": "2026-10-26"
+    },
+    {
+     "title": "Consejería de Educación – Calendario escolar",
+     "url": "https://www.gobiernodecanarias.org/educacion/web/centros/calendario_escolar/",
+     "checked": "2026-10-26"
+    }
+   ],
+   "stages": [
+    {
+     "stages": [
+      "infantil",
+      "primaria"
+     ],
+     "start": "2026-09-09",
+     "end": "2027-06-22",
+     "text": "Educación Infantil y Educación Primaria: 9 de septiembre – 22 de junio"
+    },
+    {
+     "stages": [
+      "eso"
+     ],
+     "start": "2026-09-10",
+     "end": "2027-06-22",
+     "text": "Educación Secundaria Obligatoria: 10 de septiembre – 22 de junio"
+    },
+    {
+     "stages": [
+      "bachillerato"
+     ],
+     "start": "2026-09-11",
+     "end": "2027-06-18",
+     "text": "Primer curso de Bachillerato: 11 de septiembre – 18 de junio (el Anexo I de la misma Resolución indica 'Finalización actividades de primer curso de Bachillerato: 22 de junio')"
+    },
+    {
+     "stages": [
+      "bachillerato_2"
+     ],
+     "start": "2026-09-11",
+     "end": "2027-05-14",
+     "text": "Segundo curso de Bachillerato: 11 de septiembre – 14 de mayo"
+    },
+    {
+     "stages": [
+      "fp",
+      "fp_basica"
+     ],
+     "start": "2026-09-16",
+     "end": "2027-06-22",
+     "text": "Grado D de Formación Profesional: ciclos formativos de grado básico, medio y superior: 16 de septiembre – 22 de junio; 27 de mayo (2º curso de los Ciclos Formativos de Grado Superior de FP)"
+    },
+    {
+     "stages": [
+      "artes_plasticas"
+     ],
+     "start": "2026-09-16",
+     "end": "2027-06-22",
+     "text": "Ciclos formativos de grado medio y de grado superior de Artes Plásticas y Diseño: 16 de septiembre – 22 de junio; 27 de mayo (2º curso de los Ciclos Formativos de Grado Superior)"
+    },
+    {
+     "stages": [
+      "artisticas_superiores"
+     ],
+     "start": "2026-09-16",
+     "end": "2027-06-11",
+     "text": "Enseñanzas Artísticas superiores de Música, Diseño y Arte Dramático: 16 de septiembre – 11 de junio"
+    },
+    {
+     "stages": [
+      "deportivas"
+     ],
+     "start": "2026-09-16",
+     "end": "2027-06-22",
+     "text": "Ciclos formativos de Enseñanzas Deportivas: 16 de septiembre – 22 de junio"
+    },
+    {
+     "stages": [
+      "musica"
+     ],
+     "start": "2026-09-16",
+     "end": "2027-06-09",
+     "text": "Enseñanzas elementales y profesionales de Música: 16 de septiembre – 9 de junio; 2 de junio (6º curso)"
+    },
+    {
+     "stages": [
+      "eoi"
+     ],
+     "start": "2026-09-21",
+     "end": "2027-05-27",
+     "text": "Enseñanzas de idiomas de régimen especial: 21 de septiembre – 27 de mayo"
+    },
+    {
+     "stages": [
+      "epa"
+     ],
+     "start": "2026-09-10",
+     "end": "2027-06-22",
+     "text": "Educación Básica de Personas Adultas: 10 de septiembre – 22 de junio"
+    }
+   ],
+   "breaks": [
+    {
+     "type": "navidad",
+     "start": "2026-12-23",
+     "end": "2027-01-08",
+     "text": "Navidad: del 23 de diciembre de 2026 al 8 de enero de 2027, ambos inclusive (según la corrección de errores de 10-IV-2026; el texto original decía del 22 de diciembre al 7 de enero)."
+    },
+    {
+     "type": "semana_santa",
+     "start": "2027-03-22",
+     "end": "2027-03-26",
+     "text": "Semana Santa: del 22 al 26 de marzo de 2027, ambos inclusive."
+    }
+   ],
+   "non_teaching_days": [
+    {
+     "date": "2026-11-02",
+     "name": "Todos los Santos",
+     "text": "En el año 2026, el 2 de noviembre (Todos los Santos) y el 8 de diciembre (Inmaculada Concepción)."
+    },
+    {
+     "date": "2026-12-07",
+     "name": "Día del Enseñante y del Estudiante",
+     "text": "También tiene la consideración de festivo a efectos académicos el 7 de diciembre de 2026, celebración del Día del Enseñante y del Estudiante."
+    },
+    {
+     "date": "2026-12-08",
+     "name": "Inmaculada Concepción",
+     "text": "En el año 2026, el 2 de noviembre (Todos los Santos) y el 8 de diciembre (Inmaculada Concepción)."
+    }
+   ],
+   "note": "Festivos insulares 2026 que recoge la Resolución: Gran Canaria 8-IX (Ntra. Sra. del Pino), Lanzarote y La Graciosa 15-IX (Ntra. Sra. de Los Volcanes), Fuerteventura 18-IX (Ntra. Sra. de la Peña), El Hierro 24-IX (Ntra. Sra. de los Reyes), La Gomera 5-X (Ntra. Sra. de Guadalupe). Festivos de 2027: los del calendario de fiestas laborales de Canarias (no enumerados en la Resolución). Dos fiestas locales por municipio. Cada consejo escolar fija hasta cuatro días no lectivos de libre disposición (comunicados antes del 31-X-2026); no hay carnaval regional en la Resolución. Las EOI siguen además instrucciones de la DG de FP y Enseñanzas de Régimen Especial. Discrepancia interna: fin de 1º de Bachillerato 18-VI (tabla del resuelvo tercero) frente a 22-VI (Anexo I)."
   },
   {
    "slug": "cantabria",
    "name": "Cantabria",
-   "status": "unpublished",
-   "source": null,
-   "stages": [],
-   "breaks": [],
+   "status": "verified",
+   "source": {
+    "title": "Orden EDU/10/2026, de 24 de marzo, por la que se establece el calendario escolar para el curso 2026-2027 para centros docentes no universitarios (BOC núm. 75, de 21 de abril de 2026, CVE-2026-3151)",
+    "url": "https://boc.cantabria.es/boces/verAnuncioAction.do?idAnuBlob=434226",
+    "checked": "2026-10-26"
+   },
+   "stages": [
+    {
+     "stages": [
+      "infantil",
+      "primaria",
+      "educacion_especial"
+     ],
+     "start": "2026-09-08",
+     "end": "2027-06-23",
+     "text": "En las etapas de educación infantil y educación primaria, y en los centros de educación especial, las actividades lectivas se desarrollarán desde el 8 de septiembre de 2026 hasta el 23 de junio de 2027, ambos inclusive."
+    },
+    {
+     "stages": [
+      "eso",
+      "bachillerato",
+      "fp"
+     ],
+     "start": "2026-09-09",
+     "end": "2027-06-24",
+     "text": "En las etapas de educación secundaria obligatoria, bachillerato y formación profesional las actividades lectivas se desarrollarán desde el 9 de septiembre de 2026 hasta el 24 de junio de 2027, ambos inclusive."
+    },
+    {
+     "stages": [
+      "musica",
+      "danza"
+     ],
+     "start": "2026-09-16",
+     "end": "2027-05-31",
+     "text": "En las enseñanzas elementales y profesionales de música y de danza, las actividades lectivas se desarrollarán desde el 16 de septiembre de 2026 hasta el 31 de mayo de 2027, ambos inclusive."
+    },
+    {
+     "stages": [
+      "deportivas"
+     ],
+     "start": "2026-09-18",
+     "end": "2027-06-24",
+     "text": "En las enseñanzas deportivas de régimen especial, las actividades lectivas se desarrollarán desde el 18 de septiembre de 2026 hasta el 24 de junio de 2027, ambos inclusive."
+    },
+    {
+     "stages": [
+      "artes_plasticas",
+      "epa"
+     ],
+     "start": "2026-09-16",
+     "end": "2027-06-24",
+     "text": "En las enseñanzas profesionales de artes plásticas y diseño y en la educación permanente de personas adultas, las actividades lectivas se desarrollarán desde el 16 de septiembre de 2026 hasta el 24 de junio de 2027, ambos inclusive."
+    },
+    {
+     "stages": [
+      "eoi"
+     ],
+     "start": "2026-10-05",
+     "end": "2027-05-31",
+     "text": "En las enseñanzas de idiomas de régimen especial, las actividades lectivas se desarrollarán desde el 5 de octubre de 2026 hasta el 31 de mayo de 2027, ambos inclusive."
+    }
+   ],
+   "breaks": [
+    {
+     "type": "otro",
+     "name": "Vacaciones de noviembre",
+     "start": "2026-11-02",
+     "end": "2026-11-06",
+     "text": "no serán días lectivos los siguientes: 2, 3, 4, 5, 6 de noviembre de 2026."
+    },
+    {
+     "type": "navidad",
+     "start": "2026-12-23",
+     "end": "2027-01-08",
+     "text": "23, 24, 28, 29, 30 y 31 de diciembre de 2026. 4, 5, 7 y 8 de enero de 2027. Los días 1 y 6 de enero ... en caso de no ser declarados oficialmente festivos, serán días no lectivos."
+    },
+    {
+     "type": "otro",
+     "name": "Vacaciones de febrero (carnaval)",
+     "start": "2027-02-10",
+     "end": "2027-02-12",
+     "text": "10, 11 y 12 de febrero de 2027."
+    },
+    {
+     "type": "semana_santa",
+     "start": "2027-03-22",
+     "end": "2027-03-26",
+     "text": "22, 23 y 24 de marzo de 2027. ... 25 y 26 de marzo 2027, en caso de no ser declarados oficialmente festivos, serán días no lectivos."
+    },
+    {
+     "type": "otro",
+     "name": "Puente de mayo",
+     "start": "2027-05-03",
+     "end": "2027-05-04",
+     "text": "3 y 4 de mayo de 2027."
+    }
+   ],
    "non_teaching_days": [],
-   "note": "No investigado / no verificado."
+   "note": "La Orden lista días sueltos no lectivos (no rangos); los rangos de arriba van del primer al último día laborable listado (Navidad incluye 25-XII, 1-I y 6-I; las clases se reanudan tras el fin de semana del 9-10 de enero). Además son no lectivos los festivos oficiales; las fiestas locales se recuperan alargando el curso en junio. El 30-I-2027 se conmemora el Día del Docente (sábado; no se declara no lectivo). Etiquetas 'noviembre/carnaval/puente' son descriptivas, no del texto oficial."
   },
   {
    "slug": "castilla-la-mancha",
    "name": "Castilla-La Mancha",
-   "status": "unpublished",
-   "source": null,
-   "stages": [],
-   "breaks": [],
-   "non_teaching_days": [],
-   "note": "No investigado / no verificado."
+   "status": "verified",
+   "source": {
+    "title": "Orden 79/2026, de 26 de mayo, de la Consejería de Educación, Cultura y Deportes, por la que se establece el calendario escolar para el curso 2026/2027, y los criterios y el procedimiento para la elaboración de los calendarios escolares provinciales (DOCM núm. 104, de 3 de junio de 2026) [2026/4106]",
+    "url": "https://docm.jccm.es/docm/descargarArchivo.do?ruta=2026/06/03/pdf/2026_4106.pdf&tipo=rutaDocm",
+    "checked": "2026-10-26"
+   },
+   "stages": [
+    {
+     "stages": [
+      "infantil_0_3"
+     ],
+     "start": "2026-09-08",
+     "end": "2027-07-23",
+     "text": "Las escuelas infantiles autonómicas comenzarán el día 08/09/2026 y finalizarán el día 23/07/2027"
+    },
+    {
+     "stages": [
+      "infantil",
+      "primaria",
+      "educacion_especial",
+      "eso"
+     ],
+     "start": "2026-09-08",
+     "end": "2027-06-22",
+     "text": "Las enseñanzas de 2º Ciclo de Educación Infantil, Educación Primaria, Educación Especial y Educación Secundaria Obligatoria comenzarán el día 08/09/2026 y finalizarán el día 22/06/2027."
+    },
+    {
+     "stages": [
+      "bachillerato",
+      "fp_basica"
+     ],
+     "start": "2026-09-08",
+     "end": "2027-06-22",
+     "text": "Los Ciclos Formativos de Grado Básico, Programas Específicos de Formación Profesional y Bachillerato, comenzarán el día 08/09/2026 y finalizarán el día 22/06/2027, excepto para el segundo curso de Bachillerato, cuya finalización estará en función de las fechas de realización de las pruebas de acceso a la Universidad."
+    },
+    {
+     "stages": [
+      "fp",
+      "artes_plasticas",
+      "deportivas"
+     ],
+     "start": "2026-09-08",
+     "end": "2027-06-22",
+     "text": "Los Ciclos Formativos de Grado Medio y Grado Superior de Formación Profesional, Enseñanzas Profesionales de Artes Plásticas y Diseño y Enseñanzas Deportivas de Régimen Especial, comenzarán el día 08/09/2026 y finalizarán el día 22/06/2027."
+    },
+    {
+     "stages": [
+      "fp_especializacion"
+     ],
+     "start": "2026-09-28",
+     "end": "2027-06-22",
+     "text": "Los cursos de Especialización de Formación Profesional comenzarán el día 28/09/2026 y finalizarán el día 22/06/2027."
+    },
+    {
+     "stages": [
+      "fp_virtual"
+     ],
+     "start": "2026-10-13",
+     "end": "2027-06-22",
+     "text": "Las enseñanzas de Formación Profesional en la modalidad virtual comenzarán el día 13/10/2026 y finalizarán el 22/06/2027."
+    },
+    {
+     "stages": [
+      "epa"
+     ],
+     "start": "2026-09-08",
+     "end": "2027-06-22",
+     "text": "La Educación de Personas Adultas comenzará el día 08/09/2026 y finalizará el día 22/06/2027."
+    },
+    {
+     "stages": [
+      "musica",
+      "danza"
+     ],
+     "start": "2026-09-08",
+     "end": "2027-06-11",
+     "text": "Las Enseñanzas Elementales y Profesionales de Música y de Danza comenzarán el día 08/09/2026 y finalizarán el día 11/06/2027."
+    },
+    {
+     "stages": [
+      "artisticas_superiores"
+     ],
+     "start": "2026-09-08",
+     "end": "2027-06-22",
+     "text": "Las Enseñanzas Artísticas Superiores comenzarán el día 08/09/2026 y finalizarán el día 22/06/2027."
+    },
+    {
+     "stages": [
+      "eoi"
+     ],
+     "start": "2026-09-23",
+     "end": "2027-06-22",
+     "text": "Las Enseñanzas de Idiomas de Régimen Especial comenzarán el día 23/09/2026 y finalizarán el día 22/06/2027."
+    }
+   ],
+   "breaks": [
+    {
+     "type": "navidad",
+     "start": "2026-12-23",
+     "end": "2027-01-08",
+     "text": "El descanso escolar entre el primer y el segundo trimestre comprenderá desde el día 23/12/2026 hasta el 08/01/2027, ambos inclusive."
+    },
+    {
+     "type": "semana_santa",
+     "start": "2027-03-22",
+     "end": "2027-03-29",
+     "text": "El descanso escolar entre el segundo y el tercer trimestre será desde el 22/03/2027 hasta el 29/03/2027, ambos inclusive."
+    }
+   ],
+   "non_teaching_days": [
+    {
+     "date": "2026-11-20",
+     "name": "Día de la Enseñanza",
+     "text": "El día de la Enseñanza, fijado para el día 20/11/2026."
+    },
+    {
+     "date": "2026-12-07",
+     "name": "Día no lectivo",
+     "text": "Serán días no lectivos el 07/12/2026 y el 28/05/2027."
+    },
+    {
+     "date": "2027-02-08",
+     "name": "Descanso lectivo de libre disposición",
+     "text": "Los días de descanso lectivo de libre disposición serán el 08/02/2027 y el 09/02/2027 (siempre y cuando se cumpla el mínimo de los 175 días lectivos). Este apartado no se aplica a las escuelas infantiles autonómicas."
+    },
+    {
+     "date": "2027-02-09",
+     "name": "Descanso lectivo de libre disposición",
+     "text": "Los días de descanso lectivo de libre disposición serán el 08/02/2027 y el 09/02/2027 (siempre y cuando se cumpla el mínimo de los 175 días lectivos). Este apartado no se aplica a las escuelas infantiles autonómicas."
+    },
+    {
+     "date": "2027-05-28",
+     "name": "Día no lectivo",
+     "text": "Serán días no lectivos el 07/12/2026 y el 28/05/2027."
+    }
+   ],
+   "provinces": [
+    {
+     "name": "Albacete",
+     "source": {
+      "title": "RESOLUCIÓN, de 19 de junio de 2026, de la Delegación Provincial de la Consejería de Educación, Cultura y Deportes en Albacete, calendario escolar 2026-2027",
+      "url": "https://educacion.castillalamancha.es/sites/default/files/2026-06/ALBACETE%20-%20RESOLUCION%20CALENDARIO%20ESCOLAR%20PROVINCIAL%202026-2027%20ALBACETE.pdf",
+      "checked": "2026-10-26"
+     },
+     "stages": [
+      {
+       "stages": [
+        "infantil_0_3"
+       ],
+       "start": "2026-09-08",
+       "end": "2027-07-23",
+       "text": "Las escuelas infantiles autonómicas comenzarán el día 08/09/2026 y finalizarán el día 23/07/2027"
+      },
+      {
+       "stages": [
+        "infantil",
+        "primaria",
+        "educacion_especial",
+        "eso"
+       ],
+       "start": "2026-09-08",
+       "end": "2027-06-22",
+       "text": "Las enseñanzas de 2º Ciclo de Educación Infantil, Educación Primaria, Educación Especial y Educación Secundaria Obligatoria comenzarán el día 08/09/2026 y finalizarán el día 22/06/2027."
+      },
+      {
+       "stages": [
+        "bachillerato",
+        "fp_basica"
+       ],
+       "start": "2026-09-08",
+       "end": "2027-06-22",
+       "text": "Los Ciclos Formativos de Grado Básico, Programas Específicos de Formación Profesional y Bachillerato, comenzarán el día 08/09/2026 y finalizarán el día 22/06/2027, excepto para el segundo curso de Bachillerato, cuya finalización estará en función de las fechas de realización de las pruebas de acceso a la Universidad."
+      },
+      {
+       "stages": [
+        "fp",
+        "artes_plasticas",
+        "deportivas"
+       ],
+       "start": "2026-09-08",
+       "end": "2027-06-22",
+       "text": "Los Ciclos Formativos de Grado Medio y Grado Superior de Formación Profesional, Enseñanzas Profesionales de Artes Plásticas y Diseño y Enseñanzas Deportivas de Régimen Especial, comenzarán el día 08/09/2026 y finalizarán el día 22/06/2027."
+      },
+      {
+       "stages": [
+        "fp_especializacion"
+       ],
+       "start": "2026-09-28",
+       "end": "2027-06-22",
+       "text": "Los cursos de Especialización de Formación Profesional comenzarán el día 28/09/2026 y finalizarán el día 22/06/2027."
+      },
+      {
+       "stages": [
+        "fp_virtual"
+       ],
+       "start": "2026-10-13",
+       "end": "2027-06-22",
+       "text": "Las enseñanzas de Formación Profesional en la modalidad virtual comenzarán el día 13/10/2026 y finalizarán el 22/06/2027."
+      },
+      {
+       "stages": [
+        "epa"
+       ],
+       "start": "2026-09-08",
+       "end": "2027-06-22",
+       "text": "La Educación de Personas Adultas comenzará el día 08/09/2026 y finalizará el día 22/06/2027."
+      },
+      {
+       "stages": [
+        "musica",
+        "danza"
+       ],
+       "start": "2026-09-08",
+       "end": "2027-06-11",
+       "text": "Las Enseñanzas Elementales y Profesionales de Música y de Danza comenzarán el día 08/09/2026 y finalizarán el día 11/06/2027."
+      },
+      {
+       "stages": [
+        "artisticas_superiores"
+       ],
+       "start": "2026-09-08",
+       "end": "2027-06-22",
+       "text": "Las Enseñanzas Artísticas Superiores comenzarán el día 08/09/2026 y finalizarán el día 22/06/2027."
+      },
+      {
+       "stages": [
+        "eoi"
+       ],
+       "start": "2026-09-23",
+       "end": "2027-06-22",
+       "text": "Las Enseñanzas de Idiomas de Régimen Especial comenzarán el día 23/09/2026 y finalizarán el día 22/06/2027."
+      }
+     ],
+     "breaks": [
+      {
+       "type": "navidad",
+       "start": "2026-12-23",
+       "end": "2027-01-08",
+       "text": "El descanso escolar entre el primer y el segundo trimestre comprenderá desde el día 23/12/2026 hasta el 08/01/2027, ambos inclusive."
+      },
+      {
+       "type": "semana_santa",
+       "start": "2027-03-22",
+       "end": "2027-03-29",
+       "text": "El descanso escolar entre el segundo y el tercer trimestre será desde el 22/03/2027 hasta el 29/03/2027, ambos inclusive."
+      }
+     ],
+     "non_teaching_days": [
+      {
+       "date": "2026-11-20",
+       "name": "Día de la Enseñanza",
+       "text": "El día de la Enseñanza, fijado para el día 20/11/2026."
+      },
+      {
+       "date": "2026-12-07",
+       "name": "Día no lectivo",
+       "text": "Serán días no lectivos el 07/12/2026 y el 28/05/2027."
+      },
+      {
+       "date": "2027-02-08",
+       "name": "Descanso lectivo de libre disposición",
+       "text": "Los días de descanso lectivo de libre disposición serán el 08/02/2027 y el 09/02/2027 (siempre y cuando se cumpla el mínimo de los 175 días lectivos). Este apartado no se aplica a las escuelas infantiles autonómicas."
+      },
+      {
+       "date": "2027-02-09",
+       "name": "Descanso lectivo de libre disposición",
+       "text": "Los días de descanso lectivo de libre disposición serán el 08/02/2027 y el 09/02/2027 (siempre y cuando se cumpla el mínimo de los 175 días lectivos). Este apartado no se aplica a las escuelas infantiles autonómicas."
+      },
+      {
+       "date": "2027-05-28",
+       "name": "Día no lectivo",
+       "text": "Serán días no lectivos el 07/12/2026 y el 28/05/2027."
+      }
+     ],
+     "note": "Mismas fechas que la Orden 79/2026. Llama a los días 8 y 9 de febrero 'de libre disposición o Carnaval'. Ayuntamientos pueden pedir cambios antes del 30-XI-2026; si no, se entienden el 8 y 9 de febrero."
+    },
+    {
+     "name": "Ciudad Real",
+     "source": {
+      "title": "RESOLUCIÓN, de 25 de junio de 2026, de la Delegación Provincial de la Consejería de Educación, Cultura y Deportes en Ciudad Real, calendario escolar 2026/2027",
+      "url": "https://educacion.castillalamancha.es/sites/default/files/2026-06/RESOLUCI%C3%93N%20CALENDARIO%20ESCOLAR%20PROVINCIAL%20CIUDAD%20REAL%2026-27.pdf",
+      "checked": "2026-10-26"
+     },
+     "stages": [
+      {
+       "stages": [
+        "infantil_0_3"
+       ],
+       "start": "2026-09-08",
+       "end": "2027-07-23",
+       "text": "Las escuelas infantiles autonómicas comenzarán el día 08/09/2026 y finalizarán el día 23/07/2027"
+      },
+      {
+       "stages": [
+        "infantil",
+        "primaria",
+        "educacion_especial",
+        "eso"
+       ],
+       "start": "2026-09-08",
+       "end": "2027-06-22",
+       "text": "Las enseñanzas de 2º Ciclo de Educación Infantil, Educación Primaria, Educación Especial y Educación Secundaria Obligatoria comenzarán el día 08/09/2026 y finalizarán el día 22/06/2027."
+      },
+      {
+       "stages": [
+        "bachillerato",
+        "fp_basica"
+       ],
+       "start": "2026-09-08",
+       "end": "2027-06-22",
+       "text": "Los Ciclos Formativos de Grado Básico, Programas Específicos de Formación Profesional y Bachillerato, comenzarán el día 08/09/2026 y finalizarán el día 22/06/2027, excepto para el segundo curso de Bachillerato, cuya finalización estará en función de las fechas de realización de las pruebas de acceso a la Universidad."
+      },
+      {
+       "stages": [
+        "fp",
+        "artes_plasticas",
+        "deportivas"
+       ],
+       "start": "2026-09-08",
+       "end": "2027-06-22",
+       "text": "Los Ciclos Formativos de Grado Medio y Grado Superior de Formación Profesional, Enseñanzas Profesionales de Artes Plásticas y Diseño y Enseñanzas Deportivas de Régimen Especial, comenzarán el día 08/09/2026 y finalizarán el día 22/06/2027."
+      },
+      {
+       "stages": [
+        "fp_especializacion"
+       ],
+       "start": "2026-09-28",
+       "end": "2027-06-22",
+       "text": "Los cursos de Especialización de Formación Profesional comenzarán el día 28/09/2026 y finalizarán el día 22/06/2027."
+      },
+      {
+       "stages": [
+        "fp_virtual"
+       ],
+       "start": "2026-10-13",
+       "end": "2027-06-22",
+       "text": "Las enseñanzas de Formación Profesional en la modalidad virtual comenzarán el día 13/10/2026 y finalizarán el 22/06/2027."
+      },
+      {
+       "stages": [
+        "epa"
+       ],
+       "start": "2026-09-08",
+       "end": "2027-06-22",
+       "text": "La Educación de Personas Adultas comenzará el día 08/09/2026 y finalizará el día 22/06/2027."
+      },
+      {
+       "stages": [
+        "musica",
+        "danza"
+       ],
+       "start": "2026-09-08",
+       "end": "2027-06-11",
+       "text": "Las Enseñanzas Elementales y Profesionales de Música y de Danza comenzarán el día 08/09/2026 y finalizarán el día 11/06/2027."
+      },
+      {
+       "stages": [
+        "artisticas_superiores"
+       ],
+       "start": "2026-09-08",
+       "end": "2027-06-22",
+       "text": "Las Enseñanzas Artísticas Superiores comenzarán el día 08/09/2026 y finalizarán el día 22/06/2027."
+      },
+      {
+       "stages": [
+        "eoi"
+       ],
+       "start": "2026-09-23",
+       "end": "2027-06-22",
+       "text": "Las Enseñanzas de Idiomas de Régimen Especial comenzarán el día 23/09/2026 y finalizarán el día 22/06/2027."
+      }
+     ],
+     "breaks": [
+      {
+       "type": "navidad",
+       "start": "2026-12-23",
+       "end": "2027-01-08",
+       "text": "El descanso escolar entre el primer y el segundo trimestre comprenderá desde el día 23/12/2026 hasta el 08/01/2027, ambos inclusive."
+      },
+      {
+       "type": "semana_santa",
+       "start": "2027-03-22",
+       "end": "2027-03-29",
+       "text": "El descanso escolar entre el segundo y el tercer trimestre será desde el 22/03/2027 hasta el 29/03/2027, ambos inclusive."
+      }
+     ],
+     "non_teaching_days": [
+      {
+       "date": "2026-11-20",
+       "name": "Día de la Enseñanza",
+       "text": "El día de la Enseñanza, fijado para el día 20/11/2026."
+      },
+      {
+       "date": "2026-12-07",
+       "name": "Día no lectivo",
+       "text": "Serán días no lectivos el 07/12/2026 y el 28/05/2027."
+      },
+      {
+       "date": "2027-02-08",
+       "name": "Descanso lectivo de libre disposición",
+       "text": "Los días de descanso lectivo de libre disposición serán el 08/02/2027 y el 09/02/2027 (siempre y cuando se cumpla el mínimo de los 175 días lectivos). Este apartado no se aplica a las escuelas infantiles autonómicas."
+      },
+      {
+       "date": "2027-02-09",
+       "name": "Descanso lectivo de libre disposición",
+       "text": "Los días de descanso lectivo de libre disposición serán el 08/02/2027 y el 09/02/2027 (siempre y cuando se cumpla el mínimo de los 175 días lectivos). Este apartado no se aplica a las escuelas infantiles autonómicas."
+      },
+      {
+       "date": "2027-05-28",
+       "name": "Día no lectivo",
+       "text": "Serán días no lectivos el 07/12/2026 y el 28/05/2027."
+      }
+     ],
+     "note": "Mismas fechas que la Orden 79/2026."
+    },
+    {
+     "name": "Cuenca",
+     "source": {
+      "title": "RESOLUCIÓN, de 24 de junio de 2026, de la Delegación Provincial de la Consejería de Educación, Cultura y Deportes en Cuenca, calendario escolar 2026/2027",
+      "url": "https://educacion.castillalamancha.es/sites/default/files/2026-06/CUENCA%20-%20RESOLUCION%20CALENDARIO%20ESCOLAR%20PROVINCIAL%202026-2027%20CUENCA.pdf",
+      "checked": "2026-10-26"
+     },
+     "stages": [
+      {
+       "stages": [
+        "infantil_0_3"
+       ],
+       "start": "2026-09-08",
+       "end": "2027-07-23",
+       "text": "Las escuelas infantiles autonómicas comenzarán el día 08/09/2026 y finalizarán el día 23/07/2027"
+      },
+      {
+       "stages": [
+        "infantil",
+        "primaria",
+        "educacion_especial",
+        "eso"
+       ],
+       "start": "2026-09-08",
+       "end": "2027-06-22",
+       "text": "Las enseñanzas de 2º Ciclo de Educación Infantil, Educación Primaria, Educación Especial y Educación Secundaria Obligatoria comenzarán el día 08/09/2026 y finalizarán el día 22/06/2027."
+      },
+      {
+       "stages": [
+        "bachillerato",
+        "fp_basica"
+       ],
+       "start": "2026-09-08",
+       "end": "2027-06-22",
+       "text": "Los Ciclos Formativos de Grado Básico, Programas Específicos de Formación Profesional y Bachillerato, comenzarán el día 08/09/2026 y finalizarán el día 22/06/2027, excepto para el segundo curso de Bachillerato, cuya finalización estará en función de las fechas de realización de las pruebas de acceso a la Universidad."
+      },
+      {
+       "stages": [
+        "fp",
+        "artes_plasticas",
+        "deportivas"
+       ],
+       "start": "2026-09-08",
+       "end": "2027-06-22",
+       "text": "Los Ciclos Formativos de Grado Medio y Grado Superior de Formación Profesional, Enseñanzas Profesionales de Artes Plásticas y Diseño y Enseñanzas Deportivas de Régimen Especial, comenzarán el día 08/09/2026 y finalizarán el día 22/06/2027."
+      },
+      {
+       "stages": [
+        "fp_especializacion"
+       ],
+       "start": "2026-09-28",
+       "end": "2027-06-22",
+       "text": "Los cursos de Especialización de Formación Profesional comenzarán el día 28/09/2026 y finalizarán el día 22/06/2027."
+      },
+      {
+       "stages": [
+        "fp_virtual"
+       ],
+       "start": "2026-10-13",
+       "end": "2027-06-22",
+       "text": "Las enseñanzas de Formación Profesional en la modalidad virtual comenzarán el día 13/10/2026 y finalizarán el 22/06/2027."
+      },
+      {
+       "stages": [
+        "epa"
+       ],
+       "start": "2026-09-08",
+       "end": "2027-06-22",
+       "text": "La Educación de Personas Adultas comenzará el día 08/09/2026 y finalizará el día 22/06/2027."
+      },
+      {
+       "stages": [
+        "musica",
+        "danza"
+       ],
+       "start": "2026-09-08",
+       "end": "2027-06-11",
+       "text": "Las Enseñanzas Elementales y Profesionales de Música y de Danza comenzarán el día 08/09/2026 y finalizarán el día 11/06/2027."
+      },
+      {
+       "stages": [
+        "artisticas_superiores"
+       ],
+       "start": "2026-09-08",
+       "end": "2027-06-22",
+       "text": "Las Enseñanzas Artísticas Superiores comenzarán el día 08/09/2026 y finalizarán el día 22/06/2027."
+      },
+      {
+       "stages": [
+        "eoi"
+       ],
+       "start": "2026-09-23",
+       "end": "2027-06-22",
+       "text": "Las Enseñanzas de Idiomas de Régimen Especial comenzarán el día 23/09/2026 y finalizarán el día 22/06/2027."
+      }
+     ],
+     "breaks": [
+      {
+       "type": "navidad",
+       "start": "2026-12-23",
+       "end": "2027-01-08",
+       "text": "El descanso escolar entre el primer y el segundo trimestre comprenderá desde el día 23/12/2026 hasta el 08/01/2027, ambos inclusive."
+      },
+      {
+       "type": "semana_santa",
+       "start": "2027-03-22",
+       "end": "2027-03-29",
+       "text": "El descanso escolar entre el segundo y el tercer trimestre será desde el 22/03/2027 hasta el 29/03/2027, ambos inclusive."
+      }
+     ],
+     "non_teaching_days": [
+      {
+       "date": "2026-11-20",
+       "name": "Día de la Enseñanza",
+       "text": "El día de la Enseñanza, fijado para el día 20/11/2026."
+      },
+      {
+       "date": "2026-12-07",
+       "name": "Día no lectivo",
+       "text": "Serán días no lectivos el 07/12/2026 y el 28/05/2027."
+      },
+      {
+       "date": "2027-02-08",
+       "name": "Descanso lectivo de libre disposición",
+       "text": "Los días de descanso lectivo de libre disposición serán el 08/02/2027 y el 09/02/2027 (siempre y cuando se cumpla el mínimo de los 175 días lectivos). Este apartado no se aplica a las escuelas infantiles autonómicas."
+      },
+      {
+       "date": "2027-02-09",
+       "name": "Descanso lectivo de libre disposición",
+       "text": "Los días de descanso lectivo de libre disposición serán el 08/02/2027 y el 09/02/2027 (siempre y cuando se cumpla el mínimo de los 175 días lectivos). Este apartado no se aplica a las escuelas infantiles autonómicas."
+      },
+      {
+       "date": "2027-05-28",
+       "name": "Día no lectivo",
+       "text": "Serán días no lectivos el 07/12/2026 y el 28/05/2027."
+      }
+     ],
+     "note": "Mismas fechas que la Orden 79/2026. Si una fiesta local queda sin fijar se usa el 22-VI-2027 (o 21 y 22-VI si son dos)."
+    },
+    {
+     "name": "Guadalajara",
+     "source": {
+      "title": "Resolución del 11 de junio de 2026 de la Delegación Provincial de la Consejería de Educación, Cultura y Deportes en Guadalajara, calendario escolar provincial 2026-2027",
+      "url": "https://educacion.castillalamancha.es/sites/default/files/2026-06/GUADALAJARA%20-%20RESOLUCION%20CALENDARIO%20ESCOLAR%20PROVINCIAL%202026-2027%20GUADALAJARA.pdf",
+      "checked": "2026-10-26"
+     },
+     "stages": [
+      {
+       "stages": [
+        "infantil_0_3"
+       ],
+       "start": "2026-09-08",
+       "end": "2027-07-23",
+       "text": "Las escuelas infantiles autonómicas comenzarán el día 08/09/2026 y finalizarán el día 23/07/2027"
+      },
+      {
+       "stages": [
+        "infantil",
+        "primaria",
+        "educacion_especial",
+        "eso"
+       ],
+       "start": "2026-09-08",
+       "end": "2027-06-22",
+       "text": "Las enseñanzas de 2º Ciclo de Educación Infantil, Educación Primaria, Educación Especial y Educación Secundaria Obligatoria comenzarán el día 08/09/2026 y finalizarán el día 22/06/2027."
+      },
+      {
+       "stages": [
+        "bachillerato",
+        "fp_basica"
+       ],
+       "start": "2026-09-08",
+       "end": "2027-06-22",
+       "text": "Los Ciclos Formativos de Grado Básico, Programas Específicos de Formación Profesional y Bachillerato, comenzarán el día 08/09/2026 y finalizarán el día 22/06/2027, excepto para el segundo curso de Bachillerato, cuya finalización estará en función de las fechas de realización de las pruebas de acceso a la Universidad."
+      },
+      {
+       "stages": [
+        "fp",
+        "artes_plasticas",
+        "deportivas"
+       ],
+       "start": "2026-09-08",
+       "end": "2027-06-22",
+       "text": "Los Ciclos Formativos de Grado Medio y Grado Superior de Formación Profesional, Enseñanzas Profesionales de Artes Plásticas y Diseño y Enseñanzas Deportivas de Régimen Especial, comenzarán el día 08/09/2026 y finalizarán el día 22/06/2027."
+      },
+      {
+       "stages": [
+        "fp_especializacion"
+       ],
+       "start": "2026-09-28",
+       "end": "2027-06-22",
+       "text": "Los cursos de Especialización de Formación Profesional comenzarán el día 28/09/2026 y finalizarán el día 22/06/2027."
+      },
+      {
+       "stages": [
+        "fp_virtual"
+       ],
+       "start": "2026-10-13",
+       "end": "2027-06-22",
+       "text": "Las enseñanzas de Formación Profesional en la modalidad virtual comenzarán el día 13/10/2026 y finalizarán el 22/06/2027."
+      },
+      {
+       "stages": [
+        "epa"
+       ],
+       "start": "2026-09-08",
+       "end": "2027-06-22",
+       "text": "La Educación de Personas Adultas comenzará el día 08/09/2026 y finalizará el día 22/06/2027."
+      },
+      {
+       "stages": [
+        "musica",
+        "danza"
+       ],
+       "start": "2026-09-08",
+       "end": "2027-06-11",
+       "text": "Las Enseñanzas Elementales y Profesionales de Música y de Danza comenzarán el día 08/09/2026 y finalizarán el día 11/06/2027."
+      },
+      {
+       "stages": [
+        "artisticas_superiores"
+       ],
+       "start": "2026-09-08",
+       "end": "2027-06-22",
+       "text": "Las Enseñanzas Artísticas Superiores comenzarán el día 08/09/2026 y finalizarán el día 22/06/2027."
+      },
+      {
+       "stages": [
+        "eoi"
+       ],
+       "start": "2026-09-23",
+       "end": "2027-06-22",
+       "text": "Las Enseñanzas de Idiomas de Régimen Especial comenzarán el día 23/09/2026 y finalizarán el día 22/06/2027."
+      }
+     ],
+     "breaks": [
+      {
+       "type": "navidad",
+       "start": "2026-12-23",
+       "end": "2027-01-08",
+       "text": "El descanso escolar entre el primer y el segundo trimestre comprenderá desde el día 23/12/2026 hasta el 08/01/2027, ambos inclusive."
+      },
+      {
+       "type": "semana_santa",
+       "start": "2027-03-22",
+       "end": "2027-03-29",
+       "text": "El descanso escolar entre el segundo y el tercer trimestre será desde el 22/03/2027 hasta el 29/03/2027, ambos inclusive."
+      }
+     ],
+     "non_teaching_days": [
+      {
+       "date": "2026-11-20",
+       "name": "Día de la Enseñanza",
+       "text": "El día de la Enseñanza, fijado para el día 20/11/2026."
+      },
+      {
+       "date": "2026-12-07",
+       "name": "Día no lectivo",
+       "text": "Serán días no lectivos el 07/12/2026 y el 28/05/2027."
+      },
+      {
+       "date": "2027-02-08",
+       "name": "Descanso lectivo de libre disposición",
+       "text": "Los días de descanso lectivo de libre disposición serán el 08/02/2027 y el 09/02/2027 (siempre y cuando se cumpla el mínimo de los 175 días lectivos). Este apartado no se aplica a las escuelas infantiles autonómicas."
+      },
+      {
+       "date": "2027-02-09",
+       "name": "Descanso lectivo de libre disposición",
+       "text": "Los días de descanso lectivo de libre disposición serán el 08/02/2027 y el 09/02/2027 (siempre y cuando se cumpla el mínimo de los 175 días lectivos). Este apartado no se aplica a las escuelas infantiles autonómicas."
+      },
+      {
+       "date": "2027-05-28",
+       "name": "Día no lectivo",
+       "text": "Serán días no lectivos el 07/12/2026 y el 28/05/2027."
+      }
+     ],
+     "note": "Mismas fechas que la Orden 79/2026 (su art. 6.2 dice por errata '8 y 9 de febrero de 2026' para la libre disposición; el art. 5.b dice 2027)."
+    },
+    {
+     "name": "Toledo",
+     "source": {
+      "title": "RESOLUCIÓN, de 24 de junio de 2026, de la Delegación Provincial de la Consejería de Educación, Cultura y Deportes en Toledo, calendario escolar 2026/2027",
+      "url": "https://educacion.castillalamancha.es/sites/default/files/2026-06/TOLEDO%20-%20RESOLUCION%20CALENDARIO%20ESCOLAR%20PROVINCIAL%202026-2027%20TOLEDO.pdf",
+      "checked": "2026-10-26"
+     },
+     "stages": [
+      {
+       "stages": [
+        "infantil_0_3"
+       ],
+       "start": "2026-09-08",
+       "end": "2027-07-23",
+       "text": "Las escuelas infantiles autonómicas comenzarán el día 08/09/2026 y finalizarán el día 23/07/2027"
+      },
+      {
+       "stages": [
+        "infantil",
+        "primaria",
+        "educacion_especial",
+        "eso"
+       ],
+       "start": "2026-09-08",
+       "end": "2027-06-22",
+       "text": "Las enseñanzas de 2º Ciclo de Educación Infantil, Educación Primaria, Educación Especial y Educación Secundaria Obligatoria comenzarán el día 08/09/2026 y finalizarán el día 22/06/2027."
+      },
+      {
+       "stages": [
+        "bachillerato",
+        "fp_basica"
+       ],
+       "start": "2026-09-08",
+       "end": "2027-06-22",
+       "text": "Los Ciclos Formativos de Grado Básico, Programas Específicos de Formación Profesional y Bachillerato, comenzarán el día 08/09/2026 y finalizarán el día 22/06/2027, excepto para el segundo curso de Bachillerato, cuya finalización estará en función de las fechas de realización de las pruebas de acceso a la Universidad."
+      },
+      {
+       "stages": [
+        "fp",
+        "artes_plasticas",
+        "deportivas"
+       ],
+       "start": "2026-09-08",
+       "end": "2027-06-22",
+       "text": "Los Ciclos Formativos de Grado Medio y Grado Superior de Formación Profesional, Enseñanzas Profesionales de Artes Plásticas y Diseño y Enseñanzas Deportivas de Régimen Especial, comenzarán el día 08/09/2026 y finalizarán el día 22/06/2027."
+      },
+      {
+       "stages": [
+        "fp_especializacion"
+       ],
+       "start": "2026-09-28",
+       "end": "2027-06-22",
+       "text": "Los cursos de Especialización de Formación Profesional comenzarán el día 28/09/2026 y finalizarán el día 22/06/2027."
+      },
+      {
+       "stages": [
+        "fp_virtual"
+       ],
+       "start": "2026-10-13",
+       "end": "2027-06-22",
+       "text": "Las enseñanzas de Formación Profesional en la modalidad virtual comenzarán el día 13/10/2026 y finalizarán el 22/06/2027."
+      },
+      {
+       "stages": [
+        "epa"
+       ],
+       "start": "2026-09-08",
+       "end": "2027-06-22",
+       "text": "La Educación de Personas Adultas comenzará el día 08/09/2026 y finalizará el día 22/06/2027."
+      },
+      {
+       "stages": [
+        "musica",
+        "danza"
+       ],
+       "start": "2026-09-08",
+       "end": "2027-06-11",
+       "text": "Las Enseñanzas Elementales y Profesionales de Música y de Danza comenzarán el día 08/09/2026 y finalizarán el día 11/06/2027."
+      },
+      {
+       "stages": [
+        "artisticas_superiores"
+       ],
+       "start": "2026-09-08",
+       "end": "2027-06-22",
+       "text": "Las Enseñanzas Artísticas Superiores comenzarán el día 08/09/2026 y finalizarán el día 22/06/2027."
+      },
+      {
+       "stages": [
+        "eoi"
+       ],
+       "start": "2026-09-23",
+       "end": "2027-06-22",
+       "text": "Las Enseñanzas de Idiomas de Régimen Especial comenzarán el día 23/09/2026 y finalizarán el día 22/06/2027."
+      }
+     ],
+     "breaks": [
+      {
+       "type": "navidad",
+       "start": "2026-12-23",
+       "end": "2027-01-08",
+       "text": "El descanso escolar entre el primer y el segundo trimestre comprenderá desde el día 23/12/2026 hasta el 08/01/2027, ambos inclusive."
+      },
+      {
+       "type": "semana_santa",
+       "start": "2027-03-22",
+       "end": "2027-03-29",
+       "text": "El descanso escolar entre el segundo y el tercer trimestre será desde el 22/03/2027 hasta el 29/03/2027, ambos inclusive."
+      }
+     ],
+     "non_teaching_days": [
+      {
+       "date": "2026-11-20",
+       "name": "Día de la Enseñanza",
+       "text": "El día de la Enseñanza, fijado para el día 20/11/2026."
+      },
+      {
+       "date": "2026-12-07",
+       "name": "Día no lectivo",
+       "text": "Serán días no lectivos el 07/12/2026 y el 28/05/2027."
+      },
+      {
+       "date": "2027-02-08",
+       "name": "Descanso lectivo de libre disposición",
+       "text": "Los días de descanso lectivo de libre disposición serán el 08/02/2027 y el 09/02/2027 (siempre y cuando se cumpla el mínimo de los 175 días lectivos). Este apartado no se aplica a las escuelas infantiles autonómicas."
+      },
+      {
+       "date": "2027-02-09",
+       "name": "Descanso lectivo de libre disposición",
+       "text": "Los días de descanso lectivo de libre disposición serán el 08/02/2027 y el 09/02/2027 (siempre y cuando se cumpla el mínimo de los 175 días lectivos). Este apartado no se aplica a las escuelas infantiles autonómicas."
+      },
+      {
+       "date": "2027-05-28",
+       "name": "Día no lectivo",
+       "text": "Serán días no lectivos el 07/12/2026 y el 28/05/2027."
+      }
+     ],
+     "note": "Mismas fechas que la Orden 79/2026. Si una fiesta local queda sin fijar se usa el 22-VI-2027 (o 21 y 22-VI si son dos)."
+    }
+   ],
+   "note": "Además: festivos del calendario laboral de Castilla-La Mancha (las resoluciones provinciales citan 12-X, 2-XI, 6, 8 y 25-XII-2026, 1 y 6-I, 25 y 26-III, 1-V, 27-V y 31-V-2027) y las dos fiestas locales; los ayuntamientos pueden pedir cambios de fiestas locales y de los días de libre disposición antes del 30-XI-2026. Las cinco resoluciones provinciales (publicadas en educacion.castillalamancha.es, no en DOCM) repiten las fechas de la Orden sin variaciones provinciales."
   },
   {
    "slug": "castilla-y-leon",
@@ -1711,12 +3546,128 @@
   {
    "slug": "ceuta",
    "name": "Ceuta",
-   "status": "unpublished",
-   "source": null,
-   "stages": [],
-   "breaks": [],
-   "non_teaching_days": [],
-   "note": "No investigado / no verificado."
+   "status": "partial",
+   "source": {
+    "title": "Calendario escolar 2026-2027 – Dirección Provincial de Ceuta, Ministerio de Educación, FP y Deportes (calendario gráfico, PDF 26-158-01 v1-01)",
+    "url": "https://www.educacionfpydeportes.gob.es/dam/jcr:a9cf685a-32f4-480f-8878-c06cae54fc37/26-158-01-calendario-escolar-26-27-v1-01.pdf",
+    "checked": "2026-10-26"
+   },
+   "extra_sources": [
+    {
+     "title": "Portal Dirección Provincial de Ceuta (enlace 'Calendario Escolar 2026/27')",
+     "url": "https://www.educacionfpydeportes.gob.es/contenidos/ba/ceuta-melilla/ceuta/portada.html",
+     "checked": "2026-10-26"
+    },
+    {
+     "title": "Nota de prensa MEFPD 26-08-2026: El Ministerio confirma el inicio del curso escolar en Ceuta el próximo 8 de septiembre",
+     "url": "https://www.educacionfpydeportes.gob.es/prensa/actualidad/2026/08/20260826-ceutasee.html",
+     "checked": "2026-10-26"
+    }
+   ],
+   "stages": [
+    {
+     "stages": [
+      "infantil",
+      "primaria",
+      "eso",
+      "bachillerato"
+     ],
+     "start": "2026-09-08",
+     "end": "2027-06-23",
+     "text": "Leyenda: 'Inicio clases: Especial, Infantil, Primaria, ESO y Bachillerato' (8 sep marcado); 'Fin de actividades lectivas' (23 jun marcado)"
+    },
+    {
+     "stages": [
+      "fp",
+      "eoi"
+     ],
+     "start": "2026-09-10",
+     "end": "2027-06-23",
+     "text": "Leyenda: 'Inicio clases: Formación Profesional, E.O.I y Artes Plásticas' (10 sep marcado)"
+    },
+    {
+     "stages": [
+      "epa"
+     ],
+     "start": "2026-09-23",
+     "end": "2027-06-23",
+     "text": "Leyenda: 'Inicio de clases: Educación de personas adultas' (23 sep marcado)"
+    }
+   ],
+   "breaks": [
+    {
+     "type": "navidad",
+     "start": "2026-12-23",
+     "end": "2027-01-07",
+     "text": "Leyenda 'Vacaciones Navidad': marcados 23-31 dic 2026 y 1-7 ene 2027 (días laborables)"
+    },
+    {
+     "type": "semana_santa",
+     "start": "2027-03-22",
+     "end": "2027-03-26",
+     "text": "Leyenda 'Semana Santa': marcados 22-26 mar 2027"
+    },
+    {
+     "type": "otro",
+     "name": "Días de libre disposición tras Semana Santa",
+     "start": "2027-03-29",
+     "end": "2027-04-02",
+     "text": "Leyenda 'Días de libre disposición': marcados 29, 30, 31 mar y 1, 2 abr 2027"
+    }
+   ],
+   "non_teaching_days": [
+    {
+     "date": "2026-10-12",
+     "name": "Día de fiesta",
+     "text": "Leyenda 'Días de fiestas': 12 oct marcado"
+    },
+    {
+     "date": "2026-11-02",
+     "name": "Día de libre disposición",
+     "text": "Leyenda 'Días de libre disposición': 2 nov marcado"
+    },
+    {
+     "date": "2026-11-03",
+     "name": "Día de libre disposición",
+     "text": "Leyenda 'Días de libre disposición': 3 nov marcado"
+    },
+    {
+     "date": "2026-12-07",
+     "name": "Día de libre disposición",
+     "text": "Leyenda 'Días de libre disposición': 7 dic marcado"
+    },
+    {
+     "date": "2026-12-08",
+     "name": "Día de fiesta",
+     "text": "Leyenda 'Días de fiestas': 8 dic marcado"
+    },
+    {
+     "date": "2027-01-08",
+     "name": "Día de libre disposición",
+     "text": "Leyenda 'Días de libre disposición': 8 ene marcado"
+    },
+    {
+     "date": "2027-02-12",
+     "name": "Día de libre disposición",
+     "text": "Leyenda 'Días de libre disposición': 12 feb marcado"
+    },
+    {
+     "date": "2027-03-09",
+     "name": "Día de fiesta",
+     "text": "Leyenda 'Días de fiestas': 9 mar marcado"
+    },
+    {
+     "date": "2027-05-17",
+     "name": "Día de fiesta",
+     "text": "Leyenda 'Días de fiestas': 17 may marcado"
+    },
+    {
+     "date": "2027-05-18",
+     "name": "Día de libre disposición",
+     "text": "Leyenda 'Días de libre disposición': 18 may marcado"
+    }
+   ],
+   "note": "Only the colour-coded calendar of the Dirección Provincial de Ceuta was found (no resolution text, nothing in BOCCE); dates are read from its colour legend, so names of individual fiestas are not stated (likely the 9 Mar and 17 May are Eid holidays, as in Melilla's resolution, but the document does not say so). The 2 Sep 2026 is marked as a fiesta before classes start. 'Fin de actividades académicas': 30 Jun 2027. An earlier file (26-070-01 v1) was replaced by v1-01; the start date of 8 Sep was confirmed by the Ministry press release of 26-08-2026 amid the migratory crisis. A joint resolution of 4-09-2026 sets extraordinary organisational measures for the start of the course in Ceuta but does not change dates in the parts read."
   },
   {
    "slug": "melilla",

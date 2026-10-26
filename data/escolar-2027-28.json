@@ -1,0 +1,146 @@
+{
+ "course": "2027-2028",
+ "updated": "2026-10-26",
+ "range": [
+  "2027-08-01",
+  "2028-07-31"
+ ],
+ "about": "Calendario escolar oficial por comunidad. Fechas solo de boletines oficiales o páginas de la consejería; null/[] cuando no se ha podido verificar. Rangos de vacaciones: días sin clase, ambos inclusive, tal como los enuncia la norma ('text' cita la redacción oficial).",
+ "stage_ids": {
+  "infantil": "Educación Infantil (2.º ciclo)",
+  "primaria": "Educación Primaria",
+  "eso": "ESO",
+  "bachillerato": "Bachillerato",
+  "fp": "Formación Profesional",
+  "fp_basica": "FP Básica / Grado Básico",
+  "epa": "Educación de personas adultas",
+  "eoi": "Escuelas Oficiales de Idiomas",
+  "infantil_0_3": "Educación Infantil 1.er ciclo (0-3 años)",
+  "bachillerato_2": "2.º de Bachillerato (cuando difiere)",
+  "fp_especializacion": "Cursos de especialización de FP",
+  "fp_virtual": "FP a distancia/virtual",
+  "educacion_especial": "Educación Especial",
+  "musica": "Enseñanzas de Música",
+  "danza": "Enseñanzas de Danza",
+  "artes_plasticas": "Artes Plásticas y Diseño",
+  "artisticas_superiores": "Enseñanzas Artísticas Superiores",
+  "deportivas": "Enseñanzas Deportivas"
+ },
+ "break_types": {
+  "navidad": "Vacaciones de Navidad",
+  "semana_santa": "Vacaciones de Semana Santa / Pascua",
+  "otro": "Otro periodo no lectivo (ver name)"
+ },
+ "status_values": {
+  "verified": "fechas leídas en la norma oficial",
+  "partial": "parte verificada, ver note",
+  "unpublished": "no publicado o no verificable; sin fechas"
+ },
+ "regions": [
+  {
+   "slug": "cataluna",
+   "name": "Cataluña",
+   "status": "verified",
+   "source": {
+    "title": "Ordre EDF/66/2026, de 22 d'abril, per la qual s'estableix el calendari escolar dels cursos 2026-2027, 2027-2028 i 2028-2029 per als centres educatius no universitaris de Catalunya (DOGC núm. 9653, 27-04-2026, CVE-DOGC-A-26113047-2026)",
+    "url": "https://dogc.gencat.cat/ca/document-del-dogc/?documentId=1042830",
+    "checked": "2026-10-26"
+   },
+   "extra_sources": [
+    {
+     "title": "Departament d'Educació i FP – Calendari escolar (taula 'Calendari 2027-2028')",
+     "url": "https://educacio.gencat.cat/ca/arees-actuacio/centres-serveis-educatius/centres/calendari-escolar/",
+     "checked": "2026-10-26"
+    },
+    {
+     "title": "Copia del PDF del DOGC núm. 9653 (Ajuntament de Lleida - Paeria), texto leído",
+     "url": "https://educacio.paeria.cat/ca/escolaritzacio/copy_of_calendari-escolar/ordre-edf662026-de-22-dabril-per-la-qual-sestableix-el-calendari-escolar-dels-cursos-2026-2027-2027-2028-2028-2029.pdf",
+     "checked": "2026-10-26"
+    }
+   ],
+   "stages": [
+    {
+     "stages": [
+      "infantil",
+      "primaria"
+     ],
+     "start": "2027-09-08",
+     "end": "2028-06-22",
+     "text": "Curs 2027-2028: el 8 de setembre de 2027, o el dia laborable següent, si aquest és festiu. ... el curs finalitza: Curs 2027-2028: el 22 de juny de 2028."
+    },
+    {
+     "stages": [
+      "eso"
+     ],
+     "start": "2027-09-08",
+     "end": "2028-06-22",
+     "text": "En l'educació secundària obligatòria ... Curs 2027-2028: el 8 de setembre de 2027 ... el curs finalitza: Curs 2027-2028: el 22 de juny de 2028."
+    },
+    {
+     "stages": [
+      "bachillerato"
+     ],
+     "start": "2027-09-08",
+     "end": "2028-06-20",
+     "text": "En el batxillerat, el curs s'inicia: Curs 2027-2028: el 8 de setembre de 2027 ... En el primer curs de batxillerat, el curs finalitza: Curs 2027-2028: el 20 de juny de 2028. (2n: segons la programació del centre)"
+    },
+    {
+     "stages": [
+      "fp_basica"
+     ],
+     "start": "2027-09-08",
+     "end": null,
+     "text": "El curs de formació professional bàsica s'inicia: Curs 2027-2028: el 8 de setembre de 2027 ... finalitzen d'acord amb la programació acadèmica del centre"
+    },
+    {
+     "stages": [
+      "fp"
+     ],
+     "start": "2027-09-13",
+     "end": null,
+     "text": "Cicles formatius de grau mitjà i superior ... Curs 2027-2028: el 13 de setembre de 2027, o el dia laborable següent, si aquest és festiu. ... finalitzen d'acord amb la programació acadèmica del centre"
+    },
+    {
+     "stages": [
+      "musica"
+     ],
+     "start": "2027-09-13",
+     "end": null,
+     "text": "graus professionals de música i dansa ... el curs s'inicia, com a més tard: Curs 2027-2028: el 13 de setembre de 2027"
+    },
+    {
+     "stages": [
+      "eoi"
+     ],
+     "start": "2027-09-20",
+     "end": null,
+     "text": "Escoles oficials d'idiomes: Les classes s'inicien com a més tard: Curs 2027-2028: el 20 de setembre de 2027"
+    },
+    {
+     "stages": [
+      "epa"
+     ],
+     "start": "2027-09-20",
+     "end": null,
+     "text": "Formació de persones adultes: Les classes s'inicien com a més tard: Curs 2027-2028: el 20 de setembre de 2027"
+    }
+   ],
+   "breaks": [
+    {
+     "type": "navidad",
+     "start": "2027-12-22",
+     "end": "2028-01-09",
+     "text": "Nadal: del 22 de desembre de 2027 al 9 de gener de 2028, ambdós inclosos."
+    },
+    {
+     "type": "semana_santa",
+     "start": "2028-04-08",
+     "end": "2028-04-17",
+     "text": "Setmana Santa: del 8 d'abril al 17 d'abril de 2028, ambdós inclosos."
+    }
+   ],
+   "non_teaching_days": [],
+   "note": "Same Nadal/Setmana Santa periods in every article (all stages). Holidays are those set by the Departament d'Empresa i Treball for 2027/2028 plus the two local holidays; each centre sets four 'dies de lliure disposició' spread over the three terms. EOI, EPA and arts start dates are 'com a més tard' (latest start). Primer cicle d'infantil (llars Generalitat): from 8-09-2027 to the last working day of June. The DOGC page is JavaScript-rendered; the text was read from the DOGC-format PDF (with CVE) and corroborated by the official educacio.gencat.cat table. The order also fixes 2028-2029 (out of scope here)."
+  }
+ ]
+}
