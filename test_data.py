@@ -95,6 +95,12 @@ for p in pages:
     check(h.count("<h1") == 1, f"{rel}: debe tener un solo h1")
     check('"@type": "Event"' not in h, f"{rel}: sin marcado Event")
 check(len(pages) == len(paths_in_sm), f"sitemap {len(paths_in_sm)} urls != {len(pages)} páginas")
+_seen = {}
+for p in pages:
+    h = p.read_text("utf-8")
+    for tag in (re.search(r"<title>([^<]*)</title>", h).group(1), re.search(r'<meta name="description" content="([^"]*)"', h).group(1)):
+        check(tag not in _seen, f"{p.relative_to(ROOT)}: título o descripción repetidos con {_seen.get(tag)}")
+        _seen.setdefault(tag, p.relative_to(ROOT))
 
 # páginas de ciudad: solo las publicadas, con sus 2 fechas oficiales
 loc = json.loads((ROOT / "data" / "locales-2027.json").read_text("utf-8"))
@@ -122,7 +128,9 @@ for s in slugs:
 # calendario escolar (solo castellano): una página por comunidad, fechas iguales al JSON, todas en el sitemap
 esc = json.loads((ROOT / "data" / "escolar-2026-27.json").read_text("utf-8"))
 nav_html = (ROOT / "vacaciones-escolares" / "navidad" / "index.html").read_text("utf-8")
-for path in ["calendario-escolar/", "vacaciones-escolares/navidad/"] + [f"calendario-escolar/{r['slug']}/" for r in esc["regions"]]:
+ss_html = (ROOT / "vacaciones-escolares" / "semana-santa" / "index.html").read_text("utf-8")
+car_html = (ROOT / "vacaciones-escolares" / "carnaval" / "index.html").read_text("utf-8")
+for path in ["calendario-escolar/", "vacaciones-escolares/navidad/", "vacaciones-escolares/semana-santa/", "vacaciones-escolares/carnaval/"] + [f"calendario-escolar/{r['slug']}/" for r in esc["regions"]]:
     check(f"/{path}" in paths_in_sm, f"/{path} no está en sitemap.xml")
     check(not (ROOT / "ca" / path).exists(), f"/ca/{path} no debe existir (solo castellano)")
     f = ROOT / path / "index.html"
@@ -132,9 +140,14 @@ for path in ["calendario-escolar/", "vacaciones-escolares/navidad/"] + [f"calend
 check(len(esc["regions"]) == 19, "escolar: 19 comunidades")
 
 
-def nav_row(href):
-    m = re.search(r'<a href="' + re.escape(href) + r'">.*?</tr>', nav_html, re.S)
+def nav_row(href, page=None):
+    m = re.search(r'<a href="' + re.escape(href) + r'">.*?</tr>', nav_html if page is None else page, re.S)
     return m.group(0) if m else ""
+
+
+def og_of(h):
+    m = re.search(r'<meta property="og:image" content="[^"]*/og/([^"]+)"', h)
+    return m.group(1) if m else ""
 
 
 for r in esc["regions"]:
@@ -152,18 +165,34 @@ for r in esc["regions"]:
                 check(f'datetime="{prim[k]}"' in h, f"escolar {r['slug']}/{u['name']}: falta {k} {prim[k]}")
         for n in u.get("non_teaching_days", []):
             check(f'data-d="{n["date"]}"' in h, f"escolar {r['slug']}: {n['date']} no está en la rejilla")
-        nb = next((b for b in u["breaks"] if b["type"] == "navidad"), None)
-        row = nav_row(href)
-        check(bool(row), f"navidad: falta la fila de {u['name']}")
-        if nb and row:
+        for kind, page in (("navidad", nav_html), ("semana_santa", ss_html)):
+            nb = next((b for b in u["breaks"] if b["type"] == kind), None)
+            row = nav_row(href, page)
+            check(bool(row), f"{kind}: falta la fila de {u['name']}")
+            if not (nb and row):
+                continue
             ds = re.findall(r'datetime="([\d-]+)"', row)
             n = int(re.search(r'class="num">(\d+)<', row).group(1))
             s, e = dt.date.fromisoformat(ds[0]), dt.date.fromisoformat(ds[1])
             check(s <= dt.date.fromisoformat(nb["start"]) and dt.date.fromisoformat(nb["end"]) <= e,
-                  f"navidad {u['name']}: {ds} no cubre {nb['start']}..{nb['end']}")
-            check(n == (e - s).days + 1, f"navidad {u['name']}: {n} días != {ds}")
-            check((s - dt.timedelta(1)).weekday() < 5 and (e + dt.timedelta(1)).weekday() < 5, f"navidad {u['name']}: el rango no acaba en día de clase")
-            check(f'datetime="{nb["start"]}"' in h or s.isoformat() in h, f"escolar {r['slug']}: Navidad no está en la página")
+                  f"{kind} {u['name']}: {ds} no cubre {nb['start']}..{nb['end']}")
+            check(n == (e - s).days + 1, f"{kind} {u['name']}: {n} días != {ds}")
+            check((s - dt.timedelta(1)).weekday() < 5 and (e + dt.timedelta(1)).weekday() < 5, f"{kind} {u['name']}: el rango no acaba en día de clase")
+            check(f'datetime="{nb["start"]}"' in h or s.isoformat() in h, f"escolar {r['slug']}: {kind} no está en la página")
+        # carnaval: every February day without class of the file (break 'otro' or single day) sits inside a listed range
+        feb = [n["date"] for n in u.get("non_teaching_days", []) if n["date"][:7] == "2027-02" and not re.search(r"(?i)patr[oó]n|solo", n["name"])]
+        feb += [b["start"] for b in u["breaks"] if b["type"] == "otro" and b["start"][:7] == "2027-02"]
+        if feb:
+            crow = "".join(m.group(0) for m in re.finditer(r'<a href="' + re.escape(href) + r'">.*?</tr>', car_html, re.S))
+            spans = re.findall(r'datetime="([\d-]+)">[^<]*</time></td><td data-l="Hasta"><time datetime="([\d-]+)"', crow)
+            for x in feb:
+                check(any(a <= x <= b for a, b in spans), f"carnaval {u['name']}: {x} no está en la tabla")
+    check(og_of(h) == f"escolar-{r['slug']}.png" and (ROOT / "og" / og_of(h)).exists(), f"escolar {r['slug']}: og:image")
+for path, img in (("calendario-escolar/", "escolar.png"), ("vacaciones-escolares/navidad/", "escolar-navidad.png"),
+                  ("vacaciones-escolares/semana-santa/", "escolar-semana-santa.png"), ("vacaciones-escolares/carnaval/", "escolar-carnaval.png")):
+    h = (ROOT / path / "index.html").read_text("utf-8")
+    check(og_of(h) == img and (ROOT / "og" / img).exists(), f"/{path}: og:image {og_of(h)}")
+    check('"@type": "BreadcrumbList"' in h, f"/{path}: falta BreadcrumbList")
 cat = json.loads((ROOT / "data" / "escolar-2027-28.json").read_text("utf-8"))["regions"][0]
 hc = (ROOT / "calendario-escolar" / "cataluna" / "index.html").read_text("utf-8")
 check('id="curso-2027-2028"' in hc and f'datetime="{cat["stages"][0]["start"]}"' in hc, "cataluña: falta el curso 2027-2028")

@@ -467,7 +467,9 @@ def footer_html(data):
             f'<section class="ft-reg"><h2>{t("nav_regions")}</h2><ul class="cols">{regs}</ul></section>'
             f'<section><h2>{t("nav_locals")}</h2><ul><li><a href="{BASE}festivos-locales/">{t("nav_locals")} 2027</a></li></ul>'
             + (f'<h2>Calendario escolar</h2><ul><li><a href="{BASE}calendario-escolar/">Calendario escolar 2026-2027</a></li>'
-               f'<li><a href="{BASE}vacaciones-escolares/navidad/">Vacaciones de Navidad 2026-2027</a></li></ul>' if LANG == "es" else "")
+               f'<li><a href="{BASE}vacaciones-escolares/navidad/">Vacaciones de Navidad 2026-2027</a></li>'
+               f'<li><a href="{BASE}vacaciones-escolares/semana-santa/">Vacaciones de Semana Santa 2027</a></li>'
+               f'<li><a href="{BASE}vacaciones-escolares/carnaval/">Carnaval y semana blanca 2027</a></li></ul>' if LANG == "es" else "")
             + '</section>'
             f'<section><h2>El Calendario Laboral</h2><ul><li><a href="{s["url"]}" rel="noopener">{t("data_source")}</a></li>'
             f'<li><a href="{ASSETS}widget/"{"" if LANG == "es" else " hreflang=es lang=es"}>Widget para tu web</a></li>'

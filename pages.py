@@ -341,7 +341,8 @@ def home_page():
             f'<div class="pickers">{B.region_select(None)}</div></div>')
     cal_sec = B.section("calendario", t("h_cal"), B.legend_html(["n"]) + B.year_html(nat), B.tools_html(), "cal")
     school = (f'<p class="more-l"><a href="{B.BASE}calendario-escolar/">Calendario escolar 2026-2027</a> · '
-              f'<a href="{B.BASE}vacaciones-escolares/navidad/">Vacaciones de Navidad 2026-2027</a></p>') if ES else ""
+              f'<a href="{B.BASE}vacaciones-escolares/navidad/">Vacaciones de Navidad 2026-2027</a> · '
+              f'<a href="{B.BASE}vacaciones-escolares/semana-santa/">Vacaciones de Semana Santa 2027</a></p>') if ES else ""
     reg_sec = B.section("comunidades", t("pick_region"), f'<ul class="chips">{chips}</ul>{school}')
     hol_sec = B.section("festivos", E(B.fill(t("h_hol"), sp)), f'<ol class="hl">{"".join(B.hol_item(h) for h in nat)}</ol>')
     prow = "".join(B.pts_row(it) for it in B.all_breaks(nat))
@@ -424,3 +425,6 @@ def write_shared(data, img=True):
         (B.ROOT / "ics" / f"{key}.ics").write_bytes(B.ics_text(x["hols"], x["title_name"], key).encode("utf-8"))
         if img:
             B.og_image(B.ROOT / "og" / f"{key}.png", x["title_name"], t("og_sub", n=x["n"], p=len(x["pts"])), x["hols"])
+    if img and ES:
+        import escolar
+        escolar.og_images()

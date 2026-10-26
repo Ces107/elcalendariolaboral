@@ -3,6 +3,8 @@
     /calendario-escolar/                  hub: 19 comunidades, first and last class day, Navidad, Semana Santa
     /calendario-escolar/<comunidad>/      Sep-Jun month grid with the days without class, key dates, stages
     /vacaciones-escolares/navidad/        Christmas break per comunidad (Andalucía per province)
+    /vacaciones-escolares/semana-santa/   Easter break, same table
+    /vacaciones-escolares/carnaval/       February days without class (carnaval, Entroido, semana blanca), only where the file has them
 
 Data: data/escolar-2026-27.json, plus data/escolar-2027-28.json where a comunidad has it (Cataluña). Only dates in
 those files are shown; a missing one shows "–". A "sin clase" range is the official break widened with the days
@@ -310,7 +312,8 @@ def region_school_page(r, e, next_e):
         body += f'<div id="curso-{NEXT["course"]}">' + course_sections(nc, "-2") + src_html(next_e["source"]) + '</div>'
     body += (f'<p class="more-l"><a href="{B.BASE}{slug}/">{E(B.fill(B.t("h1_region"), names))}</a> · '
              f'<a href="{B.BASE}calendario-escolar/">Calendario escolar 2026-2027 por comunidad</a> · '
-             f'<a href="{B.BASE}vacaciones-escolares/navidad/">Vacaciones de Navidad 2026-2027</a></p>')
+             f'<a href="{B.BASE}vacaciones-escolares/navidad/">Vacaciones de Navidad 2026-2027</a> · '
+             f'<a href="{B.BASE}vacaciones-escolares/semana-santa/">Vacaciones de Semana Santa 2027</a></p>')
     title, desc = region_titles(r, names, main_c)
     lds = [crumbs_ld(crumbs), {"@type": "Dataset", "name": h1, "description": desc, "url": B.URL + path, "inLanguage": "es-ES",
                                "dateModified": upd, "temporalCoverage": "2026-09-01/2027-06-30",
@@ -320,7 +323,7 @@ def region_school_page(r, e, next_e):
            if provinces_mode(e) else src_html(e["source"], DATA["updated"]))
     main = (f'<div class="hero wrap">{B.crumbs_html(crumbs)}<h1>{E(h1)}</h1>{ctx}{src}</div>'
             f'<div class="wrap body">{body}</div>')
-    head = B.head_html(title, desc, path, f"{B.SITE}{B.ASSETS}og/{slug}.png", ld(*lds), langs=ONLY)
+    head = B.head_html(title, desc, path, f"{B.SITE}{B.ASSETS}og/escolar-{slug}.png", ld(*lds), langs=ONLY)
     return path, B.page(head, "pg sch", "", main, PDATA, js=False), upd
 
 
@@ -395,7 +398,7 @@ def hub_page():
     table = (f'<table class="tbl hub esc"><thead><tr><th scope="col">Comunidad</th><th scope="col">Primer día de clase</th>'
              f'<th scope="col">Último día de clase</th><th scope="col">Navidad</th><th scope="col">Semana Santa</th></tr></thead>'
              f'<tbody>{"".join(rows)}</tbody></table>')
-    more = (f'<p class="more-l"><a href="{B.BASE}vacaciones-escolares/navidad/">Vacaciones de Navidad 2026-2027</a>'
+    more = (f'<p class="more-l">{break_links()}'
             + (f' · <a href="{B.BASE}calendario-escolar/cataluna/#curso-{NEXT["course"]}">Calendario escolar {NEXT["course"]} de Cataluña</a>'
                if NEXT and any(x["slug"] == "cataluna" for x in NEXT["regions"]) else "") + '</p>')
     ctx = (f'<p class="ctx">Infantil y Primaria · días sin clase con fines de semana · '
@@ -405,15 +408,38 @@ def hub_page():
     title = "Calendario escolar 2026-2027 en España por comunidad"
     desc = ("Calendario escolar 2026-2027 de las 19 comunidades: primer y último día de clase y vacaciones de Navidad "
             "y Semana Santa, según cada norma oficial.")
-    head = B.head_html(title, desc, "calendario-escolar/", f"{B.SITE}{B.ASSETS}og/espana.png", ld(crumbs_ld(crumbs)), langs=ONLY)
+    head = B.head_html(title, desc, "calendario-escolar/", f"{B.SITE}{B.ASSETS}og/escolar.png", ld(crumbs_ld(crumbs)), langs=ONLY)
     return B.page(head, "pg sch", "", main, PDATA, js=False)
 
 
-def navidad_page():
+BREAK_PAGES = {
+    # kind: (path, h1, crumb, section id, title, description)
+    "navidad": ("vacaciones-escolares/navidad/", "Vacaciones de Navidad 2026-2027", "Vacaciones de Navidad", "navidad",
+                "Vacaciones de Navidad 2026-2027 por comunidad",
+                "Vacaciones escolares de Navidad 2026-2027 en las 19 comunidades: primer y último día sin clase y días de "
+                "vacaciones, según cada calendario escolar oficial."),
+    "semana_santa": ("vacaciones-escolares/semana-santa/", "Vacaciones de Semana Santa 2027", "Semana Santa", "semana-santa",
+                     "Vacaciones de Semana Santa 2027 por comunidad",
+                     "Vacaciones escolares de Semana Santa 2027 en las 19 comunidades: primer y último día sin clase y días "
+                     "de vacaciones, según cada calendario escolar oficial."),
+}
+CARNAVAL = ("vacaciones-escolares/carnaval/", "Carnaval y semana blanca 2027", "Carnaval y semana blanca", "carnaval",
+            "Carnaval 2027 y semana blanca: días sin clase por comunidad",
+            "Días sin clase de febrero de 2027 por comunidad: Carnaval, Entroido y semana blanca, con fines de semana "
+            "incluidos, según cada calendario escolar oficial.")
+
+
+def break_links(skip=None):
+    """The school-break pages, for the 'more' lines."""
+    pages = [(p[0], p[1]) for k, p in BREAK_PAGES.items() if k != skip] + ([(CARNAVAL[0], CARNAVAL[1])] if skip != "carnaval" else [])
+    return " · ".join(f'<a href="{B.BASE}{p}">{E(h)}</a>' for p, h in pages)
+
+
+def navidad_page(kind="navidad"):
     rows = []
 
     def row(label_html, c, src, cls=""):
-        nav = c.get("navidad")
+        nav = c.get(kind)
         link = f'<a href="{E(src["url"])}" rel="noopener" title="{E(src["title"])}">Fuente</a>'
         if not nav:
             return (f'<tr{cls}><th scope="row">{label_html}</th><td colspan="3"><span class="m">–</span></td>'
@@ -431,22 +457,88 @@ def navidad_page():
                 rows.append(row(f'<a href="{href}#{a}">{E(n)}</a>', c, p["source"], ' class="sub"'))
         else:
             rows.append(row(f'<a href="{href}">{E(r["name"])}</a>', cs[0], e["source"]))
-    h1 = "Vacaciones de Navidad 2026-2027"
-    path = "vacaciones-escolares/navidad/"
-    crumbs = [(B.t("spain"), ""), ("Calendario escolar", "calendario-escolar/"), ("Vacaciones de Navidad", path)]
+    path, h1, crumb, sid, title, desc = BREAK_PAGES[kind]
+    return break_html(kind, path, h1, crumb, sid, title, desc, "".join(rows))
+
+
+def break_html(kind, path, h1, crumb, sid, title, desc, rows):
+    crumbs = [(B.t("spain"), ""), ("Calendario escolar", "calendario-escolar/"), (crumb, path)]
     table = (f'<table class="tbl hub esc"><thead><tr><th scope="col">Comunidad</th><th scope="col">Primer día sin clase</th>'
              f'<th scope="col">Último día sin clase</th><th scope="col" class="num">Días</th><th scope="col">Fuente</th></tr></thead>'
-             f'<tbody>{"".join(rows)}</tbody></table>')
+             f'<tbody>{rows}</tbody></table>')
     ctx = (f'<p class="ctx">Días sin clase, fines de semana incluidos · '
            f'<time datetime="{DATA["updated"]}">actualizado {B.dmy(DATA["updated"])}</time></p>')
-    more = f'<p class="more-l"><a href="{B.BASE}calendario-escolar/">Calendario escolar 2026-2027 por comunidad</a></p>'
+    more = (f'<p class="more-l"><a href="{B.BASE}calendario-escolar/">Calendario escolar 2026-2027 por comunidad</a> · '
+            f'{break_links(kind)}</p>')
     main = (f'<div class="hero wrap">{B.crumbs_html(crumbs)}<h1>{E(h1)}</h1>{ctx}</div>'
-            f'<div class="wrap body narrow"><section class="sec" id="navidad">{table}{more}</section></div>')
-    title = "Vacaciones de Navidad 2026-2027 por comunidad"
-    desc = ("Vacaciones escolares de Navidad 2026-2027 en las 19 comunidades: primer y último día sin clase y días de "
-            "vacaciones, según cada calendario escolar oficial.")
-    head = B.head_html(title, desc, path, f"{B.SITE}{B.ASSETS}og/espana.png", ld(crumbs_ld(crumbs)), langs=ONLY)
+            f'<div class="wrap body narrow"><section class="sec" id="{sid}">{table}{more}</section></div>')
+    og = f"{B.SITE}{B.ASSETS}og/{OG[kind]}.png"
+    head = B.head_html(title, desc, path, og, ld(crumbs_ld(crumbs)), langs=ONLY)
     return path, B.page(head, "pg sch", "", main, PDATA, js=False)
+
+
+def feb_ranges(c):
+    """Days without class that start on a February 2027 weekday (carnaval, semana blanca, single days), widened with the
+    weekends and days off next to them. [(start, end, n, names)]"""
+    out = []
+    names = {**{n["date"]: n["name"] for n in c.ntd}, **c.labour, **c.in_break}
+    for d in days(dt.date(2027, 2, 1), dt.date(2027, 2, 28)):
+        if d.weekday() >= 5 or d.isoformat() not in c.off or any(s <= d <= e for s, e, _, _ in out):
+            continue
+        s, e = c.widen({"start": d.isoformat(), "end": d.isoformat()})
+        nm = []
+        for x in days(s, e):
+            n = names.get(x.isoformat())
+            if n and n not in nm:
+                nm.append(n)
+        out.append((s, e, (e - s).days + 1, nm))
+    return out
+
+
+def carnaval_page():
+    rows, none, nodata = [], [], []
+
+    def row(label, c, src, cls=""):
+        link = f'<a href="{E(src["url"])}" rel="noopener" title="{E(src["title"])}">Fuente</a>'
+        out = ""
+        for s, e, n, nm in feb_ranges(c):
+            why = f' <span class="m">· {E(", ".join(nm))}</span>' if nm else ""
+            out += (f'<tr{cls}><th scope="row">{label}{why}</th>'
+                    f'<td data-l="Desde">{one(s.isoformat())}</td><td data-l="Hasta">{one(e.isoformat())}</td>'
+                    f'<td data-l="Días" class="num">{n}</td><td data-l="&nbsp;" class="lk">{link}</td></tr>')
+        if not out and cls:  # a province without February days: listed, like the Navidad table
+            out = (f'<tr{cls}><th scope="row">{label}</th><td colspan="3"><span class="m">–</span></td>'
+                   f'<td data-l="&nbsp;" class="lk">{link}</td></tr>')
+        return out
+
+    for r, e, cs in courses():
+        href = f'{B.BASE}calendario-escolar/{r["slug"]}/'
+        if provinces_mode(e) and any(feb_ranges(c) for c in cs):
+            sub = "".join(row(f'<a href="{href}#{a}">{E(n)}</a>', c, p["source"], ' class="sub"') for n, a, c, p in provinces(e))
+            rows.append(f'<tr><th scope="row"><a href="{href}">{E(r["name"])}</a></th>'
+                        f'<td colspan="4"><span class="m">Según provincia</span></td></tr>' + sub)
+            continue
+        if provinces_mode(e):
+            got = ""
+        else:
+            got = row(f'<a href="{href}">{E(r["name"])}</a>', cs[0], e["source"])
+        if got:
+            rows.append(got)
+        elif e.get("status") == "verified":
+            none.append(f'<a href="{href}">{E(r["name"])}</a>')
+        else:
+            nodata.append(f'<a href="{href}">{E(r["name"])}</a>')
+    path, h1, crumb, sid, title, desc = CARNAVAL
+    path, html = break_html("carnaval", path, h1, crumb, sid, title, desc, "".join(rows))
+    extra = ""
+    if none:
+        extra += f'<p class="m pend">Ningún día sin clase en febrero en el calendario autonómico: {", ".join(none)}.</p>'
+    if nodata:
+        extra += f'<p class="m pend">Sin datos: {", ".join(nodata)}.</p>'
+    return path, html.replace('</tbody></table><p class="more-l">', '</tbody></table>' + extra + '<p class="more-l">', 1)
+
+
+OG = {"navidad": "escolar-navidad", "semana_santa": "escolar-semana-santa", "carnaval": "escolar-carnaval"}
 
 
 # ---------------------------------------------------------------- entry point
@@ -467,5 +559,83 @@ def write_pages(data, write):
         if r["slug"] in by:
             path, html, upd = region_school_page(r, by[r["slug"]], nxt.get(r["slug"]))
             write(path, html, upd, ONLY)
-    path, html = navidad_page()
-    write(path, html, DATA["updated"], ONLY)
+    for page in (navidad_page, lambda: navidad_page("semana_santa"), carnaval_page):
+        path, html = page()
+        write(path, html, DATA["updated"], ONLY)
+
+
+# ---------------------------------------------------------------- og images (Spanish build only, from pages.write_shared)
+
+def og_school(path, label, sub, off, outside=frozenset()):
+    """Same look as build.og_image: wordmark, 'Calendario escolar 2026-2027', a big label and the school year
+    (Sep-Jun) as a grid of squares, the days without class tinted like the page ('v'), days outside the course blank."""
+    from PIL import Image, ImageDraw
+    F, INK, BG, MUT, LINE, WE, RED = B.font, B.INK, B.BG, B.MUT, B.LINE, B.WE, B.RED
+    VAC, VACB = (185, 211, 242), (95, 147, 211)
+    W, H, S = 1200, 630, 2
+    im = Image.new("RGB", (W * S, H * S), BG)
+    d = ImageDraw.Draw(im)
+    X = 72 * S
+    d.rectangle((X, 76 * S, X + 18 * S, 94 * S), fill=RED)
+    d.text((X + 30 * S, 70 * S), "elcalendariolaboral", font=F(26 * S, "b"), fill=INK)
+    w = d.textlength("elcalendariolaboral", font=F(26 * S, "b"))
+    d.text((X + 30 * S + w, 70 * S), ".es", font=F(26 * S, "r"), fill=MUT)
+    d.text((X, 150 * S), f"Calendario escolar {DATA['course']}", font=F(36 * S, "sb"), fill=MUT)
+    size = 76 if len(label) <= 11 else (60 if len(label) <= 16 else (46 if len(label) <= 20 else 34))
+    d.text((X, 200 * S), label, font=F(size * S, "b"), fill=INK)
+    d.text((X, 330 * S), sub, font=F(30 * S, "sb"), fill=MUT)
+    y0 = int(DATA["course"][:4])
+    months = [(y0, m) for m in range(9, 13)] + [(y0 + 1, m) for m in range(1, 7)]
+    x0, top, c, gx, gy = 700 * S, 58 * S, 17 * S, 30 * S, 22 * S
+    for k, (y, m) in enumerate(months):
+        col, row = k % 3, k // 3
+        ox, oy = x0 + col * (7 * c + gx), top + row * (6 * c + gy + 24 * S)
+        d.text((ox, oy - 4 * S), B.T["_months"][m - 1][:3].capitalize(), font=F(15 * S, "b"), fill=INK)
+        first = dt.date(y, m, 1)
+        nd = (dt.date(y + (m == 12), m % 12 + 1, 1) - first).days
+        for dd in range(nd):
+            day = first + DAY * dd
+            idx = first.weekday() + dd
+            cx, cy = ox + (idx % 7) * c, oy + 24 * S + (idx // 7) * c
+            iso = day.isoformat()
+            if iso in outside:
+                continue
+            v = iso in off
+            fill_ = VAC if v else (WE if day.weekday() >= 5 else BG)
+            d.rectangle((cx + S, cy + S, cx + c - S, cy + c - S), fill=fill_, outline=VACB if v else LINE)
+    im = im.resize((W, H), Image.LANCZOS).quantize(colors=96, method=Image.Quantize.MEDIANCUT, kmeans=2)
+    im.save(path, optimize=True)
+
+
+def _span(r):
+    return {x.isoformat() for x in days(r["s"], r["e"])}
+
+
+def og_images():
+    if not DATA:
+        return
+    out = B.ROOT / "og"
+    allc = [(r, e, cs) for r, e, cs in courses()]
+    union = {"navidad": set(), "semana_santa": set(), "carnaval": set()}
+    for r, e, cs in allc:
+        for c in cs:
+            for k in ("navidad", "semana_santa"):
+                g = c.get(k)
+                if g:
+                    union[k] |= _span(g)
+            for s, e_, _, _ in feb_ranges(c):
+                union["carnaval"] |= {x.isoformat() for x in days(s, e_)}
+        c = cs[0]
+        if provinces_mode(e):
+            sub = f"{len(cs)} provincias · clases y vacaciones"
+            off = set.intersection(*(set(c2.off) for c2 in cs))  # days without class in every province
+            outside = frozenset()
+        else:
+            sub = f"Clases: {B.dmon(c.start)} – {B.dmon(c.end)}" if c.start and c.end else "Clases y vacaciones"
+            off = c.off
+            outside = frozenset(x.isoformat() for x in days(c.lo, c.hi) if c.start and c.end and (x.isoformat() < c.start or x.isoformat() > c.end))
+        og_school(out / f"escolar-{r['slug']}.png", r["name"], sub, off, outside)
+    og_school(out / "escolar.png", "Por comunidad", "19 comunidades · clases y vacaciones", union["navidad"] | union["semana_santa"])
+    og_school(out / "escolar-navidad.png", "Navidad", "Vacaciones por comunidad", union["navidad"])
+    og_school(out / "escolar-semana-santa.png", "Semana Santa", "Vacaciones 2027 por comunidad", union["semana_santa"])
+    og_school(out / "escolar-carnaval.png", "Carnaval", "Días sin clase en febrero 2027", union["carnaval"])
