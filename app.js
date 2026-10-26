@@ -278,7 +278,12 @@
   function saveVac() { put('vac.' + vkey(), JSON.stringify(Object.keys(S.vac).filter(function (d) { return S.vac[d]; }))); }
   function saveLoc() { put('loc.' + S.region, JSON.stringify(S.locals)); }
 
-  if (!S.region) { render(); return; } // portada: solo la línea del próximo festivo
+  if (!S.region) { // portada: enlaces antiguos ?ccaa= y la línea del próximo festivo
+    var q = null;
+    try { q = new URLSearchParams(location.search).get('ccaa'); } catch (e) { q = null; }
+    if (q && D.regions.some(function (r) { return r.slug === q; })) { location.replace(BASE + q + '/'); return; }
+    render(); return;
+  }
 
   if (FIX) { S.zone = FZONE; S.locals = FIX.map(function (x) { return x.date; }); S.lnames = FIX.map(function (x) { return x.name; }); }
   else {
