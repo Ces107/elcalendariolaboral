@@ -1,0 +1,793 @@
+{
+ "year": 2027,
+ "updated": "2026-10-26",
+ "about": "Fiestas locales (2 por municipio) de 2027. Solo publicadas oficialmente: boletín (BOP/autonómico) o acuerdo de pleno en la web del ayuntamiento. null cuando no hay publicación oficial verificable.",
+ "status_values": {
+  "boletin": "publicado en boletín oficial",
+  "ayuntamiento": "acuerdo de pleno publicado por el ayuntamiento, pendiente de boletín",
+  "unpublished": "sin publicación oficial verificable a la fecha"
+ },
+ "cities": [
+  {
+   "slug": "almeria",
+   "name": "Almería",
+   "province": "Almería",
+   "region": "andalucia",
+   "capital": true,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "No official 2027 text found as of 2026-10-26."
+  },
+  {
+   "slug": "cadiz",
+   "name": "Cádiz",
+   "province": "Cádiz",
+   "region": "andalucia",
+   "capital": true,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "No official 2027 text found as of 2026-10-26."
+  },
+  {
+   "slug": "cordoba",
+   "name": "Córdoba",
+   "province": "Córdoba",
+   "region": "andalucia",
+   "capital": true,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "No official 2027 text found as of 2026-10-26."
+  },
+  {
+   "slug": "granada",
+   "name": "Granada",
+   "province": "Granada",
+   "region": "andalucia",
+   "capital": true,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "No official 2027 text found as of 2026-10-26."
+  },
+  {
+   "slug": "huelva",
+   "name": "Huelva",
+   "province": "Huelva",
+   "region": "andalucia",
+   "capital": true,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "No official 2027 text found as of 2026-10-26."
+  },
+  {
+   "slug": "jaen",
+   "name": "Jaén",
+   "province": "Jaén",
+   "region": "andalucia",
+   "capital": true,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "No official 2027 text found as of 2026-10-26."
+  },
+  {
+   "slug": "malaga",
+   "name": "Málaga",
+   "province": "Málaga",
+   "region": "andalucia",
+   "capital": true,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "No official 2027 text found as of 2026-10-26."
+  },
+  {
+   "slug": "sevilla",
+   "name": "Sevilla",
+   "province": "Sevilla",
+   "region": "andalucia",
+   "capital": true,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "No official 2027 text found as of 2026-10-26."
+  },
+  {
+   "slug": "huesca",
+   "name": "Huesca",
+   "province": "Huesca",
+   "region": "aragon",
+   "capital": true,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "No official 2027 text found as of 2026-10-26."
+  },
+  {
+   "slug": "teruel",
+   "name": "Teruel",
+   "province": "Teruel",
+   "region": "aragon",
+   "capital": true,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "No official 2027 text found as of 2026-10-26."
+  },
+  {
+   "slug": "zaragoza",
+   "name": "Zaragoza",
+   "province": "Zaragoza",
+   "region": "aragon",
+   "capital": true,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "No official 2027 text found as of 2026-10-26."
+  },
+  {
+   "slug": "oviedo",
+   "name": "Oviedo",
+   "province": "Asturias",
+   "region": "asturias",
+   "capital": true,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-05-18",
+     "name": "Martes de Campo",
+     "text": "18 de mayo Martes de Campo"
+    },
+    {
+     "date": "2027-09-21",
+     "name": "San Mateo",
+     "text": "21 de septiembre San Mateo"
+    }
+   ],
+   "source": {
+    "title": "Resolución de 22 de mayo de 2026, de la Consejería de Ciencia, Industria y Empleo, calendario de fiestas locales para el año 2027 (BOPA núm. 110, 10-VI-2026, cód. 2026-04656)",
+    "url": "https://miprincipado.asturias.es/bopa/2026/06/10/2026-04656.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "palma",
+   "name": "Palma",
+   "province": "Illes Balears",
+   "region": "baleares",
+   "capital": true,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-01-20",
+     "name": "San Sebastián",
+     "text": "Día 20 de enero, con motivo de la fiesta del patrón, San Sebastián (miércoles)"
+    },
+    {
+     "date": "2027-06-24",
+     "name": "San Juan",
+     "text": "Día 24 de junio, con motivo de la festividad de San Juan (jueves)"
+    }
+   ],
+   "source": {
+    "title": "Ayuntamiento de Palma. Acuerdo del Pleno de 25 de junio de 2026, calendario de las fiestas locales de Palma para el año 2027 (BOIB núm. 83, 2-VII-2026, reg. 6638)",
+    "url": "https://www.caib.es/eboibfront/pdf/es/2026/83/1223136",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "las-palmas-de-gran-canaria",
+   "name": "Las Palmas de Gran Canaria",
+   "province": "Las Palmas",
+   "region": "canarias",
+   "capital": true,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-02-09",
+     "name": "Martes de Carnaval",
+     "text": "9 de febrero: Martes de Carnaval."
+    },
+    {
+     "date": "2027-06-24",
+     "name": "Fundación de la Ciudad",
+     "text": "24 de junio: Conmemoración de la Fundación de la Ciudad."
+    }
+   ],
+   "source": {
+    "title": "Orden de 7 de agosto de 2026, fiestas locales propias de cada municipio de la Comunidad Autónoma de Canarias para el año 2027 (BOC núm. 168, 21-VIII-2026, anuncio 3035)",
+    "url": "https://sede.gobiernodecanarias.org/boc/boc-a-2026-168-3035.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "santa-cruz-de-tenerife",
+   "name": "Santa Cruz de Tenerife",
+   "province": "Santa Cruz de Tenerife",
+   "region": "canarias",
+   "capital": true,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-02-23",
+     "name": "Martes de Carnaval",
+     "text": "23 de febrero: Martes de Carnaval."
+    },
+    {
+     "date": "2027-05-03",
+     "name": "Día de la Cruz",
+     "text": "3 de mayo: Festividad del Día de la Cruz."
+    }
+   ],
+   "source": {
+    "title": "Orden de 7 de agosto de 2026, fiestas locales propias de cada municipio de la Comunidad Autónoma de Canarias para el año 2027 (BOC núm. 168, 21-VIII-2026, anuncio 3035)",
+    "url": "https://sede.gobiernodecanarias.org/boc/boc-a-2026-168-3035.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "santander",
+   "name": "Santander",
+   "province": "Cantabria",
+   "region": "cantabria",
+   "capital": true,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "No official 2027 text found as of 2026-10-26."
+  },
+  {
+   "slug": "albacete",
+   "name": "Albacete",
+   "province": "Albacete",
+   "region": "castilla-la-mancha",
+   "capital": true,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "No official 2027 text found as of 2026-10-26."
+  },
+  {
+   "slug": "ciudad-real",
+   "name": "Ciudad Real",
+   "province": "Ciudad Real",
+   "region": "castilla-la-mancha",
+   "capital": true,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "No official 2027 text found as of 2026-10-26."
+  },
+  {
+   "slug": "cuenca",
+   "name": "Cuenca",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "capital": true,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "No official 2027 text found as of 2026-10-26."
+  },
+  {
+   "slug": "guadalajara",
+   "name": "Guadalajara",
+   "province": "Guadalajara",
+   "region": "castilla-la-mancha",
+   "capital": true,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "No official 2027 text found as of 2026-10-26."
+  },
+  {
+   "slug": "toledo",
+   "name": "Toledo",
+   "province": "Toledo",
+   "region": "castilla-la-mancha",
+   "capital": true,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "No official 2027 text found as of 2026-10-26."
+  },
+  {
+   "slug": "avila",
+   "name": "Ávila",
+   "province": "Ávila",
+   "region": "castilla-y-leon",
+   "capital": true,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "No official 2027 text found as of 2026-10-26."
+  },
+  {
+   "slug": "burgos",
+   "name": "Burgos",
+   "province": "Burgos",
+   "region": "castilla-y-leon",
+   "capital": true,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "No official 2027 text found as of 2026-10-26."
+  },
+  {
+   "slug": "leon",
+   "name": "León",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "capital": true,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "No official 2027 text found as of 2026-10-26."
+  },
+  {
+   "slug": "palencia",
+   "name": "Palencia",
+   "province": "Palencia",
+   "region": "castilla-y-leon",
+   "capital": true,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "No official 2027 text found as of 2026-10-26."
+  },
+  {
+   "slug": "salamanca",
+   "name": "Salamanca",
+   "province": "Salamanca",
+   "region": "castilla-y-leon",
+   "capital": true,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "No official 2027 text found as of 2026-10-26."
+  },
+  {
+   "slug": "segovia",
+   "name": "Segovia",
+   "province": "Segovia",
+   "region": "castilla-y-leon",
+   "capital": true,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "No official 2027 text found as of 2026-10-26."
+  },
+  {
+   "slug": "soria",
+   "name": "Soria",
+   "province": "Soria",
+   "region": "castilla-y-leon",
+   "capital": true,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "No official 2027 text found as of 2026-10-26."
+  },
+  {
+   "slug": "valladolid",
+   "name": "Valladolid",
+   "province": "Valladolid",
+   "region": "castilla-y-leon",
+   "capital": true,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "No official 2027 text found as of 2026-10-26."
+  },
+  {
+   "slug": "zamora",
+   "name": "Zamora",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "capital": true,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": "No official 2027 text found as of 2026-10-26."
+  },
+  {
+   "slug": "murcia",
+   "name": "Murcia",
+   "province": "Murcia",
+   "region": "murcia",
+   "capital": true,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-03-30",
+     "name": "Martes de Pascua (Bando de la Huerta)",
+     "text": "31 MURCIA Martes 30 Marzo"
+    },
+    {
+     "date": "2027-09-14",
+     "name": "Romería de la Fuensanta (Feria de Septiembre)",
+     "text": "Martes 14 Septiembre"
+    }
+   ],
+   "source": {
+    "title": "Resolución de la Dirección General de Trabajo por la que se publica el calendario de fiestas laborales para el año 2027 (BORM nº 171, 27/07/2026, NPE A-270726-3718)",
+    "url": "https://www.borm.es/services/anuncio/844400/pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "The BORM table gives only weekday + date for each municipality, without the name of the festivity; the names here are descriptive, not from the text."
+  },
+  {
+   "slug": "lugo",
+   "name": "Lugo",
+   "province": "Lugo",
+   "region": "galicia",
+   "capital": true,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-02-09",
+     "name": "Martes de Entroido",
+     "text": "Lugo 09/02/2027 Martes de Entroido"
+    },
+    {
+     "date": "2027-10-18",
+     "name": "San Lucas",
+     "text": "18/10/2027 San Lucas"
+    }
+   ],
+   "source": {
+    "title": "Resolución sobre o calendario laboral do ano 2027 para a Provincia de Lugo, Dirección Territorial da Consellería de Emprego, Comercio e Emigración (BOP Lugo nº 221, 26/09/2026)",
+    "url": "https://www.deputacionlugo.gal/sites/deputacionlugo.org/files/inline-files/26-09-2026.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "Correction in BOP Lugo 15/10/2026 only affects Pedrafita, not Lugo city."
+  },
+  {
+   "slug": "vigo",
+   "name": "Vigo",
+   "province": "Pontevedra",
+   "region": "galicia",
+   "capital": false,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": ""
+  },
+  {
+   "slug": "gijon",
+   "name": "Gijón",
+   "province": "Asturias",
+   "region": "asturias",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-02-09",
+     "name": "Carnaval/Antroxu",
+     "text": "Gijón 9 de febrero Carnaval/antroxu"
+    },
+    {
+     "date": "2027-06-29",
+     "name": "San Pedro",
+     "text": "29 de junio san pedro"
+    }
+   ],
+   "source": {
+    "title": "Resolución de 22 de mayo de 2026, de la Consejería de Ciencia, Industria y Empleo, calendario de fiestas locales para el año 2027 (BOPA núm. 110, 10-VI-2026, Cód. 2026-04656)",
+    "url": "https://www.asturias.es/bopa/2026/06/10/2026-04656.pdf",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "hospitalet-de-llobregat",
+   "name": "L'Hospitalet de Llobregat",
+   "province": "Barcelona",
+   "region": "cataluna",
+   "capital": false,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": ""
+  },
+  {
+   "slug": "elche",
+   "name": "Elche/Elx",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "capital": false,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": ""
+  },
+  {
+   "slug": "badalona",
+   "name": "Badalona",
+   "province": "Barcelona",
+   "region": "cataluna",
+   "capital": false,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": ""
+  },
+  {
+   "slug": "cartagena",
+   "name": "Cartagena",
+   "province": "Murcia",
+   "region": "murcia",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-01-07",
+     "name": "Fiesta local (1er festivo)",
+     "text": "17 CARTAGENA Jueves 7 Enero"
+    },
+    {
+     "date": "2027-09-24",
+     "name": "Fiesta local (2.º festivo)",
+     "text": "Viernes 24 Septiembre"
+    }
+   ],
+   "source": {
+    "title": "Resolución de la Dirección General de Trabajo por la que se publica el calendario de fiestas laborales para el año 2027 (BORM núm. 171, 27/07/2026, anuncio 3718, NPE A-270726-3718)",
+    "url": "https://www.borm.es/services/anuncio/844400/pdf",
+    "checked": "2026-10-26"
+   },
+   "note": "The BORM table gives only weekday and date, no festivity names."
+  },
+  {
+   "slug": "terrassa",
+   "name": "Terrassa",
+   "province": "Barcelona",
+   "region": "cataluna",
+   "capital": false,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": ""
+  },
+  {
+   "slug": "jerez-de-la-frontera",
+   "name": "Jerez de la Frontera",
+   "province": "Cádiz",
+   "region": "andalucia",
+   "capital": false,
+   "status": "ayuntamiento",
+   "holidays": [
+    {
+     "date": "2027-04-26",
+     "name": "Lunes de la Feria del Caballo (traslado de la festividad del Patrón)",
+     "text": "el 26 de abril, trasladándose la festividad del Patrón del 9 de octubre al 26 de abril, Lunes de la Feria del Caballo"
+    },
+    {
+     "date": "2027-09-24",
+     "name": "Festividad de la Patrona",
+     "text": "el 24 de septiembre, festividad de la patrona de la ciudad"
+    }
+   ],
+   "source": {
+    "title": "Ayuntamiento de Jerez, nota de prensa del Pleno de 26 de junio de 2026 ('Días festivos locales en 2027')",
+    "url": "https://www.jerez.es/fileadmin/Documentos/Prensa/ANO_2026/06-JUNIO-2026/26-06-2026/NP_PLENO__Reconocimiento_Los_Delincuentes.docx",
+    "checked": "2026-10-26"
+   },
+   "note": "Pleno agreement, to be sent to the Junta de Andalucía; the BOJA resolution listing 2027 local holidays was not found yet."
+  },
+  {
+   "slug": "sabadell",
+   "name": "Sabadell",
+   "province": "Barcelona",
+   "region": "cataluna",
+   "capital": false,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": ""
+  },
+  {
+   "slug": "mostoles",
+   "name": "Móstoles",
+   "province": "Madrid",
+   "region": "madrid",
+   "capital": false,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": ""
+  },
+  {
+   "slug": "alcala-de-henares",
+   "name": "Alcalá de Henares",
+   "province": "Madrid",
+   "region": "madrid",
+   "capital": false,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": ""
+  },
+  {
+   "slug": "fuenlabrada",
+   "name": "Fuenlabrada",
+   "province": "Madrid",
+   "region": "madrid",
+   "capital": false,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": ""
+  },
+  {
+   "slug": "leganes",
+   "name": "Leganés",
+   "province": "Madrid",
+   "region": "madrid",
+   "capital": false,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": ""
+  },
+  {
+   "slug": "getafe",
+   "name": "Getafe",
+   "province": "Madrid",
+   "region": "madrid",
+   "capital": false,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": ""
+  },
+  {
+   "slug": "marbella",
+   "name": "Marbella",
+   "province": "Málaga",
+   "region": "andalucia",
+   "capital": false,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": ""
+  },
+  {
+   "slug": "alcorcon",
+   "name": "Alcorcón",
+   "province": "Madrid",
+   "region": "madrid",
+   "capital": false,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": ""
+  },
+  {
+   "slug": "torrejon-de-ardoz",
+   "name": "Torrejón de Ardoz",
+   "province": "Madrid",
+   "region": "madrid",
+   "capital": false,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": ""
+  },
+  {
+   "slug": "dos-hermanas",
+   "name": "Dos Hermanas",
+   "province": "Sevilla",
+   "region": "andalucia",
+   "capital": false,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": ""
+  },
+  {
+   "slug": "algeciras",
+   "name": "Algeciras",
+   "province": "Cádiz",
+   "region": "andalucia",
+   "capital": false,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": ""
+  },
+  {
+   "slug": "parla",
+   "name": "Parla",
+   "province": "Madrid",
+   "region": "madrid",
+   "capital": false,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": ""
+  },
+  {
+   "slug": "reus",
+   "name": "Reus",
+   "province": "Tarragona",
+   "region": "cataluna",
+   "capital": false,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": ""
+  },
+  {
+   "slug": "mataro",
+   "name": "Mataró",
+   "province": "Barcelona",
+   "region": "cataluna",
+   "capital": false,
+   "status": "unpublished",
+   "holidays": null,
+   "source": null,
+   "note": ""
+  },
+  {
+   "slug": "san-cristobal-de-la-laguna",
+   "name": "San Cristóbal de La Laguna",
+   "province": "Santa Cruz de Tenerife",
+   "region": "canarias",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-02-09",
+     "name": "Martes de Carnaval",
+     "text": "9 de febrero: Martes de Carnaval."
+    },
+    {
+     "date": "2027-09-14",
+     "name": "Festividad del Santísimo Cristo de La Laguna",
+     "text": "14 de septiembre: Festividad del Santísimo Cristo de La Laguna."
+    }
+   ],
+   "source": {
+    "title": "Orden de 7 de agosto de 2026, por la que se determinan las fiestas locales propias de cada municipio de la Comunidad Autónoma de Canarias para el año 2027 (BOC nº 168, 21-08-2026, anuncio 3035)",
+    "url": "https://www.gobiernodecanarias.org/boc/2026/168/3035.html",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  },
+  {
+   "slug": "telde",
+   "name": "Telde",
+   "province": "Las Palmas",
+   "region": "canarias",
+   "capital": false,
+   "status": "boletin",
+   "holidays": [
+    {
+     "date": "2027-06-24",
+     "name": "Festividad de San Juan Bautista",
+     "text": "24 de junio: Festividad de San Juan Bautista."
+    },
+    {
+     "date": "2027-11-17",
+     "name": "Festividad de San Gregorio Taumaturgo",
+     "text": "17 de noviembre: Festividad de San Gregorio Taumaturgo."
+    }
+   ],
+   "source": {
+    "title": "Orden de 7 de agosto de 2026, por la que se determinan las fiestas locales propias de cada municipio de la Comunidad Autónoma de Canarias para el año 2027 (BOC nº 168, 21-08-2026, anuncio 3035)",
+    "url": "https://www.gobiernodecanarias.org/boc/2026/168/3035.html",
+    "checked": "2026-10-26"
+   },
+   "note": ""
+  }
+ ]
+}
