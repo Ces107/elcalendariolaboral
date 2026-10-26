@@ -96,7 +96,7 @@ def write(path, page, lastmod):
 
 def city_list(cities):
     """Links to city pages with their 2 local holidays."""
-    li = "".join(f'<li><a href="{B.BASE}{x["path"]}">{E(x["title_name"])}</a><span class="m">{B.dmon(x["holidays"][0]["date"])} · '
+    li = "".join(f'<li><a href="{B.BASE}{x["path"]}">{E(x["title_name"])}</a> <span class="m">{B.dmon(x["holidays"][0]["date"])} · '
                  f'{B.dmon(x["holidays"][1]["date"])}</span></li>' for x in cities)
     return f'<ul class="links">{li}</ul>' if li else ""
 
@@ -134,7 +134,7 @@ def published_cities(loc, regions):
 
 # ---------------------------------------------------------------- cities: html
 
-def city_page(x, siblings):
+def city_page(x, siblings, mine, pend):
     c, r, name = x["c"], x["r"], x["title_name"]
     h1, h2 = x["holidays"]
     if ES:
@@ -180,7 +180,7 @@ def city_page(x, siblings):
            faq_ld(qas)]
     ctx = {**x, "crumbs": B.crumbs_html(crumbs)}
     head = B.head_html(title, desc, x["path"], f"{B.SITE}{B.ASSETS}og/{key}.png", ld(*lds))
-    main = B.app_main(DATA, r, ctx, srcline, near + faq_html(qas))
+    main = B.app_main(DATA, r, ctx, srcline, near + faq_html(qas), mine, pend)
     return B.page(head, "app", "app", main, DATA, B.app_attrs(r, ctx))
 
 
@@ -190,23 +190,27 @@ def hub_locales(loc, regions, cities):
     n_pen = sum(1 for c in loc["cities"] if c["status"] not in PUBLISHED or not c["holidays"])
     blocks = []
     for r in DATA["regions"]:
-        rows = []
+        rows, pend = [], []
         for c in [c for c in loc["cities"] if c["region"] == r["slug"]]:
             x = by.get(c["slug"] + "@" + r["slug"])
             if x:
                 h1, h2 = x["holidays"]
                 src = c["source"]
-                kind = ("Pleno" if x["pending_bulletin"] else "Boletín") if ES else x["src_label"]
+                kind = "Fuente" if ES else x["src_label"]
                 rows.append(f'<tr><th scope="row"><a href="{B.BASE}{x["path"]}">{E(x["title_name"])}</a></th>'
                             f'<td>{tm(h1["date"], B.dm(h1["date"]))}<br>{tm(h2["date"], B.dm(h2["date"]))}</td>'
                             f'<td><a href="{E(src["url"])}" rel="noopener" title="{E(src["title"])}">{E(kind)}</a></td></tr>')
             else:
-                rows.append(f'<tr class="pend"><th scope="row">{E(c["name"])}</th><td>{t("unpublished") if ES else "—"}</td><td></td></tr>')
+                pend.append(c["name"])
+        pend_html = f'<p class="m pend">Pendientes de publicar: {E(", ".join(pend))}.</p>' if pend and ES else ""
+        if not rows and pend_html:
+            blocks.append(f'<section class="sec" id="{r["slug"]}" aria-labelledby="h-{r["slug"]}"><div class="sec-h"><h2 id="h-{r["slug"]}">'
+                          f'<a href="{B.BASE}{r["slug"]}/">{E(r["name"])}</a></h2></div>{pend_html}</section>')
         if rows:
             blocks.append(f'<section class="sec" id="{r["slug"]}" aria-labelledby="h-{r["slug"]}"><div class="sec-h"><h2 id="h-{r["slug"]}">'
                           f'<a href="{B.BASE}{r["slug"]}/">{E(r["name"])}</a></h2></div><table class="tbl hub">'
                           f'<thead><tr><th scope="col">{t("col_city")}</th><th scope="col">{t("nav_locals")}</th><th scope="col">{t("col_src")}</th></tr></thead>'
-                          f'<tbody>{"".join(rows)}</tbody></table></section>')
+                          f'<tbody>{"".join(rows)}</tbody></table>{pend_html}</section>')
     qas = []
     if ES:
         qas = [("¿Quién fija los festivos locales?",
@@ -293,7 +297,7 @@ def region_page(r, cities, pending):
                       [("text/calendar", f"ics/{slug}.ics"), ("text/csv", f"csv/{slug}.csv")]),
            faq_ld(qas)]
     head = B.head_html(title, desc, f"{slug}/", f"{B.SITE}{B.ASSETS}og/{slug}.png", ld(*lds))
-    main = B.app_main(DATA, r, None, "", locs + faq_html(qas))
+    main = B.app_main(DATA, r, None, "", locs + faq_html(qas), cities, pending)
     return B.page(head, "app", "app", main, DATA, B.app_attrs(r))
 
 
@@ -324,17 +328,17 @@ def home_page():
     else:
         title, desc = B.pick(60, t("title_home"), t("h1")), first_sentences(t("desc_home"), 155)
     sp = {"region": t("spain"), "region_in": t("in_spain"), "region_of": t("spain")}
-    grid = "".join(f'<li><a href="{B.BASE}{r["slug"]}/">{E(r["name"])}</a></li>'
-                   for r in DATA["regions"])
+    chips = "".join(f'<li><a href="{B.BASE}{r["slug"]}/">{E(r["name"])}</a></li>' for r in DATA["regions"])
     n_regions = B.I18N["ui"]["n_regions"][B.LANG] if B.I18N else "19 comunidades"
-    hero = (f'<div class="hero wrap"><h1>{E(t("h1"))}</h1><p class="ctx">{E(n_regions)} · '
-            f'<a href="{DATA["source"]["url"]}" rel="noopener">{t("data_source")}</a></p></div>')
-    reg_sec = B.section("comunidades", t("pick_region"), f'<ul class="regs">{grid}</ul>')
-    hol_sec = B.section("festivos", E(B.fill(t("h_hol"), sp)),
-                        f'{B.next_html()}<table class="tbl hol">{B.hol_head(False)}<tbody>{"".join(B.hol_row(h, False) for h in nat)}</tbody></table>')
+    hero = (f'<div class="hero wrap"><h1>{E(t("h1"))}</h1><p class="ctx">{E(n_regions)} · {tn("n_nat", len(nat))} · '
+            f'<a href="{DATA["source"]["url"]}" rel="noopener">{t("data_source")}</a></p><p class="next" id="next" hidden></p>'
+            f'<div class="pickers">{B.region_select(None)}</div></div>')
+    cal_sec = B.section("calendario", t("h_cal"), B.legend_html(["n"]) + B.year_html(nat), B.tools_html(), "cal")
+    reg_sec = B.section("comunidades", t("pick_region"), f'<ul class="chips">{chips}</ul>')
+    hol_sec = B.section("festivos", E(B.fill(t("h_hol"), sp)), f'<ol class="hl">{"".join(B.hol_item(h) for h in nat)}</ol>')
     prow = "".join(B.pts_row(it) for it in B.all_breaks(nat))
     pts_sec = B.section("puentes", E(B.fill(t("h_pts"), sp)), f'<table class="tbl pts">{B.pts_head()}<tbody>{prow}</tbody></table>')
-    main = f'{hero}<div class="wrap body">{reg_sec}{hol_sec}{pts_sec}{faq_html(qas)}</div>'
+    main = f'{hero}<div class="wrap body">{cal_sec}{reg_sec}{hol_sec}{pts_sec}{faq_html(qas)}</div>{B.POP}'
     lds = [{"@type": "WebSite", "name": t("site_name"), "alternateName": B.HOST, "url": B.URL, "inLanguage": B.IN_LANG[B.LANG]},
            {"@type": "Organization", "name": t("site_name"), "url": B.URL, "logo": f"{B.SITE}{B.ASSETS}icons/icon-512.png"},
            {"@type": "WebApplication", "name": t("site_name") + " 2027", "url": B.URL, "applicationCategory": "UtilitiesApplication",
@@ -365,7 +369,9 @@ def write_pages(data, fix):
         write(f'{r["slug"]}/', region_page(r, mine, pend), data["updated"])
     for x in cities:
         sib = [s for s in cities if s["r"]["slug"] == x["r"]["slug"] and s is not x][:10]
-        write(x["path"], city_page(x, sib), x["c"]["source"]["checked"])
+        mine = [s for s in cities if s["r"]["slug"] == x["r"]["slug"]]
+        pend = [c["name"] for c in loc["cities"] if c["region"] == x["r"]["slug"] and (c["status"] not in PUBLISHED or not c["holidays"])]
+        write(x["path"], city_page(x, sib, mine, pend), x["c"]["source"]["checked"])
     write("festivos-locales/", hub_locales(loc, regions, cities), loc["updated"])
     return list(_written)
 
