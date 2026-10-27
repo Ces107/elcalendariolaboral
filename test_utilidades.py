@@ -109,7 +109,7 @@ else:
 
 # ---------------------------------------------------------------- generated pages
 sm = (ROOT / "sitemap.xml").read_text("utf-8")
-for path, only in ((U.PATH_WK, U.ONLY_WK), (U.PATH_DH, U.ONLY_DH), (U.PATH_DL, U.ONLY_DL)):
+for path, only in ((U.PATH_WK, U.ONLY_WK), (U.PATH_DH, U.ONLY_DH), (U.PATH_DL, U.ONLY_DL), (U.PATH_CH, U.ONLY_CH)):
     for lang in only:
         url = f"{B.SITE}{B.lang_base(lang)}{path}"
         check(f"<loc>{url}</loc>" in sm, f"{url}: not in sitemap")
@@ -146,6 +146,15 @@ for slug, name, zone, ms in U.dl_rows(d27):
         reg = (ROOT / slug / "index.html").read_text("utf-8")
         check(f'href="{B.ASSETS}{U.PATH_DL}#{slug}"' in reg, f"/{slug}/: no link to its row of /dias-laborables-2027/")
 check(sum(U.per_month([])) == 261, "2027 has 261 weekdays")
+
+# DST: last Sunday of March and October (Directive 2000/84/EC)
+want = ["2026-03-29", "2026-10-25", "2027-03-28", "2027-10-31", "2028-03-26", "2028-10-29"]
+check([d.isoformat() for d, _ in U.changes()] == want, f"DST dates {U.changes()}")
+for d, k in U.changes():
+    check(d.weekday() == 6 and (d + dt.timedelta(7)).month != d.month, f"DST {d}: not the last Sunday")
+ch = (ROOT / U.PATH_CH / "index.html").read_text("utf-8")
+for x in want:
+    check(f'datetime="{x}"' in ch, f"/cambio-de-hora/: {x} missing")
 
 print("\n".join(fails[:40]))
 print(f"{len(fails)} fallos" if fails else f"OK: data 2026, {len(cases)} hand cases + random cases equal in Python and JS, pages")

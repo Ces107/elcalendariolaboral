@@ -69,6 +69,19 @@
 
   if (C.page === 'dh') dh();
 
+  if (C.page === 'ch') {
+    var ti = iso(today()), cs = C.cs, nx = cs.filter(function (c) { return c[0] >= ti; })[0] || cs[cs.length - 1];
+    var pv = cs.filter(function (c) { return c[0] < ti; }).pop(), nd = parse(nx[0]);
+    $('cnx').textContent = nd.getUTCDate();
+    $('cnx-t').textContent = C.eu ? nd.getUTCFullYear() + 'ko ' + C.months[nd.getUTCMonth()] : C.months[nd.getUTCMonth()] + ' ' + nd.getUTCFullYear();
+    $('cwd').textContent = C.wd[(nd.getUTCDay() + 6) % 7];
+    $('cdo').textContent = C.s[nx[1]];
+    $('cla').textContent = pv ? dshort(parse(pv[0]), true) + ' · ' + C.s[pv[1] + '_s'] : '–';
+    Array.prototype.forEach.call(doc.querySelectorAll('#fechas tbody tr'), function (tr) {
+      tr.classList.toggle('on', tr.querySelector('th').textContent === nx[0].slice(0, 4));
+    });
+  }
+
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
   function dm(d) { var n = d.getUTCDate(), m = C.mof[d.getUTCMonth()]; return C.eu ? m + ' ' + (n === 11 || n === 31 ? n : n + 'a') : n + ' ' + m; }
   function dmy(d) { return C.eu ? d.getUTCFullYear() + 'ko ' + dm(d) : dm(d) + ' de ' + d.getUTCFullYear(); }

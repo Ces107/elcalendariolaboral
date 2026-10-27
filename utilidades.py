@@ -96,12 +96,40 @@ S["es"].update({
          "{mmax}: {nmax} en la mayoría de comunidades. Con menos días, {mmin}: {nmin}."),
     ],
 })
+S["es"].update({
+    "ch_link": "Cambio de hora 2027",
+    "ch_title": "Cambio de hora 2027: cuándo cambia la hora en España",
+    "ch_desc": "Cuándo cambia la hora: el próximo cambio, si se adelanta o se atrasa el reloj, Canarias y las fechas de 2026, 2027 y 2028.",
+    "ch_h1": "Cambio de hora 2027", "ch_crumb": "Cambio de hora",
+    "ch_intro": "Último domingo de marzo y último domingo de octubre, como en toda la Unión Europea.",
+    "next_change": "Próximo cambio", "last_change": "Último cambio",
+    "su": "a las 2:00 serán las 3:00 (en Canarias, a la 1:00 serán las 2:00)",
+    "wi": "a las 3:00 serán las 2:00 (en Canarias, a las 2:00 será la 1:00)",
+    "su_s": "2:00 → 3:00", "wi_s": "3:00 → 2:00",
+    "ch_h2": "Cambios de hora {a}-{b}", "col_year": "Año", "col_su": "Horario de verano", "col_wi": "Horario de invierno",
+    "ch_src": "Real Decreto 236/2002",
+    "ch_faq": [
+        ("¿Cuándo cambia la hora en 2027?",
+         "El {su27} (a las 2:00 serán las 3:00) y el {wi27} (a las 3:00 serán las 2:00). En Canarias, una hora antes en su reloj."),
+        ("¿Se adelanta o se atrasa el reloj?",
+         "En marzo se adelanta una hora, dormimos una hora menos y empieza el horario de verano. En octubre se atrasa una hora, "
+         "dormimos una más y vuelve el horario de invierno."),
+        ("¿Por qué cambia la hora en esas fechas?",
+         "La Directiva 2000/84/CE fija el cambio el último domingo de marzo y el último de octubre, a la 1:00 UTC, en toda la Unión "
+         'Europea. En España lo aplica el <a href="https://www.boe.es/eli/es/rd/2002/03/01/236" rel="noopener">Real Decreto 236/2002</a>.'),
+        ("¿Se va a eliminar el cambio de hora?",
+         "La Comisión Europea propuso suprimirlo en 2018 y España volvió a pedirlo en 2025, pero no se ha aprobado. Mientras no cambie "
+         "la directiva, la hora cambia dos veces al año."),
+    ],
+})
 ONLY_WK = [x for x in ("es", "ca", "gl", "eu") if x in S]
 PATH_WK = "semana/"
 ONLY_DH = [x for x in ("es", "ca", "gl", "eu") if "dh_link" in S.get(x, {})]
 PATH_DH = "dias-habiles/"
 ONLY_DL = [x for x in ("es", "ca", "gl", "eu") if "dl_link" in S.get(x, {})]
 PATH_DL = "dias-laborables-2027/"
+ONLY_CH = [x for x in ("es", "ca", "gl", "eu") if "ch_link" in S.get(x, {})]
+PATH_CH = "cambio-de-hora/"
 
 
 def L(key):
@@ -191,11 +219,12 @@ def app_ld(name, path, desc):
             "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "description": desc}
 
 
-def card(big_id, big, label, sub, label_first=False):
-    """The big-number card of the vacation optimizer (.vres), without its share buttons."""
+def card(big_id, big, label, sub, label_first=False, pre=""):
+    """The big-number card of the vacation optimizer (.vres), without its share buttons; `pre`: a small label on top."""
     n = f'<b class="vh-n" id="{big_id}">{big}</b>'
     t = f'<span class="vh-t" id="{big_id}-t">{label}</span>'
-    return (f'<div class="vres"><div class="vres-t"><p class="vhd">{t + n if label_first else n + t}</p>'
+    pre = f'<p class="flabel">{pre}</p>' if pre else ""
+    return (f'<div class="vres"><div class="vres-t">{pre}<p class="vhd">{t + n if label_first else n + t}</p>'
             f'<p class="vh-s">{sub}</p></div></div>')
 
 
@@ -423,12 +452,63 @@ def dl_page(data, write):
     write(PATH_DL, B.page(head, "pg", "", main, data, js=False), data["updated"], langs_arg(ONLY_DL))
 
 
+# ---------------------------------------------------------------- 4 /cambio-de-hora/
+
+CH_YEARS = (2026, 2027, 2028)
+
+
+def last_sunday(year, month):
+    """Last Sunday of the month: summer time starts the last Sunday of March and ends the last Sunday of October
+    (Directive 2000/84/EC, Real Decreto 236/2002)."""
+    d = dt.date(year + month // 12, month % 12 + 1, 1) - dt.timedelta(1)
+    return d - dt.timedelta((d.weekday() + 1) % 7)
+
+
+def changes():
+    """[(date, 'su' | 'wi')] in order."""
+    return [(last_sunday(y, m), k) for y in CH_YEARS for m, k in ((3, "su"), (10, "wi"))]
+
+
+def month_year(d):
+    return f'{d.year}ko {B.T["_months"][d.month - 1]}' if B.LANG == "eu" else f'{B.T["_months"][d.month - 1]} {d.year}'
+
+
+def ch_page(data, write):
+    cs = changes()
+    nxt = next(((d, k) for d, k in cs if d >= TODAY), cs[-1])
+    prev = [(d, k) for d, k in cs if d < TODAY]
+    sub = (f'<span id="cwd">{B.T["_wd"][nxt[0].weekday()]}</span> · <span id="cdo">{L(nxt[1])}</span><br>'
+           f'{L("last_change")}: <span id="cla">{ds(prev[-1][0]) + " · " + L(prev[-1][1] + "_s") if prev else "–"}</span>')
+    big = card("cnx", nxt[0].day, month_year(nxt[0]), sub, pre=L("next_change"))
+    h1 = L("ch_h1")
+    ch, cld = crumbs(L("ch_crumb"), PATH_CH)
+    hero = f'<div class="hero wrap">{ch}<h1>{E(h1)}</h1><p class="ctx">{E(L("ch_intro"))}</p>{big}</div>'
+    by = {}
+    for d, k in cs:
+        by.setdefault(d.year, {})[k] = d
+    rows = "".join(f'<tr{" class=on" if nxt[0].year == y else ""}><th scope="row">{y}</th>'
+                   f'<td><time datetime="{by[y]["su"]}">{ds(by[y]["su"], y)}</time> <span class="m">{L("su_s")}</span></td>'
+                   f'<td><time datetime="{by[y]["wi"]}">{ds(by[y]["wi"], y)}</time> <span class="m">{L("wi_s")}</span></td></tr>' for y in CH_YEARS)
+    tbl = (f'<table class="tbl vrank"><thead><tr><th scope="col">{L("col_year")}</th><th scope="col">{L("col_su")}</th>'
+           f'<th scope="col">{L("col_wi")}</th></tr></thead><tbody>{rows}</tbody></table>'
+           f'<p class="src"><a href="https://www.boe.es/eli/es/rd/2002/03/01/236" rel="noopener">{L("ch_src")}</a></p>')
+    sec = B.section("fechas", L("ch_h2").format(a=CH_YEARS[0], b=CH_YEARS[-1]), tbl)
+    fmt = {"su27": dlong_y(by[2027]["su"]), "wi27": dlong_y(by[2027]["wi"])}
+    qas = [(q.format(**fmt), a.format(**fmt)) for q, a in L("ch_faq")]
+    fh, fld = faq(qas)
+    js = {**base_cfg(), "page": "ch", "cs": [[d.isoformat(), k] for d, k in cs], "s": {k: L(k) for k in ("su", "wi", "su_s", "wi_s")}}
+    main = f'{hero}<div class="wrap body narrow">{sec}{B.ad("hub")}{fh}</div>' + js_cfg(js)
+    head = B.head_html(L("ch_title"), L("ch_desc"), PATH_CH, f"{B.SITE}{B.ASSETS}og/espana.png", ld(cld, fld),
+                       langs=langs_arg(ONLY_CH))
+    write(PATH_CH, B.page(head, "pg", "", main, data, js=False), UPDATED, langs_arg(ONLY_CH))
+
+
 # ---------------------------------------------------------------- footer and entry point
 
 def footer_links():
     """The 'Utilidades' block of the footer: the pages in this language, or the Spanish ones marked hreflang=es."""
     s = S.get(B.LANG, S["es"])
-    items = [(PATH_DL, ONLY_DL, "dl_link"), (PATH_DH, ONLY_DH, "dh_link"), (PATH_WK, ONLY_WK, "wk_link")]
+    items = [(PATH_DL, ONLY_DL, "dl_link"), (PATH_DH, ONLY_DH, "dh_link"), (PATH_WK, ONLY_WK, "wk_link"), (PATH_CH, ONLY_CH, "ch_link")]
     li = []
     for path, only, key in items:
         if B.LANG in only:
@@ -445,3 +525,5 @@ def write_pages(data, write, cities):
         dh_page(data, write, cities)
     if B.LANG in ONLY_DL:
         dl_page(data, write)
+    if B.LANG in ONLY_CH:
+        ch_page(data, write)
