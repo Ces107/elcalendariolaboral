@@ -507,6 +507,13 @@ def header_html(here=""):
             f'</div></header>')
 
 
+def util_footer():
+    """Links to the utility pages (utilidades.py), in the middle column of the footer."""
+    sys.modules.setdefault("build", sys.modules[__name__])
+    import utilidades
+    return utilidades.footer_links()
+
+
 def footer_html(data):
     regs = "".join(f'<li><a href="{BASE}{r["slug"]}/">{E(r["name"])}</a></li>' for r in REGIONS)
     s = data["source"]
@@ -519,7 +526,7 @@ def footer_html(data):
                f'<li><a href="{BASE}vacaciones-escolares/semana-santa/">Vacaciones de Semana Santa 2027</a></li>'
                f'<li><a href="{BASE}vacaciones-escolares/carnaval/">Carnaval y semana blanca 2027</a></li></ul>'
                f'<h2>Vacaciones</h2><ul><li><a href="{BASE}vacaciones-2027/">Maximiza tus vacaciones 2027</a></li></ul>' if LANG == "es" else "")
-            + '</section>'
+            + util_footer() + '</section>'
             f'<section><h2>El Calendario Laboral</h2><ul><li><a href="{s["url"]}" rel="noopener">{t("data_source")}</a></li>'
             f'<li><a href="{ASSETS}widget/"{"" if LANG == "es" else " hreflang=es lang=es"}>Widget para tu web</a></li>'
             f'<li><a href="#inst" data-install hidden>{INSTALL.get(LANG, INSTALL["es"])[0]}</a></li>'

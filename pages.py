@@ -393,6 +393,8 @@ def write_pages(data, fix):
         pend = [c["name"] for c in loc["cities"] if c["region"] == x["r"]["slug"] and (c["status"] not in PUBLISHED or not c["holidays"])]
         write(x["path"], city_page(x, sib, mine, pend), x["c"]["source"]["checked"])
     write("festivos-locales/", hub_locales(loc, regions, cities), loc["updated"])
+    import utilidades
+    utilidades.write_pages(data, write)
     if ES:
         import escolar
         escolar.write_pages(data, write)
