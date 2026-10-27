@@ -43,8 +43,43 @@ S = {
         ],
     },
 }
+S["es"].update({
+    "dh_link": "Calculadora de días hábiles",
+    "dh_title": "Calculadora de días hábiles y laborables entre fechas",
+    "dh_desc": "Calcula los días hábiles o laborables entre dos fechas, o qué día vence un plazo de días hábiles, con los festivos de tu comunidad y tu municipio.",
+    "dh_h1": "Calculadora de días hábiles", "dh_crumb": "Días hábiles",
+    "dh_intro": "Cuenta los días hábiles entre dos fechas o calcula cuándo vence un plazo, con los festivos de tu comunidad y tu municipio.",
+    "nat_only": "Solo festivos nacionales", "all_region": "Toda la comunidad", "isla": "isla", "zona": "zona",
+    "workweek": "Días hábiles", "mon_fri": "Lunes a viernes", "mon_sat": "Lunes a sábado",
+    "mode_a": "Entre dos fechas", "mode_b": "Sumar días hábiles",
+    "from": "Desde", "to": "Hasta", "start": "Fecha inicial", "n_work": "Días hábiles",
+    "res_a": {"one": "día hábil", "other": "días hábiles"},
+    "nat_days": {"one": "{n} día natural", "other": "{n} días naturales"},
+    "n_hol_in": {"one": "{n} festivo", "other": "{n} festivos"},
+    "after": {"one": "{n} día hábil después del {d}", "other": "{n} días hábiles después del {d}"},
+    "no_loc": "sin festivos locales de 2026", "out": "Fuera de 2026-2027",
+    "h_hols_in": "Festivos en esas fechas", "none_in": "Ningún festivo entre esas fechas.",
+    "caveat": "Orientativo. Para plazos legales, consulta el calendario oficial de días inhábiles.",
+    "dh_faq": [
+        ("¿Qué días son inhábiles en un plazo administrativo?",
+         "Según la Ley 39/2015 (artículo 30), los sábados, los domingos y los festivos nacionales, autonómicos y locales. Si un día "
+         "es hábil donde vives e inhábil en la sede del organismo, o al revés, se considera inhábil."),
+        ("¿Y los días laborables?",
+         "Normalmente, de lunes a viernes menos los festivos. Si trabajas los sábados, elige «Lunes a sábado»."),
+        ("¿Desde qué día se cuenta un plazo?",
+         "Desde el día siguiente a la notificación o la publicación. Por eso, al sumar días hábiles, la cuenta empieza el día "
+         "siguiente a la fecha inicial. Si el último día es inhábil, el plazo pasa al siguiente día hábil."),
+        ("Entre dos fechas, ¿cuentan el primer y el último día?",
+         "Sí: los dos cuentan si son hábiles."),
+        ("¿Sirve para plazos judiciales?",
+         "No del todo: en los judiciales también son inhábiles todo agosto y del 24 de diciembre al 6 de enero (artículo 183 de la "
+         "Ley Orgánica del Poder Judicial), salvo actuaciones urgentes. Esta calculadora no los descuenta."),
+    ],
+})
 ONLY_WK = [x for x in ("es", "ca", "gl", "eu") if x in S]
 PATH_WK = "semana/"
+ONLY_DH = [x for x in ("es", "ca", "gl", "eu") if "dh_link" in S.get(x, {})]
+PATH_DH = "dias-habiles/"
 
 
 def L(key):
@@ -102,7 +137,7 @@ def js_cfg(cfg):
 
 
 def base_cfg():
-    return {"wd3": B.T["_wd3"], "mon3": B.T["_mon3"], "wd": B.T["_wd"], "eu": B.LANG == "eu"}
+    return {"wd3": B.T["_wd3"], "mon3": B.T["_mon3"], "wd": B.T["_wd"], "months": B.T["_months"], "eu": B.LANG == "eu"}
 
 
 def faq(qas):
@@ -169,12 +204,135 @@ def week_page(data, write):
     write(PATH_WK, B.page(head, "pg", "", main, data, js=False), UPDATED, langs_arg(ONLY_WK))
 
 
+# ---------------------------------------------------------------- 2 /dias-habiles/
+
+LO, HI, LOC_FROM = dt.date(2026, 1, 1), dt.date(2027, 12, 31), "2027-01-01"  # data years; city locals only for 2027
+
+
+def load_year(year):
+    """data/<year>.json with names in this language (missing translations stay Spanish)."""
+    d = B.localize(json.loads((B.ROOT / "data" / f"{year}.json").read_text("utf-8")))
+    tr = NAMES_2026.get(B.LANG, {}) if year == 2026 else {}
+    for h in d["holidays"]:
+        h["name"] = tr.get(h["name"], h["name"])
+    for z in d["zones"].values():
+        for o in z["options"]:
+            if "add" in o:
+                o["add"]["name"] = tr.get(o["add"]["name"], o["add"]["name"])
+    return d
+
+
+NAMES_2026 = {}  # 2026-only holiday names in ca/gl/eu (2027 names come from data/i18n.json)
+
+
+def is_off(d, off, sat=False):
+    """Sunday, Saturday unless it is a working day, or a holiday. Same as isOff() in util.js."""
+    return d.weekday() == 6 or (d.weekday() == 5 and not sat) or d.isoformat() in off
+
+
+def count_workdays(a, b, off, sat=False):
+    """Working days from a to b, both included (swapped when a > b). Same as countWorkdays() in util.js."""
+    if a > b:
+        a, b = b, a
+    return sum(1 for k in range((b - a).days + 1) if not is_off(a + dt.timedelta(k), off, sat))
+
+
+def add_workdays(a, n, off, sat=False):
+    """The n-th working day after a (the count starts the next day, Ley 39/2015 art. 30); n = 0 gives a.
+    Same as addWorkdays() in util.js."""
+    d = a
+    while n > 0:
+        d += dt.timedelta(1)
+        if not is_off(d, off, sat):
+            n -= 1
+    return d
+
+
+def dh_data(datas, cities):
+    """Holidays for util.js: national, per comunidad, zones (islands, Arán) and cities (2027 locals), both years."""
+    nat, reg, zon, cit = [], {}, {}, {}
+    for d in datas:
+        nat += [[h["date"], h["name"], "n"] for h in d["holidays"] if h["regions"] == "all"]
+        for r in d["regions"]:
+            reg.setdefault(r["slug"], []).extend([h["date"], h["name"], h["kind"]] for h in B.region_holidays(d, r["slug"]))
+            for o in d["zones"].get(r["slug"], {}).get("options", []):
+                if "add" not in o:
+                    continue
+                zs = zon.setdefault(r["slug"], {})
+                z = zs.setdefault(o["slug"], [o["slug"], o["name"], [], []])
+                z[2].append([o["add"]["date"], o["add"]["name"], "i" if r["slug"] == "canarias" else "r"])
+                if "remove" in o:
+                    z[3].append(o["remove"])
+    for x in sorted(cities, key=lambda x: x["title_name"]):
+        cit.setdefault(x["r"]["slug"], []).append([x["slug"], x["title_name"], x["zone"] or "", [[h["date"], h["name"]] for h in x["holidays"]]])
+    return {"nat": sorted(nat), "reg": {k: sorted(v) for k, v in reg.items()}, "zon": {k: list(v.values()) for k, v in zon.items()}, "cit": cit}
+
+
+def dmy_long(d):
+    """2 de noviembre de 2026 · 2 de novembre de 2026 · 2026ko azaroaren 2a (holiday list when the range spans years)."""
+    return f"{d.year}ko {B.dm(d)}" if B.LANG == "eu" else f"{B.dm(d)} de {d.year}"
+
+
+def hl_item(iso, name, kind, multi):
+    """One holiday of the range: the markup of build.hol_item(). Same as hlItem() in util.js."""
+    d = dt.date.fromisoformat(iso)
+    we = " we" if d.weekday() >= 5 else ""
+    return (f'<li class="k-{kind}"><span class="d"><time datetime="{iso}">{dmy_long(d) if multi else B.dm(d)}</time> '
+            f'<span class="m{we}">{B.T["_wd"][d.weekday()]}</span></span><span class="h">{E(name)}</span>'
+            f'<span class="s">{B.sw(kind)}{B.t(B.KINDS[kind])}</span></li>')
+
+
+def date_field(id_, label, value):
+    return (f'<div class="field"><label for="{id_}">{label}</label><input type="date" class="din" id="{id_}" value="{value}" '
+            f'min="{LO}" max="{HI}" required></div>')
+
+
+def dh_page(data, write, cities):
+    datas = [load_year(2026), data]
+    cfg = dh_data(datas, cities)
+    a, b = TODAY, dt.date(TODAY.year, 12, 31)
+    off = {x[0]: x for x in cfg["nat"]}
+    n = count_workdays(a, b, off)
+    inr = [x for x in cfg["nat"] if a.isoformat() <= x[0] <= b.isoformat()]
+    k = sum(1 for x in inr if not (dt.date.fromisoformat(x[0]).weekday() >= 5))
+    regs = "".join(f'<option value="{r["slug"]}">{E(r["name"])}</option>' for r in data["regions"])
+    pick1 = (f'<div class="pickers">'
+             f'<div class="field"><label for="dreg">{B.t("region_label")}</label><select id="dreg"><option value="">{L("nat_only")}</option>{regs}</select></div>'
+             f'<div class="field" id="dmun-f" hidden><label for="dmun">{B.t("municipio")}</label><select id="dmun"></select></div>'
+             f'<div class="field"><label for="dsat">{L("workweek")}</label><select id="dsat"><option value="0">{L("mon_fri")}</option>'
+             f'<option value="1">{L("mon_sat")}</option></select></div></div>')
+    modes = (f'<div class="tools dmode" role="group"><button type="button" class="btn on" data-mode="a" aria-pressed="true">{L("mode_a")}</button>'
+             f'<button type="button" class="btn" data-mode="b" aria-pressed="false">{L("mode_b")}</button></div>')
+    pick2 = (f'<div class="pickers" id="dpa">{date_field("da", L("from"), a)}{date_field("db", L("to"), b)}</div>'
+             f'<div class="pickers" id="dpb" hidden>{date_field("dc", L("start"), a)}'
+             f'<div class="field"><label for="dn">{L("n_work")}</label><span class="stepper"><button type="button" id="dnm" aria-label="{B.t("one_less")}">−</button>'
+             f'<input id="dn" type="number" inputmode="numeric" min="0" max="999" value="10"><button type="button" id="dnp" aria-label="{B.t("one_more")}">+</button></span></div></div>')
+    sub = (f'<span id="dsub">{rng(a, b)} · {ln("nat_days", (b - a).days + 1)} · {ln("n_hol_in", k)}</span>'
+           f'<br><span class="m">{L("caveat")}</span>')
+    res = card("dres", n, ln("res_a", n), sub)
+    h1 = L("dh_h1")
+    ch, cld = crumbs(L("dh_crumb"), PATH_DH)
+    hero = f'<div class="hero wrap">{ch}<h1>{E(h1)}</h1><p class="ctx">{E(L("dh_intro"))}</p>{pick1}{modes}{pick2}{res}</div>'
+    multi = a.year != b.year
+    items = "".join(hl_item(*x, multi) for x in inr)
+    hol_sec = B.section("festivos", L("h_hols_in"), f'<ol class="hl" id="dhl">{items}</ol><p class="m" id="dnone"{" hidden" if items else ""}>{L("none_in")}</p>')
+    qas = L("dh_faq")
+    fh, fld = faq(qas)
+    keys = ["res_a", "nat_days", "n_hol_in", "after", "no_loc", "out", "all_region", "isla", "zona"]
+    js = {**base_cfg(), **cfg, "page": "dh", "min": str(LO), "max": str(HI), "loc": LOC_FROM, "mof": B.T["_mof"],
+          "k": {x: B.t(B.KINDS[x]) for x in B.KINDS}, "s": {x: L(x) for x in keys}}
+    main = f'{hero}<div class="wrap body narrow">{hol_sec}{B.ad("hub")}{fh}</div>' + js_cfg(js)
+    head = B.head_html(L("dh_title"), L("dh_desc"), PATH_DH, f"{B.SITE}{B.ASSETS}og/espana.png",
+                       ld(cld, app_ld(h1, PATH_DH, L("dh_desc")), fld), langs=langs_arg(ONLY_DH))
+    write(PATH_DH, B.page(head, "pg vac", "", main, data, js=False), UPDATED, langs_arg(ONLY_DH))
+
+
 # ---------------------------------------------------------------- footer and entry point
 
 def footer_links():
     """The 'Utilidades' block of the footer: the pages in this language, or the Spanish ones marked hreflang=es."""
     s = S.get(B.LANG, S["es"])
-    items = [(PATH_WK, ONLY_WK, "wk_link")]
+    items = [(PATH_WK, ONLY_WK, "wk_link"), (PATH_DH, ONLY_DH, "dh_link")]
     li = []
     for path, only, key in items:
         if B.LANG in only:
@@ -184,6 +342,8 @@ def footer_links():
     return f'<h2>{E(s["util"])}</h2><ul>{"".join(li)}</ul>'
 
 
-def write_pages(data, write):
+def write_pages(data, write, cities):
     if B.LANG in ONLY_WK:
         week_page(data, write)
+    if B.LANG in ONLY_DH:
+        dh_page(data, write, cities)

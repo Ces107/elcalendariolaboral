@@ -394,7 +394,7 @@ def write_pages(data, fix):
         write(x["path"], city_page(x, sib, mine, pend), x["c"]["source"]["checked"])
     write("festivos-locales/", hub_locales(loc, regions, cities), loc["updated"])
     import utilidades
-    utilidades.write_pages(data, write)
+    utilidades.write_pages(data, write, cities)
     if ES:
         import escolar
         escolar.write_pages(data, write)

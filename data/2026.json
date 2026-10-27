@@ -1,0 +1,535 @@
+{
+  "year": 2026,
+  "updated": "2026-10-27",
+  "source": {
+    "id": "BOE-A-2025-21667",
+    "title": "Resolución de 17 de octubre de 2025, de la Dirección General de Trabajo, por la que se publica la relación de fiestas laborales para el año 2026",
+    "boe": "BOE núm. 259, de 28 de octubre de 2025",
+    "url": "https://www.boe.es/boe/dias/2025/10/28/pdfs/BOE-A-2025-21667.pdf"
+  },
+  "codes": {
+    "1": "Fiesta nacional no sustituible",
+    "2": "Fiesta nacional no sustituida por la comunidad",
+    "3": "Fiesta de comunidad autónoma"
+  },
+  "regions": [
+    {
+      "slug": "andalucia",
+      "name": "Andalucía",
+      "short": "Andalucía",
+      "official": "Andalucía"
+    },
+    {
+      "slug": "aragon",
+      "name": "Aragón",
+      "short": "Aragón",
+      "official": "Aragón"
+    },
+    {
+      "slug": "asturias",
+      "name": "Asturias",
+      "short": "Asturias",
+      "official": "Principado de Asturias"
+    },
+    {
+      "slug": "baleares",
+      "name": "Baleares",
+      "short": "Baleares",
+      "official": "Illes Balears"
+    },
+    {
+      "slug": "canarias",
+      "name": "Canarias",
+      "short": "Canarias",
+      "official": "Canarias"
+    },
+    {
+      "slug": "cantabria",
+      "name": "Cantabria",
+      "short": "Cantabria",
+      "official": "Cantabria"
+    },
+    {
+      "slug": "castilla-la-mancha",
+      "name": "Castilla-La Mancha",
+      "short": "C.-La Mancha",
+      "official": "Castilla-La Mancha"
+    },
+    {
+      "slug": "castilla-y-leon",
+      "name": "Castilla y León",
+      "short": "C. y León",
+      "official": "Castilla y León"
+    },
+    {
+      "slug": "cataluna",
+      "name": "Cataluña",
+      "short": "Cataluña",
+      "official": "Cataluña"
+    },
+    {
+      "slug": "extremadura",
+      "name": "Extremadura",
+      "short": "Extremadura",
+      "official": "Extremadura"
+    },
+    {
+      "slug": "galicia",
+      "name": "Galicia",
+      "short": "Galicia",
+      "official": "Galicia"
+    },
+    {
+      "slug": "madrid",
+      "name": "Madrid",
+      "short": "Madrid",
+      "official": "Comunidad de Madrid"
+    },
+    {
+      "slug": "murcia",
+      "name": "Murcia",
+      "short": "Murcia",
+      "official": "Región de Murcia"
+    },
+    {
+      "slug": "navarra",
+      "name": "Navarra",
+      "short": "Navarra",
+      "official": "Comunidad Foral de Navarra"
+    },
+    {
+      "slug": "pais-vasco",
+      "name": "País Vasco",
+      "short": "País Vasco",
+      "official": "País Vasco"
+    },
+    {
+      "slug": "la-rioja",
+      "name": "La Rioja",
+      "short": "La Rioja",
+      "official": "La Rioja"
+    },
+    {
+      "slug": "comunitat-valenciana",
+      "name": "Comunidad Valenciana",
+      "short": "C. Valenciana",
+      "official": "Comunitat Valenciana"
+    },
+    {
+      "slug": "ceuta",
+      "name": "Ceuta",
+      "short": "Ceuta",
+      "official": "Ciudad de Ceuta"
+    },
+    {
+      "slug": "melilla",
+      "name": "Melilla",
+      "short": "Melilla",
+      "official": "Ciudad de Melilla"
+    }
+  ],
+  "holidays": [
+    {
+      "date": "2026-01-01",
+      "name": "Año Nuevo",
+      "code": 1,
+      "regions": "all"
+    },
+    {
+      "date": "2026-01-06",
+      "name": "Epifanía del Señor",
+      "code": 2,
+      "regions": "all"
+    },
+    {
+      "date": "2026-02-28",
+      "name": "Día de Andalucía",
+      "code": 3,
+      "regions": [
+        "andalucia"
+      ]
+    },
+    {
+      "date": "2026-03-02",
+      "name": "Lunes siguiente al Día de les Illes Balears",
+      "code": 3,
+      "regions": [
+        "baleares"
+      ]
+    },
+    {
+      "date": "2026-03-19",
+      "name": "San José",
+      "code": 2,
+      "regions": [
+        "galicia",
+        "murcia",
+        "navarra",
+        "pais-vasco",
+        "comunitat-valenciana"
+      ]
+    },
+    {
+      "date": "2026-03-20",
+      "name": "Fiesta del Eid Fitr",
+      "code": 3,
+      "regions": [
+        "melilla"
+      ]
+    },
+    {
+      "date": "2026-04-02",
+      "name": "Jueves Santo",
+      "code": 2,
+      "regions": [
+        "andalucia",
+        "aragon",
+        "asturias",
+        "baleares",
+        "canarias",
+        "cantabria",
+        "castilla-la-mancha",
+        "castilla-y-leon",
+        "extremadura",
+        "galicia",
+        "madrid",
+        "murcia",
+        "navarra",
+        "pais-vasco",
+        "la-rioja",
+        "ceuta",
+        "melilla"
+      ]
+    },
+    {
+      "date": "2026-04-03",
+      "name": "Viernes Santo",
+      "code": 1,
+      "regions": "all"
+    },
+    {
+      "date": "2026-04-06",
+      "name": "Lunes de Pascua",
+      "code": 3,
+      "regions": [
+        "baleares",
+        "castilla-la-mancha",
+        "cataluna",
+        "navarra",
+        "pais-vasco",
+        "la-rioja",
+        "comunitat-valenciana"
+      ]
+    },
+    {
+      "date": "2026-04-23",
+      "name": "San Jorge / Día de Aragón",
+      "code": 3,
+      "regions": [
+        "aragon"
+      ]
+    },
+    {
+      "date": "2026-04-23",
+      "name": "Fiesta de Castilla y León",
+      "code": 3,
+      "regions": [
+        "castilla-y-leon"
+      ]
+    },
+    {
+      "date": "2026-05-01",
+      "name": "Fiesta del Trabajo",
+      "code": 1,
+      "regions": "all"
+    },
+    {
+      "date": "2026-05-02",
+      "name": "Fiesta de la Comunidad de Madrid",
+      "code": 3,
+      "regions": [
+        "madrid"
+      ]
+    },
+    {
+      "date": "2026-05-27",
+      "name": "Fiesta Sacrificio-Eidul Adha",
+      "code": 3,
+      "regions": [
+        "ceuta"
+      ]
+    },
+    {
+      "date": "2026-05-27",
+      "name": "Fiesta Sacrificio-Aid al Adha",
+      "code": 3,
+      "regions": [
+        "melilla"
+      ]
+    },
+    {
+      "date": "2026-05-30",
+      "name": "Día de Canarias",
+      "code": 3,
+      "regions": [
+        "canarias"
+      ]
+    },
+    {
+      "date": "2026-06-04",
+      "name": "Corpus Christi",
+      "code": 3,
+      "regions": [
+        "castilla-la-mancha"
+      ]
+    },
+    {
+      "date": "2026-06-09",
+      "name": "Día de la Región de Murcia",
+      "code": 3,
+      "regions": [
+        "murcia"
+      ]
+    },
+    {
+      "date": "2026-06-09",
+      "name": "Día de la Rioja",
+      "code": 3,
+      "regions": [
+        "la-rioja"
+      ]
+    },
+    {
+      "date": "2026-06-24",
+      "name": "San Juan",
+      "code": 3,
+      "regions": [
+        "cataluna",
+        "galicia",
+        "comunitat-valenciana"
+      ]
+    },
+    {
+      "date": "2026-07-25",
+      "name": "Santiago Apóstol/Día Nacional de Galicia",
+      "code": 2,
+      "regions": [
+        "galicia",
+        "pais-vasco"
+      ]
+    },
+    {
+      "date": "2026-07-28",
+      "name": "Día de las Instituciones de Cantabria",
+      "code": 3,
+      "regions": [
+        "cantabria"
+      ]
+    },
+    {
+      "date": "2026-08-05",
+      "name": "Nuestra Señora de África",
+      "code": 3,
+      "regions": [
+        "ceuta"
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "name": "Asunción de la Virgen",
+      "code": 1,
+      "regions": "all"
+    },
+    {
+      "date": "2026-09-02",
+      "name": "Día de Ceuta",
+      "code": 3,
+      "regions": [
+        "ceuta"
+      ]
+    },
+    {
+      "date": "2026-09-08",
+      "name": "Día de Asturias",
+      "code": 3,
+      "regions": [
+        "asturias"
+      ]
+    },
+    {
+      "date": "2026-09-08",
+      "name": "Día de Extremadura",
+      "code": 3,
+      "regions": [
+        "extremadura"
+      ]
+    },
+    {
+      "date": "2026-09-11",
+      "name": "Fiesta Nacional de Cataluña",
+      "code": 3,
+      "regions": [
+        "cataluna"
+      ]
+    },
+    {
+      "date": "2026-09-15",
+      "name": "La Bien Aparecida",
+      "code": 3,
+      "regions": [
+        "cantabria"
+      ]
+    },
+    {
+      "date": "2026-10-09",
+      "name": "Día de la Comunitat Valenciana",
+      "code": 3,
+      "regions": [
+        "comunitat-valenciana"
+      ]
+    },
+    {
+      "date": "2026-10-12",
+      "name": "Fiesta Nacional de España",
+      "code": 1,
+      "regions": "all"
+    },
+    {
+      "date": "2026-11-02",
+      "name": "Día siguiente a Todos los Santos",
+      "code": 2,
+      "regions": [
+        "andalucia",
+        "aragon",
+        "asturias",
+        "canarias",
+        "castilla-la-mancha",
+        "castilla-y-leon",
+        "extremadura",
+        "madrid",
+        "navarra"
+      ]
+    },
+    {
+      "date": "2026-12-07",
+      "name": "Lunes siguiente al Día de la Constitución Española",
+      "code": 2,
+      "regions": [
+        "andalucia",
+        "aragon",
+        "asturias",
+        "cantabria",
+        "castilla-y-leon",
+        "extremadura",
+        "madrid",
+        "murcia",
+        "la-rioja",
+        "melilla"
+      ]
+    },
+    {
+      "date": "2026-12-08",
+      "name": "Inmaculada Concepción",
+      "code": 1,
+      "regions": "all"
+    },
+    {
+      "date": "2026-12-25",
+      "name": "Natividad del Señor",
+      "code": 1,
+      "regions": "all"
+    },
+    {
+      "date": "2026-12-26",
+      "name": "San Esteban",
+      "code": 3,
+      "regions": [
+        "baleares",
+        "cataluna"
+      ]
+    }
+  ],
+  "zones": {
+    "canarias": {
+      "label": "Isla",
+      "note": "Cada isla suma su fiesta insular (Decreto 61/2025, BOC de 5 de mayo de 2025).",
+      "options": [
+        {
+          "slug": "el-hierro",
+          "name": "El Hierro",
+          "add": {
+            "date": "2026-09-24",
+            "name": "Nuestra Señora de los Reyes"
+          }
+        },
+        {
+          "slug": "fuerteventura",
+          "name": "Fuerteventura",
+          "add": {
+            "date": "2026-09-18",
+            "name": "Nuestra Señora de la Peña"
+          }
+        },
+        {
+          "slug": "gran-canaria",
+          "name": "Gran Canaria",
+          "add": {
+            "date": "2026-09-08",
+            "name": "Nuestra Señora del Pino"
+          }
+        },
+        {
+          "slug": "la-gomera",
+          "name": "La Gomera",
+          "add": {
+            "date": "2026-10-05",
+            "name": "Nuestra Señora de Guadalupe"
+          }
+        },
+        {
+          "slug": "la-palma",
+          "name": "La Palma",
+          "add": {
+            "date": "2026-08-05",
+            "name": "Nuestra Señora de las Nieves"
+          }
+        },
+        {
+          "slug": "lanzarote",
+          "name": "Lanzarote y La Graciosa",
+          "add": {
+            "date": "2026-09-15",
+            "name": "Nuestra Señora de los Volcanes"
+          }
+        },
+        {
+          "slug": "tenerife",
+          "name": "Tenerife",
+          "add": {
+            "date": "2026-02-02",
+            "name": "Virgen de la Candelaria"
+          }
+        }
+      ]
+    },
+    "cataluna": {
+      "label": "Zona",
+      "note": "En Arán, el 26 de diciembre se sustituye por el 17 de junio, Fiesta de Arán (Orden EMT/66/2025, DOGC de 6 de mayo de 2025).",
+      "options": [
+        {
+          "slug": "general",
+          "name": "General"
+        },
+        {
+          "slug": "aran",
+          "name": "Arán",
+          "remove": "2026-12-26",
+          "add": {
+            "date": "2026-06-17",
+            "name": "Fiesta de Arán"
+          }
+        }
+      ]
+    }
+  }
+}
