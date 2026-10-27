@@ -11,7 +11,7 @@ unless Auto ads are on in the AdSense UI.
 | `cal` | between the calendar section and the next section (puentes; on the home, the comunidad chips) | 19 comunidades, ~155 cities, home (es/ca/gl/eu) |
 | `list` | after the holiday list ("Festivos 2027 en …"), before festivos locales/FAQ | comunidades, cities (es/ca/gl/eu) |
 | `vac` | below the result card (above the calendar) | /vacaciones-2027/<comunidad>/ |
-| `hub` | inside the hub body, before the FAQ (PDF hub: after the 3rd comunidad) | /festivos-locales/, /calendario-laboral-2027-pdf/, /calendario-escolar/, /vacaciones-2027/ |
+| `hub` | inside the hub body, before the FAQ (PDF hub: after the 3rd comunidad; /semana/: between the 2026 and 2027 tables) | /festivos-locales/, /calendario-laboral-2027-pdf/, /calendario-escolar/, /vacaciones-2027/; utility pages /semana/, /dias-habiles/, /dias-laborables-2027/, /cambio-de-hora/ (es/ca/gl/eu) |
 
 Never: inside the month grid (`.year`), the share card (`.vres`), the widget embeds (`/widget/embed/…`, no loader, no slots),
 print (`@media print { .ad { display: none } }`), the PDFs. Each unit is `<aside class="ad">` with a small "Publicidad"
