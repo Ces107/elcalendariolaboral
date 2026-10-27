@@ -122,6 +122,296 @@ S["es"].update({
          "la directiva, la hora cambia dos veces al año."),
     ],
 })
+BOE_RD = '<a href="https://www.boe.es/eli/es/rd/2002/03/01/236" rel="noopener">{}</a>'
+S["ca"] = {
+    "util": "Utilitats",
+    "wk_link": "En quina setmana som?",
+    "wk_title": "En quina setmana som? Número de setmana d'avui",
+    "wk_desc": "El número de setmana d'avui segons la ISO 8601, amb el seu dilluns i el seu diumenge, i les setmanes del 2026 i el 2027 amb les dates de cadascuna.",
+    "wk_h1": "En quina setmana som?", "wk_crumb": "Número de setmana",
+    "wk_intro": "Setmanes de dilluns a diumenge, numerades segons la ISO 8601, la norma que s'utilitza a Espanya.",
+    "week": "Setmana", "weeks_of": "Setmanes del {y}", "col_week": "Setmana", "col_mon_sun": "Dilluns – diumenge",
+    "n_weeks": "{n} setmanes",
+    "left": {"one": "queda {n} dia del {y}", "other": "queden {n} dies del {y}"},
+    "wk_faq": [
+        ("Com es numeren les setmanes de l'any?",
+         "Segons la norma ISO 8601, la que s'utilitza a Espanya i a Europa: cada setmana va de dilluns a diumenge i la setmana 1 és la "
+         "que conté el primer dijous de l'any, és a dir, la del 4 de gener."),
+        ("Quantes setmanes té el {y1}? I el {y2}?",
+         "El {y1} té {n1} setmanes i el {y2} en té {n2}. La setmana 1 del {y2} comença el {w1}."),
+        ("En quina setmana cau l'1 de gener del {y2}?",
+         "En la setmana {jw} del {jy}, que va del {jmon} al {jsun}."),
+        ("Com obtinc el número de setmana a l'Excel?",
+         "Amb =ISOWEEKNUM(A1) (a l'Excel en castellà, =ISO.NUM.DE.SEMANA(A1)). WEEKNUM, sense «ISO», comença la setmana en diumenge "
+         "i pot donar un altre número."),
+    ],
+    "dh_link": "Calculadora de dies hàbils",
+    "dh_title": "Calculadora de dies hàbils i feiners entre dates",
+    "dh_desc": "Calcula els dies hàbils o feiners entre dues dates, o quin dia venç un termini de dies hàbils, amb els festius de la teva comunitat i el teu municipi.",
+    "dh_h1": "Calculadora de dies hàbils", "dh_crumb": "Dies hàbils",
+    "dh_intro": "Compta els dies hàbils entre dues dates o calcula quan venç un termini, amb els festius de la teva comunitat i el teu municipi.",
+    "nat_only": "Només festius estatals", "all_region": "Tota la comunitat", "isla": "illa", "zona": "zona",
+    "workweek": "Dies hàbils", "mon_fri": "De dilluns a divendres", "mon_sat": "De dilluns a dissabte",
+    "mode_a": "Entre dues dates", "mode_b": "Sumar dies hàbils",
+    "from": "Des de", "to": "Fins a", "start": "Data inicial", "n_work": "Dies hàbils",
+    "res_a": {"one": "dia hàbil", "other": "dies hàbils"},
+    "nat_days": {"one": "{n} dia natural", "other": "{n} dies naturals"},
+    "n_hol_in": {"one": "{n} festiu", "other": "{n} festius"},
+    "after": {"one": "{n} dia hàbil després del {d}", "other": "{n} dies hàbils després del {d}"},
+    "no_loc": "sense festius locals del 2026", "out": "Fora del 2026-2027",
+    "h_hols_in": "Festius en aquestes dates", "none_in": "Cap festiu entre aquestes dates.",
+    "caveat": "Orientatiu. Per a terminis legals, consulta el calendari oficial de dies inhàbils.",
+    "dh_faq": [
+        ("Quins dies són inhàbils en un termini administratiu?",
+         "Segons la Llei 39/2015 (article 30), els dissabtes, els diumenges i els festius estatals, autonòmics i locals. Si un dia és "
+         "hàbil on vius i inhàbil a la seu de l'organisme, o al revés, es considera inhàbil."),
+        ("I els dies feiners?",
+         "Normalment, de dilluns a divendres menys els festius. Si treballes els dissabtes, tria «De dilluns a dissabte»."),
+        ("Des de quin dia es compta un termini?",
+         "Des de l'endemà de la notificació o la publicació. Per això, en sumar dies hàbils, el compte comença l'endemà de la data "
+         "inicial. Si l'últim dia és inhàbil, el termini passa al dia hàbil següent."),
+        ("Entre dues dates, compten el primer i l'últim dia?",
+         "Sí: tots dos compten si són hàbils."),
+        ("Serveix per a terminis judicials?",
+         "No del tot: en els judicials també són inhàbils tot l'agost i del 24 de desembre al 6 de gener (article 183 de la Llei "
+         "orgànica del poder judicial), excepte les actuacions urgents. Aquesta calculadora no els descompta."),
+    ],
+    "dl_link": "Dies feiners 2027",
+    "dl_title": "Dies feiners 2027 per comunitat i mes (i hores)",
+    "dl_desc": "Dies feiners del 2027 a cada comunitat autònoma, mes a mes, amb el total de l'any i les hores de feina amb jornada de 8 hores. Segons el BOE.",
+    "dl_h1": "Dies feiners 2027", "dl_crumb": "Dies feiners 2027",
+    "dl_intro": "De dilluns a divendres, menys els festius estatals i autonòmics del BOE. Sense els 2 locals de cada municipi.",
+    "dl_h2": "Dies feiners per comunitat", "col_total": "Total", "col_hours": "Hores (8 h)", "no_island": "sense festa insular",
+    "dl_faq": [
+        ("Quants dies feiners té el 2027?",
+         "El 2027 té {wd} dies de dilluns a divendres. Si es treuen els festius estatals i autonòmics que cauen entre setmana, en "
+         "queden entre {lo} i {hi}, segons la comunitat, sense comptar els 2 festius locals."),
+        ("Quantes hores de feina té el 2027?",
+         "Amb jornades de 8 hores, entre {hlo} i {hhi} hores. Si restes 22 dies feiners de vacances, en queden entre {vlo} i {vhi}."),
+        ("Es compten els festius locals?",
+         'No, perquè canvien a cada municipi. Resta els 2 de la teva ciutat si cauen entre setmana: són a '
+         '<a href="{loc}">festius locals 2027</a>.'),
+        ("Quins mesos del 2027 tenen més dies feiners?",
+         "{mmax}: {nmax} a la majoria de comunitats. Amb menys dies, {mmin}: {nmin}."),
+    ],
+    "ch_link": "Canvi d'hora 2027",
+    "ch_title": "Canvi d'hora 2027: quan canvia l'hora a Espanya",
+    "ch_desc": "Quan canvia l'hora: el proper canvi, si s'avança o s'endarrereix el rellotge, les Canàries i les dates del 2026, el 2027 i el 2028.",
+    "ch_h1": "Canvi d'hora 2027", "ch_crumb": "Canvi d'hora",
+    "ch_intro": "Últim diumenge de març i últim diumenge d'octubre, com a tota la Unió Europea.",
+    "next_change": "Proper canvi", "last_change": "Últim canvi",
+    "su": "a les 2.00 seran les 3.00 (a les Canàries, a la 1.00 seran les 2.00)",
+    "wi": "a les 3.00 seran les 2.00 (a les Canàries, a les 2.00 serà la 1.00)",
+    "su_s": "2.00 → 3.00", "wi_s": "3.00 → 2.00",
+    "ch_h2": "Canvis d'hora {a}-{b}", "col_year": "Any", "col_su": "Horari d'estiu", "col_wi": "Horari d'hivern",
+    "ch_src": "Reial decret 236/2002",
+    "ch_faq": [
+        ("Quan canvia l'hora el 2027?",
+         "El {su27} (a les 2.00 seran les 3.00) i el {wi27} (a les 3.00 seran les 2.00). A les Canàries, una hora abans en el seu rellotge."),
+        ("S'avança o s'endarrereix el rellotge?",
+         "Al març s'avança una hora, dormim una hora menys i comença l'horari d'estiu. A l'octubre s'endarrereix una hora, dormim una "
+         "hora més i torna l'horari d'hivern."),
+        ("Per què canvia l'hora en aquestes dates?",
+         "La Directiva 2000/84/CE fixa el canvi l'últim diumenge de març i l'últim d'octubre, a la 1.00 UTC, a tota la Unió Europea. "
+         "A Espanya l'aplica el " + BOE_RD.format("Reial decret 236/2002") + "."),
+        ("Se suprimirà el canvi d'hora?",
+         "La Comissió Europea va proposar suprimir-lo el 2018 i Espanya ho va tornar a demanar el 2025, però no s'ha aprovat. Mentre "
+         "no canviï la directiva, l'hora canvia dues vegades l'any."),
+    ],
+}
+S["gl"] = {
+    "util": "Utilidades",
+    "wk_link": "En que semana estamos?",
+    "wk_title": "En que semana estamos? Número de semana de hoxe",
+    "wk_desc": "O número de semana de hoxe segundo a ISO 8601, co seu luns e o seu domingo, e as semanas de 2026 e 2027 coas datas de cada unha.",
+    "wk_h1": "En que semana estamos?", "wk_crumb": "Número de semana",
+    "wk_intro": "Semanas de luns a domingo, numeradas segundo a ISO 8601, a norma que se usa en España.",
+    "week": "Semana", "weeks_of": "Semanas de {y}", "col_week": "Semana", "col_mon_sun": "Luns – domingo",
+    "n_weeks": "{n} semanas",
+    "left": {"one": "queda {n} día de {y}", "other": "quedan {n} días de {y}"},
+    "wk_faq": [
+        ("Como se numeran as semanas do ano?",
+         "Segundo a norma ISO 8601, a que se usa en España e en Europa: cada semana vai de luns a domingo e a semana 1 é a que contén "
+         "o primeiro xoves do ano, é dicir, a do 4 de xaneiro."),
+        ("Cantas semanas ten {y1}? E {y2}?",
+         "{y1} ten {n1} semanas e {y2} ten {n2}. A semana 1 de {y2} comeza o {w1}."),
+        ("En que semana cae o 1 de xaneiro de {y2}?",
+         "Na semana {jw} de {jy}, que vai do {jmon} ao {jsun}."),
+        ("Como saco o número de semana en Excel?",
+         "Con =ISOWEEKNUM(A1) (no Excel en castelán, =ISO.NUM.DE.SEMANA(A1)). WEEKNUM, sen «ISO», comeza a semana en domingo e pode "
+         "dar outro número."),
+    ],
+    "dh_link": "Calculadora de días hábiles",
+    "dh_title": "Calculadora de días hábiles e laborables entre datas",
+    "dh_desc": "Calcula os días hábiles ou laborables entre dúas datas, ou que día vence un prazo de días hábiles, cos festivos da túa comunidade e o teu concello.",
+    "dh_h1": "Calculadora de días hábiles", "dh_crumb": "Días hábiles",
+    "dh_intro": "Conta os días hábiles entre dúas datas ou calcula cando vence un prazo, cos festivos da túa comunidade e o teu concello.",
+    "nat_only": "Só festivos estatais", "all_region": "Toda a comunidade", "isla": "illa", "zona": "zona",
+    "workweek": "Días hábiles", "mon_fri": "Luns a venres", "mon_sat": "Luns a sábado",
+    "mode_a": "Entre dúas datas", "mode_b": "Sumar días hábiles",
+    "from": "Desde", "to": "Ata", "start": "Data inicial", "n_work": "Días hábiles",
+    "res_a": {"one": "día hábil", "other": "días hábiles"},
+    "nat_days": {"one": "{n} día natural", "other": "{n} días naturais"},
+    "n_hol_in": {"one": "{n} festivo", "other": "{n} festivos"},
+    "after": {"one": "{n} día hábil despois do {d}", "other": "{n} días hábiles despois do {d}"},
+    "no_loc": "sen festivos locais de 2026", "out": "Fóra de 2026-2027",
+    "h_hols_in": "Festivos nesas datas", "none_in": "Ningún festivo entre esas datas.",
+    "caveat": "Orientativo. Para prazos legais, consulta o calendario oficial de días inhábiles.",
+    "dh_faq": [
+        ("Que días son inhábiles nun prazo administrativo?",
+         "Segundo a Lei 39/2015 (artigo 30), os sábados, os domingos e os festivos estatais, autonómicos e locais. Se un día é hábil "
+         "onde vives e inhábil na sede do organismo, ou ao revés, considérase inhábil."),
+        ("E os días laborables?",
+         "Normalmente, de luns a venres menos os festivos. Se traballas os sábados, escolle «Luns a sábado»."),
+        ("Desde que día se conta un prazo?",
+         "Desde o día seguinte á notificación ou á publicación. Por iso, ao sumar días hábiles, a conta comeza o día seguinte á data "
+         "inicial. Se o último día é inhábil, o prazo pasa ao seguinte día hábil."),
+        ("Entre dúas datas, contan o primeiro e o último día?",
+         "Si: os dous contan se son hábiles."),
+        ("Serve para prazos xudiciais?",
+         "Non de todo: nos xudiciais tamén son inhábiles todo agosto e do 24 de decembro ao 6 de xaneiro (artigo 183 da Lei orgánica "
+         "do poder xudicial), agás as actuacións urxentes. Esta calculadora non os desconta."),
+    ],
+    "dl_link": "Días laborables 2027",
+    "dl_title": "Días laborables 2027 por comunidade e mes (e horas)",
+    "dl_desc": "Días laborables de 2027 en cada comunidade autónoma, mes a mes, co total do ano e as horas de traballo con xornada de 8 horas. Segundo o BOE.",
+    "dl_h1": "Días laborables 2027", "dl_crumb": "Días laborables 2027",
+    "dl_intro": "De luns a venres, menos os festivos estatais e autonómicos do BOE. Sen os 2 locais de cada concello.",
+    "dl_h2": "Días laborables por comunidade", "col_total": "Total", "col_hours": "Horas (8 h)", "no_island": "sen festa insular",
+    "dl_faq": [
+        ("Cantos días laborables ten 2027?",
+         "2027 ten {wd} días de luns a venres. Quitando os festivos estatais e autonómicos que caen entre semana, quedan entre {lo} e "
+         "{hi}, segundo a comunidade, sen contar os 2 festivos locais."),
+        ("Cantas horas laborables ten 2027?",
+         "Con xornadas de 8 horas, entre {hlo} e {hhi} horas. Se restas 22 días laborables de vacacións, quedan entre {vlo} e {vhi}."),
+        ("Cóntanse os festivos locais?",
+         'Non, porque cambian en cada concello. Resta os 2 da túa cidade se caen entre semana: están en '
+         '<a href="{loc}">festivos locais 2027</a>.'),
+        ("Que meses de 2027 teñen máis días laborables?",
+         "{mmax}: {nmax} na maioría das comunidades. Con menos días, {mmin}: {nmin}."),
+    ],
+    "ch_link": "Cambio de hora 2027",
+    "ch_title": "Cambio de hora 2027: cando cambia a hora en España",
+    "ch_desc": "Cando cambia a hora: o próximo cambio, se se adianta ou se atrasa o reloxo, Canarias e as datas de 2026, 2027 e 2028.",
+    "ch_h1": "Cambio de hora 2027", "ch_crumb": "Cambio de hora",
+    "ch_intro": "Último domingo de marzo e último domingo de outubro, como en toda a Unión Europea.",
+    "next_change": "Próximo cambio", "last_change": "Último cambio",
+    "su": "ás 2:00 serán as 3:00 (en Canarias, á 1:00 serán as 2:00)",
+    "wi": "ás 3:00 serán as 2:00 (en Canarias, ás 2:00 será a 1:00)",
+    "su_s": "2:00 → 3:00", "wi_s": "3:00 → 2:00",
+    "ch_h2": "Cambios de hora {a}-{b}", "col_year": "Ano", "col_su": "Horario de verán", "col_wi": "Horario de inverno",
+    "ch_src": "Real decreto 236/2002",
+    "ch_faq": [
+        ("Cando cambia a hora en 2027?",
+         "O {su27} (ás 2:00 serán as 3:00) e o {wi27} (ás 3:00 serán as 2:00). En Canarias, unha hora antes no seu reloxo."),
+        ("Adiántase ou atrásase o reloxo?",
+         "En marzo adiántase unha hora, durmimos unha hora menos e empeza o horario de verán. En outubro atrásase unha hora, durmimos "
+         "unha máis e volve o horario de inverno."),
+        ("Por que cambia a hora nesas datas?",
+         "A Directiva 2000/84/CE fixa o cambio o último domingo de marzo e o último de outubro, á 1:00 UTC, en toda a Unión Europea. "
+         "En España aplícao o " + BOE_RD.format("Real decreto 236/2002") + "."),
+        ("Vaise eliminar o cambio de hora?",
+         "A Comisión Europea propuxo suprimilo en 2018 e España volveuno pedir en 2025, pero non se aprobou. Mentres non cambie a "
+         "directiva, a hora cambia dúas veces ao ano."),
+    ],
+}
+S["eu"] = {
+    "util": "Tresnak",
+    "wk_link": "Zenbagarren astean gaude?",
+    "wk_title": "Zenbagarren astean gaude? Gaurko aste zenbakia",
+    "wk_desc": "Gaurko aste zenbakia ISO 8601 arauaren arabera, astelehenetik igandera, eta 2026ko eta 2027ko asteak, aste bakoitzaren datekin.",
+    "wk_h1": "Zenbagarren astean gaude?", "wk_crumb": "Aste zenbakia",
+    "wk_intro": "Astelehenetik igandera doazen asteak, ISO 8601 arauaren arabera zenbakituta. Espainian arau hori erabiltzen da.",
+    "week": "Astea", "weeks_of": "{y}ko asteak", "col_week": "Astea", "col_mon_sun": "Astelehena – igandea",
+    "n_weeks": "{n} aste",
+    "left": {"one": "{y}an egun {n} geratzen da", "other": "{y}an {n} egun geratzen dira"},
+    "wk_faq": [
+        ("Nola zenbakitzen dira urteko asteak?",
+         "ISO 8601 arauaren arabera, Espainian eta Europan erabiltzen denaren arabera: aste bakoitza astelehenetik igandera doa, eta "
+         "1. astea urteko lehen osteguna duena da, hau da, urtarrilaren 4a duena."),
+        ("Zenbat aste ditu {y1}k? Eta {y2}k?",
+         "{y1}k {n1} aste ditu, eta {y2}k {n2}. {y2}ko 1. astearen lehen eguna: {w1}."),
+        ("Zein astetan dago {y2}ko urtarrilaren 1a?",
+         "{jy}ko {jw}. astean. Aste horren lehen eguna: {jmon}. Azkena: {jsun}."),
+        ("Nola lortu aste zenbakia Excelen?",
+         "=ISOWEEKNUM(A1) formularekin (Excel gaztelaniaz badago, =ISO.NUM.DE.SEMANA(A1)). WEEKNUM funtzioak, «ISO» gabe, igandean "
+         "hasten du astea eta beste zenbaki bat eman dezake."),
+    ],
+    "dh_link": "Egun baliodunen kalkulagailua",
+    "dh_title": "Egun baliodunen eta lanegunen kalkulagailua",
+    "dh_desc": "Kalkulatu bi dataren arteko egun baliodunak edo lanegunak, edo epe bat zein egunetan amaitzen den, zure erkidegoko eta udalerriko jaiegunekin.",
+    "dh_h1": "Egun baliodunen kalkulagailua", "dh_crumb": "Egun baliodunak",
+    "dh_intro": "Zenbatu bi dataren arteko egun baliodunak edo kalkulatu epe bat noiz amaitzen den, zure erkidegoko eta udalerriko jaiegunekin.",
+    "nat_only": "Estatuko jaiegunak soilik", "all_region": "Erkidego osoa", "isla": "uhartea", "zona": "eremua",
+    "workweek": "Egun baliodunak", "mon_fri": "Astelehenetik ostiralera", "mon_sat": "Astelehenetik larunbatera",
+    "mode_a": "Bi dataren artean", "mode_b": "Egun baliodunak gehitu",
+    "from": "Noiztik", "to": "Noiz arte", "start": "Hasiera data", "n_work": "Egun baliodunak",
+    "res_a": {"one": "egun baliodun", "other": "egun baliodun"},
+    "nat_days": {"one": "egun natural {n}", "other": "{n} egun natural"},
+    "n_hol_in": {"one": "jaiegun {n}", "other": "{n} jaiegun"},
+    "after": {"one": "egun baliodun {n} · hasiera: {d}", "other": "{n} egun baliodun · hasiera: {d}"},
+    "no_loc": "2026ko tokiko jaiegunak gabe", "out": "2026-2027 tartetik kanpo",
+    "h_hols_in": "Data horietako jaiegunak", "none_in": "Ez dago jaiegunik data horien artean.",
+    "caveat": "Orientagarria da. Lege-epeetarako, begiratu egun baliogabeen egutegi ofiziala.",
+    "dh_faq": [
+        ("Zein egun dira baliogabeak administrazio-epe batean?",
+         "39/2015 Legearen arabera (30. artikulua), larunbatak, igandeak eta estatuko, erkidegoko eta tokiko jaiegunak. Egun bat "
+         "baliodun bada bizi zaren lekuan eta baliogabe erakundearen egoitzan, edo alderantziz, baliogabetzat hartzen da."),
+        ("Eta lanegunak?",
+         "Normalean, astelehenetik ostiralera, jaiegunak kenduta. Larunbatetan lan egiten baduzu, aukeratu «Astelehenetik larunbatera»."),
+        ("Noiztik zenbatzen da epe bat?",
+         "Jakinarazpenaren edo argitalpenaren hurrengo egunetik. Horregatik, egun baliodunak gehitzean, kontaketa hasiera dataren "
+         "hurrengo egunean hasten da. Azken eguna baliogabea bada, epea hurrengo egun baliodunera pasatzen da."),
+        ("Bi dataren artean, lehen eguna eta azkena zenbatzen dira?",
+         "Bai: biak zenbatzen dira baliodunak badira."),
+        ("Epe judizialetarako balio du?",
+         "Ez guztiz: epe judizialetan abuztu osoa eta abenduaren 24tik urtarrilaren 6ra bitarteko egunak ere baliogabeak dira "
+         "(Botere Judizialaren Lege Organikoaren 183. artikulua), presazko jarduketak izan ezik. Kalkulagailu honek ez ditu kentzen."),
+    ],
+    "dl_link": "2027ko lanegunak",
+    "dl_title": "2027ko lanegunak erkidegoka eta hilabeteka (eta orduak)",
+    "dl_desc": "2027ko lanegunak autonomia-erkidego bakoitzean, hilabetez hilabete, urteko guztizkoarekin eta lanorduekin, 8 orduko lanaldiarekin. BOEren arabera.",
+    "dl_h1": "2027ko lanegunak", "dl_crumb": "2027ko lanegunak",
+    "dl_intro": "Astelehenetik ostiralera, BOEko estatuko eta erkidegoko jaiegunak kenduta. Udalerri bakoitzeko 2 tokiko jaiegunak kontatu gabe.",
+    "dl_h2": "Lanegunak erkidegoka", "col_total": "Guztira", "col_hours": "Orduak (8 h)", "no_island": "uharteko jaia gabe",
+    "dl_faq": [
+        ("Zenbat lanegun ditu 2027k?",
+         "2027k {wd} egun ditu astelehenetik ostiralera. Astegunetan erortzen diren estatuko eta erkidegoko jaiegunak kenduta, {lo} "
+         "eta {hi} artean geratzen dira, erkidegoaren arabera, 2 tokiko jaiegunak kontatu gabe."),
+        ("Zenbat lanordu ditu 2027k?",
+         "8 orduko lanaldiekin, {hlo} eta {hhi} ordu artean. 22 laneguneko oporrak kenduz gero, {vlo} eta {vhi} artean geratzen dira."),
+        ("Tokiko jaiegunak kontatzen dira?",
+         'Ez, udalerri bakoitzean aldatzen direlako. Kendu zure herriko 2ak astegunetan erortzen badira: '
+         '<a href="{loc}">2027ko tokiko jaiegunak</a>.'),
+        ("2027ko zein hilabetek dute lanegun gehien?",
+         "{mmax}: {nmax} erkidego gehienetan. Egun gutxiagorekin, {mmin}: {nmin}."),
+    ],
+    "ch_link": "Ordu aldaketa 2027",
+    "ch_title": "Ordu aldaketa 2027: noiz aldatzen den ordua Espainian",
+    "ch_desc": "Noiz aldatzen den ordua: hurrengo aldaketa, erlojua aurreratu edo atzeratu egiten den, Kanariak eta 2026, 2027 eta 2028ko datak.",
+    "ch_h1": "Ordu aldaketa 2027", "ch_crumb": "Ordu aldaketa",
+    "ch_intro": "Martxoko azken igandean eta urriko azken igandean, Europar Batasun osoan bezala.",
+    "next_change": "Hurrengo aldaketa", "last_change": "Azken aldaketa",
+    "su": "2:00etan 3:00 izango dira (Kanarietan, 1:00etan 2:00 izango dira)",
+    "wi": "3:00etan 2:00 izango dira (Kanarietan, 2:00etan 1:00 izango da)",
+    "su_s": "2:00 → 3:00", "wi_s": "3:00 → 2:00",
+    "ch_h2": "Ordu aldaketak {a}-{b}", "col_year": "Urtea", "col_su": "Udako ordutegia", "col_wi": "Neguko ordutegia",
+    "ch_src": "236/2002 Errege Dekretua",
+    "ch_faq": [
+        ("Noiz aldatzen da ordua 2027an?",
+         "Data hauetan: {su27} (2:00etan 3:00 izango dira) eta {wi27} (3:00etan 2:00 izango dira). Kanarietan, ordubete lehenago "
+         "haien erlojuan."),
+        ("Erlojua aurreratu edo atzeratu egiten da?",
+         "Martxoan ordubete aurreratzen da, ordubete gutxiago lo egiten dugu eta udako ordutegia hasten da. Urrian ordubete atzeratzen "
+         "da, ordubete gehiago lo egiten dugu eta neguko ordutegia itzultzen da."),
+        ("Zergatik aldatzen da ordua data horietan?",
+         "2000/84/EE Zuzentarauak martxoko azken igandean eta urriko azken igandean finkatzen du aldaketa, 1:00etan UTC, Europar "
+         "Batasun osoan. Espainian " + BOE_RD.format("236/2002 Errege Dekretuak") + " aplikatzen du."),
+        ("Ordu aldaketa kenduko da?",
+         "Europako Batzordeak 2018an proposatu zuen kentzea, eta Espainiak berriro eskatu zuen 2025ean, baina ez da onartu. "
+         "Zuzentaraua aldatzen ez den bitartean, ordua bi aldiz aldatzen da urtean."),
+    ],
+}
 ONLY_WK = [x for x in ("es", "ca", "gl", "eu") if x in S]
 PATH_WK = "semana/"
 ONLY_DH = [x for x in ("es", "ca", "gl", "eu") if "dh_link" in S.get(x, {})]
@@ -170,10 +460,8 @@ def rng(a, b, year=None):
 
 
 def dlong_y(d):
-    """lunes 4 de enero de 2027 (Spanish only: the FAQ strings of other languages carry their own pattern)."""
-    if B.LANG == "es":
-        return f'{B.dlong(d)} de {d.year}'
-    return ds(d)
+    """lunes 4 de enero de 2027 · dilluns 4 de gener de 2027 · luns 4 de xaneiro de 2027 · 2027ko urtarrilaren 4a, astelehena"""
+    return f"{d.year}ko {B.dlong(d)}" if B.LANG == "eu" else f"{B.dlong(d)} de {d.year}"
 
 
 def weeks(year):
@@ -280,7 +568,32 @@ def load_year(year):
     return d
 
 
-NAMES_2026 = {}  # 2026-only holiday names in ca/gl/eu (2027 names come from data/i18n.json)
+NAMES_2026 = {  # 2026-only holiday names in ca/gl/eu (2027 names come from data/i18n.json, same wording)
+    "ca": {"Asunción de la Virgen": "L'Assumpció", "Día de Canarias": "Dia de Canàries", "Día de Ceuta": "Dia de Ceuta",
+           "Día de la Rioja": "Dia de La Rioja", "Día siguiente a Todos los Santos": "L'endemà de Tots Sants",
+           "Fiesta Sacrificio-Aid al Adha": "Festa del Sacrifici-Aid al Adha", "Fiesta Sacrificio-Eidul Adha": "Festa del Sacrifici-Eidul Adha",
+           "Fiesta de la Comunidad de Madrid": "Festa de la Comunitat de Madrid",
+           "Lunes siguiente al Día de la Constitución Española": "Dilluns següent al Dia de la Constitució",
+           "Lunes siguiente al Día de les Illes Balears": "Dilluns següent al Dia de les Illes Balears",
+           "San Esteban": "Sant Esteve", "San Juan": "Sant Joan",
+           "Santiago Apóstol/Día Nacional de Galicia": "Sant Jaume / Dia Nacional de Galiza"},
+    "gl": {"Asunción de la Virgen": "Asunción da Virxe", "Día de Canarias": "Día de Canarias", "Día de Ceuta": "Día de Ceuta",
+           "Día de la Rioja": "Día da Rioxa", "Día siguiente a Todos los Santos": "Día seguinte a Todos os Santos",
+           "Fiesta Sacrificio-Aid al Adha": "Festa do Sacrificio-Aid al Adha", "Fiesta Sacrificio-Eidul Adha": "Festa do Sacrificio-Eidul Adha",
+           "Fiesta de la Comunidad de Madrid": "Festa da Comunidade de Madrid",
+           "Lunes siguiente al Día de la Constitución Española": "Luns seguinte ao Día da Constitución Española",
+           "Lunes siguiente al Día de les Illes Balears": "Luns seguinte ao Día das Illes Balears",
+           "San Esteban": "Santo Estevo", "San Juan": "San Xoán",
+           "Santiago Apóstol/Día Nacional de Galicia": "Santiago Apóstolo / Día Nacional de Galiza"},
+    "eu": {"Asunción de la Virgen": "Ama Birjinaren Jasokundea", "Día de Canarias": "Kanarietako Eguna", "Día de Ceuta": "Ceutako Eguna",
+           "Día de la Rioja": "Errioxaren Eguna", "Día siguiente a Todos los Santos": "Santu Guztien Egunaren hurrengo eguna",
+           "Fiesta Sacrificio-Aid al Adha": "Sakrifizioaren Jaia - Aid al Adha", "Fiesta Sacrificio-Eidul Adha": "Eidul Adha - Sakrifizioaren Jaia",
+           "Fiesta de la Comunidad de Madrid": "Madrilgo Erkidegoaren Jaia",
+           "Lunes siguiente al Día de la Constitución Española": "Konstituzio Egunaren hurrengo astelehena",
+           "Lunes siguiente al Día de les Illes Balears": "Illes Balears-en Egunaren hurrengo astelehena",
+           "San Esteban": "San Esteban eguna", "San Juan": "San Joan eguna",
+           "Santiago Apóstol/Día Nacional de Galicia": "Santiago Apostolua / Galizako Eguna Nazionala"},
+}
 
 
 def is_off(d, off, sat=False):
@@ -516,6 +829,13 @@ def footer_links():
         else:
             li.append(f'<li><a href="{B.ASSETS}{path}" hreflang="es" lang="es">{E(S["es"][key])}</a></li>')
     return f'<h2>{E(s["util"])}</h2><ul>{"".join(li)}</ul>'
+
+
+def home_links():
+    """One line of links on the home, below the comunidad chips: the utility pages of this language."""
+    items = [(PATH_DL, ONLY_DL, "dl_link"), (PATH_DH, ONLY_DH, "dh_link"), (PATH_WK, ONLY_WK, "wk_link"), (PATH_CH, ONLY_CH, "ch_link")]
+    li = [f'<a href="{B.BASE}{p}">{E(L(k))}</a>' for p, only, k in items if B.LANG in only]
+    return f'<p class="more-l">{" · ".join(li)}</p>' if li else ""
 
 
 def write_pages(data, write, cities):

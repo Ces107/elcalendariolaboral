@@ -362,7 +362,8 @@ def home_page():
     school = (f'<p class="more-l"><a href="{B.BASE}calendario-escolar/">Calendario escolar 2026-2027</a> · '
               f'<a href="{B.BASE}vacaciones-escolares/navidad/">Vacaciones de Navidad 2026-2027</a> · '
               f'<a href="{B.BASE}vacaciones-escolares/semana-santa/">Vacaciones de Semana Santa 2027</a></p>') if ES else ""
-    reg_sec = B.section("comunidades", t("pick_region"), f'<ul class="chips">{chips}</ul>{school}')
+    import utilidades
+    reg_sec = B.section("comunidades", t("pick_region"), f'<ul class="chips">{chips}</ul>{school}{utilidades.home_links()}')
     hol_sec = B.section("festivos", E(B.fill(t("h_hol"), sp)), f'<ol class="hl">{"".join(B.hol_item(h) for h in nat)}</ol>')
     prow = "".join(B.pts_row(it) for it in B.all_breaks(nat))
     vac = f'<p class="more-l"><a href="{B.BASE}vacaciones-2027/">Maximiza tus vacaciones 2027 →</a></p>' if ES else ""
