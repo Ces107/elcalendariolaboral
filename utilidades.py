@@ -76,10 +76,32 @@ S["es"].update({
          "Ley Orgánica del Poder Judicial), salvo actuaciones urgentes. Esta calculadora no los descuenta."),
     ],
 })
+S["es"].update({
+    "dl_link": "Días laborables 2027",
+    "dl_title": "Días laborables 2027 por comunidad y mes (y horas)",
+    "dl_desc": "Días laborables de 2027 en cada comunidad autónoma, mes a mes, con el total del año y las horas de trabajo con jornada de 8 horas. Según el BOE.",
+    "dl_h1": "Días laborables 2027", "dl_crumb": "Días laborables 2027",
+    "dl_intro": "De lunes a viernes, menos los festivos nacionales y autonómicos del BOE. Sin los 2 locales de cada municipio.",
+    "dl_h2": "Días laborables por comunidad", "col_total": "Total", "col_hours": "Horas (8 h)", "no_island": "sin fiesta insular",
+    "dl_faq": [
+        ("¿Cuántos días laborables tiene 2027?",
+         "2027 tiene {wd} días de lunes a viernes. Quitando los festivos nacionales y autonómicos que caen entre semana, quedan "
+         "entre {lo} y {hi}, según la comunidad, sin contar los 2 festivos locales."),
+        ("¿Cuántas horas laborables tiene 2027?",
+         "Con jornadas de 8 horas, entre {hlo} y {hhi} horas. Si restas 22 días laborables de vacaciones, quedan entre {vlo} y {vhi}."),
+        ("¿Se cuentan los festivos locales?",
+         'No, porque cambian en cada municipio. Resta los 2 de tu ciudad si caen entre semana: están en '
+         '<a href="{loc}">festivos locales 2027</a>.'),
+        ("¿Qué meses de 2027 tienen más días laborables?",
+         "{mmax}: {nmax} en la mayoría de comunidades. Con menos días, {mmin}: {nmin}."),
+    ],
+})
 ONLY_WK = [x for x in ("es", "ca", "gl", "eu") if x in S]
 PATH_WK = "semana/"
 ONLY_DH = [x for x in ("es", "ca", "gl", "eu") if "dh_link" in S.get(x, {})]
 PATH_DH = "dias-habiles/"
+ONLY_DL = [x for x in ("es", "ca", "gl", "eu") if "dl_link" in S.get(x, {})]
+PATH_DL = "dias-laborables-2027/"
 
 
 def L(key):
@@ -89,6 +111,13 @@ def L(key):
 def ln(key, n, **kw):
     v = L(key)
     return (v["one"] if n == 1 else v["other"]).format(n=n, **kw)
+
+
+AND = {"es": "y", "ca": "i", "gl": "e", "eu": "eta"}
+
+
+def join(xs):
+    return xs[0] if len(xs) == 1 else f'{", ".join(xs[:-1])} {AND[B.LANG]} {xs[-1]}'
 
 
 def langs_arg(only):
@@ -327,12 +356,79 @@ def dh_page(data, write, cities):
     write(PATH_DH, B.page(head, "pg vac", "", main, data, js=False), UPDATED, langs_arg(ONLY_DH))
 
 
+# ---------------------------------------------------------------- 3 /dias-laborables-2027/
+
+def per_month(hols, year=B.YEAR):
+    """Working days (Monday to Friday, not a holiday) in each month of `year`."""
+    hd = {h["date"] for h in hols}
+    out = [0] * 12
+    d = dt.date(year, 1, 1)
+    while d.year == year:
+        if d.weekday() < 5 and d.isoformat() not in hd:
+            out[d.month - 1] += 1
+        d += dt.timedelta(1)
+    return out
+
+
+def dl_rows(data):
+    """[(slug, label, zone label or None, months)]: each comunidad, then its islands / Arán as sub-rows."""
+    out = []
+    for r in data["regions"]:
+        out.append((r["slug"], r["name"], None, per_month(B.region_holidays(data, r["slug"]))))
+        for o in data["zones"].get(r["slug"], {}).get("options", []):
+            if "add" in o:
+                out.append((r["slug"], r["name"], o["name"], per_month(B.region_holidays(data, r["slug"], o["slug"]))))
+    return out
+
+
+def dl_page(data, write):
+    rows = dl_rows(data)
+    head_m = "".join(f'<th scope="col" class="num">{m.capitalize()}</th>' for m in B.T["_mon3"])
+    trs = []
+    for slug, name, zone, ms in rows:
+        tot = sum(ms)
+        if zone:
+            th = f'<th scope="row">{E(zone)}</th>'
+        else:
+            note = f' <span class="m">{L("no_island")}</span>' if slug == "canarias" else ""
+            th = f'<th scope="row"><a href="{B.BASE}{slug}/">{E(name)}</a>{note}</th>'
+        cells = "".join(f'<td class="num">{n}</td>' for n in ms)
+        trs.append(f'<tr{" class=sub" if zone else f" id={slug}"}>{th}{cells}<td class="num"><b>{tot}</b></td><td class="num">{tot * 8}</td></tr>')
+    tbl = (f'<div class="tscroll"><table class="tbl hub dl"><thead><tr><th scope="col">{B.t("region_label")}</th>{head_m}'
+           f'<th scope="col" class="num">{L("col_total")}</th><th scope="col" class="num">{L("col_hours")}</th></tr></thead>'
+           f'<tbody>{"".join(trs)}</tbody></table></div>')
+    mains = [sum(ms) for slug, _, zone, ms in rows if not zone and slug != "canarias"] + \
+            [sum(ms) for slug, _, zone, ms in rows if zone and slug == "canarias"]  # Canarias: with the island's day
+    lo, hi = min(mains), max(mains)
+    regs = [ms for _, _, zone, ms in rows if not zone]
+    mode = [max(sorted({ms[k] for ms in regs}), key=[ms[k] for ms in regs].count) for k in range(12)]  # usual value per month
+    nmax, nmin = max(mode), min(mode)
+    kmax, kmin = [k for k in range(12) if mode[k] == nmax], [k for k in range(12) if mode[k] == nmin]
+    wd = sum(1 for d in B.DAYS if d.weekday() < 5)
+    fmt = {"wd": wd, "lo": lo, "hi": hi, "hlo": f"{lo * 8:,}".replace(",", "."), "hhi": f"{hi * 8:,}".replace(",", "."),
+           "vlo": f"{(lo - 22) * 8:,}".replace(",", "."), "vhi": f"{(hi - 22) * 8:,}".replace(",", "."),
+           "loc": f"{B.BASE}festivos-locales/", "mmax": join([B.T["_months"][k] for k in kmax]).capitalize(), "nmax": nmax,
+           "mmin": join([B.T["_months"][k] for k in kmin]), "nmin": nmin}
+    qas = [(q.format(**fmt), a.format(**fmt)) for q, a in L("dl_faq")]
+    fh, fld = faq(qas)
+    h1 = L("dl_h1")
+    ch, cld = crumbs(L("dl_crumb"), PATH_DL)
+    src = data["source"]
+    hero = (f'<div class="hero wrap">{ch}<h1>{E(h1)}</h1><p class="ctx">{E(L("dl_intro"))} '
+            f'<a href="{src["url"]}" rel="noopener">{src["id"]}</a></p></div>')
+    sec = B.section("comunidades", L("dl_h2"), tbl)
+    main = f'{hero}<div class="wrap body">{sec}{B.ad("hub")}<div class="narrow">{fh}</div></div>'
+    head = B.head_html(L("dl_title"), L("dl_desc"), PATH_DL, f"{B.SITE}{B.ASSETS}og/espana.png", ld(cld, fld),
+                       langs=langs_arg(ONLY_DL))
+    write(PATH_DL, B.page(head, "pg", "", main, data, js=False), data["updated"], langs_arg(ONLY_DL))
+
+
 # ---------------------------------------------------------------- footer and entry point
 
 def footer_links():
     """The 'Utilidades' block of the footer: the pages in this language, or the Spanish ones marked hreflang=es."""
     s = S.get(B.LANG, S["es"])
-    items = [(PATH_WK, ONLY_WK, "wk_link"), (PATH_DH, ONLY_DH, "dh_link")]
+    items = [(PATH_DL, ONLY_DL, "dl_link"), (PATH_DH, ONLY_DH, "dh_link"), (PATH_WK, ONLY_WK, "wk_link")]
     li = []
     for path, only, key in items:
         if B.LANG in only:
@@ -347,3 +443,5 @@ def write_pages(data, write, cities):
         week_page(data, write)
     if B.LANG in ONLY_DH:
         dh_page(data, write, cities)
+    if B.LANG in ONLY_DL:
+        dl_page(data, write)

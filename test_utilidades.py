@@ -109,7 +109,7 @@ else:
 
 # ---------------------------------------------------------------- generated pages
 sm = (ROOT / "sitemap.xml").read_text("utf-8")
-for path, only in ((U.PATH_WK, U.ONLY_WK), (U.PATH_DH, U.ONLY_DH)):
+for path, only in ((U.PATH_WK, U.ONLY_WK), (U.PATH_DH, U.ONLY_DH), (U.PATH_DL, U.ONLY_DL)):
     for lang in only:
         url = f"{B.SITE}{B.lang_base(lang)}{path}"
         check(f"<loc>{url}</loc>" in sm, f"{url}: not in sitemap")
@@ -122,7 +122,7 @@ for path, only in ((U.PATH_WK, U.ONLY_WK), (U.PATH_DH, U.ONLY_DH)):
         check(f'<link rel="canonical" href="{url}">' in head, f"{url}: canonical")
         check('"FAQPage"' in head and '"BreadcrumbList"' in head, f"{url}: FAQPage / BreadcrumbList")
         check(('hreflang="ca"' in head) == (len(only) > 1), f"{url}: hreflang")
-        check("util.js?v=" in h, f"{url}: util.js")
+        check(("util.js?v=" in h) == (path != U.PATH_DL), f"{url}: util.js only where the page computes in the browser")
     check(f'href="{B.ASSETS}{path}"' in (ROOT / "index.html").read_text("utf-8"), f"home: no footer link to /{path}")
 
 wk = (ROOT / U.PATH_WK / "index.html").read_text("utf-8")
@@ -135,6 +135,17 @@ check(U.weeks(2027)[0][1] == D("2027-01-04"), "week 1 of 2027 starts on Monday 4
 dh = (ROOT / U.PATH_DH / "index.html").read_text("utf-8")
 check("Ley 39/2015" in dh, "/dias-habiles/: Ley 39/2015 FAQ")
 check(U.L("caveat") in dh if B.LANG in U.ONLY_DH else True, "/dias-habiles/: caveat line")
+
+dl = (ROOT / U.PATH_DL / "index.html").read_text("utf-8")
+for slug, name, zone, ms in U.dl_rows(d27):
+    hols = B.region_holidays(d27, slug, None if zone is None else next(o["slug"] for o in d27["zones"][slug]["options"] if o["name"] == zone))
+    check(sum(ms) == B.workdays(hols), f"/dias-laborables-2027/ {slug} {zone}: {sum(ms)} != {B.workdays(hols)}")
+    if zone is None:
+        row = re.search(rf'<tr id={slug}>(.*?)</tr>', dl)
+        check(row and f"<b>{sum(ms)}</b>" in row.group(1) and f">{sum(ms) * 8}<" in row.group(1), f"/dias-laborables-2027/ {slug}: row")
+        reg = (ROOT / slug / "index.html").read_text("utf-8")
+        check(f'href="{B.ASSETS}{U.PATH_DL}#{slug}"' in reg, f"/{slug}/: no link to its row of /dias-laborables-2027/")
+check(sum(U.per_month([])) == 261, "2027 has 261 weekdays")
 
 print("\n".join(fails[:40]))
 print(f"{len(fails)} fallos" if fails else f"OK: data 2026, {len(cases)} hand cases + random cases equal in Python and JS, pages")

@@ -110,6 +110,14 @@ def school_link(r):
     return f' · <a href="{B.BASE}calendario-escolar/{r["slug"]}/">Calendario escolar 2026-27 en {E(r["name"])}</a>' if ES else ""
 
 
+def workdays_link(r):
+    """The comunidad's row of /dias-laborables-2027/ (utilidades.py), in the languages that page exists in."""
+    import utilidades
+    if B.LANG not in utilidades.ONLY_DL:
+        return ""
+    return f' · <a href="{B.BASE}{utilidades.PATH_DL}#{r["slug"]}">{E(utilidades.L("dl_link"))}</a>'
+
+
 def city_list(cities):
     """Links to city pages with their 2 local holidays."""
     li = "".join(f'<li><a href="{B.BASE}{x["path"]}">{E(x["title_name"])}</a> <span class="m">{B.dmon(x["holidays"][0]["date"])} · '
@@ -305,7 +313,8 @@ def region_page(r, cities, pending):
     names = B.R(r)
     pend = f'<p class="m">Pendientes de publicar: {E(", ".join(pending))}.</p>' if pending and ES else ""
     locs = B.section("locales", E(B.fill(t("h_loc"), names)),
-                     city_list(cities) + pend + f'<p class="more-l"><a href="{B.BASE}festivos-locales/">{t("nav_locals")} 2027</a>{school_link(r)}</p>')
+                     city_list(cities) + pend + f'<p class="more-l"><a href="{B.BASE}festivos-locales/">{t("nav_locals")} 2027</a>{school_link(r)}'
+                     f'{workdays_link(r)}</p>')
     crumbs = [(t("spain"), ""), (name, f"{slug}/")]
     hname = B.fill(t("h_hol"), names)
     lds = [crumbs_ld(crumbs), list_ld(hname, f["hols"]),
