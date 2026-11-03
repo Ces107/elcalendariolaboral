@@ -529,7 +529,9 @@ def footer_html(data):
             + util_footer() + '</section>'
             f'<section><h2>El Calendario Laboral</h2><ul><li><a href="{s["url"]}" rel="noopener">{t("data_source")}</a></li>'
             f'<li><a href="{ASSETS}widget/"{"" if LANG == "es" else " hreflang=es lang=es"}>Widget para tu web</a></li>'
-            f'<li><a href="#inst" data-install hidden>{INSTALL.get(LANG, INSTALL["es"])[0]}</a></li>'
+            + ('<li><a href="https://www.amazon.es/s?k=Calma+Planners" target="_blank" rel="sponsored noopener">'
+               'Agenda 2027 en papel, con estos festivos →</a></li>' if LANG == "es" else "")
+            + f'<li><a href="#inst" data-install hidden>{INSTALL.get(LANG, INSTALL["es"])[0]}</a></li>'
             f'<li><a href="{BASE}privacidad/">{t("privacy")}</a></li></ul>'
             f'<p class="ft-lang">{lang_links()}</p></section>'
             f'</div><div class="wrap ft-b">© 2026 {HOST}</div></footer>')
