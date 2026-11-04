@@ -423,14 +423,14 @@ def pick(limit, *cands):
 
 # ---------------------------------------------------------------- html parts
 
-# Manual ad units (seo/ads.md). OFF until AdSense approves: paste the 4 slot ids, set ADS_ON = True, rebuild, push.
-ADS_ON = False
+# Manual ad units (seo/ads.md). ON since 2026-11-04 (AdSense approved, units ecl-cal/list/vac/hub).
+ADS_ON = True
 AD_CLIENT = "ca-pub-9914165605609514"
 AD_SLOTS = {  # position -> AdSense display unit id (data-ad-slot)
-    "cal": "",   # region/city/home: between the calendar and the next section
-    "list": "",  # region/city: after the holiday list
-    "vac": "",   # vacation optimizer: below the result
-    "hub": "",   # hub pages: festivos locales, PDF, calendario escolar, vacaciones
+    "cal": "8499996958",   # region/city/home: between the calendar and the next section
+    "list": "4748242174",  # region/city: after the holiday list
+    "vac": "2680482038",   # vacation optimizer: below the result
+    "hub": "9697316526",   # hub pages: festivos locales, PDF, calendario escolar, vacaciones
 }
 
 
