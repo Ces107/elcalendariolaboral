@@ -261,8 +261,11 @@ def hub_locales(loc, regions, cities):
         ctx = f'<p class="ctx">{t("col_city")}: {n_pub}</p>' if B.LANG != "eu" else ""
     h1 = f'{t("nav_locals")} 2027'
     crumbs = [(t("spain"), ""), (h1, "festivos-locales/")]
-    main = (f'<div class="hero wrap">{B.crumbs_html(crumbs)}<h1>{E(h1)}</h1>{ctx}</div>'
-            f'<div class="wrap body narrow">{"".join(blocks)}{B.ad("hub")}{faq_html(qas)}</div>')
+    lead = (guia.lead(f'{n_pub} municipios ya tienen sus <b>2 festivos locales de 2027</b> publicados oficialmente; '
+                      f'{n_pen} siguen pendientes y no les ponemos fecha hasta que salga en el boletín o en el acuerdo del pleno.')
+            if ES else "")
+    main = (f'<div class="hero wrap">{B.crumbs_html(crumbs)}<h1>{E(h1)}</h1>{lead}{ctx}</div>'
+            f'<div class="wrap body narrow">{guia.hub_notes(cities) if ES else ""}{"".join(blocks)}{B.ad("hub")}{faq_html(qas)}</div>')
     head = B.head_html(title, desc, "festivos-locales/", f"{B.SITE}{B.ASSETS}og/espana.png", ld(crumbs_ld(crumbs), faq_ld(qas)), ads=False)
     return B.page(head, "pg", "locals", main, DATA, js=False)
 

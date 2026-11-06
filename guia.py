@@ -314,6 +314,39 @@ def city_notes(x, cities):
     return B.section("claves", f'Qué cambian los festivos locales de {E(name)}', notes(items))
 
 
+# ---------------------------------------------------------------- /festivos-locales/
+
+def hub_notes(cities):
+    from collections import Counter
+    days = [(x, h) for x in cities for h in x["holidays"]]
+    by_date = Counter(h["date"] for _, h in days)
+    top = by_date.most_common(4)
+
+    def label(d):
+        names = Counter(h["name"] for _, h in days if h["date"] == d and not h["name"].startswith("Fiesta local"))
+        return f' ({E(next(iter(names)))})' if len(names) == 1 else ""  # only when every city names it the same
+
+    wd = Counter(D(h["date"]).weekday() for _, h in days)
+    long_ = wd[0] + wd[4]
+    bridge = 0
+    for x, h in days:
+        i = idx(h["date"])
+        it = next((b for b in B.all_breaks(x["hols"]) if b["s"] <= i <= b["e"]), None)
+        bridge += bool(it and it["cost"])
+    months = Counter(D(h["date"]).month for _, h in days)
+    m, mn = months.most_common(1)[0]
+    items = [
+        "<b>Los días más repetidos:</b> " + "; ".join(f'{B.dm(d)}{label(d)}, en {n} municipios' for d, n in top) + ".",
+        f'<b>En lunes o viernes:</b> {long_} de los {len(days)} días locales, que dan un fin de semana largo sin coger nada.',
+        f'<b>Con puente:</b> {bridge} días locales caen en martes o jueves (o junto a otro festivo) y hacen puente cogiendo 1 o 2 días.',
+        f'<b>En sábado:</b> {wd[5]} días locales; para quien trabaja de lunes a viernes no suman un día libre.',
+        f'<b>El mes con más fiestas locales:</b> {B.T["_months"][m - 1]}, con {mn}.',
+    ]
+    return B.section("claves", "Lo que dicen los festivos locales de 2027", notes(items)
+                     + f'<p class="m">Calculado con los {len(cities)} municipios publicados. '
+                       f'<a href="{B.BASE}como-se-fijan-los-festivos/">Cómo se fijan los festivos locales</a></p>')
+
+
 # ---------------------------------------------------------------- /puentes/
 
 def page_puentes(write, cities):
