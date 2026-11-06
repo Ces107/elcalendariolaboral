@@ -104,7 +104,7 @@ ES = {
     "desc_privacy": "Privacidad de El Calendario Laboral: no guardamos datos tuyos en servidores.",
     "privacy_p1": "No guardamos ningún dato tuyo en servidores. Tu comunidad, tus festivos locales y tus vacaciones se quedan en tu navegador o en tu móvil, y puedes borrarlos cuando quieras.",
     "privacy_ads": "No hay cuentas, ni cookies propias, ni analítica. La web muestra anuncios de Google AdSense. Google puede usar cookies o identificadores para servir y medir anuncios. En la UE, el EEE y el Reino Unido, un aviso de consentimiento de Google te pregunta antes de mostrar anuncios personalizados.",
-    "privacy_p3": "La tipografía se carga desde Google Fonts. «Añadir a Google Calendar» te lleva a Google, con su propia política de privacidad. El archivo .ics se crea en tu dispositivo.",
+    "privacy_p3": "La tipografía se sirve desde esta misma web. «Añadir a Google Calendar» te lleva a Google, con su propia política de privacidad. El archivo .ics se crea en tu dispositivo.",
     "privacy_links": 'Cómo usa Google los datos: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">policies.google.com</a>. Tus preferencias de anuncios: <a href="https://adssettings.google.com" rel="noopener">adssettings.google.com</a>.',
     "og_l1": "Calendario laboral 2027", "og_home": "Festivos y puentes", "og_home_sub": "19 comunidades · BOE 13-10-2026",
     "og_sub": "{n} festivos · {p} puentes",
@@ -434,11 +434,23 @@ AD_SLOTS = {  # position -> AdSense display unit id (data-ad-slot)
 }
 
 
+# Ads only on Spanish pages: Galician and Basque are not AdSense languages, and the Catalan pages are translations
+# without their own editorial text (seo/AUDIT-2026-11.md). Add "ca" here once AdSense has reviewed the site.
+ADS_LANGS = {"es"}
+ADS_PAGE = True  # set by head_html(): False on noindex, legal, tool and listing pages (no loader, no units)
+# Site owner and contact (sobre, contacto, aviso legal, privacidad). No ID number, no address, no photo.
+OWNER = "César Pereiro"
+EMAIL = "helping.info.agent@gmail.com"
+# Last substantive change of the page text (home, comunidades, ciudades, guides). Bump only with real content changes:
+# it is the visible "Actualizado", dateModified and the sitemap lastmod (never the build date).
+CONTENT_UPDATED = "2026-11-06"
+
+
 def ad(pos):
-    """One manual ad unit, or nothing while ADS_ON is False or the slot id is missing. Never inside the calendar grid,
-    the share card, print or the widget embeds (those pages don't call this)."""
+    """One manual ad unit, or nothing while ADS_ON is False, the slot id is missing or the page has no ads. Never
+    inside the calendar grid, the share card, print or the widget embeds (those pages don't call this)."""
     slot = AD_SLOTS.get(pos)
-    if not (ADS_ON and slot):
+    if not (ADS_ON and slot and ADS_PAGE):
         return ""
     return (f'<aside class="ad ad-{pos}" aria-label="Publicidad"><p class="ad-l">Publicidad</p>'
             f'<ins class="adsbygoogle" style="display:block" data-ad-client="{AD_CLIENT}" data-ad-slot="{slot}" '
@@ -492,7 +504,7 @@ def wordmark():
 def header_html(here=""):
     """Wordmark, nav (Comunidades menu, Festivos locales, Puentes) and the language menu."""
     regs = "".join(f'<a href="{BASE}{r["slug"]}/">{E(r["name"])}</a>' for r in REGIONS)
-    pts_href = "#puentes" if here == "app" else f"{BASE}#puentes"
+    pts_href = f"{BASE}puentes/" if LANG == "es" else ("#puentes" if here == "app" else f"{BASE}#puentes")
     return (f'<header class="hd"><div class="wrap hd-in">{wordmark()}'
             f'<nav class="nav" id="nav">'
             f'<details class="dd dd-reg"><summary>{t("nav_regions")}{CHEV}</summary><div class="menu menu-reg">{regs}</div></details>'
@@ -532,23 +544,31 @@ def footer_html(data):
             + ('<li><a href="https://www.amazon.es/s?k=Calma+Planners" target="_blank" rel="sponsored noopener">'
                'Agenda 2027 en papel, con estos festivos →</a></li>' if LANG == "es" else "")
             + f'<li><a href="#inst" data-install hidden>{INSTALL.get(LANG, INSTALL["es"])[0]}</a></li>'
-            f'<li><a href="{BASE}privacidad/">{t("privacy")}</a></li></ul>'
+            + "".join(f'<li><a href="{ASSETS}{p}"{"" if LANG == "es" else " hreflang=es lang=es"}>{n}</a></li>'
+                      for p, n in (("sobre/", "Quién hace esta web"), ("contacto/", "Contacto"), ("aviso-legal/", "Aviso legal")))
+            + f'<li><a href="{BASE}privacidad/">{t("privacy")}</a></li></ul>'
             f'<p class="ft-lang">{lang_links()}</p></section>'
             f'</div><div class="wrap ft-b">© 2026 {HOST}</div></footer>')
 
 
-def head_html(title, desc, path, og_img, extra="", hreflang=True, langs=None):
+def head_html(title, desc, path, og_img, extra="", hreflang=True, langs=None, index=True, ads=True, alts=True):
     """path: page path below the language base ('' for the home). hreflang for every language in `langs` (default all)
-    + x-default; a page in one language only gets no alternates."""
-    global PAGE_PATH, PAGE_LANGS
+    + x-default; a page in one language only gets no alternates.
+    index=False (or hreflang=False): noindex, no canonical, no alternates, no ads; pages.write() keeps it out of the
+    sitemap. alts=False: indexable, but no hreflang (the other languages are noindex), the language menu still links
+    them. ads=False: no AdSense loader (so no Auto ads either) and no manual units."""
+    global PAGE_PATH, PAGE_LANGS, ADS_PAGE
     PAGE_PATH = path
     PAGE_LANGS = langs or LANGS
+    index = index and hreflang
+    ADS_PAGE = ads and index and LANG in ADS_LANGS
     canonical = URL + path
-    alts = "".join(f'<link rel="alternate" hreflang="{x}" href="{SITE}{lang_base(x)}{path}">' for x in PAGE_LANGS) if hreflang and len(PAGE_LANGS) > 1 else ""
-    if len(PAGE_LANGS) > 1 and hreflang:
+    show = index and alts and len(PAGE_LANGS) > 1
+    alts = "".join(f'<link rel="alternate" hreflang="{x}" href="{SITE}{lang_base(x)}{path}">' for x in PAGE_LANGS) if show else ""
+    if show:
         alts += f'<link rel="alternate" hreflang="x-default" href="{SITE}{lang_base("es")}{path}">'
     canon = (f'<link rel="canonical" href="{canonical}"><meta name="robots" content="max-image-preview:large,max-snippet:-1">'
-             if hreflang else '<meta name="robots" content="noindex">')
+             if index else '<meta name="robots" content="noindex,follow">')
     return f"""<!doctype html>
 <html lang="{LANG}" data-base="{BASE}" data-assets="{ASSETS}">
 <head>
@@ -571,10 +591,9 @@ def head_html(title, desc, path, og_img, extra="", hreflang=True, langs=None):
 <link rel="manifest" href="{ASSETS}manifest.webmanifest">
 <link rel="icon" href="{ASSETS}icons/icon-192.png" type="image/png">
 <link rel="apple-touch-icon" href="{ASSETS}icons/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&display=swap">
+<link rel="preload" href="{ASSETS}fonts/public-sans-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{ASSETS}app.css?v={{CSSV}}">
-{ADSENSE}
+{ADSENSE if ADS_PAGE else ""}
 {extra}
 </head>
 """
@@ -784,7 +803,7 @@ def city_select(r, cities, pending, current=None):
 
 # ---------------------------------------------------------------- app page (region and city)
 
-def app_main(data, r, city=None, hero_extra="", more="", cities=(), pending=()):
+def app_main(data, r, city=None, hero_extra="", more="", cities=(), pending=(), lead=""):
     """Region or city page: hero with pickers, calendar, puentes, planner, full list, then `more` (locals, FAQ)."""
     slug = r["slug"]
     names = R(r)
@@ -810,7 +829,7 @@ def app_main(data, r, city=None, hero_extra="", more="", cities=(), pending=()):
         zopts = (f'<option value="">{t("pick_island")}</option>' if is_can else "") + "".join(
             f'<option value="{o["slug"]}">{E(t("zone_general") if o["slug"] == "general" else o["name"])}</option>' for o in zone["options"])
         sel += f'<div class="field"><label for="zone">{t("island") if is_can else t("zone")}</label><select id="zone">{zopts}</select></div>'
-    hero = (f'<div class="hero wrap">{crumbs}<h1>{E(h1)}</h1>{ctx}{hero_extra}<p class="next" id="next" hidden></p>'
+    hero = (f'<div class="hero wrap">{crumbs}<h1>{E(h1)}</h1>{lead}{ctx}{hero_extra}<p class="next" id="next" hidden></p>'
             f'<div class="pickers">{sel}</div></div>')
 
     kinds = ["n", "r"] + (["i"] if slug == "canarias" else []) + ["l"]
@@ -853,8 +872,11 @@ def privacy_page(data):
             f'<p>{E(t("privacy_p1"))}</p><p>{E(t("privacy_ads"))}</p><p>{E(t("privacy_p3"))}</p>'
             f'<p>{t("privacy_links")}</p>'
             f'<p>{t("data_source").split(":")[0]}: {link}, {E(src["boe"])}. '
-            f'<a href="mailto:cesar0407p@gmail.com">cesar0407p@gmail.com</a></p></div>')
-    head = head_html(t("title_privacy"), t("desc_privacy"), "privacidad/", f"{SITE}{ASSETS}og/espana.png")
+            f'<a href="mailto:{EMAIL}">{EMAIL}</a></p>'
+            + (f'<p>Responsable: {OWNER}. Más datos en el <a href="{ASSETS}aviso-legal/">aviso legal</a> y en '
+               f'<a href="{ASSETS}sobre/">quién hace esta web</a>.</p>' if LANG == "es" else "")
+            + '</div>')
+    head = head_html(t("title_privacy"), t("desc_privacy"), "privacidad/", f"{SITE}{ASSETS}og/espana.png", ads=False)
     return page(head, "pg", "", main, data, js=False)
 
 

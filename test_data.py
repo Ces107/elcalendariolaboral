@@ -78,11 +78,28 @@ import re  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent
 SKIP = {".git", ".well-known", "data", "seo", "icons", "og", "ics", "csv", "privacidad", "__pycache__", "embed"}
-pages = sorted(p for p in ROOT.rglob("index.html") if not SKIP & set(p.relative_to(ROOT).parts[:-1]))
+allp = sorted(p for p in ROOT.rglob("index.html") if not SKIP & set(p.relative_to(ROOT).parts[:-1]))
+noidx = [p for p in allp if 'name="robots" content="noindex' in p.read_text("utf-8")]
+pages = [p for p in allp if p not in noidx]
 sm = (ROOT / "sitemap.xml").read_text("utf-8")
 locs = re.findall(r"<loc>([^<]+)</loc>", sm)
 site = locs[0].rstrip("/") if locs else ""
 paths_in_sm = {u[len(site):] for u in locs}
+ADS = 'adsbygoogle'
+for p in noidx:  # noindex: out of the sitemap, no canonical, no hreflang, no ads (seo/AUDIT-2026-11.md)
+    rel = "/" + "/".join(p.relative_to(ROOT).parts[:-1]) + "/"
+    h = p.read_text("utf-8")
+    check(rel not in paths_in_sm, f"{rel}: noindex pero en el sitemap")
+    check('rel="canonical"' not in h and "hreflang=\"" not in h.split("</head>")[0] and ADS not in h, f"{rel}: noindex con canonical, hreflang o anuncios")
+for p in allp:  # AdSense only on Spanish pages (gl/eu are not AdSense languages)
+    if p.relative_to(ROOT).parts[0] in ("ca", "gl", "eu"):
+        check(ADS not in p.read_text("utf-8"), f"{p.relative_to(ROOT)}: anuncios fuera del castellano")
+check(not any("fonts.googleapis" in p.read_text("utf-8") for p in allp[:40]), "Google Fonts: la tipografía se sirve desde /fonts/")
+for path in ("sobre/", "contacto/", "aviso-legal/", "puentes/", "como-se-fijan-los-festivos/"):
+    h = (ROOT / path / "index.html").read_text("utf-8")
+    check(f"/{path}" in paths_in_sm, f"/{path}: falta en el sitemap")
+    check(("adsbygoogle" in h) == (path in ("puentes/", "como-se-fijan-los-festivos/")), f"/{path}: anuncios")
+check(len(noidx) >= 3 * 150, f"solo {len(noidx)} páginas noindex: las de ciudad en ca/gl/eu deben serlo")
 for p in pages:
     rel = "/" + "/".join(p.relative_to(ROOT).parts[:-1]) + ("/" if len(p.relative_to(ROOT).parts) > 1 else "")
     check(rel in paths_in_sm, f"{rel} no está en sitemap.xml")

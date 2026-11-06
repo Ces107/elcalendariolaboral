@@ -76,5 +76,5 @@ def write_page(data, write, cities):
     docs = {"@type": "ItemList", "name": h1, "numberOfItems": len(data["regions"]), "itemListElement": [
         {"@type": "ListItem", "position": k + 1, "name": f'Calendario laboral 2027 {r["name"]} PDF',
          "url": f'{B.SITE}{B.ASSETS}{file_of(r["slug"])}'} for k, r in enumerate(data["regions"])]}
-    head = B.head_html(title, desc, PATH, f"{B.SITE}{B.ASSETS}og/espana.png", pages.ld(pages.crumbs_ld(crumbs), docs), langs=ONLY)
+    head = B.head_html(title, desc, PATH, f"{B.SITE}{B.ASSETS}og/espana.png", pages.ld(pages.crumbs_ld(crumbs), docs), langs=ONLY, ads=False)
     write(PATH, B.page(head, "pg", "", main, data, js=False), data["updated"], ONLY)

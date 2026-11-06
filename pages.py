@@ -12,7 +12,10 @@ import html
 import json
 import re
 
+import sys
+
 import build as B
+import guia
 from build import E, t, tn
 
 SCHEMA = "https://schema.org"
@@ -102,6 +105,8 @@ def write(path, page, lastmod, langs=None):
     d = B.OUT / path
     d.mkdir(parents=True, exist_ok=True)
     (d / "index.html").write_text(_fix(page), "utf-8", newline="\n")
+    if 'name="robots" content="noindex' in page:
+        return  # reachable, but not in the sitemap
     _written.append((path, lastmod, langs) if langs else (path, lastmod))
 
 
@@ -203,8 +208,12 @@ def city_page(x, siblings, mine, pend):
                       x["path"], c["name"], [DATA["source"]["url"], src["url"]], [("text/calendar", f"ics/{key}.ics"), ("text/csv", f"csv/{key}.csv")]),
            faq_ld(qas)]
     ctx = {**x, "crumbs": B.crumbs_html(crumbs)}
-    head = B.head_html(title, desc, x["path"], f"{B.SITE}{B.ASSETS}og/{key}.png", ld(*lds))
-    main = B.app_main(DATA, r, ctx, srcline, near + faq_html(qas), mine, pend)
+    # Spanish: indexable, no hreflang. ca/gl/eu: the same template translated, kept for users but noindex (seo/AUDIT-2026-11.md)
+    head = B.head_html(title, desc, x["path"], f"{B.SITE}{B.ASSETS}og/{key}.png", ld(*lds), alts=False, index=ES)
+    upd_date = guia.lastmod(src["checked"], DATA["updated"], B.CONTENT_UPDATED if ES else None)
+    lead = guia.city_lead(x) + guia.upd(upd_date) if ES else ""
+    notes = guia.city_notes(x, ALL_CITIES) if ES else ""
+    main = B.app_main(DATA, r, ctx, srcline, notes + near + faq_html(qas), mine, pend, lead)
     return B.page(head, "app", "app", main, DATA, B.app_attrs(r, ctx))
 
 
@@ -254,7 +263,7 @@ def hub_locales(loc, regions, cities):
     crumbs = [(t("spain"), ""), (h1, "festivos-locales/")]
     main = (f'<div class="hero wrap">{B.crumbs_html(crumbs)}<h1>{E(h1)}</h1>{ctx}</div>'
             f'<div class="wrap body narrow">{"".join(blocks)}{B.ad("hub")}{faq_html(qas)}</div>')
-    head = B.head_html(title, desc, "festivos-locales/", f"{B.SITE}{B.ASSETS}og/espana.png", ld(crumbs_ld(crumbs), faq_ld(qas)))
+    head = B.head_html(title, desc, "festivos-locales/", f"{B.SITE}{B.ASSETS}og/espana.png", ld(crumbs_ld(crumbs), faq_ld(qas)), ads=False)
     return B.page(head, "pg", "locals", main, DATA, js=False)
 
 
@@ -322,7 +331,9 @@ def region_page(r, cities, pending):
                       [("text/calendar", f"ics/{slug}.ics"), ("text/csv", f"csv/{slug}.csv")]),
            faq_ld(qas)]
     head = B.head_html(title, desc, f"{slug}/", f"{B.SITE}{B.ASSETS}og/{slug}.png", ld(*lds))
-    main = B.app_main(DATA, r, None, "", locs + faq_html(qas), cities, pending)
+    lead = (guia.region_lead(r) if ES else "") + guia.upd(guia.lastmod(DATA["updated"], B.CONTENT_UPDATED if ES else None))
+    notes = guia.region_notes(r, ALL_CITIES) if ES else ""
+    main = B.app_main(DATA, r, None, "", notes + locs + faq_html(qas), cities, pending, lead)
     return B.page(head, "app", "app", main, DATA, B.app_attrs(r))
 
 
@@ -355,8 +366,9 @@ def home_page():
     sp = {"region": t("spain"), "region_in": t("in_spain"), "region_of": t("spain")}
     chips = "".join(f'<li><a href="{B.BASE}{r["slug"]}/">{E(r["name"])}</a></li>' for r in DATA["regions"])
     n_regions = B.I18N["ui"]["n_regions"][B.LANG] if B.I18N else "19 comunidades"
-    hero = (f'<div class="hero wrap"><h1>{E(t("h1"))}</h1><p class="ctx">{E(n_regions)} · {tn("n_nat", len(nat))} · '
-            f'<a href="{DATA["source"]["url"]}" rel="noopener">{t("data_source")}</a></p><p class="next" id="next" hidden></p>'
+    upd = guia.upd(guia.lastmod(DATA["updated"], B.CONTENT_UPDATED if ES else None), src=False)
+    hero = (f'<div class="hero wrap"><h1>{E(t("h1"))}</h1>{guia.home_lead() if ES else ""}<p class="ctx">{E(n_regions)} · {tn("n_nat", len(nat))} · '
+            f'<a href="{DATA["source"]["url"]}" rel="noopener">{t("data_source")}</a></p>{upd}<p class="next" id="next" hidden></p>'
             f'<div class="pickers">{B.region_select(None)}</div></div>')
     cal_sec = B.section("calendario", t("h_cal"), B.legend_html(["n"]) + B.year_html(nat), B.tools_html(), "cal")
     school = (f'<p class="more-l"><a href="{B.BASE}calendario-escolar/">Calendario escolar 2026-2027</a> · '
@@ -368,12 +380,11 @@ def home_page():
     prow = "".join(B.pts_row(it) for it in B.all_breaks(nat))
     vac = f'<p class="more-l"><a href="{B.BASE}vacaciones-2027/">Maximiza tus vacaciones 2027 →</a></p>' if ES else ""
     pts_sec = B.section("puentes", E(B.fill(t("h_pts"), sp)), f'<table class="tbl pts">{B.pts_head()}<tbody>{prow}</tbody></table>{vac}')
-    main = f'{hero}<div class="wrap body">{cal_sec}{B.ad("cal")}{reg_sec}{hol_sec}{pts_sec}{faq_html(qas)}</div>{B.POP}'
+    notes = guia.home_notes() if ES else ""
+    main = f'{hero}<div class="wrap body">{cal_sec}{B.ad("cal")}{reg_sec}{hol_sec}{pts_sec}{notes}{faq_html(qas)}</div>{B.POP}'
     lds = [{"@type": "WebSite", "name": t("site_name"), "alternateName": B.HOST, "url": B.URL, "inLanguage": B.IN_LANG[B.LANG]},
-           {"@type": "Organization", "name": t("site_name"), "url": B.URL, "logo": f"{B.SITE}{B.ASSETS}icons/icon-512.png"},
-           {"@type": "WebApplication", "name": t("site_name") + " 2027", "url": B.URL, "applicationCategory": "UtilitiesApplication",
-            "operatingSystem": "Web, Android", "inLanguage": B.LANG, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
-            "description": desc},
+           {"@type": "Organization", "name": t("site_name"), "url": f"{B.SITE}{B.ASSETS}", "logo": f"{B.SITE}{B.ASSETS}icons/icon-512.png",
+            "email": B.EMAIL, "publishingPrinciples": f"{B.SITE}{B.ASSETS}sobre/"},
            faq_ld(qas)]
     head = B.head_html(title, desc, "", f"{B.SITE}{B.ASSETS}og/espana.png", ld(*lds))
     return B.page(head, "home", "", main, DATA)
@@ -382,30 +393,35 @@ def home_page():
 # ---------------------------------------------------------------- entry points
 
 DATA = None
+ALL_CITIES = []
 
 
 def write_pages(data, fix):
     """Write every page of this language. Returns [(path, lastmod)] for the sitemap (privacy is left out)."""
-    global DATA, _fix
+    global DATA, _fix, ALL_CITIES
     DATA, _fix = data, fix
+    guia.init(sys.modules[__name__])
     _written.clear()
     regions = {r["slug"]: r for r in data["regions"]}
     loc = load_locales()
     cities = published_cities(loc, regions)
-    write("", home_page(), data["updated"])
+    ALL_CITIES = cities
+    upd = guia.lastmod(data["updated"], B.CONTENT_UPDATED)
+    write("", home_page(), upd)
     for r in data["regions"]:
         mine = [x for x in cities if x["r"]["slug"] == r["slug"]]
         pend = [c["name"] for c in loc["cities"] if c["region"] == r["slug"] and (c["status"] not in PUBLISHED or not c["holidays"])]
-        write(f'{r["slug"]}/', region_page(r, mine, pend), data["updated"])
+        write(f'{r["slug"]}/', region_page(r, mine, pend), upd)
     for x in cities:
         sib = [s for s in cities if s["r"]["slug"] == x["r"]["slug"] and s is not x][:10]
         mine = [s for s in cities if s["r"]["slug"] == x["r"]["slug"]]
         pend = [c["name"] for c in loc["cities"] if c["region"] == x["r"]["slug"] and (c["status"] not in PUBLISHED or not c["holidays"])]
-        write(x["path"], city_page(x, sib, mine, pend), x["c"]["source"]["checked"])
+        write(x["path"], city_page(x, sib, mine, pend), guia.lastmod(x["c"]["source"]["checked"], upd), ["es"])
     write("festivos-locales/", hub_locales(loc, regions, cities), loc["updated"])
     import utilidades
     utilidades.write_pages(data, write, cities)
     if ES:
+        guia.write_pages(write, cities, loc)
         import escolar
         escolar.write_pages(data, write)
         import widget

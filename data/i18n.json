@@ -1288,10 +1288,10 @@
    "eu": "Googlek datuak nola erabiltzen dituen: <a href=\"https://policies.google.com/technologies/partner-sites?hl=eu\" rel=\"noopener\">policies.google.com</a>. Zure iragarki-hobespenak: <a href=\"https://adssettings.google.com/?hl=eu\" rel=\"noopener\">adssettings.google.com</a>."
   },
   "privacy_p3": {
-   "es": "La tipografía se carga desde Google Fonts. «Añadir a Google Calendar» te lleva a Google, con su propia política de privacidad. El archivo .ics se crea en tu dispositivo.",
-   "ca": "La tipografia es carrega des de Google Fonts. «Afegeix a Google Calendar» et porta a Google, que té la seva pròpia política de privadesa. El fitxer .ics es crea al teu dispositiu.",
-   "gl": "A tipografía cárgase desde Google Fonts. «Engadir a Google Calendar» lévate a Google, coa súa propia política de privacidade. O ficheiro .ics créase no teu dispositivo.",
-   "eu": "Letra-tipoa Google Fonts-etik kargatzen da. «Gehitu Google Calendar-era» aukerak Googlera eramango zaitu, eta Googlek bere pribatutasun-politika du. .ics fitxategia zure gailuan sortzen da."
+   "es": "La tipografía se sirve desde esta misma web. «Añadir a Google Calendar» te lleva a Google, con su propia política de privacidad. El archivo .ics se crea en tu dispositivo.",
+   "ca": "La tipografia es serveix des d'aquest mateix web. «Afegeix a Google Calendar» et porta a Google, que té la seva pròpia política de privadesa. El fitxer .ics es crea al teu dispositiu.",
+   "gl": "A tipografía sérvese desde esta mesma web. «Engadir a Google Calendar» lévate a Google, coa súa propia política de privacidade. O ficheiro .ics créase no teu dispositivo.",
+   "eu": "Letra-tipoa webgune honetatik bertatik kargatzen da. «Gehitu Google Calendar-era» aukerak Googlera eramango zaitu, eta Googlek bere pribatutasun-politika du. .ics fitxategia zure gailuan sortzen da."
   },
   "privacy_meta": {
    "es": "Privacidad de El Calendario Laboral: no guardamos datos tuyos en servidores.",

@@ -206,7 +206,7 @@ def region_page(f, fs, write):
                     f"Sí: elige {what} y el plan suma sus festivos" + (f" ({nc} municipios de {E(name)} con festivos locales publicados)." if nc else ".")))
     import pages
     lds = pages.ld(pages.crumbs_ld(crumbs), pages.faq_ld(qas), app_ld(h1, path, desc))
-    head = B.head_html(title, desc, path, f"{B.SITE}{B.ASSETS}og/vacaciones-2027-{slug}.png", lds, langs=ONLY)
+    head = B.head_html(title, desc, path, f"{B.SITE}{B.ASSETS}og/vacaciones-2027-{slug}.png", lds, langs=ONLY, ads=False)
     cfg = {**base_cfg(), "region": slug, "name": name, "hols": [[h["date"], h["name"], h["kind"]] for h in hols],
            "zones": zones_of(slug), "cities": cities_of(slug)}
     main = (f'{hero}<div class="wrap body">{B.ad("vac")}{cal}{esc_sec}{rank}{pages.faq_html(qas)}'
@@ -255,7 +255,7 @@ def hub_page(fs, write):
            QA_HOW, QA_NAT]
     import pages
     lds = pages.ld(pages.crumbs_ld(crumbs), pages.faq_ld(qas), app_ld(h1, PATH, desc))
-    head = B.head_html(title, desc, PATH, f"{B.SITE}{B.ASSETS}og/vacaciones-2027.png", lds, langs=ONLY)
+    head = B.head_html(title, desc, PATH, f"{B.SITE}{B.ASSETS}og/vacaciones-2027.png", lds, langs=ONLY, ads=False)
     cfg = {**base_cfg(), "hub": True, "regions": [r["slug"] for r in DATA["regions"]]}
     main = f'{hero}<div class="wrap body narrow">{rank}{B.ad("hub")}{pages.faq_html(qas)}</div>{vac_script(cfg)}'
     write(PATH, B.page(head, "pg vac", "vac", main, DATA, js=False), DATA["updated"], ONLY)

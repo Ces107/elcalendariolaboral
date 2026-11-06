@@ -87,7 +87,10 @@ if not B.ADS_ON:
 B.ADS_ON, B.AD_SLOTS["cal"] = True, "1234567890"
 u = B.ad("cal")
 check('data-ad-slot="1234567890"' in u and "Publicidad" in u and 'class="ad ad-cal"' in u, "ad unit markup")
+B.AD_SLOTS["list"] = ""
 check(B.ad("list") == "", "ad without slot id must be empty")
+B.ADS_PAGE = False
+check(B.ad("cal") == "", "ad on a page without ads (noindex, legal, tool) must be empty")
 css = (ROOT / "app.css").read_text("utf-8")
 check(re.search(r"@media print \{ \.ad \{ display: none", css), "ads hidden in print")
 

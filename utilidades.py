@@ -546,7 +546,7 @@ def week_page(data, write):
     main = (f'{hero}<div class="wrap body narrow">{secs[0]}{B.ad("hub")}{secs[1]}{fh}</div>'
             + js_cfg({**base_cfg(), "page": "week", "left": L("left")}))
     head = B.head_html(L("wk_title"), L("wk_desc"), PATH_WK, f"{B.SITE}{B.ASSETS}og/espana.png", ld(cld, fld),
-                       langs=langs_arg(ONLY_WK))
+                       langs=langs_arg(ONLY_WK), ads=False)
     write(PATH_WK, B.page(head, "pg", "", main, data, js=False), UPDATED, langs_arg(ONLY_WK))
 
 
@@ -694,7 +694,7 @@ def dh_page(data, write, cities):
           "k": {x: B.t(B.KINDS[x]) for x in B.KINDS}, "s": {x: L(x) for x in keys}}
     main = f'{hero}<div class="wrap body narrow">{hol_sec}{B.ad("hub")}{fh}</div>' + js_cfg(js)
     head = B.head_html(L("dh_title"), L("dh_desc"), PATH_DH, f"{B.SITE}{B.ASSETS}og/espana.png",
-                       ld(cld, app_ld(h1, PATH_DH, L("dh_desc")), fld), langs=langs_arg(ONLY_DH))
+                       ld(cld, app_ld(h1, PATH_DH, L("dh_desc")), fld), langs=langs_arg(ONLY_DH), ads=False)
     write(PATH_DH, B.page(head, "pg vac", "", main, data, js=False), UPDATED, langs_arg(ONLY_DH))
 
 
