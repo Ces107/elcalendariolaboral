@@ -4,6 +4,14 @@ Code: `build.py` → `ADS_ON`, `AD_CLIENT`, `AD_SLOTS`, `ad(pos)`. While `ADS_ON
 The AdSense loader script (`ADSENSE` in `head_html`) is already on every page for site verification; it shows nothing
 unless Auto ads are on in the AdSense UI.
 
+## Where ads may appear (since 2026-11-06, AdSense "low value content" fix)
+
+Only Spanish pages with editorial content get the loader (so Auto ads too) and the units: home, comunidades, Spanish
+city pages, /puentes/, /como-se-fijan-los-festivos/, /calendario-escolar/ (+ regions, loader only),
+/dias-laborables-2027/, /cambio-de-hora/. Never: ca/gl/eu (`build.ADS_LANGS`; gl and eu are not AdSense languages),
+noindex pages, the vacation planner, PDF hub, festivos-locales hub, widget, /semana/, /dias-habiles/, privacy, legal,
+404 (`head_html(..., ads=False)`). See `seo/AUDIT-2026-11.md`.
+
 ## Positions
 
 | `AD_SLOTS` key | Where | Pages |
