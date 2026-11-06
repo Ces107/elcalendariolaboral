@@ -502,9 +502,9 @@ def crumbs(name, path):
 
 
 def app_ld(name, path, desc):
-    return {"@type": "WebApplication", "name": name, "url": B.URL + path, "applicationCategory": "UtilitiesApplication",
-            "operatingSystem": "Web", "inLanguage": B.IN_LANG[B.LANG], "isAccessibleForFree": True,
-            "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "description": desc}
+    return {"@type": "WebPage", "name": name, "url": B.URL + path,
+            "inLanguage": B.IN_LANG[B.LANG],
+            "description": desc}
 
 
 def card(big_id, big, label, sub, label_first=False, pre=""):

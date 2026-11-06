@@ -127,9 +127,9 @@ def widget_page(es, write):
     desc = ("Pon el calendario laboral 2027 de tu comunidad o tu ciudad en tu web: un widget gratis, ligero y sin anuncios, "
             "con los festivos oficiales del BOE.")
     import pages
-    lds = pages.ld(pages.crumbs_ld(crumbs), {"@type": "WebApplication", "name": h1, "url": B.URL + path, "applicationCategory": "UtilitiesApplication",
-                                             "operatingSystem": "Web", "inLanguage": "es-ES", "isAccessibleForFree": True,
-                                             "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "description": desc})
+    lds = pages.ld(pages.crumbs_ld(crumbs), {"@type": "WebPage", "name": h1, "url": B.URL + path,
+                                             "inLanguage": "es-ES",
+                                             "description": desc})
     head = B.head_html(title, desc, path, f"{B.SITE}{B.ASSETS}og/espana.png", lds, langs=ONLY, ads=False)
     write(path, B.page(head, "pg wgt", "", main, B_DATA, js=False), B_DATA["updated"], ONLY)
 

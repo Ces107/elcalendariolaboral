@@ -220,9 +220,9 @@ def pts_head():
 
 
 def app_ld(name, path, desc):
-    return {"@type": "WebApplication", "name": name, "url": B.URL + path, "applicationCategory": "UtilitiesApplication",
-            "operatingSystem": "Web", "inLanguage": "es-ES", "isAccessibleForFree": True,
-            "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "description": desc}
+    return {"@type": "WebPage", "name": name, "url": B.URL + path,
+            "inLanguage": "es-ES",
+            "description": desc}
 
 
 def summary(fs):
