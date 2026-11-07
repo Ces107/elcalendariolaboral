@@ -60,8 +60,14 @@
     });
   }
 
-  if ($('region')) $('region').addEventListener('change', function () { if (this.value) location.href = BASE + this.value + '/'; });
-  if ($('city')) $('city').addEventListener('change', function () { location.href = this.value; });
+  var CSEL = $('city'), HOMESEL = CSEL && CSEL.hasAttribute('data-home');
+  if ($('region')) $('region').addEventListener('change', function () {
+    if (!this.value) return;
+    var v = this.value;
+    if (!HOMESEL) { location.href = BASE + v + '/'; return; }
+    fillCity(CSEL, v, function (ok) { if (!ok) location.href = BASE + v + '/'; else { CSEL.disabled = false; CSEL.focus(); } });
+  });
+  if (CSEL) CSEL.addEventListener('change', function () { if (this.value) location.href = this.value; });
 
   var ASSETS0 = html.getAttribute('data-assets') || BASE;
   var esc0 = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
@@ -173,6 +179,37 @@
       });
     });
   });
+
+  /* ------------------------------------------------------------ selector de municipio: todos los de la comunidad, por provincia */
+  function fillCity(sel, region, done) {
+    loadIdx(function () {
+      var ri = -1;
+      SIDX.r.forEach(function (r, k) { if (r[1] === region + '/') ri = k; });
+      if (ri < 0) { if (done) done(false); return; }
+      var cur = location.pathname, groups = {};
+      SIDX.rows.forEach(function (r) {
+        if (r.s !== 'm' || SIDX.p[r.pi][1] !== ri) return;
+        (groups[r.pi] = groups[r.pi] || []).push(r);
+      });
+      var coll = window.Intl && Intl.Collator ? new Intl.Collator('es').compare : function (a, b) { return a < b ? -1 : 1; };
+      var h = '<option value="' + ASSETS0 + region + '/">' + esc0(SIDX.r[ri][0]) + '</option>';
+      Object.keys(groups).sort(function (a, b) { return coll(SIDX.p[a][0], SIDX.p[b][0]); }).forEach(function (pi) {
+        var p = SIDX.p[pi];
+        h += '<optgroup label="' + esc0(p[0] === SIDX.r[ri][0] ? p[0] : SL[1] + ' de ' + p[0]) + '">' + groups[pi].sort(function (a, b) { return coll(a.n, b.n); }).map(function (r) {
+          var u = ASSETS0 + r.p;
+          return '<option value="' + u + '"' + (cur === u ? ' selected' : '') + '>' + esc0(r.n) + (r.ok ? '' : ' · ' + SL[4]) + '</option>';
+        }).join('') + '</optgroup>';
+      });
+      sel.innerHTML = h;
+      if (done) done(true);
+    });
+  }
+  if (CSEL && !HOMESEL && CSEL.getAttribute('data-region')) {
+    var fillNow = function () { if (!CSEL._f) { CSEL._f = 1; fillCity(CSEL, CSEL.getAttribute('data-region')); } };
+    ['focus', 'pointerdown', 'touchstart'].forEach(function (ev) { CSEL.addEventListener(ev, fillNow, { passive: true }); });
+    var idle = window.requestIdleCallback || function (f) { setTimeout(f, 1500); };
+    window.addEventListener('load', function () { idle(fillNow, { timeout: 3000 }); });
+  }
 
   /* ------------------------------------------------------------ compartir */
   all('[data-share]').forEach(function (b) {

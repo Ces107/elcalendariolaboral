@@ -136,6 +136,18 @@ def prov_links(region, province=None):
             + "</p>")
 
 
+def quick_access(r):
+    """Right under the answer on a comunidad page: the search box and the province pages (every municipality)."""
+    import muni
+    ps = [p for p in muni.catalogue()["provs"] if p["region"] == r["slug"] and p["path"]] if muni.MUNI_ON else []
+    if not ps:
+        return ""
+    links = " · ".join(f'<a href="{B.ASSETS}{p["path"]}">{E(p["label"])} <span class="m">({len(p["munis"])})</span></a>' for p in ps)
+    n = sum(len(p["munis"]) for p in ps)
+    lab = f"Los {n} municipios" if ES else t("municipio")
+    return f'<div class="qa">{B.search_box("q-reg")}<p class="qa-l"><b>{lab}:</b> {links}</p></div>'
+
+
 def school_link(r):
     """Spanish only: the school calendar pages have no ca/gl/eu version."""
     return f' · <a href="{B.BASE}calendario-escolar/{r["slug"]}/">Calendario escolar 2026-27 en {E(r["name"])}</a>' if ES else ""
@@ -381,7 +393,7 @@ def region_page(r, cities, pending):
                       [("text/calendar", f"ics/{slug}.ics"), ("text/csv", f"csv/{slug}.csv")]),
            faq_ld(qas)]
     head = B.head_html(title, desc, f"{slug}/", f"{B.SITE}{B.ASSETS}og/{slug}.png", ld(*lds))
-    lead = (guia.region_lead(r) if ES else "") + guia.upd(upd_date)
+    lead = (guia.region_lead(r) if ES else "") + quick_access(r) + guia.upd(upd_date)
     notes = guia.region_notes(r, ALL_CITIES) if ES else ""
     main = B.app_main(DATA, r, None, "", notes + locs + faq_html(qas), cities, pending, lead)
     return B.page(head, "app", "app", main, DATA, B.app_attrs(r))
@@ -426,9 +438,9 @@ def home_page():
     lab_rng = tn("n_lab", labs[-1]).replace(str(labs[-1]), f"{labs[0]}–{labs[-1]}", 1)
     stats = B.stats_html([(None, tn("n_nat", len(nat))), (None, lab_rng), (None, tn("n_pts", len(B.puentes(nat))))])
     hero = ('<div class="hero wrap">'
-            + B.hero_grid(f'<h1>{E(t("h1"))}</h1>{guia.home_lead() if ES else ""}{B.search_box("q-home", big=True)}',
+            + B.hero_grid(f'<h1>{E(t("h1"))}</h1>{guia.home_lead() if ES else ""}{B.search_box("q-home", big=True)}'
+                          f'<div class="pickers">{B.region_select(None)}{B.home_city_select()}</div>',
                           B.next_card(nat, prev=B.prev26()) + stats,
-                          f'<div class="pickers">{B.region_select(None)}</div>'
                           f'<p class="ctx">{E(n_regions)} · <a href="{DATA["source"]["url"]}" rel="noopener">{t("data_source")}</a></p>{upd}')
             + '</div>')
     cal_sec = B.section("calendario", t("h_cal"), B.legend_html(["n"]) + B.year_html(nat), B.tools_html(), "cal")

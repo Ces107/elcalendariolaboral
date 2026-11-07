@@ -957,15 +957,22 @@ def region_select(current):
 
 
 def city_select(r, cities, pending, current=None):
-    """Municipio: published cities go to their page; pending ones are listed disabled (Spanish only)."""
-    if not cities and not (pending and LANG == "es"):
-        return ""
+    """Municipio: published cities go to their page; pending ones are listed disabled (Spanish only). app.js replaces the
+    options with every municipality of the comunidad (buscar.json, by province) once the page is idle; the province
+    links in the hero are the no-JS path to the same pages."""
     opts = f'<option value="{BASE}{r["slug"]}/">{E(r["name"])}</option>'
     items = [(x["title_name"], f'<option value="{BASE}{x["path"]}"{" selected" if current == x["slug"] else ""}>{E(x["title_name"])}</option>') for x in cities]
     if LANG == "es":
         items += [(n, f'<option disabled>{E(n)} {t("pending_short")}</option>') for n in pending]
     opts += "".join(o for _, o in sorted(items, key=lambda z: z[0]))
-    return f'<div class="field"><label for="city">{t("municipio")}</label><select id="city">{opts}</select></div>'
+    return (f'<div class="field"><label for="city">{t("municipio")}</label><select id="city" data-region="{r["slug"]}">{opts}</select>'
+            f'</div>')
+
+
+def home_city_select():
+    """Home, step 2: filled by app.js with the municipalities of the comunidad picked in step 1."""
+    return (f'<div class="field"><label for="city">{t("municipio")}</label><select id="city" data-home disabled>'
+            f'<option value="">{E(t("pick_region"))}</option></select></div>')
 
 
 # ---------------------------------------------------------------- app page (region and city)
