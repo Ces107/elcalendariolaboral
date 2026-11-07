@@ -1,0 +1,1069 @@
+{
+ "source_id": "boc-canarias-2026",
+ "source": {
+  "title": "Orden de 6 de agosto de 2025, por la que se determinan las fiestas locales propias de cada municipio de la Comunidad Autónoma de Canarias para el año 2026 (BOC núm. 165, de 21-08-2025)",
+  "url": "https://www.gobiernodecanarias.org/boc/2025/165/3029.html",
+  "published": "2025-08-21"
+ },
+ "region": "canarias",
+ "count": 88,
+ "unmatched": [],
+ "municipios": {
+  "35001": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "Festividad de San Pedro Apóstol"
+    },
+    {
+     "date": "2026-08-05",
+     "name": "Festividad de Nuestra Señora de las Nieves"
+    }
+   ]
+  },
+  "35002": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "Festividad de San Sebastián"
+    },
+    {
+     "date": "2026-02-19",
+     "name": "Jueves de Carnaval"
+    }
+   ]
+  },
+  "35003": {
+   "holidays": [
+    {
+     "date": "2026-02-09",
+     "name": "Carnavales"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Festividad de Nuestra Señora de Antigua"
+    }
+   ]
+  },
+  "35004": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-08-25",
+     "name": "Festividad de San Ginés"
+    }
+   ]
+  },
+  "35005": {
+   "holidays": [
+    {
+     "date": "2026-08-31",
+     "name": "Festividad de la Virgen de la Cuevita"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "Festividad del Cristo de Acusa"
+    }
+   ]
+  },
+  "35006": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-06-24",
+     "name": "Festividad de San Juan Bautista"
+    }
+   ]
+  },
+  "35007": {
+   "holidays": [
+    {
+     "date": "2026-07-14",
+     "name": "Festividad de San Buenaventura"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "Festividad de San Bartolomé"
+    }
+   ]
+  },
+  "35008": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "Festividad de San Roque"
+    }
+   ]
+  },
+  "35009": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "Festividad de San Isidro Labrador"
+    },
+    {
+     "date": "2026-07-25",
+     "name": "Festividad de Santiago Apóstol"
+    }
+   ]
+  },
+  "35010": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-06-24",
+     "name": "Festividad de San Juan"
+    }
+   ]
+  },
+  "35011": {
+   "holidays": [
+    {
+     "date": "2026-02-02",
+     "name": "Festividad de Nuestra Señora de la Candelaria"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "Festividad del Apóstol San Pedro"
+    }
+   ]
+  },
+  "35012": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "Festividad de San Antonio"
+    },
+    {
+     "date": "2026-07-16",
+     "name": "Festividad de la Virgen del Carmen"
+    }
+   ]
+  },
+  "35013": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-06-15",
+     "name": "Festividad de San Antonio de Padua"
+    }
+   ]
+  },
+  "35014": {
+   "holidays": [
+    {
+     "date": "2026-02-02",
+     "name": "Festividad Nuestra Señora de la Candelaria"
+    },
+    {
+     "date": "2026-07-16",
+     "name": "Festividad Nuestra Señora del Carmen"
+    }
+   ]
+  },
+  "35015": {
+   "holidays": [
+    {
+     "date": "2026-07-02",
+     "name": "Festividad de Nuestra Señora de Regla"
+    },
+    {
+     "date": "2026-07-16",
+     "name": "Festividad de Nuestra Señora del Carmen"
+    }
+   ]
+  },
+  "35016": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-06-24",
+     "name": "Conmemoración de la Fundación de la Ciudad"
+    }
+   ]
+  },
+  "35017": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-10-07",
+     "name": "Festividad de Nuestra Señora del Rosario"
+    }
+   ]
+  },
+  "35018": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "Festividad de San Bartolomé"
+    }
+   ]
+  },
+  "35019": {
+   "holidays": [
+    {
+     "date": "2026-07-25",
+     "name": "Festividad de Santiago Apóstol"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "Festividad de San Bartolomé"
+    }
+   ]
+  },
+  "35020": {
+   "holidays": [
+    {
+     "date": "2026-09-10",
+     "name": "Festividad del Santo Patrono San Nicolás de Tolentino"
+    },
+    {
+     "date": "2026-09-11",
+     "name": "Día del Charco"
+    }
+   ]
+  },
+  "35021": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-06-13",
+     "name": "Festividad de San Antonio de Padua"
+    }
+   ]
+  },
+  "35022": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-10-24",
+     "name": "Festividad de San Rafael"
+    }
+   ]
+  },
+  "35023": {
+   "holidays": [
+    {
+     "date": "2026-03-19",
+     "name": "Festividad de San José"
+    },
+    {
+     "date": "2026-09-21",
+     "name": "Lunes posterior a la Festividad de Las Marías"
+    }
+   ]
+  },
+  "35024": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": "Festividad Nuestra Señora del Carmen"
+    },
+    {
+     "date": "2026-08-05",
+     "name": "Festividad Nuestra Señora de Las Nieves"
+    }
+   ]
+  },
+  "35025": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "Festividad de la Virgen del Socorro"
+    }
+   ]
+  },
+  "35026": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "Festividad de San Juan Bautista"
+    },
+    {
+     "date": "2026-11-17",
+     "name": "Festividad de San Gregorio Taumaturgo"
+    }
+   ]
+  },
+  "35027": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-06-12",
+     "name": "Festividad del Sagrado Corazón de Jesús"
+    }
+   ]
+  },
+  "35028": {
+   "holidays": [
+    {
+     "date": "2026-02-02",
+     "name": "Festividad Nuestra Señora La Candelaria"
+    },
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    }
+   ]
+  },
+  "35029": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-06-24",
+     "name": "Festividad de San Juan Bautista"
+    }
+   ]
+  },
+  "35030": {
+   "holidays": [
+    {
+     "date": "2026-02-02",
+     "name": "Festividad de Nuestra Señora de La Candelaria"
+    },
+    {
+     "date": "2026-10-13",
+     "name": "Fiestas juradas en honor a San Miguel Arcángel y Conmemoración de las batallas del Cuchillete y Tamasite"
+    }
+   ]
+  },
+  "35031": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "Festividad de San Juan Bautista"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "Festividad de San Miguel"
+    }
+   ]
+  },
+  "35032": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-05-25",
+     "name": "Fiesta del Patrón del Municipio"
+    }
+   ]
+  },
+  "35033": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-09-21",
+     "name": "Festividad en Honor al Apóstol San Mateo"
+    }
+   ]
+  },
+  "35034": {
+   "holidays": [
+    {
+     "date": "2026-07-07",
+     "name": "Festividad de San Marcial del Rubicón"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Festividad de Nuestra Señora de los Remedios"
+    }
+   ]
+  },
+  "38001": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "Festividad de San Sebastián"
+    },
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    }
+   ]
+  },
+  "38002": {
+   "holidays": [
+    {
+     "date": "2026-04-27",
+     "name": "Festividad de San Marcos Evangelista"
+    },
+    {
+     "date": "2026-09-24",
+     "name": "Festividad de Nuestra Señora de las Mercedes"
+    }
+   ]
+  },
+  "38003": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": "Festividad de Nuestra Señora del Carmen"
+    },
+    {
+     "date": "2026-09-15",
+     "name": "Festividad de Nuestra Señora del Buen Paso"
+    }
+   ]
+  },
+  "38004": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-08-31",
+     "name": "Festividad de San Bernardo"
+    }
+   ]
+  },
+  "38005": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Festividad de Nuestra Señora de Abona"
+    }
+   ]
+  },
+  "38006": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-10-05",
+     "name": "Festividad del Santísimo Cristo de la Salud"
+    }
+   ]
+  },
+  "38007": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-10-07",
+     "name": "Festividad de Nuestra Señora del Rosario"
+    }
+   ]
+  },
+  "38008": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "Festividad de San Pedro Apóstol"
+    }
+   ]
+  },
+  "38009": {
+   "holidays": [
+    {
+     "date": "2026-03-19",
+     "name": "Festividad de San José"
+    },
+    {
+     "date": "2026-10-07",
+     "name": "Festividad de Nuestra Señora del Rosario"
+    }
+   ]
+  },
+  "38010": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": "Festividad de San Bartolomé"
+    },
+    {
+     "date": "2026-10-26",
+     "name": "Festividad de Nuestra Señora de los Remedios. Patrona de la Villa"
+    }
+   ]
+  },
+  "38011": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-07-27",
+     "name": "Festividad de Santa Ana"
+    }
+   ]
+  },
+  "38012": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "Fiestas Patronales"
+    }
+   ]
+  },
+  "38013": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-08-10",
+     "name": "Festividad de San Lorenzo"
+    }
+   ]
+  },
+  "38014": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-02-19",
+     "name": "Día del Municipio"
+    }
+   ]
+  },
+  "38015": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-06-24",
+     "name": "Festividad de San Juan"
+    }
+   ]
+  },
+  "38016": {
+   "holidays": [
+    {
+     "date": "2026-06-12",
+     "name": "Festividad de San Antonio del Monte"
+    },
+    {
+     "date": "2026-08-21",
+     "name": "Festividad de Nuestra Señora de la Luz"
+    }
+   ]
+  },
+  "38017": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-06-13",
+     "name": "Festividad de San Antonio de Padua"
+    }
+   ]
+  },
+  "38018": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "Fiestas Patronales"
+    }
+   ]
+  },
+  "38019": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "Festividad de San Juan Bautista"
+    },
+    {
+     "date": "2026-09-21",
+     "name": "Festividad del Santísimo Cristo de la Dulce Muerte"
+    }
+   ]
+  },
+  "38020": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "Festividad de San Pedro Apóstol"
+    },
+    {
+     "date": "2026-09-07",
+     "name": "Festividad de Nuestra Señora del Socorro"
+    }
+   ]
+  },
+  "38021": {
+   "holidays": [
+    {
+     "date": "2026-08-07",
+     "name": "Festividad de Santo Domingo de Guzmán"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Festividad de Nuestra Señora de la Encarnación"
+    }
+   ]
+  },
+  "38022": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-04-25",
+     "name": "Festividad de San Marcos Evangelista"
+    }
+   ]
+  },
+  "38023": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "Festividad del Santísimo Cristo de La Laguna"
+    }
+   ]
+  },
+  "38024": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-07-02",
+     "name": "Festividad de Nuestra Señora de los Remedios"
+    }
+   ]
+  },
+  "38025": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-08-06",
+     "name": "Festividad de El Salvador"
+    }
+   ]
+  },
+  "38026": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-06-11",
+     "name": "Infraoctava del Corpus Christi"
+    }
+   ]
+  },
+  "38027": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-09-04",
+     "name": "Viernes previo a la Festividad del Pino"
+    }
+   ]
+  },
+  "38028": {
+   "holidays": [
+    {
+     "date": "2026-07-13",
+     "name": "Festividad del Gran Poder de Dios"
+    },
+    {
+     "date": "2026-07-14",
+     "name": "Festividad de la Virgen del Carmen"
+    }
+   ]
+  },
+  "38029": {
+   "holidays": [
+    {
+     "date": "2026-01-15",
+     "name": "Festividad de San Mauro Abad"
+    },
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    }
+   ]
+  },
+  "38030": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-06-24",
+     "name": "Festividad de San Juan Bautista"
+    }
+   ]
+  },
+  "38031": {
+   "holidays": [
+    {
+     "date": "2026-01-22",
+     "name": "Festividad de San Vicente"
+    },
+    {
+     "date": "2026-06-01",
+     "name": "Lunes de Remedios"
+    }
+   ]
+  },
+  "38032": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-08-03",
+     "name": "Festividad de Nuestra Señora de La Esperanza"
+    }
+   ]
+  },
+  "38033": {
+   "holidays": [
+    {
+     "date": "2026-04-27",
+     "name": "Festividad de Nuestra Señora de Montserrat"
+    },
+    {
+     "date": "2026-11-30",
+     "name": "Festividad de San Andrés"
+    }
+   ]
+  },
+  "38034": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "Festividad de San Juan Bautista"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "Festividad de San José"
+    }
+   ]
+  },
+  "38035": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "Festividad de San Miguel Arcángel"
+    }
+   ]
+  },
+  "38036": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "Festividad de San Sebastián"
+    },
+    {
+     "date": "2026-02-24",
+     "name": "Martes de Carnaval"
+    }
+   ]
+  },
+  "38037": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-07-16",
+     "name": "Festividad Nuestra Señora del Carmen"
+    }
+   ]
+  },
+  "38038": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-05-04",
+     "name": "Festividad del Día de la Cruz"
+    }
+   ]
+  },
+  "38039": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-10-21",
+     "name": "Festividad de Santa Úrsula"
+    }
+   ]
+  },
+  "38040": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "Festividad de San Isidro Labrador"
+    },
+    {
+     "date": "2026-07-16",
+     "name": "Festividad de Nuestra Señora de la Virgen del Carmen"
+    }
+   ]
+  },
+  "38041": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "Festividad de San Pedro Apóstol"
+    }
+   ]
+  },
+  "38042": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "Festividad de San Juan"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Festividad de Nuestra Señora de la Luz"
+    }
+   ]
+  },
+  "38043": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-11-25",
+     "name": "Festividad de Santa Catalina"
+    }
+   ]
+  },
+  "38044": {
+   "holidays": [
+    {
+     "date": "2026-08-31",
+     "name": "Festividad Nuestra Señora de Buen Viaje"
+    },
+    {
+     "date": "2026-10-19",
+     "name": "Festividad del Santísimo Cristo del Calvario"
+    }
+   ]
+  },
+  "38045": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": "Festividad de Nuestra Señora del Carmen"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "Festividad de San Miguel Arcángel"
+    }
+   ]
+  },
+  "38046": {
+   "holidays": [
+    {
+     "date": "2026-04-25",
+     "name": "Festividad de San Marcos Evangelista"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Festividad de Nuestra Señora de los Remedios"
+    }
+   ]
+  },
+  "38047": {
+   "holidays": [
+    {
+     "date": "2026-02-02",
+     "name": "Presentación de Jesús en el Templo"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Festividad de la Natividad de la Virgen"
+    }
+   ]
+  },
+  "38048": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "Festividad de San Isidro Labrador"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "Festividad de San Pedro"
+    }
+   ]
+  },
+  "38049": {
+   "holidays": [
+    {
+     "date": "2026-01-07",
+     "name": "Festividad de Nuestra Señora Virgen de Los Reyes"
+    },
+    {
+     "date": "2026-06-24",
+     "name": "Festividad de San Juan Bautista"
+    }
+   ]
+  },
+  "38050": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "Festividad de San Juan Bautista"
+    },
+    {
+     "date": "2026-07-23",
+     "name": "Festividad Virgen del Carmen"
+    }
+   ]
+  },
+  "38051": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-08-31",
+     "name": "Festividad de Nuestra Señora de la Encarnación"
+    }
+   ]
+  },
+  "38052": {
+   "holidays": [
+    {
+     "date": "2026-04-24",
+     "name": "Festividad del Santo Hermano Pedro"
+    },
+    {
+     "date": "2026-08-31",
+     "name": "Festividad de San Roque y San Agustín"
+    }
+   ]
+  },
+  "38053": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "Festividad de San Blas"
+    },
+    {
+     "date": "2026-06-04",
+     "name": "Festividad del Corpus Christi"
+    }
+   ]
+  },
+  "38901": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "Festividad de San Juan"
+    },
+    {
+     "date": "2026-07-16",
+     "name": "Festividad de Nuestra Señora de la Virgen del Carmen"
+    }
+   ]
+  }
+ }
+}

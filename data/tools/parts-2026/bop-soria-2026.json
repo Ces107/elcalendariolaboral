@@ -1,0 +1,4626 @@
+{
+ "source_id": "bop-soria-2026",
+ "source": {
+  "title": "Junta de Castilla y León, Oficina Territorial de Trabajo de Soria. Fiestas laborales año 2026 (BOP Soria núm. 108, de 22-9-2025, BOPSO-108-22092025)",
+  "url": "https://trabajoyprevencion.jcyl.es/web/jcyl/binarios/898/228/07%20BOP%20FIESTAS%20LOCALES%20SORIA%2026,0.pdf",
+  "published": "2025-09-22"
+ },
+ "region": "castilla-y-leon",
+ "count": 180,
+ "unmatched": [
+  "VILLACIERVITOS: 3 de febrero y 1 de agosto",
+  "42011 Aldealpozo: not listed",
+  "42013 Aldehuela de Periáñez: not listed",
+  "42024 Arancón: not listed"
+ ],
+ "municipios": {
+  "42001": {
+   "holidays": [
+    {
+     "date": "2026-02-02",
+     "name": ""
+    },
+    {
+     "date": "2026-06-24",
+     "name": ""
+    }
+   ]
+  },
+  "42003": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Ontalvilla de Almazán",
+     "holidays": [
+      {
+       "date": "2026-06-12",
+       "name": ""
+      },
+      {
+       "date": "2026-06-13",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Sauquillo del Campo",
+     "holidays": [
+      {
+       "date": "2026-08-07",
+       "name": ""
+      },
+      {
+       "date": "2026-08-08",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42004": {
+   "holidays": [
+    {
+     "date": "2026-06-04",
+     "name": ""
+    },
+    {
+     "date": "2026-09-29",
+     "name": ""
+    }
+   ]
+  },
+  "42006": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-21",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Cubo de Hogueras",
+     "holidays": [
+      {
+       "date": "2026-05-20",
+       "name": ""
+      },
+      {
+       "date": "2026-06-24",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Martialay",
+     "holidays": [
+      {
+       "date": "2026-06-06",
+       "name": ""
+      },
+      {
+       "date": "2026-10-07",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Ontalvilla de Valcorba",
+     "holidays": [
+      {
+       "date": "2026-06-24",
+       "name": ""
+      },
+      {
+       "date": "2026-09-04",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42007": {
+   "holidays": [
+    {
+     "date": "2026-02-02",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Alcoba de la Torre",
+     "holidays": [
+      {
+       "date": "2026-08-10",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Zayas de Bascones",
+     "holidays": [
+      {
+       "date": "2026-06-24",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42008": {
+   "holidays": [
+    {
+     "date": "2026-05-14",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "42009": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Ribarroya",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Tapiela",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42010": {
+   "holidays": [
+    {
+     "date": "2026-07-22",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "42012": {
+   "holidays": [
+    {
+     "date": "2026-08-14",
+     "name": ""
+    },
+    {
+     "date": "2026-09-21",
+     "name": ""
+    }
+   ]
+  },
+  "42014": {
+   "holidays": [
+    {
+     "date": "2026-09-11",
+     "name": ""
+    },
+    {
+     "date": "2026-09-12",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Ledrado",
+     "holidays": [
+      {
+       "date": "2026-08-08",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Los Campos",
+     "holidays": [
+      {
+       "date": "2026-08-19",
+       "name": ""
+      },
+      {
+       "date": "2026-08-20",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Valloria",
+     "holidays": [
+      {
+       "date": "2026-08-24",
+       "name": ""
+      },
+      {
+       "date": "2026-08-25",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Villasecas Somera",
+     "holidays": [
+      {
+       "date": "2026-08-17",
+       "name": ""
+      },
+      {
+       "date": "2026-08-18",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42015": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-28",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Cabanillas",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      },
+      {
+       "date": "2026-09-18",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42016": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-28",
+     "name": ""
+    }
+   ]
+  },
+  "42017": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-11-30",
+     "name": ""
+    }
+   ]
+  },
+  "42018": {
+   "holidays": [
+    {
+     "date": "2026-06-08",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Aguaviva de la Vega",
+     "holidays": [
+      {
+       "date": "2026-08-08",
+       "name": ""
+      },
+      {
+       "date": "2026-10-10",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Chércoles",
+     "holidays": [
+      {
+       "date": "2026-01-20",
+       "name": ""
+      },
+      {
+       "date": "2026-05-20",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Puebla de Eca",
+     "holidays": [
+      {
+       "date": "2026-08-22",
+       "name": ""
+      },
+      {
+       "date": "2026-09-14",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42019": {
+   "holidays": [
+    {
+     "date": "2026-07-06",
+     "name": ""
+    },
+    {
+     "date": "2026-12-11",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Cubo de la Sierra",
+     "holidays": [
+      {
+       "date": "2026-05-16",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Espejo de Tera",
+     "holidays": [
+      {
+       "date": "2026-08-17",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Gallinero",
+     "holidays": [
+      {
+       "date": "2026-06-06",
+       "name": ""
+      },
+      {
+       "date": "2026-09-14",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Matute de la Sierra",
+     "holidays": [
+      {
+       "date": "2026-08-01",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Portelárbol",
+     "holidays": [
+      {
+       "date": "2026-08-22",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "San Andrés de Soria",
+     "holidays": [
+      {
+       "date": "2026-08-22",
+       "name": ""
+      },
+      {
+       "date": "2026-10-05",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Segoviela",
+     "holidays": [
+      {
+       "date": "2026-10-10",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Sepúlveda de la Sierra",
+     "holidays": [
+      {
+       "date": "2026-09-19",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Tera",
+     "holidays": [
+      {
+       "date": "2026-07-16",
+       "name": ""
+      },
+      {
+       "date": "2026-09-05",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42020": {
+   "holidays": [
+    {
+     "date": "2026-05-18",
+     "name": ""
+    },
+    {
+     "date": "2026-09-07",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Almántiga",
+     "holidays": [
+      {
+       "date": "2026-05-02",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Balluncar",
+     "holidays": [
+      {
+       "date": "2026-06-20",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Cobertelada",
+     "holidays": [
+      {
+       "date": "2026-05-23",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Covarrubias",
+     "holidays": [
+      {
+       "date": "2026-07-04",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Fuentelcarro",
+     "holidays": [
+      {
+       "date": "2026-08-01",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Lodares del Monte",
+     "holidays": [
+      {
+       "date": "2026-10-10",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Tejerizas",
+     "holidays": [
+      {
+       "date": "2026-08-22",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42021": {
+   "holidays": [
+    {
+     "date": "2026-05-27",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "42022": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Cardejón",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      },
+      {
+       "date": "2026-08-14",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Castejón del Campo",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      },
+      {
+       "date": "2026-08-28",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Esteras de Lubia",
+     "holidays": [
+      {
+       "date": "2026-06-17",
+       "name": ""
+      },
+      {
+       "date": "2026-08-28",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Jaray",
+     "holidays": [
+      {
+       "date": "2026-05-04",
+       "name": ""
+      },
+      {
+       "date": "2026-06-12",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Peroniel del Campo",
+     "holidays": [
+      {
+       "date": "2026-05-22",
+       "name": ""
+      },
+      {
+       "date": "2026-11-13",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42023": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-10-05",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Marazovel",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      },
+      {
+       "date": "2026-08-17",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42025": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "42026": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-09-26",
+     "name": ""
+    }
+   ]
+  },
+  "42027": {
+   "holidays": [
+    {
+     "date": "2026-08-28",
+     "name": ""
+    }
+   ],
+   "note": "The list gives 1 day(s) for the municipality.  The list also gives days for localities of the municipality; see nucleos.",
+   "nucleos": [
+    {
+     "name": "Torrearévalo",
+     "holidays": [
+      {
+       "date": "2026-09-04",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Ventosa de la Sierra",
+     "holidays": [
+      {
+       "date": "2026-09-11",
+       "name": ""
+      }
+     ]
+    }
+   ]
+  },
+  "42028": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Cuellar de la Sierra",
+     "holidays": [
+      {
+       "date": "2026-09-25",
+       "name": ""
+      },
+      {
+       "date": "2026-09-26",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Fuentelfresno",
+     "holidays": [
+      {
+       "date": "2026-10-01",
+       "name": ""
+      },
+      {
+       "date": "2026-10-02",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42029": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-09-21",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Jodra de Cardos",
+     "holidays": [
+      {
+       "date": "2026-09-22",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Pinilla del Olmo",
+     "holidays": [
+      {
+       "date": "2026-09-14",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Romanillos de Medinaceli",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      },
+      {
+       "date": "2026-09-29",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42030": {
+   "holidays": [
+    {
+     "date": "2026-06-13",
+     "name": ""
+    },
+    {
+     "date": "2026-09-19",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Ciadueña",
+     "holidays": [
+      {
+       "date": "2026-10-16",
+       "name": ""
+      },
+      {
+       "date": "2026-10-17",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42031": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "42032": {
+   "holidays": [
+    {
+     "date": "2026-02-05",
+     "name": ""
+    },
+    {
+     "date": "2026-08-10",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Aguilera",
+     "holidays": [
+      {
+       "date": "2026-05-04",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42033": {
+   "holidays": [
+    {
+     "date": "2026-07-17",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Valverde de los Ajos",
+     "holidays": [
+      {
+       "date": "2026-10-05",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42034": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-20",
+     "name": ""
+    }
+   ]
+  },
+  "42035": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": ""
+    },
+    {
+     "date": "2026-09-24",
+     "name": ""
+    }
+   ]
+  },
+  "42036": {
+   "holidays": [
+    {
+     "date": "2026-06-22",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "42037": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": ""
+    },
+    {
+     "date": "2026-08-22",
+     "name": ""
+    }
+   ]
+  },
+  "42038": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": ""
+    },
+    {
+     "date": "2026-07-10",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Valdespina",
+     "holidays": [
+      {
+       "date": "2026-05-08",
+       "name": ""
+      },
+      {
+       "date": "2026-09-29",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42039": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-09-07",
+     "name": ""
+    }
+   ]
+  },
+  "42041": {
+   "holidays": [
+    {
+     "date": "2026-06-16",
+     "name": ""
+    },
+    {
+     "date": "2026-08-18",
+     "name": ""
+    }
+   ]
+  },
+  "42042": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-10-05",
+     "name": ""
+    }
+   ]
+  },
+  "42043": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-08-18",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Alcubilla del Marqués",
+     "holidays": [
+      {
+       "date": "2026-08-10",
+       "name": ""
+      },
+      {
+       "date": "2026-08-11",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Barcebal",
+     "holidays": [
+      {
+       "date": "2026-08-28",
+       "name": ""
+      },
+      {
+       "date": "2026-08-29",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Barcebalejo",
+     "holidays": [
+      {
+       "date": "2026-09-25",
+       "name": ""
+      },
+      {
+       "date": "2026-09-26",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Berzosa",
+     "holidays": [
+      {
+       "date": "2026-08-21",
+       "name": ""
+      },
+      {
+       "date": "2026-08-22",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Lodares de Osma",
+     "holidays": [
+      {
+       "date": "2026-08-10",
+       "name": ""
+      },
+      {
+       "date": "2026-08-11",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "La Olmeda",
+     "holidays": [
+      {
+       "date": "2026-08-07",
+       "name": ""
+      },
+      {
+       "date": "2026-08-08",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Osma",
+     "holidays": [
+      {
+       "date": "2026-07-24",
+       "name": ""
+      },
+      {
+       "date": "2026-09-18",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "La Rasa",
+     "holidays": [
+      {
+       "date": "2026-06-12",
+       "name": ""
+      },
+      {
+       "date": "2026-06-13",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Santiuste",
+     "holidays": [
+      {
+       "date": "2026-08-07",
+       "name": ""
+      },
+      {
+       "date": "2026-08-08",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Torralba del Burgo",
+     "holidays": [
+      {
+       "date": "2026-08-07",
+       "name": ""
+      },
+      {
+       "date": "2026-08-08",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Valdelubiel",
+     "holidays": [
+      {
+       "date": "2026-08-07",
+       "name": ""
+      },
+      {
+       "date": "2026-08-08",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Valdenarros",
+     "holidays": [
+      {
+       "date": "2026-08-21",
+       "name": ""
+      },
+      {
+       "date": "2026-08-22",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Vildé",
+     "holidays": [
+      {
+       "date": "2026-08-21",
+       "name": ""
+      },
+      {
+       "date": "2026-08-22",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42044": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Ojuel",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42045": {
+   "holidays": [
+    {
+     "date": "2026-07-17",
+     "name": ""
+    },
+    {
+     "date": "2026-11-13",
+     "name": ""
+    }
+   ]
+  },
+  "42046": {
+   "holidays": [
+    {
+     "date": "2026-07-02",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Abioncillo de Calatañazor",
+     "holidays": [
+      {
+       "date": "2026-05-09",
+       "name": ""
+      },
+      {
+       "date": "2026-09-19",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Aldehuela de Calatañazor",
+     "holidays": [
+      {
+       "date": "2026-08-08",
+       "name": ""
+      },
+      {
+       "date": "2026-09-26",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42048": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-28",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Bordecorex",
+     "holidays": [
+      {
+       "date": "2026-09-29",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Casillas de Berlanga",
+     "holidays": [
+      {
+       "date": "2026-08-13",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42049": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Carazuelo",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Duañez",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Fuentetecha",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Mazalvete",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42050": {
+   "holidays": [
+    {
+     "date": "2026-08-20",
+     "name": ""
+    },
+    {
+     "date": "2026-08-21",
+     "name": ""
+    }
+   ]
+  },
+  "42051": {
+   "holidays": [
+    {
+     "date": "2026-06-06",
+     "name": ""
+    },
+    {
+     "date": "2026-08-22",
+     "name": ""
+    }
+   ]
+  },
+  "42052": {
+   "holidays": [
+    {
+     "date": "2026-08-04",
+     "name": ""
+    },
+    {
+     "date": "2026-08-05",
+     "name": ""
+    }
+   ]
+  },
+  "42053": {
+   "holidays": [
+    {
+     "date": "2026-08-25",
+     "name": ""
+    },
+    {
+     "date": "2026-08-26",
+     "name": ""
+    }
+   ]
+  },
+  "42054": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": ""
+    },
+    {
+     "date": "2026-10-05",
+     "name": ""
+    }
+   ]
+  },
+  "42055": {
+   "holidays": [
+    {
+     "date": "2026-01-23",
+     "name": ""
+    },
+    {
+     "date": "2026-12-18",
+     "name": ""
+    }
+   ]
+  },
+  "42056": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-09-12",
+     "name": ""
+    }
+   ]
+  },
+  "42057": {
+   "holidays": [
+    {
+     "date": "2026-05-25",
+     "name": ""
+    },
+    {
+     "date": "2026-08-31",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Añavieja",
+     "holidays": [
+      {
+       "date": "2026-04-16",
+       "name": ""
+      },
+      {
+       "date": "2026-09-07",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42058": {
+   "holidays": [
+    {
+     "date": "2026-05-02",
+     "name": ""
+    },
+    {
+     "date": "2026-09-12",
+     "name": ""
+    }
+   ]
+  },
+  "42059": {
+   "holidays": [
+    {
+     "date": "2026-08-10",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "42060": {
+   "holidays": [
+    {
+     "date": "2026-05-30",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "42061": {
+   "holidays": [
+    {
+     "date": "2026-08-22",
+     "name": ""
+    },
+    {
+     "date": "2026-09-12",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Herreros",
+     "holidays": [
+      {
+       "date": "2026-08-14",
+       "name": ""
+      },
+      {
+       "date": "2026-08-17",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Ocenilla",
+     "holidays": [
+      {
+       "date": "2026-06-13",
+       "name": ""
+      },
+      {
+       "date": "2026-12-26",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Villaverde del Monte",
+     "holidays": [
+      {
+       "date": "2026-05-23",
+       "name": ""
+      },
+      {
+       "date": "2026-08-14",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42062": {
+   "holidays": [
+    {
+     "date": "2026-05-20",
+     "name": ""
+    },
+    {
+     "date": "2026-09-29",
+     "name": ""
+    }
+   ]
+  },
+  "42063": {
+   "holidays": [
+    {
+     "date": "2026-05-02",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "42064": {
+   "holidays": [
+    {
+     "date": "2026-05-09",
+     "name": ""
+    },
+    {
+     "date": "2026-08-24",
+     "name": ""
+    }
+   ]
+  },
+  "42065": {
+   "holidays": [
+    {
+     "date": "2026-05-25",
+     "name": ""
+    },
+    {
+     "date": "2026-11-13",
+     "name": ""
+    }
+   ]
+  },
+  "42068": {
+   "holidays": [
+    {
+     "date": "2026-02-02",
+     "name": ""
+    },
+    {
+     "date": "2026-06-01",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Bordejé",
+     "holidays": [
+      {
+       "date": "2026-06-24",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Centenera del Campo",
+     "holidays": [
+      {
+       "date": "2026-09-25",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Neguillas",
+     "holidays": [
+      {
+       "date": "2026-06-24",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Villalba",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42069": {
+   "holidays": [
+    {
+     "date": "2026-06-16",
+     "name": ""
+    },
+    {
+     "date": "2026-08-10",
+     "name": ""
+    }
+   ]
+  },
+  "42070": {
+   "holidays": [
+    {
+     "date": "2026-01-14",
+     "name": ""
+    },
+    {
+     "date": "2026-08-07",
+     "name": ""
+    }
+   ]
+  },
+  "42071": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-11-11",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Almarail",
+     "holidays": [
+      {
+       "date": "2026-06-24",
+       "name": ""
+      },
+      {
+       "date": "2026-08-03",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Ituero",
+     "holidays": [
+      {
+       "date": "2026-06-13",
+       "name": ""
+      },
+      {
+       "date": "2026-08-20",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Lubia",
+     "holidays": [
+      {
+       "date": "2026-06-01",
+       "name": ""
+      },
+      {
+       "date": "2026-08-17",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Rabanera del Campo",
+     "holidays": [
+      {
+       "date": "2026-02-03",
+       "name": ""
+      },
+      {
+       "date": "2026-09-29",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42073": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "42075": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-04-29",
+     "name": ""
+    }
+   ]
+  },
+  "42076": {
+   "holidays": [
+    {
+     "date": "2026-09-10",
+     "name": ""
+    },
+    {
+     "date": "2026-09-11",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "La Alameda",
+     "holidays": [
+      {
+       "date": "2026-05-29",
+       "name": ""
+      },
+      {
+       "date": "2026-08-17",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Miñana",
+     "holidays": [
+      {
+       "date": "2026-05-21",
+       "name": ""
+      },
+      {
+       "date": "2026-08-24",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42078": {
+   "holidays": [
+    {
+     "date": "2026-09-14",
+     "name": ""
+    },
+    {
+     "date": "2026-09-29",
+     "name": ""
+    }
+   ]
+  },
+  "42079": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "42080": {
+   "holidays": [
+    {
+     "date": "2026-06-01",
+     "name": ""
+    },
+    {
+     "date": "2026-06-02",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Guijosa",
+     "holidays": [
+      {
+       "date": "2026-09-07",
+       "name": ""
+      },
+      {
+       "date": "2026-09-08",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "La Hinojosa",
+     "holidays": [
+      {
+       "date": "2026-06-19",
+       "name": ""
+      },
+      {
+       "date": "2026-06-22",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Orillares",
+     "holidays": [
+      {
+       "date": "2026-07-24",
+       "name": ""
+      },
+      {
+       "date": "2026-10-23",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Quintanilla de Nuño Pedro",
+     "holidays": [
+      {
+       "date": "2026-08-21",
+       "name": ""
+      },
+      {
+       "date": "2026-08-28",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42081": {
+   "holidays": [
+    {
+     "date": "2026-05-22",
+     "name": ""
+    },
+    {
+     "date": "2026-05-25",
+     "name": ""
+    }
+   ]
+  },
+  "42082": {
+   "holidays": [
+    {
+     "date": "2026-08-14",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "42083": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-06-13",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "La Miñosa",
+     "holidays": [
+      {
+       "date": "2026-05-13",
+       "name": ""
+      },
+      {
+       "date": "2026-09-22",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Torremediana",
+     "holidays": [
+      {
+       "date": "2026-05-04",
+       "name": ""
+      },
+      {
+       "date": "2026-10-07",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42084": {
+   "holidays": [
+    {
+     "date": "2026-08-21",
+     "name": ""
+    },
+    {
+     "date": "2026-08-22",
+     "name": ""
+    }
+   ]
+  },
+  "42085": {
+   "holidays": [
+    {
+     "date": "2026-07-03",
+     "name": ""
+    },
+    {
+     "date": "2026-11-30",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Fuencaliente del Burgo",
+     "holidays": [
+      {
+       "date": "2026-10-09",
+       "name": ""
+      },
+      {
+       "date": "2026-12-04",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Santervás del Burgo",
+     "holidays": [
+      {
+       "date": "2026-08-19",
+       "name": ""
+      },
+      {
+       "date": "2026-08-20",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Zayuelas",
+     "holidays": [
+      {
+       "date": "2026-05-28",
+       "name": ""
+      },
+      {
+       "date": "2026-07-24",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42086": {
+   "holidays": [
+    {
+     "date": "2026-07-03",
+     "name": ""
+    },
+    {
+     "date": "2026-07-04",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Cenegro",
+     "holidays": [
+      {
+       "date": "2026-08-21",
+       "name": ""
+      },
+      {
+       "date": "2026-08-22",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42087": {
+   "holidays": [
+    {
+     "date": "2026-08-08",
+     "name": ""
+    },
+    {
+     "date": "2026-09-28",
+     "name": ""
+    }
+   ]
+  },
+  "42088": {
+   "holidays": [
+    {
+     "date": "2026-06-01",
+     "name": ""
+    },
+    {
+     "date": "2026-10-05",
+     "name": ""
+    }
+   ]
+  },
+  "42089": {
+   "holidays": [
+    {
+     "date": "2026-06-08",
+     "name": ""
+    },
+    {
+     "date": "2026-08-08",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Aylloncillo",
+     "holidays": [
+      {
+       "date": "2026-08-17",
+       "name": ""
+      },
+      {
+       "date": "2026-10-17",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Pedraza",
+     "holidays": [
+      {
+       "date": "2026-08-17",
+       "name": ""
+      },
+      {
+       "date": "2026-09-12",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Portelrubio",
+     "holidays": [
+      {
+       "date": "2026-02-02",
+       "name": ""
+      },
+      {
+       "date": "2026-09-25",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42090": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-06-24",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Osona",
+     "holidays": [
+      {
+       "date": "2026-07-03",
+       "name": ""
+      },
+      {
+       "date": "2026-08-22",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Valderrueda",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      },
+      {
+       "date": "2026-06-19",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42092": {
+   "holidays": [
+    {
+     "date": "2026-07-02",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "42093": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-07-22",
+     "name": ""
+    }
+   ]
+  },
+  "42094": {
+   "holidays": [
+    {
+     "date": "2026-05-12",
+     "name": ""
+    },
+    {
+     "date": "2026-06-24",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Canredondo de la Sierra",
+     "holidays": [
+      {
+       "date": "2026-05-08",
+       "name": ""
+      },
+      {
+       "date": "2026-09-29",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Chavaler",
+     "holidays": [
+      {
+       "date": "2026-05-11",
+       "name": ""
+      },
+      {
+       "date": "2026-12-22",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Dombellas",
+     "holidays": [
+      {
+       "date": "2026-06-04",
+       "name": ""
+      },
+      {
+       "date": "2026-07-27",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Santervás de la Sierra",
+     "holidays": [
+      {
+       "date": "2026-07-27",
+       "name": ""
+      },
+      {
+       "date": "2026-12-01",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Tardesillas",
+     "holidays": [
+      {
+       "date": "2026-08-24",
+       "name": ""
+      },
+      {
+       "date": "2026-09-08",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42095": {
+   "holidays": [
+    {
+     "date": "2026-06-25",
+     "name": ""
+    },
+    {
+     "date": "2026-10-02",
+     "name": ""
+    }
+   ]
+  },
+  "42096": {
+   "holidays": [
+    {
+     "date": "2026-07-02",
+     "name": ""
+    },
+    {
+     "date": "2026-08-20",
+     "name": ""
+    }
+   ]
+  },
+  "42097": {
+   "holidays": [
+    {
+     "date": "2026-04-24",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "42098": {
+   "holidays": [
+    {
+     "date": "2026-08-21",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "42100": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "42103": {
+   "holidays": [
+    {
+     "date": "2026-06-04",
+     "name": ""
+    },
+    {
+     "date": "2026-06-05",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Alcozar",
+     "holidays": [
+      {
+       "date": "2026-08-12",
+       "name": ""
+      },
+      {
+       "date": "2026-08-13",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Bocigas de Perales",
+     "holidays": [
+      {
+       "date": "2026-07-03",
+       "name": ""
+      },
+      {
+       "date": "2026-07-04",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Valdanzo",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      },
+      {
+       "date": "2026-08-14",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Valdanzuelo",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      },
+      {
+       "date": "2026-08-24",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Zayas de Torre",
+     "holidays": [
+      {
+       "date": "2026-05-27",
+       "name": ""
+      },
+      {
+       "date": "2026-11-11",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42105": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-08-18",
+     "name": ""
+    }
+   ]
+  },
+  "42106": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-12-26",
+     "name": ""
+    }
+   ]
+  },
+  "42107": {
+   "holidays": [
+    {
+     "date": "2026-08-22",
+     "name": ""
+    },
+    {
+     "date": "2026-11-11",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Pobar",
+     "holidays": [
+      {
+       "date": "2026-07-16",
+       "name": ""
+      },
+      {
+       "date": "2026-09-02",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Villarraso",
+     "holidays": [
+      {
+       "date": "2026-08-10",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42108": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": ""
+    },
+    {
+     "date": "2026-08-22",
+     "name": ""
+    }
+   ]
+  },
+  "42110": {
+   "holidays": [
+    {
+     "date": "2026-07-02",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Montenegro de Agreda",
+     "holidays": [
+      {
+       "date": "2026-06-13",
+       "name": ""
+      },
+      {
+       "date": "2026-08-26",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42111": {
+   "holidays": [
+    {
+     "date": "2026-09-11",
+     "name": ""
+    },
+    {
+     "date": "2026-09-12",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Matute de Almazán",
+     "holidays": [
+      {
+       "date": "2026-09-25",
+       "name": ""
+      },
+      {
+       "date": "2026-09-26",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Santa María del Prado",
+     "holidays": [
+      {
+       "date": "2026-09-18",
+       "name": ""
+      },
+      {
+       "date": "2026-09-19",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42113": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": ""
+    },
+    {
+     "date": "2026-08-28",
+     "name": ""
+    }
+   ]
+  },
+  "42115": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-09-28",
+     "name": ""
+    }
+   ]
+  },
+  "42116": {
+   "holidays": [
+    {
+     "date": "2026-07-10",
+     "name": ""
+    },
+    {
+     "date": "2026-07-11",
+     "name": ""
+    }
+   ]
+  },
+  "42117": {
+   "holidays": [
+    {
+     "date": "2026-07-24",
+     "name": ""
+    },
+    {
+     "date": "2026-11-11",
+     "name": ""
+    }
+   ]
+  },
+  "42118": {
+   "holidays": [
+    {
+     "date": "2026-05-16",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "42119": {
+   "holidays": [
+    {
+     "date": "2026-08-25",
+     "name": ""
+    },
+    {
+     "date": "2026-10-15",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Valtueña",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      },
+      {
+       "date": "2026-08-14",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42120": {
+   "holidays": [
+    {
+     "date": "2026-08-10",
+     "name": ""
+    },
+    {
+     "date": "2026-09-16",
+     "name": ""
+    }
+   ]
+  },
+  "42121": {
+   "holidays": [
+    {
+     "date": "2026-07-02",
+     "name": ""
+    },
+    {
+     "date": "2026-09-10",
+     "name": ""
+    }
+   ]
+  },
+  "42123": {
+   "holidays": [
+    {
+     "date": "2026-07-03",
+     "name": ""
+    },
+    {
+     "date": "2026-07-04",
+     "name": ""
+    }
+   ]
+  },
+  "42124": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": ""
+    },
+    {
+     "date": "2026-08-21",
+     "name": ""
+    }
+   ]
+  },
+  "42125": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": ""
+    },
+    {
+     "date": "2026-09-18",
+     "name": ""
+    }
+   ]
+  },
+  "42127": {
+   "holidays": [
+    {
+     "date": "2026-08-20",
+     "name": ""
+    },
+    {
+     "date": "2026-08-21",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Rejas de Ucero",
+     "holidays": [
+      {
+       "date": "2026-08-07",
+       "name": ""
+      },
+      {
+       "date": "2026-08-08",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Valdealbín",
+     "holidays": [
+      {
+       "date": "2026-08-17",
+       "name": ""
+      },
+      {
+       "date": "2026-08-18",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42128": {
+   "holidays": [
+    {
+     "date": "2026-06-13",
+     "name": ""
+    },
+    {
+     "date": "2026-06-24",
+     "name": ""
+    }
+   ]
+  },
+  "42129": {
+   "holidays": [
+    {
+     "date": "2026-01-19",
+     "name": ""
+    },
+    {
+     "date": "2026-01-20",
+     "name": ""
+    }
+   ]
+  },
+  "42130": {
+   "holidays": [
+    {
+     "date": "2026-05-23",
+     "name": ""
+    },
+    {
+     "date": "2026-08-28",
+     "name": ""
+    }
+   ]
+  },
+  "42131": {
+   "holidays": [
+    {
+     "date": "2026-07-18",
+     "name": ""
+    },
+    {
+     "date": "2026-11-23",
+     "name": ""
+    }
+   ]
+  },
+  "42132": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-31",
+     "name": ""
+    }
+   ]
+  },
+  "42134": {
+   "holidays": [
+    {
+     "date": "2026-05-19",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Muro",
+     "holidays": [
+      {
+       "date": "2026-04-30",
+       "name": ""
+      },
+      {
+       "date": "2026-08-22",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42135": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": ""
+    },
+    {
+     "date": "2026-11-12",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "El Collado",
+     "holidays": [
+      {
+       "date": "2026-08-07",
+       "name": ""
+      },
+      {
+       "date": "2026-08-08",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Navabellida",
+     "holidays": [
+      {
+       "date": "2026-08-29",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "San Andrés de San Pedro",
+     "holidays": [
+      {
+       "date": "2026-08-14",
+       "name": ""
+      },
+      {
+       "date": "2026-08-17",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42139": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-24",
+     "name": ""
+    }
+   ]
+  },
+  "42140": {
+   "holidays": [
+    {
+     "date": "2026-05-08",
+     "name": ""
+    },
+    {
+     "date": "2026-09-09",
+     "name": ""
+    }
+   ]
+  },
+  "42141": {
+   "holidays": [
+    {
+     "date": "2026-08-07",
+     "name": ""
+    }
+   ],
+   "note": "The list gives 1 day(s) for the municipality.  The list also gives days for localities of the municipality; see nucleos.",
+   "nucleos": [
+    {
+     "name": "Arguijo",
+     "holidays": [
+      {
+       "date": "2026-08-14",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Barriomartín",
+     "holidays": [
+      {
+       "date": "2026-08-03",
+       "name": ""
+      }
+     ]
+    }
+   ]
+  },
+  "42142": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "42144": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": ""
+    },
+    {
+     "date": "2026-06-25",
+     "name": ""
+    }
+   ]
+  },
+  "42145": {
+   "holidays": [
+    {
+     "date": "2026-08-03",
+     "name": ""
+    },
+    {
+     "date": "2026-08-04",
+     "name": ""
+    }
+   ]
+  },
+  "42148": {
+   "holidays": [
+    {
+     "date": "2026-06-15",
+     "name": ""
+    },
+    {
+     "date": "2026-09-15",
+     "name": ""
+    }
+   ]
+  },
+  "42149": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-10-07",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Miranda de Duero",
+     "holidays": [
+      {
+       "date": "2026-05-09",
+       "name": ""
+      },
+      {
+       "date": "2026-09-05",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Navalcaballo",
+     "holidays": [
+      {
+       "date": "2026-04-17",
+       "name": ""
+      },
+      {
+       "date": "2026-09-29",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Tardajos de Duero",
+     "holidays": [
+      {
+       "date": "2026-08-24",
+       "name": ""
+      },
+      {
+       "date": "2026-10-13",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42151": {
+   "holidays": [
+    {
+     "date": "2026-08-29",
+     "name": ""
+    },
+    {
+     "date": "2026-11-30",
+     "name": ""
+    }
+   ]
+  },
+  "42152": {
+   "holidays": [
+    {
+     "date": "2026-04-22",
+     "name": ""
+    },
+    {
+     "date": "2026-06-11",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Galapagares",
+     "holidays": [
+      {
+       "date": "2026-06-24",
+       "name": ""
+      },
+      {
+       "date": "2026-06-25",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Mosarejos",
+     "holidays": [
+      {
+       "date": "2026-09-29",
+       "name": ""
+      },
+      {
+       "date": "2026-09-30",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Nograles",
+     "holidays": [
+      {
+       "date": "2026-08-17",
+       "name": ""
+      },
+      {
+       "date": "2026-08-18",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "La Perera",
+     "holidays": [
+      {
+       "date": "2026-08-13",
+       "name": ""
+      },
+      {
+       "date": "2026-08-14",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42153": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-06-13",
+     "name": ""
+    }
+   ]
+  },
+  "42154": {
+   "holidays": [
+    {
+     "date": "2026-02-05",
+     "name": ""
+    },
+    {
+     "date": "2026-08-10",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Fuensaúco",
+     "holidays": [
+      {
+       "date": "2026-09-07",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Ventosilla de San Juan",
+     "holidays": [
+      {
+       "date": "2026-08-28",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42155": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": ""
+    },
+    {
+     "date": "2026-08-07",
+     "name": ""
+    }
+   ]
+  },
+  "42156": {
+   "holidays": [
+    {
+     "date": "2026-06-13",
+     "name": ""
+    },
+    {
+     "date": "2026-08-21",
+     "name": ""
+    }
+   ]
+  },
+  "42157": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-13",
+     "name": ""
+    }
+   ]
+  },
+  "42158": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": ""
+    },
+    {
+     "date": "2026-06-24",
+     "name": ""
+    }
+   ]
+  },
+  "42159": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "42160": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-12-18",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Derroñadas",
+     "holidays": [
+      {
+       "date": "2026-06-24",
+       "name": ""
+      },
+      {
+       "date": "2026-12-26",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Hinojosa de la Sierra",
+     "holidays": [
+      {
+       "date": "2026-06-17",
+       "name": ""
+      },
+      {
+       "date": "2026-08-17",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Langosto",
+     "holidays": [
+      {
+       "date": "2026-07-20",
+       "name": ""
+      },
+      {
+       "date": "2026-08-08",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42161": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": ""
+    },
+    {
+     "date": "2026-08-05",
+     "name": ""
+    }
+   ]
+  },
+  "42162": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-09-09",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Aldea de San Esteban",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      },
+      {
+       "date": "2026-08-24",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Atauta",
+     "holidays": [
+      {
+       "date": "2026-08-20",
+       "name": ""
+      },
+      {
+       "date": "2026-08-21",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Ines",
+     "holidays": [
+      {
+       "date": "2026-08-24",
+       "name": ""
+      },
+      {
+       "date": "2026-08-25",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Matanza de Soria",
+     "holidays": [
+      {
+       "date": "2026-06-24",
+       "name": ""
+      },
+      {
+       "date": "2026-09-08",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Morcuera",
+     "holidays": [
+      {
+       "date": "2026-08-07",
+       "name": ""
+      },
+      {
+       "date": "2026-08-08",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Olmillos",
+     "holidays": [
+      {
+       "date": "2026-08-12",
+       "name": ""
+      },
+      {
+       "date": "2026-08-13",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Pedraja de San Esteban",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      },
+      {
+       "date": "2026-07-22",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Peñalba de San Esteban",
+     "holidays": [
+      {
+       "date": "2026-05-09",
+       "name": ""
+      },
+      {
+       "date": "2026-08-17",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Piquera de San Esteban",
+     "holidays": [
+      {
+       "date": "2026-08-17",
+       "name": ""
+      },
+      {
+       "date": "2026-08-18",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Quintanas Rubias de Abajo",
+     "holidays": [
+      {
+       "date": "2026-08-14",
+       "name": ""
+      },
+      {
+       "date": "2026-08-17",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Quintanas Rubias de Arriba",
+     "holidays": [
+      {
+       "date": "2026-08-24",
+       "name": ""
+      },
+      {
+       "date": "2026-08-25",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Quintanilla de Tres Barrios",
+     "holidays": [
+      {
+       "date": "2026-08-10",
+       "name": ""
+      },
+      {
+       "date": "2026-08-11",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Rejas de San Esteban",
+     "holidays": [
+      {
+       "date": "2026-08-22",
+       "name": ""
+      },
+      {
+       "date": "2026-08-24",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Soto de San Esteban",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      },
+      {
+       "date": "2026-08-29",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Torraño",
+     "holidays": [
+      {
+       "date": "2026-08-17",
+       "name": ""
+      },
+      {
+       "date": "2026-08-18",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Torremocha de Ayllón",
+     "holidays": [
+      {
+       "date": "2026-02-03",
+       "name": ""
+      },
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Velilla de San Esteban",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      },
+      {
+       "date": "2026-08-03",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Villálvaro",
+     "holidays": [
+      {
+       "date": "2026-06-29",
+       "name": ""
+      },
+      {
+       "date": "2026-08-07",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42163": {
+   "holidays": [
+    {
+     "date": "2026-04-27",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "42164": {
+   "holidays": [
+    {
+     "date": "2026-02-02",
+     "name": ""
+    },
+    {
+     "date": "2026-11-06",
+     "name": ""
+    }
+   ]
+  },
+  "42165": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": ""
+    },
+    {
+     "date": "2026-06-29",
+     "name": ""
+    }
+   ]
+  },
+  "42166": {
+   "holidays": [
+    {
+     "date": "2026-09-04",
+     "name": ""
+    }
+   ],
+   "note": "The list gives 1 day(s) for the municipality. The list also gives days for localities of the municipality; see nucleos.",
+   "nucleos": [
+    {
+     "name": "Villartoso",
+     "holidays": [
+      {
+       "date": "2026-07-11",
+       "name": ""
+      }
+     ]
+    }
+   ]
+  },
+  "42167": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-09-09",
+     "name": ""
+    }
+   ]
+  },
+  "42168": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Muñecas",
+     "holidays": [
+      {
+       "date": "2026-08-01",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42171": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "42172": {
+   "holidays": [
+    {
+     "date": "2026-05-29",
+     "name": ""
+    },
+    {
+     "date": "2026-12-09",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Borchicayada",
+     "holidays": [
+      {
+       "date": "2026-06-13",
+       "name": ""
+      },
+      {
+       "date": "2026-08-17",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42173": {
+   "holidays": [
+    {
+     "date": "2026-06-25",
+     "name": ""
+    },
+    {
+     "date": "2026-10-02",
+     "name": ""
+    }
+   ]
+  },
+  "42174": {
+   "holidays": [
+    {
+     "date": "2026-02-18",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Aldehuela del Rincón",
+     "holidays": [
+      {
+       "date": "2026-08-07",
+       "name": ""
+      },
+      {
+       "date": "2026-12-26",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Molinos de Razón",
+     "holidays": [
+      {
+       "date": "2026-01-24",
+       "name": ""
+      },
+      {
+       "date": "2026-06-13",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42175": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-22",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "El Espino",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      },
+      {
+       "date": "2026-08-25",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42176": {
+   "holidays": [
+    {
+     "date": "2026-04-25",
+     "name": ""
+    },
+    {
+     "date": "2026-07-02",
+     "name": ""
+    }
+   ]
+  },
+  "42177": {
+   "holidays": [
+    {
+     "date": "2026-06-13",
+     "name": ""
+    },
+    {
+     "date": "2026-10-26",
+     "name": ""
+    }
+   ]
+  },
+  "42178": {
+   "holidays": [
+    {
+     "date": "2026-09-29",
+     "name": ""
+    },
+    {
+     "date": "2026-09-30",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Cantalucia",
+     "holidays": [
+      {
+       "date": "2026-09-29",
+       "name": ""
+      },
+      {
+       "date": "2026-09-30",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Fuentecantales",
+     "holidays": [
+      {
+       "date": "2026-08-14",
+       "name": ""
+      },
+      {
+       "date": "2026-08-17",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42181": {
+   "holidays": [
+    {
+     "date": "2026-08-03",
+     "name": ""
+    },
+    {
+     "date": "2026-08-27",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Cascajosa",
+     "holidays": [
+      {
+       "date": "2026-05-09",
+       "name": ""
+      },
+      {
+       "date": "2026-09-29",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42182": {
+   "holidays": [
+    {
+     "date": "2026-08-21",
+     "name": ""
+    },
+    {
+     "date": "2026-08-22",
+     "name": ""
+    }
+   ]
+  },
+  "42183": {
+   "holidays": [
+    {
+     "date": "2026-02-05",
+     "name": ""
+    },
+    {
+     "date": "2026-05-12",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Alparrache",
+     "holidays": [
+      {
+       "date": "2026-05-08",
+       "name": ""
+      },
+      {
+       "date": "2026-11-27",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Boñices",
+     "holidays": [
+      {
+       "date": "2026-03-20",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Castil de Tierra",
+     "holidays": [
+      {
+       "date": "2026-06-12",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Nomparedes",
+     "holidays": [
+      {
+       "date": "2026-06-16",
+       "name": ""
+      },
+      {
+       "date": "2026-09-08",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Sauquillo de Boñices",
+     "holidays": [
+      {
+       "date": "2026-05-08",
+       "name": ""
+      },
+      {
+       "date": "2026-08-18",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Villanueva de Zamajón",
+     "holidays": [
+      {
+       "date": "2026-01-23",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Zamajón",
+     "holidays": [
+      {
+       "date": "2026-09-10",
+       "name": ""
+      },
+      {
+       "date": "2026-09-11",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42184": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-07-25",
+     "name": ""
+    }
+   ]
+  },
+  "42185": {
+   "holidays": [
+    {
+     "date": "2026-01-26",
+     "name": ""
+    },
+    {
+     "date": "2026-06-22",
+     "name": ""
+    }
+   ]
+  },
+  "42187": {
+   "holidays": [
+    {
+     "date": "2026-05-08",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Sauquillo de Alcazar",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      },
+      {
+       "date": "2026-08-28",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Tordesalas",
+     "holidays": [
+      {
+       "date": "2026-08-28",
+       "name": ""
+      },
+      {
+       "date": "2026-10-14",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42188": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-05-15",
+     "name": ""
+    }
+   ]
+  },
+  "42189": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": ""
+    },
+    {
+     "date": "2026-08-25",
+     "name": ""
+    }
+   ]
+  },
+  "42190": {
+   "holidays": [
+    {
+     "date": "2026-02-02",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "42191": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-06-04",
+     "name": ""
+    }
+   ]
+  },
+  "42192": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-10",
+     "name": ""
+    }
+   ]
+  },
+  "42193": {
+   "holidays": [
+    {
+     "date": "2026-01-17",
+     "name": ""
+    },
+    {
+     "date": "2026-07-22",
+     "name": ""
+    }
+   ]
+  },
+  "42194": {
+   "holidays": [
+    {
+     "date": "2026-08-27",
+     "name": ""
+    },
+    {
+     "date": "2026-09-21",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Aylagas",
+     "holidays": [
+      {
+       "date": "2026-08-20",
+       "name": ""
+      },
+      {
+       "date": "2026-08-21",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Sotos del Burgo",
+     "holidays": [
+      {
+       "date": "2026-09-03",
+       "name": ""
+      },
+      {
+       "date": "2026-09-04",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Valdeavellano de Ucero",
+     "holidays": [
+      {
+       "date": "2026-08-19",
+       "name": ""
+      },
+      {
+       "date": "2026-08-20",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Valdelinares",
+     "holidays": [
+      {
+       "date": "2026-08-27",
+       "name": ""
+      },
+      {
+       "date": "2026-08-28",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42195": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-08-18",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Boos",
+     "holidays": [
+      {
+       "date": "2026-08-13",
+       "name": ""
+      },
+      {
+       "date": "2026-08-14",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42196": {
+   "holidays": [
+    {
+     "date": "2026-08-21",
+     "name": ""
+    },
+    {
+     "date": "2026-08-22",
+     "name": ""
+    }
+   ]
+  },
+  "42197": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Torreandaluz",
+     "holidays": [
+      {
+       "date": "2026-02-02",
+       "name": ""
+      },
+      {
+       "date": "2026-09-24",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42198": {
+   "holidays": [
+    {
+     "date": "2026-08-08",
+     "name": ""
+    },
+    {
+     "date": "2026-10-03",
+     "name": ""
+    }
+   ]
+  },
+  "42200": {
+   "holidays": [
+    {
+     "date": "2026-05-30",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Fuentetovar",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      },
+      {
+       "date": "2026-08-08",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Rebollo de Duero",
+     "holidays": [
+      {
+       "date": "2026-01-17",
+       "name": ""
+      },
+      {
+       "date": "2026-08-17",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42201": {
+   "holidays": [
+    {
+     "date": "2026-06-25",
+     "name": ""
+    },
+    {
+     "date": "2026-08-05",
+     "name": ""
+    }
+   ]
+  },
+  "42202": {
+   "holidays": [
+    {
+     "date": "2026-06-13",
+     "name": ""
+    },
+    {
+     "date": "2026-08-13",
+     "name": ""
+    }
+   ]
+  },
+  "42204": {
+   "holidays": [
+    {
+     "date": "2026-06-13",
+     "name": ""
+    },
+    {
+     "date": "2026-08-24",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "La Milana",
+     "holidays": [
+      {
+       "date": "2026-10-02",
+       "name": ""
+      },
+      {
+       "date": "2026-10-03",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Moñux",
+     "holidays": [
+      {
+       "date": "2026-10-02",
+       "name": ""
+      },
+      {
+       "date": "2026-10-03",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Perdices",
+     "holidays": [
+      {
+       "date": "2026-10-02",
+       "name": ""
+      },
+      {
+       "date": "2026-10-03",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42205": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": ""
+    },
+    {
+     "date": "2026-07-11",
+     "name": ""
+    }
+   ]
+  },
+  "42206": {
+   "holidays": [
+    {
+     "date": "2026-08-03",
+     "name": ""
+    },
+    {
+     "date": "2026-08-04",
+     "name": ""
+    }
+   ]
+  },
+  "42207": {
+   "holidays": [
+    {
+     "date": "2026-08-06",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "42208": {
+   "holidays": [
+    {
+     "date": "2026-08-20",
+     "name": ""
+    },
+    {
+     "date": "2026-09-24",
+     "name": ""
+    }
+   ]
+  },
+  "42209": {
+   "holidays": [
+    {
+     "date": "2026-04-30",
+     "name": ""
+    },
+    {
+     "date": "2026-08-28",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Bretún",
+     "holidays": [
+      {
+       "date": "2026-07-24",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Huérteles",
+     "holidays": [
+      {
+       "date": "2026-08-14",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42211": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-22",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "La Rubia",
+     "holidays": [
+      {
+       "date": "2026-05-20",
+       "name": ""
+      },
+      {
+       "date": "2026-05-22",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Pinilla de Caradueña",
+     "holidays": [
+      {
+       "date": "2026-04-29",
+       "name": ""
+      },
+      {
+       "date": "2026-09-23",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42212": {
+   "holidays": [
+    {
+     "date": "2026-08-22",
+     "name": ""
+    },
+    {
+     "date": "2026-10-03",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Fuentegelmes",
+     "holidays": [
+      {
+       "date": "2026-05-02",
+       "name": ""
+      },
+      {
+       "date": "2026-12-05",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "42213": {
+   "holidays": [
+    {
+     "date": "2026-05-20",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "42215": {
+   "holidays": [
+    {
+     "date": "2026-02-05",
+     "name": ""
+    },
+    {
+     "date": "2026-06-29",
+     "name": ""
+    }
+   ]
+  },
+  "42216": {
+   "holidays": [
+    {
+     "date": "2026-06-30",
+     "name": ""
+    },
+    {
+     "date": "2026-11-11",
+     "name": ""
+    }
+   ]
+  },
+  "42217": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "42218": {
+   "holidays": [
+    {
+     "date": "2026-04-30",
+     "name": ""
+    },
+    {
+     "date": "2026-07-16",
+     "name": ""
+    }
+   ]
+  },
+  "42219": {
+   "holidays": [
+    {
+     "date": "2026-07-24",
+     "name": ""
+    }
+   ],
+   "note": "The list gives 1 day(s) for the municipality."
+  }
+ }
+}

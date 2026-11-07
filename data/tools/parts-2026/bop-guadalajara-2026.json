@@ -1,0 +1,3479 @@
+{
+ "source_id": "bop-guadalajara-2026",
+ "source": {
+  "title": "Anuncio de 20 de noviembre de 2025, de la Delegación Provincial de la Consejería de Economía, Empresas y Empleo de Guadalajara, por el que se da publicidad a la relación de fiestas de carácter local retribuidas y no recuperables para el año 2026 (BOP Guadalajara núm. 225, de 24-11-2025), modificado por los anuncios de 9-2-2026 (BOP núm. 28, de 11-02-2026) y 14-5-2026 (BOP núm. 92, de 18-05-2026)",
+  "url": "https://boletin.dguadalajara.es/boletin/pdf/pdf2025_3507.pdf",
+  "published": "2025-11-24",
+  "modifications": [
+   "https://boletin.dguadalajara.es/boletin/pdf/pdf2026_360.pdf",
+   "https://boletin.dguadalajara.es/boletin/pdf/pdf2026_1277.pdf"
+  ]
+ },
+ "region": "castilla-la-mancha",
+ "count": 283,
+ "unmatched": [
+  "ALDEANUEVA DE ATIENZA: 21 ENERO Y 16 AGOSTO",
+  "AMAYAS: 3 AGOSTO",
+  "ANCHUELA DEL CAMPO: 11 AGOSTO Y 29 SEPTIEMBRE",
+  "ANCHUELA DEL PEDREGAL: 15 AGOSTO Y 4 OCTUBRE",
+  "ARAGOSA: 23 ENERO Y 8 SEPTIEMBRE",
+  "BALBACIL: 18 MAYO Y 8 SEPTIEMBRE",
+  "BUJARRABAL: 22 ENERO Y 16 AGOSTO",
+  "CANALES DEL DUCADO: 12 JUNIO Y 17 AGOSTO",
+  "CARRASCOSA DE HENARES: 22 MAYO Y 10 AGOSTO",
+  "CASASANA: 8 Y 9 SEPTIEMBRE",
+  "CENDEJAS DEL PADRASTRO: 25 JULIO Y 8 SEPTIEMBRE",
+  "CERECEDA: 8 Y 9 SEPTIEMBRE",
+  "CHERA: 4 ABRIL Y 15 AGOSTO",
+  "CÍVICA: 17 AGOSTO Y 19 OCTUBRE",
+  "CLARES: 18 MAYO Y 8 SEPTIEMBRE",
+  "CODES: 18 MAYO Y 8 SEPTIEMBRE",
+  "CONCHA: 12 AGOSTO",
+  "CÓRCOLES: 1 Y 2 DE JUNIO",
+  "CUBILLEJO DE LA SIERRA: 13 JUNIO Y 21 AGOSTO",
+  "CUBILLEJO DEL SITIO: 14 MAYO Y 25 AGOSTO",
+  "GÁRGOLES DE ABAJO: 14 Y 17 AGOSTO",
+  "GÁRGOLES DE ARRIBA: 14 Y 15 SEPTIEMBRE",
+  "GUALDA: 30 MAYO Y 8 AGOSTO",
+  "HINOJOSA: 17 Y 18 AGOSTO",
+  "LABROS: 15 MAYO Y 22 AGOSTO",
+  "OTILLA: 4 ABRIL Y 24 SEPTIEMBRE",
+  "TABLADILLO: 8 Y 9 SEPTIEMBRE",
+  "TOBILLOS: 24 JUNIO Y 3 FEBRERO",
+  "TORDELPALO: 16 Y 18 AGOSTO",
+  "TURMIEL: 18 MAYO Y 8 SEPTIEMBRE",
+  "VAL DE SAN GARCÍA: 14 Y 15 SEPTIEMBRE",
+  "VALDEPINILLOS: 12 JUNIO Y 3 AGOSTO",
+  "VENTOSA: 17 ENERO Y 17 MAYO",
+  "ZARZUELA DE GALVE: 16 AGOSTO Y 31 OCTUBRE"
+ ],
+ "municipios": {
+  "19001": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-09-24",
+     "name": ""
+    }
+   ]
+  },
+  "19002": {
+   "holidays": [
+    {
+     "date": "2026-05-22",
+     "name": ""
+    },
+    {
+     "date": "2026-09-11",
+     "name": ""
+    }
+   ]
+  },
+  "19003": {
+   "holidays": [
+    {
+     "date": "2026-04-25",
+     "name": ""
+    },
+    {
+     "date": "2026-08-07",
+     "name": ""
+    }
+   ]
+  },
+  "19004": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "19005": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-07-24",
+     "name": ""
+    }
+   ]
+  },
+  "19006": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-09-28",
+     "name": ""
+    }
+   ]
+  },
+  "19007": {
+   "holidays": [
+    {
+     "date": "2026-06-15",
+     "name": ""
+    },
+    {
+     "date": "2026-06-19",
+     "name": ""
+    }
+   ]
+  },
+  "19008": {
+   "holidays": [
+    {
+     "date": "2026-01-31",
+     "name": ""
+    },
+    {
+     "date": "2026-08-01",
+     "name": ""
+    }
+   ]
+  },
+  "19009": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-09-21",
+     "name": ""
+    }
+   ]
+  },
+  "19010": {
+   "holidays": [
+    {
+     "date": "2026-05-14",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "19011": {
+   "holidays": [
+    {
+     "date": "2026-06-13",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "19013": {
+   "holidays": [
+    {
+     "date": "2026-08-22",
+     "name": ""
+    },
+    {
+     "date": "2026-08-24",
+     "name": ""
+    }
+   ],
+   "note": "Modified by anuncio of 14-5-2026 (BOP Guadalajara núm. 92, 18-05-2026): 22 and 23 August replaced by 22 and 24 August."
+  },
+  "19015": {
+   "holidays": [
+    {
+     "date": "2026-08-16",
+     "name": ""
+    },
+    {
+     "date": "2026-12-13",
+     "name": ""
+    }
+   ],
+   "note": "Published date(s) falling on a Sunday, kept as published: 2026-08-16, 2026-12-13."
+  },
+  "19016": {
+   "holidays": [
+    {
+     "date": "2026-08-04",
+     "name": ""
+    },
+    {
+     "date": "2026-09-12",
+     "name": ""
+    }
+   ]
+  },
+  "19017": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": ""
+    },
+    {
+     "date": "2026-09-16",
+     "name": ""
+    }
+   ]
+  },
+  "19018": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "19019": {
+   "holidays": [
+    {
+     "date": "2026-01-17",
+     "name": ""
+    },
+    {
+     "date": "2026-06-13",
+     "name": ""
+    }
+   ]
+  },
+  "19020": {
+   "holidays": [
+    {
+     "date": "2026-06-15",
+     "name": ""
+    },
+    {
+     "date": "2026-06-16",
+     "name": ""
+    }
+   ]
+  },
+  "19021": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "19022": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-09-11",
+     "name": ""
+    }
+   ]
+  },
+  "19023": {
+   "holidays": [
+    {
+     "date": "2026-08-14",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "19024": {
+   "holidays": [
+    {
+     "date": "2026-01-26",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "19027": {
+   "holidays": [
+    {
+     "date": "2026-01-16",
+     "name": ""
+    },
+    {
+     "date": "2026-05-15",
+     "name": ""
+    }
+   ]
+  },
+  "19031": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-11-25",
+     "name": ""
+    }
+   ]
+  },
+  "19032": {
+   "holidays": [
+    {
+     "date": "2026-08-03",
+     "name": ""
+    },
+    {
+     "date": "2026-10-05",
+     "name": ""
+    }
+   ]
+  },
+  "19033": {
+   "holidays": [
+    {
+     "date": "2026-09-11",
+     "name": ""
+    },
+    {
+     "date": "2026-11-11",
+     "name": ""
+    }
+   ]
+  },
+  "19034": {
+   "holidays": [
+    {
+     "date": "2026-06-13",
+     "name": ""
+    },
+    {
+     "date": "2026-08-16",
+     "name": ""
+    }
+   ],
+   "note": "Published date(s) falling on a Sunday, kept as published: 2026-08-16."
+  },
+  "19036": {
+   "holidays": [
+    {
+     "date": "2026-06-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-27",
+     "name": ""
+    }
+   ]
+  },
+  "19037": {
+   "holidays": [
+    {
+     "date": "2026-02-02",
+     "name": ""
+    },
+    {
+     "date": "2026-08-28",
+     "name": ""
+    }
+   ]
+  },
+  "19038": {
+   "holidays": [
+    {
+     "date": "2026-07-13",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "19039": {
+   "holidays": [
+    {
+     "date": "2026-05-08",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "19040": {
+   "holidays": [
+    {
+     "date": "2026-08-08",
+     "name": ""
+    },
+    {
+     "date": "2026-08-09",
+     "name": ""
+    }
+   ],
+   "note": "Published date(s) falling on a Sunday, kept as published: 2026-08-09."
+  },
+  "19041": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-21",
+     "name": ""
+    }
+   ]
+  },
+  "19042": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "19043": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-08-28",
+     "name": ""
+    }
+   ]
+  },
+  "19044": {
+   "holidays": [
+    {
+     "date": "2026-03-27",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "19045": {
+   "holidays": [
+    {
+     "date": "2026-05-26",
+     "name": ""
+    },
+    {
+     "date": "2026-09-15",
+     "name": ""
+    }
+   ]
+  },
+  "19046": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-09-21",
+     "name": ""
+    }
+   ]
+  },
+  "19047": {
+   "holidays": [
+    {
+     "date": "2026-01-24",
+     "name": ""
+    },
+    {
+     "date": "2026-08-16",
+     "name": ""
+    }
+   ],
+   "note": "Published date(s) falling on a Sunday, kept as published: 2026-08-16."
+  },
+  "19048": {
+   "holidays": [
+    {
+     "date": "2026-09-14",
+     "name": ""
+    },
+    {
+     "date": "2026-09-29",
+     "name": ""
+    }
+   ]
+  },
+  "19049": {
+   "holidays": [
+    {
+     "date": "2026-06-13",
+     "name": ""
+    },
+    {
+     "date": "2026-08-01",
+     "name": ""
+    }
+   ]
+  },
+  "19050": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-10-30",
+     "name": ""
+    }
+   ]
+  },
+  "19051": {
+   "holidays": [
+    {
+     "date": "2026-09-07",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "19052": {
+   "holidays": [
+    {
+     "date": "2026-08-01",
+     "name": ""
+    },
+    {
+     "date": "2026-08-02",
+     "name": ""
+    }
+   ],
+   "note": "Published date(s) falling on a Sunday, kept as published: 2026-08-02."
+  },
+  "19053": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-10-19",
+     "name": ""
+    }
+   ]
+  },
+  "19054": {
+   "holidays": [
+    {
+     "date": "2026-09-14",
+     "name": ""
+    },
+    {
+     "date": "2026-09-15",
+     "name": ""
+    }
+   ]
+  },
+  "19055": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-06-29",
+     "name": ""
+    }
+   ]
+  },
+  "19057": {
+   "holidays": [
+    {
+     "date": "2026-08-10",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "19058": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-07-24",
+     "name": ""
+    }
+   ]
+  },
+  "19059": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "19060": {
+   "holidays": [
+    {
+     "date": "2026-07-11",
+     "name": ""
+    },
+    {
+     "date": "2026-08-08",
+     "name": ""
+    }
+   ]
+  },
+  "19061": {
+   "holidays": [
+    {
+     "date": "2026-07-24",
+     "name": ""
+    },
+    {
+     "date": "2026-07-27",
+     "name": ""
+    }
+   ]
+  },
+  "19064": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-07-06",
+     "name": ""
+    }
+   ]
+  },
+  "19065": {
+   "holidays": [
+    {
+     "date": "2026-10-09",
+     "name": ""
+    },
+    {
+     "date": "2026-12-07",
+     "name": ""
+    }
+   ]
+  },
+  "19066": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-06-01",
+     "name": ""
+    }
+   ]
+  },
+  "19067": {
+   "holidays": [
+    {
+     "date": "2026-08-14",
+     "name": ""
+    },
+    {
+     "date": "2026-08-16",
+     "name": ""
+    }
+   ],
+   "note": "Published date(s) falling on a Sunday, kept as published: 2026-08-16."
+  },
+  "19070": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": ""
+    },
+    {
+     "date": "2026-09-04",
+     "name": ""
+    }
+   ]
+  },
+  "19071": {
+   "holidays": [
+    {
+     "date": "2026-02-02",
+     "name": ""
+    },
+    {
+     "date": "2026-09-10",
+     "name": ""
+    }
+   ]
+  },
+  "19073": {
+   "holidays": [
+    {
+     "date": "2026-06-03",
+     "name": ""
+    },
+    {
+     "date": "2026-06-05",
+     "name": ""
+    }
+   ]
+  },
+  "19074": {
+   "holidays": [
+    {
+     "date": "2026-06-13",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "19075": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-09-29",
+     "name": ""
+    }
+   ]
+  },
+  "19076": {
+   "holidays": [
+    {
+     "date": "2026-05-18",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "19078": {
+   "holidays": [
+    {
+     "date": "2026-02-02",
+     "name": ""
+    },
+    {
+     "date": "2026-02-03",
+     "name": ""
+    }
+   ]
+  },
+  "19079": {
+   "holidays": [
+    {
+     "date": "2026-04-21",
+     "name": ""
+    },
+    {
+     "date": "2026-08-18",
+     "name": ""
+    }
+   ]
+  },
+  "19080": {
+   "holidays": [
+    {
+     "date": "2026-01-17",
+     "name": ""
+    },
+    {
+     "date": "2026-07-19",
+     "name": ""
+    }
+   ],
+   "note": "Published date(s) falling on a Sunday, kept as published: 2026-07-19."
+  },
+  "19081": {
+   "holidays": [
+    {
+     "date": "2026-01-21",
+     "name": ""
+    },
+    {
+     "date": "2026-01-22",
+     "name": ""
+    }
+   ]
+  },
+  "19082": {
+   "holidays": [
+    {
+     "date": "2026-02-05",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "19086": {
+   "holidays": [
+    {
+     "date": "2026-09-14",
+     "name": ""
+    },
+    {
+     "date": "2026-09-15",
+     "name": ""
+    }
+   ]
+  },
+  "19087": {
+   "holidays": [
+    {
+     "date": "2026-01-22",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "19088": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "19089": {
+   "holidays": [
+    {
+     "date": "2026-07-24",
+     "name": ""
+    },
+    {
+     "date": "2026-09-04",
+     "name": ""
+    }
+   ]
+  },
+  "19090": {
+   "holidays": [
+    {
+     "date": "2026-06-12",
+     "name": ""
+    },
+    {
+     "date": "2026-09-04",
+     "name": ""
+    }
+   ]
+  },
+  "19091": {
+   "holidays": [
+    {
+     "date": "2026-06-11",
+     "name": ""
+    },
+    {
+     "date": "2026-06-14",
+     "name": ""
+    }
+   ],
+   "note": "Published date(s) falling on a Sunday, kept as published: 2026-06-14."
+  },
+  "19092": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-11-12",
+     "name": ""
+    }
+   ]
+  },
+  "19095": {
+   "holidays": [
+    {
+     "date": "2026-06-13",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "19096": {
+   "holidays": [
+    {
+     "date": "2026-01-22",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "19097": {
+   "holidays": [
+    {
+     "date": "2026-08-14",
+     "name": ""
+    },
+    {
+     "date": "2026-12-04",
+     "name": ""
+    }
+   ]
+  },
+  "19098": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "19099": {
+   "holidays": [
+    {
+     "date": "2026-09-10",
+     "name": ""
+    },
+    {
+     "date": "2026-09-11",
+     "name": ""
+    }
+   ]
+  },
+  "19102": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-21",
+     "name": ""
+    }
+   ]
+  },
+  "19103": {
+   "holidays": [
+    {
+     "date": "2026-08-10",
+     "name": ""
+    },
+    {
+     "date": "2026-08-24",
+     "name": ""
+    }
+   ]
+  },
+  "19104": {
+   "holidays": [
+    {
+     "date": "2026-07-14",
+     "name": ""
+    },
+    {
+     "date": "2026-08-19",
+     "name": ""
+    }
+   ]
+  },
+  "19105": {
+   "holidays": [
+    {
+     "date": "2026-04-24",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "19106": {
+   "holidays": [
+    {
+     "date": "2026-06-01",
+     "name": ""
+    },
+    {
+     "date": "2026-06-12",
+     "name": ""
+    }
+   ]
+  },
+  "19107": {
+   "holidays": [
+    {
+     "date": "2026-09-29",
+     "name": ""
+    },
+    {
+     "date": "2026-09-30",
+     "name": ""
+    }
+   ]
+  },
+  "19108": {
+   "holidays": [
+    {
+     "date": "2026-08-14",
+     "name": ""
+    },
+    {
+     "date": "2026-12-18",
+     "name": ""
+    }
+   ]
+  },
+  "19109": {
+   "holidays": [
+    {
+     "date": "2026-11-25",
+     "name": ""
+    },
+    {
+     "date": "2026-12-20",
+     "name": ""
+    }
+   ],
+   "note": "Published date(s) falling on a Sunday, kept as published: 2026-12-20."
+  },
+  "19110": {
+   "holidays": [
+    {
+     "date": "2026-07-06",
+     "name": ""
+    },
+    {
+     "date": "2026-09-21",
+     "name": ""
+    }
+   ]
+  },
+  "19111": {
+   "holidays": [
+    {
+     "date": "2026-04-22",
+     "name": ""
+    },
+    {
+     "date": "2026-05-15",
+     "name": ""
+    }
+   ]
+  },
+  "19112": {
+   "holidays": [
+    {
+     "date": "2026-05-01",
+     "name": ""
+    },
+    {
+     "date": "2026-08-02",
+     "name": ""
+    }
+   ],
+   "note": "Published date(s) falling on a Sunday, kept as published: 2026-08-02."
+  },
+  "19113": {
+   "holidays": [
+    {
+     "date": "2026-09-04",
+     "name": ""
+    },
+    {
+     "date": "2026-09-07",
+     "name": ""
+    }
+   ]
+  },
+  "19114": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-09-11",
+     "name": ""
+    }
+   ]
+  },
+  "19115": {
+   "holidays": [
+    {
+     "date": "2026-06-13",
+     "name": ""
+    },
+    {
+     "date": "2026-08-13",
+     "name": ""
+    }
+   ]
+  },
+  "19116": {
+   "holidays": [
+    {
+     "date": "2026-08-21",
+     "name": ""
+    },
+    {
+     "date": "2026-08-22",
+     "name": ""
+    }
+   ]
+  },
+  "19117": {
+   "holidays": [
+    {
+     "date": "2026-05-18",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "19118": {
+   "holidays": [
+    {
+     "date": "2026-08-19",
+     "name": ""
+    },
+    {
+     "date": "2026-08-21",
+     "name": ""
+    }
+   ]
+  },
+  "19119": {
+   "holidays": [
+    {
+     "date": "2026-01-24",
+     "name": ""
+    },
+    {
+     "date": "2026-05-02",
+     "name": ""
+    }
+   ]
+  },
+  "19120": {
+   "holidays": [
+    {
+     "date": "2026-09-14",
+     "name": ""
+    },
+    {
+     "date": "2026-11-30",
+     "name": ""
+    }
+   ]
+  },
+  "19121": {
+   "holidays": [
+    {
+     "date": "2026-05-14",
+     "name": ""
+    },
+    {
+     "date": "2026-08-28",
+     "name": ""
+    }
+   ]
+  },
+  "19122": {
+   "holidays": [
+    {
+     "date": "2026-05-18",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "19123": {
+   "holidays": [
+    {
+     "date": "2026-05-03",
+     "name": ""
+    },
+    {
+     "date": "2026-08-16",
+     "name": ""
+    }
+   ],
+   "note": "Published date(s) falling on a Sunday, kept as published: 2026-05-03, 2026-08-16."
+  },
+  "19124": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-06-26",
+     "name": ""
+    }
+   ]
+  },
+  "19125": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-06-12",
+     "name": ""
+    }
+   ]
+  },
+  "19126": {
+   "holidays": [
+    {
+     "date": "2026-02-05",
+     "name": ""
+    },
+    {
+     "date": "2026-08-21",
+     "name": ""
+    }
+   ]
+  },
+  "19127": {
+   "holidays": [
+    {
+     "date": "2026-06-19",
+     "name": ""
+    },
+    {
+     "date": "2026-08-21",
+     "name": ""
+    }
+   ]
+  },
+  "19129": {
+   "holidays": [
+    {
+     "date": "2026-08-14",
+     "name": ""
+    },
+    {
+     "date": "2026-08-15",
+     "name": ""
+    }
+   ]
+  },
+  "19130": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-09-18",
+     "name": ""
+    }
+   ]
+  },
+  "19132": {
+   "holidays": [
+    {
+     "date": "2026-05-06",
+     "name": ""
+    },
+    {
+     "date": "2026-08-26",
+     "name": ""
+    }
+   ]
+  },
+  "19133": {
+   "holidays": [
+    {
+     "date": "2026-06-19",
+     "name": ""
+    },
+    {
+     "date": "2026-09-25",
+     "name": ""
+    }
+   ]
+  },
+  "19134": {
+   "holidays": [
+    {
+     "date": "2026-08-14",
+     "name": ""
+    },
+    {
+     "date": "2026-08-15",
+     "name": ""
+    }
+   ]
+  },
+  "19135": {
+   "holidays": [
+    {
+     "date": "2026-08-22",
+     "name": ""
+    },
+    {
+     "date": "2026-11-23",
+     "name": ""
+    }
+   ]
+  },
+  "19136": {
+   "holidays": [
+    {
+     "date": "2026-06-11",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "19138": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-21",
+     "name": ""
+    }
+   ]
+  },
+  "19139": {
+   "holidays": [
+    {
+     "date": "2026-05-21",
+     "name": ""
+    },
+    {
+     "date": "2026-08-28",
+     "name": ""
+    }
+   ]
+  },
+  "19142": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "19143": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-09-09",
+     "name": ""
+    }
+   ]
+  },
+  "19145": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-05-26",
+     "name": ""
+    }
+   ]
+  },
+  "19146": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-06-05",
+     "name": ""
+    }
+   ]
+  },
+  "19147": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-08-06",
+     "name": ""
+    }
+   ]
+  },
+  "19148": {
+   "holidays": [
+    {
+     "date": "2026-06-13",
+     "name": ""
+    },
+    {
+     "date": "2026-09-29",
+     "name": ""
+    }
+   ]
+  },
+  "19150": {
+   "holidays": [
+    {
+     "date": "2026-09-11",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "19151": {
+   "holidays": [
+    {
+     "date": "2026-09-14",
+     "name": ""
+    },
+    {
+     "date": "2026-09-15",
+     "name": ""
+    }
+   ]
+  },
+  "19152": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-09-11",
+     "name": ""
+    }
+   ]
+  },
+  "19153": {
+   "holidays": [
+    {
+     "date": "2026-06-12",
+     "name": ""
+    },
+    {
+     "date": "2026-12-04",
+     "name": ""
+    }
+   ]
+  },
+  "19154": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-06-22",
+     "name": ""
+    }
+   ]
+  },
+  "19155": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "19156": {
+   "holidays": [
+    {
+     "date": "2026-09-14",
+     "name": ""
+    },
+    {
+     "date": "2026-09-15",
+     "name": ""
+    }
+   ]
+  },
+  "19157": {
+   "holidays": [
+    {
+     "date": "2026-06-13",
+     "name": ""
+    },
+    {
+     "date": "2026-08-24",
+     "name": ""
+    }
+   ]
+  },
+  "19159": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-06-24",
+     "name": ""
+    }
+   ]
+  },
+  "19160": {
+   "holidays": [
+    {
+     "date": "2026-08-04",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "19161": {
+   "holidays": [
+    {
+     "date": "2026-05-06",
+     "name": ""
+    },
+    {
+     "date": "2026-08-24",
+     "name": ""
+    }
+   ]
+  },
+  "19162": {
+   "holidays": [
+    {
+     "date": "2026-07-09",
+     "name": ""
+    },
+    {
+     "date": "2026-09-18",
+     "name": ""
+    }
+   ]
+  },
+  "19163": {
+   "holidays": [
+    {
+     "date": "2026-06-12",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "19165": {
+   "holidays": [
+    {
+     "date": "2026-06-27",
+     "name": ""
+    },
+    {
+     "date": "2026-09-06",
+     "name": ""
+    }
+   ],
+   "note": "Published date(s) falling on a Sunday, kept as published: 2026-09-06."
+  },
+  "19166": {
+   "holidays": [
+    {
+     "date": "2026-08-06",
+     "name": ""
+    },
+    {
+     "date": "2026-10-05",
+     "name": ""
+    }
+   ]
+  },
+  "19167": {
+   "holidays": [
+    {
+     "date": "2026-02-06",
+     "name": ""
+    },
+    {
+     "date": "2026-09-04",
+     "name": ""
+    }
+   ]
+  },
+  "19168": {
+   "holidays": [
+    {
+     "date": "2026-01-23",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "19169": {
+   "holidays": [
+    {
+     "date": "2026-06-12",
+     "name": ""
+    },
+    {
+     "date": "2026-08-07",
+     "name": ""
+    }
+   ]
+  },
+  "19170": {
+   "holidays": [
+    {
+     "date": "2026-05-18",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "19171": {
+   "holidays": [
+    {
+     "date": "2026-04-30",
+     "name": ""
+    },
+    {
+     "date": "2026-05-15",
+     "name": ""
+    }
+   ]
+  },
+  "19172": {
+   "holidays": [
+    {
+     "date": "2026-06-11",
+     "name": ""
+    },
+    {
+     "date": "2026-11-11",
+     "name": ""
+    }
+   ]
+  },
+  "19173": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": ""
+    },
+    {
+     "date": "2026-08-24",
+     "name": ""
+    }
+   ]
+  },
+  "19174": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": ""
+    },
+    {
+     "date": "2026-12-07",
+     "name": ""
+    }
+   ]
+  },
+  "19175": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-08-18",
+     "name": ""
+    }
+   ]
+  },
+  "19176": {
+   "holidays": [
+    {
+     "date": "2026-01-26",
+     "name": ""
+    },
+    {
+     "date": "2026-01-27",
+     "name": ""
+    }
+   ]
+  },
+  "19177": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-06-24",
+     "name": ""
+    }
+   ]
+  },
+  "19178": {
+   "holidays": [
+    {
+     "date": "2026-05-22",
+     "name": ""
+    },
+    {
+     "date": "2026-08-16",
+     "name": ""
+    }
+   ],
+   "note": "Published date(s) falling on a Sunday, kept as published: 2026-08-16."
+  },
+  "19179": {
+   "holidays": [
+    {
+     "date": "2026-08-05",
+     "name": ""
+    },
+    {
+     "date": "2026-08-28",
+     "name": ""
+    }
+   ]
+  },
+  "19181": {
+   "holidays": [
+    {
+     "date": "2026-06-13",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "19182": {
+   "holidays": [
+    {
+     "date": "2026-01-18",
+     "name": ""
+    },
+    {
+     "date": "2026-08-15",
+     "name": ""
+    }
+   ],
+   "note": "Published date(s) falling on a Sunday, kept as published: 2026-01-18."
+  },
+  "19183": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "19184": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-08-29",
+     "name": ""
+    }
+   ]
+  },
+  "19185": {
+   "holidays": [
+    {
+     "date": "2026-06-12",
+     "name": ""
+    },
+    {
+     "date": "2026-06-13",
+     "name": ""
+    }
+   ]
+  },
+  "19186": {
+   "holidays": [
+    {
+     "date": "2026-05-14",
+     "name": ""
+    },
+    {
+     "date": "2026-05-15",
+     "name": ""
+    }
+   ]
+  },
+  "19187": {
+   "holidays": [
+    {
+     "date": "2026-04-23",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "19188": {
+   "holidays": [
+    {
+     "date": "2026-05-17",
+     "name": ""
+    },
+    {
+     "date": "2026-09-24",
+     "name": ""
+    }
+   ],
+   "note": "Published date(s) falling on a Sunday, kept as published: 2026-05-17."
+  },
+  "19189": {
+   "holidays": [
+    {
+     "date": "2026-04-30",
+     "name": ""
+    },
+    {
+     "date": "2026-07-24",
+     "name": ""
+    }
+   ]
+  },
+  "19190": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": ""
+    },
+    {
+     "date": "2026-09-01",
+     "name": ""
+    }
+   ]
+  },
+  "19191": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-09-09",
+     "name": ""
+    }
+   ]
+  },
+  "19192": {
+   "holidays": [
+    {
+     "date": "2026-07-22",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "19193": {
+   "holidays": [
+    {
+     "date": "2026-01-10",
+     "name": ""
+    },
+    {
+     "date": "2026-08-06",
+     "name": ""
+    }
+   ]
+  },
+  "19194": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-09-16",
+     "name": ""
+    }
+   ]
+  },
+  "19195": {
+   "holidays": [
+    {
+     "date": "2026-08-21",
+     "name": ""
+    },
+    {
+     "date": "2026-08-22",
+     "name": ""
+    }
+   ]
+  },
+  "19196": {
+   "holidays": [
+    {
+     "date": "2026-07-26",
+     "name": ""
+    }
+   ],
+   "note": "The bulletin gives only one date. Published date(s) falling on a Sunday, kept as published: 2026-07-26."
+  },
+  "19197": {
+   "holidays": [
+    {
+     "date": "2026-08-13",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "19198": {
+   "holidays": [
+    {
+     "date": "2026-08-07",
+     "name": ""
+    },
+    {
+     "date": "2026-08-10",
+     "name": ""
+    }
+   ]
+  },
+  "19199": {
+   "holidays": [
+    {
+     "date": "2026-08-07",
+     "name": ""
+    },
+    {
+     "date": "2026-08-10",
+     "name": ""
+    }
+   ]
+  },
+  "19200": {
+   "holidays": [
+    {
+     "date": "2026-08-01",
+     "name": ""
+    },
+    {
+     "date": "2026-08-03",
+     "name": ""
+    }
+   ]
+  },
+  "19201": {
+   "holidays": [
+    {
+     "date": "2026-07-25",
+     "name": ""
+    },
+    {
+     "date": "2026-08-16",
+     "name": ""
+    }
+   ],
+   "note": "Published date(s) falling on a Sunday, kept as published: 2026-08-16."
+  },
+  "19202": {
+   "holidays": [
+    {
+     "date": "2026-05-16",
+     "name": ""
+    },
+    {
+     "date": "2026-08-22",
+     "name": ""
+    }
+   ]
+  },
+  "19203": {
+   "holidays": [
+    {
+     "date": "2026-08-02",
+     "name": ""
+    },
+    {
+     "date": "2026-08-18",
+     "name": ""
+    }
+   ],
+   "note": "Published date(s) falling on a Sunday, kept as published: 2026-08-02."
+  },
+  "19204": {
+   "holidays": [
+    {
+     "date": "2026-07-10",
+     "name": ""
+    },
+    {
+     "date": "2026-09-04",
+     "name": ""
+    }
+   ]
+  },
+  "19208": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-09-09",
+     "name": ""
+    }
+   ]
+  },
+  "19210": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": ""
+    },
+    {
+     "date": "2026-08-27",
+     "name": ""
+    }
+   ]
+  },
+  "19211": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-09-09",
+     "name": ""
+    }
+   ]
+  },
+  "19212": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-10-15",
+     "name": ""
+    }
+   ]
+  },
+  "19213": {
+   "holidays": [
+    {
+     "date": "2026-06-27",
+     "name": ""
+    },
+    {
+     "date": "2026-10-10",
+     "name": ""
+    }
+   ]
+  },
+  "19214": {
+   "holidays": [
+    {
+     "date": "2026-09-15",
+     "name": ""
+    },
+    {
+     "date": "2026-10-21",
+     "name": ""
+    }
+   ],
+   "note": "Modified by anuncio of 9-2-2026 (BOP Guadalajara núm. 28, 11-02-2026) to 15 September and 21 October. That anuncio says it replaces '15 de agosto y 21 de octubre', but the 24-11-2025 list printed '7 y 15 agosto' for Peñalén; the modification's final dates are used."
+  },
+  "19215": {
+   "holidays": [
+    {
+     "date": "2026-09-07",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "19216": {
+   "holidays": [
+    {
+     "date": "2026-09-18",
+     "name": ""
+    },
+    {
+     "date": "2026-09-21",
+     "name": ""
+    }
+   ]
+  },
+  "19217": {
+   "holidays": [
+    {
+     "date": "2026-08-07",
+     "name": ""
+    },
+    {
+     "date": "2026-08-10",
+     "name": ""
+    }
+   ]
+  },
+  "19218": {
+   "holidays": [
+    {
+     "date": "2026-02-05",
+     "name": ""
+    },
+    {
+     "date": "2026-08-30",
+     "name": ""
+    }
+   ],
+   "note": "Published date(s) falling on a Sunday, kept as published: 2026-08-30."
+  },
+  "19219": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": ""
+    },
+    {
+     "date": "2026-07-14",
+     "name": ""
+    }
+   ]
+  },
+  "19220": {
+   "holidays": [
+    {
+     "date": "2026-02-09",
+     "name": ""
+    },
+    {
+     "date": "2026-05-15",
+     "name": ""
+    }
+   ]
+  },
+  "19221": {
+   "holidays": [
+    {
+     "date": "2026-08-14",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "19222": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-20",
+     "name": ""
+    }
+   ]
+  },
+  "19223": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-08-18",
+     "name": ""
+    }
+   ]
+  },
+  "19224": {
+   "holidays": [
+    {
+     "date": "2026-11-10",
+     "name": ""
+    },
+    {
+     "date": "2026-11-11",
+     "name": ""
+    }
+   ]
+  },
+  "19225": {
+   "holidays": [
+    {
+     "date": "2026-02-02",
+     "name": ""
+    },
+    {
+     "date": "2026-09-21",
+     "name": ""
+    }
+   ]
+  },
+  "19226": {
+   "holidays": [
+    {
+     "date": "2026-06-13",
+     "name": ""
+    },
+    {
+     "date": "2026-08-07",
+     "name": ""
+    }
+   ]
+  },
+  "19227": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "19228": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-06-24",
+     "name": ""
+    }
+   ]
+  },
+  "19229": {
+   "holidays": [
+    {
+     "date": "2026-03-21",
+     "name": ""
+    },
+    {
+     "date": "2026-09-29",
+     "name": ""
+    }
+   ]
+  },
+  "19230": {
+   "holidays": [
+    {
+     "date": "2026-01-22",
+     "name": ""
+    },
+    {
+     "date": "2026-09-04",
+     "name": ""
+    }
+   ]
+  },
+  "19231": {
+   "holidays": [
+    {
+     "date": "2026-08-14",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "19232": {
+   "holidays": [
+    {
+     "date": "2026-06-12",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "19233": {
+   "holidays": [
+    {
+     "date": "2026-05-20",
+     "name": ""
+    },
+    {
+     "date": "2026-09-18",
+     "name": ""
+    }
+   ]
+  },
+  "19234": {
+   "holidays": [
+    {
+     "date": "2026-02-05",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "19235": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "19237": {
+   "holidays": [
+    {
+     "date": "2026-08-25",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "19238": {
+   "holidays": [
+    {
+     "date": "2026-08-07",
+     "name": ""
+    },
+    {
+     "date": "2026-08-08",
+     "name": ""
+    }
+   ]
+  },
+  "19240": {
+   "holidays": [
+    {
+     "date": "2026-08-02",
+     "name": ""
+    },
+    {
+     "date": "2026-10-04",
+     "name": ""
+    }
+   ],
+   "note": "Published date(s) falling on a Sunday, kept as published: 2026-08-02, 2026-10-04."
+  },
+  "19241": {
+   "holidays": [
+    {
+     "date": "2026-08-07",
+     "name": ""
+    },
+    {
+     "date": "2026-11-30",
+     "name": ""
+    }
+   ]
+  },
+  "19242": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-12-09",
+     "name": ""
+    }
+   ]
+  },
+  "19244": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-24",
+     "name": ""
+    }
+   ]
+  },
+  "19245": {
+   "holidays": [
+    {
+     "date": "2026-08-31",
+     "name": ""
+    },
+    {
+     "date": "2026-09-01",
+     "name": ""
+    }
+   ]
+  },
+  "19246": {
+   "holidays": [
+    {
+     "date": "2026-08-29",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    },
+    {
+     "date": "2026-11-14",
+     "name": ""
+    }
+   ],
+   "note": "The bulletin lists 3 dates; kept as published."
+  },
+  "19247": {
+   "holidays": [
+    {
+     "date": "2026-05-14",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "19248": {
+   "holidays": [
+    {
+     "date": "2026-05-28",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "19249": {
+   "holidays": [
+    {
+     "date": "2026-08-15",
+     "name": ""
+    },
+    {
+     "date": "2026-11-30",
+     "name": ""
+    }
+   ]
+  },
+  "19250": {
+   "holidays": [
+    {
+     "date": "2026-08-06",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "19251": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-10-07",
+     "name": ""
+    }
+   ]
+  },
+  "19252": {
+   "holidays": [
+    {
+     "date": "2026-08-14",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "19254": {
+   "holidays": [
+    {
+     "date": "2026-06-05",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "19255": {
+   "holidays": [
+    {
+     "date": "2026-08-03",
+     "name": ""
+    },
+    {
+     "date": "2026-10-05",
+     "name": ""
+    }
+   ]
+  },
+  "19256": {
+   "holidays": [
+    {
+     "date": "2026-08-14",
+     "name": ""
+    },
+    {
+     "date": "2026-12-10",
+     "name": ""
+    }
+   ]
+  },
+  "19257": {
+   "holidays": [
+    {
+     "date": "2026-01-22",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "19258": {
+   "holidays": [
+    {
+     "date": "2026-08-28",
+     "name": ""
+    },
+    {
+     "date": "2026-08-31",
+     "name": ""
+    }
+   ]
+  },
+  "19259": {
+   "holidays": [
+    {
+     "date": "2026-08-03",
+     "name": ""
+    },
+    {
+     "date": "2026-08-04",
+     "name": ""
+    }
+   ]
+  },
+  "19260": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-10-07",
+     "name": ""
+    }
+   ]
+  },
+  "19261": {
+   "holidays": [
+    {
+     "date": "2026-06-14",
+     "name": ""
+    },
+    {
+     "date": "2026-10-04",
+     "name": ""
+    }
+   ],
+   "note": "Published date(s) falling on a Sunday, kept as published: 2026-06-14, 2026-10-04."
+  },
+  "19262": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": ""
+    },
+    {
+     "date": "2026-08-25",
+     "name": ""
+    }
+   ]
+  },
+  "19263": {
+   "holidays": [
+    {
+     "date": "2026-05-08",
+     "name": ""
+    },
+    {
+     "date": "2026-06-24",
+     "name": ""
+    }
+   ]
+  },
+  "19264": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "19265": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": ""
+    },
+    {
+     "date": "2026-11-14",
+     "name": ""
+    }
+   ]
+  },
+  "19266": {
+   "holidays": [
+    {
+     "date": "2026-09-07",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "19267": {
+   "holidays": [
+    {
+     "date": "2026-08-12",
+     "name": ""
+    },
+    {
+     "date": "2026-08-13",
+     "name": ""
+    }
+   ]
+  },
+  "19268": {
+   "holidays": [
+    {
+     "date": "2026-05-17",
+     "name": ""
+    },
+    {
+     "date": "2026-08-16",
+     "name": ""
+    }
+   ],
+   "note": "Published date(s) falling on a Sunday, kept as published: 2026-05-17, 2026-08-16."
+  },
+  "19269": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-08-21",
+     "name": ""
+    }
+   ]
+  },
+  "19270": {
+   "holidays": [
+    {
+     "date": "2026-05-28",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "19271": {
+   "holidays": [
+    {
+     "date": "2026-05-08",
+     "name": ""
+    },
+    {
+     "date": "2026-08-05",
+     "name": ""
+    }
+   ]
+  },
+  "19272": {
+   "holidays": [
+    {
+     "date": "2026-04-24",
+     "name": ""
+    },
+    {
+     "date": "2026-06-12",
+     "name": ""
+    }
+   ]
+  },
+  "19274": {
+   "holidays": [
+    {
+     "date": "2026-09-07",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "19277": {
+   "holidays": [
+    {
+     "date": "2026-05-29",
+     "name": ""
+    },
+    {
+     "date": "2026-08-18",
+     "name": ""
+    }
+   ]
+  },
+  "19278": {
+   "holidays": [
+    {
+     "date": "2026-06-12",
+     "name": ""
+    },
+    {
+     "date": "2026-09-01",
+     "name": ""
+    }
+   ]
+  },
+  "19279": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "19280": {
+   "holidays": [
+    {
+     "date": "2026-02-02",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "19281": {
+   "holidays": [
+    {
+     "date": "2026-08-22",
+     "name": ""
+    },
+    {
+     "date": "2026-08-23",
+     "name": ""
+    }
+   ],
+   "note": "Published date(s) falling on a Sunday, kept as published: 2026-08-23."
+  },
+  "19282": {
+   "holidays": [
+    {
+     "date": "2026-05-18",
+     "name": ""
+    },
+    {
+     "date": "2026-07-24",
+     "name": ""
+    }
+   ]
+  },
+  "19283": {
+   "holidays": [
+    {
+     "date": "2026-08-03",
+     "name": ""
+    },
+    {
+     "date": "2026-08-04",
+     "name": ""
+    }
+   ]
+  },
+  "19284": {
+   "holidays": [
+    {
+     "date": "2026-08-10",
+     "name": ""
+    },
+    {
+     "date": "2026-09-24",
+     "name": ""
+    }
+   ]
+  },
+  "19286": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": ""
+    },
+    {
+     "date": "2026-11-27",
+     "name": ""
+    }
+   ]
+  },
+  "19287": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-09-10",
+     "name": ""
+    }
+   ]
+  },
+  "19288": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-08-10",
+     "name": ""
+    }
+   ]
+  },
+  "19290": {
+   "holidays": [
+    {
+     "date": "2026-06-11",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "19291": {
+   "holidays": [
+    {
+     "date": "2026-09-07",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "19293": {
+   "holidays": [
+    {
+     "date": "2026-08-14",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "19294": {
+   "holidays": [
+    {
+     "date": "2026-06-07",
+     "name": ""
+    },
+    {
+     "date": "2026-10-04",
+     "name": ""
+    }
+   ],
+   "note": "Published date(s) falling on a Sunday, kept as published: 2026-06-07, 2026-10-04."
+  },
+  "19296": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-06-22",
+     "name": ""
+    }
+   ]
+  },
+  "19297": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-05-15",
+     "name": ""
+    }
+   ]
+  },
+  "19298": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-16",
+     "name": ""
+    }
+   ],
+   "note": "Published date(s) falling on a Sunday, kept as published: 2026-08-16."
+  },
+  "19299": {
+   "holidays": [
+    {
+     "date": "2026-09-14",
+     "name": ""
+    },
+    {
+     "date": "2026-12-14",
+     "name": ""
+    }
+   ]
+  },
+  "19300": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": ""
+    },
+    {
+     "date": "2026-09-04",
+     "name": ""
+    }
+   ]
+  },
+  "19301": {
+   "holidays": [
+    {
+     "date": "2026-02-02",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "19302": {
+   "holidays": [
+    {
+     "date": "2026-05-09",
+     "name": ""
+    },
+    {
+     "date": "2026-06-15",
+     "name": ""
+    }
+   ]
+  },
+  "19303": {
+   "holidays": [
+    {
+     "date": "2026-07-25",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "19304": {
+   "holidays": [
+    {
+     "date": "2026-06-11",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "19305": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-28",
+     "name": ""
+    }
+   ]
+  },
+  "19306": {
+   "holidays": [
+    {
+     "date": "2026-02-20",
+     "name": ""
+    },
+    {
+     "date": "2026-05-15",
+     "name": ""
+    }
+   ]
+  },
+  "19307": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": ""
+    },
+    {
+     "date": "2026-08-03",
+     "name": ""
+    }
+   ]
+  },
+  "19308": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": ""
+    },
+    {
+     "date": "2026-08-25",
+     "name": ""
+    }
+   ]
+  },
+  "19309": {
+   "holidays": [
+    {
+     "date": "2026-06-13",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "19310": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": ""
+    },
+    {
+     "date": "2026-08-03",
+     "name": ""
+    }
+   ]
+  },
+  "19311": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": ""
+    },
+    {
+     "date": "2026-06-30",
+     "name": ""
+    }
+   ]
+  },
+  "19314": {
+   "holidays": [
+    {
+     "date": "2026-06-13",
+     "name": ""
+    },
+    {
+     "date": "2026-12-07",
+     "name": ""
+    }
+   ]
+  },
+  "19317": {
+   "holidays": [
+    {
+     "date": "2026-06-15",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "19318": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-02-04",
+     "name": ""
+    }
+   ]
+  },
+  "19319": {
+   "holidays": [
+    {
+     "date": "2026-02-05",
+     "name": ""
+    },
+    {
+     "date": "2026-06-19",
+     "name": ""
+    }
+   ]
+  },
+  "19321": {
+   "holidays": [
+    {
+     "date": "2026-08-27",
+     "name": ""
+    },
+    {
+     "date": "2026-08-28",
+     "name": ""
+    }
+   ]
+  },
+  "19322": {
+   "holidays": [
+    {
+     "date": "2026-02-02",
+     "name": ""
+    },
+    {
+     "date": "2026-02-03",
+     "name": ""
+    }
+   ]
+  },
+  "19323": {
+   "holidays": [
+    {
+     "date": "2026-03-02",
+     "name": ""
+    },
+    {
+     "date": "2026-09-29",
+     "name": ""
+    }
+   ]
+  },
+  "19324": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": ""
+    },
+    {
+     "date": "2026-09-21",
+     "name": ""
+    }
+   ]
+  },
+  "19325": {
+   "holidays": [
+    {
+     "date": "2026-08-10",
+     "name": ""
+    },
+    {
+     "date": "2026-08-31",
+     "name": ""
+    }
+   ]
+  },
+  "19326": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": ""
+    },
+    {
+     "date": "2026-10-02",
+     "name": ""
+    }
+   ]
+  },
+  "19327": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "19329": {
+   "holidays": [
+    {
+     "date": "2026-06-13",
+     "name": ""
+    },
+    {
+     "date": "2026-10-03",
+     "name": ""
+    }
+   ]
+  },
+  "19330": {
+   "holidays": [
+    {
+     "date": "2026-08-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-16",
+     "name": ""
+    }
+   ],
+   "note": "Published date(s) falling on a Sunday, kept as published: 2026-08-16."
+  },
+  "19331": {
+   "holidays": [
+    {
+     "date": "2026-09-15",
+     "name": ""
+    },
+    {
+     "date": "2026-09-16",
+     "name": ""
+    }
+   ]
+  },
+  "19332": {
+   "holidays": [
+    {
+     "date": "2026-05-03",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ],
+   "note": "Published date(s) falling on a Sunday, kept as published: 2026-05-03."
+  },
+  "19333": {
+   "holidays": [
+    {
+     "date": "2026-06-13",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "19334": {
+   "holidays": [
+    {
+     "date": "2026-08-14",
+     "name": ""
+    },
+    {
+     "date": "2026-11-21",
+     "name": ""
+    }
+   ]
+  },
+  "19335": {
+   "holidays": [
+    {
+     "date": "2026-03-19",
+     "name": ""
+    },
+    {
+     "date": "2026-03-20",
+     "name": ""
+    }
+   ]
+  },
+  "19901": {
+   "holidays": [
+    {
+     "date": "2026-08-16",
+     "name": ""
+    },
+    {
+     "date": "2026-10-02",
+     "name": ""
+    }
+   ],
+   "note": "Published date(s) falling on a Sunday, kept as published: 2026-08-16."
+  }
+ }
+}

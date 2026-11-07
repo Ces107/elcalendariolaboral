@@ -1,0 +1,5371 @@
+{
+ "source_id": "bon-2026",
+ "source": {
+  "title": "Resolución 682/2025, de 17 de noviembre, del Director General de Economía Social y Trabajo, por la que se determinan las fiestas locales para el año 2026 en el ámbito de la Comunidad Foral de Navarra (BON núm. 241, de 2-12-2025), modificada por la Resolución 765/2025, de 22 de diciembre (BON núm. 1, de 2-1-2026); 3 de diciembre común a toda Navarra por la Resolución 390/2025, de 5 de junio",
+  "url": "https://bon.navarra.es/es/anuncio/-/texto/2025/241/12",
+  "published": "2025-12-02",
+  "modifications": [
+   "https://bon.navarra.es/es/anuncio/-/texto/2026/1/25"
+  ]
+ },
+ "region": "navarra",
+ "count": 262,
+ "unmatched": [
+  "ABÍNZANO: 15 de mayo (village/concejo without parent in the table)",
+  "ACEDO: 2 de diciembre (village/concejo without parent in the table)",
+  "ADOÁIN: 7 de diciembre (village/concejo without parent in the table)",
+  "AGORRETA: 7 de septiembre (village/concejo without parent in the table)",
+  "AGUINAGA DE IZA: 3 de junio (village/concejo without parent in the table)",
+  "AINTZIALDE ARIZKUN: 15 de mayo (village/concejo without parent in the table)",
+  "AIZKORBE: 5 de diciembre (village/concejo without parent in the table)",
+  "AIZOÁIN: 5 de febrero (village/concejo without parent in the table)",
+  "AIZPÚN: 2 de diciembre (village/concejo without parent in the table)",
+  "ALBIASU: 29 de septiembre (village/concejo without parent in the table)",
+  "ALDABA: 17 de agosto (village/concejo without parent in the table)",
+  "ALDATZ: 11 de noviembre (village/concejo without parent in the table)",
+  "ALDUNATE: 29 de diciembre (village/concejo without parent in the table)",
+  "ALLI: 8 de septiembre (village/concejo without parent in the table)",
+  "ALLOZ: 15 de mayo (village/concejo without parent in the table)",
+  "ALZÓRRIZ: 4 de febrero (village/concejo without parent in the table)",
+  "ALZUZA: 26 de diciembre (village/concejo without parent in the table)",
+  "AMATRIAIN: Lunes siguiente al primer domingo de mayo (village/concejo without parent in the table)",
+  "AMILLANO: 21 de noviembre (village/concejo without parent in the table)",
+  "AMUNARRIZQUETA: Lunes siguiente al primer domingo de mayo (village/concejo without parent in the table)",
+  "AÑÉZCAR: 8 de septiembre (village/concejo without parent in the table)",
+  "ANOCIBAR: 17 de enero (village/concejo without parent in the table)",
+  "ANOZ: 2 de febrero (village/concejo without parent in the table)",
+  "ANTXORITZ: 8 de septiembre (village/concejo without parent in the table)",
+  "AOS: 7 de septiembre (village/concejo without parent in the table)",
+  "ARANDIGOYEN: 15 de mayo (village/concejo without parent in the table)",
+  "ARANTZA: 'Viernes de carnaval' (not a fixed date, left out)",
+  "ARBONIÉS: 15 de mayo (village/concejo without parent in the table)",
+  "ARDAITZ: 15 de mayo (village/concejo without parent in the table)",
+  "ARGUIÑANO: 16 de noviembre (village/concejo without parent in the table)",
+  "ARGUIÑÁRIZ: 15 de mayo (village/concejo without parent in the table)",
+  "ARÍSTREGUI: 8 de junio (village/concejo without parent in the table)",
+  "ARITZU: 12 de septiembre (village/concejo without parent in the table)",
+  "ARIZ: 12 de noviembre (village/concejo without parent in the table)",
+  "ARIZALA: 25 de noviembre (village/concejo without parent in the table)",
+  "ARIZALETA: 1 de diciembre (village/concejo without parent in the table)",
+  "ARLEGUI: 8 de septiembre (village/concejo without parent in the table)",
+  "ARÓSTEGUI: 18 de agosto (village/concejo without parent in the table)",
+  "ARRAITZ-ORKIN: 17 de agosto (village/concejo without parent in the table)",
+  "ARRAIZA: 1 de octubre (village/concejo without parent in the table)",
+  "ARRARATS: 29 de junio (village/concejo without parent in the table)",
+  "ARRIBE: 29 de septiembre (village/concejo without parent in the table)",
+  "ARRIETA: 12 de agosto (village/concejo without parent in the table)",
+  "ARRUITZ: 10 de julio (village/concejo without parent in the table)",
+  "ARTAIZ: 14 de noviembre (village/concejo without parent in the table)",
+  "ARTAJO: 18 de agosto (village/concejo without parent in the table)",
+  "ARTARIAIN: Lunes siguiente al primer domingo de mayo (village/concejo without parent in the table)",
+  "ARTAVIA: Primer sábado de septiembre (village/concejo without parent in the table)",
+  "ARTAZA: Segundo lunes de agosto (village/concejo without parent in the table)",
+  "ARTÁZCOZ: 11 de noviembre (village/concejo without parent in the table)",
+  "ARTEAGA: 15 de mayo (village/concejo without parent in the table)",
+  "ARTETA: 28 de mayo (village/concejo without parent in the table)",
+  "ARTICA: 4 de septiembre (village/concejo without parent in the table)",
+  "ARTIEDA: 21 de septiembre (village/concejo without parent in the table)",
+  "ARTOZQUI: 14 de diciembre (village/concejo without parent in the table)",
+  "ARZOZ: 23 de noviembre (village/concejo without parent in the table)",
+  "ASARTA: Tercer sábado de septiembre (village/concejo without parent in the table)",
+  "ASIÁIN: 15 de mayo (village/concejo without parent in the table)",
+  "ASPURZ: 23 de noviembre (village/concejo without parent in the table)",
+  "ASTITZ: 25 de julio (village/concejo without parent in the table)",
+  "ASTRÁIN: 26 de septiembre (village/concejo without parent in the table)",
+  "ATALLU: 29 de agosto (village/concejo without parent in the table)",
+  "ATEZ: 30 de noviembre (village/concejo without parent in the table)",
+  "ATONDO: 12 de noviembre (village/concejo without parent in the table)",
+  "AURIZBERRI / ESPINAL: 26 de agosto (village/concejo without parent in the table)",
+  "AUZA: 11 de noviembre (village/concejo without parent in the table)",
+  "AYECHU: 11 de octubre (village/concejo without parent in the table)",
+  "AYESA: 14 de noviembre (village/concejo without parent in the table)",
+  "AZANZA: 14 de noviembre (village/concejo without parent in the table)",
+  "AZCONA: 15 de mayo (village/concejo without parent in the table)",
+  "AZKARATE: 7 de julio (village/concejo without parent in the table)",
+  "AZPARREN: 16 de noviembre (village/concejo without parent in the table)",
+  "AZPIROTZ: 3 de agosto (village/concejo without parent in the table)",
+  "AZQUETA: 19 de agosto (village/concejo without parent in the table)",
+  "BADOSTÁIN: 30 de septiembre (village/concejo without parent in the table)",
+  "BALLARIAIN: 29 de junio (village/concejo without parent in the table)",
+  "BAQUEDANO: Segundo viernes de septiembre (village/concejo without parent in the table)",
+  "BARAIBAR: 29 de septiembre (village/concejo without parent in the table)",
+  "BARÍNDANO: Cuarto viernes de julio (village/concejo without parent in the table)",
+  "BAZTAN: 'Viernes de la semana siguiente a San Lucas' (not a fixed date, left out)",
+  "BEARIN: 14 de noviembre (village/concejo without parent in the table)",
+  "BEASOAIN: 25 de agosto (village/concejo without parent in the table)",
+  "BELZUNCE: 15 de diciembre (village/concejo without parent in the table)",
+  "BENEGORRI: Lunes siguiente al primer domingo de mayo (village/concejo without parent in the table)",
+  "BEORBURU: 27 de octubre (village/concejo without parent in the table)",
+  "BEORTEGUI: 15 de mayo (village/concejo without parent in the table)",
+  "BERAMENDI: 29 de septiembre (village/concejo without parent in the table)",
+  "BERASÁIN: 13 de julio (village/concejo without parent in the table)",
+  "BERRIOSUSO: 10 de diciembre (village/concejo without parent in the table)",
+  "BERROYA: 15 de mayo (village/concejo without parent in the table)",
+  "BERUETE: 24 de junio (village/concejo without parent in the table)",
+  "BIGÜÉZAL: 15 de mayo (village/concejo without parent in the table)",
+  "BIZKARRETA GERENDIAIN: 15 de mayo (village/concejo without parent in the table)",
+  "BIURRUN: 8 de septiembre (village/concejo without parent in the table)",
+  "BURUTAIN: 2 de julio (village/concejo without parent in the table)",
+  "CIÁURRIZ: 17 de enero (village/concejo without parent in the table)",
+  "CIZUR MENOR: 3 de marzo (village/concejo without parent in the table)",
+  "CORDOVILLA: 24 de septiembre (village/concejo without parent in the table)",
+  "DOMEÑO: 15 de mayo (village/concejo without parent in the table)",
+  "DORRAO / TORRANO: 17 de agosto (village/concejo without parent in the table)",
+  "EGIARRETA: 3 de octubre (village/concejo without parent in the table)",
+  "EGILLOR: 25 de agosto (village/concejo without parent in the table)",
+  "EGÜÉS: 11 de noviembre (village/concejo without parent in the table)",
+  "ELORZ: 17 de agosto (village/concejo without parent in the table)",
+  "ERBITI: 8 de septiembre (village/concejo without parent in the table)",
+  "ERICE: 30 de noviembre (village/concejo without parent in the table)",
+  "ERREA (Sarasíbar): 13 de octubre (parent municipality not found)",
+  "ESPARZA (Salazar): 30 de noviembre (parent municipality not found)",
+  "ESPOZ: 15 de mayo (village/concejo without parent in the table)",
+  "ETULAIN: 5 de septiembre (village/concejo without parent in the table)",
+  "ECHÁLAZ: 12 de noviembre (village/concejo without parent in the table)",
+  "ETXALEKU: 3 de septiembre (village/concejo without parent in the table)",
+  "EUGI: 1 de septiembre (village/concejo without parent in the table)",
+  "EULZ: Primer sábado de septiembre (village/concejo without parent in the table)",
+  "EUSA: 26 de diciembre (village/concejo without parent in the table)",
+  "EZCABA: 13 de octubre (village/concejo without parent in the table)",
+  "EZCÁNIZ: 27 de octubre (village/concejo without parent in the table)",
+  "GABARDERAL: 12 de febrero (village/concejo without parent in the table)",
+  "GALBARRA: 30 de junio (village/concejo without parent in the table)",
+  "GARÍSOAIN: 12 de septiembre (village/concejo without parent in the table)",
+  "GARTZARON: 17 de agosto (village/concejo without parent in the table)",
+  "GASCUE: 17 de enero (village/concejo without parent in the table)",
+  "GAZÓLAZ: 8 de septiembre (village/concejo without parent in the table)",
+  "GOLDARATZ: 8 de septiembre (village/concejo without parent in the table)",
+  "GOLLANO: 18 de agosto (village/concejo without parent in the table)",
+  "GOÑI: 7 de enero (village/concejo without parent in the table)",
+  "GORRAIZ: 30 de diciembre (village/concejo without parent in the table)",
+  "GREZ: 26 de mayo (village/concejo without parent in the table)",
+  "GUELBENZU: 17 de enero (village/concejo without parent in the table)",
+  "GUEMBE: 10 de diciembre (village/concejo without parent in the table)",
+  "GULINA: 29 de junio (village/concejo without parent in the table)",
+  "IBERO: 17 de agosto (village/concejo without parent in the table)",
+  "IBILCIETA: 11 de noviembre (village/concejo without parent in the table)",
+  "ICIZ: 26 de septiembre (village/concejo without parent in the table)",
+  "IDOATE: 15 de mayo (village/concejo without parent in the table)",
+  "IDOCIN: 3 de octubre (village/concejo without parent in the table)",
+  "IDOI: 5 de octubre (village/concejo without parent in the table)",
+  "IHABAR: 29 de diciembre (village/concejo without parent in the table)",
+  "IHABEN: 8 de septiembre (village/concejo without parent in the table)",
+  "ILUNDÁIN: 19 de junio (village/concejo without parent in the table)",
+  "ILURDOTZ: 13 de octubre (village/concejo without parent in the table)",
+  "IMIRIZALDU: 8 de octubre (village/concejo without parent in the table)",
+  "INDURÁIN: 15 de mayo (village/concejo without parent in the table)",
+  "LABAIEN: 3 de agosto (village/concejo without parent in the table)",
+  "LABIANO: 19 de junio (village/concejo without parent in the table)",
+  "LACAR: 20 de abril (village/concejo without parent in the table)",
+  "LAKAIN-APEZBORRO: 3 de octubre (village/concejo without parent in the table)",
+  "LARRAGUETA: 26 de diciembre (village/concejo without parent in the table)",
+  "LARRAINTZAR: 29 de junio (village/concejo without parent in the table)",
+  "LARRASOAÑA: 8 de septiembre (village/concejo without parent in the table)",
+  "LARRAYOZ: Primer lunes de septiembre (village/concejo without parent in the table)",
+  "LARUNBE: 20 de enero (village/concejo without parent in the table)",
+  "LEGASA: 28 de agosto (village/concejo without parent in the table)",
+  "LERANOTZ: 14 de septiembre (village/concejo without parent in the table)",
+  "LERATE: 2 de julio (village/concejo without parent in the table)",
+  "LERRUZ: 15 de mayo (village/concejo without parent in the table)",
+  "LETE: 12 de noviembre (village/concejo without parent in the table)",
+  "LEYUN: 15 de mayo (village/concejo without parent in the table)",
+  "LINTZOAIN: 15 de mayo (village/concejo without parent in the table)",
+  "LIZARRAGABENGOA: 29 de junio (village/concejo without parent in the table)",
+  "LIZOÁIN: 15 de mayo (village/concejo without parent in the table)",
+  "LOIZU: 15 de mayo (village/concejo without parent in the table)",
+  "MARCALÁIN: 30 de septiembre (village/concejo without parent in the table)",
+  "MEANO: 13 de junio (village/concejo without parent in the table)",
+  "MEZKIRITZ: 15 de mayo (village/concejo without parent in the table)",
+  "MUEZ: 14 de diciembre (village/concejo without parent in the table)",
+  "MUNÁRRIZ (Goñi): 14 de diciembre (parent municipality not found)",
+  "MUNIÁIN DE GUESÁLAZ: 30 de noviembre (village/concejo without parent in the table)",
+  "MUNIÁIN DE LA SOLANA: 21 de enero (village/concejo without parent in the table)",
+  "MURILLO BERROYA: 19 de agosto (village/concejo without parent in the table)",
+  "MURILLO YERRI: 15 de mayo (village/concejo without parent in the table)",
+  "MURU ASTRÁIN: 26 de diciembre (village/concejo without parent in the table)",
+  "MURUARTE DE RETA: 2 de septiembre (village/concejo without parent in the table)",
+  "MURUGARREN: 21 de noviembre (village/concejo without parent in the table)",
+  "MUSKITZ: 11 de noviembre (village/concejo without parent in the table)",
+  "MUTILVA: 19 de junio (village/concejo without parent in the table)",
+  "NAJURIETA: 23 de diciembre (village/concejo without parent in the table)",
+  "NAPAL: 15 de mayo (village/concejo without parent in the table)",
+  "NARBARTE: 24 de agosto (village/concejo without parent in the table)",
+  "OCHOVI: 25 de junio (village/concejo without parent in the table)",
+  "OIEREGI: 24 de junio (village/concejo without parent in the table)",
+  "OITZ: 8 de septiembre (village/concejo without parent in the table)",
+  "OLAIZ: 26 de diciembre (village/concejo without parent in the table)",
+  "OLAVE: 26 de diciembre (village/concejo without parent in the table)",
+  "OLAVERRI: 25 de agosto (village/concejo without parent in the table)",
+  "OLCOZ: 29 de septiembre (village/concejo without parent in the table)",
+  "OLLACARIZQUETA: 10 de septiembre (village/concejo without parent in the table)",
+  "OLLETA: Lunes siguiente al primer domingo de mayo (village/concejo without parent in the table)",
+  "OLLO: 8 de septiembre (village/concejo without parent in the table)",
+  "OLLOKI: 11 de mayo (village/concejo without parent in the table)",
+  "OLZA: 24 de agosto (village/concejo without parent in the table)",
+  "ORBAIZ: 2 de julio (village/concejo without parent in the table)",
+  "ORIZ: 8 de septiembre (village/concejo without parent in the table)",
+  "ORONDRITZ: 15 de mayo (village/concejo without parent in the table)",
+  "ORRADRE: 15 de mayo (village/concejo without parent in the table)",
+  "OSACÁIN: 22 de diciembre (village/concejo without parent in the table)",
+  "OSACAR: 17 de diciembre (village/concejo without parent in the table)",
+  "OSINAGA: 8 de septiembre (village/concejo without parent in the table)",
+  "OSKOTZ: 29 de julio (village/concejo without parent in the table)",
+  "OSTERITZ: 20 de enero (village/concejo without parent in the table)",
+  "OTANO: 18 de mayo (village/concejo without parent in the table)",
+  "OTIÑANO: 11 de noviembre (village/concejo without parent in the table)",
+  "PATERNÁIN: 11 de noviembre (village/concejo without parent in the table)",
+  "RADA: 15 de mayo (village/concejo without parent in the table)",
+  "REDÍN: 15 de mayo (village/concejo without parent in the table)",
+  "RIPA: 17 de enero (village/concejo without parent in the table)",
+  "ROCAFORTE: 24 de agosto (village/concejo without parent in the table)",
+  "SAGASETA: 18 de abril (village/concejo without parent in the table)",
+  "SALDISE: 9 de mayo (village/concejo without parent in the table)",
+  "SALINAS DE IBARGOITI: 3 de octubre (village/concejo without parent in the table)",
+  "SALINAS DE PAMPLONA: 8 de septiembre (village/concejo without parent in the table)",
+  "SAN ISIDRO DEL PINAR: 15 de mayo (village/concejo without parent in the table)",
+  "SAN MARTÍN DE AMESCOA: Segundo viernes de noviembre (village/concejo without parent in the table)",
+  "SANSOÁIN: Lunes siguiente al primer domingo de mayo (village/concejo without parent in the table)",
+  "SANSOMAIN: Lunes siguiente al primer domingo de mayo (village/concejo without parent in the table)",
+  "SARASA: 11 de noviembre (village/concejo without parent in the table)",
+  "SARASATE: 28 de diciembre (village/concejo without parent in the table)",
+  "SARRIGUREN: 12 de junio (village/concejo without parent in the table)",
+  "SATRUSTEGI: 18 de septiembre (village/concejo without parent in the table)",
+  "SETOAIN: 22 de junio (village/concejo without parent in the table)",
+  "SORAUREN: 30 de noviembre (village/concejo without parent in the table)",
+  "SUBIZA: 25 de junio (village/concejo without parent in the table)",
+  "TAJONAR: 19 de junio (village/concejo without parent in the table)",
+  "TIEBAS: 16 de septiembre (village/concejo without parent in the table)",
+  "TORRES DE ELORZ: 29 de junio (village/concejo without parent in the table)",
+  "TRAIBUENAS: 31 de agosto (village/concejo without parent in the table)",
+  "TURRILLAS: 15 de mayo (village/concejo without parent in the table)",
+  "ÚGAR: 14 de noviembre (village/concejo without parent in the table)",
+  "UITZI: 29 de septiembre (village/concejo without parent in the table)",
+  "UNDIANO: 11 de noviembre (village/concejo without parent in the table)",
+  "URBICÁIN: 15 de mayo (village/concejo without parent in the table)",
+  "URBIOLA: 3 de octubre (village/concejo without parent in the table)",
+  "URDAITZ / URDÁNIZ: 5 de octubre (village/concejo without parent in the table)",
+  "URDÁNOZ: 15 de mayo (village/concejo without parent in the table)",
+  "URRA: 18 de agosto (village/concejo without parent in the table)",
+  "URRICELQUI: 15 de mayo (village/concejo without parent in the table)",
+  "URRITZA: 24 de junio (village/concejo without parent in the table)",
+  "URROTZ: 29 de septiembre (village/concejo without parent in the table)",
+  "URTASUN: 10 de septiembre (village/concejo without parent in the table)",
+  "USETXI: 10 de agosto (village/concejo without parent in the table)",
+  "USOZ: 1 de diciembre (village/concejo without parent in the table)",
+  "USTÁRROZ: 25 de agosto (village/concejo without parent in the table)",
+  "USTÉS: 1 de diciembre (village/concejo without parent in the table)",
+  "UZQUITA: Lunes siguiente al primer domingo de mayo (village/concejo without parent in the table)",
+  "UZTEGI: 17 de agosto (village/concejo without parent in the table)",
+  "VIGURIA: 14 de diciembre (village/concejo without parent in the table)",
+  "VILLANUEVA DE ARCE: 5 de diciembre (village/concejo without parent in the table)",
+  "VILORIA: 30 de noviembre (village/concejo without parent in the table)",
+  "YÁRNOZ: 8 de septiembre (village/concejo without parent in the table)",
+  "YELZ: 15 de mayo (village/concejo without parent in the table)",
+  "ZABAL: 24 de noviembre (village/concejo without parent in the table)",
+  "ZABALCETA: 19 de agosto (village/concejo without parent in the table)",
+  "ZABALDIKA: 26 de diciembre (village/concejo without parent in the table)",
+  "ZABALEGUI: 7 de octubre (village/concejo without parent in the table)",
+  "ZALBA: 15 de mayo (village/concejo without parent in the table)",
+  "ZANDIO: 29 de septiembre (village/concejo without parent in the table)",
+  "ZARIQUIEGUI: 30 de noviembre (village/concejo without parent in the table)",
+  "ZARRANTZ: 29 de septiembre (village/concejo without parent in the table)",
+  "ZIA: 30 de septiembre (village/concejo without parent in the table)",
+  "ZILBETI: 15 de mayo (village/concejo without parent in the table)",
+  "ZILDOTZ / CILDOZ: 26 de diciembre (village/concejo without parent in the table)",
+  "ZOLINA: 19 de junio (village/concejo without parent in the table)",
+  "ZOROQUIÁIN: 2 de diciembre (village/concejo without parent in the table)",
+  "ZUASTI: 30 de septiembre (village/concejo without parent in the table)",
+  "ZUBIRI: 26 de diciembre (village/concejo without parent in the table)",
+  "ZUDAIRE: 30 de noviembre (village/concejo without parent in the table)",
+  "ZUFIA: 3 de octubre (village/concejo without parent in the table)",
+  "ZUHATZU: 26 de septiembre (village/concejo without parent in the table)",
+  "ZULUETA: 31 de agosto (village/concejo without parent in the table)",
+  "ZUNZARREN: 15 de mayo (village/concejo without parent in the table)",
+  "ZURIAIN: 16 de noviembre (village/concejo without parent in the table)",
+  "ZURUCUÁIN: 4 de febrero (village/concejo without parent in the table)"
+ ],
+ "municipios": {
+  "31001": {
+   "holidays": [
+    {
+     "date": "2026-01-22",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ABÁIGAR'."
+  },
+  "31002": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ABÁRZUZA'."
+  },
+  "31003": {
+   "holidays": [
+    {
+     "date": "2026-06-30",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ABAURREGAINA / ABAURREA ALTA'."
+  },
+  "31004": {
+   "holidays": [
+    {
+     "date": "2026-11-14",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ABAURREPEA / ABAURREA BAJA'."
+  },
+  "31005": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ABERIN'."
+  },
+  "31006": {
+   "holidays": [
+    {
+     "date": "2026-07-22",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ABLITAS'."
+  },
+  "31007": {
+   "holidays": [
+    {
+     "date": "2026-11-30",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ADIÓS'."
+  },
+  "31008": {
+   "holidays": [
+    {
+     "date": "2026-07-10",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'AGUILAR DE CODÉS'."
+  },
+  "31009": {
+   "holidays": [
+    {
+     "date": "2026-05-06",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'AIBAR'."
+  },
+  "31010": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ALTSASU / ALSASUA'."
+  },
+  "31011": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Aramendía",
+     "holidays": [
+      {
+       "date": "2026-09-19",
+       "name": ""
+      }
+     ],
+     "rule": "Tercer sábado de septiembre"
+    },
+    {
+     "name": "Arbeiza",
+     "holidays": [
+      {
+       "date": "2026-08-15",
+       "name": ""
+      }
+     ],
+     "rule": "Tercer sábado de agosto"
+    },
+    {
+     "name": "Echávarri",
+     "holidays": [
+      {
+       "date": "2026-08-18",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Galdeano",
+     "holidays": [
+      {
+       "date": "2026-07-30",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Larrión",
+     "holidays": [
+      {
+       "date": "2026-08-18",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Muneta",
+     "holidays": [
+      {
+       "date": "2026-09-12",
+       "name": ""
+      }
+     ],
+     "rule": "Segundo sábado de septiembre"
+    },
+    {
+     "name": "Zubielqui",
+     "holidays": [
+      {
+       "date": "2026-08-18",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. The table lists only villages/concejos of this municipality (see nucleos), not the municipality as a whole."
+  },
+  "31012": {
+   "holidays": [
+    {
+     "date": "2026-07-22",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ALLO'."
+  },
+  "31013": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Ecala",
+     "holidays": [
+      {
+       "date": "2026-09-25",
+       "name": ""
+      }
+     ],
+     "rule": "Último viernes de septiembre"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. The table lists only villages/concejos of this municipality (see nucleos), not the municipality as a whole."
+  },
+  "31014": {
+   "holidays": [
+    {
+     "date": "2026-10-13",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Mendilibarri",
+     "holidays": [
+      {
+       "date": "2026-11-30",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ANCÍN'."
+  },
+  "31015": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ANDOSILLA'."
+  },
+  "31016": {
+   "holidays": [
+    {
+     "date": "2026-09-18",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ANSOÁIN', printed as 'Viernes anterior al tercer domingo de septiembre'."
+  },
+  "31017": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Egozkue",
+     "holidays": [
+      {
+       "date": "2026-10-03",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Etsain",
+     "holidays": [
+      {
+       "date": "2026-08-01",
+       "name": ""
+      }
+     ],
+     "rule": "Primer sábado de agosto"
+    },
+    {
+     "name": "Leazkue",
+     "holidays": [
+      {
+       "date": "2026-08-18",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Olague",
+     "holidays": [
+      {
+       "date": "2026-06-25",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. The table lists only villages/concejos of this municipality (see nucleos), not the municipality as a whole."
+  },
+  "31018": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'AÑORBE'."
+  },
+  "31019": {
+   "holidays": [
+    {
+     "date": "2026-09-29",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'AOIZ'."
+  },
+  "31020": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Gaintza",
+     "holidays": [
+      {
+       "date": "2026-11-11",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Intza",
+     "holidays": [
+      {
+       "date": "2026-09-08",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. The table lists only villages/concejos of this municipality (see nucleos), not the municipality as a whole."
+  },
+  "31021": {
+   "holidays": [
+    {
+     "date": "2026-08-29",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ARANARACHE'."
+  },
+  "31023": {
+   "holidays": [
+    {
+     "date": "2026-06-19",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Laquidain",
+     "holidays": [
+      {
+       "date": "2026-06-19",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ARANGUREN'."
+  },
+  "31024": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ARANO'."
+  },
+  "31025": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Ekai",
+     "holidays": [
+      {
+       "date": "2026-10-03",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Errotz",
+     "holidays": [
+      {
+       "date": "2026-05-12",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Etxarren",
+     "holidays": [
+      {
+       "date": "2026-01-26",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Etxeberri",
+     "holidays": [
+      {
+       "date": "2026-09-12",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Izurdiaga",
+     "holidays": [
+      {
+       "date": "2026-08-18",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Urritzola",
+     "holidays": [
+      {
+       "date": "2026-07-04",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. The table lists only villages/concejos of this municipality (see nucleos), not the municipality as a whole."
+  },
+  "31026": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ARAS'."
+  },
+  "31027": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ARBIZU'."
+  },
+  "31028": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Imizcoz",
+     "holidays": [
+      {
+       "date": "2026-10-03",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Nagore",
+     "holidays": [
+      {
+       "date": "2026-01-10",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Saragüeta",
+     "holidays": [
+      {
+       "date": "2026-08-31",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Urdiroz",
+     "holidays": [
+      {
+       "date": "2026-12-01",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Uriz",
+     "holidays": [
+      {
+       "date": "2026-12-01",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. The table lists only villages/concejos of this municipality (see nucleos), not the municipality as a whole."
+  },
+  "31029": {
+   "holidays": [
+    {
+     "date": "2026-05-25",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'LOS ARCOS'."
+  },
+  "31030": {
+   "holidays": [
+    {
+     "date": "2026-03-09",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ARELLANO'."
+  },
+  "31031": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ARESO'."
+  },
+  "31032": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    },
+    {
+     "date": "2026-12-28",
+     "name": ""
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ARGUEDAS'."
+  },
+  "31033": {
+   "holidays": [
+    {
+     "date": "2026-11-30",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ARIA'."
+  },
+  "31034": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    },
+    {
+     "date": "2026-12-09",
+     "name": ""
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ARIBE'."
+  },
+  "31035": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ARMAÑANZAS'."
+  },
+  "31036": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ARRÓNIZ'."
+  },
+  "31037": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ARRUAZU'."
+  },
+  "31038": {
+   "holidays": [
+    {
+     "date": "2026-11-30",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ARTAJONA'."
+  },
+  "31039": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ARTAZU'."
+  },
+  "31040": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Beunza",
+     "holidays": [
+      {
+       "date": "2026-06-20",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Ciganda",
+     "holidays": [
+      {
+       "date": "2026-09-07",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Eguaras",
+     "holidays": [
+      {
+       "date": "2026-11-14",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Erice",
+     "holidays": [
+      {
+       "date": "2026-11-14",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. The table lists only villages/concejos of this municipality (see nucleos), not the municipality as a whole."
+  },
+  "31041": {
+   "holidays": [
+    {
+     "date": "2026-08-28",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'AYEGUI'."
+  },
+  "31042": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'AZAGRA'."
+  },
+  "31043": {
+   "holidays": [
+    {
+     "date": "2026-04-23",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'AZUELO'."
+  },
+  "31044": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'BAKAIKU'."
+  },
+  "31045": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'BARÁSOAIN'."
+  },
+  "31046": {
+   "holidays": [
+    {
+     "date": "2026-11-18",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'BARBARIN'."
+  },
+  "31047": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'BARGOTA'."
+  },
+  "31048": {
+   "holidays": [
+    {
+     "date": "2026-08-06",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'BARILLAS'."
+  },
+  "31049": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Igoa",
+     "holidays": [
+      {
+       "date": "2026-09-08",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Itsaso",
+     "holidays": [
+      {
+       "date": "2026-09-14",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Jauntsarats",
+     "holidays": [
+      {
+       "date": "2026-08-16",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Orokieta",
+     "holidays": [
+      {
+       "date": "2026-08-11",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Udabe",
+     "holidays": [
+      {
+       "date": "2026-10-07",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. The table lists only villages/concejos of this municipality (see nucleos), not the municipality as a whole."
+  },
+  "31051": {
+   "holidays": [
+    {
+     "date": "2026-11-25",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'BEIRE'."
+  },
+  "31052": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'BELASCOÁIN'."
+  },
+  "31053": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'BERBINZANA'."
+  },
+  "31055": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'BETELU'."
+  },
+  "31057": {
+   "holidays": [
+    {
+     "date": "2026-01-19",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'BUÑUEL'."
+  },
+  "31058": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    },
+    {
+     "date": "2026-12-05",
+     "name": ""
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'AURITZ / BURGUETE'."
+  },
+  "31059": {
+   "holidays": [
+    {
+     "date": "2026-05-25",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'BURGUI', printed as 'Lunes de Pentecostés'."
+  },
+  "31060": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'BURLADA'."
+  },
+  "31061": {
+   "holidays": [
+    {
+     "date": "2026-11-30",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'EL BUSTO'."
+  },
+  "31062": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'CABANILLAS'."
+  },
+  "31063": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'CABREDO'."
+  },
+  "31064": {
+   "holidays": [
+    {
+     "date": "2026-01-19",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'CADREITA'."
+  },
+  "31065": {
+   "holidays": [
+    {
+     "date": "2026-04-25",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'CAPARROSO'."
+  },
+  "31066": {
+   "holidays": [
+    {
+     "date": "2026-09-29",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'CÁRCAR'."
+  },
+  "31067": {
+   "holidays": [
+    {
+     "date": "2026-08-08",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'CARCASTILLO'."
+  },
+  "31068": {
+   "holidays": [
+    {
+     "date": "2026-05-25",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'CASCANTE'."
+  },
+  "31069": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'CÁSEDA'."
+  },
+  "31070": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'CASTEJÓN'."
+  },
+  "31071": {
+   "holidays": [
+    {
+     "date": "2026-11-12",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'CASTILLONUEVO'."
+  },
+  "31072": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'CINTRUÉNIGO'."
+  },
+  "31073": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ZIORDIA'."
+  },
+  "31074": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'CIRAUQUI'."
+  },
+  "31075": {
+   "holidays": [
+    {
+     "date": "2026-09-29",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'CIRIZA'."
+  },
+  "31076": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Larraya",
+     "holidays": [
+      {
+       "date": "2026-11-18",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Sagüés",
+     "holidays": [
+      {
+       "date": "2026-09-29",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. The table lists only villages/concejos of this municipality (see nucleos), not the municipality as a whole."
+  },
+  "31077": {
+   "holidays": [
+    {
+     "date": "2026-09-29",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'CORELLA'."
+  },
+  "31078": {
+   "holidays": [
+    {
+     "date": "2026-09-29",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'CORTES'."
+  },
+  "31079": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'DESOJO'."
+  },
+  "31080": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'DICASTILLO'."
+  },
+  "31081": {
+   "holidays": [
+    {
+     "date": "2026-08-18",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'DONAMARIA'."
+  },
+  "31082": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ETXALAR', printed as 'Martes de carnaval'."
+  },
+  "31083": {
+   "holidays": [
+    {
+     "date": "2026-08-03",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ECHARRI'."
+  },
+  "31084": {
+   "holidays": [
+    {
+     "date": "2026-06-13",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ETXARRI ARANATZ'."
+  },
+  "31085": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    },
+    {
+     "date": "2026-12-10",
+     "name": ""
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ETXAURI'."
+  },
+  "31086": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Ardanaz",
+     "holidays": [
+      {
+       "date": "2026-01-22",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Azpa",
+     "holidays": [
+      {
+       "date": "2026-11-12",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Elcano",
+     "holidays": [
+      {
+       "date": "2026-10-08",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Elía",
+     "holidays": [
+      {
+       "date": "2026-08-19",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Eransus",
+     "holidays": [
+      {
+       "date": "2026-05-14",
+       "name": ""
+      }
+     ],
+     "rule": "Festividad de la Ascensión"
+    },
+    {
+     "name": "Ibiricu",
+     "holidays": [
+      {
+       "date": "2026-06-30",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Olaz",
+     "holidays": [
+      {
+       "date": "2026-06-30",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Sagüés",
+     "holidays": [
+      {
+       "date": "2026-04-20",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. The table lists only villages/concejos of this municipality (see nucleos), not the municipality as a whole."
+  },
+  "31087": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ELGORRIAGA'."
+  },
+  "31088": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Guerendiáin",
+     "holidays": [
+      {
+       "date": "2026-06-24",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Imárcoain",
+     "holidays": [
+      {
+       "date": "2026-11-11",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Noáin",
+     "holidays": [
+      {
+       "date": "2026-09-29",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. The table lists only villages/concejos of this municipality (see nucleos), not the municipality as a whole."
+  },
+  "31089": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ENÉRIZ'."
+  },
+  "31090": {
+   "holidays": [
+    {
+     "date": "2026-09-12",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ERATSUN'."
+  },
+  "31091": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Lizarraga",
+     "holidays": [
+      {
+       "date": "2026-11-23",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Unanu",
+     "holidays": [
+      {
+       "date": "2026-06-29",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. The table lists only villages/concejos of this municipality (see nucleos), not the municipality as a whole."
+  },
+  "31092": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    },
+    {
+     "date": "2026-12-05",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Esnotz",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ERRO'."
+  },
+  "31093": {
+   "holidays": [
+    {
+     "date": "2026-11-18",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'EZCÁROZ'."
+  },
+  "31094": {
+   "holidays": [
+    {
+     "date": "2026-09-29",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ESLAVA'."
+  },
+  "31096": {
+   "holidays": [
+    {
+     "date": "2026-09-29",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ESPRONCEDA'."
+  },
+  "31097": {
+   "holidays": [
+    {
+     "date": "2026-05-25",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ESTELLA-LIZARRA'."
+  },
+  "31098": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Akerreta",
+     "holidays": [
+      {
+       "date": "2026-09-14",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Ezkirotz",
+     "holidays": [
+      {
+       "date": "2026-09-21",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Gendulain",
+     "holidays": [
+      {
+       "date": "2026-10-12",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Ilarratz",
+     "holidays": [
+      {
+       "date": "2026-01-20",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Inbuluzketa",
+     "holidays": [
+      {
+       "date": "2026-11-12",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Iragi",
+     "holidays": [
+      {
+       "date": "2026-09-17",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Irotz",
+     "holidays": [
+      {
+       "date": "2026-06-02",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Irure",
+     "holidays": [
+      {
+       "date": "2026-09-10",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Saigots",
+     "holidays": [
+      {
+       "date": "2026-06-01",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Sarasibar",
+     "holidays": [
+      {
+       "date": "2026-12-24",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. The table lists only villages/concejos of this municipality (see nucleos), not the municipality as a whole."
+  },
+  "31099": {
+   "holidays": [
+    {
+     "date": "2026-08-16",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ETAYO'."
+  },
+  "31100": {
+   "holidays": [
+    {
+     "date": "2026-06-26",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'EULATE'."
+  },
+  "31101": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Arre",
+     "holidays": [
+      {
+       "date": "2026-11-18",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Azoz",
+     "holidays": [
+      {
+       "date": "2026-08-10",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Garrués",
+     "holidays": [
+      {
+       "date": "2026-12-09",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Makirriain",
+     "holidays": [
+      {
+       "date": "2026-11-11",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Oricáin",
+     "holidays": [
+      {
+       "date": "2026-07-27",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Orrio",
+     "holidays": [
+      {
+       "date": "2026-06-24",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Osa",
+     "holidays": [
+      {
+       "date": "2026-10-03",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. The table lists only villages/concejos of this municipality (see nucleos), not the municipality as a whole."
+  },
+  "31102": {
+   "holidays": [
+    {
+     "date": "2026-12-01",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'EZKURRA'."
+  },
+  "31103": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'EZPROGUI'."
+  },
+  "31104": {
+   "holidays": [
+    {
+     "date": "2026-11-09",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'FALCES'."
+  },
+  "31105": {
+   "holidays": [
+    {
+     "date": "2026-03-16",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'FITERO'."
+  },
+  "31106": {
+   "holidays": [
+    {
+     "date": "2026-09-04",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'FONTELLAS'."
+  },
+  "31107": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'FUNES'."
+  },
+  "31108": {
+   "holidays": [
+    {
+     "date": "2026-08-06",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'FUSTIÑANA'."
+  },
+  "31109": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Esparza",
+     "holidays": [
+      {
+       "date": "2026-09-16",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Esquíroz",
+     "holidays": [
+      {
+       "date": "2026-08-19",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Olaz Subiza",
+     "holidays": [
+      {
+       "date": "2026-09-09",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'GALAR'."
+  },
+  "31110": {
+   "holidays": [
+    {
+     "date": "2026-09-21",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'GALLIPIENZO'."
+  },
+  "31111": {
+   "holidays": [
+    {
+     "date": "2026-09-24",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Izal",
+     "holidays": [
+      {
+       "date": "2026-01-23",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Uscarrés",
+     "holidays": [
+      {
+       "date": "2026-01-22",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'GALLUÉS'."
+  },
+  "31112": {
+   "holidays": [
+    {
+     "date": "2026-11-30",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'GARAIOA'."
+  },
+  "31113": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'GARDE'."
+  },
+  "31114": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'GARÍNOAIN'."
+  },
+  "31115": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    },
+    {
+     "date": "2026-12-28",
+     "name": ""
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'GARRALDA'."
+  },
+  "31116": {
+   "holidays": [
+    {
+     "date": "2026-10-21",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'GENEVILLA'."
+  },
+  "31117": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'GOIZUETA', printed as 'Martes de carnaval'."
+  },
+  "31119": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    },
+    {
+     "date": "2026-12-26",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Igal",
+     "holidays": [
+      {
+       "date": "2026-01-22",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'GÜESA'."
+  },
+  "31120": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Estenoz",
+     "holidays": [
+      {
+       "date": "2026-11-16",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Irujo",
+     "holidays": [
+      {
+       "date": "2026-11-23",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Irurre",
+     "holidays": [
+      {
+       "date": "2026-08-18",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Iturgoyen",
+     "holidays": [
+      {
+       "date": "2026-12-15",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Izurzu",
+     "holidays": [
+      {
+       "date": "2026-12-02",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Muzqui",
+     "holidays": [
+      {
+       "date": "2026-01-24",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Vidaurre",
+     "holidays": [
+      {
+       "date": "2026-07-28",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. The table lists only villages/concejos of this municipality (see nucleos), not the municipality as a whole."
+  },
+  "31121": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Echarren",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'GUIRGUILLANO'."
+  },
+  "31122": {
+   "holidays": [
+    {
+     "date": "2026-09-21",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'HUARTE', printed as 'Tercer lunes de septiembre'."
+  },
+  "31123": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'UHARTE ARAKIL'."
+  },
+  "31124": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Izco",
+     "holidays": [
+      {
+       "date": "2026-10-03",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Sengáriz",
+     "holidays": [
+      {
+       "date": "2026-10-03",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. The table lists only villages/concejos of this municipality (see nucleos), not the municipality as a whole."
+  },
+  "31125": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Labeaga",
+     "holidays": [
+      {
+       "date": "2026-06-29",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'IGUZQUIZA'."
+  },
+  "31126": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Eraso",
+     "holidays": [
+      {
+       "date": "2026-08-25",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Latasa",
+     "holidays": [
+      {
+       "date": "2026-09-03",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. The table lists only villages/concejos of this municipality (see nucleos), not the municipality as a whole."
+  },
+  "31127": {
+   "holidays": [
+    {
+     "date": "2026-08-29",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'IRAÑETA'."
+  },
+  "31128": {
+   "holidays": [
+    {
+     "date": "2026-09-16",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ISABA'."
+  },
+  "31129": {
+   "holidays": [
+    {
+     "date": "2026-02-16",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ITUREN', printed as 'Lunes de carnaval'."
+  },
+  "31130": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ITURMENDI'."
+  },
+  "31131": {
+   "holidays": [
+    {
+     "date": "2026-09-15",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'IZA'."
+  },
+  "31132": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Ardanaz",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Guerguitiáin",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Iriso",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Lizarraga",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Reta",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Zuazu",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'IZAGAONDOA'."
+  },
+  "31133": {
+   "holidays": [
+    {
+     "date": "2026-09-29",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'IZALZU'."
+  },
+  "31134": {
+   "holidays": [
+    {
+     "date": "2026-06-22",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'JAURRIETA'."
+  },
+  "31135": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    },
+    {
+     "date": "2026-12-29",
+     "name": ""
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'JAVIER'."
+  },
+  "31136": {
+   "holidays": [
+    {
+     "date": "2026-07-07",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Garciriáin",
+     "holidays": [
+      {
+       "date": "2026-07-01",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Navaz",
+     "holidays": [
+      {
+       "date": "2026-09-15",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Nuin",
+     "holidays": [
+      {
+       "date": "2026-11-16",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Unzu",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Usi",
+     "holidays": [
+      {
+       "date": "2026-09-26",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'JUSLAPEÑA'."
+  },
+  "31138": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'LAKUNTZA'."
+  },
+  "31139": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Gastiáin",
+     "holidays": [
+      {
+       "date": "2026-07-18",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Narcue",
+     "holidays": [
+      {
+       "date": "2026-11-17",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Ulibarri",
+     "holidays": [
+      {
+       "date": "2026-09-08",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. The table lists only villages/concejos of this municipality (see nucleos), not the municipality as a whole."
+  },
+  "31140": {
+   "holidays": [
+    {
+     "date": "2026-09-15",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'LANTZ'."
+  },
+  "31141": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'LAPOBLACIÓN'."
+  },
+  "31142": {
+   "holidays": [
+    {
+     "date": "2026-09-29",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'LARRAGA'."
+  },
+  "31143": {
+   "holidays": [
+    {
+     "date": "2026-07-18",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'LARRAONA'."
+  },
+  "31144": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Errazkin",
+     "holidays": [
+      {
+       "date": "2026-08-06",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Etxarri",
+     "holidays": [
+      {
+       "date": "2026-09-14",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Gorriti",
+     "holidays": [
+      {
+       "date": "2026-08-24",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Iribas",
+     "holidays": [
+      {
+       "date": "2026-08-29",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Madotz",
+     "holidays": [
+      {
+       "date": "2026-06-24",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Mugiro",
+     "holidays": [
+      {
+       "date": "2026-06-29",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Oderitz",
+     "holidays": [
+      {
+       "date": "2026-08-10",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. The table lists only villages/concejos of this municipality (see nucleos), not the municipality as a whole."
+  },
+  "31145": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'LAZAGURRÍA'."
+  },
+  "31146": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'LEACHE'."
+  },
+  "31147": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'LEGARDA'."
+  },
+  "31148": {
+   "holidays": [
+    {
+     "date": "2026-11-11",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'LEGARIA'."
+  },
+  "31149": {
+   "holidays": [
+    {
+     "date": "2026-01-26",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'LEITZA'."
+  },
+  "31150": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Bézquiz",
+     "holidays": [
+      {
+       "date": "2026-05-04",
+       "name": ""
+      }
+     ],
+     "rule": "Lunes siguiente al primer domingo de mayo"
+    },
+    {
+     "name": "Iracheta",
+     "holidays": [
+      {
+       "date": "2026-05-04",
+       "name": ""
+      }
+     ],
+     "rule": "Lunes siguiente al primer domingo de mayo"
+    },
+    {
+     "name": "Maquirriain",
+     "holidays": [
+      {
+       "date": "2026-05-04",
+       "name": ""
+      }
+     ],
+     "rule": "Lunes siguiente al primer domingo de mayo"
+    },
+    {
+     "name": "Sánsoain",
+     "holidays": [
+      {
+       "date": "2026-05-04",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'LEOZ', printed as 'Lunes siguiente al primer domingo de mayo'."
+  },
+  "31151": {
+   "holidays": [
+    {
+     "date": "2026-11-11",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'LERGA'."
+  },
+  "31152": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    },
+    {
+     "date": "2026-12-04",
+     "name": ""
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'LERÍN'."
+  },
+  "31153": {
+   "holidays": [
+    {
+     "date": "2026-07-07",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'LESAKA'."
+  },
+  "31154": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'LEZAUN'."
+  },
+  "31155": {
+   "holidays": [
+    {
+     "date": "2026-07-23",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'LIEDENA'."
+  },
+  "31156": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Galdúroz",
+     "holidays": [
+      {
+       "date": "2026-05-13",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Iloz",
+     "holidays": [
+      {
+       "date": "2026-01-19",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Janariz",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Mendioroz",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Oscáriz",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Uroz",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. The table lists only villages/concejos of this municipality (see nucleos), not the municipality as a whole."
+  },
+  "31157": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'LODOSA'."
+  },
+  "31158": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Ecay",
+     "holidays": [
+      {
+       "date": "2026-11-16",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Erdozáin",
+     "holidays": [
+      {
+       "date": "2026-08-10",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Itoiz",
+     "holidays": [
+      {
+       "date": "2026-12-14",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Javerri",
+     "holidays": [
+      {
+       "date": "2026-12-29",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Larrangoz",
+     "holidays": [
+      {
+       "date": "2026-08-26",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Meoz",
+     "holidays": [
+      {
+       "date": "2026-07-04",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Mugueta",
+     "holidays": [
+      {
+       "date": "2026-11-14",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Murillo",
+     "holidays": [
+      {
+       "date": "2026-08-19",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Uli Bajo",
+     "holidays": [
+      {
+       "date": "2026-12-14",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Villaveta",
+     "holidays": [
+      {
+       "date": "2026-12-12",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. The table lists only villages/concejos of this municipality (see nucleos), not the municipality as a whole."
+  },
+  "31159": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'LUMBIER'."
+  },
+  "31160": {
+   "holidays": [
+    {
+     "date": "2026-11-11",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'LUQUIN'."
+  },
+  "31161": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'MAÑERU'."
+  },
+  "31162": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'MARAÑÓN'."
+  },
+  "31163": {
+   "holidays": [
+    {
+     "date": "2026-08-05",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'MARCILLA'."
+  },
+  "31164": {
+   "holidays": [
+    {
+     "date": "2026-07-27",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'MÉLIDA'."
+  },
+  "31165": {
+   "holidays": [
+    {
+     "date": "2026-05-25",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'MENDAVIA', printed as 'Lunes de Pentecostés'."
+  },
+  "31166": {
+   "holidays": [
+    {
+     "date": "2026-05-25",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Ubago",
+     "holidays": [
+      {
+       "date": "2026-10-03",
+       "name": ""
+      }
+     ],
+     "rule": "Primer sábado de octubre"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'MENDAZA'."
+  },
+  "31167": {
+   "holidays": [
+    {
+     "date": "2026-02-09",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'MENDIGORRIA'."
+  },
+  "31168": {
+   "holidays": [
+    {
+     "date": "2026-09-10",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Ganuza",
+     "holidays": [
+      {
+       "date": "2026-09-19",
+       "name": ""
+      }
+     ],
+     "rule": "Tercer sábado de septiembre"
+    },
+    {
+     "name": "Ollobarren",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Ollogoyen",
+     "holidays": [
+      {
+       "date": "2026-11-12",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'METAUTEN'."
+  },
+  "31169": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'MILAGRO'."
+  },
+  "31170": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    },
+    {
+     "date": "2026-12-12",
+     "name": ""
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'MIRAFUENTES'."
+  },
+  "31171": {
+   "holidays": [
+    {
+     "date": "2026-03-20",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'MIRANDA DE ARGA'."
+  },
+  "31172": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'MONREAL'."
+  },
+  "31173": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'MONTEAGUDO'."
+  },
+  "31174": {
+   "holidays": [
+    {
+     "date": "2026-05-29",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'MORENTIN'."
+  },
+  "31175": {
+   "holidays": [
+    {
+     "date": "2026-09-03",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'MUÉS'."
+  },
+  "31176": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'MURCHANTE'."
+  },
+  "31177": {
+   "holidays": [
+    {
+     "date": "2026-08-03",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'MURIETA'."
+  },
+  "31178": {
+   "holidays": [
+    {
+     "date": "2026-09-02",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'MURILLO EL CUENDE'."
+  },
+  "31179": {
+   "holidays": [
+    {
+     "date": "2026-10-21",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'MURILLO EL FRUTO'."
+  },
+  "31180": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'MURUZABAL'."
+  },
+  "31181": {
+   "holidays": [
+    {
+     "date": "2026-07-10",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'NAVASCUÉS'."
+  },
+  "31182": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    },
+    {
+     "date": "2026-12-14",
+     "name": ""
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'NAZAR'."
+  },
+  "31183": {
+   "holidays": [
+    {
+     "date": "2026-08-29",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'OBANOS'."
+  },
+  "31184": {
+   "holidays": [
+    {
+     "date": "2026-11-12",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'OCO'."
+  },
+  "31185": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    },
+    {
+     "date": "2026-12-28",
+     "name": ""
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'OCHAGAVÍA'."
+  },
+  "31186": {
+   "holidays": [
+    {
+     "date": "2026-01-16",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Guenduláin",
+     "holidays": [
+      {
+       "date": "2026-10-11",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Latasa",
+     "holidays": [
+      {
+       "date": "2026-01-17",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Ostiz",
+     "holidays": [
+      {
+       "date": "2026-01-17",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ODIETA'."
+  },
+  "31188": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    },
+    {
+     "date": "2026-12-26",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Endériz",
+     "holidays": [
+      {
+       "date": "2026-12-30",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'OLAIBAR'."
+  },
+  "31189": {
+   "holidays": [
+    {
+     "date": "2026-07-27",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'OLAZTI / OLAZAGUTIA'."
+  },
+  "31190": {
+   "holidays": [
+    {
+     "date": "2026-07-27",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'OLEJUA'."
+  },
+  "31191": {
+   "holidays": [
+    {
+     "date": "2026-08-26",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'OLITE'."
+  },
+  "31192": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Echague",
+     "holidays": [
+      {
+       "date": "2026-10-07",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Mendivil",
+     "holidays": [
+      {
+       "date": "2026-09-29",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Oricin",
+     "holidays": [
+      {
+       "date": "2026-11-30",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Solchaga",
+     "holidays": [
+      {
+       "date": "2026-08-29",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'OLÓRIZ'."
+  },
+  "31193": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Arazuri",
+     "holidays": [
+      {
+       "date": "2026-08-29",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Izcue",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Izu",
+     "holidays": [
+      {
+       "date": "2026-10-07",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Lizasoáin",
+     "holidays": [
+      {
+       "date": "2026-09-08",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Ororbia",
+     "holidays": [
+      {
+       "date": "2026-01-07",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. The table lists only villages/concejos of this municipality (see nucleos), not the municipality as a whole."
+  },
+  "31194": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Anoz",
+     "holidays": [
+      {
+       "date": "2026-09-15",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Ilzarbe",
+     "holidays": [
+      {
+       "date": "2026-09-29",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Senosiáin",
+     "holidays": [
+      {
+       "date": "2026-09-22",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Ulzurrun",
+     "holidays": [
+      {
+       "date": "2026-09-01",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. The table lists only villages/concejos of this municipality (see nucleos), not the municipality as a whole."
+  },
+  "31195": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ORBAIZETA'."
+  },
+  "31196": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ORBARA'."
+  },
+  "31197": {
+   "holidays": [
+    {
+     "date": "2026-11-11",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ORÍSOAIN'."
+  },
+  "31198": {
+   "holidays": [
+    {
+     "date": "2026-03-12",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ORONZ'."
+  },
+  "31199": {
+   "holidays": [
+    {
+     "date": "2026-06-18",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'OROZ-BETELU'."
+  },
+  "31200": {
+   "holidays": [
+    {
+     "date": "2026-09-29",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'OTEIZA'."
+  },
+  "31201": {
+   "holidays": [
+    {
+     "date": "2026-11-30",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'PAMPLONA'."
+  },
+  "31202": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'PERALTA'."
+  },
+  "31203": {
+   "holidays": [
+    {
+     "date": "2026-11-12",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'PETILLA DE ARAGÓN'."
+  },
+  "31204": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    },
+    {
+     "date": "2026-12-15",
+     "name": ""
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'PIEDRAMILLERA'."
+  },
+  "31205": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'PITILLAS'."
+  },
+  "31206": {
+   "holidays": [
+    {
+     "date": "2026-07-27",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'PUENTE LA REINA'."
+  },
+  "31207": {
+   "holidays": [
+    {
+     "date": "2026-07-22",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'PUEYO'."
+  },
+  "31208": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'RIBAFORADA'."
+  },
+  "31209": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Iso",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Usun",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. The table lists only villages/concejos of this municipality (see nucleos), not the municipality as a whole."
+  },
+  "31210": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    },
+    {
+     "date": "2026-12-26",
+     "name": ""
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'RONCAL'."
+  },
+  "31211": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ORREAGA / RONCESVALLES'."
+  },
+  "31212": {
+   "holidays": [
+    {
+     "date": "2026-01-22",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'SADA'."
+  },
+  "31213": {
+   "holidays": [
+    {
+     "date": "2026-06-27",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'SALDIAS'."
+  },
+  "31214": {
+   "holidays": [
+    {
+     "date": "2026-09-29",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'SALINAS DE ORO'."
+  },
+  "31215": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'SAN ADRIÁN'."
+  },
+  "31216": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'SANGÜESA'."
+  },
+  "31217": {
+   "holidays": [
+    {
+     "date": "2026-11-11",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'SAN MARTÍN DE UNX'."
+  },
+  "31219": {
+   "holidays": [
+    {
+     "date": "2026-05-25",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'SANSOL', printed as 'Segundo día de Pentecostés'."
+  },
+  "31220": {
+   "holidays": [
+    {
+     "date": "2026-09-16",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'SANTACARA'."
+  },
+  "31221": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'DONEZTEBE / SANTESTEBAN'."
+  },
+  "31222": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'SARRIÉS'."
+  },
+  "31223": {
+   "holidays": [
+    {
+     "date": "2026-08-08",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'SARTAGUDA'."
+  },
+  "31224": {
+   "holidays": [
+    {
+     "date": "2026-08-25",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'SESMA'."
+  },
+  "31225": {
+   "holidays": [
+    {
+     "date": "2026-11-24",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'SORLADA'."
+  },
+  "31226": {
+   "holidays": [
+    {
+     "date": "2026-01-30",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'SUNBILLA'."
+  },
+  "31227": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'TAFALLA'."
+  },
+  "31229": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'TIRAPU'."
+  },
+  "31230": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    },
+    {
+     "date": "2026-12-29",
+     "name": ""
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'TORRALBA DEL RÍO'."
+  },
+  "31231": {
+   "holidays": [
+    {
+     "date": "2026-09-14",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'TORRES DEL RÍO'."
+  },
+  "31232": {
+   "holidays": [
+    {
+     "date": "2026-07-27",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'TUDELA'."
+  },
+  "31233": {
+   "holidays": [
+    {
+     "date": "2026-08-20",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'TULEBRAS'."
+  },
+  "31234": {
+   "holidays": [
+    {
+     "date": "2026-09-29",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ÚCAR'."
+  },
+  "31235": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'UJUÉ'."
+  },
+  "31236": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Alkotz",
+     "holidays": [
+      {
+       "date": "2026-12-26",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Eltso",
+     "holidays": [
+      {
+       "date": "2026-08-22",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Eltzaburu",
+     "holidays": [
+      {
+       "date": "2026-09-02",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Gerendiain",
+     "holidays": [
+      {
+       "date": "2026-08-10",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Gorrontz Olano",
+     "holidays": [
+      {
+       "date": "2026-08-17",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Ilarregi",
+     "holidays": [
+      {
+       "date": "2026-09-29",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Iraizotz",
+     "holidays": [
+      {
+       "date": "2026-11-11",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Lizaso",
+     "holidays": [
+      {
+       "date": "2026-10-28",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Suarbe",
+     "holidays": [
+      {
+       "date": "2026-10-13",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Urritzola-Galain",
+     "holidays": [
+      {
+       "date": "2026-08-17",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Zenotz",
+     "holidays": [
+      {
+       "date": "2026-07-27",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. The table lists only villages/concejos of this municipality (see nucleos), not the municipality as a whole."
+  },
+  "31237": {
+   "holidays": [
+    {
+     "date": "2026-04-20",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Cemboráin",
+     "holidays": [
+      {
+       "date": "2026-12-15",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'UNCITI'."
+  },
+  "31238": {
+   "holidays": [
+    {
+     "date": "2026-11-12",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'UNZUÉ'."
+  },
+  "31239": {
+   "holidays": [
+    {
+     "date": "2026-05-25",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'URDAZUBI / URDAX', printed as 'Lunes de Pentecostés'."
+  },
+  "31240": {
+   "holidays": [
+    {
+     "date": "2026-07-07",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'URDIAIN'."
+  },
+  "31241": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Elcoaz",
+     "holidays": [
+      {
+       "date": "2026-12-30",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Eparoz",
+     "holidays": [
+      {
+       "date": "2026-12-05",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Irurozqui",
+     "holidays": [
+      {
+       "date": "2026-09-10",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Ongoz",
+     "holidays": [
+      {
+       "date": "2026-12-10",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Ozcoidi",
+     "holidays": [
+      {
+       "date": "2026-06-29",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Rípodas",
+     "holidays": [
+      {
+       "date": "2026-02-05",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Tabar",
+     "holidays": [
+      {
+       "date": "2026-09-01",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Zabalza",
+     "holidays": [
+      {
+       "date": "2026-07-04",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. The table lists only villages/concejos of this municipality (see nucleos), not the municipality as a whole."
+  },
+  "31242": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Nardués Aldunate",
+     "holidays": [
+      {
+       "date": "2026-12-29",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Nardués Andurra",
+     "holidays": [
+      {
+       "date": "2026-11-16",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "San Vicente",
+     "holidays": [
+      {
+       "date": "2026-10-10",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Sansoáin",
+     "holidays": [
+      {
+       "date": "2026-10-13",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. The table lists only villages/concejos of this municipality (see nucleos), not the municipality as a whole."
+  },
+  "31243": {
+   "holidays": [
+    {
+     "date": "2026-08-06",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'URROZVILLA'."
+  },
+  "31245": {
+   "holidays": [
+    {
+     "date": "2026-11-11",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'URZAINQUI'."
+  },
+  "31246": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'UTERGA'."
+  },
+  "31247": {
+   "holidays": [
+    {
+     "date": "2026-04-16",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'UZTARROZ'."
+  },
+  "31248": {
+   "holidays": [
+    {
+     "date": "2026-07-24",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'LUZAIDE / VALCARLOS'."
+  },
+  "31249": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    },
+    {
+     "date": "2026-12-18",
+     "name": ""
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'VALTIERRA'."
+  },
+  "31250": {
+   "holidays": [
+    {
+     "date": "2026-08-03",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'BERA'."
+  },
+  "31251": {
+   "holidays": [
+    {
+     "date": "2026-07-22",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'VIANA'."
+  },
+  "31252": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'VIDANGOZ'."
+  },
+  "31253": {
+   "holidays": [
+    {
+     "date": "2026-01-07",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'BIDAURRETA'."
+  },
+  "31254": {
+   "holidays": [
+    {
+     "date": "2026-09-16",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'VILLAFRANCA'."
+  },
+  "31255": {
+   "holidays": [
+    {
+     "date": "2026-09-19",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'VILLAMAYOR DE MONJARDÍN'."
+  },
+  "31256": {
+   "holidays": [
+    {
+     "date": "2026-07-04",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'HIRIBERRI / VILLANUEVA DE AEZKOA'."
+  },
+  "31257": {
+   "holidays": [
+    {
+     "date": "2026-03-09",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'VILLATUERTA'."
+  },
+  "31258": {
+   "holidays": [
+    {
+     "date": "2026-11-30",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'VILLAVA'."
+  },
+  "31259": {
+   "holidays": [
+    {
+     "date": "2026-09-29",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'IGANTZI'."
+  },
+  "31260": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Eraul",
+     "holidays": [
+      {
+       "date": "2026-10-01",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Grocin",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Ibiricu",
+     "holidays": [
+      {
+       "date": "2026-12-29",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Iruñela",
+     "holidays": [
+      {
+       "date": "2026-09-16",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Lorca",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Riezu",
+     "holidays": [
+      {
+       "date": "2026-02-04",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Villanueva",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. The table lists only villages/concejos of this municipality (see nucleos), not the municipality as a whole."
+  },
+  "31261": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    },
+    {
+     "date": "2026-12-26",
+     "name": ""
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'YESA'."
+  },
+  "31262": {
+   "holidays": [
+    {
+     "date": "2026-08-19",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Ubani",
+     "holidays": [
+      {
+       "date": "2026-11-16",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ZABALZA'."
+  },
+  "31263": {
+   "holidays": [
+    {
+     "date": "2026-01-17",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ZUBIETA'."
+  },
+  "31264": {
+   "holidays": [
+    {
+     "date": "2026-08-31",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ZUGARRAMURDI'."
+  },
+  "31265": {
+   "holidays": [
+    {
+     "date": "2026-07-03",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ZÚÑIGA'."
+  },
+  "31901": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    },
+    {
+     "date": "2026-12-28",
+     "name": ""
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'BARAÑÁIN'."
+  },
+  "31902": {
+   "holidays": [
+    {
+     "date": "2026-07-07",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Elcarte",
+     "holidays": [
+      {
+       "date": "2026-09-08",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Loza",
+     "holidays": [
+      {
+       "date": "2026-09-14",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Oteiza",
+     "holidays": [
+      {
+       "date": "2026-06-24",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'BERRIOPLANO'."
+  },
+  "31903": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    },
+    {
+     "date": "2026-12-26",
+     "name": ""
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'BERRIOZAR'."
+  },
+  "31904": {
+   "holidays": [
+    {
+     "date": "2026-11-11",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'IRURTZUN'."
+  },
+  "31905": {
+   "holidays": [
+    {
+     "date": "2026-11-11",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'BERIÁIN'."
+  },
+  "31906": {
+   "holidays": [
+    {
+     "date": "2026-09-29",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ORKOIEN'."
+  },
+  "31907": {
+   "holidays": [
+    {
+     "date": "2026-11-30",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'ZIZUR MAYOR'."
+  },
+  "31908": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": ""
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier, Día de Navarra"
+    }
+   ],
+   "note": "3 December (Día de Navarra) is the local holiday common to all Navarra. Own day from the row 'LEKUNBERRI'."
+  }
+ }
+}

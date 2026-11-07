@@ -1,0 +1,155 @@
+{
+ "source_id": "jcyl-2026",
+ "source": {
+  "title": "Junta de Castilla y León, datos abiertos: Fiestas locales: Calendario de Fiestas de Carácter Local, año 2026 (only municipalities missing from the provincial bulletin lists)",
+  "url": "https://datosabiertos.jcyl.es/web/jcyl/risp/es/empleo/fiestas-locales/1284952783683-3.csv",
+  "published": "2026-09-02",
+  "accessed": "2026-11-07"
+ },
+ "region": "castilla-y-leon",
+ "count": 11,
+ "unmatched": [
+  "40099 HONRUBIA DE LA CUESTA: ['06/07/2024', '31/08/2024'] (not all 2026)"
+ ],
+ "municipios": {
+  "09024": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "Fiesta local"
+    },
+    {
+     "date": "2026-09-25",
+     "name": "Fiesta local"
+    }
+   ],
+   "note": "Not in the 2026 provincial bulletin list of the Oficina Territorial de Trabajo; taken from the Junta de Castilla y León open-data calendar of local holidays."
+  },
+  "09221": {
+   "holidays": [
+    {
+     "date": "2026-06-12",
+     "name": "Fiesta local"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "Fiesta local"
+    }
+   ],
+   "note": "Not in the 2026 provincial bulletin list of the Oficina Territorial de Trabajo; taken from the Junta de Castilla y León open-data calendar of local holidays."
+  },
+  "37226": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "Fiesta local"
+    },
+    {
+     "date": "2026-06-24",
+     "name": "Fiesta local"
+    }
+   ],
+   "note": "Not in the 2026 provincial bulletin list of the Oficina Territorial de Trabajo; taken from the Junta de Castilla y León open-data calendar of local holidays."
+  },
+  "40068": {
+   "holidays": [
+    {
+     "date": "2026-08-01",
+     "name": "Fiesta De Verano"
+    },
+    {
+     "date": "2026-11-22",
+     "name": "Santa Cecilia"
+    }
+   ],
+   "note": "Not in the 2026 provincial bulletin list of the Oficina Territorial de Trabajo; taken from the Junta de Castilla y León open-data calendar of local holidays."
+  },
+  "40110": {
+   "holidays": [
+    {
+     "date": "2026-06-09",
+     "name": "Romería Virgen De Salcedón"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Natividad De Ntra. Señora"
+    }
+   ],
+   "note": "Not in the 2026 provincial bulletin list of the Oficina Territorial de Trabajo; taken from the Junta de Castilla y León open-data calendar of local holidays."
+  },
+  "40161": {
+   "holidays": [
+    {
+     "date": "2026-08-23",
+     "name": "Fiesta local"
+    }
+   ],
+   "note": "Not in the 2026 provincial bulletin list of the Oficina Territorial de Trabajo; taken from the Junta de Castilla y León open-data calendar of local holidays. The calendar gives 1 day(s)."
+  },
+  "40178": {
+   "holidays": [
+    {
+     "date": "2026-05-31",
+     "name": "Santa Petronila"
+    },
+    {
+     "date": "2026-07-25",
+     "name": "Santiago"
+    }
+   ],
+   "note": "Not in the 2026 provincial bulletin list of the Oficina Territorial de Trabajo; taken from the Junta de Castilla y León open-data calendar of local holidays."
+  },
+  "40204": {
+   "holidays": [
+    {
+     "date": "2026-06-09",
+     "name": "Lunes De Pentecostes"
+    },
+    {
+     "date": "2026-09-22",
+     "name": "Lunes De Fiesta"
+    }
+   ],
+   "note": "Not in the 2026 provincial bulletin list of the Oficina Territorial de Trabajo; taken from the Junta de Castilla y León open-data calendar of local holidays."
+  },
+  "40210": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2026-09-09",
+     "name": "Dulce Nombre De María"
+    }
+   ],
+   "note": "Not in the 2026 provincial bulletin list of the Oficina Territorial de Trabajo; taken from the Junta de Castilla y León open-data calendar of local holidays."
+  },
+  "40216": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    },
+    {
+     "date": "2026-10-27",
+     "name": "San Frutos"
+    }
+   ],
+   "note": "Not in the 2026 provincial bulletin list of the Oficina Territorial de Trabajo; taken from the Junta de Castilla y León open-data calendar of local holidays."
+  },
+  "40229": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    },
+    {
+     "date": "2026-08-18",
+     "name": "San Juan Evangelista"
+    }
+   ],
+   "note": "Not in the 2026 provincial bulletin list of the Oficina Territorial de Trabajo; taken from the Junta de Castilla y León open-data calendar of local holidays."
+  }
+ }
+}

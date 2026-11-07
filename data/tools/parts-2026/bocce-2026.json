@@ -1,0 +1,25 @@
+{
+ "source_id": "bocce-2026",
+ "source": {
+  "title": "Resolución de 15 de septiembre de 2025, de la Delegación del Gobierno en Ceuta, por la que se publica la relación de fiestas locales de la Ciudad Autónoma de Ceuta para el año 2026 (BOCCE núm. 6549, de 19-9-2025)",
+  "url": "https://www.ceuta.es/ceuta/component/jdownloads/finish/1960-septiembre/22923-bocce-6549-19-09-2025?Itemid=0",
+  "published": "2025-09-19"
+ },
+ "region": "ceuta",
+ "count": 1,
+ "unmatched": [],
+ "municipios": {
+  "51001": {
+   "holidays": [
+    {
+     "date": "2026-03-20",
+     "name": "Fiesta de Culminación de Ramadán Eid al-Fitr"
+    },
+    {
+     "date": "2026-06-13",
+     "name": "San Antonio"
+    }
+   ]
+  }
+ }
+}

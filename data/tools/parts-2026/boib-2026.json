@@ -1,0 +1,1457 @@
+{
+ "source_id": "boib-2026",
+ "source": {
+  "title": "Resolución de la consejera de Trabajo, Función Pública y Diálogo Social por la que se hace público el calendario laboral general y local para el año 2026 en el ámbito de las Illes Balears (BOIB núm. 129, de 27-9-2025), con las correcciones de los BOIB núm. 139 (21-10-2025), 150 (13-11-2025) y 15 (31-1-2026)",
+  "url": "https://www.caib.es/sites/calendarilaboral/es/aao_2026/",
+  "published": "2025-09-27"
+ },
+ "region": "baleares",
+ "count": 67,
+ "unmatched": [],
+ "municipios": {
+  "07001": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    }
+   ]
+  },
+  "07002": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Último martes de Carnaval"
+    },
+    {
+     "date": "2026-04-30",
+     "name": ""
+    }
+   ]
+  },
+  "07003": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-07-02",
+     "name": "Virgen de la Victoria"
+    }
+   ]
+  },
+  "07004": {
+   "holidays": [],
+   "nucleos": [
+    {
+     "name": "Algaida y Randa",
+     "holidays": [
+      {
+       "date": "2026-01-16",
+       "name": "San Honorato"
+      },
+      {
+       "date": "2026-07-25",
+       "name": "San Jaime"
+      }
+     ]
+    },
+    {
+     "name": "Pina",
+     "holidays": [
+      {
+       "date": "2026-01-17",
+       "name": "San Antonio"
+      },
+      {
+       "date": "2026-09-26",
+       "name": "San Cosme y San Damián"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution sets the days per núcleo/parroquia; see nucleos."
+  },
+  "07005": {
+   "holidays": [],
+   "nucleos": [
+    {
+     "name": "Andratx",
+     "holidays": [
+      {
+       "date": "2026-06-29",
+       "name": ""
+      },
+      {
+       "date": "2026-12-07",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Port d'Andratx",
+     "holidays": [
+      {
+       "date": "2026-07-16",
+       "name": "Virgen del Carmen"
+      },
+      {
+       "date": "2026-12-07",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "s'Arracó",
+     "holidays": [
+      {
+       "date": "2026-08-28",
+       "name": "San Agustín"
+      },
+      {
+       "date": "2026-12-07",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The resolution sets the days per núcleo/parroquia; see nucleos."
+  },
+  "07006": {
+   "holidays": [],
+   "nucleos": [
+    {
+     "name": "Artà",
+     "holidays": [
+      {
+       "date": "2026-01-17",
+       "name": "San Antonio"
+      },
+      {
+       "date": "2026-08-06",
+       "name": "San Salvador"
+      }
+     ]
+    },
+    {
+     "name": "Colònia de Sant Pere",
+     "holidays": [
+      {
+       "date": "2026-01-17",
+       "name": "San Antonio"
+      },
+      {
+       "date": "2026-06-29",
+       "name": "San Pedro"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution sets the days per núcleo/parroquia; see nucleos."
+  },
+  "07007": {
+   "holidays": [],
+   "nucleos": [
+    {
+     "name": "Banyalbufar",
+     "holidays": [
+      {
+       "date": "2026-09-08",
+       "name": ""
+      },
+      {
+       "date": "2026-12-07",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Port des Canonge",
+     "holidays": [
+      {
+       "date": "2026-07-25",
+       "name": ""
+      },
+      {
+       "date": "2026-12-07",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The resolution sets the days per núcleo/parroquia; see nucleos."
+  },
+  "07008": {
+   "holidays": [
+    {
+     "date": "2026-07-24",
+     "name": "Viernes previo a San Jaime"
+    },
+    {
+     "date": "2026-09-25",
+     "name": "Viernes de Sa Vermada"
+    }
+   ]
+  },
+  "07009": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-06-30",
+     "name": "San Marcial"
+    }
+   ]
+  },
+  "07010": {
+   "holidays": [],
+   "nucleos": [
+    {
+     "name": "Bunyola",
+     "holidays": [
+      {
+       "date": "2026-09-21",
+       "name": "San Mateo"
+      },
+      {
+       "date": "2026-11-25",
+       "name": "Santa Catalina"
+      }
+     ]
+    },
+    {
+     "name": "Palmanyola",
+     "holidays": [
+      {
+       "date": "2026-01-20",
+       "name": "San Sebastián"
+      },
+      {
+       "date": "2026-09-21",
+       "name": "San Mateo"
+      }
+     ]
+    },
+    {
+     "name": "Orient",
+     "holidays": [
+      {
+       "date": "2026-04-23",
+       "name": "San Jorge"
+      },
+      {
+       "date": "2026-09-21",
+       "name": "San Mateo"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution sets the days per núcleo/parroquia; see nucleos."
+  },
+  "07011": {
+   "holidays": [],
+   "nucleos": [
+    {
+     "name": "Calvià",
+     "holidays": [
+      {
+       "date": "2026-06-24",
+       "name": "San Juan"
+      },
+      {
+       "date": "2026-07-16",
+       "name": "Virgen del Carmen"
+      }
+     ]
+    },
+    {
+     "name": "es Capdellà",
+     "holidays": [
+      {
+       "date": "2026-01-20",
+       "name": "San Sebastián"
+      },
+      {
+       "date": "2026-07-16",
+       "name": "Virgen del Carmen"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution sets the days per núcleo/parroquia; see nucleos."
+  },
+  "07012": {
+   "holidays": [
+    {
+     "date": "2026-04-07",
+     "name": ""
+    },
+    {
+     "date": "2026-09-29",
+     "name": ""
+    }
+   ]
+  },
+  "07013": {
+   "holidays": [
+    {
+     "date": "2026-01-09",
+     "name": "San Julián y Santa Basilisa"
+    },
+    {
+     "date": "2026-10-22",
+     "name": "Sa Fira"
+    }
+   ]
+  },
+  "07014": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": "Virgen del Carmen"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "San Bartolomé"
+    }
+   ]
+  },
+  "07015": {
+   "holidays": [
+    {
+     "date": "2026-01-17",
+     "name": "San Antonio"
+    },
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    }
+   ]
+  },
+  "07016": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": ""
+    },
+    {
+     "date": "2026-12-07",
+     "name": ""
+    }
+   ]
+  },
+  "07017": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Fiesta de la Virgen"
+    }
+   ]
+  },
+  "07018": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    }
+   ]
+  },
+  "07019": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-08-10",
+     "name": "San Lorenzo"
+    }
+   ]
+  },
+  "07020": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": ""
+    },
+    {
+     "date": "2026-12-07",
+     "name": ""
+    }
+   ]
+  },
+  "07021": {
+   "holidays": [
+    {
+     "date": "2026-02-27",
+     "name": ""
+    },
+    {
+     "date": "2026-08-29",
+     "name": ""
+    }
+   ]
+  },
+  "07022": {
+   "holidays": [],
+   "nucleos": [
+    {
+     "name": "Felanitx",
+     "holidays": [
+      {
+       "date": "2026-07-20",
+       "name": "Santa Margarita"
+      },
+      {
+       "date": "2026-08-28",
+       "name": "San Agustín"
+      }
+     ]
+    },
+    {
+     "name": "Portocolom",
+     "holidays": [
+      {
+       "date": "2026-07-16",
+       "name": "Virgen del Carmen"
+      },
+      {
+       "date": "2026-07-25",
+       "name": "San Jaime"
+      }
+     ]
+    },
+    {
+     "name": "s'Horta",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro"
+      },
+      {
+       "date": "2026-05-25",
+       "name": "Lunes de Cinquagésima"
+      }
+     ]
+    },
+    {
+     "name": "Cas Concos",
+     "holidays": [
+      {
+       "date": "2026-01-17",
+       "name": "San Antonio"
+      },
+      {
+       "date": "2026-09-10",
+       "name": "San Nicolás"
+      }
+     ]
+    },
+    {
+     "name": "Cala Ferrera",
+     "holidays": [
+      {
+       "date": "2026-01-17",
+       "name": "San Antonio"
+      },
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution sets the days per núcleo/parroquia; see nucleos."
+  },
+  "07023": {
+   "holidays": [
+    {
+     "date": "2026-01-17",
+     "name": "San Antonio Abad y Diada del Pueblo de Menorca"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "San Bartolomé"
+    }
+   ]
+  },
+  "07024": {
+   "holidays": [
+    {
+     "date": "2026-07-25",
+     "name": "San Jaime, Diada de Formentera"
+    },
+    {
+     "date": "2026-12-03",
+     "name": "San Francisco Javier"
+    }
+   ]
+  },
+  "07025": {
+   "holidays": [
+    {
+     "date": "2026-02-27",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "07026": {
+   "holidays": [
+    {
+     "date": "2026-08-05",
+     "name": ""
+    },
+    {
+     "date": "2026-08-08",
+     "name": ""
+    }
+   ]
+  },
+  "07027": {
+   "holidays": [
+    {
+     "date": "2026-07-30",
+     "name": "San Abdon i San Senén"
+    },
+    {
+     "date": "2026-11-20",
+     "name": "Viernes después de Dijous Bo"
+    }
+   ]
+  },
+  "07028": {
+   "holidays": [
+    {
+     "date": "2026-08-07",
+     "name": "Día anterior a San Domingo"
+    },
+    {
+     "date": "2026-12-10",
+     "name": "Virgen de Loreto"
+    }
+   ]
+  },
+  "07029": {
+   "holidays": [
+    {
+     "date": "2026-04-08",
+     "name": "romería del Cocó"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "fiestas patronales"
+    }
+   ]
+  },
+  "07030": {
+   "holidays": [
+    {
+     "date": "2026-04-07",
+     "name": ""
+    },
+    {
+     "date": "2026-08-01",
+     "name": ""
+    }
+   ]
+  },
+  "07031": {
+   "holidays": [
+    {
+     "date": "2026-09-29",
+     "name": "San Miguel"
+    },
+    {
+     "date": "2026-10-19",
+     "name": ""
+    }
+   ]
+  },
+  "07032": {
+   "holidays": [
+    {
+     "date": "2026-01-17",
+     "name": "San Antonio"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Virgen de Gracia"
+    }
+   ]
+  },
+  "07033": {
+   "holidays": [],
+   "nucleos": [
+    {
+     "name": "Manacor",
+     "holidays": [
+      {
+       "date": "2026-01-17",
+       "name": "San Antonio"
+      },
+      {
+       "date": "2026-07-25",
+       "name": "San Jaime"
+      }
+     ]
+    },
+    {
+     "name": "Porto Cristo",
+     "holidays": [
+      {
+       "date": "2026-01-17",
+       "name": "San Antonio"
+      },
+      {
+       "date": "2026-07-16",
+       "name": "Fiesta del Carmen"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution sets the days per núcleo/parroquia; see nucleos."
+  },
+  "07034": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    },
+    {
+     "date": "2026-11-19",
+     "name": "Dijous Bo"
+    }
+   ]
+  },
+  "07035": {
+   "holidays": [
+    {
+     "date": "2026-09-07",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Virgen de la Salud"
+    }
+   ]
+  },
+  "07036": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": ""
+    },
+    {
+     "date": "2026-06-30",
+     "name": "San Marcial"
+    }
+   ]
+  },
+  "07037": {
+   "holidays": [],
+   "nucleos": [
+    {
+     "name": "Es Mercadal",
+     "holidays": [
+      {
+       "date": "2026-01-17",
+       "name": "San Antonio"
+      },
+      {
+       "date": "2026-11-11",
+       "name": "San Martín de invierno"
+      }
+     ]
+    },
+    {
+     "name": "Fornells",
+     "holidays": [
+      {
+       "date": "2026-01-17",
+       "name": "San Antonio"
+      },
+      {
+       "date": "2026-07-16",
+       "name": "Virgen del Carmen"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution sets the days per núcleo/parroquia; see nucleos."
+  },
+  "07038": {
+   "holidays": [
+    {
+     "date": "2026-04-07",
+     "name": "Dia des Puig – 3a Festa de Pascua"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "Sant Bartolomé"
+    }
+   ]
+  },
+  "07039": {
+   "holidays": [
+    {
+     "date": "2026-01-17",
+     "name": "San Antonio"
+    },
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    }
+   ]
+  },
+  "07040": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    }
+   ]
+  },
+  "07041": {
+   "holidays": [
+    {
+     "date": "2026-04-07",
+     "name": "Tercera fiesta de Pascua"
+    },
+    {
+     "date": "2026-07-21",
+     "name": "Santa Praxedis"
+    }
+   ]
+  },
+  "07042": {
+   "holidays": [
+    {
+     "date": "2026-01-17",
+     "name": "San Antonio"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    }
+   ]
+  },
+  "07043": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "Dia siguiente de San Roque"
+    }
+   ]
+  },
+  "07044": {
+   "holidays": [
+    {
+     "date": "2026-01-17",
+     "name": ""
+    },
+    {
+     "date": "2026-07-20",
+     "name": ""
+    }
+   ]
+  },
+  "07045": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-12-31",
+     "name": ""
+    }
+   ]
+  },
+  "07046": {
+   "holidays": [],
+   "nucleos": [
+    {
+     "name": "Parròquia de Sant Antoni",
+     "holidays": [
+      {
+       "date": "2026-01-17",
+       "name": "San Antonio Abad"
+      },
+      {
+       "date": "2026-08-24",
+       "name": "San Bartolomé"
+      }
+     ]
+    },
+    {
+     "name": "Parròquia de Santa Agnès",
+     "holidays": [
+      {
+       "date": "2026-01-17",
+       "name": "San Antonio Abad"
+      },
+      {
+       "date": "2026-01-21",
+       "name": "Santa Inés"
+      }
+     ]
+    },
+    {
+     "name": "Parròquia de Sant Mateu",
+     "holidays": [
+      {
+       "date": "2026-01-17",
+       "name": "San Antonio Abad"
+      },
+      {
+       "date": "2026-09-21",
+       "name": "San Mateo"
+      }
+     ]
+    },
+    {
+     "name": "Parròquia de Sant Rafel",
+     "holidays": [
+      {
+       "date": "2026-01-17",
+       "name": "San Antonio Abad"
+      },
+      {
+       "date": "2026-10-24",
+       "name": "San Rafael"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution sets the days per núcleo/parroquia; see nucleos."
+  },
+  "07047": {
+   "holidays": [],
+   "nucleos": [
+    {
+     "name": "Sencelles",
+     "holidays": [
+      {
+       "date": "2026-02-05",
+       "name": ""
+      },
+      {
+       "date": "2026-02-27",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Biniali",
+     "holidays": [
+      {
+       "date": "2026-02-27",
+       "name": ""
+      },
+      {
+       "date": "2026-07-10",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The resolution sets the days per núcleo/parroquia; see nucleos."
+  },
+  "07048": {
+   "holidays": [],
+   "nucleos": [
+    {
+     "name": "Parroquias de Sant Josep de sa Talaia, es Cubells y Sant Agustí des Vedrà",
+     "holidays": [
+      {
+       "date": "2026-03-19",
+       "name": "festividad de San José"
+      },
+      {
+       "date": "2026-08-05",
+       "name": "festividad de Santa María"
+      }
+     ]
+    },
+    {
+     "name": "Parroquias de Sant Jordi de ses Salines y Sant Francesc de s'Estany",
+     "holidays": [
+      {
+       "date": "2026-04-23",
+       "name": "festividad de San Jorge"
+      },
+      {
+       "date": "2026-08-05",
+       "name": "festividad de Santa María"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution sets the days per núcleo/parroquia; see nucleos."
+  },
+  "07049": {
+   "holidays": [
+    {
+     "date": "2026-04-07",
+     "name": "Martes de Pascua"
+    },
+    {
+     "date": "2026-06-24",
+     "name": "San Juan Bautista"
+    }
+   ]
+  },
+  "07050": {
+   "holidays": [],
+   "nucleos": [
+    {
+     "name": "Sant Joan de Labritja",
+     "holidays": [
+      {
+       "date": "2026-06-24",
+       "name": "San Juan Bautista"
+      },
+      {
+       "date": "2026-08-05",
+       "name": "Nuestra Señora de las Nieves"
+      }
+     ]
+    },
+    {
+     "name": "Sant Vicent de sa Cala",
+     "holidays": [
+      {
+       "date": "2026-06-24",
+       "name": "San Juan Bautista"
+      },
+      {
+       "date": "2026-08-05",
+       "name": "Nuestra Señora de las Nieves"
+      }
+     ]
+    },
+    {
+     "name": "Sant Llorenç de Balafia",
+     "holidays": [
+      {
+       "date": "2026-08-05",
+       "name": "Nuestra Señora de las Nieves"
+      },
+      {
+       "date": "2026-08-10",
+       "name": "San Lorenzo"
+      }
+     ]
+    },
+    {
+     "name": "Sant Miquel de Balansat",
+     "holidays": [
+      {
+       "date": "2026-08-05",
+       "name": "festividad de Santa María"
+      },
+      {
+       "date": "2026-09-29",
+       "name": "San Miguel Arcángel"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution sets the days per núcleo/parroquia; see nucleos."
+  },
+  "07051": {
+   "holidays": [],
+   "nucleos": [
+    {
+     "name": "Sant Llorenç des Cardassar",
+     "holidays": [
+      {
+       "date": "2026-08-10",
+       "name": "San Lorenzo"
+      },
+      {
+       "date": "2026-09-08",
+       "name": "Natividad de la Virgen"
+      }
+     ]
+    },
+    {
+     "name": "Son Carrió",
+     "holidays": [
+      {
+       "date": "2026-05-08",
+       "name": "San Miguel"
+      },
+      {
+       "date": "2026-09-29",
+       "name": "San Miquelet"
+      }
+     ]
+    },
+    {
+     "name": "Cala Millor, sa Coma i s'Illot",
+     "holidays": [
+      {
+       "date": "2026-01-19",
+       "name": "Después fiesta San Antonio"
+      },
+      {
+       "date": "2026-09-11",
+       "name": "Antes fiesta de Santa María"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution sets the days per núcleo/parroquia; see nucleos."
+  },
+  "07052": {
+   "holidays": [
+    {
+     "date": "2026-01-17",
+     "name": "San Antonio"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Virgen de Gracia"
+    }
+   ]
+  },
+  "07053": {
+   "holidays": [
+    {
+     "date": "2026-04-20",
+     "name": "Es Firó"
+    },
+    {
+     "date": "2026-08-03",
+     "name": "Fiesta Patronal"
+    }
+   ]
+  },
+  "07054": {
+   "holidays": [],
+   "nucleos": [
+    {
+     "name": "Parròquies de Santa Eulària i Puig d'en Valls",
+     "holidays": [
+      {
+       "date": "2026-02-12",
+       "name": "festividad de Santa Eulària des Riu"
+      },
+      {
+       "date": "2026-08-05",
+       "name": "Santa María de las Nieves"
+      }
+     ]
+    },
+    {
+     "name": "Parròquia de Jesús",
+     "holidays": [
+      {
+       "date": "2026-02-12",
+       "name": "festividad de Santa Eulària des Riu"
+      },
+      {
+       "date": "2026-09-08",
+       "name": "Nuestra Señora de Jesús"
+      }
+     ]
+    },
+    {
+     "name": "Parròquia de Santa Gertrudis de Fruitera",
+     "holidays": [
+      {
+       "date": "2026-02-12",
+       "name": "festividad de Santa Eulària des Riu"
+      },
+      {
+       "date": "2026-08-05",
+       "name": "Santa María de la Nieves"
+      }
+     ]
+    },
+    {
+     "name": "Parròquia de Sant Carles de Peralta",
+     "holidays": [
+      {
+       "date": "2026-02-12",
+       "name": "festividad de Santa Eulària des Riu"
+      },
+      {
+       "date": "2026-11-04",
+       "name": "festividad de Sant Carles"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution sets the days per núcleo/parroquia; see nucleos."
+  },
+  "07055": {
+   "holidays": [],
+   "nucleos": [
+    {
+     "name": "Santa Margalida",
+     "holidays": [
+      {
+       "date": "2026-07-20",
+       "name": "Santa Margarita"
+      },
+      {
+       "date": "2026-09-07",
+       "name": "Lunes de la Beata"
+      }
+     ]
+    },
+    {
+     "name": "Can Picafort",
+     "holidays": [
+      {
+       "date": "2026-09-07",
+       "name": "Lunes de la Beata"
+      },
+      {
+       "date": "2026-12-07",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Son Serra de Marina",
+     "holidays": [
+      {
+       "date": "2026-07-20",
+       "name": "Santa Margarita"
+      },
+      {
+       "date": "2026-09-07",
+       "name": "Lunes de la Beata"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution sets the days per núcleo/parroquia; see nucleos."
+  },
+  "07056": {
+   "holidays": [
+    {
+     "date": "2026-04-27",
+     "name": "Es Firó"
+    },
+    {
+     "date": "2026-07-20",
+     "name": "Santa Margarita"
+    }
+   ]
+  },
+  "07057": {
+   "holidays": [],
+   "nucleos": [
+    {
+     "name": "Santanyi",
+     "holidays": [
+      {
+       "date": "2026-03-03",
+       "name": ""
+      },
+      {
+       "date": "2026-11-30",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "S'Alqueria Blanca",
+     "holidays": [
+      {
+       "date": "2026-03-03",
+       "name": ""
+      },
+      {
+       "date": "2026-03-19",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Porto Petro",
+     "holidays": [
+      {
+       "date": "2026-03-19",
+       "name": ""
+      },
+      {
+       "date": "2026-06-24",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Calonge",
+     "holidays": [
+      {
+       "date": "2026-03-03",
+       "name": ""
+      },
+      {
+       "date": "2026-09-29",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Cala d'Or",
+     "holidays": [
+      {
+       "date": "2026-03-03",
+       "name": ""
+      },
+      {
+       "date": "2026-06-24",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Es Llombards",
+     "holidays": [
+      {
+       "date": "2026-01-16",
+       "name": ""
+      },
+      {
+       "date": "2026-08-07",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Cala Figuera",
+     "holidays": [
+      {
+       "date": "2026-03-03",
+       "name": ""
+      },
+      {
+       "date": "2026-11-30",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The resolution sets the days per núcleo/parroquia; see nucleos."
+  },
+  "07058": {
+   "holidays": [],
+   "nucleos": [
+    {
+     "name": "Selva",
+     "holidays": [
+      {
+       "date": "2026-08-10",
+       "name": "San Lorenzo"
+      },
+      {
+       "date": "2026-11-19",
+       "name": "Dijous Bo"
+      }
+     ]
+    },
+    {
+     "name": "Caimari",
+     "holidays": [
+      {
+       "date": "2026-11-19",
+       "name": "Dijous Bo"
+      },
+      {
+       "date": "2026-11-20",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Moscari",
+     "holidays": [
+      {
+       "date": "2026-11-19",
+       "name": "Dijous Bo"
+      },
+      {
+       "date": "2026-11-20",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Biniamar",
+     "holidays": [
+      {
+       "date": "2026-09-23",
+       "name": "Santa Tecla"
+      },
+      {
+       "date": "2026-11-19",
+       "name": "Dijous Bo"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution sets the days per núcleo/parroquia; see nucleos."
+  },
+  "07059": {
+   "holidays": [],
+   "nucleos": [
+    {
+     "name": "ses Salines",
+     "holidays": [
+      {
+       "date": "2026-01-17",
+       "name": "San Antonio"
+      },
+      {
+       "date": "2026-08-24",
+       "name": "San Bartolomé"
+      }
+     ]
+    },
+    {
+     "name": "Colònia de Sant Jordi",
+     "holidays": [
+      {
+       "date": "2026-01-17",
+       "name": "San Antonio"
+      },
+      {
+       "date": "2026-04-23",
+       "name": "San Jorge"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution sets the days per núcleo/parroquia; see nucleos."
+  },
+  "07060": {
+   "holidays": [
+    {
+     "date": "2026-04-25",
+     "name": "San Marcos"
+    },
+    {
+     "date": "2026-08-14",
+     "name": "Virgen de la Asunción (día previo)"
+    }
+   ]
+  },
+  "07061": {
+   "holidays": [
+    {
+     "date": "2026-05-11",
+     "name": "Es Firó"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "San Bartolomé"
+    }
+   ]
+  },
+  "07062": {
+   "holidays": [
+    {
+     "date": "2026-01-17",
+     "name": ""
+    },
+    {
+     "date": "2026-06-24",
+     "name": ""
+    }
+   ]
+  },
+  "07063": {
+   "holidays": [
+    {
+     "date": "2026-07-28",
+     "name": "Santa Catalina Thomás"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "San Bartolomé"
+    }
+   ]
+  },
+  "07064": {
+   "holidays": [
+    {
+     "date": "2026-01-17",
+     "name": ""
+    },
+    {
+     "date": "2026-07-25",
+     "name": ""
+    }
+   ]
+  },
+  "07065": {
+   "holidays": [
+    {
+     "date": "2026-12-04",
+     "name": ""
+    },
+    {
+     "date": "2026-12-07",
+     "name": ""
+    }
+   ]
+  },
+  "07901": {
+   "holidays": [
+    {
+     "date": "2026-08-31",
+     "name": "Segunda Fiesta Patronal"
+    },
+    {
+     "date": "2026-12-07",
+     "name": "Puente de la Inmaculada"
+    }
+   ]
+  },
+  "07902": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Último martes de Carnaval"
+    },
+    {
+     "date": "2026-07-10",
+     "name": "San Cristóbal"
+    }
+   ]
+  }
+ }
+}

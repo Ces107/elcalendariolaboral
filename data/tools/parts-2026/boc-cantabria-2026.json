@@ -1,0 +1,1241 @@
+{
+ "source_id": "boc-cantabria-2026",
+ "source": {
+  "title": "Resolución por la que se dispone la publicación del calendario de fiestas nacionales, autonómicas y locales en el ámbito de la Comunidad Autónoma de Cantabria para el año 2026 (BOC núm. 238, 11-12-2025, CVE-2025-10276)",
+  "url": "https://boc.cantabria.es/boces/verAnuncioAction.do?idAnuBlob=428192",
+  "published": "2025-12-11"
+ },
+ "region": "cantabria",
+ "count": 102,
+ "unmatched": [],
+ "municipios": {
+  "39001": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO LABRADOR"
+    },
+    {
+     "date": "2026-07-27",
+     "name": "SANTA ANA"
+    }
+   ]
+  },
+  "39002": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": "NATIVIDAD DE NTRA SRA VIRGEN NIÑA DE AMPUERO"
+    },
+    {
+     "date": "2026-09-21",
+     "name": "SAN MATEO"
+    }
+   ]
+  },
+  "39003": {
+   "holidays": [
+    {
+     "date": "2026-07-27",
+     "name": ""
+    },
+    {
+     "date": "2026-08-05",
+     "name": "FESTIVIDAD DE LAS NIEVES"
+    }
+   ]
+  },
+  "39004": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": "LA VIRGEN DEL CARMEN"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "VIRGEN DEL CAMINO"
+    }
+   ]
+  },
+  "39005": {
+   "holidays": [
+    {
+     "date": "2026-08-03",
+     "name": "SAN ESTEBAN"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "SAN ROQUIN"
+    }
+   ]
+  },
+  "39006": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "LUNES DE PASCUA"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "SAN ROQUIN"
+    }
+   ]
+  },
+  "39007": {
+   "holidays": [
+    {
+     "date": "2026-06-01",
+     "name": "SAN IÑIGO"
+    },
+    {
+     "date": "2026-06-26",
+     "name": "SAN PELAYO"
+    }
+   ]
+  },
+  "39008": {
+   "holidays": [
+    {
+     "date": "2026-03-19",
+     "name": "SAN JOSE"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "SAN PEDRO"
+    }
+   ]
+  },
+  "39009": {
+   "holidays": [
+    {
+     "date": "2026-06-26",
+     "name": "SAN PELAYO"
+    },
+    {
+     "date": "2026-08-03",
+     "name": "SAN ESTEBAN"
+    }
+   ]
+  },
+  "39010": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "SAN PEDRO"
+    },
+    {
+     "date": "2026-08-10",
+     "name": "SAN LORENZO"
+    }
+   ]
+  },
+  "39011": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": "NITRA SRA. DEL CARMEN"
+    },
+    {
+     "date": "2026-09-04",
+     "name": "SAN PEDRUCO"
+    }
+   ]
+  },
+  "39012": {
+   "holidays": [
+    {
+     "date": "2026-08-13",
+     "name": "NTRASRA. LA VIRGEN DEL CAMPO"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "SAN MARTIN"
+    }
+   ]
+  },
+  "39013": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-11-02",
+     "name": ""
+    }
+   ]
+  },
+  "39014": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": "NTRA SRA DEL CARMEN"
+    },
+    {
+     "date": "2026-10-22",
+     "name": "FERIA DEL VALLE"
+    }
+   ]
+  },
+  "39015": {
+   "holidays": [
+    {
+     "date": "2026-07-02",
+     "name": "LA VIRGEN DE LA SALUD"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "LA FIESTA DE LA CRUZ"
+    }
+   ]
+  },
+  "39016": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "SAN JUAN"
+    },
+    {
+     "date": "2026-07-16",
+     "name": "VIRGEN DEL CARMEN"
+    }
+   ]
+  },
+  "39017": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "SAN PEDRO"
+    },
+    {
+     "date": "2026-08-05",
+     "name": "FESTIVIDAD DE LAS NIEVES"
+    }
+   ]
+  },
+  "39018": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-09-16",
+     "name": "SAN CIPRIANO"
+    }
+   ]
+  },
+  "39019": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": ""
+    },
+    {
+     "date": "2026-07-16",
+     "name": ""
+    }
+   ]
+  },
+  "39020": {
+   "holidays": [
+    {
+     "date": "2026-06-26",
+     "name": "SAN PELAYO"
+    },
+    {
+     "date": "2026-11-30",
+     "name": "SAN ANDRES"
+    }
+   ]
+  },
+  "39021": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "LUNES DE PASCUA"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "SAN PEDRO"
+    }
+   ]
+  },
+  "39022": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-11-02",
+     "name": "LA SANTUCA"
+    }
+   ]
+  },
+  "39023": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "SAN JUAN"
+    },
+    {
+     "date": "2026-08-25",
+     "name": "SAN GINES"
+    }
+   ]
+  },
+  "39024": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": ""
+    },
+    {
+     "date": "2026-07-16",
+     "name": ""
+    }
+   ]
+  },
+  "39025": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "SAN JUAN"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "SAN ROQUE (SOMAHOZ)"
+    }
+   ]
+  },
+  "39026": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "SAN PEDRO"
+    },
+    {
+     "date": "2026-07-27",
+     "name": "SAN PANTALEON"
+    }
+   ]
+  },
+  "39027": {
+   "holidays": [
+    {
+     "date": "2026-09-21",
+     "name": ""
+    },
+    {
+     "date": "2026-09-29",
+     "name": ""
+    }
+   ]
+  },
+  "39028": {
+   "holidays": [
+    {
+     "date": "2026-09-01",
+     "name": "SAN VICENTE"
+    },
+    {
+     "date": "2026-10-19",
+     "name": "SAN LUCAS"
+    }
+   ]
+  },
+  "39029": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": "SAN BARTOLOMÉ"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "EXALTACIÓN DE LA SANTA CRUZ"
+    }
+   ]
+  },
+  "39030": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO LABRADOR"
+    },
+    {
+     "date": "2026-08-05",
+     "name": "NTRA. SRA. DE LAS NIEVES"
+    }
+   ]
+  },
+  "39031": {
+   "holidays": [
+    {
+     "date": "2026-09-16",
+     "name": "SAN CIPRIANO"
+    },
+    {
+     "date": "2026-09-21",
+     "name": "SAN MATEO"
+    }
+   ]
+  },
+  "39032": {
+   "holidays": [
+    {
+     "date": "2026-08-05",
+     "name": "Nª SRA. DEL LABRA"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "SAN ROQUE"
+    }
+   ]
+  },
+  "39033": {
+   "holidays": [
+    {
+     "date": "2026-08-10",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "39034": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": "SAN BARTOLO"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "SAN MIGUEL"
+    }
+   ]
+  },
+  "39035": {
+   "holidays": [
+    {
+     "date": "2026-08-28",
+     "name": "BATALLA DE FLORES"
+    },
+    {
+     "date": "2026-09-18",
+     "name": "EL ÚLTIMO DESEMBARCO DE CARLOS V"
+    }
+   ]
+  },
+  "39036": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO LABRADOR"
+    },
+    {
+     "date": "2026-08-14",
+     "name": "SATURNINO CANDINA"
+    }
+   ]
+  },
+  "39037": {
+   "holidays": [
+    {
+     "date": "2026-07-27",
+     "name": "SAN PANTALEON"
+    },
+    {
+     "date": "2026-08-10",
+     "name": "SAN LORENZO"
+    }
+   ]
+  },
+  "39038": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO LABRADOR"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "SAN PEDRO"
+    }
+   ]
+  },
+  "39039": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": "LOS REMEDIOS"
+    },
+    {
+     "date": "2026-11-30",
+     "name": "SAN ANDRES"
+    }
+   ]
+  },
+  "39040": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO LABRADOR"
+    },
+    {
+     "date": "2026-10-05",
+     "name": "NTRA SRA DEL ROSARIO"
+    }
+   ]
+  },
+  "39041": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRIO"
+    },
+    {
+     "date": "2026-07-27",
+     "name": "SAN PANTALEON"
+    }
+   ]
+  },
+  "39042": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "SAN PEDRO"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "SAN ROQUE"
+    }
+   ]
+  },
+  "39043": {
+   "holidays": [
+    {
+     "date": "2026-08-07",
+     "name": "SAN MAMES"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "SAN MIGUEL"
+    }
+   ]
+  },
+  "39044": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": "VIRGEN DEL MONTE"
+    },
+    {
+     "date": "2026-09-10",
+     "name": "SAN NICOLAS"
+    }
+   ]
+  },
+  "39045": {
+   "holidays": [
+    {
+     "date": "2026-09-21",
+     "name": "SAN MATEO"
+    },
+    {
+     "date": "2026-11-18",
+     "name": "SAN ROMÁN"
+    }
+   ]
+  },
+  "39046": {
+   "holidays": [
+    {
+     "date": "2026-08-06",
+     "name": "SAN JUSTO Y PASTOR"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "VIRGEN DEL CAMINO"
+    }
+   ]
+  },
+  "39047": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "SAN PEDRO"
+    },
+    {
+     "date": "2026-08-31",
+     "name": "SANTOS MÁRTIRES SAN EMETERIO Y SAN CELEDONIO"
+    }
+   ]
+  },
+  "39048": {
+   "holidays": [
+    {
+     "date": "2026-04-23",
+     "name": ""
+    },
+    {
+     "date": "2026-06-29",
+     "name": ""
+    }
+   ]
+  },
+  "39049": {
+   "holidays": [
+    {
+     "date": "2026-08-14",
+     "name": ""
+    },
+    {
+     "date": "2026-11-02",
+     "name": ""
+    }
+   ]
+  },
+  "39050": {
+   "holidays": [
+    {
+     "date": "2026-11-02",
+     "name": ""
+    },
+    {
+     "date": "2026-12-24",
+     "name": ""
+    }
+   ]
+  },
+  "39051": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-09-29",
+     "name": "SAN MIGUEL"
+    }
+   ]
+  },
+  "39052": {
+   "holidays": [
+    {
+     "date": "2026-06-13",
+     "name": "SAN ANTONIO"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "VIRGEN DE VALENCIA"
+    }
+   ],
+   "note": "13/6 falls on a Saturday; recorded as published."
+  },
+  "39053": {
+   "holidays": [
+    {
+     "date": "2026-08-07",
+     "name": "SAN MAMES Y SAN CAYETANO"
+    },
+    {
+     "date": "2026-09-02",
+     "name": "SAN ANTOLIN"
+    }
+   ]
+  },
+  "39054": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "SAN PEDRO"
+    },
+    {
+     "date": "2026-08-01",
+     "name": "SAN PEDRO ADVINCULA"
+    }
+   ],
+   "note": "1/8 falls on a Saturday; recorded as published."
+  },
+  "39055": {
+   "holidays": [
+    {
+     "date": "2026-01-22",
+     "name": "SAN VICENTE MÁRTIR"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "LA SANTA CRUZ"
+    }
+   ]
+  },
+  "39056": {
+   "holidays": [
+    {
+     "date": "2026-05-22",
+     "name": "LA VIRGEN DE GRACIA"
+    },
+    {
+     "date": "2026-12-04",
+     "name": "SANTA BÁRBARA"
+    }
+   ]
+  },
+  "39057": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "SAN PEDRO"
+    },
+    {
+     "date": "2026-06-30",
+     "name": "SAN VALENTIN"
+    }
+   ]
+  },
+  "39058": {
+   "holidays": [
+    {
+     "date": "2026-08-03",
+     "name": "SAN ESTEBAN"
+    },
+    {
+     "date": "2026-11-30",
+     "name": "SAN ANDRES"
+    }
+   ]
+  },
+  "39059": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "SAN SEBASTIAN"
+    },
+    {
+     "date": "2026-09-21",
+     "name": "SAN MATEO"
+    }
+   ]
+  },
+  "39060": {
+   "holidays": [
+    {
+     "date": "2026-09-16",
+     "name": "SAN CIPRIANO"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "SAN MIGUEL ARCÁNGEL"
+    }
+   ]
+  },
+  "39061": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO LABRADOR"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "NTRA SRA DE LATAS"
+    }
+   ]
+  },
+  "39062": {
+   "holidays": [
+    {
+     "date": "2026-07-17",
+     "name": ""
+    },
+    {
+     "date": "2026-08-03",
+     "name": ""
+    }
+   ]
+  },
+  "39063": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "SAN PEDRO"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "SAN MIGUEL"
+    }
+   ]
+  },
+  "39064": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "SAN JUAN BAUTISTA"
+    },
+    {
+     "date": "2026-07-22",
+     "name": "SANTA MARIA MAGDALENA"
+    }
+   ]
+  },
+  "39065": {
+   "holidays": [
+    {
+     "date": "2026-01-02",
+     "name": ""
+    },
+    {
+     "date": "2026-04-06",
+     "name": "LUNES DE PASCUA"
+    }
+   ]
+  },
+  "39066": {
+   "holidays": [
+    {
+     "date": "2026-07-22",
+     "name": "LA MAGDALENA"
+    },
+    {
+     "date": "2026-08-21",
+     "name": "SAN SEBASTIAN (BARCENILLAS)"
+    }
+   ]
+  },
+  "39067": {
+   "holidays": [
+    {
+     "date": "2026-07-27",
+     "name": "SAN VALENTIN"
+    },
+    {
+     "date": "2026-09-03",
+     "name": "EL MILAGRO"
+    }
+   ]
+  },
+  "39068": {
+   "holidays": [
+    {
+     "date": "2026-07-02",
+     "name": "EL REMEDIO"
+    },
+    {
+     "date": "2026-09-09",
+     "name": "EL MOZUCU"
+    }
+   ]
+  },
+  "39069": {
+   "holidays": [
+    {
+     "date": "2026-05-29",
+     "name": "SAN FELIX"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "SAN PEDRO Y SAN PABLO"
+    }
+   ]
+  },
+  "39070": {
+   "holidays": [
+    {
+     "date": "2026-06-12",
+     "name": "OCTAVA DEL CORPUS CHRISTI"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "SAN MIGUEL"
+    }
+   ]
+  },
+  "39071": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": ""
+    },
+    {
+     "date": "2026-08-31",
+     "name": ""
+    }
+   ]
+  },
+  "39072": {
+   "holidays": [
+    {
+     "date": "2026-04-07",
+     "name": "LOS DOLORES"
+    },
+    {
+     "date": "2026-05-14",
+     "name": "LA ASCENSION"
+    }
+   ]
+  },
+  "39073": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": "SANTA CRUZ"
+    },
+    {
+     "date": "2026-09-11",
+     "name": "SAN JUDAS TADEO"
+    }
+   ]
+  },
+  "39074": {
+   "holidays": [
+    {
+     "date": "2026-08-03",
+     "name": "SAN ESTEBAN"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "SAN BARTOLOME"
+    }
+   ]
+  },
+  "39075": {
+   "holidays": [
+    {
+     "date": "2026-05-25",
+     "name": "VIRGEN DEL MAR"
+    },
+    {
+     "date": "2026-07-25",
+     "name": "APOSTOL SANTIAGO"
+    }
+   ],
+   "note": "25/7 falls on a Saturday; recorded as published."
+  },
+  "39076": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": ""
+    },
+    {
+     "date": "2026-09-16",
+     "name": ""
+    }
+   ]
+  },
+  "39077": {
+   "holidays": [
+    {
+     "date": "2026-04-23",
+     "name": "SAN JORGE"
+    },
+    {
+     "date": "2026-08-31",
+     "name": ""
+    }
+   ]
+  },
+  "39078": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-08-05",
+     "name": "VIRGEN DEL SOTO"
+    }
+   ]
+  },
+  "39079": {
+   "holidays": [
+    {
+     "date": "2026-02-13",
+     "name": "VIERNES DE CARNAVAL"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "NTRA. SRA. DE LA VIRGEN DEL PUERTO"
+    }
+   ]
+  },
+  "39080": {
+   "holidays": [
+    {
+     "date": "2026-01-22",
+     "name": "SAN VICENTE MÁRTIR"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "LA BARQUERA"
+    }
+   ]
+  },
+  "39081": {
+   "holidays": [
+    {
+     "date": "2026-02-02",
+     "name": "LAS CANDELAS"
+    },
+    {
+     "date": "2026-08-10",
+     "name": "SAN LORENZO"
+    }
+   ]
+  },
+  "39082": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "SAN JUAN"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "SAN BARTOLO"
+    }
+   ]
+  },
+  "39083": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "NTRA SRA DE IRIAS"
+    }
+   ]
+  },
+  "39084": {
+   "holidays": [
+    {
+     "date": "2026-08-26",
+     "name": "FESTIVIDAD DEL CRISTO BALAGUER"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "NTRA SRA DEL MILAGRO DE FRESNEDO"
+    }
+   ]
+  },
+  "39085": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-07-16",
+     "name": "EL CARMEN"
+    }
+   ]
+  },
+  "39086": {
+   "holidays": [
+    {
+     "date": "2026-08-21",
+     "name": "NTRA SRA DE FÁTIMA"
+    },
+    {
+     "date": "2026-10-05",
+     "name": "FERIA COVALDRIZ"
+    }
+   ]
+  },
+  "39087": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": "SAN ROQUE"
+    },
+    {
+     "date": "2026-09-16",
+     "name": "SAN CIRPIANO"
+    }
+   ]
+  },
+  "39088": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "SAN PEDRO"
+    },
+    {
+     "date": "2026-11-30",
+     "name": "SAN ANDRES"
+    }
+   ]
+  },
+  "39089": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "SAN BLAS"
+    },
+    {
+     "date": "2026-08-05",
+     "name": "NTRA SRA DE LAS NIEVES"
+    }
+   ]
+  },
+  "39090": {
+   "holidays": [
+    {
+     "date": "2026-08-03",
+     "name": "SAN ESTEBAN"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "SAN BARTOLOME"
+    }
+   ]
+  },
+  "39091": {
+   "holidays": [
+    {
+     "date": "2026-01-07",
+     "name": "SAN JULIAN"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "SAN MARTÍN"
+    }
+   ]
+  },
+  "39092": {
+   "holidays": [
+    {
+     "date": "2026-02-12",
+     "name": "SANTA EULALIA"
+    },
+    {
+     "date": "2026-07-16",
+     "name": "EL CARMEN"
+    }
+   ]
+  },
+  "39093": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-09-21",
+     "name": "SAN MATEO"
+    }
+   ]
+  },
+  "39094": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "LA VELILLA"
+    }
+   ]
+  },
+  "39095": {
+   "holidays": [
+    {
+     "date": "2026-08-01",
+     "name": "SAN PEDRUCU"
+    },
+    {
+     "date": "2026-08-31",
+     "name": "SANTOS MARTIRES"
+    }
+   ],
+   "note": "1/8 falls on a Saturday; recorded as published."
+  },
+  "39096": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "LUNES DE PASCUA"
+    },
+    {
+     "date": "2026-11-02",
+     "name": "FERIA DE LOS SANTOS"
+    }
+   ]
+  },
+  "39097": {
+   "holidays": [
+    {
+     "date": "2026-05-14",
+     "name": "LA ASCENSIÓN"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "NTRA SRA DE LA VEGA"
+    }
+   ]
+  },
+  "39098": {
+   "holidays": [
+    {
+     "date": "2026-06-05",
+     "name": "CORPUS CHRISTI"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "SAN PEDRO"
+    }
+   ]
+  },
+  "39099": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": "VIRGEN DEL CARMEN"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "NTRA SRA DE SOCABARGA"
+    }
+   ]
+  },
+  "39100": {
+   "holidays": [
+    {
+     "date": "2026-06-12",
+     "name": "SAN ANTONIO"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "SAN ROQUE"
+    }
+   ]
+  },
+  "39101": {
+   "holidays": [
+    {
+     "date": "2026-06-30",
+     "name": "SAN PABLO"
+    },
+    {
+     "date": "2026-09-18",
+     "name": "VIRGEN DEL SUCESO"
+    }
+   ]
+  },
+  "39102": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-09-24",
+     "name": "LA MERCED"
+    }
+   ]
+  }
+ }
+}

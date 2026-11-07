@@ -1,0 +1,6566 @@
+{
+ "source_id": "dogv-2026",
+ "source": {
+  "title": "Resolución de 12 de noviembre de 2025, por la que se aprueba el calendario de fiestas locales, retribuidas y no recuperables, en el ámbito de la Comunitat Valenciana para el año 2026 (DOGV núm. 10238, de 14-11-2025), modificada por las Resoluciones de 13-1-2026 (DOGV núm. 10281, de 15-1-2026) y de 27-2-2026 (DOGV núm. 10314, de 3-3-2026)",
+  "url": "https://dogv.gva.es/datos/2025/11/14/pdf/2025_46326_es.pdf",
+  "published": "2025-11-14",
+  "modifications": [
+   "https://dogv.gva.es/datos/2026/01/15/pdf/2026_1043_es.pdf",
+   "https://dogv.gva.es/datos/2026/03/03/pdf/2026_6733_es.pdf"
+  ]
+ },
+ "region": "comunitat-valenciana",
+ "count": 539,
+ "unmatched": [
+  "12097 SACAÑET: no dates in the resolution (SIN DETERMINAR)",
+  "12132 VILANOVA D’ALCOLEA: no dates in the resolution (SIN DETERMINAR)",
+  "46186 PAIPORTA: no dates in the resolution (SIN DETERMINAR)",
+  "not listed: 12097 Sacañet",
+  "not listed: 12132 Vilanova d'Alcolea",
+  "not listed: 46186 Paiporta"
+ ],
+ "municipios": {
+  "03001": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-09-04",
+     "name": "Cristo del Milagro"
+    }
+   ]
+  },
+  "03002": {
+   "holidays": [
+    {
+     "date": "2026-03-11",
+     "name": "Día de la Vella"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "Festividad de San Pedro Apóstol, Patrón de Agost"
+    }
+   ]
+  },
+  "03003": {
+   "holidays": [
+    {
+     "date": "2026-02-16",
+     "name": ""
+    },
+    {
+     "date": "2026-09-07",
+     "name": ""
+    }
+   ]
+  },
+  "03004": {
+   "holidays": [
+    {
+     "date": "2026-08-27",
+     "name": ""
+    },
+    {
+     "date": "2026-08-28",
+     "name": ""
+    }
+   ]
+  },
+  "03005": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "día de San Vicente"
+    },
+    {
+     "date": "2026-07-25",
+     "name": "día de Santiago Apóstol"
+    }
+   ]
+  },
+  "03006": {
+   "holidays": [
+    {
+     "date": "2026-06-25",
+     "name": ""
+    },
+    {
+     "date": "2026-06-26",
+     "name": ""
+    }
+   ]
+  },
+  "03007": {
+   "holidays": [
+    {
+     "date": "2026-03-20",
+     "name": ""
+    },
+    {
+     "date": "2026-12-07",
+     "name": ""
+    }
+   ]
+  },
+  "03008": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-21",
+     "name": "fiestas patronales"
+    }
+   ]
+  },
+  "03009": {
+   "holidays": [
+    {
+     "date": "2026-04-25",
+     "name": ""
+    },
+    {
+     "date": "2026-04-27",
+     "name": ""
+    }
+   ]
+  },
+  "03010": {
+   "holidays": [
+    {
+     "date": "2026-08-06",
+     "name": ""
+    },
+    {
+     "date": "2026-12-07",
+     "name": ""
+    }
+   ]
+  },
+  "03011": {
+   "holidays": [
+    {
+     "date": "2026-11-09",
+     "name": ""
+    },
+    {
+     "date": "2026-11-10",
+     "name": ""
+    }
+   ]
+  },
+  "03012": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-07-16",
+     "name": "Virgen del Carmen"
+    }
+   ]
+  },
+  "03013": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "2º lunes de pascua"
+    },
+    {
+     "date": "2026-07-30",
+     "name": "día Patronos Algueña \"Santos Abdón y Senén\""
+    }
+   ]
+  },
+  "03014": {
+   "holidays": [
+    {
+     "date": "2026-04-16",
+     "name": "Festividad de Santa Faz"
+    },
+    {
+     "date": "2026-06-23",
+     "name": "Fogueres de Sant Joan"
+    }
+   ]
+  },
+  "03015": {
+   "holidays": [
+    {
+     "date": "2026-07-30",
+     "name": "Festividad de los Santicos de la Piedra"
+    },
+    {
+     "date": "2026-11-30",
+     "name": "Festividad de San Andrés"
+    }
+   ]
+  },
+  "03016": {
+   "holidays": [
+    {
+     "date": "2026-01-16",
+     "name": "Sant Canut"
+    },
+    {
+     "date": "2026-08-21",
+     "name": "Sant Bertomeu"
+    }
+   ]
+  },
+  "03017": {
+   "holidays": [
+    {
+     "date": "2026-09-25",
+     "name": ""
+    },
+    {
+     "date": "2026-09-28",
+     "name": "San Miguel"
+    }
+   ]
+  },
+  "03018": {
+   "holidays": [
+    {
+     "date": "2026-09-28",
+     "name": ""
+    },
+    {
+     "date": "2026-09-29",
+     "name": ""
+    }
+   ]
+  },
+  "03019": {
+   "holidays": [
+    {
+     "date": "2026-02-12",
+     "name": "Día de la Jira"
+    },
+    {
+     "date": "2026-08-05",
+     "name": "Festividad de la Virgen de las Nieves"
+    }
+   ]
+  },
+  "03020": {
+   "holidays": [
+    {
+     "date": "2026-04-02",
+     "name": ""
+    },
+    {
+     "date": "2026-04-30",
+     "name": ""
+    }
+   ]
+  },
+  "03021": {
+   "holidays": [
+    {
+     "date": "2026-04-22",
+     "name": "día de la Entrada"
+    },
+    {
+     "date": "2026-04-23",
+     "name": "día de San Jorge"
+    }
+   ]
+  },
+  "03022": {
+   "holidays": [
+    {
+     "date": "2026-04-02",
+     "name": "Jueves Santo"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente"
+    }
+   ]
+  },
+  "03023": {
+   "holidays": [
+    {
+     "date": "2026-04-02",
+     "name": "Jueves Santo"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "Festividad de San Vicente Ferrer"
+    }
+   ]
+  },
+  "03024": {
+   "holidays": [
+    {
+     "date": "2026-06-04",
+     "name": "Corpus Christi"
+    },
+    {
+     "date": "2026-10-07",
+     "name": "Virgen del Rosario"
+    }
+   ]
+  },
+  "03025": {
+   "holidays": [
+    {
+     "date": "2026-09-30",
+     "name": "San Jerónimo"
+    },
+    {
+     "date": "2026-10-07",
+     "name": "Virgen del Rosario"
+    }
+   ]
+  },
+  "03026": {
+   "holidays": [
+    {
+     "date": "2026-04-02",
+     "name": "Jueves Santo"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "segundo lunes de Pascua"
+    }
+   ]
+  },
+  "03027": {
+   "holidays": [
+    {
+     "date": "2026-08-03",
+     "name": ""
+    },
+    {
+     "date": "2026-08-04",
+     "name": "Festividad en Honor a la Virgen de los Dolores"
+    }
+   ]
+  },
+  "03028": {
+   "holidays": [
+    {
+     "date": "2026-03-20",
+     "name": ""
+    },
+    {
+     "date": "2026-12-07",
+     "name": ""
+    }
+   ]
+  },
+  "03029": {
+   "holidays": [
+    {
+     "date": "2026-03-20",
+     "name": ""
+    },
+    {
+     "date": "2026-04-02",
+     "name": ""
+    }
+   ]
+  },
+  "03030": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-07",
+     "name": "fiesta patronal \"La Purísima Concepción\""
+    }
+   ]
+  },
+  "03031": {
+   "holidays": [
+    {
+     "date": "2026-11-09",
+     "name": ""
+    },
+    {
+     "date": "2026-11-10",
+     "name": ""
+    }
+   ]
+  },
+  "03032": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "San Miguel"
+    }
+   ]
+  },
+  "03033": {
+   "holidays": [
+    {
+     "date": "2026-08-27",
+     "name": ""
+    },
+    {
+     "date": "2026-08-28",
+     "name": ""
+    }
+   ]
+  },
+  "03034": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "2º lunes de pascua"
+    },
+    {
+     "date": "2026-07-25",
+     "name": "San Jaime, fiestas patronales"
+    }
+   ]
+  },
+  "03035": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": ""
+    },
+    {
+     "date": "2026-12-07",
+     "name": ""
+    }
+   ]
+  },
+  "03036": {
+   "holidays": [
+    {
+     "date": "2026-04-24",
+     "name": ""
+    },
+    {
+     "date": "2026-12-04",
+     "name": ""
+    }
+   ]
+  },
+  "03037": {
+   "holidays": [
+    {
+     "date": "2026-08-07",
+     "name": "Fiestas en honor a Sant LLorenç"
+    },
+    {
+     "date": "2026-10-16",
+     "name": "Fiestas en honor al Santísimo Sacramento"
+    }
+   ]
+  },
+  "03038": {
+   "holidays": [
+    {
+     "date": "2026-03-20",
+     "name": "Festividad puente San José"
+    },
+    {
+     "date": "2026-12-07",
+     "name": "Festividad puente de la Constitución"
+    }
+   ]
+  },
+  "03039": {
+   "holidays": [
+    {
+     "date": "2026-04-27",
+     "name": ""
+    },
+    {
+     "date": "2026-12-07",
+     "name": ""
+    }
+   ]
+  },
+  "03040": {
+   "holidays": [
+    {
+     "date": "2026-08-20",
+     "name": "Festividad Virgen María Inmaculada"
+    },
+    {
+     "date": "2026-08-21",
+     "name": "Festividad Santísimo Ecce-Homo"
+    }
+   ]
+  },
+  "03041": {
+   "holidays": [
+    {
+     "date": "2026-04-27",
+     "name": "Día del Riberer"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "Moros y Cristianos"
+    }
+   ]
+  },
+  "03042": {
+   "holidays": [
+    {
+     "date": "2026-07-22",
+     "name": "Festividad de Sta. María Magdalena"
+    },
+    {
+     "date": "2026-07-24",
+     "name": "Festividad de San Cristóbal"
+    }
+   ]
+  },
+  "03043": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer, Anúncio Fiestas de mayo"
+    },
+    {
+     "date": "2026-07-10",
+     "name": "Festividad de San Cristóbal, Patrón de Biar"
+    }
+   ]
+  },
+  "03044": {
+   "holidays": [
+    {
+     "date": "2026-04-02",
+     "name": "Jueves Santo"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "Festividad de San Vicente Ferrer"
+    }
+   ]
+  },
+  "03045": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": "Festividad de la Virgen de los Dolores"
+    },
+    {
+     "date": "2026-08-25",
+     "name": "Festividad del Santísimo Sacramento"
+    }
+   ]
+  },
+  "03046": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-10",
+     "name": "San Lorenzo Mártir"
+    }
+   ]
+  },
+  "03047": {
+   "holidays": [
+    {
+     "date": "2026-08-05",
+     "name": "Madre de Dios de las Nieves"
+    },
+    {
+     "date": "2026-10-22",
+     "name": "Santísimo Cristo del Sudor"
+    }
+   ]
+  },
+  "03048": {
+   "holidays": [
+    {
+     "date": "2026-07-24",
+     "name": "Festividad de San Jaime"
+    },
+    {
+     "date": "2026-10-13",
+     "name": "fiestas patronales"
+    }
+   ]
+  },
+  "03049": {
+   "holidays": [
+    {
+     "date": "2026-04-02",
+     "name": "Jueves Santo"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "Festividad de San Vicente"
+    }
+   ]
+  },
+  "03050": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": "Festividad de la Virgen del Carmen"
+    },
+    {
+     "date": "2026-10-15",
+     "name": "Festividad de Santa Teresa de Jesús"
+    }
+   ]
+  },
+  "03051": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "Sant Bertomeu, patrón de la localidad"
+    }
+   ]
+  },
+  "03052": {
+   "holidays": [
+    {
+     "date": "2026-01-07",
+     "name": "Festividad de los Reyes Magos"
+    },
+    {
+     "date": "2026-07-10",
+     "name": "Festividad de San Cristóbal, Patrón de la localidad"
+    }
+   ]
+  },
+  "03053": {
+   "holidays": [
+    {
+     "date": "2026-07-25",
+     "name": "celebración Sant Jaume"
+    },
+    {
+     "date": "2026-09-02",
+     "name": "Fiestas de Moros y Cristianos"
+    }
+   ]
+  },
+  "03054": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": ""
+    },
+    {
+     "date": "2026-07-27",
+     "name": ""
+    }
+   ]
+  },
+  "03055": {
+   "holidays": [
+    {
+     "date": "2026-02-05",
+     "name": ""
+    },
+    {
+     "date": "2026-02-06",
+     "name": ""
+    }
+   ]
+  },
+  "03056": {
+   "holidays": [
+    {
+     "date": "2026-03-20",
+     "name": ""
+    },
+    {
+     "date": "2026-10-30",
+     "name": ""
+    }
+   ]
+  },
+  "03057": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": ""
+    },
+    {
+     "date": "2026-08-25",
+     "name": "respectivamente Fiestas de San José y la Virgen de los Dolores"
+    }
+   ]
+  },
+  "03058": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "Festividad de San Isidro"
+    },
+    {
+     "date": "2026-07-16",
+     "name": "Festividad de la Virgen del Carmen"
+    }
+   ]
+  },
+  "03059": {
+   "holidays": [
+    {
+     "date": "2026-04-02",
+     "name": "Jueves Santo"
+    },
+    {
+     "date": "2026-10-05",
+     "name": "Fiestas Patronales"
+    }
+   ]
+  },
+  "03060": {
+   "holidays": [
+    {
+     "date": "2026-03-20",
+     "name": ""
+    },
+    {
+     "date": "2026-10-08",
+     "name": ""
+    }
+   ]
+  },
+  "03061": {
+   "holidays": [
+    {
+     "date": "2026-09-29",
+     "name": "San Miguel"
+    },
+    {
+     "date": "2026-09-30",
+     "name": "Día de La Morera"
+    }
+   ]
+  },
+  "03062": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "día de San Vicente"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "día de la Patrona, la Virgen de Monserrate"
+    }
+   ]
+  },
+  "03063": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "Festividad de San Vicente"
+    },
+    {
+     "date": "2026-07-08",
+     "name": "Festividad de La Santísima Sangre"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "La Xara",
+     "holidays": [
+      {
+       "date": "2026-09-04",
+       "name": "fiestas patronales"
+      },
+      {
+       "date": "2026-09-21",
+       "name": "San Mateo"
+      }
+     ]
+    },
+    {
+     "name": "Jesús Pobre",
+     "holidays": [
+      {
+       "date": "2026-04-13",
+       "name": "San Vicente Ferrer"
+      },
+      {
+       "date": "2026-05-25",
+       "name": "lunes de Pentecostes"
+      }
+     ]
+    }
+   ],
+   "note": "Entidades locales menores (EATIM) of the municipality have their own days; see nucleos."
+  },
+  "03064": {
+   "holidays": [
+    {
+     "date": "2026-03-27",
+     "name": "viernes de Dolor"
+    },
+    {
+     "date": "2026-09-21",
+     "name": "Nuestra Señora de los Dolores"
+    }
+   ]
+  },
+  "03065": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "Festividad de San Vicente Ferrer"
+    },
+    {
+     "date": "2026-12-29",
+     "name": "Festividad de la Venida de la Virgen"
+    }
+   ]
+  },
+  "03066": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-09-09",
+     "name": "Fiestas Patronales"
+    }
+   ]
+  },
+  "03067": {
+   "holidays": [
+    {
+     "date": "2026-08-21",
+     "name": "Fiestas Patronales Espíritu Santo"
+    },
+    {
+     "date": "2026-10-08",
+     "name": "Puente Festividad Comunitat Valenciana"
+    }
+   ]
+  },
+  "03068": {
+   "holidays": [
+    {
+     "date": "2026-03-27",
+     "name": ""
+    },
+    {
+     "date": "2026-04-13",
+     "name": ""
+    }
+   ]
+  },
+  "03069": {
+   "holidays": [
+    {
+     "date": "2026-08-21",
+     "name": ""
+    },
+    {
+     "date": "2026-08-24",
+     "name": ""
+    }
+   ]
+  },
+  "03070": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": ""
+    },
+    {
+     "date": "2026-09-29",
+     "name": ""
+    }
+   ]
+  },
+  "03071": {
+   "holidays": [
+    {
+     "date": "2026-08-06",
+     "name": "Festividad del Santísimo Cristo"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "Festividad de San Miguel Arcángel"
+    }
+   ]
+  },
+  "03072": {
+   "holidays": [
+    {
+     "date": "2026-09-07",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "03073": {
+   "holidays": [
+    {
+     "date": "2026-08-28",
+     "name": "víspera de las fiestas patronales"
+    },
+    {
+     "date": "2026-12-28",
+     "name": "día “Dels Llauradors”"
+    }
+   ]
+  },
+  "03074": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "Festividad de San Pedro"
+    },
+    {
+     "date": "2026-10-07",
+     "name": "Festividad de la Virgen del Rosario"
+    }
+   ]
+  },
+  "03075": {
+   "holidays": [
+    {
+     "date": "2026-08-14",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "03076": {
+   "holidays": [
+    {
+     "date": "2026-07-24",
+     "name": "víspera de la Festividad de Santiago Apóstol"
+    },
+    {
+     "date": "2026-10-07",
+     "name": "Festividad de la Virgen del Rosario"
+    }
+   ]
+  },
+  "03077": {
+   "holidays": [
+    {
+     "date": "2026-02-12",
+     "name": "Festividad del último jueves"
+    },
+    {
+     "date": "2026-08-05",
+     "name": "Festividad de Nuestra Señora de las Nieves"
+    }
+   ]
+  },
+  "03078": {
+   "holidays": [
+    {
+     "date": "2026-02-12",
+     "name": "Festividad “Último jueves”"
+    },
+    {
+     "date": "2026-08-31",
+     "name": "Fiestas Patronales"
+    }
+   ]
+  },
+  "03079": {
+   "holidays": [
+    {
+     "date": "2026-09-11",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "03080": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Virgen de Belén"
+    }
+   ]
+  },
+  "03081": {
+   "holidays": [
+    {
+     "date": "2026-08-04",
+     "name": "Festividad de Santo Domingo"
+    },
+    {
+     "date": "2026-10-19",
+     "name": "Festividad de La Virgen Pobre"
+    }
+   ]
+  },
+  "03082": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "Fiesta de San Vicente"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Fiesta de Nuestra Señora de Loreto"
+    }
+   ]
+  },
+  "03083": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "Festividad de San Sebastián"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "tercer día de las Fiestas de Moros y Cristianos"
+    }
+   ]
+  },
+  "03084": {
+   "holidays": [
+    {
+     "date": "2026-07-17",
+     "name": ""
+    },
+    {
+     "date": "2026-07-20",
+     "name": ""
+    }
+   ]
+  },
+  "03085": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-08-18",
+     "name": ""
+    }
+   ]
+  },
+  "03086": {
+   "holidays": [
+    {
+     "date": "2026-07-10",
+     "name": "víspera de Fiestas Patronales"
+    },
+    {
+     "date": "2026-07-13",
+     "name": "segundo día Fiestas Patronales"
+    }
+   ]
+  },
+  "03088": {
+   "holidays": [
+    {
+     "date": "2026-12-07",
+     "name": ""
+    },
+    {
+     "date": "2026-12-09",
+     "name": ""
+    }
+   ]
+  },
+  "03089": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "lunes de San Vicente"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "celebración de las Fiestas Patronales"
+    }
+   ]
+  },
+  "03090": {
+   "holidays": [
+    {
+     "date": "2026-08-06",
+     "name": "Festividad del Salvador"
+    },
+    {
+     "date": "2026-09-09",
+     "name": "Festividad de la Mare de Déu del Loreto"
+    }
+   ]
+  },
+  "03091": {
+   "holidays": [
+    {
+     "date": "2026-03-20",
+     "name": ""
+    },
+    {
+     "date": "2026-04-13",
+     "name": ""
+    }
+   ]
+  },
+  "03092": {
+   "holidays": [
+    {
+     "date": "2026-05-11",
+     "name": ""
+    },
+    {
+     "date": "2026-05-12",
+     "name": "fiestas patronales en honor a la Virgen de los Desamparados"
+    }
+   ]
+  },
+  "03093": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "Segundo Lunes de Pascua"
+    },
+    {
+     "date": "2026-07-22",
+     "name": "Festividad de Santa María Magdalena Patrona de Novelda"
+    }
+   ]
+  },
+  "03094": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "Festividad de San Vicente del Cautivador"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "fiestas de agosto"
+    }
+   ]
+  },
+  "03095": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "Festividad de San Vicente"
+    },
+    {
+     "date": "2026-07-13",
+     "name": "Festividad de la Virgen de la Soledad"
+    }
+   ]
+  },
+  "03096": {
+   "holidays": [
+    {
+     "date": "2026-04-23",
+     "name": "día de la Virgen"
+    },
+    {
+     "date": "2026-04-30",
+     "name": "día de la entrada – Fiestas de Moros y Cristianos"
+    }
+   ]
+  },
+  "03097": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": ""
+    },
+    {
+     "date": "2026-05-11",
+     "name": ""
+    }
+   ]
+  },
+  "03098": {
+   "holidays": [
+    {
+     "date": "2026-09-18",
+     "name": ""
+    },
+    {
+     "date": "2026-09-21",
+     "name": "respectivamente fiestas patronales en honor a Santo Tomás de Villanueva y San Nazario"
+    }
+   ]
+  },
+  "03099": {
+   "holidays": [
+    {
+     "date": "2026-07-17",
+     "name": "Gloriosa Enseña del Oriol y Fiestas de la Reconquista"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Festividad de Ntra. Sra. Virgen de Monserrate Patrona de Orihuela"
+    }
+   ]
+  },
+  "03100": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2026-08-10",
+     "name": "San Lorenzo"
+    }
+   ]
+  },
+  "03101": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2026-07-15",
+     "name": "San Buenaventura"
+    }
+   ]
+  },
+  "03102": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Día de la Crosta"
+    },
+    {
+     "date": "2026-07-01",
+     "name": "Festividad del Santísimo Ecce-Homo"
+    }
+   ]
+  },
+  "03103": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": "Festividad de la Virgen del Patrocinio"
+    },
+    {
+     "date": "2026-12-07",
+     "name": ""
+    }
+   ]
+  },
+  "03104": {
+   "holidays": [
+    {
+     "date": "2026-05-18",
+     "name": "Fiestas de Moros y Cristianos"
+    },
+    {
+     "date": "2026-10-07",
+     "name": "Fiesta Patronal en honor de la Virgen del Remedio"
+    }
+   ]
+  },
+  "03105": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": ""
+    },
+    {
+     "date": "2026-08-08",
+     "name": ""
+    }
+   ]
+  },
+  "03106": {
+   "holidays": [
+    {
+     "date": "2026-10-02",
+     "name": ""
+    },
+    {
+     "date": "2026-10-05",
+     "name": "Fiestas Mayores"
+    }
+   ]
+  },
+  "03107": {
+   "holidays": [
+    {
+     "date": "2026-08-14",
+     "name": "Fiestas del Porrat"
+    },
+    {
+     "date": "2026-10-02",
+     "name": "Fiestas de San Francisco de Asís"
+    }
+   ]
+  },
+  "03109": {
+   "holidays": [
+    {
+     "date": "2026-10-07",
+     "name": ""
+    },
+    {
+     "date": "2026-10-08",
+     "name": ""
+    }
+   ]
+  },
+  "03110": {
+   "holidays": [
+    {
+     "date": "2026-08-13",
+     "name": "Inmaculada Concepción"
+    },
+    {
+     "date": "2026-08-14",
+     "name": "San Francisco de Paula"
+    }
+   ]
+  },
+  "03111": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-09-29",
+     "name": ""
+    }
+   ]
+  },
+  "03112": {
+   "holidays": [
+    {
+     "date": "2026-08-10",
+     "name": "Fiestas de San Albert"
+    },
+    {
+     "date": "2026-09-28",
+     "name": "Fiestas de Nuestra Señora del Milagro y los Santos Médicos San Cosme y San Damià"
+    }
+   ]
+  },
+  "03113": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro Apóstol"
+    },
+    {
+     "date": "2026-10-07",
+     "name": "Virgen del Rosario"
+    }
+   ]
+  },
+  "03114": {
+   "holidays": [
+    {
+     "date": "2026-03-20",
+     "name": "Festividad de San José"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "lunes de San Vicente Ferrer"
+    }
+   ]
+  },
+  "03115": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": ""
+    },
+    {
+     "date": "2026-08-07",
+     "name": ""
+    }
+   ]
+  },
+  "03116": {
+   "holidays": [
+    {
+     "date": "2026-05-25",
+     "name": ""
+    },
+    {
+     "date": "2026-05-26",
+     "name": "Fiestas de Moros y Cristianos en Honor a la Virgen del Rosario"
+    }
+   ]
+  },
+  "03117": {
+   "holidays": [
+    {
+     "date": "2026-09-03",
+     "name": ""
+    },
+    {
+     "date": "2026-09-04",
+     "name": ""
+    }
+   ]
+  },
+  "03118": {
+   "holidays": [
+    {
+     "date": "2026-01-16",
+     "name": "Fiestas en honor al Patrón San Fulgencio"
+    },
+    {
+     "date": "2026-10-08",
+     "name": "Fiestas en honor de la Virgen del Remedio"
+    }
+   ]
+  },
+  "03119": {
+   "holidays": [
+    {
+     "date": "2026-06-23",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "03120": {
+   "holidays": [
+    {
+     "date": "2026-09-28",
+     "name": ""
+    },
+    {
+     "date": "2026-09-29",
+     "name": ""
+    }
+   ]
+  },
+  "03121": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": "Virgen del Carmen"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Virgen de Loreto"
+    }
+   ]
+  },
+  "03122": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": ""
+    },
+    {
+     "date": "2026-04-14",
+     "name": "Fiestas Patronales y de Moros y Cristianos"
+    }
+   ]
+  },
+  "03123": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2026-12-26",
+     "name": "Cabildo"
+    }
+   ]
+  },
+  "03124": {
+   "holidays": [
+    {
+     "date": "2026-10-05",
+     "name": ""
+    },
+    {
+     "date": "2026-10-06",
+     "name": ""
+    }
+   ]
+  },
+  "03125": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": ""
+    },
+    {
+     "date": "2026-05-05",
+     "name": "respectivamente, Fiestas patronales en honor a la Virgen de los Desamparados de Senija"
+    }
+   ]
+  },
+  "03127": {
+   "holidays": [
+    {
+     "date": "2026-08-03",
+     "name": ""
+    },
+    {
+     "date": "2026-12-04",
+     "name": ""
+    }
+   ]
+  },
+  "03128": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-07-15",
+     "name": "Virgen de los Desamparados"
+    }
+   ]
+  },
+  "03129": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2026-07-22",
+     "name": "Día de la Santa"
+    }
+   ]
+  },
+  "03130": {
+   "holidays": [
+    {
+     "date": "2026-07-24",
+     "name": ""
+    },
+    {
+     "date": "2026-07-25",
+     "name": "fiestas patronales"
+    }
+   ]
+  },
+  "03131": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": ""
+    },
+    {
+     "date": "2026-08-28",
+     "name": ""
+    }
+   ]
+  },
+  "03132": {
+   "holidays": [
+    {
+     "date": "2026-05-08",
+     "name": "San Gregorio"
+    },
+    {
+     "date": "2026-07-27",
+     "name": "Santa Ana"
+    }
+   ]
+  },
+  "03133": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-07-16",
+     "name": "Virgen del Carmen"
+    }
+   ]
+  },
+  "03134": {
+   "holidays": [
+    {
+     "date": "2026-01-19",
+     "name": "fiesta de San Antonio"
+    },
+    {
+     "date": "2026-08-28",
+     "name": "fiesta patronal de Alcalá de la Jovada"
+    }
+   ]
+  },
+  "03135": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-10",
+     "name": "Fiestas Patronales"
+    }
+   ]
+  },
+  "03136": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-12-23",
+     "name": "Festivo de Navidad"
+    }
+   ]
+  },
+  "03137": {
+   "holidays": [
+    {
+     "date": "2026-04-02",
+     "name": "Jueves Santo"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    }
+   ]
+  },
+  "03138": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2026-08-14",
+     "name": "San Isidro"
+    }
+   ]
+  },
+  "03139": {
+   "holidays": [
+    {
+     "date": "2026-07-29",
+     "name": "Festividad de Santa Marta"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "Festividad de San Miguel"
+    }
+   ]
+  },
+  "03140": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2026-09-10",
+     "name": "día posterior a la celebración de las Fiestas Patronales"
+    }
+   ]
+  },
+  "03901": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "Festividad de San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-06",
+     "name": "Día del Salvador"
+    }
+   ]
+  },
+  "03902": {
+   "holidays": [
+    {
+     "date": "2026-07-30",
+     "name": "aniversario de la Segregación"
+    },
+    {
+     "date": "2026-10-13",
+     "name": "día posterior a la Festividad de la Virgen del Pilar"
+    }
+   ]
+  },
+  "03903": {
+   "holidays": [
+    {
+     "date": "2026-07-30",
+     "name": "fiestas Segregación del Ayuntamiento"
+    },
+    {
+     "date": "2026-10-13",
+     "name": ""
+    }
+   ]
+  },
+  "03904": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "Festividad de San Isidro Labrador"
+    },
+    {
+     "date": "2026-12-07",
+     "name": "Festividad de San Ambrosio"
+    }
+   ]
+  },
+  "12001": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": ""
+    },
+    {
+     "date": "2026-05-22",
+     "name": ""
+    }
+   ]
+  },
+  "12002": {
+   "holidays": [
+    {
+     "date": "2026-08-14",
+     "name": "El Santísimo Cristo del Calvario"
+    },
+    {
+     "date": "2026-12-04",
+     "name": "San Ambrosio"
+    }
+   ]
+  },
+  "12003": {
+   "holidays": [
+    {
+     "date": "2026-05-25",
+     "name": "Pascua de Pentecostés"
+    },
+    {
+     "date": "2026-12-07",
+     "name": "Conversión de San Pablo"
+    }
+   ]
+  },
+  "12004": {
+   "holidays": [
+    {
+     "date": "2026-04-29",
+     "name": ""
+    },
+    {
+     "date": "2026-08-29",
+     "name": ""
+    }
+   ]
+  },
+  "12005": {
+   "holidays": [
+    {
+     "date": "2026-04-07",
+     "name": "“La Doblà”"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "Festividad de San Vicente"
+    }
+   ]
+  },
+  "12006": {
+   "holidays": [
+    {
+     "date": "2026-04-29",
+     "name": "Festividad de San Pedro"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "Festividad de San Miguel"
+    }
+   ]
+  },
+  "12007": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "Festividad de San Vicente"
+    },
+    {
+     "date": "2026-11-09",
+     "name": "Festividad de San Bartolomé"
+    }
+   ]
+  },
+  "12008": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "Festividad de San Vicente"
+    },
+    {
+     "date": "2026-12-24",
+     "name": "día de Nochebuena"
+    }
+   ]
+  },
+  "12009": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": ""
+    },
+    {
+     "date": "2026-05-22",
+     "name": ""
+    }
+   ]
+  },
+  "12010": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "Festividad de San Vicente"
+    },
+    {
+     "date": "2026-08-10",
+     "name": "Fiestas Patronales"
+    }
+   ]
+  },
+  "12011": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2026-09-28",
+     "name": "lunes de feria"
+    }
+   ]
+  },
+  "12012": {
+   "holidays": [
+    {
+     "date": "2026-03-25",
+     "name": ""
+    },
+    {
+     "date": "2026-09-25",
+     "name": ""
+    }
+   ]
+  },
+  "12013": {
+   "holidays": [
+    {
+     "date": "2026-05-22",
+     "name": "Santa Quiteria"
+    },
+    {
+     "date": "2026-09-28",
+     "name": "San Roque"
+    }
+   ]
+  },
+  "12014": {
+   "holidays": [
+    {
+     "date": "2026-03-20",
+     "name": ""
+    },
+    {
+     "date": "2026-05-04",
+     "name": ""
+    }
+   ]
+  },
+  "12015": {
+   "holidays": [
+    {
+     "date": "2026-03-30",
+     "name": ""
+    },
+    {
+     "date": "2026-04-01",
+     "name": ""
+    }
+   ]
+  },
+  "12016": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "Lunes de San Vicente"
+    },
+    {
+     "date": "2026-07-24",
+     "name": "Festividad Santa Cristina"
+    }
+   ]
+  },
+  "12017": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-10-05",
+     "name": ""
+    }
+   ]
+  },
+  "12018": {
+   "holidays": [
+    {
+     "date": "2026-08-14",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "12020": {
+   "holidays": [
+    {
+     "date": "2026-01-07",
+     "name": ""
+    },
+    {
+     "date": "2026-06-29",
+     "name": ""
+    }
+   ]
+  },
+  "12021": {
+   "holidays": [
+    {
+     "date": "2026-01-17",
+     "name": "Festividad de San Antonio"
+    },
+    {
+     "date": "2026-09-21",
+     "name": "Festividad del Santísimo Cristo de la Piedad"
+    }
+   ]
+  },
+  "12022": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-09-07",
+     "name": ""
+    }
+   ]
+  },
+  "12024": {
+   "holidays": [
+    {
+     "date": "2026-08-06",
+     "name": ""
+    },
+    {
+     "date": "2026-12-07",
+     "name": ""
+    }
+   ]
+  },
+  "12025": {
+   "holidays": [
+    {
+     "date": "2026-03-09",
+     "name": "lunes de la Magdalena"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "día de la Festividad de la Virgen de Ortisella"
+    }
+   ]
+  },
+  "12026": {
+   "holidays": [
+    {
+     "date": "2026-05-25",
+     "name": "Festividad de San Cristóbal"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "Festividad de San Roque"
+    }
+   ]
+  },
+  "12027": {
+   "holidays": [
+    {
+     "date": "2026-05-09",
+     "name": "Festividad de San Gregorio"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "Festividad de San Bartolomé"
+    }
+   ]
+  },
+  "12028": {
+   "holidays": [
+    {
+     "date": "2026-01-17",
+     "name": "San Antonio Abad y Santa Águeda"
+    },
+    {
+     "date": "2026-09-22",
+     "name": "Santo Tomás de Villanueva"
+    }
+   ]
+  },
+  "12029": {
+   "holidays": [
+    {
+     "date": "2026-03-09",
+     "name": "lunes de Magdalena"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente"
+    }
+   ]
+  },
+  "12031": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "San Bartolomé"
+    }
+   ]
+  },
+  "12032": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "Festividad de San Blas"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Festividad de la Virgen de la Misericordia"
+    }
+   ]
+  },
+  "12033": {
+   "holidays": [
+    {
+     "date": "2026-05-08",
+     "name": ""
+    },
+    {
+     "date": "2026-06-29",
+     "name": ""
+    }
+   ]
+  },
+  "12034": {
+   "holidays": [
+    {
+     "date": "2026-01-05",
+     "name": ""
+    },
+    {
+     "date": "2026-04-13",
+     "name": ""
+    }
+   ]
+  },
+  "12036": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": "fiesta de la Mare de Déu"
+    },
+    {
+     "date": "2026-09-28",
+     "name": "fiesta de San Miquel"
+    }
+   ]
+  },
+  "12037": {
+   "holidays": [
+    {
+     "date": "2026-03-20",
+     "name": ""
+    },
+    {
+     "date": "2026-08-10",
+     "name": ""
+    }
+   ]
+  },
+  "12038": {
+   "holidays": [
+    {
+     "date": "2026-08-19",
+     "name": "Festividad de San Roque"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Festividad de la Virgen de la Fuente"
+    }
+   ]
+  },
+  "12039": {
+   "holidays": [
+    {
+     "date": "2026-03-20",
+     "name": ""
+    },
+    {
+     "date": "2026-12-07",
+     "name": ""
+    }
+   ]
+  },
+  "12040": {
+   "holidays": [
+    {
+     "date": "2026-03-09",
+     "name": "lunes de la Magdalena"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "Festividad de San Pedro"
+    }
+   ]
+  },
+  "12041": {
+   "holidays": [
+    {
+     "date": "2026-09-21",
+     "name": ""
+    },
+    {
+     "date": "2026-09-22",
+     "name": ""
+    }
+   ]
+  },
+  "12042": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": "Romería de Catí"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "Sant Martí"
+    }
+   ]
+  },
+  "12043": {
+   "holidays": [
+    {
+     "date": "2026-09-14",
+     "name": "segundo día de la Festividad de la Virgen del Niño Perdido"
+    },
+    {
+     "date": "2026-10-21",
+     "name": "Festividad de Santa Úrsula"
+    }
+   ]
+  },
+  "12044": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "12045": {
+   "holidays": [
+    {
+     "date": "2026-01-30",
+     "name": ""
+    },
+    {
+     "date": "2026-08-31",
+     "name": ""
+    }
+   ]
+  },
+  "12046": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": "Virgen de los Desamparados"
+    },
+    {
+     "date": "2026-08-21",
+     "name": "Festividad de San Bernardo"
+    }
+   ]
+  },
+  "12048": {
+   "holidays": [
+    {
+     "date": "2026-01-16",
+     "name": ""
+    },
+    {
+     "date": "2026-04-13",
+     "name": ""
+    }
+   ]
+  },
+  "12049": {
+   "holidays": [
+    {
+     "date": "2026-04-29",
+     "name": ""
+    },
+    {
+     "date": "2026-04-30",
+     "name": ""
+    }
+   ]
+  },
+  "12050": {
+   "holidays": [
+    {
+     "date": "2026-04-02",
+     "name": ""
+    },
+    {
+     "date": "2026-12-07",
+     "name": ""
+    }
+   ]
+  },
+  "12051": {
+   "holidays": [
+    {
+     "date": "2026-05-25",
+     "name": "Festividad de San Cristóbal"
+    },
+    {
+     "date": "2026-06-05",
+     "name": "Rogativa a San Juan de Peñagolosa"
+    }
+   ]
+  },
+  "12052": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2026-12-07",
+     "name": "puente de la Constitución"
+    }
+   ]
+  },
+  "12053": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-09-21",
+     "name": "Día de Almas"
+    }
+   ]
+  },
+  "12055": {
+   "holidays": [
+    {
+     "date": "2026-04-02",
+     "name": ""
+    },
+    {
+     "date": "2026-08-10",
+     "name": ""
+    }
+   ]
+  },
+  "12056": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": "Fiestas patronales"
+    },
+    {
+     "date": "2026-05-05",
+     "name": "Fiestas patronales"
+    }
+   ]
+  },
+  "12057": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-26",
+     "name": "Santísimo Cristo del Calvario"
+    }
+   ]
+  },
+  "12058": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-08-19",
+     "name": ""
+    }
+   ]
+  },
+  "12059": {
+   "holidays": [
+    {
+     "date": "2026-03-09",
+     "name": ""
+    },
+    {
+     "date": "2026-10-13",
+     "name": ""
+    }
+   ]
+  },
+  "12060": {
+   "holidays": [
+    {
+     "date": "2026-05-25",
+     "name": "Festividad del Santísimo Cristo del Calvario"
+    },
+    {
+     "date": "2026-09-21",
+     "name": "Festividad de San Mateo"
+    }
+   ]
+  },
+  "12061": {
+   "holidays": [
+    {
+     "date": "2026-01-19",
+     "name": ""
+    },
+    {
+     "date": "2026-08-24",
+     "name": ""
+    }
+   ]
+  },
+  "12063": {
+   "holidays": [
+    {
+     "date": "2026-08-02",
+     "name": "Festividad de Ntra. Sra. de los Ángeles"
+    },
+    {
+     "date": "2026-08-16",
+     "name": "Asunción de la Virgen"
+    }
+   ]
+  },
+  "12064": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "12065": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2026-09-07",
+     "name": "El Cristo de la Sed"
+    }
+   ]
+  },
+  "12067": {
+   "holidays": [
+    {
+     "date": "2026-09-02",
+     "name": ""
+    },
+    {
+     "date": "2026-09-03",
+     "name": ""
+    }
+   ]
+  },
+  "12068": {
+   "holidays": [
+    {
+     "date": "2026-01-23",
+     "name": "Festividad de San Antonio"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "Festividad de San Bartolomé"
+    }
+   ]
+  },
+  "12069": {
+   "holidays": [
+    {
+     "date": "2026-01-02",
+     "name": ""
+    },
+    {
+     "date": "2026-12-07",
+     "name": ""
+    }
+   ]
+  },
+  "12070": {
+   "holidays": [
+    {
+     "date": "2026-02-16",
+     "name": ""
+    },
+    {
+     "date": "2026-10-26",
+     "name": ""
+    }
+   ]
+  },
+  "12071": {
+   "holidays": [
+    {
+     "date": "2026-02-05",
+     "name": "Festividad de Santa Águeda"
+    },
+    {
+     "date": "2026-07-08",
+     "name": "Festividad del Cristo de la Sangre"
+    }
+   ]
+  },
+  "12072": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "San Miguel"
+    }
+   ]
+  },
+  "12073": {
+   "holidays": [
+    {
+     "date": "2026-08-14",
+     "name": ""
+    },
+    {
+     "date": "2026-10-13",
+     "name": ""
+    }
+   ]
+  },
+  "12074": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": ""
+    },
+    {
+     "date": "2026-09-07",
+     "name": ""
+    }
+   ]
+  },
+  "12075": {
+   "holidays": [
+    {
+     "date": "2026-01-23",
+     "name": "San Antonio Abad"
+    },
+    {
+     "date": "2026-01-26",
+     "name": "San Antonio Abad"
+    }
+   ]
+  },
+  "12076": {
+   "holidays": [
+    {
+     "date": "2026-01-19",
+     "name": "Festividad de San Antonio Abad"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "Festividad de San Vicente"
+    }
+   ]
+  },
+  "12077": {
+   "holidays": [
+    {
+     "date": "2026-07-22",
+     "name": ""
+    },
+    {
+     "date": "2026-07-23",
+     "name": ""
+    }
+   ]
+  },
+  "12078": {
+   "holidays": [
+    {
+     "date": "2026-03-27",
+     "name": "Festividad de la Virgen de los Dolores"
+    },
+    {
+     "date": "2026-08-20",
+     "name": "Festividad de San Bernardo Abad"
+    }
+   ]
+  },
+  "12079": {
+   "holidays": [
+    {
+     "date": "2026-07-24",
+     "name": ""
+    },
+    {
+     "date": "2026-09-07",
+     "name": ""
+    }
+   ]
+  },
+  "12080": {
+   "holidays": [
+    {
+     "date": "2026-01-07",
+     "name": ""
+    },
+    {
+     "date": "2026-03-20",
+     "name": ""
+    }
+   ]
+  },
+  "12081": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": ""
+    },
+    {
+     "date": "2026-12-07",
+     "name": ""
+    }
+   ]
+  },
+  "12082": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "San Bartolomé"
+    }
+   ]
+  },
+  "12083": {
+   "holidays": [
+    {
+     "date": "2026-01-05",
+     "name": ""
+    },
+    {
+     "date": "2026-12-07",
+     "name": ""
+    }
+   ]
+  },
+  "12084": {
+   "holidays": [
+    {
+     "date": "2026-08-06",
+     "name": ""
+    },
+    {
+     "date": "2026-10-19",
+     "name": ""
+    }
+   ]
+  },
+  "12085": {
+   "holidays": [
+    {
+     "date": "2026-07-25",
+     "name": ""
+    },
+    {
+     "date": "2026-10-05",
+     "name": ""
+    }
+   ]
+  },
+  "12087": {
+   "holidays": [
+    {
+     "date": "2026-01-23",
+     "name": ""
+    },
+    {
+     "date": "2026-08-24",
+     "name": ""
+    }
+   ]
+  },
+  "12088": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "Festividad de San Isidro"
+    },
+    {
+     "date": "2026-11-25",
+     "name": "Festividad de Santa Catalina"
+    }
+   ]
+  },
+  "12089": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": ""
+    },
+    {
+     "date": "2026-09-09",
+     "name": ""
+    }
+   ]
+  },
+  "12090": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-09-09",
+     "name": ""
+    }
+   ]
+  },
+  "12091": {
+   "holidays": [
+    {
+     "date": "2026-03-20",
+     "name": ""
+    },
+    {
+     "date": "2026-12-07",
+     "name": ""
+    }
+   ]
+  },
+  "12092": {
+   "holidays": [
+    {
+     "date": "2026-08-07",
+     "name": ""
+    },
+    {
+     "date": "2026-09-18",
+     "name": ""
+    }
+   ]
+  },
+  "12093": {
+   "holidays": [
+    {
+     "date": "2026-04-30",
+     "name": ""
+    },
+    {
+     "date": "2026-12-07",
+     "name": ""
+    }
+   ]
+  },
+  "12094": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2026-09-28",
+     "name": "San Miguel"
+    }
+   ]
+  },
+  "12095": {
+   "holidays": [
+    {
+     "date": "2026-07-10",
+     "name": ""
+    },
+    {
+     "date": "2026-10-07",
+     "name": ""
+    }
+   ]
+  },
+  "12096": {
+   "holidays": [
+    {
+     "date": "2026-01-19",
+     "name": ""
+    },
+    {
+     "date": "2026-12-07",
+     "name": ""
+    }
+   ]
+  },
+  "12098": {
+   "holidays": [
+    {
+     "date": "2026-02-02",
+     "name": "Festividad de la Candelera"
+    },
+    {
+     "date": "2026-02-03",
+     "name": "Festividad de San Blas"
+    }
+   ]
+  },
+  "12099": {
+   "holidays": [
+    {
+     "date": "2026-04-23",
+     "name": ""
+    },
+    {
+     "date": "2026-05-04",
+     "name": ""
+    }
+   ]
+  },
+  "12100": {
+   "holidays": [
+    {
+     "date": "2026-03-20",
+     "name": ""
+    },
+    {
+     "date": "2026-09-21",
+     "name": ""
+    }
+   ]
+  },
+  "12101": {
+   "holidays": [
+    {
+     "date": "2026-04-02",
+     "name": "Jueves Santo"
+    },
+    {
+     "date": "2026-07-16",
+     "name": "Virgen del Carmen"
+    }
+   ]
+  },
+  "12102": {
+   "holidays": [
+    {
+     "date": "2026-03-20",
+     "name": ""
+    },
+    {
+     "date": "2026-04-13",
+     "name": ""
+    }
+   ]
+  },
+  "12103": {
+   "holidays": [
+    {
+     "date": "2026-03-09",
+     "name": ""
+    },
+    {
+     "date": "2026-08-03",
+     "name": ""
+    }
+   ]
+  },
+  "12104": {
+   "holidays": [
+    {
+     "date": "2026-09-02",
+     "name": "Festividad de Nuestra Señora de la Esperanza"
+    },
+    {
+     "date": "2026-09-04",
+     "name": "Festividad de Nuestra Señora de Loreto"
+    }
+   ]
+  },
+  "12105": {
+   "holidays": [
+    {
+     "date": "2026-03-09",
+     "name": ""
+    },
+    {
+     "date": "2026-08-24",
+     "name": ""
+    }
+   ]
+  },
+  "12106": {
+   "holidays": [
+    {
+     "date": "2026-09-24",
+     "name": "Festividad del Santísimo Cristo de la Sangre"
+    },
+    {
+     "date": "2026-09-25",
+     "name": "Festividad de San Miguel Arcángel"
+    }
+   ]
+  },
+  "12107": {
+   "holidays": [
+    {
+     "date": "2026-03-20",
+     "name": ""
+    },
+    {
+     "date": "2026-12-07",
+     "name": ""
+    }
+   ]
+  },
+  "12108": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2026-10-26",
+     "name": "Cristo de la Clemencia"
+    }
+   ]
+  },
+  "12109": {
+   "holidays": [
+    {
+     "date": "2026-11-09",
+     "name": ""
+    },
+    {
+     "date": "2026-11-10",
+     "name": ""
+    }
+   ]
+  },
+  "12110": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2026-10-15",
+     "name": "Santa Teresa"
+    }
+   ]
+  },
+  "12111": {
+   "holidays": [
+    {
+     "date": "2026-05-22",
+     "name": ""
+    },
+    {
+     "date": "2026-12-07",
+     "name": ""
+    }
+   ]
+  },
+  "12112": {
+   "holidays": [
+    {
+     "date": "2026-02-09",
+     "name": ""
+    },
+    {
+     "date": "2026-08-24",
+     "name": ""
+    }
+   ]
+  },
+  "12113": {
+   "holidays": [
+    {
+     "date": "2026-08-03",
+     "name": ""
+    },
+    {
+     "date": "2026-08-04",
+     "name": ""
+    }
+   ]
+  },
+  "12114": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": "Festividad de la Virgen de la Cueva Santa"
+    },
+    {
+     "date": "2026-09-09",
+     "name": "Festividad del Santísimo Cristo de la Misericordia"
+    }
+   ]
+  },
+  "12115": {
+   "holidays": [
+    {
+     "date": "2026-08-14",
+     "name": ""
+    },
+    {
+     "date": "2026-12-07",
+     "name": ""
+    }
+   ]
+  },
+  "12116": {
+   "holidays": [
+    {
+     "date": "2026-08-06",
+     "name": "Festividad de Santísimo Salvador"
+    },
+    {
+     "date": "2026-12-04",
+     "name": "Festividad de Santa Barbara"
+    }
+   ]
+  },
+  "12117": {
+   "holidays": [
+    {
+     "date": "2026-01-23",
+     "name": "Festividad de San Antonio"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "Festividad de San Bartolomé"
+    }
+   ]
+  },
+  "12118": {
+   "holidays": [
+    {
+     "date": "2026-01-16",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "12119": {
+   "holidays": [
+    {
+     "date": "2026-01-23",
+     "name": ""
+    },
+    {
+     "date": "2026-08-25",
+     "name": ""
+    }
+   ]
+  },
+  "12120": {
+   "holidays": [
+    {
+     "date": "2026-08-03",
+     "name": "Festividad de San Onofre"
+    },
+    {
+     "date": "2026-08-04",
+     "name": "Festividad del Sagrado Corazón de Jesús"
+    }
+   ]
+  },
+  "12121": {
+   "holidays": [
+    {
+     "date": "2026-03-20",
+     "name": ""
+    },
+    {
+     "date": "2026-04-13",
+     "name": ""
+    }
+   ]
+  },
+  "12122": {
+   "holidays": [
+    {
+     "date": "2026-04-24",
+     "name": ""
+    },
+    {
+     "date": "2026-08-06",
+     "name": ""
+    }
+   ]
+  },
+  "12123": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": "Festividad de la Santa Cruz"
+    },
+    {
+     "date": "2026-12-28",
+     "name": "Festividad de San Juan Evangelista"
+    }
+   ]
+  },
+  "12124": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": ""
+    },
+    {
+     "date": "2026-12-07",
+     "name": ""
+    }
+   ]
+  },
+  "12125": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": ""
+    },
+    {
+     "date": "2026-08-07",
+     "name": ""
+    }
+   ]
+  },
+  "12126": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "Festividad de San Vicente Ferrer"
+    },
+    {
+     "date": "2026-10-13",
+     "name": "Festividad de la Sagrada Familia"
+    }
+   ]
+  },
+  "12127": {
+   "holidays": [
+    {
+     "date": "2026-03-20",
+     "name": ""
+    },
+    {
+     "date": "2026-10-08",
+     "name": ""
+    }
+   ]
+  },
+  "12128": {
+   "holidays": [
+    {
+     "date": "2026-03-16",
+     "name": "lunes de San Miguel"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "lunes de San Vicente"
+    }
+   ]
+  },
+  "12129": {
+   "holidays": [
+    {
+     "date": "2026-05-25",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "12130": {
+   "holidays": [
+    {
+     "date": "2026-01-19",
+     "name": ""
+    },
+    {
+     "date": "2026-08-25",
+     "name": ""
+    }
+   ]
+  },
+  "12131": {
+   "holidays": [
+    {
+     "date": "2026-05-11",
+     "name": "lunes de las fiestas de mayo"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "San Bartolomé, lunes de las fiestas de septiembre"
+    }
+   ]
+  },
+  "12133": {
+   "holidays": [
+    {
+     "date": "2026-08-20",
+     "name": ""
+    },
+    {
+     "date": "2026-08-21",
+     "name": ""
+    }
+   ]
+  },
+  "12134": {
+   "holidays": [
+    {
+     "date": "2026-02-02",
+     "name": "Festividad de San Blas"
+    },
+    {
+     "date": "2026-08-10",
+     "name": "Festividad de San Lorenzo"
+    }
+   ]
+  },
+  "12135": {
+   "holidays": [
+    {
+     "date": "2026-05-18",
+     "name": "Festividad de San Pascual"
+    },
+    {
+     "date": "2026-12-26",
+     "name": "San Esteban"
+    }
+   ]
+  },
+  "12136": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "Festividad de San Sebastián"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "Festividad de San Vicente"
+    }
+   ]
+  },
+  "12137": {
+   "holidays": [
+    {
+     "date": "2026-03-20",
+     "name": ""
+    },
+    {
+     "date": "2026-04-13",
+     "name": "Festividad de San Vicente"
+    }
+   ]
+  },
+  "12138": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    }
+   ]
+  },
+  "12139": {
+   "holidays": [
+    {
+     "date": "2026-03-09",
+     "name": ""
+    },
+    {
+     "date": "2026-08-24",
+     "name": ""
+    }
+   ]
+  },
+  "12140": {
+   "holidays": [
+    {
+     "date": "2026-04-17",
+     "name": "fiesta local de San Francisco"
+    },
+    {
+     "date": "2026-09-25",
+     "name": "fiesta de San Miguel"
+    }
+   ]
+  },
+  "12141": {
+   "holidays": [
+    {
+     "date": "2026-01-16",
+     "name": ""
+    },
+    {
+     "date": "2026-09-04",
+     "name": ""
+    }
+   ]
+  },
+  "12142": {
+   "holidays": [
+    {
+     "date": "2026-03-09",
+     "name": ""
+    },
+    {
+     "date": "2026-07-27",
+     "name": ""
+    }
+   ]
+  },
+  "12901": {
+   "holidays": [
+    {
+     "date": "2026-06-25",
+     "name": "Festividad de la Segregación Municipal"
+    },
+    {
+     "date": "2026-10-05",
+     "name": ""
+    }
+   ]
+  },
+  "12902": {
+   "holidays": [
+    {
+     "date": "2026-04-02",
+     "name": ""
+    },
+    {
+     "date": "2026-04-13",
+     "name": ""
+    }
+   ]
+  },
+  "46001": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-12",
+     "name": "mañana del encierro"
+    }
+   ]
+  },
+  "46002": {
+   "holidays": [
+    {
+     "date": "2026-08-19",
+     "name": "Nuestra Señora del Loreto"
+    },
+    {
+     "date": "2026-08-20",
+     "name": "Santísimo Cristo del Amparo"
+    }
+   ]
+  },
+  "46003": {
+   "holidays": [
+    {
+     "date": "2026-09-17",
+     "name": ""
+    },
+    {
+     "date": "2026-09-18",
+     "name": "Fiestas Patronales"
+    }
+   ]
+  },
+  "46004": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-04-14",
+     "name": "día de las Embajadas"
+    }
+   ]
+  },
+  "46005": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": "Virgen del Olivar"
+    },
+    {
+     "date": "2026-09-09",
+     "name": "El Cristo de la Buena Muerte"
+    }
+   ]
+  },
+  "46006": {
+   "holidays": [
+    {
+     "date": "2026-07-24",
+     "name": "Feria de San Jaime"
+    },
+    {
+     "date": "2026-10-07",
+     "name": "Virgen del Remedio"
+    }
+   ]
+  },
+  "46007": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2026-07-28",
+     "name": "Santa Ana"
+    }
+   ]
+  },
+  "46008": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "Santísimo Cristo de las Campanas"
+    }
+   ]
+  },
+  "46009": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-09-05",
+     "name": "Santísimo Cristo de las Ánimas"
+    }
+   ]
+  },
+  "46010": {
+   "holidays": [
+    {
+     "date": "2026-04-07",
+     "name": "segundo día de Pascua"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    }
+   ]
+  },
+  "46011": {
+   "holidays": [
+    {
+     "date": "2026-03-30",
+     "name": "Lunes de Semana Santa"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    }
+   ]
+  },
+  "46012": {
+   "holidays": [
+    {
+     "date": "2026-07-24",
+     "name": ""
+    },
+    {
+     "date": "2026-07-27",
+     "name": "Nuestra Señora del Rosario"
+    }
+   ]
+  },
+  "46013": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-07-10",
+     "name": "día de San Cristóbal"
+    }
+   ]
+  },
+  "46014": {
+   "holidays": [
+    {
+     "date": "2026-08-31",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-09-02",
+     "name": "Nuestra Señora de Albuixech"
+    }
+   ]
+  },
+  "46015": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": "La Virgen del Carmen"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "Santísimo Cristo de la Fe"
+    }
+   ]
+  },
+  "46016": {
+   "holidays": [
+    {
+     "date": "2026-08-27",
+     "name": ""
+    },
+    {
+     "date": "2026-08-28",
+     "name": "Fiestas Locales"
+    }
+   ]
+  },
+  "46017": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-07-23",
+     "name": "San Bernardo"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "La Barraca d’Aigües Vives",
+     "holidays": [
+      {
+       "date": "2026-04-13",
+       "name": "San Vicente Ferrer"
+      },
+      {
+       "date": "2026-09-11",
+       "name": "Nuestra Señora de Aguas Vivas"
+      }
+     ]
+    }
+   ],
+   "note": "Entidades locales menores (EATIM) of the municipality have their own days; see nucleos."
+  },
+  "46018": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-12-07",
+     "name": ""
+    }
+   ]
+  },
+  "46019": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": "Nuestra Señora del Oreto"
+    },
+    {
+     "date": "2026-11-30",
+     "name": "San Andrés Apóstol"
+    }
+   ]
+  },
+  "46020": {
+   "holidays": [
+    {
+     "date": "2026-06-12",
+     "name": "San Onofre"
+    },
+    {
+     "date": "2026-09-07",
+     "name": "El Santísimo Cristo y La Divina Aurora"
+    }
+   ]
+  },
+  "46021": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-06",
+     "name": "El Santísimo Cristo de los Necesitados"
+    }
+   ]
+  },
+  "46022": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Nuestra Señora del Don"
+    }
+   ]
+  },
+  "46023": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-10-07",
+     "name": "Nuestra Señora del Rosario"
+    }
+   ]
+  },
+  "46024": {
+   "holidays": [
+    {
+     "date": "2026-09-07",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "46025": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "San Bartolomé"
+    }
+   ]
+  },
+  "46026": {
+   "holidays": [
+    {
+     "date": "2026-03-06",
+     "name": "Fallas de Alfarb"
+    },
+    {
+     "date": "2026-07-08",
+     "name": "Día de la Sangre"
+    }
+   ]
+  },
+  "46027": {
+   "holidays": [
+    {
+     "date": "2026-08-14",
+     "name": "viernes de fiestas"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "lunes de fiestas"
+    }
+   ]
+  },
+  "46028": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-09-25",
+     "name": "San Pedro Nolasco"
+    }
+   ]
+  },
+  "46029": {
+   "holidays": [
+    {
+     "date": "2026-06-12",
+     "name": "San Onofre"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Nuestra Señora de la Salud"
+    }
+   ]
+  },
+  "46030": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-03",
+     "name": "Santa Úrsula"
+    }
+   ]
+  },
+  "46031": {
+   "holidays": [
+    {
+     "date": "2026-03-20",
+     "name": "segundo día de San José"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    }
+   ]
+  },
+  "46032": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "El Santísimo Cristo de la Fe y de la Providencia"
+    }
+   ]
+  },
+  "46033": {
+   "holidays": [
+    {
+     "date": "2026-08-27",
+     "name": ""
+    },
+    {
+     "date": "2026-08-28",
+     "name": ""
+    }
+   ]
+  },
+  "46034": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-07-24",
+     "name": "víspera de San Jaime"
+    }
+   ]
+  },
+  "46035": {
+   "holidays": [
+    {
+     "date": "2026-07-13",
+     "name": "San Bartolomé"
+    },
+    {
+     "date": "2026-07-16",
+     "name": "La Santísima Cruz"
+    }
+   ]
+  },
+  "46036": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2026-04-29",
+     "name": "San Pedro Mártir"
+    }
+   ]
+  },
+  "46037": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-07-01",
+     "name": "la Divina Aurora"
+    }
+   ]
+  },
+  "46038": {
+   "holidays": [
+    {
+     "date": "2026-01-21",
+     "name": ""
+    },
+    {
+     "date": "2026-08-24",
+     "name": ""
+    }
+   ]
+  },
+  "46039": {
+   "holidays": [
+    {
+     "date": "2026-09-11",
+     "name": ""
+    },
+    {
+     "date": "2026-09-25",
+     "name": "Fiestas locales"
+    }
+   ]
+  },
+  "46040": {
+   "holidays": [
+    {
+     "date": "2026-08-06",
+     "name": "El Cristo de la Agonía"
+    },
+    {
+     "date": "2026-12-09",
+     "name": "El Cristo de la Agonía"
+    }
+   ]
+  },
+  "46041": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2026-11-25",
+     "name": "Santa Catalina"
+    }
+   ]
+  },
+  "46042": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-03",
+     "name": "San Engracio"
+    }
+   ]
+  },
+  "46043": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "Fiesta patronal"
+    }
+   ]
+  },
+  "46044": {
+   "holidays": [
+    {
+     "date": "2026-01-12",
+     "name": "fiesta del Ángel"
+    },
+    {
+     "date": "2026-11-30",
+     "name": "San Andrés"
+    }
+   ]
+  },
+  "46045": {
+   "holidays": [
+    {
+     "date": "2026-07-23",
+     "name": ""
+    },
+    {
+     "date": "2026-07-24",
+     "name": "Fiestas locales"
+    }
+   ]
+  },
+  "46046": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-21",
+     "name": "San Miguel Arcángel"
+    }
+   ]
+  },
+  "46047": {
+   "holidays": [
+    {
+     "date": "2026-02-13",
+     "name": "San Ramón no nato"
+    },
+    {
+     "date": "2026-08-10",
+     "name": "San Lorenzo"
+    }
+   ]
+  },
+  "46048": {
+   "holidays": [
+    {
+     "date": "2026-09-24",
+     "name": "San Miguel"
+    },
+    {
+     "date": "2026-09-25",
+     "name": "El Santísimo Cristo de la Misericordia"
+    }
+   ]
+  },
+  "46049": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "Santos de la Piedra"
+    }
+   ]
+  },
+  "46050": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro Labrador"
+    }
+   ]
+  },
+  "46051": {
+   "holidays": [
+    {
+     "date": "2026-03-18",
+     "name": "Fallas"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Virgen de Montiel"
+    }
+   ]
+  },
+  "46052": {
+   "holidays": [
+    {
+     "date": "2026-03-18",
+     "name": "víspera de San José"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    }
+   ]
+  },
+  "46053": {
+   "holidays": [
+    {
+     "date": "2026-02-20",
+     "name": "conmemoración de la aprobación, por el Consejo de Ministros, del traslado del pueblo de Beneixida"
+    },
+    {
+     "date": "2026-08-21",
+     "name": "Nuestra Señora de la Asunción y El Cristo de la Salud de Beneixida"
+    }
+   ]
+  },
+  "46054": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-06-22",
+     "name": "Fiesta local"
+    }
+   ]
+  },
+  "46055": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-09-18",
+     "name": "Fiestas de septiembre"
+    }
+   ]
+  },
+  "46056": {
+   "holidays": [
+    {
+     "date": "2026-08-27",
+     "name": "San Roque"
+    },
+    {
+     "date": "2026-08-28",
+     "name": "la Asunción y la Divina Aurora"
+    }
+   ]
+  },
+  "46057": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-12-07",
+     "name": ""
+    }
+   ]
+  },
+  "46058": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-09-07",
+     "name": "Subida de la Virgen"
+    }
+   ]
+  },
+  "46059": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-03",
+     "name": "San Benito Martir"
+    }
+   ]
+  },
+  "46060": {
+   "holidays": [
+    {
+     "date": "2026-03-20",
+     "name": ""
+    },
+    {
+     "date": "2026-08-20",
+     "name": "Divina Aurora"
+    }
+   ]
+  },
+  "46061": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-07-24",
+     "name": "Fiestas patronales de San Jaime"
+    }
+   ]
+  },
+  "46062": {
+   "holidays": [
+    {
+     "date": "2026-01-21",
+     "name": "La Beata Inés"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "Fiestas Patronales"
+    }
+   ]
+  },
+  "46063": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": "San Bernardo"
+    },
+    {
+     "date": "2026-08-25",
+     "name": "día de la Divina Aurora"
+    }
+   ]
+  },
+  "46064": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-14",
+     "name": "San Roque"
+    }
+   ]
+  },
+  "46065": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-07-16",
+     "name": "La Virgen del Carmen"
+    }
+   ]
+  },
+  "46066": {
+   "holidays": [
+    {
+     "date": "2026-08-10",
+     "name": "San Lorenzo"
+    },
+    {
+     "date": "2026-10-05",
+     "name": "San Francisco de Borja"
+    }
+   ]
+  },
+  "46067": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": "Virgen del Fundamento"
+    },
+    {
+     "date": "2026-09-09",
+     "name": "Nuestra Señora de los Dolores"
+    }
+   ]
+  },
+  "46068": {
+   "holidays": [
+    {
+     "date": "2026-03-20",
+     "name": ""
+    },
+    {
+     "date": "2026-04-13",
+     "name": ""
+    }
+   ]
+  },
+  "46069": {
+   "holidays": [
+    {
+     "date": "2026-01-16",
+     "name": "San Antonio Abad"
+    },
+    {
+     "date": "2026-09-11",
+     "name": "Fiestas patronales"
+    }
+   ]
+  },
+  "46070": {
+   "holidays": [
+    {
+     "date": "2026-03-20",
+     "name": "Santa Alejandra"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    }
+   ]
+  },
+  "46071": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": "La Santa Cruz"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "San Roque"
+    }
+   ]
+  },
+  "46072": {
+   "holidays": [
+    {
+     "date": "2026-02-09",
+     "name": "Moros y Cristianos"
+    },
+    {
+     "date": "2026-02-10",
+     "name": "El Santo Cristo"
+    }
+   ]
+  },
+  "46073": {
+   "holidays": [
+    {
+     "date": "2026-04-14",
+     "name": "El Cristo del Amparo"
+    },
+    {
+     "date": "2026-04-15",
+     "name": "San Isidro Labrador"
+    }
+   ]
+  },
+  "46074": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-10-13",
+     "name": "Día de Acción de Gracias"
+    }
+   ]
+  },
+  "46075": {
+   "holidays": [
+    {
+     "date": "2026-01-30",
+     "name": "San Antonio"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    }
+   ]
+  },
+  "46076": {
+   "holidays": [
+    {
+     "date": "2026-04-09",
+     "name": "jueves de la semana taurina"
+    },
+    {
+     "date": "2026-04-10",
+     "name": "viernes de la semana taurina"
+    }
+   ]
+  },
+  "46077": {
+   "holidays": [
+    {
+     "date": "2026-08-26",
+     "name": "la Tomatina"
+    },
+    {
+     "date": "2026-08-27",
+     "name": "San Luis"
+    }
+   ]
+  },
+  "46078": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-09-30",
+     "name": "La Virgen de la Cabeza"
+    }
+   ]
+  },
+  "46079": {
+   "holidays": [
+    {
+     "date": "2026-03-18",
+     "name": ""
+    },
+    {
+     "date": "2026-04-13",
+     "name": ""
+    }
+   ]
+  },
+  "46080": {
+   "holidays": [
+    {
+     "date": "2026-02-05",
+     "name": "Santa Águeda"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    }
+   ]
+  },
+  "46081": {
+   "holidays": [
+    {
+     "date": "2026-01-17",
+     "name": "San Antonio Abad"
+    },
+    {
+     "date": "2026-09-18",
+     "name": "Feria de septiembre"
+    }
+   ]
+  },
+  "46082": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Virgen contra las fiebres"
+    }
+   ]
+  },
+  "46083": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-10-16",
+     "name": "Nuestra Señora de Aguas Vivas"
+    }
+   ]
+  },
+  "46084": {
+   "holidays": [
+    {
+     "date": "2026-09-15",
+     "name": "Santísimo Cristo de la Agonía"
+    },
+    {
+     "date": "2026-09-16",
+     "name": "La Virgen María de la Divina Gracia"
+    }
+   ]
+  },
+  "46085": {
+   "holidays": [
+    {
+     "date": "2026-07-23",
+     "name": "San Bernardo"
+    },
+    {
+     "date": "2026-09-11",
+     "name": "Santa María de Carlet"
+    }
+   ]
+  },
+  "46086": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "fiesta de la Cazuelita"
+    },
+    {
+     "date": "2026-05-08",
+     "name": "la Aparición de San Miguel"
+    }
+   ]
+  },
+  "46087": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro Labrador"
+    },
+    {
+     "date": "2026-06-01",
+     "name": "La Santísima Trinidad"
+    }
+   ]
+  },
+  "46088": {
+   "holidays": [
+    {
+     "date": "2026-01-16",
+     "name": "San Antón"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro Labrador"
+    }
+   ]
+  },
+  "46089": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": "Santa Barbara"
+    },
+    {
+     "date": "2026-08-18",
+     "name": "Cristo de la Paz"
+    }
+   ]
+  },
+  "46090": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-12-07",
+     "name": "Santísimo Cristo de la Fe"
+    }
+   ]
+  },
+  "46091": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-07-24",
+     "name": "Santiago Apóstol"
+    }
+   ]
+  },
+  "46092": {
+   "holidays": [
+    {
+     "date": "2026-02-10",
+     "name": "San Guillermo"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "La Virgen de Tejeda"
+    }
+   ]
+  },
+  "46093": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro Apóstol, patrón de Catadau"
+    },
+    {
+     "date": "2026-07-08",
+     "name": "día de la Sangre"
+    }
+   ]
+  },
+  "46094": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "San Miguel"
+    }
+   ]
+  },
+  "46095": {
+   "holidays": [
+    {
+     "date": "2026-01-17",
+     "name": "San Antonio Abad"
+    },
+    {
+     "date": "2026-06-13",
+     "name": "San Antonio de Padua"
+    }
+   ]
+  },
+  "46096": {
+   "holidays": [
+    {
+     "date": "2026-03-06",
+     "name": "Porrat de Torrent"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    }
+   ]
+  },
+  "46097": {
+   "holidays": [
+    {
+     "date": "2026-01-16",
+     "name": "San Antón"
+    },
+    {
+     "date": "2026-08-14",
+     "name": "Asunción de la Virgen"
+    }
+   ]
+  },
+  "46098": {
+   "holidays": [
+    {
+     "date": "2026-01-22",
+     "name": "San Vicente Mártir"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Nuestra Señora del Castillo"
+    }
+   ]
+  },
+  "46099": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "46100": {
+   "holidays": [
+    {
+     "date": "2026-09-28",
+     "name": ""
+    },
+    {
+     "date": "2026-09-29",
+     "name": ""
+    }
+   ]
+  },
+  "46101": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-09-21",
+     "name": "Cristo de la Agonía de Quart de les Valls"
+    }
+   ]
+  },
+  "46102": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-09-07",
+     "name": "la Virgen de la Luz"
+    }
+   ]
+  },
+  "46103": {
+   "holidays": [
+    {
+     "date": "2026-03-20",
+     "name": ""
+    },
+    {
+     "date": "2026-04-13",
+     "name": ""
+    }
+   ]
+  },
+  "46104": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-08-31",
+     "name": "Fiestas Patronales"
+    }
+   ]
+  },
+  "46105": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-04-17",
+     "name": "Fiestas Mayores"
+    }
+   ]
+  },
+  "46106": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-28",
+     "name": "Fiesta Mayor de las Patronales"
+    }
+   ]
+  },
+  "46107": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2026-02-04",
+     "name": "Santísimo Cristo del Refugio"
+    }
+   ]
+  },
+  "46108": {
+   "holidays": [
+    {
+     "date": "2026-01-16",
+     "name": "San Antonio Abad"
+    },
+    {
+     "date": "2026-08-03",
+     "name": "Nuestra Señora de los Ángeles"
+    }
+   ]
+  },
+  "46109": {
+   "holidays": [
+    {
+     "date": "2026-03-20",
+     "name": "Virgen de la Soledad"
+    },
+    {
+     "date": "2026-12-07",
+     "name": "San Lucas Evangelista"
+    }
+   ]
+  },
+  "46110": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Virgen de la Salud"
+    }
+   ]
+  },
+  "46111": {
+   "holidays": [
+    {
+     "date": "2026-03-20",
+     "name": "traslado de la fiesta de San Juan"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Virgen del Castillo"
+    }
+   ]
+  },
+  "46112": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-12-04",
+     "name": "Santa Bárbara"
+    }
+   ]
+  },
+  "46113": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "Fiestas de Daimús en honor a San Pedro"
+    },
+    {
+     "date": "2026-07-24",
+     "name": "Fiestas de los Pedregales en honor a Santiago Apóstol"
+    }
+   ]
+  },
+  "46114": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": "La Santa Cruz"
+    },
+    {
+     "date": "2026-10-07",
+     "name": "Día de la Municipalidad"
+    }
+   ]
+  },
+  "46115": {
+   "holidays": [
+    {
+     "date": "2026-01-16",
+     "name": "San Marcelo"
+    },
+    {
+     "date": "2026-10-07",
+     "name": "Nuestra Señora del Rosario"
+    }
+   ]
+  },
+  "46116": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": ""
+    },
+    {
+     "date": "2026-07-17",
+     "name": ""
+    }
+   ]
+  },
+  "46117": {
+   "holidays": [
+    {
+     "date": "2026-06-30",
+     "name": "fiesta fundacional"
+    },
+    {
+     "date": "2026-09-07",
+     "name": "fiesta patronal"
+    }
+   ]
+  },
+  "46118": {
+   "holidays": [
+    {
+     "date": "2026-09-29",
+     "name": "San Miguel"
+    },
+    {
+     "date": "2026-09-30",
+     "name": "la Virgen de Fátima"
+    }
+   ]
+  },
+  "46119": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-07-24",
+     "name": "La Aurora"
+    }
+   ]
+  },
+  "46120": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    }
+   ]
+  },
+  "46121": {
+   "holidays": [
+    {
+     "date": "2026-08-20",
+     "name": "Fiesta patronal"
+    },
+    {
+     "date": "2026-08-21",
+     "name": "El Cristo de la Buena Dicha"
+    }
+   ]
+  },
+  "46122": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "Subida de Santa Bárbara"
+    }
+   ]
+  },
+  "46123": {
+   "holidays": [
+    {
+     "date": "2026-03-20",
+     "name": "Fallas"
+    },
+    {
+     "date": "2026-08-14",
+     "name": "día de la Vera Cruz"
+    }
+   ]
+  },
+  "46124": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-31",
+     "name": "La Virgen del Rosario"
+    }
+   ]
+  },
+  "46125": {
+   "holidays": [
+    {
+     "date": "2026-03-17",
+     "name": "Fallas"
+    },
+    {
+     "date": "2026-08-19",
+     "name": "Santísimo Cristo del Consuelo"
+    }
+   ]
+  },
+  "46126": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "Virgen del Patrocinio"
+    }
+   ]
+  },
+  "46127": {
+   "holidays": [
+    {
+     "date": "2026-08-20",
+     "name": "Nuestra Señora del Remedio"
+    },
+    {
+     "date": "2026-08-21",
+     "name": "Santísimo Cristo del Amparo"
+    }
+   ]
+  },
+  "46128": {
+   "holidays": [
+    {
+     "date": "2026-08-06",
+     "name": "Santísimo Cristo de los Afligidos"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Natividad de Nuestra Señora"
+    }
+   ]
+  },
+  "46129": {
+   "holidays": [
+    {
+     "date": "2026-01-30",
+     "name": ""
+    },
+    {
+     "date": "2026-08-20",
+     "name": ""
+    }
+   ]
+  },
+  "46130": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-04-14",
+     "name": "día del perro"
+    }
+   ]
+  },
+  "46131": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-10-05",
+     "name": "San Francisco de Borja-Feria de Gandía"
+    }
+   ]
+  },
+  "46132": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-06",
+     "name": "el Cristo"
+    }
+   ]
+  },
+  "46133": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "san Blas"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    }
+   ]
+  },
+  "46134": {
+   "holidays": [
+    {
+     "date": "2026-01-19",
+     "name": ""
+    },
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    }
+   ]
+  },
+  "46135": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    }
+   ]
+  },
+  "46136": {
+   "holidays": [
+    {
+     "date": "2026-03-06",
+     "name": "Fallas de Godelleta"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    }
+   ]
+  },
+  "46137": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-10",
+     "name": "Fiesta de la Promesa al Padre San Francisco de Asis"
+    }
+   ]
+  },
+  "46138": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-12-07",
+     "name": ""
+    }
+   ]
+  },
+  "46139": {
+   "holidays": [
+    {
+     "date": "2026-01-22",
+     "name": "San Vicente Mártir"
+    },
+    {
+     "date": "2026-08-06",
+     "name": "El Santísimo Cristo de la Peña"
+    }
+   ]
+  },
+  "46140": {
+   "holidays": [
+    {
+     "date": "2026-03-20",
+     "name": ""
+    },
+    {
+     "date": "2026-12-07",
+     "name": ""
+    }
+   ]
+  },
+  "46141": {
+   "holidays": [
+    {
+     "date": "2026-09-14",
+     "name": "Santísimo Cristo de la Piedad"
+    },
+    {
+     "date": "2026-09-15",
+     "name": "Santa Bárbara"
+    }
+   ]
+  },
+  "46142": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "San Miguel"
+    }
+   ]
+  },
+  "46143": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer-Pascua"
+    },
+    {
+     "date": "2026-08-06",
+     "name": "El Cristo de la Agonía-Fiestas Patronales"
+    }
+   ]
+  },
+  "46144": {
+   "holidays": [
+    {
+     "date": "2026-08-21",
+     "name": "Feria de verano"
+    },
+    {
+     "date": "2026-11-27",
+     "name": "Fiestas patronales"
+    }
+   ]
+  },
+  "46145": {
+   "holidays": [
+    {
+     "date": "2026-08-01",
+     "name": "San Félix"
+    },
+    {
+     "date": "2026-08-05",
+     "name": "Nuestra Señora de la Seo"
+    }
+   ]
+  },
+  "46146": {
+   "holidays": [
+    {
+     "date": "2026-04-02",
+     "name": "Jueves Santo"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    }
+   ]
+  },
+  "46147": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "San Miguel Arcángel"
+    }
+   ]
+  },
+  "46148": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-06-26",
+     "name": "San Juan Bautista"
+    }
+   ]
+  },
+  "46149": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2026-01-21",
+     "name": "Las Reliquias de San Sebastián"
+    }
+   ]
+  },
+  "46150": {
+   "holidays": [
+    {
+     "date": "2026-04-27",
+     "name": ""
+    },
+    {
+     "date": "2026-04-28",
+     "name": "moros y cristianos"
+    }
+   ]
+  },
+  "46151": {
+   "holidays": [
+    {
+     "date": "2026-08-27",
+     "name": ""
+    },
+    {
+     "date": "2026-08-28",
+     "name": ""
+    }
+   ]
+  },
+  "46152": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Nuestra Señora del Don"
+    }
+   ]
+  },
+  "46153": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "segundo lunes de Pascua"
+    },
+    {
+     "date": "2026-08-13",
+     "name": "fiesta patronal"
+    }
+   ]
+  },
+  "46154": {
+   "holidays": [
+    {
+     "date": "2026-03-06",
+     "name": "el Porrat de Torrent"
+    },
+    {
+     "date": "2026-08-28",
+     "name": "La Aurora"
+    }
+   ]
+  },
+  "46155": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2026-08-10",
+     "name": "San Lorenzo"
+    }
+   ]
+  },
+  "46156": {
+   "holidays": [
+    {
+     "date": "2026-01-17",
+     "name": "San Antonio Abad"
+    },
+    {
+     "date": "2026-07-08",
+     "name": "día de la Sangre"
+    }
+   ]
+  },
+  "46157": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": "La Virgen del Nacimiento"
+    },
+    {
+     "date": "2026-08-25",
+     "name": "Santísimo Cristo del Milagro"
+    }
+   ]
+  },
+  "46158": {
+   "holidays": [
+    {
+     "date": "2026-03-18",
+     "name": "Fallas"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    }
+   ]
+  },
+  "46159": {
+   "holidays": [
+    {
+     "date": "2026-04-02",
+     "name": "Jueves Santo"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    }
+   ]
+  },
+  "46160": {
+   "holidays": [
+    {
+     "date": "2026-02-02",
+     "name": "La Candelaria"
+    },
+    {
+     "date": "2026-09-04",
+     "name": "San Isidro Labrador"
+    }
+   ]
+  },
+  "46161": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "Pascua, San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-06",
+     "name": "El Santísimo Cristo de las Mercedes"
+    }
+   ]
+  },
+  "46162": {
+   "holidays": [
+    {
+     "date": "2026-08-27",
+     "name": ""
+    },
+    {
+     "date": "2026-08-28",
+     "name": ""
+    }
+   ]
+  },
+  "46163": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-10",
+     "name": "San Lorenzo"
+    }
+   ]
+  },
+  "46164": {
+   "holidays": [
+    {
+     "date": "2026-09-28",
+     "name": "Virgen del Rosario"
+    },
+    {
+     "date": "2026-10-01",
+     "name": "San Juan Apóstol"
+    }
+   ]
+  },
+  "46165": {
+   "holidays": [
+    {
+     "date": "2026-03-18",
+     "name": "Fallas"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    }
+   ]
+  },
+  "46166": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "Cristo de la Providencia"
+    }
+   ]
+  },
+  "46167": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2026-08-06",
+     "name": "El Santísimo Cristo de la Salud"
+    }
+   ]
+  },
+  "46168": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-06",
+     "name": "San Andrés"
+    }
+   ]
+  },
+  "46169": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-31",
+     "name": "Nuestra Señora de los Ángeles"
+    }
+   ]
+  },
+  "46170": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    }
+   ]
+  },
+  "46171": {
+   "holidays": [
+    {
+     "date": "2026-09-10",
+     "name": "San Jaime Apóstol"
+    },
+    {
+     "date": "2026-12-04",
+     "name": "Santa Bárbara"
+    }
+   ]
+  },
+  "46172": {
+   "holidays": [
+    {
+     "date": "2026-03-27",
+     "name": "Fallas de Montserrat"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    }
+   ]
+  },
+  "46173": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-28",
+     "name": "Los Santos Patronos"
+    }
+   ]
+  },
+  "46174": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-31",
+     "name": "La Maredeueta"
+    }
+   ]
+  },
+  "46175": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-12-07",
+     "name": ""
+    }
+   ]
+  },
+  "46176": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-21",
+     "name": "El Divino Niño"
+    }
+   ]
+  },
+  "46177": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "San Roque"
+    }
+   ]
+  },
+  "46178": {
+   "holidays": [
+    {
+     "date": "2026-10-01",
+     "name": "Virgen del Rosario"
+    },
+    {
+     "date": "2026-10-02",
+     "name": "El Niño Jesús"
+    }
+   ]
+  },
+  "46179": {
+   "holidays": [
+    {
+     "date": "2026-03-12",
+     "name": "San Gregorio"
+    },
+    {
+     "date": "2026-10-08",
+     "name": ""
+    }
+   ]
+  },
+  "46180": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": "Nuestra Señora del Rosario"
+    },
+    {
+     "date": "2026-08-26",
+     "name": "Día del Cristo"
+    }
+   ]
+  },
+  "46181": {
+   "holidays": [
+    {
+     "date": "2026-07-17",
+     "name": "Moros y Cristianos"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Nuestra Señora del Rebollet"
+    }
+   ]
+  },
+  "46182": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": "San Roque"
+    },
+    {
+     "date": "2026-10-07",
+     "name": "La Virgen del Rosario"
+    }
+   ]
+  },
+  "46183": {
+   "holidays": [
+    {
+     "date": "2026-08-31",
+     "name": "Moros y Cristianos"
+    },
+    {
+     "date": "2026-09-01",
+     "name": "Fiestas Patronales"
+    }
+   ]
+  },
+  "46184": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": "lunes de fiestas de Moros y Cristianos"
+    },
+    {
+     "date": "2026-11-16",
+     "name": "lunes de Feria"
+    }
+   ]
+  },
+  "46185": {
+   "holidays": [
+    {
+     "date": "2026-03-20",
+     "name": ""
+    },
+    {
+     "date": "2026-04-13",
+     "name": ""
+    }
+   ]
+  },
+  "46187": {
+   "holidays": [
+    {
+     "date": "2026-08-26",
+     "name": "San Miguel Arcángel"
+    },
+    {
+     "date": "2026-08-27",
+     "name": "Santísimo Cristo de la Salud"
+    }
+   ]
+  },
+  "46188": {
+   "holidays": [
+    {
+     "date": "2026-06-25",
+     "name": "La Purísima Concepción"
+    },
+    {
+     "date": "2026-06-26",
+     "name": "La Virgen del Carmen"
+    }
+   ]
+  },
+  "46189": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-05-11",
+     "name": "fiesta del Chopo"
+    }
+   ]
+  },
+  "46190": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-31",
+     "name": "Santísimo Cristo de la Fe"
+    }
+   ]
+  },
+  "46191": {
+   "holidays": [
+    {
+     "date": "2026-03-20",
+     "name": ""
+    },
+    {
+     "date": "2026-12-07",
+     "name": ""
+    }
+   ]
+  },
+  "46192": {
+   "holidays": [
+    {
+     "date": "2026-07-25",
+     "name": "San Jaime"
+    },
+    {
+     "date": "2026-08-31",
+     "name": "El Niño Jesús de Praga"
+    }
+   ]
+  },
+  "46193": {
+   "holidays": [
+    {
+     "date": "2026-07-08",
+     "name": "fiesta de La Sangre"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Nuestra Señora de Montserrat"
+    }
+   ]
+  },
+  "46194": {
+   "holidays": [
+    {
+     "date": "2026-07-10",
+     "name": "San Cristóbal"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "La Virgen de Vallivana"
+    }
+   ]
+  },
+  "46195": {
+   "holidays": [
+    {
+     "date": "2026-05-20",
+     "name": "San Felipe"
+    },
+    {
+     "date": "2026-12-04",
+     "name": "Santa Bárbara"
+    }
+   ]
+  },
+  "46196": {
+   "holidays": [
+    {
+     "date": "2026-07-06",
+     "name": "San Isaías"
+    },
+    {
+     "date": "2026-07-07",
+     "name": "San Fermín"
+    }
+   ]
+  },
+  "46197": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2026-08-06",
+     "name": "Santísimo Cristo de la Sangre"
+    }
+   ]
+  },
+  "46198": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    }
+   ]
+  },
+  "46199": {
+   "holidays": [
+    {
+     "date": "2026-09-10",
+     "name": "San José"
+    },
+    {
+     "date": "2026-09-11",
+     "name": "San Félix"
+    }
+   ]
+  },
+  "46200": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2026-08-28",
+     "name": "día de la Aurora"
+    }
+   ]
+  },
+  "46201": {
+   "holidays": [
+    {
+     "date": "2026-03-20",
+     "name": "San José"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "San Miguel"
+    }
+   ]
+  },
+  "46202": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "Patrón San Sebastián"
+    },
+    {
+     "date": "2026-10-07",
+     "name": "Patrona Virgen del Rosario"
+    }
+   ]
+  },
+  "46203": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-10-14",
+     "name": "San Calixto"
+    }
+   ]
+  },
+  "46204": {
+   "holidays": [
+    {
+     "date": "2026-08-14",
+     "name": "San Roque"
+    },
+    {
+     "date": "2026-09-07",
+     "name": "Festividad de La Virgen"
+    }
+   ]
+  },
+  "46205": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Patrona de Puçol"
+    }
+   ]
+  },
+  "46206": {
+   "holidays": [
+    {
+     "date": "2026-08-05",
+     "name": "El Cristo de la Salud"
+    },
+    {
+     "date": "2026-08-07",
+     "name": "La Santísima Cruz"
+    }
+   ]
+  },
+  "46207": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Nuestra Señora del Milagro"
+    }
+   ]
+  },
+  "46208": {
+   "holidays": [
+    {
+     "date": "2026-07-09",
+     "name": "Moros y Cristianos"
+    },
+    {
+     "date": "2026-07-10",
+     "name": "La Virgen del Carmen"
+    }
+   ]
+  },
+  "46209": {
+   "holidays": [
+    {
+     "date": "2026-08-05",
+     "name": "San Antonio Abad"
+    },
+    {
+     "date": "2026-08-06",
+     "name": "El Cristo del Consuelo"
+    }
+   ]
+  },
+  "46210": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-06",
+     "name": "El Salvador"
+    }
+   ]
+  },
+  "46211": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-07",
+     "name": "La Divina Aurora"
+    }
+   ]
+  },
+  "46212": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-07-10",
+     "name": "Fiestas Patronales"
+    }
+   ]
+  },
+  "46213": {
+   "holidays": [
+    {
+     "date": "2026-03-27",
+     "name": "viernes de Dolores"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "lunes de Pascua de San Vicente Ferrer"
+    }
+   ]
+  },
+  "46214": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "Festividad del Cristo"
+    }
+   ]
+  },
+  "46215": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-05",
+     "name": "Santa María la Mayor"
+    }
+   ]
+  },
+  "46216": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-09-01",
+     "name": "Santísimo Cristo de la Providencia"
+    }
+   ]
+  },
+  "46217": {
+   "holidays": [
+    {
+     "date": "2026-09-03",
+     "name": ""
+    },
+    {
+     "date": "2026-09-04",
+     "name": "Fiestas Patronales"
+    }
+   ]
+  },
+  "46218": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-09-04",
+     "name": "día de la Madre de Dios"
+    }
+   ]
+  },
+  "46219": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-12-07",
+     "name": "San Ambrosio"
+    }
+   ]
+  },
+  "46220": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-07-30",
+     "name": "Santos Abdón y Senén"
+    }
+   ]
+  },
+  "46221": {
+   "holidays": [
+    {
+     "date": "2026-07-10",
+     "name": "Moros y Cristianos"
+    },
+    {
+     "date": "2026-09-11",
+     "name": "Fiestas patronales"
+    }
+   ]
+  },
+  "46222": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-06-23",
+     "name": "Fiesta Patronal"
+    }
+   ]
+  },
+  "46223": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-09-18",
+     "name": "Fiesta Local"
+    }
+   ]
+  },
+  "46224": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-03",
+     "name": "Santísimo Ecce Homo"
+    }
+   ]
+  },
+  "46225": {
+   "holidays": [
+    {
+     "date": "2026-08-20",
+     "name": ""
+    },
+    {
+     "date": "2026-08-21",
+     "name": ""
+    }
+   ]
+  },
+  "46226": {
+   "holidays": [
+    {
+     "date": "2026-01-02",
+     "name": "San Basilio Magno"
+    },
+    {
+     "date": "2026-03-20",
+     "name": "San Martín de Dumio"
+    }
+   ]
+  },
+  "46227": {
+   "holidays": [
+    {
+     "date": "2026-07-27",
+     "name": "Santa Ana"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "Santísimo Cristo de la Buena Muerte"
+    }
+   ]
+  },
+  "46228": {
+   "holidays": [
+    {
+     "date": "2026-03-18",
+     "name": ""
+    },
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    }
+   ]
+  },
+  "46229": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2026-08-06",
+     "name": "Santísimo Cristo de los Afligidos"
+    }
+   ]
+  },
+  "46230": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-06",
+     "name": "El Santísimo Cristo de Silla"
+    }
+   ]
+  },
+  "46231": {
+   "holidays": [
+    {
+     "date": "2026-04-02",
+     "name": "Jueves Santo"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    }
+   ]
+  },
+  "46232": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2026-10-21",
+     "name": "Santa Úrsula"
+    }
+   ]
+  },
+  "46233": {
+   "holidays": [
+    {
+     "date": "2026-07-22",
+     "name": "Santa María Magdalena"
+    },
+    {
+     "date": "2026-08-10",
+     "name": "Santísimo Cristo de la Piedad"
+    }
+   ]
+  },
+  "46234": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "San Roque"
+    }
+   ]
+  },
+  "46235": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "La Virgen de Sales"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Mareny de Barraquetes",
+     "holidays": [
+      {
+       "date": "2026-04-07",
+       "name": "Virgen del Rosario"
+      },
+      {
+       "date": "2026-04-13",
+       "name": "San Vicente Ferrer"
+      }
+     ]
+    },
+    {
+     "name": "El Perelló",
+     "holidays": [
+      {
+       "date": "2026-04-13",
+       "name": "San Vicente Ferrer"
+      },
+      {
+       "date": "2026-12-07",
+       "name": "Festividad de la constitución de la Entidad Local de El Perelló"
+      }
+     ]
+    }
+   ],
+   "note": "Entidades locales menores (EATIM) of the municipality have their own days; see nucleos."
+  },
+  "46236": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-09-07",
+     "name": "Fiestas Patronales"
+    }
+   ]
+  },
+  "46237": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-18",
+     "name": "San Roque"
+    }
+   ]
+  },
+  "46238": {
+   "holidays": [
+    {
+     "date": "2026-03-18",
+     "name": "víspera de San José"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    }
+   ]
+  },
+  "46239": {
+   "holidays": [
+    {
+     "date": "2026-02-02",
+     "name": "San Blas"
+    },
+    {
+     "date": "2026-08-14",
+     "name": "Virgen de la Asunción"
+    }
+   ]
+  },
+  "46240": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": ""
+    },
+    {
+     "date": "2026-04-14",
+     "name": "Fiestas Patronales de San Vicente Ferrer"
+    }
+   ]
+  },
+  "46241": {
+   "holidays": [
+    {
+     "date": "2026-09-03",
+     "name": "Jesús El Nazareno"
+    },
+    {
+     "date": "2026-09-04",
+     "name": "Virgen del Remedio"
+    }
+   ]
+  },
+  "46242": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "Fiestas patronales"
+    }
+   ]
+  },
+  "46243": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-06-11",
+     "name": "Corpus Christi"
+    }
+   ]
+  },
+  "46244": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-07-30",
+     "name": "Santos Patrones"
+    }
+   ]
+  },
+  "46245": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": "Virgen de la Leche"
+    },
+    {
+     "date": "2026-09-09",
+     "name": "Virgen de Vallivana"
+    }
+   ]
+  },
+  "46246": {
+   "holidays": [
+    {
+     "date": "2026-09-29",
+     "name": "San Miguel"
+    },
+    {
+     "date": "2026-09-30",
+     "name": "Fiestas patronales"
+    }
+   ]
+  },
+  "46247": {
+   "holidays": [
+    {
+     "date": "2026-11-13",
+     "name": "San Diego"
+    },
+    {
+     "date": "2026-12-07",
+     "name": "La Purísima"
+    }
+   ]
+  },
+  "46248": {
+   "holidays": [
+    {
+     "date": "2026-03-27",
+     "name": "Fallas de Turís"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    }
+   ]
+  },
+  "46249": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Nuestra Señora del Remedio"
+    }
+   ]
+  },
+  "46250": {
+   "holidays": [
+    {
+     "date": "2026-01-22",
+     "name": "San Vicente Mártir, patrón de la ciudad de València"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer, patrón de la Comunidad Valenciana"
+    }
+   ]
+  },
+  "46251": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-09-11",
+     "name": "viernes de Moros y Cristianos"
+    }
+   ]
+  },
+  "46252": {
+   "holidays": [
+    {
+     "date": "2026-01-16",
+     "name": "San Antón"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "San Roque"
+    }
+   ]
+  },
+  "46253": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": ""
+    },
+    {
+     "date": "2026-06-26",
+     "name": ""
+    }
+   ]
+  },
+  "46254": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro Labrador"
+    },
+    {
+     "date": "2026-12-10",
+     "name": "Nuestra Señora de Loreto"
+    }
+   ]
+  },
+  "46255": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "Nuestra Señora de la Fuente"
+    }
+   ]
+  },
+  "46256": {
+   "holidays": [
+    {
+     "date": "2026-03-18",
+     "name": "Festividad fallera"
+    },
+    {
+     "date": "2026-03-20",
+     "name": "Festividad fallera"
+    }
+   ]
+  },
+  "46257": {
+   "holidays": [
+    {
+     "date": "2026-08-25",
+     "name": "Fiesta mayor"
+    },
+    {
+     "date": "2026-12-14",
+     "name": "feria de Santa Lucía"
+    }
+   ]
+  },
+  "46258": {
+   "holidays": [
+    {
+     "date": "2026-01-24",
+     "name": "Virgen de la Paz"
+    },
+    {
+     "date": "2026-03-20",
+     "name": "San José"
+    }
+   ]
+  },
+  "46259": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "Los Cabos"
+    }
+   ]
+  },
+  "46260": {
+   "holidays": [
+    {
+     "date": "2026-10-13",
+     "name": "Santa Bárbara"
+    },
+    {
+     "date": "2026-10-14",
+     "name": "San Honorato"
+    }
+   ]
+  },
+  "46261": {
+   "holidays": [
+    {
+     "date": "2026-03-18",
+     "name": "Fallas"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "Virgen del Rosario"
+    }
+   ]
+  },
+  "46262": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-07-16",
+     "name": "Virgen del Carmen"
+    }
+   ]
+  },
+  "46263": {
+   "holidays": [
+    {
+     "date": "2026-01-16",
+     "name": "San Antón"
+    },
+    {
+     "date": "2026-07-27",
+     "name": "Santa Ana"
+    }
+   ]
+  },
+  "46902": {
+   "holidays": [
+    {
+     "date": "2026-09-24",
+     "name": "Ntra. Sra. de la Merced"
+    },
+    {
+     "date": "2026-09-25",
+     "name": "San José, día de la inauguración del Pozo"
+    }
+   ]
+  },
+  "46903": {
+   "holidays": [
+    {
+     "date": "2026-04-08",
+     "name": "fiesta de la Segregación"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    }
+   ]
+  },
+  "46904": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2026-08-28",
+     "name": "La Beata Inés"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,8431 @@
+{
+ "source_id": "boa-2026",
+ "source": {
+  "title": "Resolución de 4 de noviembre de 2025, del Director General de Trabajo, por la que se determinan las fiestas laborales para el año 2026 en los municipios de las provincias de Huesca, Teruel y Zaragoza (BOA núm. 225, de 20-11-2025), y Resolución complementaria de 10 de marzo de 2026 (BOA núm. 56, de 23-3-2026)",
+  "url": "https://www.boa.aragon.es/cgi-bin/EBOA/BRSCGI?CMD=VEROBJ&MLKOB=1421874360606",
+  "published": "2025-11-20",
+  "modifications": [
+   "https://www.boa.aragon.es/cgi-bin/EBOA/BRSCGI?CMD=VEROBJ&MLKOB=1440857030505"
+  ]
+ },
+ "region": "aragon",
+ "count": 581,
+ "unmatched": [
+  "22 Cuatrocorz: 6 de abril y 15 de mayo."
+ ],
+ "municipios": {
+  "22001": {
+   "holidays": [
+    {
+     "date": "2026-04-30",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "22002": {
+   "holidays": [
+    {
+     "date": "2026-01-12",
+     "name": "San Victorián"
+    },
+    {
+     "date": "2026-05-09",
+     "name": "San Gregorio"
+    }
+   ]
+  },
+  "22003": {
+   "holidays": [
+    {
+     "date": "2026-08-25",
+     "name": "Santas Nunilo"
+    },
+    {
+     "date": "2026-10-22",
+     "name": "Alodia"
+    }
+   ]
+  },
+  "22004": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2026-07-25",
+     "name": "Santiago"
+    }
+   ]
+  },
+  "22006": {
+   "holidays": [
+    {
+     "date": "2026-08-13",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "22007": {
+   "holidays": [
+    {
+     "date": "2026-09-29",
+     "name": "San Miguel Arcángel"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martín"
+    }
+   ]
+  },
+  "22008": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2026-07-20",
+     "name": "Santa Margarita"
+    }
+   ]
+  },
+  "22009": {
+   "holidays": [
+    {
+     "date": "2026-01-22",
+     "name": ""
+    },
+    {
+     "date": "2026-05-15",
+     "name": ""
+    }
+   ]
+  },
+  "22011": {
+   "holidays": [
+    {
+     "date": "2026-08-25",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "22012": {
+   "holidays": [
+    {
+     "date": "2026-05-08",
+     "name": ""
+    },
+    {
+     "date": "2026-09-03",
+     "name": ""
+    }
+   ]
+  },
+  "22013": {
+   "holidays": [
+    {
+     "date": "2026-09-27",
+     "name": ""
+    },
+    {
+     "date": "2026-12-28",
+     "name": ""
+    }
+   ]
+  },
+  "22014": {
+   "holidays": [
+    {
+     "date": "2026-05-08",
+     "name": "Nuestra Señora Virgen de Astón"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "San Bartolomé"
+    }
+   ]
+  },
+  "22015": {
+   "holidays": [
+    {
+     "date": "2026-05-28",
+     "name": ""
+    },
+    {
+     "date": "2026-09-29",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Pueyo de Fañanás",
+     "holidays": [
+      {
+       "date": "2026-04-29",
+       "name": ""
+      },
+      {
+       "date": "2026-10-15",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Ola",
+     "holidays": [
+      {
+       "date": "2026-04-06",
+       "name": ""
+      },
+      {
+       "date": "2026-09-14",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Fañanás",
+     "holidays": [
+      {
+       "date": "2026-08-31",
+       "name": ""
+      },
+      {
+       "date": "2026-12-26",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos."
+  },
+  "22016": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2026-08-31",
+     "name": "San Ramón"
+    }
+   ]
+  },
+  "22018": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "Lunes de Pascua"
+    },
+    {
+     "date": "2026-07-27",
+     "name": "Santa Ana"
+    }
+   ]
+  },
+  "22019": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-07-25",
+     "name": ""
+    }
+   ]
+  },
+  "22020": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "Lunes de Pascua"
+    },
+    {
+     "date": "2026-07-22",
+     "name": "Festividad de Santa María Magdalena"
+    }
+   ]
+  },
+  "22021": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "La Virgen de la Corona"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Artasona del Llano",
+     "holidays": [
+      {
+       "date": "2026-06-13",
+       "name": "San Antonio de Padua"
+      }
+     ]
+    },
+    {
+     "name": "San Jorge",
+     "holidays": [
+      {
+       "date": "2026-04-24",
+       "name": "San Jorge"
+      }
+     ]
+    },
+    {
+     "name": "Valsalada",
+     "holidays": [
+      {
+       "date": "2026-09-23",
+       "name": "San Lino"
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos."
+  },
+  "22022": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2026-04-06",
+     "name": "Lunes de Pascua"
+    }
+   ]
+  },
+  "22023": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "Lunes de Pascua"
+    },
+    {
+     "date": "2026-08-28",
+     "name": "San Agustín"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Frula",
+     "holidays": [
+      {
+       "date": "2026-05-22",
+       "name": "San José de Pignatelli"
+      },
+      {
+       "date": "2026-10-09",
+       "name": "Fiestas de Frula del Pilar"
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos."
+  },
+  "22024": {
+   "holidays": [
+    {
+     "date": "2026-08-13",
+     "name": "San Hipólito"
+    },
+    {
+     "date": "2026-11-09",
+     "name": "San Nicostrato"
+    }
+   ]
+  },
+  "22025": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "Festividad de San Blas"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "Festividad de San Bartolomé"
+    }
+   ]
+  },
+  "22027": {
+   "holidays": [
+    {
+     "date": "2026-02-02",
+     "name": ""
+    },
+    {
+     "date": "2026-10-05",
+     "name": ""
+    }
+   ]
+  },
+  "22028": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2026-09-21",
+     "name": "San Mateo"
+    }
+   ]
+  },
+  "22029": {
+   "holidays": [
+    {
+     "date": "2026-04-30",
+     "name": ""
+    },
+    {
+     "date": "2026-09-28",
+     "name": ""
+    }
+   ]
+  },
+  "22032": {
+   "holidays": [
+    {
+     "date": "2026-08-05",
+     "name": "Nuestra Señora de las Nieves"
+    },
+    {
+     "date": "2026-10-07",
+     "name": "Nuestra Señora del Rosario"
+    }
+   ]
+  },
+  "22035": {
+   "holidays": [
+    {
+     "date": "2026-01-05",
+     "name": ""
+    },
+    {
+     "date": "2026-04-24",
+     "name": ""
+    }
+   ]
+  },
+  "22036": {
+   "holidays": [
+    {
+     "date": "2026-09-04",
+     "name": "Natividad de Nuestra Señora"
+    },
+    {
+     "date": "2026-12-04",
+     "name": "Santa Bárbara"
+    }
+   ]
+  },
+  "22039": {
+   "holidays": [
+    {
+     "date": "2026-09-09",
+     "name": ""
+    },
+    {
+     "date": "2026-09-11",
+     "name": ""
+    }
+   ]
+  },
+  "22040": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2026-04-29",
+     "name": "San Pedro de Verona"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Azanuy",
+     "holidays": [
+      {
+       "date": "2026-01-20",
+       "name": "San Sebastián"
+      },
+      {
+       "date": "2026-04-29",
+       "name": "San Pedro de Verona"
+      }
+     ]
+    },
+    {
+     "name": "Alíns",
+     "holidays": [
+      {
+       "date": "2026-05-08",
+       "name": ""
+      },
+      {
+       "date": "2026-08-07",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos."
+  },
+  "22041": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": ""
+    },
+    {
+     "date": "2026-12-14",
+     "name": ""
+    }
+   ]
+  },
+  "22042": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-08-28",
+     "name": ""
+    }
+   ]
+  },
+  "22043": {
+   "holidays": [
+    {
+     "date": "2026-04-16",
+     "name": "Santo Toribio"
+    },
+    {
+     "date": "2026-08-06",
+     "name": "San Salvador"
+    }
+   ]
+  },
+  "22044": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "Puente Asunción de la Virgen"
+    }
+   ]
+  },
+  "22045": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-05-15",
+     "name": ""
+    }
+   ]
+  },
+  "22046": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": ""
+    },
+    {
+     "date": "2026-08-28",
+     "name": ""
+    }
+   ]
+  },
+  "22047": {
+   "holidays": [
+    {
+     "date": "2026-01-22",
+     "name": ""
+    },
+    {
+     "date": "2026-08-10",
+     "name": ""
+    }
+   ]
+  },
+  "22048": {
+   "holidays": [
+    {
+     "date": "2026-09-04",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "22049": {
+   "holidays": [
+    {
+     "date": "2026-08-04",
+     "name": "Asunción"
+    },
+    {
+     "date": "2026-12-04",
+     "name": "Santa Bárbara"
+    }
+   ]
+  },
+  "22051": {
+   "holidays": [
+    {
+     "date": "2026-01-16",
+     "name": "San Antón"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    }
+   ]
+  },
+  "22053": {
+   "holidays": [
+    {
+     "date": "2026-06-05",
+     "name": ""
+    },
+    {
+     "date": "2026-06-08",
+     "name": ""
+    }
+   ]
+  },
+  "22054": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": ""
+    },
+    {
+     "date": "2026-06-30",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Cerler",
+     "holidays": [
+      {
+       "date": "2026-04-29",
+       "name": ""
+      },
+      {
+       "date": "2026-08-10",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Anciles",
+     "holidays": [
+      {
+       "date": "2026-06-29",
+       "name": ""
+      },
+      {
+       "date": "2026-06-30",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos."
+  },
+  "22055": {
+   "holidays": [
+    {
+     "date": "2026-01-12",
+     "name": "San Victorián"
+    },
+    {
+     "date": "2026-05-09",
+     "name": "San Gregorio"
+    }
+   ]
+  },
+  "22057": {
+   "holidays": [
+    {
+     "date": "2026-02-16",
+     "name": ""
+    },
+    {
+     "date": "2026-10-13",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Chisagüés",
+     "holidays": [
+      {
+       "date": "2026-02-16",
+       "name": ""
+      },
+      {
+       "date": "2026-10-13",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Espierba",
+     "holidays": [
+      {
+       "date": "2026-02-16",
+       "name": ""
+      },
+      {
+       "date": "2026-10-13",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Javierre",
+     "holidays": [
+      {
+       "date": "2026-02-16",
+       "name": ""
+      },
+      {
+       "date": "2026-10-13",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Parzán",
+     "holidays": [
+      {
+       "date": "2026-02-16",
+       "name": ""
+      },
+      {
+       "date": "2026-10-13",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Salinas",
+     "holidays": [
+      {
+       "date": "2026-02-16",
+       "name": ""
+      },
+      {
+       "date": "2026-10-13",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos."
+  },
+  "22058": {
+   "holidays": [
+    {
+     "date": "2026-04-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-08-10",
+     "name": "San Lorenzo"
+    }
+   ]
+  },
+  "22059": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-08-18",
+     "name": ""
+    }
+   ]
+  },
+  "22060": {
+   "holidays": [
+    {
+     "date": "2026-04-25",
+     "name": "San Marco"
+    },
+    {
+     "date": "2026-07-24",
+     "name": "Santa Ana"
+    }
+   ]
+  },
+  "22061": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "Lunes de Pascua"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "Fiesta Mayor"
+    }
+   ]
+  },
+  "22062": {
+   "holidays": [
+    {
+     "date": "2026-07-10",
+     "name": "San Cristóbal"
+    },
+    {
+     "date": "2026-08-31",
+     "name": "San Ramón"
+    }
+   ]
+  },
+  "22063": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2026-05-22",
+     "name": "Santa Quiteria"
+    }
+   ]
+  },
+  "22064": {
+   "holidays": [
+    {
+     "date": "2026-08-31",
+     "name": "San Ramón"
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos.",
+   "nucleos": [
+    {
+     "name": "Torres de Montes",
+     "holidays": [
+      {
+       "date": "2026-10-26",
+       "name": "San Rafael"
+      }
+     ]
+    }
+   ]
+  },
+  "22066": {
+   "holidays": [
+    {
+     "date": "2026-01-26",
+     "name": ""
+    },
+    {
+     "date": "2026-08-21",
+     "name": ""
+    }
+   ]
+  },
+  "22067": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": ""
+    },
+    {
+     "date": "2026-12-31",
+     "name": ""
+    }
+   ]
+  },
+  "22069": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-10-02",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Oto",
+     "holidays": [
+      {
+       "date": "2026-01-20",
+       "name": ""
+      },
+      {
+       "date": "2026-05-09",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Buesa",
+     "holidays": [
+      {
+       "date": "2026-07-02",
+       "name": ""
+      },
+      {
+       "date": "2026-08-31",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Asín de Broto",
+     "holidays": [
+      {
+       "date": "2026-05-02",
+       "name": ""
+      },
+      {
+       "date": "2026-08-24",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Sarvisé",
+     "holidays": [
+      {
+       "date": "2026-02-03",
+       "name": ""
+      },
+      {
+       "date": "2026-09-08",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos."
+  },
+  "22072": {
+   "holidays": [
+    {
+     "date": "2026-06-25",
+     "name": ""
+    },
+    {
+     "date": "2026-07-24",
+     "name": ""
+    }
+   ]
+  },
+  "22074": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "22075": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "San Abdón"
+    },
+    {
+     "date": "2026-07-30",
+     "name": "San Senén"
+    }
+   ]
+  },
+  "22076": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-12-10",
+     "name": ""
+    }
+   ]
+  },
+  "22077": {
+   "holidays": [
+    {
+     "date": "2026-04-22",
+     "name": "San Marcos"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    }
+   ]
+  },
+  "22078": {
+   "holidays": [
+    {
+     "date": "2026-04-24",
+     "name": ""
+    },
+    {
+     "date": "2026-06-24",
+     "name": ""
+    }
+   ]
+  },
+  "22079": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": "Santa Cruz"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "Santa Cruz"
+    }
+   ]
+  },
+  "22080": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-28",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Laguarres",
+     "holidays": [
+      {
+       "date": "2026-01-20",
+       "name": ""
+      },
+      {
+       "date": "2026-08-07",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos."
+  },
+  "22081": {
+   "holidays": [
+    {
+     "date": "2026-03-19",
+     "name": ""
+    },
+    {
+     "date": "2026-12-09",
+     "name": ""
+    }
+   ]
+  },
+  "22082": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "Lunes de Pascua"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Nuestra Señora de la Bella"
+    }
+   ]
+  },
+  "22083": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2026-05-08",
+     "name": "San Miguel"
+    }
+   ]
+  },
+  "22084": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2026-10-09",
+     "name": "Fiestas en honor a la Virgen del Pilar"
+    }
+   ]
+  },
+  "22085": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": ""
+    },
+    {
+     "date": "2026-12-04",
+     "name": ""
+    }
+   ]
+  },
+  "22086": {
+   "holidays": [
+    {
+     "date": "2026-07-06",
+     "name": ""
+    },
+    {
+     "date": "2026-09-29",
+     "name": ""
+    }
+   ]
+  },
+  "22087": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martín"
+    }
+   ]
+  },
+  "22088": {
+   "holidays": [
+    {
+     "date": "2026-01-16",
+     "name": "San Antón"
+    },
+    {
+     "date": "2026-08-07",
+     "name": "San Salvador"
+    }
+   ]
+  },
+  "22089": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "Lunes de Pascua"
+    },
+    {
+     "date": "2026-05-22",
+     "name": "Festividad de Santa Rita"
+    }
+   ]
+  },
+  "22090": {
+   "holidays": [
+    {
+     "date": "2026-02-12",
+     "name": ""
+    },
+    {
+     "date": "2026-10-30",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Asque",
+     "holidays": [
+      {
+       "date": "2026-11-09",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos."
+  },
+  "22094": {
+   "holidays": [
+    {
+     "date": "2026-01-17",
+     "name": ""
+    },
+    {
+     "date": "2026-11-11",
+     "name": ""
+    }
+   ]
+  },
+  "22095": {
+   "holidays": [
+    {
+     "date": "2026-04-24",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "22096": {
+   "holidays": [
+    {
+     "date": "2026-01-22",
+     "name": ""
+    },
+    {
+     "date": "2026-02-18",
+     "name": ""
+    }
+   ]
+  },
+  "22099": {
+   "holidays": [
+    {
+     "date": "2026-01-22",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "22102": {
+   "holidays": [
+    {
+     "date": "2026-01-29",
+     "name": ""
+    },
+    {
+     "date": "2026-07-22",
+     "name": ""
+    }
+   ]
+  },
+  "22103": {
+   "holidays": [
+    {
+     "date": "2026-03-27",
+     "name": ""
+    },
+    {
+     "date": "2026-08-10",
+     "name": ""
+    }
+   ]
+  },
+  "22105": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "Lunes de Pascua"
+    },
+    {
+     "date": "2026-08-06",
+     "name": "San Salvador"
+    }
+   ]
+  },
+  "22107": {
+   "holidays": [
+    {
+     "date": "2026-06-26",
+     "name": "San Pelayo"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Natividad de la Virgen"
+    }
+   ]
+  },
+  "22109": {
+   "holidays": [
+    {
+     "date": "2026-04-24",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "22110": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2026-08-14",
+     "name": "La Asunción"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Cofita",
+     "holidays": [
+      {
+       "date": "2026-02-03",
+       "name": "San Blas"
+      },
+      {
+       "date": "2026-08-25",
+       "name": "San José de Calasanz"
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos."
+  },
+  "22111": {
+   "holidays": [
+    {
+     "date": "2026-07-27",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Bacamorta",
+     "holidays": [
+      {
+       "date": "2026-07-27",
+       "name": ""
+      },
+      {
+       "date": "2026-08-14",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Espluga",
+     "holidays": [
+      {
+       "date": "2026-07-27",
+       "name": ""
+      },
+      {
+       "date": "2026-08-14",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Lacort",
+     "holidays": [
+      {
+       "date": "2026-07-27",
+       "name": ""
+      },
+      {
+       "date": "2026-08-14",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Lascorz",
+     "holidays": [
+      {
+       "date": "2026-07-27",
+       "name": ""
+      },
+      {
+       "date": "2026-08-14",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Las Colladas",
+     "holidays": [
+      {
+       "date": "2026-07-27",
+       "name": ""
+      },
+      {
+       "date": "2026-08-14",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Morillo de Liena",
+     "holidays": [
+      {
+       "date": "2026-07-27",
+       "name": ""
+      },
+      {
+       "date": "2026-08-14",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Navarri",
+     "holidays": [
+      {
+       "date": "2026-07-27",
+       "name": ""
+      },
+      {
+       "date": "2026-08-14",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Senz",
+     "holidays": [
+      {
+       "date": "2026-07-27",
+       "name": ""
+      },
+      {
+       "date": "2026-08-14",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Viu",
+     "holidays": [
+      {
+       "date": "2026-07-27",
+       "name": ""
+      },
+      {
+       "date": "2026-08-14",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos."
+  },
+  "22112": {
+   "holidays": [
+    {
+     "date": "2026-10-09",
+     "name": ""
+    },
+    {
+     "date": "2026-10-13",
+     "name": ""
+    }
+   ]
+  },
+  "22113": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-06-01",
+     "name": ""
+    }
+   ]
+  },
+  "22114": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-08-20",
+     "name": "San Joaquín"
+    }
+   ]
+  },
+  "22115": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": "Natividad de la Virgen"
+    },
+    {
+     "date": "2026-09-09",
+     "name": "Virgen del Viñero"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Artasona",
+     "holidays": [
+      {
+       "date": "2026-08-04",
+       "name": "San Plácido"
+      },
+      {
+       "date": "2026-09-08",
+       "name": "Natividad de la Virgen"
+      }
+     ]
+    },
+    {
+     "name": "Enate",
+     "holidays": [
+      {
+       "date": "2026-01-29",
+       "name": "San Valero"
+      },
+      {
+       "date": "2026-09-08",
+       "name": "Natividad de la Virgen"
+      }
+     ]
+    },
+    {
+     "name": "Coscujuela de Fantova",
+     "holidays": [
+      {
+       "date": "2026-05-25",
+       "name": "Virgen del Socorro"
+      },
+      {
+       "date": "2026-09-08",
+       "name": "Natividad de la Virgen"
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos."
+  },
+  "22116": {
+   "holidays": [
+    {
+     "date": "2026-01-07",
+     "name": "San Raimundo"
+    },
+    {
+     "date": "2026-07-25",
+     "name": "Santiago Apóstol"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Montesusin",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      },
+      {
+       "date": "2026-09-25",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Curbe",
+     "holidays": [
+      {
+       "date": "2026-10-15",
+       "name": ""
+      },
+      {
+       "date": "2026-10-16",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Callén",
+     "holidays": [
+      {
+       "date": "2026-01-21",
+       "name": ""
+      },
+      {
+       "date": "2026-05-09",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Fraella",
+     "holidays": [
+      {
+       "date": "2026-08-25",
+       "name": ""
+      },
+      {
+       "date": "2026-08-26",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos."
+  },
+  "22117": {
+   "holidays": [
+    {
+     "date": "2026-09-14",
+     "name": "Exaltación de la Santa Cruz"
+    },
+    {
+     "date": "2026-09-15",
+     "name": "San Vicente Ferrer"
+    }
+   ]
+  },
+  "22119": {
+   "holidays": [
+    {
+     "date": "2026-09-07",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Temple (El)",
+     "holidays": [
+      {
+       "date": "2026-04-24",
+       "name": ""
+      },
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Paúl",
+     "holidays": [
+      {
+       "date": "2026-05-25",
+       "name": ""
+      },
+      {
+       "date": "2026-08-24",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos."
+  },
+  "22122": {
+   "holidays": [
+    {
+     "date": "2026-08-10",
+     "name": ""
+    },
+    {
+     "date": "2026-08-11",
+     "name": ""
+    }
+   ]
+  },
+  "22124": {
+   "holidays": [
+    {
+     "date": "2026-02-06",
+     "name": ""
+    },
+    {
+     "date": "2026-04-17",
+     "name": ""
+    }
+   ]
+  },
+  "22125": {
+   "holidays": [
+    {
+     "date": "2026-01-22",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2026-08-10",
+     "name": "San Lorenzo"
+    }
+   ]
+  },
+  "22126": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": "La Virgen de Foces"
+    },
+    {
+     "date": "2026-11-23",
+     "name": "San Clemente"
+    }
+   ]
+  },
+  "22128": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2026-09-25",
+     "name": "San Cosme y San Damián"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Fornillos de Ilche",
+     "holidays": [
+      {
+       "date": "2026-07-22",
+       "name": ""
+      },
+      {
+       "date": "2026-09-29",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Monesma de San Juan",
+     "holidays": [
+      {
+       "date": "2026-07-25",
+       "name": ""
+      },
+      {
+       "date": "2026-12-09",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Morilla",
+     "holidays": [
+      {
+       "date": "2026-04-22",
+       "name": ""
+      },
+      {
+       "date": "2026-11-30",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Permisán",
+     "holidays": [
+      {
+       "date": "2026-07-27",
+       "name": ""
+      },
+      {
+       "date": "2026-09-29",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos."
+  },
+  "22129": {
+   "holidays": [
+    {
+     "date": "2026-08-14",
+     "name": ""
+    },
+    {
+     "date": "2026-08-21",
+     "name": ""
+    }
+   ]
+  },
+  "22130": {
+   "holidays": [
+    {
+     "date": "2026-06-25",
+     "name": "Festividad de Santa Orosia"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "Festividad de San Pedro"
+    }
+   ]
+  },
+  "22131": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "San Roque"
+    }
+   ]
+  },
+  "22133": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "San Roque"
+    }
+   ]
+  },
+  "22135": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-08-21",
+     "name": ""
+    }
+   ]
+  },
+  "22136": {
+   "holidays": [
+    {
+     "date": "2026-09-17",
+     "name": ""
+    },
+    {
+     "date": "2026-09-18",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "San Lorenzo de Flumen",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      },
+      {
+       "date": "2026-08-10",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Marcén",
+     "holidays": [
+      {
+       "date": "2026-07-31",
+       "name": ""
+      },
+      {
+       "date": "2026-12-15",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos."
+  },
+  "22137": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-09-21",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Orillena",
+     "holidays": [
+      {
+       "date": "2026-05-04",
+       "name": ""
+      },
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Cantalobos",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      },
+      {
+       "date": "2026-10-13",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos."
+  },
+  "22139": {
+   "holidays": [
+    {
+     "date": "2026-01-12",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "22141": {
+   "holidays": [
+    {
+     "date": "2026-01-17",
+     "name": "San Antón"
+    },
+    {
+     "date": "2026-11-18",
+     "name": "San Román"
+    }
+   ]
+  },
+  "22142": {
+   "holidays": [
+    {
+     "date": "2026-04-24",
+     "name": ""
+    },
+    {
+     "date": "2026-08-21",
+     "name": ""
+    }
+   ]
+  },
+  "22143": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": ""
+    },
+    {
+     "date": "2026-08-25",
+     "name": ""
+    }
+   ]
+  },
+  "22144": {
+   "holidays": [
+    {
+     "date": "2026-01-16",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2026-09-18",
+     "name": "San Mateo"
+    }
+   ]
+  },
+  "22149": {
+   "holidays": [
+    {
+     "date": "2026-07-24",
+     "name": ""
+    },
+    {
+     "date": "2026-10-08",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Santa Engracia de Loarre",
+     "holidays": [
+      {
+       "date": "2026-05-22",
+       "name": ""
+      },
+      {
+       "date": "2026-12-14",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Sarsamarcuello",
+     "holidays": [
+      {
+       "date": "2026-05-22",
+       "name": ""
+      },
+      {
+       "date": "2026-12-04",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Linas de Marcuello",
+     "holidays": [
+      {
+       "date": "2026-05-22",
+       "name": ""
+      },
+      {
+       "date": "2026-07-27",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos."
+  },
+  "22150": {
+   "holidays": [
+    {
+     "date": "2026-01-05",
+     "name": ""
+    },
+    {
+     "date": "2026-04-24",
+     "name": ""
+    }
+   ]
+  },
+  "22151": {
+   "holidays": [
+    {
+     "date": "2026-01-24",
+     "name": "San Babil"
+    },
+    {
+     "date": "2026-06-02",
+     "name": "La Virgen de la Gaberdola"
+    }
+   ]
+  },
+  "22155": {
+   "holidays": [
+    {
+     "date": "2026-06-13",
+     "name": "San Antonio"
+    },
+    {
+     "date": "2026-07-25",
+     "name": "Santiago Apóstol"
+    }
+   ]
+  },
+  "22156": {
+   "holidays": [
+    {
+     "date": "2026-08-31",
+     "name": "San Ramón"
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos.",
+   "nucleos": [
+    {
+     "name": "Lascasas",
+     "holidays": [
+      {
+       "date": "2026-08-24",
+       "name": "San Bartolomé"
+      }
+     ]
+    }
+   ]
+  },
+  "22157": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": ""
+    },
+    {
+     "date": "2026-06-24",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Aneto",
+     "holidays": [
+      {
+       "date": "2026-04-06",
+       "name": ""
+      },
+      {
+       "date": "2026-06-24",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos."
+  },
+  "22158": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "Día de la Alegría"
+    },
+    {
+     "date": "2026-09-21",
+     "name": "San Mateo"
+    }
+   ]
+  },
+  "22160": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-09-21",
+     "name": ""
+    }
+   ]
+  },
+  "22162": {
+   "holidays": [
+    {
+     "date": "2026-07-27",
+     "name": ""
+    },
+    {
+     "date": "2026-10-07",
+     "name": ""
+    }
+   ]
+  },
+  "22163": {
+   "holidays": [
+    {
+     "date": "2026-08-20",
+     "name": "Virgen de Ordás"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martín"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Sabayés",
+     "holidays": [
+      {
+       "date": "2026-09-08",
+       "name": "Natividad de la Virgen"
+      },
+      {
+       "date": "2026-11-30",
+       "name": "San Andrés"
+      }
+     ]
+    },
+    {
+     "name": "Nocito",
+     "holidays": [
+      {
+       "date": "2026-08-24",
+       "name": "San Bartolomé"
+      }
+     ]
+    },
+    {
+     "name": "Santa Eulalia de la Peña",
+     "holidays": [
+      {
+       "date": "2026-08-17",
+       "name": "San Mamés"
+      }
+     ]
+    },
+    {
+     "name": "Belsué",
+     "holidays": [
+      {
+       "date": "2026-05-22",
+       "name": "Sta. Quiteria"
+      },
+      {
+       "date": "2026-11-11",
+       "name": "San Martín"
+      }
+     ]
+    },
+    {
+     "name": "Arascués",
+     "holidays": [
+      {
+       "date": "2026-09-08",
+       "name": "Natividad de la Virgen"
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos."
+  },
+  "22164": {
+   "holidays": [
+    {
+     "date": "2026-05-09",
+     "name": "San Gregorio"
+    },
+    {
+     "date": "2026-09-12",
+     "name": "Santo Cristo"
+    }
+   ]
+  },
+  "22165": {
+   "holidays": [
+    {
+     "date": "2026-02-05",
+     "name": "Santa Águeda"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "La Santa Reliquia"
+    }
+   ]
+  },
+  "22167": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro Labrador"
+    },
+    {
+     "date": "2026-07-20",
+     "name": "Festividad de Santa Margarita"
+    }
+   ]
+  },
+  "22168": {
+   "holidays": [
+    {
+     "date": "2026-04-24",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "22170": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "22172": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": ""
+    },
+    {
+     "date": "2026-10-05",
+     "name": ""
+    }
+   ]
+  },
+  "22173": {
+   "holidays": [
+    {
+     "date": "2026-05-11",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Ena",
+     "holidays": [
+      {
+       "date": "2026-08-14",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Rasal",
+     "holidays": [
+      {
+       "date": "2026-08-14",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Triste",
+     "holidays": [
+      {
+       "date": "2026-08-14",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos."
+  },
+  "22174": {
+   "holidays": [
+    {
+     "date": "2026-02-05",
+     "name": "Santa Águeda"
+    },
+    {
+     "date": "2026-05-25",
+     "name": "Puymelero"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Lagunarrota",
+     "holidays": [
+      {
+       "date": "2026-01-20",
+       "name": ""
+      },
+      {
+       "date": "2026-09-01",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "El Tormillo",
+     "holidays": [
+      {
+       "date": "2026-04-24",
+       "name": ""
+      },
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos."
+  },
+  "22175": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": ""
+    },
+    {
+     "date": "2026-08-25",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Calasanz",
+     "holidays": [
+      {
+       "date": "2026-04-06",
+       "name": ""
+      },
+      {
+       "date": "2026-09-16",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Cuatrocorz",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Gabasa",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      },
+      {
+       "date": "2026-11-11",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Peralta de la Sal",
+     "holidays": [
+      {
+       "date": "2026-04-06",
+       "name": ""
+      },
+      {
+       "date": "2026-08-25",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos."
+  },
+  "22176": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-08-21",
+     "name": ""
+    }
+   ]
+  },
+  "22181": {
+   "holidays": [
+    {
+     "date": "2026-05-22",
+     "name": ""
+    },
+    {
+     "date": "2026-07-18",
+     "name": ""
+    }
+   ]
+  },
+  "22182": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-10-15",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Saravillo",
+     "holidays": [
+      {
+       "date": "2026-08-14",
+       "name": ""
+      },
+      {
+       "date": "2026-08-17",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Serveto",
+     "holidays": [
+      {
+       "date": "2026-08-28",
+       "name": ""
+      },
+      {
+       "date": "2026-08-29",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos."
+  },
+  "22184": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-05-15",
+     "name": ""
+    }
+   ]
+  },
+  "22186": {
+   "holidays": [
+    {
+     "date": "2026-01-02",
+     "name": "San Macario"
+    },
+    {
+     "date": "2026-01-20",
+     "name": "San Fabián"
+    }
+   ]
+  },
+  "22187": {
+   "holidays": [
+    {
+     "date": "2026-05-25",
+     "name": "San Román de Castro"
+    },
+    {
+     "date": "2026-08-14",
+     "name": "San Roque"
+    }
+   ]
+  },
+  "22188": {
+   "holidays": [
+    {
+     "date": "2026-08-14",
+     "name": ""
+    },
+    {
+     "date": "2026-11-03",
+     "name": ""
+    }
+   ]
+  },
+  "22189": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-12-04",
+     "name": ""
+    }
+   ]
+  },
+  "22190": {
+   "holidays": [
+    {
+     "date": "2026-01-12",
+     "name": "San Victorián"
+    },
+    {
+     "date": "2026-04-17",
+     "name": "Santa Engracia"
+    }
+   ]
+  },
+  "22193": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": ""
+    },
+    {
+     "date": "2026-04-30",
+     "name": ""
+    }
+   ]
+  },
+  "22195": {
+   "holidays": [
+    {
+     "date": "2026-04-29",
+     "name": "Festividad de San Pedro de Verona"
+    },
+    {
+     "date": "2026-07-25",
+     "name": "Festividad de Santiago"
+    }
+   ]
+  },
+  "22197": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-04-24",
+     "name": ""
+    }
+   ]
+  },
+  "22199": {
+   "holidays": [
+    {
+     "date": "2026-07-23",
+     "name": ""
+    },
+    {
+     "date": "2026-07-25",
+     "name": ""
+    }
+   ]
+  },
+  "22200": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Eriste",
+     "holidays": [
+      {
+       "date": "2026-01-20",
+       "name": ""
+      },
+      {
+       "date": "2026-07-30",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Eresué",
+     "holidays": [
+      {
+       "date": "2026-06-12",
+       "name": ""
+      },
+      {
+       "date": "2026-06-24",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos."
+  },
+  "22201": {
+   "holidays": [
+    {
+     "date": "2026-02-02",
+     "name": "La Candelera"
+    },
+    {
+     "date": "2026-04-06",
+     "name": "Lunes de Pascua"
+    }
+   ]
+  },
+  "22202": {
+   "holidays": [
+    {
+     "date": "2026-01-22",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2026-08-31",
+     "name": "San Ramón Nonato"
+    }
+   ]
+  },
+  "22203": {
+   "holidays": [
+    {
+     "date": "2026-05-26",
+     "name": ""
+    },
+    {
+     "date": "2026-07-27",
+     "name": ""
+    }
+   ]
+  },
+  "22204": {
+   "holidays": [
+    {
+     "date": "2026-08-05",
+     "name": "Virgen de las Nieves"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "Exaltación de la Santa Cruz"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Escarrilla",
+     "holidays": [
+      {
+       "date": "2026-01-20",
+       "name": ""
+      },
+      {
+       "date": "2026-08-20",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Tramacastilla de Tena",
+     "holidays": [
+      {
+       "date": "2026-07-24",
+       "name": ""
+      },
+      {
+       "date": "2026-10-05",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Sandinies",
+     "holidays": [
+      {
+       "date": "2026-08-24",
+       "name": ""
+      },
+      {
+       "date": "2026-08-25",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos."
+  },
+  "22205": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "Lunes de Pascua"
+    },
+    {
+     "date": "2026-08-14",
+     "name": "San Roque"
+    }
+   ]
+  },
+  "22206": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    }
+   ]
+  },
+  "22207": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": ""
+    },
+    {
+     "date": "2026-08-25",
+     "name": ""
+    }
+   ]
+  },
+  "22208": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro Labrador"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Natividad de la Virgen María"
+    }
+   ]
+  },
+  "22209": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": ""
+    },
+    {
+     "date": "2026-10-20",
+     "name": ""
+    }
+   ]
+  },
+  "22212": {
+   "holidays": [
+    {
+     "date": "2026-08-07",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "22213": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2026-09-02",
+     "name": "San Antolín"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Pallaruelo de Monegros",
+     "holidays": [
+      {
+       "date": "2026-01-20",
+       "name": "San Sebastián"
+      },
+      {
+       "date": "2026-08-06",
+       "name": "San Salvador"
+      }
+     ]
+    },
+    {
+     "name": "San Juan de Flumen",
+     "holidays": [
+      {
+       "date": "2026-06-24",
+       "name": "San Juan Bautista"
+      },
+      {
+       "date": "2026-08-29",
+       "name": "Degollación de San Juan"
+      }
+     ]
+    },
+    {
+     "name": "Cartuja de Monegros",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro"
+      },
+      {
+       "date": "2026-10-06",
+       "name": "San Bruno"
+      }
+     ]
+    },
+    {
+     "name": "Lastanosa",
+     "holidays": [
+      {
+       "date": "2026-01-20",
+       "name": "San Sebastián"
+      },
+      {
+       "date": "2026-08-06",
+       "name": "San Salvador"
+      }
+     ]
+    },
+    {
+     "name": "La Masadera",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro"
+      },
+      {
+       "date": "2026-08-10",
+       "name": "San Lorenzo"
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos."
+  },
+  "22214": {
+   "holidays": [
+    {
+     "date": "2026-01-16",
+     "name": "San Antonio Abad"
+    },
+    {
+     "date": "2026-04-27",
+     "name": "San Pedro de Verona"
+    }
+   ]
+  },
+  "22215": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": ""
+    },
+    {
+     "date": "2026-07-17",
+     "name": ""
+    }
+   ]
+  },
+  "22217": {
+   "holidays": [
+    {
+     "date": "2026-05-22",
+     "name": "Santa Quiteria"
+    },
+    {
+     "date": "2026-10-02",
+     "name": "San Ángel Custodio"
+    }
+   ]
+  },
+  "22218": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-08-24",
+     "name": ""
+    }
+   ]
+  },
+  "22220": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "Lunes de Pascua"
+    },
+    {
+     "date": "2026-12-19",
+     "name": "Virgen de la Jarea"
+    }
+   ]
+  },
+  "22221": {
+   "holidays": [
+    {
+     "date": "2026-04-30",
+     "name": ""
+    },
+    {
+     "date": "2026-08-25",
+     "name": ""
+    }
+   ]
+  },
+  "22222": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Pedro Mártir"
+    },
+    {
+     "date": "2026-12-18",
+     "name": "Virgen de la Esperanza"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Arbaniés",
+     "holidays": [
+      {
+       "date": "2026-08-14",
+       "name": "Virgen de Agosto"
+      },
+      {
+       "date": "2026-12-31",
+       "name": "San Silvestre"
+      }
+     ]
+    },
+    {
+     "name": "Castejón de Arbaniés",
+     "holidays": [
+      {
+       "date": "2026-07-20",
+       "name": ""
+      },
+      {
+       "date": "2026-12-26",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Liesa",
+     "holidays": [
+      {
+       "date": "2026-01-20",
+       "name": "San Sebastián"
+      },
+      {
+       "date": "2026-06-09",
+       "name": "Romería Las Reliquias"
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos."
+  },
+  "22223": {
+   "holidays": [
+    {
+     "date": "2026-01-05",
+     "name": ""
+    },
+    {
+     "date": "2026-04-24",
+     "name": ""
+    }
+   ]
+  },
+  "22225": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "Lunes de Pascua"
+    },
+    {
+     "date": "2026-09-04",
+     "name": "Día de la Patrona"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Algayón",
+     "holidays": [
+      {
+       "date": "2026-07-10",
+       "name": ""
+      },
+      {
+       "date": "2026-11-30",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos."
+  },
+  "22226": {
+   "holidays": [
+    {
+     "date": "2026-05-22",
+     "name": ""
+    },
+    {
+     "date": "2026-05-25",
+     "name": ""
+    }
+   ]
+  },
+  "22227": {
+   "holidays": [
+    {
+     "date": "2026-04-24",
+     "name": ""
+    },
+    {
+     "date": "2026-07-31",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Lafortunada",
+     "holidays": [
+      {
+       "date": "2026-04-24",
+       "name": ""
+      },
+      {
+       "date": "2026-07-31",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Tella",
+     "holidays": [
+      {
+       "date": "2026-04-24",
+       "name": ""
+      },
+      {
+       "date": "2026-08-31",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Sin",
+     "holidays": [
+      {
+       "date": "2026-04-24",
+       "name": ""
+      },
+      {
+       "date": "2026-08-04",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Salinas",
+     "holidays": [
+      {
+       "date": "2026-04-24",
+       "name": ""
+      },
+      {
+       "date": "2026-10-02",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos."
+  },
+  "22228": {
+   "holidays": [
+    {
+     "date": "2026-01-22",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2026-08-10",
+     "name": "San Lorenzo"
+    }
+   ]
+  },
+  "22229": {
+   "holidays": [
+    {
+     "date": "2026-01-16",
+     "name": ""
+    },
+    {
+     "date": "2026-04-06",
+     "name": ""
+    }
+   ]
+  },
+  "22230": {
+   "holidays": [
+    {
+     "date": "2026-05-25",
+     "name": "Santa Elena"
+    },
+    {
+     "date": "2026-10-13",
+     "name": "la Virgen del Pilar"
+    }
+   ]
+  },
+  "22232": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": ""
+    },
+    {
+     "date": "2026-10-02",
+     "name": ""
+    }
+   ]
+  },
+  "22233": {
+   "holidays": [
+    {
+     "date": "2026-08-10",
+     "name": "San Lorenzo"
+    },
+    {
+     "date": "2026-08-11",
+     "name": "San Lorenzo"
+    }
+   ]
+  },
+  "22236": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-07-24",
+     "name": "Santa Ana"
+    }
+   ]
+  },
+  "22239": {
+   "holidays": [
+    {
+     "date": "2026-02-10",
+     "name": "Nuestra Señora del Puyal"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "La Natividad de Nuestra Señora"
+    }
+   ]
+  },
+  "22242": {
+   "holidays": [
+    {
+     "date": "2026-05-08",
+     "name": ""
+    },
+    {
+     "date": "2026-09-29",
+     "name": ""
+    }
+   ]
+  },
+  "22243": {
+   "holidays": [
+    {
+     "date": "2026-03-19",
+     "name": "San José"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Natividad"
+    }
+   ]
+  },
+  "22244": {
+   "holidays": [
+    {
+     "date": "2026-08-20",
+     "name": ""
+    },
+    {
+     "date": "2026-08-21",
+     "name": ""
+    }
+   ]
+  },
+  "22245": {
+   "holidays": [
+    {
+     "date": "2026-01-29",
+     "name": ""
+    },
+    {
+     "date": "2026-02-17",
+     "name": ""
+    }
+   ]
+  },
+  "22246": {
+   "holidays": [
+    {
+     "date": "2026-08-14",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "22247": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "22248": {
+   "holidays": [
+    {
+     "date": "2026-05-11",
+     "name": "San Gregorio"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "San Miguel"
+    }
+   ]
+  },
+  "22249": {
+   "holidays": [
+    {
+     "date": "2026-04-29",
+     "name": ""
+    },
+    {
+     "date": "2026-04-30",
+     "name": ""
+    }
+   ]
+  },
+  "22250": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": "Natividad de Nuestra Señora"
+    },
+    {
+     "date": "2026-12-26",
+     "name": "San Esteban"
+    }
+   ]
+  },
+  "22251": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2026-08-04",
+     "name": "Santo Domingo"
+    }
+   ]
+  },
+  "22252": {
+   "holidays": [
+    {
+     "date": "2026-06-25",
+     "name": "Santa Orosia"
+    },
+    {
+     "date": "2026-08-10",
+     "name": "San Lorenzo"
+    }
+   ]
+  },
+  "22253": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "Día de San Sebastián"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Día de la Natividad de la Virgen"
+    }
+   ]
+  },
+  "22254": {
+   "holidays": [
+    {
+     "date": "2026-01-16",
+     "name": "San Antón"
+    },
+    {
+     "date": "2026-08-14",
+     "name": "Santísima Virgen de la Asunción"
+    }
+   ]
+  },
+  "22901": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": "La Virgen de Escagües"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martín"
+    }
+   ]
+  },
+  "22902": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    }
+   ]
+  },
+  "22903": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": ""
+    },
+    {
+     "date": "2026-10-09",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Estiche de Cinca",
+     "holidays": [
+      {
+       "date": "2026-04-06",
+       "name": ""
+      },
+      {
+       "date": "2026-09-29",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Santalecina",
+     "holidays": [
+      {
+       "date": "2026-04-06",
+       "name": ""
+      },
+      {
+       "date": "2026-08-06",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos."
+  },
+  "22904": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "San Bartolomé"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Bolea",
+     "holidays": [
+      {
+       "date": "2026-01-20",
+       "name": ""
+      },
+      {
+       "date": "2026-08-24",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Aniés",
+     "holidays": [
+      {
+       "date": "2026-05-08",
+       "name": ""
+      },
+      {
+       "date": "2026-08-03",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Puibolea",
+     "holidays": [
+      {
+       "date": "2026-01-24",
+       "name": ""
+      },
+      {
+       "date": "2026-09-08",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Esquedas",
+     "holidays": [
+      {
+       "date": "2026-05-11",
+       "name": ""
+      },
+      {
+       "date": "2026-07-16",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Lierta",
+     "holidays": [
+      {
+       "date": "2026-05-11",
+       "name": ""
+      },
+      {
+       "date": "2026-10-09",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Plasencia del Monte",
+     "holidays": [
+      {
+       "date": "2026-01-20",
+       "name": ""
+      },
+      {
+       "date": "2026-08-31",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Quinzano",
+     "holidays": [
+      {
+       "date": "2026-08-03",
+       "name": ""
+      },
+      {
+       "date": "2026-08-04",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos."
+  },
+  "22905": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2026-08-25",
+     "name": "San Ginés"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Ortilla",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro"
+      },
+      {
+       "date": "2026-09-01",
+       "name": "San Gil"
+      }
+     ]
+    },
+    {
+     "name": "Montmesa",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro"
+      },
+      {
+       "date": "2026-09-29",
+       "name": "San Miguel"
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos."
+  },
+  "22906": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "S. Sebastián"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "S. Isidro"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Buera y Huerta de Vero",
+     "holidays": [
+      {
+       "date": "2026-01-20",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Huerta de Vero",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Buera",
+     "holidays": [
+      {
+       "date": "2026-08-29",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos."
+  },
+  "22907": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "22908": {
+   "holidays": [
+    {
+     "date": "2026-01-17",
+     "name": "San Antonio Abad"
+    },
+    {
+     "date": "2026-07-22",
+     "name": "Santa María Magdalena"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Costean",
+     "holidays": [
+      {
+       "date": "2026-01-20",
+       "name": "San Fabián"
+      },
+      {
+       "date": "2026-08-10",
+       "name": "San Lorenzo"
+      }
+     ]
+    },
+    {
+     "name": "Salinas de Hoz",
+     "holidays": [
+      {
+       "date": "2026-04-25",
+       "name": "San Marcos"
+      }
+     ]
+    },
+    {
+     "name": "Montesa",
+     "holidays": [
+      {
+       "date": "2026-11-12",
+       "name": "San Millán de la Cogolla"
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades/pueblos) of the municipality have their own days; see nucleos."
+  },
+  "22909": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": ""
+    },
+    {
+     "date": "2026-07-24",
+     "name": ""
+    }
+   ]
+  },
+  "44002": {
+   "holidays": [
+    {
+     "date": "2026-07-21",
+     "name": ""
+    },
+    {
+     "date": "2026-08-27",
+     "name": ""
+    }
+   ]
+  },
+  "44004": {
+   "holidays": [
+    {
+     "date": "2026-08-14",
+     "name": ""
+    },
+    {
+     "date": "2026-08-28",
+     "name": ""
+    }
+   ]
+  },
+  "44008": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": ""
+    },
+    {
+     "date": "2026-09-25",
+     "name": ""
+    }
+   ]
+  },
+  "44009": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "44010": {
+   "holidays": [
+    {
+     "date": "2026-08-03",
+     "name": ""
+    },
+    {
+     "date": "2026-08-04",
+     "name": ""
+    }
+   ]
+  },
+  "44012": {
+   "holidays": [
+    {
+     "date": "2026-05-26",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "44013": {
+   "holidays": [
+    {
+     "date": "2026-09-09",
+     "name": ""
+    },
+    {
+     "date": "2026-09-10",
+     "name": ""
+    }
+   ]
+  },
+  "44014": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-09-15",
+     "name": ""
+    }
+   ]
+  },
+  "44016": {
+   "holidays": [
+    {
+     "date": "2026-07-03",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "44017": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "44019": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "44020": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-06-19",
+     "name": ""
+    }
+   ]
+  },
+  "44022": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "44023": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-08-25",
+     "name": ""
+    }
+   ]
+  },
+  "44025": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": ""
+    },
+    {
+     "date": "2026-09-09",
+     "name": ""
+    }
+   ]
+  },
+  "44026": {
+   "holidays": [
+    {
+     "date": "2026-04-24",
+     "name": ""
+    },
+    {
+     "date": "2026-10-13",
+     "name": ""
+    }
+   ]
+  },
+  "44027": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "44029": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "44031": {
+   "holidays": [
+    {
+     "date": "2026-07-24",
+     "name": ""
+    },
+    {
+     "date": "2026-07-27",
+     "name": ""
+    }
+   ]
+  },
+  "44032": {
+   "holidays": [
+    {
+     "date": "2026-08-28",
+     "name": ""
+    },
+    {
+     "date": "2026-09-10",
+     "name": ""
+    }
+   ]
+  },
+  "44033": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-08-31",
+     "name": ""
+    }
+   ]
+  },
+  "44034": {
+   "holidays": [
+    {
+     "date": "2026-01-29",
+     "name": ""
+    },
+    {
+     "date": "2026-05-15",
+     "name": ""
+    }
+   ]
+  },
+  "44037": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": ""
+    },
+    {
+     "date": "2026-08-24",
+     "name": ""
+    }
+   ]
+  },
+  "44038": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": ""
+    },
+    {
+     "date": "2026-08-10",
+     "name": ""
+    }
+   ]
+  },
+  "44040": {
+   "holidays": [
+    {
+     "date": "2026-04-29",
+     "name": ""
+    },
+    {
+     "date": "2026-07-14",
+     "name": ""
+    }
+   ]
+  },
+  "44044": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": ""
+    },
+    {
+     "date": "2026-05-25",
+     "name": ""
+    }
+   ]
+  },
+  "44045": {
+   "holidays": [
+    {
+     "date": "2026-04-24",
+     "name": ""
+    },
+    {
+     "date": "2026-07-13",
+     "name": ""
+    }
+   ]
+  },
+  "44047": {
+   "holidays": [
+    {
+     "date": "2026-04-30",
+     "name": ""
+    },
+    {
+     "date": "2026-06-12",
+     "name": ""
+    }
+   ]
+  },
+  "44048": {
+   "holidays": [
+    {
+     "date": "2026-07-06",
+     "name": ""
+    },
+    {
+     "date": "2026-09-28",
+     "name": ""
+    }
+   ]
+  },
+  "44049": {
+   "holidays": [
+    {
+     "date": "2026-05-25",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "44050": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-08-18",
+     "name": ""
+    }
+   ]
+  },
+  "44051": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": ""
+    },
+    {
+     "date": "2026-10-13",
+     "name": ""
+    }
+   ]
+  },
+  "44052": {
+   "holidays": [
+    {
+     "date": "2026-08-18",
+     "name": ""
+    },
+    {
+     "date": "2026-08-19",
+     "name": ""
+    }
+   ]
+  },
+  "44054": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-09-21",
+     "name": ""
+    }
+   ]
+  },
+  "44056": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "44059": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": ""
+    },
+    {
+     "date": "2026-08-25",
+     "name": ""
+    }
+   ]
+  },
+  "44061": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": ""
+    },
+    {
+     "date": "2026-07-27",
+     "name": ""
+    }
+   ]
+  },
+  "44062": {
+   "holidays": [
+    {
+     "date": "2026-02-05",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "44063": {
+   "holidays": [
+    {
+     "date": "2026-01-30",
+     "name": ""
+    },
+    {
+     "date": "2026-08-21",
+     "name": ""
+    }
+   ]
+  },
+  "44064": {
+   "holidays": [
+    {
+     "date": "2026-05-25",
+     "name": ""
+    },
+    {
+     "date": "2026-08-10",
+     "name": ""
+    }
+   ]
+  },
+  "44067": {
+   "holidays": [
+    {
+     "date": "2026-01-29",
+     "name": ""
+    },
+    {
+     "date": "2026-10-20",
+     "name": ""
+    }
+   ]
+  },
+  "44068": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-05-25",
+     "name": ""
+    }
+   ]
+  },
+  "44070": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": ""
+    },
+    {
+     "date": "2026-07-13",
+     "name": ""
+    }
+   ]
+  },
+  "44071": {
+   "holidays": [
+    {
+     "date": "2026-08-07",
+     "name": ""
+    },
+    {
+     "date": "2026-08-10",
+     "name": ""
+    }
+   ]
+  },
+  "44076": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-05-15",
+     "name": ""
+    }
+   ]
+  },
+  "44077": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": ""
+    },
+    {
+     "date": "2026-08-24",
+     "name": ""
+    }
+   ]
+  },
+  "44080": {
+   "holidays": [
+    {
+     "date": "2026-09-28",
+     "name": ""
+    },
+    {
+     "date": "2026-12-10",
+     "name": ""
+    }
+   ]
+  },
+  "44082": {
+   "holidays": [
+    {
+     "date": "2026-06-12",
+     "name": ""
+    },
+    {
+     "date": "2026-10-19",
+     "name": ""
+    }
+   ]
+  },
+  "44084": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-24",
+     "name": ""
+    }
+   ]
+  },
+  "44085": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-12-04",
+     "name": ""
+    }
+   ]
+  },
+  "44086": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": ""
+    },
+    {
+     "date": "2026-10-08",
+     "name": ""
+    }
+   ]
+  },
+  "44089": {
+   "holidays": [
+    {
+     "date": "2026-05-22",
+     "name": ""
+    },
+    {
+     "date": "2026-06-19",
+     "name": ""
+    }
+   ]
+  },
+  "44090": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-07-27",
+     "name": ""
+    }
+   ]
+  },
+  "44092": {
+   "holidays": [
+    {
+     "date": "2026-08-13",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "44094": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": ""
+    },
+    {
+     "date": "2026-09-07",
+     "name": ""
+    }
+   ]
+  },
+  "44096": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-09-11",
+     "name": ""
+    }
+   ]
+  },
+  "44097": {
+   "holidays": [
+    {
+     "date": "2026-05-22",
+     "name": ""
+    },
+    {
+     "date": "2026-08-10",
+     "name": ""
+    }
+   ]
+  },
+  "44099": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": ""
+    },
+    {
+     "date": "2026-06-25",
+     "name": ""
+    }
+   ]
+  },
+  "44100": {
+   "holidays": [
+    {
+     "date": "2026-04-16",
+     "name": ""
+    },
+    {
+     "date": "2026-09-04",
+     "name": ""
+    }
+   ]
+  },
+  "44103": {
+   "holidays": [
+    {
+     "date": "2026-07-13",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "44105": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-08-21",
+     "name": ""
+    }
+   ]
+  },
+  "44107": {
+   "holidays": [
+    {
+     "date": "2026-08-07",
+     "name": ""
+    },
+    {
+     "date": "2026-08-10",
+     "name": ""
+    }
+   ]
+  },
+  "44108": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "44109": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-08-18",
+     "name": ""
+    }
+   ]
+  },
+  "44112": {
+   "holidays": [
+    {
+     "date": "2026-09-07",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "44113": {
+   "holidays": [
+    {
+     "date": "2026-07-22",
+     "name": ""
+    },
+    {
+     "date": "2026-09-29",
+     "name": ""
+    }
+   ]
+  },
+  "44114": {
+   "holidays": [
+    {
+     "date": "2026-04-24",
+     "name": ""
+    },
+    {
+     "date": "2026-09-29",
+     "name": ""
+    }
+   ]
+  },
+  "44115": {
+   "holidays": [
+    {
+     "date": "2026-07-13",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "44116": {
+   "holidays": [
+    {
+     "date": "2026-02-02",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "44117": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-20",
+     "name": ""
+    }
+   ]
+  },
+  "44118": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": ""
+    },
+    {
+     "date": "2026-08-24",
+     "name": ""
+    }
+   ]
+  },
+  "44119": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": ""
+    },
+    {
+     "date": "2026-07-22",
+     "name": ""
+    }
+   ]
+  },
+  "44120": {
+   "holidays": [
+    {
+     "date": "2026-04-24",
+     "name": ""
+    },
+    {
+     "date": "2026-05-15",
+     "name": ""
+    }
+   ]
+  },
+  "44121": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": ""
+    },
+    {
+     "date": "2026-06-26",
+     "name": ""
+    }
+   ]
+  },
+  "44122": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": ""
+    },
+    {
+     "date": "2026-08-21",
+     "name": ""
+    }
+   ]
+  },
+  "44123": {
+   "holidays": [
+    {
+     "date": "2026-11-26",
+     "name": ""
+    },
+    {
+     "date": "2026-11-27",
+     "name": ""
+    }
+   ]
+  },
+  "44124": {
+   "holidays": [
+    {
+     "date": "2026-04-29",
+     "name": ""
+    },
+    {
+     "date": "2026-08-05",
+     "name": ""
+    }
+   ]
+  },
+  "44127": {
+   "holidays": [
+    {
+     "date": "2026-07-10",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "44128": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "44129": {
+   "holidays": [
+    {
+     "date": "2026-12-03",
+     "name": ""
+    },
+    {
+     "date": "2026-12-04",
+     "name": ""
+    }
+   ]
+  },
+  "44131": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-12-14",
+     "name": ""
+    }
+   ]
+  },
+  "44135": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": ""
+    },
+    {
+     "date": "2026-07-13",
+     "name": ""
+    }
+   ]
+  },
+  "44137": {
+   "holidays": [
+    {
+     "date": "2026-04-24",
+     "name": ""
+    },
+    {
+     "date": "2026-05-11",
+     "name": ""
+    }
+   ]
+  },
+  "44141": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": ""
+    },
+    {
+     "date": "2026-09-04",
+     "name": ""
+    }
+   ]
+  },
+  "44143": {
+   "holidays": [
+    {
+     "date": "2026-08-06",
+     "name": ""
+    },
+    {
+     "date": "2026-10-13",
+     "name": ""
+    }
+   ]
+  },
+  "44144": {
+   "holidays": [
+    {
+     "date": "2026-01-05",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "44145": {
+   "holidays": [
+    {
+     "date": "2026-08-21",
+     "name": ""
+    },
+    {
+     "date": "2026-08-24",
+     "name": ""
+    }
+   ]
+  },
+  "44147": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": ""
+    },
+    {
+     "date": "2026-05-15",
+     "name": ""
+    }
+   ]
+  },
+  "44151": {
+   "holidays": [
+    {
+     "date": "2026-01-19",
+     "name": ""
+    },
+    {
+     "date": "2026-08-03",
+     "name": ""
+    }
+   ]
+  },
+  "44154": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "44155": {
+   "holidays": [
+    {
+     "date": "2026-05-25",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "44157": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-07",
+     "name": ""
+    }
+   ]
+  },
+  "44158": {
+   "holidays": [
+    {
+     "date": "2026-09-29",
+     "name": ""
+    },
+    {
+     "date": "2026-09-30",
+     "name": ""
+    }
+   ]
+  },
+  "44160": {
+   "holidays": [
+    {
+     "date": "2026-04-29",
+     "name": ""
+    },
+    {
+     "date": "2026-06-01",
+     "name": ""
+    }
+   ]
+  },
+  "44163": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-09-29",
+     "name": ""
+    }
+   ]
+  },
+  "44164": {
+   "holidays": [
+    {
+     "date": "2026-12-14",
+     "name": ""
+    },
+    {
+     "date": "2026-12-28",
+     "name": ""
+    }
+   ]
+  },
+  "44165": {
+   "holidays": [
+    {
+     "date": "2026-02-02",
+     "name": ""
+    },
+    {
+     "date": "2026-05-04",
+     "name": ""
+    }
+   ]
+  },
+  "44171": {
+   "holidays": [
+    {
+     "date": "2026-09-14",
+     "name": ""
+    },
+    {
+     "date": "2026-11-23",
+     "name": ""
+    }
+   ]
+  },
+  "44172": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "44174": {
+   "holidays": [
+    {
+     "date": "2026-04-24",
+     "name": ""
+    },
+    {
+     "date": "2026-11-12",
+     "name": ""
+    }
+   ]
+  },
+  "44177": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-07-17",
+     "name": ""
+    }
+   ]
+  },
+  "44179": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "44181": {
+   "holidays": [
+    {
+     "date": "2026-01-16",
+     "name": ""
+    },
+    {
+     "date": "2026-08-24",
+     "name": ""
+    }
+   ]
+  },
+  "44182": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-05-15",
+     "name": ""
+    }
+   ]
+  },
+  "44187": {
+   "holidays": [
+    {
+     "date": "2026-09-25",
+     "name": ""
+    },
+    {
+     "date": "2026-09-28",
+     "name": ""
+    }
+   ]
+  },
+  "44189": {
+   "holidays": [
+    {
+     "date": "2026-08-03",
+     "name": ""
+    },
+    {
+     "date": "2026-11-25",
+     "name": ""
+    }
+   ]
+  },
+  "44191": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": ""
+    },
+    {
+     "date": "2026-07-24",
+     "name": ""
+    }
+   ]
+  },
+  "44192": {
+   "holidays": [
+    {
+     "date": "2026-09-14",
+     "name": ""
+    },
+    {
+     "date": "2026-09-15",
+     "name": ""
+    }
+   ]
+  },
+  "44193": {
+   "holidays": [
+    {
+     "date": "2026-03-27",
+     "name": ""
+    },
+    {
+     "date": "2026-06-15",
+     "name": ""
+    }
+   ]
+  },
+  "44195": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-12-04",
+     "name": ""
+    }
+   ]
+  },
+  "44196": {
+   "holidays": [
+    {
+     "date": "2026-08-07",
+     "name": ""
+    },
+    {
+     "date": "2026-08-10",
+     "name": ""
+    }
+   ]
+  },
+  "44197": {
+   "holidays": [
+    {
+     "date": "2026-06-19",
+     "name": ""
+    },
+    {
+     "date": "2026-11-25",
+     "name": ""
+    }
+   ]
+  },
+  "44199": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": ""
+    },
+    {
+     "date": "2026-04-07",
+     "name": ""
+    }
+   ]
+  },
+  "44200": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-09-24",
+     "name": ""
+    }
+   ]
+  },
+  "44201": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "44203": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-09-29",
+     "name": ""
+    }
+   ]
+  },
+  "44204": {
+   "holidays": [
+    {
+     "date": "2026-08-21",
+     "name": ""
+    },
+    {
+     "date": "2026-08-24",
+     "name": ""
+    }
+   ]
+  },
+  "44206": {
+   "holidays": [
+    {
+     "date": "2026-08-27",
+     "name": ""
+    },
+    {
+     "date": "2026-08-28",
+     "name": ""
+    }
+   ]
+  },
+  "44207": {
+   "holidays": [
+    {
+     "date": "2026-05-18",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "44208": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": ""
+    },
+    {
+     "date": "2026-09-29",
+     "name": ""
+    }
+   ]
+  },
+  "44209": {
+   "holidays": [
+    {
+     "date": "2026-02-12",
+     "name": ""
+    },
+    {
+     "date": "2026-08-24",
+     "name": ""
+    }
+   ]
+  },
+  "44210": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-09-21",
+     "name": ""
+    }
+   ]
+  },
+  "44212": {
+   "holidays": [
+    {
+     "date": "2026-01-29",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "44215": {
+   "holidays": [
+    {
+     "date": "2026-07-03",
+     "name": ""
+    },
+    {
+     "date": "2026-10-09",
+     "name": ""
+    }
+   ]
+  },
+  "44216": {
+   "holidays": [
+    {
+     "date": "2026-04-07",
+     "name": ""
+    },
+    {
+     "date": "2026-07-13",
+     "name": ""
+    }
+   ]
+  },
+  "44217": {
+   "holidays": [
+    {
+     "date": "2026-08-07",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "44218": {
+   "holidays": [
+    {
+     "date": "2026-07-10",
+     "name": ""
+    },
+    {
+     "date": "2026-10-24",
+     "name": ""
+    }
+   ]
+  },
+  "44220": {
+   "holidays": [
+    {
+     "date": "2026-01-07",
+     "name": ""
+    },
+    {
+     "date": "2026-05-15",
+     "name": ""
+    }
+   ]
+  },
+  "44221": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-09-29",
+     "name": ""
+    }
+   ]
+  },
+  "44222": {
+   "holidays": [
+    {
+     "date": "2026-02-07",
+     "name": ""
+    },
+    {
+     "date": "2026-12-12",
+     "name": ""
+    }
+   ]
+  },
+  "44223": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": ""
+    },
+    {
+     "date": "2026-08-20",
+     "name": ""
+    }
+   ]
+  },
+  "44225": {
+   "holidays": [
+    {
+     "date": "2026-05-25",
+     "name": ""
+    },
+    {
+     "date": "2026-08-31",
+     "name": ""
+    }
+   ]
+  },
+  "44226": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-10-21",
+     "name": ""
+    }
+   ]
+  },
+  "44227": {
+   "holidays": [
+    {
+     "date": "2026-02-28",
+     "name": ""
+    },
+    {
+     "date": "2026-05-15",
+     "name": ""
+    }
+   ]
+  },
+  "44228": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-07-10",
+     "name": ""
+    }
+   ]
+  },
+  "44230": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": ""
+    },
+    {
+     "date": "2026-08-24",
+     "name": ""
+    }
+   ]
+  },
+  "44231": {
+   "holidays": [
+    {
+     "date": "2026-04-24",
+     "name": ""
+    },
+    {
+     "date": "2026-09-28",
+     "name": ""
+    }
+   ]
+  },
+  "44232": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": ""
+    },
+    {
+     "date": "2026-08-25",
+     "name": ""
+    }
+   ]
+  },
+  "44234": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-04-30",
+     "name": ""
+    }
+   ]
+  },
+  "44237": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "44238": {
+   "holidays": [
+    {
+     "date": "2026-09-07",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "44239": {
+   "holidays": [
+    {
+     "date": "2026-12-24",
+     "name": ""
+    },
+    {
+     "date": "2026-12-31",
+     "name": ""
+    }
+   ]
+  },
+  "44240": {
+   "holidays": [
+    {
+     "date": "2026-09-21",
+     "name": ""
+    },
+    {
+     "date": "2026-09-22",
+     "name": ""
+    }
+   ]
+  },
+  "44241": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-09-09",
+     "name": ""
+    }
+   ]
+  },
+  "44243": {
+   "holidays": [
+    {
+     "date": "2026-07-30",
+     "name": ""
+    },
+    {
+     "date": "2026-07-31",
+     "name": ""
+    }
+   ]
+  },
+  "44244": {
+   "holidays": [
+    {
+     "date": "2026-07-17",
+     "name": ""
+    },
+    {
+     "date": "2026-08-05",
+     "name": ""
+    }
+   ]
+  },
+  "44245": {
+   "holidays": [
+    {
+     "date": "2026-01-17",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "44247": {
+   "holidays": [
+    {
+     "date": "2026-09-25",
+     "name": ""
+    },
+    {
+     "date": "2026-09-29",
+     "name": ""
+    }
+   ]
+  },
+  "44249": {
+   "holidays": [
+    {
+     "date": "2026-06-13",
+     "name": ""
+    },
+    {
+     "date": "2026-06-15",
+     "name": ""
+    }
+   ]
+  },
+  "44250": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-24",
+     "name": ""
+    }
+   ]
+  },
+  "44257": {
+   "holidays": [
+    {
+     "date": "2026-07-02",
+     "name": ""
+    },
+    {
+     "date": "2026-07-22",
+     "name": ""
+    }
+   ]
+  },
+  "44261": {
+   "holidays": [
+    {
+     "date": "2026-05-18",
+     "name": ""
+    },
+    {
+     "date": "2026-09-07",
+     "name": ""
+    }
+   ]
+  },
+  "44263": {
+   "holidays": [
+    {
+     "date": "2026-04-07",
+     "name": ""
+    },
+    {
+     "date": "2026-07-13",
+     "name": ""
+    }
+   ]
+  },
+  "44264": {
+   "holidays": [
+    {
+     "date": "2026-09-04",
+     "name": ""
+    },
+    {
+     "date": "2026-09-07",
+     "name": ""
+    }
+   ]
+  },
+  "44265": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "50001": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2026-08-03",
+     "name": "Virgen de los Santos"
+    }
+   ]
+  },
+  "50002": {
+   "holidays": [
+    {
+     "date": "2026-05-11",
+     "name": "Virgen de Semón"
+    },
+    {
+     "date": "2026-10-02",
+     "name": "San Francisco de Asís"
+    }
+   ]
+  },
+  "50003": {
+   "holidays": [
+    {
+     "date": "2026-04-29",
+     "name": ""
+    },
+    {
+     "date": "2026-08-03",
+     "name": ""
+    }
+   ]
+  },
+  "50005": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": ""
+    },
+    {
+     "date": "2026-05-15",
+     "name": ""
+    }
+   ]
+  },
+  "50006": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    }
+   ]
+  },
+  "50007": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2026-08-05",
+     "name": "Virgen de las Nieves"
+    }
+   ]
+  },
+  "50008": {
+   "holidays": [
+    {
+     "date": "2026-06-12",
+     "name": "San Antonio de Padua"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Virgen del Castillo"
+    }
+   ]
+  },
+  "50011": {
+   "holidays": [
+    {
+     "date": "2026-07-27",
+     "name": "Santiago Apóstol"
+    },
+    {
+     "date": "2026-10-05",
+     "name": "Virgen del Rosario"
+    }
+   ]
+  },
+  "50012": {
+   "holidays": [
+    {
+     "date": "2026-04-29",
+     "name": "Virgen de Montler"
+    },
+    {
+     "date": "2026-08-10",
+     "name": "San Lorenzo"
+    }
+   ]
+  },
+  "50013": {
+   "holidays": [
+    {
+     "date": "2026-05-08",
+     "name": "San Gregorio"
+    },
+    {
+     "date": "2026-12-04",
+     "name": "Santa Bárbara"
+    }
+   ]
+  },
+  "50014": {
+   "holidays": [
+    {
+     "date": "2026-04-24",
+     "name": ""
+    },
+    {
+     "date": "2026-10-13",
+     "name": ""
+    }
+   ]
+  },
+  "50015": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-05-18",
+     "name": ""
+    }
+   ]
+  },
+  "50016": {
+   "holidays": [
+    {
+     "date": "2026-01-17",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "50017": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": "Nuestra Señora Virgen de la Peña"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "San Miguel"
+    }
+   ]
+  },
+  "50018": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "San Roque"
+    }
+   ]
+  },
+  "50019": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-05-19",
+     "name": ""
+    }
+   ]
+  },
+  "50020": {
+   "holidays": [
+    {
+     "date": "2026-05-22",
+     "name": "Santa Quiteria"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "San Roque"
+    }
+   ]
+  },
+  "50022": {
+   "holidays": [
+    {
+     "date": "2026-05-22",
+     "name": "Santa Quiteria"
+    },
+    {
+     "date": "2026-05-25",
+     "name": "San Urbez"
+    }
+   ]
+  },
+  "50023": {
+   "holidays": [
+    {
+     "date": "2026-04-24",
+     "name": ""
+    },
+    {
+     "date": "2026-05-15",
+     "name": ""
+    }
+   ]
+  },
+  "50024": {
+   "holidays": [
+    {
+     "date": "2026-09-10",
+     "name": ""
+    },
+    {
+     "date": "2026-09-11",
+     "name": ""
+    }
+   ]
+  },
+  "50025": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-09-25",
+     "name": ""
+    }
+   ]
+  },
+  "50026": {
+   "holidays": [
+    {
+     "date": "2026-06-18",
+     "name": "San Gervasio"
+    },
+    {
+     "date": "2026-06-19",
+     "name": "San Protasio"
+    }
+   ]
+  },
+  "50027": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2026-08-29",
+     "name": "Santas Reliquias"
+    }
+   ]
+  },
+  "50029": {
+   "holidays": [
+    {
+     "date": "2026-09-21",
+     "name": "Virgen del Castillo"
+    },
+    {
+     "date": "2026-11-23",
+     "name": "San Clemente"
+    }
+   ]
+  },
+  "50030": {
+   "holidays": [
+    {
+     "date": "2026-07-24",
+     "name": "Santiago"
+    },
+    {
+     "date": "2026-10-05",
+     "name": "Virgen del Rosario"
+    }
+   ]
+  },
+  "50031": {
+   "holidays": [
+    {
+     "date": "2026-01-17",
+     "name": "San Antón"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    }
+   ]
+  },
+  "50032": {
+   "holidays": [
+    {
+     "date": "2026-05-11",
+     "name": ""
+    },
+    {
+     "date": "2026-09-26",
+     "name": ""
+    }
+   ]
+  },
+  "50033": {
+   "holidays": [
+    {
+     "date": "2026-01-22",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2026-07-27",
+     "name": "Santa Ana"
+    }
+   ]
+  },
+  "50034": {
+   "holidays": [
+    {
+     "date": "2026-09-14",
+     "name": ""
+    },
+    {
+     "date": "2026-09-15",
+     "name": ""
+    }
+   ]
+  },
+  "50037": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "Virgen de los Mártires"
+    },
+    {
+     "date": "2026-08-28",
+     "name": "San Ramón"
+    }
+   ]
+  },
+  "50038": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "50039": {
+   "holidays": [
+    {
+     "date": "2026-03-19",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "50041": {
+   "holidays": [
+    {
+     "date": "2026-01-09",
+     "name": ""
+    },
+    {
+     "date": "2026-09-29",
+     "name": ""
+    }
+   ]
+  },
+  "50043": {
+   "holidays": [
+    {
+     "date": "2026-05-25",
+     "name": ""
+    },
+    {
+     "date": "2026-10-05",
+     "name": ""
+    }
+   ]
+  },
+  "50044": {
+   "holidays": [
+    {
+     "date": "2026-02-05",
+     "name": "Santa Águeda"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "San Roque"
+    }
+   ]
+  },
+  "50045": {
+   "holidays": [
+    {
+     "date": "2026-04-07",
+     "name": "Nuestra Señora del Pueyo"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "Exaltación de la Santa Cruz"
+    }
+   ]
+  },
+  "50046": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": "San Roque"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "San Miguel Arcángel"
+    }
+   ]
+  },
+  "50047": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-08-18",
+     "name": ""
+    }
+   ]
+  },
+  "50048": {
+   "holidays": [
+    {
+     "date": "2026-01-21",
+     "name": ""
+    },
+    {
+     "date": "2026-08-01",
+     "name": ""
+    }
+   ]
+  },
+  "50050": {
+   "holidays": [
+    {
+     "date": "2026-06-12",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "50051": {
+   "holidays": [
+    {
+     "date": "2026-05-08",
+     "name": "Nuestra Señora del Rosario"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "San Miguel"
+    }
+   ]
+  },
+  "50053": {
+   "holidays": [
+    {
+     "date": "2026-05-25",
+     "name": "San Gregorio"
+    },
+    {
+     "date": "2026-10-02",
+     "name": "Virgen del Rosario"
+    }
+   ]
+  },
+  "50054": {
+   "holidays": [
+    {
+     "date": "2026-04-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "Virgen de los Santos"
+    }
+   ]
+  },
+  "50055": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": ""
+    },
+    {
+     "date": "2026-09-21",
+     "name": ""
+    }
+   ]
+  },
+  "50056": {
+   "holidays": [
+    {
+     "date": "2026-05-08",
+     "name": ""
+    },
+    {
+     "date": "2026-08-28",
+     "name": ""
+    }
+   ]
+  },
+  "50057": {
+   "holidays": [
+    {
+     "date": "2026-01-30",
+     "name": ""
+    },
+    {
+     "date": "2026-07-24",
+     "name": ""
+    }
+   ]
+  },
+  "50058": {
+   "holidays": [
+    {
+     "date": "2026-09-29",
+     "name": "San Miguel"
+    },
+    {
+     "date": "2026-12-18",
+     "name": "Virgen de la Esperanza"
+    }
+   ]
+  },
+  "50059": {
+   "holidays": [
+    {
+     "date": "2026-08-05",
+     "name": "Nuestra Señora de la Virgen de las Nieves"
+    },
+    {
+     "date": "2026-08-28",
+     "name": "San Agustín"
+    }
+   ]
+  },
+  "50060": {
+   "holidays": [
+    {
+     "date": "2026-06-12",
+     "name": "Sagrado Corazón de Jesús"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "San Bartolomé"
+    }
+   ]
+  },
+  "50061": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-10-23",
+     "name": ""
+    }
+   ]
+  },
+  "50062": {
+   "holidays": [
+    {
+     "date": "2026-03-05",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "50063": {
+   "holidays": [
+    {
+     "date": "2026-08-14",
+     "name": "Nuestra Señora Virgen de El Buste"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "San Roque"
+    }
+   ]
+  },
+  "50064": {
+   "holidays": [
+    {
+     "date": "2026-01-23",
+     "name": "San Ildefonso"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "Exaltación de la Santa Cruz"
+    }
+   ]
+  },
+  "50065": {
+   "holidays": [
+    {
+     "date": "2026-09-14",
+     "name": ""
+    },
+    {
+     "date": "2026-09-15",
+     "name": ""
+    }
+   ]
+  },
+  "50066": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": "Santa Cruz"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "Santo Cristo"
+    }
+   ]
+  },
+  "50067": {
+   "holidays": [
+    {
+     "date": "2026-06-01",
+     "name": "San Iñigo"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Virgen de la Peña"
+    }
+   ]
+  },
+  "50068": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "50069": {
+   "holidays": [
+    {
+     "date": "2026-06-06",
+     "name": ""
+    },
+    {
+     "date": "2026-08-01",
+     "name": ""
+    }
+   ]
+  },
+  "50070": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-06-12",
+     "name": ""
+    }
+   ]
+  },
+  "50071": {
+   "holidays": [
+    {
+     "date": "2026-04-29",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "50072": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2026-07-27",
+     "name": "Santa Ana"
+    }
+   ]
+  },
+  "50073": {
+   "holidays": [
+    {
+     "date": "2026-01-29",
+     "name": "San Valero"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "Santo Cristo de Santiago"
+    }
+   ]
+  },
+  "50074": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "50076": {
+   "holidays": [
+    {
+     "date": "2026-08-13",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "50077": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2026-07-27",
+     "name": "Santa Ana"
+    }
+   ]
+  },
+  "50079": {
+   "holidays": [
+    {
+     "date": "2026-05-11",
+     "name": ""
+    },
+    {
+     "date": "2026-09-23",
+     "name": ""
+    }
+   ]
+  },
+  "50081": {
+   "holidays": [
+    {
+     "date": "2026-05-19",
+     "name": "San Juan Lorenzo"
+    },
+    {
+     "date": "2026-10-19",
+     "name": "Virgen de Atocha"
+    }
+   ]
+  },
+  "50082": {
+   "holidays": [
+    {
+     "date": "2026-02-09",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "50083": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2026-02-04",
+     "name": "San Blasico"
+    }
+   ]
+  },
+  "50084": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": ""
+    },
+    {
+     "date": "2026-12-05",
+     "name": ""
+    }
+   ]
+  },
+  "50085": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2026-08-20",
+     "name": "San Bernardo"
+    }
+   ]
+  },
+  "50086": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2026-09-04",
+     "name": "Virgen del Mar"
+    }
+   ]
+  },
+  "50087": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": ""
+    },
+    {
+     "date": "2026-10-05",
+     "name": ""
+    }
+   ]
+  },
+  "50089": {
+   "holidays": [
+    {
+     "date": "2026-01-29",
+     "name": ""
+    },
+    {
+     "date": "2026-03-05",
+     "name": ""
+    }
+   ]
+  },
+  "50090": {
+   "holidays": [
+    {
+     "date": "2026-03-19",
+     "name": "San José"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    }
+   ]
+  },
+  "50091": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-06-25",
+     "name": ""
+    }
+   ]
+  },
+  "50092": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "50093": {
+   "holidays": [
+    {
+     "date": "2026-05-08",
+     "name": ""
+    },
+    {
+     "date": "2026-09-29",
+     "name": ""
+    }
+   ]
+  },
+  "50094": {
+   "holidays": [
+    {
+     "date": "2026-03-07",
+     "name": ""
+    },
+    {
+     "date": "2026-06-04",
+     "name": ""
+    }
+   ]
+  },
+  "50095": {
+   "holidays": [
+    {
+     "date": "2026-01-14",
+     "name": ""
+    },
+    {
+     "date": "2026-06-24",
+     "name": ""
+    }
+   ]
+  },
+  "50096": {
+   "holidays": [
+    {
+     "date": "2026-05-22",
+     "name": ""
+    },
+    {
+     "date": "2026-09-18",
+     "name": ""
+    }
+   ]
+  },
+  "50098": {
+   "holidays": [
+    {
+     "date": "2026-09-04",
+     "name": ""
+    },
+    {
+     "date": "2026-12-24",
+     "name": ""
+    }
+   ]
+  },
+  "50099": {
+   "holidays": [
+    {
+     "date": "2026-05-25",
+     "name": ""
+    },
+    {
+     "date": "2026-09-17",
+     "name": ""
+    }
+   ]
+  },
+  "50100": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-05-08",
+     "name": ""
+    }
+   ]
+  },
+  "50101": {
+   "holidays": [
+    {
+     "date": "2026-02-05",
+     "name": ""
+    },
+    {
+     "date": "2026-02-06",
+     "name": ""
+    }
+   ]
+  },
+  "50102": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "lunes de Pascua"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    }
+   ]
+  },
+  "50104": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "50105": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "San Miguel"
+    }
+   ]
+  },
+  "50106": {
+   "holidays": [
+    {
+     "date": "2026-04-24",
+     "name": ""
+    },
+    {
+     "date": "2026-10-15",
+     "name": ""
+    }
+   ]
+  },
+  "50107": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": ""
+    },
+    {
+     "date": "2026-12-04",
+     "name": ""
+    }
+   ]
+  },
+  "50108": {
+   "holidays": [
+    {
+     "date": "2026-01-22",
+     "name": ""
+    },
+    {
+     "date": "2026-08-24",
+     "name": ""
+    }
+   ]
+  },
+  "50109": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "50110": {
+   "holidays": [
+    {
+     "date": "2026-08-20",
+     "name": ""
+    },
+    {
+     "date": "2026-08-21",
+     "name": ""
+    }
+   ]
+  },
+  "50111": {
+   "holidays": [
+    {
+     "date": "2026-01-02",
+     "name": "Venida de la Virgen"
+    },
+    {
+     "date": "2026-10-13",
+     "name": "Virgen del Pilar"
+    }
+   ]
+  },
+  "50113": {
+   "holidays": [
+    {
+     "date": "2026-05-25",
+     "name": "Virgen del Castillo"
+    },
+    {
+     "date": "2026-06-24",
+     "name": "San Juan Bautista"
+    }
+   ]
+  },
+  "50115": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-09-29",
+     "name": ""
+    }
+   ]
+  },
+  "50117": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-08-27",
+     "name": ""
+    }
+   ]
+  },
+  "50118": {
+   "holidays": [
+    {
+     "date": "2026-06-12",
+     "name": ""
+    },
+    {
+     "date": "2026-06-29",
+     "name": ""
+    }
+   ]
+  },
+  "50119": {
+   "holidays": [
+    {
+     "date": "2026-04-29",
+     "name": "San Pedro Mártir de Verona"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Nuestra Señora del Buen Suceso"
+    }
+   ]
+  },
+  "50120": {
+   "holidays": [
+    {
+     "date": "2026-05-08",
+     "name": "San Gregorio"
+    },
+    {
+     "date": "2026-12-11",
+     "name": "Virgen de la Esperanza"
+    }
+   ]
+  },
+  "50121": {
+   "holidays": [
+    {
+     "date": "2026-07-24",
+     "name": ""
+    },
+    {
+     "date": "2026-12-04",
+     "name": ""
+    }
+   ]
+  },
+  "50122": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": "San Roque"
+    },
+    {
+     "date": "2026-09-24",
+     "name": "Virgen de las Mercedes"
+    }
+   ]
+  },
+  "50124": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "50125": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": "San Roquillo"
+    },
+    {
+     "date": "2026-08-18",
+     "name": "Virgen de San Daniel"
+    }
+   ]
+  },
+  "50126": {
+   "holidays": [
+    {
+     "date": "2026-01-23",
+     "name": "San Babil"
+    },
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    }
+   ]
+  },
+  "50128": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": "San Bartolomé"
+    },
+    {
+     "date": "2026-12-26",
+     "name": "San Esteban"
+    }
+   ]
+  },
+  "50129": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-09-28",
+     "name": ""
+    }
+   ]
+  },
+  "50130": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-09-21",
+     "name": ""
+    }
+   ]
+  },
+  "50131": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2026-06-02",
+     "name": "San Marcelino"
+    }
+   ]
+  },
+  "50132": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": "Nuestra Señora Virgen del Puig"
+    },
+    {
+     "date": "2026-10-05",
+     "name": "Nuestra Señora Virgen del Rosario"
+    }
+   ]
+  },
+  "50133": {
+   "holidays": [
+    {
+     "date": "2026-02-05",
+     "name": "Santa Águeda"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "Exaltación de la Santa Cruz"
+    }
+   ]
+  },
+  "50136": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": ""
+    },
+    {
+     "date": "2026-08-04",
+     "name": ""
+    }
+   ]
+  },
+  "50137": {
+   "holidays": [
+    {
+     "date": "2026-03-16",
+     "name": "Venida de la Virgen de Nuestra Señora de Magallón"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Virgen de Nuestra Señora de Magallón"
+    }
+   ]
+  },
+  "50138": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-08-10",
+     "name": ""
+    }
+   ]
+  },
+  "50140": {
+   "holidays": [
+    {
+     "date": "2026-04-30",
+     "name": ""
+    },
+    {
+     "date": "2026-10-15",
+     "name": ""
+    }
+   ]
+  },
+  "50141": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "San Miguel"
+    }
+   ]
+  },
+  "50143": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Virgen de la Puerta"
+    }
+   ]
+  },
+  "50144": {
+   "holidays": [
+    {
+     "date": "2026-01-23",
+     "name": ""
+    },
+    {
+     "date": "2026-07-24",
+     "name": ""
+    }
+   ]
+  },
+  "50146": {
+   "holidays": [
+    {
+     "date": "2026-06-15",
+     "name": ""
+    },
+    {
+     "date": "2026-10-05",
+     "name": ""
+    }
+   ]
+  },
+  "50147": {
+   "holidays": [
+    {
+     "date": "2026-04-29",
+     "name": "San Pedro Mártir"
+    },
+    {
+     "date": "2026-08-28",
+     "name": "San Agustín"
+    }
+   ]
+  },
+  "50150": {
+   "holidays": [
+    {
+     "date": "2026-10-05",
+     "name": "San Francisco"
+    },
+    {
+     "date": "2026-12-04",
+     "name": "Santa Bárbara"
+    }
+   ]
+  },
+  "50151": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "50152": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": ""
+    },
+    {
+     "date": "2026-08-10",
+     "name": ""
+    }
+   ]
+  },
+  "50153": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "Santa Cruz"
+    }
+   ]
+  },
+  "50154": {
+   "holidays": [
+    {
+     "date": "2026-04-24",
+     "name": ""
+    },
+    {
+     "date": "2026-06-05",
+     "name": ""
+    }
+   ]
+  },
+  "50155": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "50156": {
+   "holidays": [
+    {
+     "date": "2026-05-25",
+     "name": ""
+    },
+    {
+     "date": "2026-12-04",
+     "name": ""
+    }
+   ]
+  },
+  "50157": {
+   "holidays": [
+    {
+     "date": "2026-01-22",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "Fiestas de la Cruz"
+    }
+   ]
+  },
+  "50159": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": "Santa Justa"
+    },
+    {
+     "date": "2026-07-17",
+     "name": "Santa Rufina"
+    }
+   ]
+  },
+  "50160": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-09-11",
+     "name": ""
+    }
+   ]
+  },
+  "50161": {
+   "holidays": [
+    {
+     "date": "2026-01-23",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "50162": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "San Fabián"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "Día del Sitio"
+    }
+   ]
+  },
+  "50163": {
+   "holidays": [
+    {
+     "date": "2026-08-14",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "50164": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "La Ermita"
+    },
+    {
+     "date": "2026-07-27",
+     "name": "Santa Ana"
+    }
+   ]
+  },
+  "50165": {
+   "holidays": [
+    {
+     "date": "2026-02-06",
+     "name": ""
+    },
+    {
+     "date": "2026-09-17",
+     "name": ""
+    }
+   ]
+  },
+  "50166": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-08-03",
+     "name": ""
+    }
+   ]
+  },
+  "50167": {
+   "holidays": [
+    {
+     "date": "2026-04-29",
+     "name": "San Pedro Mártir"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "San Miguel Arcángel"
+    }
+   ]
+  },
+  "50169": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-05-12",
+     "name": ""
+    }
+   ]
+  },
+  "50170": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "San Benito"
+    },
+    {
+     "date": "2026-07-27",
+     "name": "San Santiago"
+    }
+   ]
+  },
+  "50172": {
+   "holidays": [
+    {
+     "date": "2026-04-29",
+     "name": "San Pedro Mártir"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    }
+   ]
+  },
+  "50174": {
+   "holidays": [
+    {
+     "date": "2026-08-20",
+     "name": ""
+    },
+    {
+     "date": "2026-08-21",
+     "name": ""
+    }
+   ]
+  },
+  "50175": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": "San Roque"
+    },
+    {
+     "date": "2026-12-04",
+     "name": "Santa Bárbara"
+    }
+   ]
+  },
+  "50177": {
+   "holidays": [
+    {
+     "date": "2026-05-28",
+     "name": ""
+    },
+    {
+     "date": "2026-05-29",
+     "name": ""
+    }
+   ]
+  },
+  "50179": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2026-11-23",
+     "name": "San Clemente"
+    }
+   ]
+  },
+  "50180": {
+   "holidays": [
+    {
+     "date": "2026-07-22",
+     "name": "Santa Magdalena"
+    },
+    {
+     "date": "2026-09-28",
+     "name": "Los Santicos"
+    }
+   ]
+  },
+  "50181": {
+   "holidays": [
+    {
+     "date": "2026-07-10",
+     "name": "San Cristóbal"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Virgen de la Fuente"
+    }
+   ]
+  },
+  "50184": {
+   "holidays": [
+    {
+     "date": "2026-05-09",
+     "name": "San Gregorio"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "San Mames"
+    }
+   ]
+  },
+  "50185": {
+   "holidays": [
+    {
+     "date": "2026-02-02",
+     "name": "La Candelera"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "San Bartolomé"
+    }
+   ]
+  },
+  "50186": {
+   "holidays": [
+    {
+     "date": "2026-05-09",
+     "name": "San Gregorio"
+    },
+    {
+     "date": "2026-08-14",
+     "name": "La Asunción"
+    }
+   ]
+  },
+  "50187": {
+   "holidays": [
+    {
+     "date": "2026-08-10",
+     "name": ""
+    },
+    {
+     "date": "2026-10-30",
+     "name": ""
+    }
+   ]
+  },
+  "50189": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "Lunes de Pascua"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "San Bartolomé"
+    }
+   ]
+  },
+  "50190": {
+   "holidays": [
+    {
+     "date": "2026-06-30",
+     "name": "San Marcial"
+    },
+    {
+     "date": "2026-12-04",
+     "name": "Santa Bárbara"
+    }
+   ]
+  },
+  "50191": {
+   "holidays": [
+    {
+     "date": "2026-10-07",
+     "name": "Nuestra Señora Virgen del Rosario"
+    },
+    {
+     "date": "2026-12-14",
+     "name": "San Nicasio"
+    }
+   ]
+  },
+  "50192": {
+   "holidays": [
+    {
+     "date": "2026-01-19",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2026-08-27",
+     "name": "Virgen de los Alvares"
+    }
+   ]
+  },
+  "50193": {
+   "holidays": [
+    {
+     "date": "2026-10-05",
+     "name": ""
+    },
+    {
+     "date": "2026-11-11",
+     "name": ""
+    }
+   ]
+  },
+  "50196": {
+   "holidays": [
+    {
+     "date": "2026-07-24",
+     "name": ""
+    },
+    {
+     "date": "2026-07-27",
+     "name": ""
+    }
+   ]
+  },
+  "50197": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2026-08-25",
+     "name": "San Bartolomé"
+    }
+   ]
+  },
+  "50199": {
+   "holidays": [
+    {
+     "date": "2026-04-17",
+     "name": ""
+    },
+    {
+     "date": "2026-11-13",
+     "name": ""
+    }
+   ]
+  },
+  "50200": {
+   "holidays": [
+    {
+     "date": "2026-05-22",
+     "name": "Santa Quiteria"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Virgen del Águila"
+    }
+   ]
+  },
+  "50201": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": "Santa Cruz"
+    },
+    {
+     "date": "2026-12-10",
+     "name": "Santa Eulalia"
+    }
+   ]
+  },
+  "50202": {
+   "holidays": [
+    {
+     "date": "2026-02-05",
+     "name": "San Pedro Bautista"
+    },
+    {
+     "date": "2026-02-06",
+     "name": "San Pedrico"
+    }
+   ]
+  },
+  "50203": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-07-27",
+     "name": "Santa Ana"
+    }
+   ]
+  },
+  "50204": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    }
+   ]
+  },
+  "50206": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2026-07-29",
+     "name": "Santa Beatriz"
+    }
+   ]
+  },
+  "50207": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-09-01",
+     "name": ""
+    }
+   ]
+  },
+  "50208": {
+   "holidays": [
+    {
+     "date": "2026-05-08",
+     "name": "San Gregorio"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "San Roque"
+    }
+   ]
+  },
+  "50209": {
+   "holidays": [
+    {
+     "date": "2026-04-29",
+     "name": ""
+    },
+    {
+     "date": "2026-04-30",
+     "name": ""
+    }
+   ]
+  },
+  "50211": {
+   "holidays": [
+    {
+     "date": "2026-02-05",
+     "name": "Santa Águeda"
+    },
+    {
+     "date": "2026-06-13",
+     "name": "San Antonio de Padua"
+    }
+   ]
+  },
+  "50212": {
+   "holidays": [
+    {
+     "date": "2026-04-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    }
+   ]
+  },
+  "50213": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2026-08-28",
+     "name": "San Agustín"
+    }
+   ]
+  },
+  "50214": {
+   "holidays": [
+    {
+     "date": "2026-04-24",
+     "name": ""
+    },
+    {
+     "date": "2026-08-18",
+     "name": ""
+    }
+   ]
+  },
+  "50215": {
+   "holidays": [
+    {
+     "date": "2026-05-18",
+     "name": "San Pascual Bailón"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "San Roque"
+    }
+   ]
+  },
+  "50219": {
+   "holidays": [
+    {
+     "date": "2026-03-25",
+     "name": "Nuestra Señora de Alfindén"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "San Roque"
+    }
+   ]
+  },
+  "50221": {
+   "holidays": [
+    {
+     "date": "2026-06-01",
+     "name": ""
+    },
+    {
+     "date": "2026-09-07",
+     "name": ""
+    }
+   ]
+  },
+  "50222": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": ""
+    },
+    {
+     "date": "2026-07-27",
+     "name": ""
+    }
+   ]
+  },
+  "50223": {
+   "holidays": [
+    {
+     "date": "2026-06-12",
+     "name": "San Antonio de Padua"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "Santo Cristo de la Cueva"
+    }
+   ]
+  },
+  "50225": {
+   "holidays": [
+    {
+     "date": "2026-05-21",
+     "name": ""
+    },
+    {
+     "date": "2026-07-22",
+     "name": ""
+    }
+   ]
+  },
+  "50229": {
+   "holidays": [
+    {
+     "date": "2026-01-29",
+     "name": ""
+    },
+    {
+     "date": "2026-08-31",
+     "name": ""
+    }
+   ]
+  },
+  "50230": {
+   "holidays": [
+    {
+     "date": "2026-03-19",
+     "name": "San José"
+    },
+    {
+     "date": "2026-05-04",
+     "name": "Cruz de mayo"
+    }
+   ]
+  },
+  "50231": {
+   "holidays": [
+    {
+     "date": "2026-05-22",
+     "name": ""
+    },
+    {
+     "date": "2026-10-05",
+     "name": ""
+    }
+   ]
+  },
+  "50232": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Virgen de la Peña"
+    }
+   ]
+  },
+  "50234": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": "La Cruz"
+    },
+    {
+     "date": "2026-11-09",
+     "name": "San Martín"
+    }
+   ]
+  },
+  "50235": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-09-21",
+     "name": ""
+    }
+   ]
+  },
+  "50236": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-02-04",
+     "name": ""
+    }
+   ]
+  },
+  "50237": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": ""
+    },
+    {
+     "date": "2026-12-04",
+     "name": ""
+    }
+   ]
+  },
+  "50238": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-12-10",
+     "name": ""
+    }
+   ]
+  },
+  "50239": {
+   "holidays": [
+    {
+     "date": "2026-06-19",
+     "name": "San Lamberto"
+    },
+    {
+     "date": "2026-08-04",
+     "name": "San Roque"
+    }
+   ]
+  },
+  "50240": {
+   "holidays": [
+    {
+     "date": "2026-01-16",
+     "name": "San Antón"
+    },
+    {
+     "date": "2026-04-24",
+     "name": "Virgen de Montler"
+    }
+   ]
+  },
+  "50241": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": "San Roque"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "Veracruz"
+    }
+   ]
+  },
+  "50242": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2026-04-30",
+     "name": "Virgen del Villar"
+    }
+   ]
+  },
+  "50243": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": "Virgen del Carmen"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "San Bartolomé"
+    }
+   ]
+  },
+  "50244": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "La Exaltación de la Santa Cruz"
+    }
+   ]
+  },
+  "50246": {
+   "holidays": [
+    {
+     "date": "2026-05-18",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "50247": {
+   "holidays": [
+    {
+     "date": "2026-04-24",
+     "name": ""
+    },
+    {
+     "date": "2026-06-12",
+     "name": ""
+    }
+   ]
+  },
+  "50248": {
+   "holidays": [
+    {
+     "date": "2026-05-25",
+     "name": ""
+    },
+    {
+     "date": "2026-12-26",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Sofuentes",
+     "holidays": [
+      {
+       "date": "2026-03-19",
+       "name": ""
+      },
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades locales menores) have their own days; see nucleos."
+  },
+  "50249": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "50250": {
+   "holidays": [
+    {
+     "date": "2026-05-22",
+     "name": "Virgen de Constantín"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "San Miguel"
+    }
+   ]
+  },
+  "50251": {
+   "holidays": [
+    {
+     "date": "2026-08-28",
+     "name": "San Agustín"
+    },
+    {
+     "date": "2026-10-05",
+     "name": "San Atilano"
+    }
+   ]
+  },
+  "50252": {
+   "holidays": [
+    {
+     "date": "2026-04-21",
+     "name": ""
+    },
+    {
+     "date": "2026-05-08",
+     "name": ""
+    }
+   ]
+  },
+  "50253": {
+   "holidays": [
+    {
+     "date": "2026-05-08",
+     "name": "San Gregorio"
+    },
+    {
+     "date": "2026-12-04",
+     "name": "Santa Bárbara"
+    }
+   ]
+  },
+  "50255": {
+   "holidays": [
+    {
+     "date": "2026-02-14",
+     "name": "San Valentín"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Virgen de Tobed"
+    }
+   ]
+  },
+  "50256": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": ""
+    },
+    {
+     "date": "2026-12-18",
+     "name": ""
+    }
+   ]
+  },
+  "50257": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-03",
+     "name": ""
+    }
+   ]
+  },
+  "50260": {
+   "holidays": [
+    {
+     "date": "2026-08-28",
+     "name": ""
+    },
+    {
+     "date": "2026-11-12",
+     "name": ""
+    }
+   ]
+  },
+  "50261": {
+   "holidays": [
+    {
+     "date": "2026-02-28",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "50262": {
+   "holidays": [
+    {
+     "date": "2026-05-08",
+     "name": "Virgen de Nuestra Señora del Castellar"
+    },
+    {
+     "date": "2026-07-22",
+     "name": "Santa María Magdalena"
+    }
+   ]
+  },
+  "50263": {
+   "holidays": [
+    {
+     "date": "2026-05-29",
+     "name": ""
+    },
+    {
+     "date": "2026-09-11",
+     "name": ""
+    }
+   ]
+  },
+  "50264": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "San Bartolomé"
+    }
+   ]
+  },
+  "50265": {
+   "holidays": [
+    {
+     "date": "2026-04-29",
+     "name": "Santo Cristo de la Piedad"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "San Roque"
+    }
+   ]
+  },
+  "50267": {
+   "holidays": [
+    {
+     "date": "2026-06-01",
+     "name": "Virgen de los Bañales"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Virgen de San Cristóbal"
+    }
+   ]
+  },
+  "50268": {
+   "holidays": [
+    {
+     "date": "2026-01-05",
+     "name": ""
+    },
+    {
+     "date": "2026-09-16",
+     "name": ""
+    }
+   ]
+  },
+  "50270": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Salvador"
+    },
+    {
+     "date": "2026-12-04",
+     "name": "Santa Bárbara"
+    }
+   ]
+  },
+  "50271": {
+   "holidays": [
+    {
+     "date": "2026-01-26",
+     "name": ""
+    },
+    {
+     "date": "2026-05-15",
+     "name": ""
+    }
+   ]
+  },
+  "50272": {
+   "holidays": [
+    {
+     "date": "2026-06-19",
+     "name": "San Lamberto"
+    },
+    {
+     "date": "2026-07-27",
+     "name": "Santa Ana"
+    }
+   ]
+  },
+  "50276": {
+   "holidays": [
+    {
+     "date": "2026-08-13",
+     "name": "San Hipólito"
+    },
+    {
+     "date": "2026-12-04",
+     "name": "Santa Bárbara"
+    }
+   ]
+  },
+  "50278": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": ""
+    },
+    {
+     "date": "2026-08-03",
+     "name": ""
+    }
+   ]
+  },
+  "50280": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2026-11-16",
+     "name": "Virgen de Veruela"
+    }
+   ]
+  },
+  "50281": {
+   "holidays": [
+    {
+     "date": "2026-05-08",
+     "name": "San Miguel"
+    },
+    {
+     "date": "2026-12-04",
+     "name": "Santa Bárbara"
+    }
+   ]
+  },
+  "50283": {
+   "holidays": [
+    {
+     "date": "2026-07-24",
+     "name": "Santiago"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martín de Tours"
+    }
+   ]
+  },
+  "50284": {
+   "holidays": [
+    {
+     "date": "2026-08-06",
+     "name": "San Marcos, San Juan"
+    },
+    {
+     "date": "2026-08-07",
+     "name": "San Ignacio"
+    }
+   ]
+  },
+  "50285": {
+   "holidays": [
+    {
+     "date": "2026-04-29",
+     "name": "San Pedro Mártir de Verona"
+    },
+    {
+     "date": "2026-12-04",
+     "name": "Santa Bárbara"
+    }
+   ]
+  },
+  "50286": {
+   "holidays": [
+    {
+     "date": "2026-02-05",
+     "name": "Santa Águeda"
+    },
+    {
+     "date": "2026-10-07",
+     "name": "Virgen del Rosario"
+    }
+   ]
+  },
+  "50287": {
+   "holidays": [
+    {
+     "date": "2026-06-19",
+     "name": ""
+    },
+    {
+     "date": "2026-06-22",
+     "name": ""
+    }
+   ]
+  },
+  "50288": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2026-08-03",
+     "name": "Santas Reliquias"
+    }
+   ]
+  },
+  "50289": {
+   "holidays": [
+    {
+     "date": "2026-05-09",
+     "name": "San Gregorio"
+    },
+    {
+     "date": "2026-10-07",
+     "name": "La Virgen del Rosario"
+    }
+   ]
+  },
+  "50291": {
+   "holidays": [
+    {
+     "date": "2026-04-24",
+     "name": "San Fidel de Sigmaringa"
+    },
+    {
+     "date": "2026-10-13",
+     "name": "San Eduardo"
+    }
+   ]
+  },
+  "50292": {
+   "holidays": [
+    {
+     "date": "2026-05-08",
+     "name": "San Miguel"
+    },
+    {
+     "date": "2026-06-05",
+     "name": "Nuestra Señora del Rosario"
+    }
+   ]
+  },
+  "50293": {
+   "holidays": [
+    {
+     "date": "2026-09-10",
+     "name": ""
+    },
+    {
+     "date": "2026-09-11",
+     "name": ""
+    }
+   ]
+  },
+  "50294": {
+   "holidays": [
+    {
+     "date": "2026-05-22",
+     "name": "Santa Quiteria"
+    },
+    {
+     "date": "2026-08-03",
+     "name": "Virgen del Rosario"
+    }
+   ]
+  },
+  "50295": {
+   "holidays": [
+    {
+     "date": "2026-05-22",
+     "name": "Santa Quiteria"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "San Miguel"
+    }
+   ]
+  },
+  "50296": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-12-04",
+     "name": ""
+    }
+   ]
+  },
+  "50297": {
+   "holidays": [
+    {
+     "date": "2026-01-29",
+     "name": "San Valero"
+    },
+    {
+     "date": "2026-03-05",
+     "name": "Cincomarzada"
+    }
+   ]
+  },
+  "50298": {
+   "holidays": [
+    {
+     "date": "2026-05-25",
+     "name": "Virgen del Salz"
+    },
+    {
+     "date": "2026-08-26",
+     "name": "San Licer"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Ontinar de Salz",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      },
+      {
+       "date": "2026-09-04",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "Some núcleos (entidades locales menores) have their own days; see nucleos."
+  },
+  "50902": {
+   "holidays": [
+    {
+     "date": "2026-05-22",
+     "name": "Santa Quiteria"
+    },
+    {
+     "date": "2026-11-25",
+     "name": "Santa Catalina"
+    }
+   ]
+  },
+  "50903": {
+   "holidays": [
+    {
+     "date": "2026-03-12",
+     "name": "San Gregorio"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Virgen del Pueyo"
+    }
+   ]
+  }
+ }
+}

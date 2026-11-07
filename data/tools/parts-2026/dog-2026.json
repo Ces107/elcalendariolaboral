@@ -1,0 +1,3776 @@
+{
+ "source_id": "dog-2026",
+ "source": {
+  "title": "Resolución do 21 de outubro de 2025, da Secretaría Xeral de Emprego e Relacións Laborais, pola que se dá publicidade ás festas laborais de carácter local para o ano 2026, correspondentes aos concellos das catro provincias da Comunidade Autónoma de Galicia (DOG núm. 210, 30-10-2025)",
+  "url": "https://www.xunta.gal/dog/Publicados/2025/20251030/AnuncioG0767-221025-0001_gl.html",
+  "published": "2025-10-30"
+ },
+ "region": "galicia",
+ "count": 313,
+ "unmatched": [],
+ "municipios": {
+  "15001": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    }
+   ]
+  },
+  "15002": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "Luns de Pascua"
+    },
+    {
+     "date": "2026-05-14",
+     "name": "festa da Ascensión"
+    }
+   ]
+  },
+  "15003": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-03-20",
+     "name": "festa local de Aranga"
+    }
+   ]
+  },
+  "15004": {
+   "holidays": [
+    {
+     "date": "2026-02-18",
+     "name": "Mércores de Cinza"
+    },
+    {
+     "date": "2026-05-26",
+     "name": "Voto de Chanteiro"
+    }
+   ]
+  },
+  "15005": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-09-16",
+     "name": "Santa Eufemia"
+    }
+   ]
+  },
+  "15006": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-07-16",
+     "name": "Virxe do Carme"
+    }
+   ]
+  },
+  "15007": {
+   "holidays": [
+    {
+     "date": "2026-01-22",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2026-09-09",
+     "name": "Virxe das Dores"
+    }
+   ]
+  },
+  "15008": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "festa local de Bergondo"
+    }
+   ]
+  },
+  "15009": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-18",
+     "name": "Os Caneiros"
+    }
+   ]
+  },
+  "15010": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-09-07",
+     "name": "festas do Rosario"
+    }
+   ]
+  },
+  "15011": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": "festividade do Carme"
+    },
+    {
+     "date": "2026-08-31",
+     "name": "festividade de San Ramón"
+    }
+   ]
+  },
+  "15012": {
+   "holidays": [
+    {
+     "date": "2026-01-22",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2026-05-14",
+     "name": "día da Ascensión"
+    }
+   ]
+  },
+  "15013": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "Luns de Pascua"
+    },
+    {
+     "date": "2026-05-14",
+     "name": "día da Ascensión"
+    }
+   ]
+  },
+  "15014": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-01",
+     "name": "San Fins"
+    }
+   ],
+   "note": "1/8 falls on a Saturday; recorded as published."
+  },
+  "15015": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-11-30",
+     "name": "festividade de Santo André"
+    }
+   ]
+  },
+  "15016": {
+   "holidays": [
+    {
+     "date": "2026-04-23",
+     "name": "San Xurxo"
+    },
+    {
+     "date": "2026-07-16",
+     "name": "Virxe do Carme"
+    }
+   ]
+  },
+  "15017": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "festa local de Cambre"
+    }
+   ]
+  },
+  "15018": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-05",
+     "name": "festas patronais da Capela"
+    }
+   ]
+  },
+  "15019": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-06-25",
+     "name": "festas patronais de San Xoán Bautista"
+    }
+   ]
+  },
+  "15020": {
+   "holidays": [
+    {
+     "date": "2026-03-20",
+     "name": "festa local de Carnota"
+    },
+    {
+     "date": "2026-12-07",
+     "name": "festa local de Carnota"
+    }
+   ]
+  },
+  "15021": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Virxe do Socorro"
+    }
+   ]
+  },
+  "15022": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "día da Xira"
+    }
+   ]
+  },
+  "15023": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "Luns de Pascua"
+    },
+    {
+     "date": "2026-06-16",
+     "name": "festa de Santo Adrián"
+    }
+   ]
+  },
+  "15024": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-06-23",
+     "name": "día da Cachela"
+    }
+   ]
+  },
+  "15025": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-07-06",
+     "name": "festa local de Cerdido"
+    }
+   ]
+  },
+  "15027": {
+   "holidays": [
+    {
+     "date": "2026-01-07",
+     "name": "San Xulián"
+    },
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    }
+   ]
+  },
+  "15028": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-07-16",
+     "name": "festa do Carme"
+    }
+   ]
+  },
+  "15029": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-10",
+     "name": "San Lourenzo da Agualada"
+    }
+   ]
+  },
+  "15030": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-10-07",
+     "name": "festividade do Rosario"
+    }
+   ]
+  },
+  "15031": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-04-06",
+     "name": "Luns de Pascua"
+    }
+   ]
+  },
+  "15032": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "día da Virxe dos Remedios"
+    }
+   ]
+  },
+  "15033": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "Luns de Pascua"
+    },
+    {
+     "date": "2026-09-07",
+     "name": "festa da Virxe das Dores"
+    }
+   ]
+  },
+  "15034": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro de Buxantes"
+    },
+    {
+     "date": "2026-12-10",
+     "name": "festa de Santa Baia de Dumbría"
+    }
+   ]
+  },
+  "15035": {
+   "holidays": [
+    {
+     "date": "2026-02-18",
+     "name": "Mércores de Cinza"
+    },
+    {
+     "date": "2026-08-06",
+     "name": "San Salvador"
+    }
+   ]
+  },
+  "15036": {
+   "holidays": [
+    {
+     "date": "2026-01-07",
+     "name": "San Xiao"
+    },
+    {
+     "date": "2026-04-06",
+     "name": "Nosa Señora de Chamorro"
+    }
+   ]
+  },
+  "15037": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "Luns de Pascua"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "festa local de Fisterra"
+    }
+   ]
+  },
+  "15038": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "festa de San Cidre"
+    }
+   ]
+  },
+  "15039": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-10",
+     "name": "día de San Lourenzo"
+    }
+   ]
+  },
+  "15040": {
+   "holidays": [
+    {
+     "date": "2026-07-21",
+     "name": "festividade de Santa Cruz da Rosa"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "festa local de Laxe"
+    }
+   ]
+  },
+  "15041": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Virxe dos Milagres de Caión"
+    }
+   ]
+  },
+  "15042": {
+   "holidays": [
+    {
+     "date": "2026-08-10",
+     "name": "San Lourenzo"
+    },
+    {
+     "date": "2026-10-02",
+     "name": "San Roquiño"
+    }
+   ]
+  },
+  "15043": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-21",
+     "name": "festa do Mar"
+    }
+   ]
+  },
+  "15044": {
+   "holidays": [
+    {
+     "date": "2026-03-20",
+     "name": "festivo local"
+    },
+    {
+     "date": "2026-09-07",
+     "name": "festa da Patroa"
+    }
+   ]
+  },
+  "15045": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-07-10",
+     "name": "festa local de Mazaricos"
+    }
+   ]
+  },
+  "15046": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "día de San Pedro"
+    },
+    {
+     "date": "2026-07-16",
+     "name": "día do Carme"
+    }
+   ]
+  },
+  "15047": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "San Cidre"
+    }
+   ]
+  },
+  "15048": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    }
+   ]
+  },
+  "15049": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-04-23",
+     "name": "San Xurxo"
+    }
+   ]
+  },
+  "15050": {
+   "holidays": [
+    {
+     "date": "2026-02-16",
+     "name": "Luns de Entroido"
+    },
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    }
+   ]
+  },
+  "15051": {
+   "holidays": [
+    {
+     "date": "2026-01-07",
+     "name": "festa de Mugardos"
+    },
+    {
+     "date": "2026-05-26",
+     "name": "Voto de Chanteiro"
+    }
+   ]
+  },
+  "15052": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "Luns de Pascua"
+    },
+    {
+     "date": "2026-09-13",
+     "name": "Luns da Barca"
+    }
+   ],
+   "note": "13/9 falls on a Sunday; recorded as published. Both the Galician and Spanish texts print 13 September (a Sunday) for 'Luns da Barca' (Monday); not corrected here, check for a later corrección de erros."
+  },
+  "15053": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "festa de San Pedro"
+    },
+    {
+     "date": "2026-07-16",
+     "name": "festa do Carme"
+    }
+   ]
+  },
+  "15054": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-11-23",
+     "name": "día de Narón"
+    }
+   ]
+  },
+  "15055": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "festa local de Neda"
+    }
+   ]
+  },
+  "15056": {
+   "holidays": [
+    {
+     "date": "2026-07-10",
+     "name": "San Cristovo"
+    },
+    {
+     "date": "2026-09-21",
+     "name": "Santa Margarida"
+    }
+   ]
+  },
+  "15057": {
+   "holidays": [
+    {
+     "date": "2026-02-16",
+     "name": "Luns de Entroido"
+    },
+    {
+     "date": "2026-07-16",
+     "name": "festa da Virxe do Carme"
+    }
+   ]
+  },
+  "15058": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-04-06",
+     "name": "Luns de Pascua"
+    }
+   ]
+  },
+  "15059": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-04-27",
+     "name": "festa local de Ordes"
+    }
+   ]
+  },
+  "15060": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-09-16",
+     "name": "Santa Eufemia"
+    }
+   ]
+  },
+  "15061": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-07-29",
+     "name": "día de Santa Marta"
+    }
+   ]
+  },
+  "15062": {
+   "holidays": [
+    {
+     "date": "2026-02-18",
+     "name": "Mércores de Cinza"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "San Miguel"
+    }
+   ]
+  },
+  "15064": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-18",
+     "name": "festa local de Paderne"
+    }
+   ]
+  },
+  "15065": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "Luns de Pascua"
+    },
+    {
+     "date": "2026-05-06",
+     "name": "San Xoán do Raio"
+    }
+   ]
+  },
+  "15066": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-07-22",
+     "name": "Nosa Señora da Madalena"
+    }
+   ]
+  },
+  "15067": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": "Luns do Carme dos Pincheiros"
+    },
+    {
+     "date": "2026-09-21",
+     "name": "Luns do Nazareno"
+    }
+   ]
+  },
+  "15068": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": "O Faro"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "A Barquiña"
+    }
+   ]
+  },
+  "15069": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": "festa das Peras"
+    },
+    {
+     "date": "2026-09-10",
+     "name": "festa das Peras"
+    }
+   ]
+  },
+  "15070": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-07-20",
+     "name": "festa do Carme"
+    }
+   ]
+  },
+  "15071": {
+   "holidays": [
+    {
+     "date": "2026-02-16",
+     "name": "Luns de Entroido"
+    },
+    {
+     "date": "2026-09-09",
+     "name": "festa local de Porto do Son"
+    }
+   ]
+  },
+  "15072": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": "festa do Carme"
+    },
+    {
+     "date": "2026-09-18",
+     "name": "Venres de Guadalupe"
+    }
+   ]
+  },
+  "15073": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-07-16",
+     "name": "O Carme"
+    }
+   ]
+  },
+  "15074": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "Luns de Pascua"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "Santo Isidro Labrador"
+    }
+   ]
+  },
+  "15075": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-18",
+     "name": "festa local de Sada"
+    }
+   ]
+  },
+  "15076": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-07-02",
+     "name": "festividade tradicional de Santa Isabel"
+    }
+   ]
+  },
+  "15077": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "festividade de San Pedro"
+    },
+    {
+     "date": "2026-06-30",
+     "name": "festividade de Santo Antonio"
+    }
+   ]
+  },
+  "15078": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-05-14",
+     "name": "día da Ascensión"
+    }
+   ]
+  },
+  "15079": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "festa local de Santiso"
+    }
+   ]
+  },
+  "15080": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    }
+   ]
+  },
+  "15081": {
+   "holidays": [
+    {
+     "date": "2026-07-24",
+     "name": "festa local das Somozas"
+    },
+    {
+     "date": "2026-07-27",
+     "name": "festa local das Somozas"
+    }
+   ]
+  },
+  "15082": {
+   "holidays": [
+    {
+     "date": "2026-05-14",
+     "name": "A Ascensión"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martiño"
+    }
+   ]
+  },
+  "15083": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "día de San Cidre"
+    },
+    {
+     "date": "2026-09-02",
+     "name": "día de Santo Antolín"
+    }
+   ]
+  },
+  "15084": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "Santo Isidro Labrador"
+    }
+   ]
+  },
+  "15085": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-04-06",
+     "name": "Luns de Pascua"
+    }
+   ]
+  },
+  "15086": {
+   "holidays": [
+    {
+     "date": "2026-09-16",
+     "name": "festividade de Santa Eufemia"
+    },
+    {
+     "date": "2026-09-21",
+     "name": "festividade de San Mateo"
+    }
+   ]
+  },
+  "15087": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "día de San Mamede"
+    }
+   ]
+  },
+  "15088": {
+   "holidays": [
+    {
+     "date": "2026-05-14",
+     "name": "día da Ascensión"
+    },
+    {
+     "date": "2026-08-07",
+     "name": "festa do Emigrante"
+    }
+   ]
+  },
+  "15089": {
+   "holidays": [
+    {
+     "date": "2026-09-21",
+     "name": "día do Patio"
+    },
+    {
+     "date": "2026-12-10",
+     "name": "Santa Baia"
+    }
+   ]
+  },
+  "15090": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-07-24",
+     "name": "festa local de Vilasantar"
+    }
+   ]
+  },
+  "15091": {
+   "holidays": [
+    {
+     "date": "2026-02-16",
+     "name": "Luns de Entroido"
+    },
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    }
+   ]
+  },
+  "15092": {
+   "holidays": [
+    {
+     "date": "2026-01-22",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2026-08-10",
+     "name": "festas de verán"
+    }
+   ]
+  },
+  "15093": {
+   "holidays": [
+    {
+     "date": "2026-07-10",
+     "name": "San Cristovo"
+    },
+    {
+     "date": "2026-07-16",
+     "name": "festividade da Virxe do Carme"
+    }
+   ]
+  },
+  "15901": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": "festa do Carme"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "festa local de Cariño"
+    }
+   ]
+  },
+  "15902": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "día de San Isidro"
+    }
+   ]
+  },
+  "27001": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-09-28",
+     "name": "San Cosme da Montaña"
+    }
+   ]
+  },
+  "27002": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-03",
+     "name": "festa dos Chóferes"
+    }
+   ]
+  },
+  "27003": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Virxe dos Remedios"
+    }
+   ]
+  },
+  "27004": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-12",
+     "name": "San Cristovo"
+    }
+   ]
+  },
+  "27005": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "San Bartolo"
+    }
+   ]
+  },
+  "27006": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "Santo"
+    }
+   ]
+  },
+  "27007": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    }
+   ]
+  },
+  "27008": {
+   "holidays": [
+    {
+     "date": "2026-09-01",
+     "name": "San Xil"
+    },
+    {
+     "date": "2026-09-15",
+     "name": "Divino Ecce-Homo"
+    }
+   ]
+  },
+  "27009": {
+   "holidays": [
+    {
+     "date": "2026-07-24",
+     "name": "festivo local"
+    },
+    {
+     "date": "2026-08-14",
+     "name": "festivo local"
+    }
+   ]
+  },
+  "27010": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-10",
+     "name": "luns seguinte a San Roque e Dulce Nome de María"
+    }
+   ]
+  },
+  "27011": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-07-27",
+     "name": "Santiago Apóstolo"
+    }
+   ]
+  },
+  "27012": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-05-20",
+     "name": "festa dos Remedios"
+    }
+   ]
+  },
+  "27013": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-07-16",
+     "name": "Nosa Señora do Carme"
+    }
+   ]
+  },
+  "27014": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-10-05",
+     "name": "San Froilán"
+    }
+   ]
+  },
+  "27015": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Nosa Señora Virxe do Monte"
+    }
+   ]
+  },
+  "27016": {
+   "holidays": [
+    {
+     "date": "2026-08-25",
+     "name": "festa da Empanada"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Virxe do Faro"
+    }
+   ]
+  },
+  "27017": {
+   "holidays": [
+    {
+     "date": "2026-08-19",
+     "name": "festivo local"
+    },
+    {
+     "date": "2026-12-07",
+     "name": "festivo local"
+    }
+   ]
+  },
+  "27018": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "festas patronais da Fonsagrada"
+    }
+   ]
+  },
+  "27019": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": "festa do Carme"
+    },
+    {
+     "date": "2026-08-10",
+     "name": "San Lourenzo"
+    }
+   ]
+  },
+  "27020": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-07-13",
+     "name": "luns de Santa Isabel"
+    }
+   ]
+  },
+  "27021": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-10",
+     "name": "luns de Santa María"
+    }
+   ]
+  },
+  "27022": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "festivo local"
+    }
+   ]
+  },
+  "27023": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-07-06",
+     "name": "luns das Festas"
+    }
+   ]
+  },
+  "27024": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "San Eufrasio"
+    }
+   ]
+  },
+  "27025": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-31",
+     "name": "festas patronais"
+    }
+   ]
+  },
+  "27026": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "luns de San Roque"
+    }
+   ]
+  },
+  "27027": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-31",
+     "name": "luns do Conde Santo"
+    }
+   ]
+  },
+  "27028": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-10-05",
+     "name": "San Froilán"
+    }
+   ]
+  },
+  "27029": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "festas patronais"
+    }
+   ]
+  },
+  "27030": {
+   "holidays": [
+    {
+     "date": "2026-09-14",
+     "name": "Nosa Señora dos Remedios"
+    },
+    {
+     "date": "2026-10-19",
+     "name": "San Lucas"
+    }
+   ]
+  },
+  "27031": {
+   "holidays": [
+    {
+     "date": "2026-04-07",
+     "name": "Martes de Pascua"
+    },
+    {
+     "date": "2026-06-13",
+     "name": "San Antón"
+    }
+   ],
+   "note": "13/6 falls on a Saturday; recorded as published."
+  },
+  "27032": {
+   "holidays": [
+    {
+     "date": "2026-07-10",
+     "name": "San Cristovo"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "San Miguel"
+    }
+   ]
+  },
+  "27033": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro de Muras"
+    }
+   ]
+  },
+  "27034": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-09-21",
+     "name": "Virxe das Dores"
+    }
+   ]
+  },
+  "27035": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "Virxe da Veiga"
+    }
+   ]
+  },
+  "27037": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "festa do Emigrante"
+    }
+   ]
+  },
+  "27038": {
+   "holidays": [
+    {
+     "date": "2026-05-13",
+     "name": "Nosa Señora de Fátima"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "luns de Naseiro"
+    }
+   ]
+  },
+  "27039": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-07-06",
+     "name": "luns de Santa Isabel"
+    }
+   ]
+  },
+  "27040": {
+   "holidays": [
+    {
+     "date": "2026-01-28",
+     "name": "San Tirso"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "Ecce Homo"
+    }
+   ]
+  },
+  "27041": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "Santa María de Ferreira"
+    }
+   ]
+  },
+  "27042": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "San Miguel"
+    }
+   ]
+  },
+  "27043": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-06-05",
+     "name": "festas da Primavera"
+    }
+   ]
+  },
+  "27044": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-10-19",
+     "name": "San Lucas"
+    }
+   ]
+  },
+  "27045": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-09-09",
+     "name": "Romaría Santo Milagro do Cebreiro"
+    }
+   ]
+  },
+  "27046": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "festa do Emigrante"
+    }
+   ]
+  },
+  "27047": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-27",
+     "name": "San Vitorio"
+    }
+   ]
+  },
+  "27048": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-10-05",
+     "name": "luns das Feiras"
+    }
+   ]
+  },
+  "27049": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-09-07",
+     "name": "Santo Cristo das Vitorias"
+    }
+   ]
+  },
+  "27050": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "Luns de Pascua"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martiño"
+    }
+   ]
+  },
+  "27051": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Santa María do Campo, patroa de Ribadeo"
+    }
+   ]
+  },
+  "27052": {
+   "holidays": [
+    {
+     "date": "2026-08-14",
+     "name": "festas patronais"
+    },
+    {
+     "date": "2026-10-30",
+     "name": "San Claudio"
+    }
+   ]
+  },
+  "27053": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-04-23",
+     "name": "San Xurxo"
+    }
+   ]
+  },
+  "27054": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    }
+   ]
+  },
+  "27055": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-07-13",
+     "name": "San Bieito"
+    }
+   ]
+  },
+  "27056": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-14",
+     "name": "Nosa Señora da Asunción"
+    }
+   ]
+  },
+  "27057": {
+   "holidays": [
+    {
+     "date": "2026-06-25",
+     "name": "día posterior a San Xoán"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Virxe dos Remedios"
+    }
+   ]
+  },
+  "27058": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-04",
+     "name": "festas patronais de Escairón"
+    }
+   ]
+  },
+  "27059": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": "romaría das Cadeiras"
+    },
+    {
+     "date": "2026-09-21",
+     "name": "festa do Carme de Sober"
+    }
+   ]
+  },
+  "27060": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-10",
+     "name": "festas da vila"
+    }
+   ]
+  },
+  "27061": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-05-04",
+     "name": "luns despois da Enfariñada"
+    }
+   ]
+  },
+  "27062": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "festivo local"
+    }
+   ]
+  },
+  "27063": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-09-07",
+     "name": "festas do Oito"
+    }
+   ]
+  },
+  "27064": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-03",
+     "name": "Santo Estevo"
+    }
+   ]
+  },
+  "27065": {
+   "holidays": [
+    {
+     "date": "2026-08-31",
+     "name": "San Ramón, día do patrón de Vilalba"
+    },
+    {
+     "date": "2026-09-01",
+     "name": "Santa María, día da patroa de Vilalba"
+    }
+   ]
+  },
+  "27066": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "luns de Naseiro"
+    }
+   ]
+  },
+  "27901": {
+   "holidays": [
+    {
+     "date": "2026-08-27",
+     "name": "festas de San Vitorio"
+    },
+    {
+     "date": "2026-08-28",
+     "name": "festas de San Vitorio"
+    }
+   ]
+  },
+  "27902": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-06-08",
+     "name": "luns das festas patronais"
+    }
+   ]
+  },
+  "32001": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-06-05",
+     "name": "festa do boi"
+    }
+   ]
+  },
+  "32002": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martiño"
+    }
+   ]
+  },
+  "32003": {
+   "holidays": [
+    {
+     "date": "2026-05-22",
+     "name": "Santa Rita"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "festa do pemento"
+    }
+   ]
+  },
+  "32004": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-03",
+     "name": "luns de San Roque"
+    }
+   ]
+  },
+  "32005": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-05-14",
+     "name": "festa da Ascensión"
+    }
+   ]
+  },
+  "32006": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "festas de San Roque"
+    }
+   ]
+  },
+  "32007": {
+   "holidays": [
+    {
+     "date": "2026-08-06",
+     "name": "San Salvador"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Virxe dos Milagres"
+    }
+   ]
+  },
+  "32008": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martiño"
+    }
+   ]
+  },
+  "32009": {
+   "holidays": [
+    {
+     "date": "2026-05-22",
+     "name": "Santa Rita"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "día do Cristo"
+    }
+   ]
+  },
+  "32010": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "San Brais"
+    },
+    {
+     "date": "2026-07-02",
+     "name": "Santa Isabel"
+    }
+   ]
+  },
+  "32011": {
+   "holidays": [
+    {
+     "date": "2026-02-16",
+     "name": "Luns de Entroido"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "San Bartolomeu"
+    }
+   ]
+  },
+  "32012": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-09-15",
+     "name": "Virxe das Dores"
+    }
+   ]
+  },
+  "32013": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "San Bartolomeu"
+    }
+   ]
+  },
+  "32014": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-05-04",
+     "name": "Santa Cruz en Veiga"
+    }
+   ]
+  },
+  "32015": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "32016": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-03",
+     "name": ""
+    }
+   ]
+  },
+  "32017": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "Nosa Señora da Encarnación"
+    }
+   ]
+  },
+  "32018": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-05-25",
+     "name": "luns de Lodairo"
+    }
+   ]
+  },
+  "32019": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-09-17",
+     "name": "San Cibrán"
+    }
+   ]
+  },
+  "32020": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-05-25",
+     "name": "Luns de Pentecostés-Nosa Señora das Marabillas"
+    }
+   ]
+  },
+  "32021": {
+   "holidays": [
+    {
+     "date": "2026-02-18",
+     "name": "Mércores de Cinza"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Nosa Señora dos Remedios"
+    }
+   ]
+  },
+  "32022": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-05",
+     "name": "Virxe das Neves"
+    }
+   ]
+  },
+  "32023": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "festa da Virxe dos Remedios"
+    }
+   ]
+  },
+  "32024": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-09-15",
+     "name": "festa da Virxe do Cristal"
+    }
+   ]
+  },
+  "32025": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-05-08",
+     "name": "San Miguel"
+    }
+   ]
+  },
+  "32026": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martiño"
+    }
+   ]
+  },
+  "32027": {
+   "holidays": [
+    {
+     "date": "2026-07-10",
+     "name": "San Bieito"
+    },
+    {
+     "date": "2026-07-24",
+     "name": "festas de Santiago Apóstolo"
+    }
+   ]
+  },
+  "32028": {
+   "holidays": [
+    {
+     "date": "2026-02-18",
+     "name": "Mércores de Cinza"
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "32029": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-09-07",
+     "name": "luns posterior á festa do Cordeiro"
+    }
+   ]
+  },
+  "32030": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martiño"
+    }
+   ]
+  },
+  "32031": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martiño"
+    }
+   ]
+  },
+  "32032": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-07-20",
+     "name": "festas de Santa Mariña"
+    }
+   ]
+  },
+  "32033": {
+   "holidays": [
+    {
+     "date": "2026-01-16",
+     "name": "Santo Antón Abade"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    }
+   ]
+  },
+  "32034": {
+   "holidays": [
+    {
+     "date": "2026-02-25",
+     "name": "Beato Sebastián de Aparicio"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "San Bartolomeu"
+    }
+   ]
+  },
+  "32035": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-05-13",
+     "name": "Virxe de Fátima"
+    }
+   ]
+  },
+  "32036": {
+   "holidays": [
+    {
+     "date": "2026-04-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "o día seguinte hábil ao día 16 de San Roque"
+    }
+   ]
+  },
+  "32037": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-07-06",
+     "name": "luns das festas patronais na honra de Santa Isabel"
+    }
+   ]
+  },
+  "32038": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Santa María dos Remedios"
+    }
+   ]
+  },
+  "32039": {
+   "holidays": [
+    {
+     "date": "2026-02-18",
+     "name": "Mércores de Cinza"
+    },
+    {
+     "date": "2026-03-20",
+     "name": ""
+    }
+   ]
+  },
+  "32040": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martiño"
+    }
+   ]
+  },
+  "32041": {
+   "holidays": [
+    {
+     "date": "2026-01-22",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "O Viso Pequeno"
+    }
+   ]
+  },
+  "32042": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-12",
+     "name": "festa do verán"
+    }
+   ]
+  },
+  "32043": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-11",
+     "name": "festas patronais de Maceda"
+    }
+   ]
+  },
+  "32044": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-10",
+     "name": "Virxe das Neves"
+    }
+   ]
+  },
+  "32045": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-27",
+     "name": "festa de San Vitorio"
+    }
+   ]
+  },
+  "32046": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-06-04",
+     "name": "Corpus Christi"
+    }
+   ]
+  },
+  "32047": {
+   "holidays": [
+    {
+     "date": "2026-06-01",
+     "name": "festa do Espírito Santo"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martiño"
+    }
+   ]
+  },
+  "32048": {
+   "holidays": [
+    {
+     "date": "2026-08-05",
+     "name": "Virxe das Neves"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martiño"
+    }
+   ]
+  },
+  "32049": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-14",
+     "name": "San Roque"
+    }
+   ]
+  },
+  "32050": {
+   "holidays": [
+    {
+     "date": "2026-02-18",
+     "name": "Mércores de Cinza"
+    },
+    {
+     "date": "2026-05-25",
+     "name": "Virxe da Caridade"
+    }
+   ]
+  },
+  "32051": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martiño"
+    }
+   ]
+  },
+  "32052": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martiño"
+    }
+   ]
+  },
+  "32053": {
+   "holidays": [
+    {
+     "date": "2026-02-18",
+     "name": "Mércores de Cinza"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "Santa Cruz"
+    }
+   ]
+  },
+  "32054": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martiño"
+    }
+   ]
+  },
+  "32055": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martiño"
+    }
+   ]
+  },
+  "32056": {
+   "holidays": [
+    {
+     "date": "2026-02-02",
+     "name": ""
+    },
+    {
+     "date": "2026-06-29",
+     "name": ""
+    }
+   ]
+  },
+  "32057": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-31",
+     "name": "San Ramón"
+    }
+   ]
+  },
+  "32058": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martiño"
+    }
+   ]
+  },
+  "32059": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martiño"
+    }
+   ]
+  },
+  "32060": {
+   "holidays": [
+    {
+     "date": "2026-01-16",
+     "name": "Santo Antón"
+    },
+    {
+     "date": "2026-07-24",
+     "name": "Santa Ana"
+    }
+   ]
+  },
+  "32061": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martiño"
+    }
+   ]
+  },
+  "32062": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-07-16",
+     "name": "Virxe do Carme"
+    }
+   ]
+  },
+  "32063": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": "San Bartolomeu"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "Santo Cristo da Misericordia"
+    }
+   ]
+  },
+  "32064": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-06-26",
+     "name": "San Paio, patrón de Trado"
+    }
+   ]
+  },
+  "32065": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "San Wintila"
+    }
+   ]
+  },
+  "32066": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro e San Paulo"
+    }
+   ]
+  },
+  "32067": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-09-24",
+     "name": "Romaría da Saínza"
+    }
+   ]
+  },
+  "32068": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martiño"
+    }
+   ]
+  },
+  "32069": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Virxe do Portal"
+    }
+   ]
+  },
+  "32070": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-06-25",
+     "name": ""
+    }
+   ]
+  },
+  "32071": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-09-15",
+     "name": ""
+    }
+   ]
+  },
+  "32072": {
+   "holidays": [
+    {
+     "date": "2026-06-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-24",
+     "name": ""
+    }
+   ]
+  },
+  "32073": {
+   "holidays": [
+    {
+     "date": "2026-05-14",
+     "name": "A Ascensión"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "San Bartolomeu"
+    }
+   ]
+  },
+  "32074": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-07-15",
+     "name": ""
+    }
+   ]
+  },
+  "32075": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martiño"
+    }
+   ]
+  },
+  "32076": {
+   "holidays": [
+    {
+     "date": "2026-07-10",
+     "name": "San Cristovo"
+    },
+    {
+     "date": "2026-09-21",
+     "name": "festas da Saleta"
+    }
+   ]
+  },
+  "32077": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-04-06",
+     "name": "Luns de Pascua"
+    }
+   ]
+  },
+  "32078": {
+   "holidays": [
+    {
+     "date": "2026-02-16",
+     "name": "Luns de Entroido"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "festas de Sarreaus"
+    }
+   ]
+  },
+  "32079": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martiño"
+    }
+   ]
+  },
+  "32080": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": ""
+    },
+    {
+     "date": "2026-06-23",
+     "name": ""
+    }
+   ]
+  },
+  "32081": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martiño"
+    }
+   ]
+  },
+  "32082": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-04-06",
+     "name": "Luns de Pascua"
+    }
+   ]
+  },
+  "32083": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "32084": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martiño"
+    }
+   ]
+  },
+  "32085": {
+   "holidays": [
+    {
+     "date": "2026-02-18",
+     "name": "Mércores de Cinza"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "festa dos Remedios"
+    }
+   ]
+  },
+  "32086": {
+   "holidays": [
+    {
+     "date": "2026-02-13",
+     "name": ""
+    },
+    {
+     "date": "2026-02-18",
+     "name": "Mércores de Cinza"
+    }
+   ]
+  },
+  "32087": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martiño"
+    }
+   ]
+  },
+  "32088": {
+   "holidays": [
+    {
+     "date": "2026-04-23",
+     "name": "San Xurxo"
+    },
+    {
+     "date": "2026-07-22",
+     "name": "Santa María Madalena"
+    }
+   ]
+  },
+  "32089": {
+   "holidays": [
+    {
+     "date": "2026-06-12",
+     "name": ""
+    },
+    {
+     "date": "2026-07-31",
+     "name": ""
+    }
+   ]
+  },
+  "32090": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "Luns de Pascua"
+    },
+    {
+     "date": "2026-08-05",
+     "name": "Virxe das Neves"
+    }
+   ]
+  },
+  "32091": {
+   "holidays": [
+    {
+     "date": "2026-02-18",
+     "name": "Mércores de Cinza"
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "32092": {
+   "holidays": [
+    {
+     "date": "2026-02-16",
+     "name": "Luns de Entroido"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martiño"
+    }
+   ]
+  },
+  "36001": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "S. Brais"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    }
+   ]
+  },
+  "36002": {
+   "holidays": [
+    {
+     "date": "2026-06-19",
+     "name": "festa do Viño"
+    },
+    {
+     "date": "2026-10-02",
+     "name": "romaría de San Breixo"
+    }
+   ]
+  },
+  "36003": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": "día da festividade da Virxe do Carme"
+    },
+    {
+     "date": "2026-09-25",
+     "name": "festividade de S. Cosme e S. Damián"
+    }
+   ]
+  },
+  "36004": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": "día da festividade da Virxe do Carme"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "festividade de San Martiño"
+    }
+   ]
+  },
+  "36005": {
+   "holidays": [
+    {
+     "date": "2026-02-16",
+     "name": "Luns de Entroido"
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "36006": {
+   "holidays": [
+    {
+     "date": "2026-02-16",
+     "name": "Luns de Entroido"
+    },
+    {
+     "date": "2026-07-11",
+     "name": "S. Bieito"
+    }
+   ],
+   "note": "11/7 falls on a Saturday; recorded as published."
+  },
+  "36007": {
+   "holidays": [
+    {
+     "date": "2026-06-12",
+     "name": "Santo Antonio"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "San Miguel"
+    }
+   ]
+  },
+  "36008": {
+   "holidays": [
+    {
+     "date": "2026-03-27",
+     "name": "venres das Dores"
+    },
+    {
+     "date": "2026-08-31",
+     "name": "luns do Cristo"
+    }
+   ]
+  },
+  "36009": {
+   "holidays": [
+    {
+     "date": "2026-05-25",
+     "name": "romaría das Pascuillas"
+    },
+    {
+     "date": "2026-10-15",
+     "name": "Santa Teresa"
+    }
+   ]
+  },
+  "36010": {
+   "holidays": [
+    {
+     "date": "2026-07-06",
+     "name": ""
+    },
+    {
+     "date": "2026-08-03",
+     "name": ""
+    }
+   ]
+  },
+  "36013": {
+   "holidays": [
+    {
+     "date": "2026-03-20",
+     "name": ""
+    },
+    {
+     "date": "2026-05-25",
+     "name": "festa das Pascuillas"
+    }
+   ]
+  },
+  "36014": {
+   "holidays": [
+    {
+     "date": "2026-05-13",
+     "name": "Nosa Sra. de Fátima"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    }
+   ]
+  },
+  "36015": {
+   "holidays": [
+    {
+     "date": "2026-02-18",
+     "name": "Mércores de Cinza"
+    },
+    {
+     "date": "2026-08-18",
+     "name": "San Antón"
+    }
+   ]
+  },
+  "36016": {
+   "holidays": [
+    {
+     "date": "2026-07-20",
+     "name": "luns da Virxe do Carme"
+    },
+    {
+     "date": "2026-09-07",
+     "name": "luns da Pena de Francia"
+    }
+   ]
+  },
+  "36017": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-06-26",
+     "name": "festas patronais de San Paio"
+    }
+   ]
+  },
+  "36018": {
+   "holidays": [
+    {
+     "date": "2026-08-31",
+     "name": "Luns das Dores"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martiño"
+    }
+   ]
+  },
+  "36019": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "Luns de Pascua"
+    },
+    {
+     "date": "2026-08-10",
+     "name": "festas de San Lourenzo"
+    }
+   ]
+  },
+  "36020": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": ""
+    },
+    {
+     "date": "2026-06-30",
+     "name": ""
+    }
+   ]
+  },
+  "36021": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "San Roque"
+    }
+   ]
+  },
+  "36022": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": "festividade do Carme"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martiño"
+    }
+   ]
+  },
+  "36023": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": "Virxe do Carme"
+    },
+    {
+     "date": "2026-09-23",
+     "name": "Santa Trega"
+    }
+   ]
+  },
+  "36024": {
+   "holidays": [
+    {
+     "date": "2026-09-21",
+     "name": "festas patronais da Virxe das Dores"
+    },
+    {
+     "date": "2026-09-22",
+     "name": "festas patronais da Virxe das Dores"
+    }
+   ]
+  },
+  "36025": {
+   "holidays": [
+    {
+     "date": "2026-07-27",
+     "name": "San Xaquín e Santa Ana"
+    },
+    {
+     "date": "2026-08-05",
+     "name": "festa das Ermidas"
+    }
+   ]
+  },
+  "36026": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": "festividade da Virxe do Carme"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "festividade da Virxe do Porto"
+    }
+   ]
+  },
+  "36027": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-04-06",
+     "name": "Luns de Pascua"
+    }
+   ]
+  },
+  "36028": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-04-06",
+     "name": "Luns de Pascua"
+    }
+   ]
+  },
+  "36029": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": "festividade do Carme"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martiño"
+    }
+   ]
+  },
+  "36030": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-05-25",
+     "name": "Luns de Pentecostés e festividade da Franqueira"
+    }
+   ]
+  },
+  "36031": {
+   "holidays": [
+    {
+     "date": "2026-05-25",
+     "name": "día da festividade da Franqueira"
+    },
+    {
+     "date": "2026-07-16",
+     "name": "festividade da Virxe do Carme"
+    }
+   ]
+  },
+  "36032": {
+   "holidays": [
+    {
+     "date": "2026-07-27",
+     "name": ""
+    },
+    {
+     "date": "2026-12-07",
+     "name": ""
+    }
+   ]
+  },
+  "36033": {
+   "holidays": [
+    {
+     "date": "2026-06-15",
+     "name": "festa da Rosa"
+    },
+    {
+     "date": "2026-08-07",
+     "name": "San Mamede"
+    }
+   ]
+  },
+  "36034": {
+   "holidays": [
+    {
+     "date": "2026-07-29",
+     "name": "festividade de Santa Marta"
+    },
+    {
+     "date": "2026-08-05",
+     "name": "festividade da Nosa Señora das Neves"
+    }
+   ]
+  },
+  "36035": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "San Roque"
+    }
+   ]
+  },
+  "36036": {
+   "holidays": [
+    {
+     "date": "2026-06-09",
+     "name": "festividade da Virxe do Mar"
+    },
+    {
+     "date": "2026-08-07",
+     "name": "festividade de San Mamede"
+    }
+   ]
+  },
+  "36037": {
+   "holidays": [
+    {
+     "date": "2026-01-15",
+     "name": "San Amaro"
+    },
+    {
+     "date": "2026-04-06",
+     "name": "Luns de Pascua"
+    }
+   ]
+  },
+  "36038": {
+   "holidays": [
+    {
+     "date": "2026-02-18",
+     "name": "Mércores de Cinza"
+    },
+    {
+     "date": "2026-07-11",
+     "name": "San Bieito"
+    }
+   ],
+   "note": "11/7 falls on a Saturday; recorded as published."
+  },
+  "36039": {
+   "holidays": [
+    {
+     "date": "2026-07-11",
+     "name": "San Bieito"
+    },
+    {
+     "date": "2026-09-28",
+     "name": "día do Cristo"
+    }
+   ],
+   "note": "11/7 falls on a Saturday; recorded as published."
+  },
+  "36040": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "Luns de Pascua"
+    },
+    {
+     "date": "2026-10-13",
+     "name": ""
+    }
+   ]
+  },
+  "36041": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-09-24",
+     "name": "día da Virxe da Mercé"
+    }
+   ]
+  },
+  "36042": {
+   "holidays": [
+    {
+     "date": "2026-06-08",
+     "name": "luns seguinte á festividade do Corpus Christi"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "festividade de San Miguel"
+    }
+   ]
+  },
+  "36043": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "Luns de Pascua"
+    },
+    {
+     "date": "2026-09-02",
+     "name": "mércores da festa das Dores"
+    }
+   ]
+  },
+  "36044": {
+   "holidays": [
+    {
+     "date": "2026-01-07",
+     "name": "festa de San Xulián"
+    },
+    {
+     "date": "2026-07-06",
+     "name": "festa do Carme"
+    }
+   ]
+  },
+  "36045": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "luns do Cristo"
+    },
+    {
+     "date": "2026-06-04",
+     "name": "xoves da Coca"
+    }
+   ]
+  },
+  "36046": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "Luns de Pascua"
+    },
+    {
+     "date": "2026-06-05",
+     "name": "festa do Viño Tinto"
+    }
+   ]
+  },
+  "36047": {
+   "holidays": [
+    {
+     "date": "2026-06-15",
+     "name": "Santo Antonio"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Nosa Señora do Faro"
+    }
+   ]
+  },
+  "36048": {
+   "holidays": [
+    {
+     "date": "2026-02-02",
+     "name": "A Saúde"
+    },
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    }
+   ]
+  },
+  "36049": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-07-20",
+     "name": "luns do Cristo"
+    }
+   ]
+  },
+  "36050": {
+   "holidays": [
+    {
+     "date": "2026-06-15",
+     "name": "festividade do Santísimo Cristo da Vitoria"
+    },
+    {
+     "date": "2026-08-10",
+     "name": "festividade de San Lourenzo"
+    }
+   ]
+  },
+  "36051": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "romaría do Con"
+    },
+    {
+     "date": "2026-09-04",
+     "name": "Santa Rosalía"
+    }
+   ]
+  },
+  "36052": {
+   "holidays": [
+    {
+     "date": "2026-07-10",
+     "name": "festa do Lacón"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "festa da Empanada"
+    }
+   ]
+  },
+  "36053": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "Luns de Pascua"
+    },
+    {
+     "date": "2026-08-06",
+     "name": "festa do Patrón"
+    }
+   ]
+  },
+  "36054": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "Luns do Alivio"
+    }
+   ]
+  },
+  "36055": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-04-13",
+     "name": "luns de San Telmo"
+    }
+   ]
+  },
+  "36056": {
+   "holidays": [
+    {
+     "date": "2026-02-02",
+     "name": "festividade da Candelaria"
+    },
+    {
+     "date": "2026-07-24",
+     "name": "festividade de Santa Cristina"
+    }
+   ]
+  },
+  "36057": {
+   "holidays": [
+    {
+     "date": "2026-03-28",
+     "name": "festa da Reconquista"
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ],
+   "note": "28/3 falls on a Saturday; recorded as published."
+  },
+  "36058": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martiño"
+    }
+   ]
+  },
+  "36059": {
+   "holidays": [
+    {
+     "date": "2026-08-10",
+     "name": "festividade da Nosa Sra. da Piedade"
+    },
+    {
+     "date": "2026-08-11",
+     "name": "festividade da Nosa Sra. da Piedade"
+    }
+   ]
+  },
+  "36060": {
+   "holidays": [
+    {
+     "date": "2026-05-22",
+     "name": "festividade de Santa Rita"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "día posterior a San Roque"
+    }
+   ]
+  },
+  "36061": {
+   "holidays": [
+    {
+     "date": "2026-01-15",
+     "name": "San Mauro"
+    },
+    {
+     "date": "2026-09-16",
+     "name": "San Cibrán"
+    }
+   ]
+  },
+  "36901": {
+   "holidays": [
+    {
+     "date": "2026-01-07",
+     "name": "día de San Xulián"
+    },
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Entroido"
+    }
+   ]
+  },
+  "36902": {
+   "holidays": [
+    {
+     "date": "2026-07-27",
+     "name": "festividade do Ecce-Homo"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "San Roque"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "source_id": "bome-2026",
+ "source": {
+  "title": "Acuerdo del Consejo de Gobierno de 19 de septiembre de 2025, relativo a calendario laboral para el año 2026 (BOME núm. 6315, de 3-10-2025, BOME-A-2025-1033)",
+  "url": "https://bomemelilla.es/bome/descargar/BOME-A-2025-1033.pdf",
+  "published": "2025-10-03"
+ },
+ "region": "melilla",
+ "count": 1,
+ "unmatched": [],
+ "municipios": {
+  "52001": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": "Día de Ntra. Sra. Virgen de la Victoria"
+    },
+    {
+     "date": "2026-09-17",
+     "name": "Día de Melilla"
+    }
+   ]
+  }
+ }
+}

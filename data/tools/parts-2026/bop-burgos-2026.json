@@ -1,0 +1,2658 @@
+{
+ "source_id": "bop-burgos-2026",
+ "source": {
+  "title": "Resolución de 22 de agosto de 2025, de la Oficina Territorial de Trabajo de Burgos, sobre calendario de fiestas locales retribuidas y no recuperables para el año 2026 en la provincia de Burgos (BOP Burgos núm. 165, de 3-9-2025, CVE BOPBUR-2025-04120)",
+  "url": "https://trabajoyprevencion.jcyl.es/web/jcyl/binarios/911/2/02%20BOP%20FIESTAS%20LOCALES%20BURGOS%2026,0.pdf",
+  "published": "2025-09-03"
+ },
+ "region": "castilla-y-leon",
+ "count": 190,
+ "unmatched": [
+  "09006 Aguas Cándidas: not listed",
+  "09007 Aguilar de Bureba: not listed",
+  "09009 Albillos: not listed",
+  "09014 Los Altos: not listed",
+  "09020 Arauzo de Miel: not listed",
+  "09022 Arauzo de Torre: not listed",
+  "09024 Arenillas de Riopisuerga: not listed",
+  "09025 Arija: not listed",
+  "09026 Arlanzón: not listed",
+  "09032 Avellanosa de Muñó: not listed",
+  "09034 Los Balbases: not listed",
+  "09037 Barbadillo de Herreros: not listed",
+  "09039 Barbadillo del Pez: not listed",
+  "09046 Bascuñana: not listed",
+  "09050 Berberana: not listed",
+  "09052 Berzosa de Bureba: not listed",
+  "09061 Cabañes de Esgueva: not listed",
+  "09062 Cabezón de la Sierra: not listed",
+  "09063 Cavia: not listed",
+  "09066 Campolara: not listed",
+  "09068 Cantabrana: not listed",
+  "09071 Carcedo de Bureba: not listed",
+  "09072 Carcedo de Burgos: not listed",
+  "09077 Cascajares de Bureba: not listed",
+  "09079 Castellanos de Castro: not listed",
+  "09082 Castildelgado: not listed",
+  "09083 Castil de Peones: not listed",
+  "09084 Castrillo de la Reina: not listed",
+  "09088 Castrillo de Riopisuerga: not listed",
+  "09090 Castrillo Mota de Judíos: not listed",
+  "09093 Cayuela: not listed",
+  "09094 Cebrecos: not listed",
+  "09101 Ciadoncha: not listed",
+  "09102 Cillaperlata: not listed",
+  "09103 Cilleruelo de Abajo: not listed",
+  "09108 Cogollos: not listed",
+  "09109 Condado de Treviño: not listed",
+  "09113 Covarrubias: not listed",
+  "09117 La Cueva de Roa: not listed",
+  "09123 Espinosa del Camino: not listed",
+  "09127 Fontioso: not listed",
+  "09128 Frandovínez: not listed",
+  "09129 Fresneda de la Sierra Tirón: not listed",
+  "09130 Fresneña: not listed",
+  "09137 Fuentelcésped: not listed",
+  "09138 Fuentelisendo: not listed",
+  "09143 Galbarros: not listed",
+  "09148 Grijalba: not listed",
+  "09149 Grisaleña: not listed",
+  "09159 Hontanas: not listed",
+  "09167 Hornillos del Camino: not listed",
+  "09169 Hortigüela: not listed",
+  "09173 Huerta de Arriba: not listed",
+  "09174 Huerta de Rey: not listed",
+  "09176 Hurones: not listed",
+  "09178 Ibrillos: not listed",
+  "09182 Itero del Castillo: not listed",
+  "09183 Jaramillo de la Fuente: not listed",
+  "09184 Jaramillo Quemado: not listed",
+  "09190 Junta de Villalba de Losa: not listed",
+  "09191 Jurisdicción de Lara: not listed",
+  "09192 Jurisdicción de San Zadornil: not listed",
+  "09195 Llano de Bureba: not listed",
+  "09198 Mahamud: not listed",
+  "09199 Mambrilla de Castrejón: not listed",
+  "09200 Mambrillas de Lara: not listed",
+  "09202 Manciles: not listed",
+  "09206 Mazuela: not listed",
+  "09208 Mecerreyes: not listed",
+  "09216 Merindad de Valdeporres: not listed",
+  "09220 Miraveche: not listed",
+  "09221 Modúbar de la Emparedada: not listed",
+  "09225 Moncalvillo: not listed",
+  "09226 Monterrubio de la Demanda: not listed",
+  "09229 Nava de Roa: not listed",
+  "09230 Navas de Bureba: not listed",
+  "09231 Nebreda: not listed",
+  "09236 Olmillos de Muñó: not listed",
+  "09243 Padilla de Arriba: not listed",
+  "09244 Padrones de Bureba: not listed",
+  "09246 Palacios de la Sierra: not listed",
+  "09248 Palazuelos de la Sierra: not listed",
+  "09253 Pardilla: not listed",
+  "09257 Pedrosa del Páramo: not listed",
+  "09258 Pedrosa del Príncipe: not listed",
+  "09261 Peñaranda de Duero: not listed",
+  "09262 Peral de Arlanza: not listed",
+  "09265 Piérnigas: not listed",
+  "09266 Pineda de la Sierra: not listed",
+  "09269 Pinilla de los Moros: not listed",
+  "09273 Prádanos de Bureba: not listed",
+  "09275 Presencio: not listed",
+  "09277 Puentedura: not listed",
+  "09280 Quintanabureba: not listed",
+  "09287 Quintanaortuño: not listed",
+  "09289 Quintanar de la Sierra: not listed",
+  "09292 Quintanavides: not listed",
+  "09294 Quintanilla de la Mata: not listed",
+  "09295 Quintanilla del Coco: not listed",
+  "09298 Quintanilla San García: not listed",
+  "09301 Quintanilla Vivar: not listed",
+  "09303 Rábanos: not listed",
+  "09304 Rabé de las Calzadas: not listed",
+  "09308 Redecilla del Campo: not listed",
+  "09310 Reinoso: not listed",
+  "09311 Retuerta: not listed",
+  "09316 Revilla Vallejera: not listed",
+  "09317 Rezmondo: not listed",
+  "09318 Riocavado de la Sierra: not listed",
+  "09323 Rojas: not listed",
+  "09326 Rubena: not listed",
+  "09327 Rublacedo de Abajo: not listed",
+  "09328 Rucandio: not listed",
+  "09329 Salas de Bureba: not listed",
+  "09334 Salinillas de Bureba: not listed",
+  "09335 San Adrián de Juarros: not listed",
+  "09338 San Mamés de Burgos: not listed",
+  "09339 San Martín de Rubiales: not listed",
+  "09340 San Millán de Lara: not listed",
+  "09343 Santa Cecilia: not listed",
+  "09345 Santa Cruz de la Salceda: not listed",
+  "09348 Santa Inés: not listed",
+  "09352 Santa María del Mercadillo: not listed",
+  "09353 Santa María Ribarredonda: not listed",
+  "09354 Santa Olalla de Bureba: not listed",
+  "09355 Santibáñez de Esgueva: not listed",
+  "09356 Santibáñez del Val: not listed",
+  "09360 San Vicente del Valle: not listed",
+  "09366 Solarana: not listed",
+  "09372 Sotragero: not listed",
+  "09374 Susinos del Páramo: not listed",
+  "09375 Tamarón: not listed",
+  "09378 Tejada: not listed",
+  "09380 Terradillos de Esgueva: not listed",
+  "09381 Tinieblas de la Sierra: not listed",
+  "09382 Tobar: not listed",
+  "09388 Torrelara: not listed",
+  "09389 Torrepadre: not listed",
+  "09392 Tosantos: not listed",
+  "09396 Tubilla del Lago: not listed",
+  "09400 Vadocondes: not listed",
+  "09403 Valdeande: not listed",
+  "09405 Valdezate: not listed",
+  "09407 Valmala: not listed",
+  "09409 Valle de Manzanedo: not listed",
+  "09410 Valle de Mena: not listed",
+  "09411 Valle de Oca: not listed",
+  "09413 Valle de Valdebezana: not listed",
+  "09414 Valle de Valdelaguna: not listed",
+  "09416 Valle de Zamanzas: not listed",
+  "09417 Vallejera: not listed",
+  "09418 Valles de Palenzuela: not listed",
+  "09421 La Vid y Barrios: not listed",
+  "09422 La Vid de Bureba: not listed",
+  "09423 Vileña: not listed",
+  "09424 Viloria de Rioja: not listed",
+  "09425 Vilviestre del Pinar: not listed",
+  "09428 Villaescusa de Roa: not listed",
+  "09430 Villaespasa: not listed",
+  "09431 Villafranca Montes de Oca: not listed",
+  "09433 Villagalijo: not listed",
+  "09437 Villahoz: not listed",
+  "09438 Villalba de Duero: not listed",
+  "09440 Villalbilla de Gumiel: not listed",
+  "09442 Villalmanzo: not listed",
+  "09443 Villamayor de los Montes: not listed",
+  "09445 Villambistia: not listed",
+  "09446 Villamedianilla: not listed",
+  "09447 Villamiel de la Sierra: not listed",
+  "09448 Villangómez: not listed",
+  "09454 Villanueva de Teba: not listed",
+  "09455 Villaquirán de la Puebla: not listed",
+  "09466 Villaverde del Monte: not listed",
+  "09467 Villaverde-Mogina: not listed",
+  "09471 Villayerno Morquillas: not listed",
+  "09476 Villoruebo: not listed",
+  "09478 Vizcaínos: not listed",
+  "09482 Zarzosa de Río Pisuerga: not listed",
+  "09485 Zuñeda: not listed",
+  "09901 Quintanilla del Agua y Tordueles: not listed",
+  "09902 Valle de Santibáñez: not listed"
+ ],
+ "municipios": {
+  "09001": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "LA CRUZ"
+    }
+   ]
+  },
+  "09003": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-05-04",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09010": {
+   "holidays": [
+    {
+     "date": "2026-06-04",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09011": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-08-13",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09012": {
+   "holidays": [
+    {
+     "date": "2026-08-13",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-08-14",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09013": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "SAN SEBASTIAN"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    }
+   ]
+  },
+  "09016": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-06-24",
+     "name": "SAN JUAN"
+    }
+   ]
+  },
+  "09017": {
+   "holidays": [
+    {
+     "date": "2026-06-23",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-06-24",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09018": {
+   "holidays": [
+    {
+     "date": "2026-09-14",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-09-15",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09019": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09021": {
+   "holidays": [
+    {
+     "date": "2026-04-22",
+     "name": "VIRGEN DE LAS ANGUSTIAS"
+    },
+    {
+     "date": "2026-07-14",
+     "name": "SAN BUENABENTURA"
+    }
+   ]
+  },
+  "09023": {
+   "holidays": [
+    {
+     "date": "2026-06-12",
+     "name": "CURPILLOS"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "SAN PEDRO Y SAN PABLO"
+    }
+   ]
+  },
+  "09027": {
+   "holidays": [
+    {
+     "date": "2026-03-03",
+     "name": "SANTOS MARTIRES"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    }
+   ]
+  },
+  "09029": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09030": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": "LA CRUZ DE MAYO"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    }
+   ]
+  },
+  "09033": {
+   "holidays": [
+    {
+     "date": "2026-05-16",
+     "name": "VIRGEN DE LA ASCENSIÓN"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "VIRGEN DE LA ANUNCIACIÓN"
+    }
+   ]
+  },
+  "09035": {
+   "holidays": [
+    {
+     "date": "2026-08-14",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09036": {
+   "holidays": [
+    {
+     "date": "2026-08-31",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-09-01",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09038": {
+   "holidays": [
+    {
+     "date": "2026-09-07",
+     "name": "VIRGEN DE VILLAVIEJA"
+    },
+    {
+     "date": "2026-10-05",
+     "name": "VIRGEN DEL ROSARIO"
+    }
+   ]
+  },
+  "09041": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-08-01",
+     "name": "SAN PEDRILLO"
+    }
+   ]
+  },
+  "09043": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-08-03",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09044": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-06-02",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09045": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09047": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "NTRA. SEÑORA"
+    }
+   ]
+  },
+  "09048": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-08-26",
+     "name": "SAN VÍTORES"
+    }
+   ]
+  },
+  "09051": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-11-30",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09054": {
+   "holidays": [
+    {
+     "date": "2026-01-09",
+     "name": "SAN JULIÁN Y SANTA BASILISA"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    }
+   ]
+  },
+  "09055": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-06-24",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09056": {
+   "holidays": [
+    {
+     "date": "2026-05-12",
+     "name": "LA TABERA"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "SAN ROQUE"
+    }
+   ]
+  },
+  "09057": {
+   "holidays": [
+    {
+     "date": "2026-06-09",
+     "name": "SAN JUAN"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "SAN ROQUE"
+    }
+   ]
+  },
+  "09058": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-10-02",
+     "name": "NTRA. SRA. DEL ROSARIO"
+    }
+   ]
+  },
+  "09059": {
+   "holidays": [
+    {
+     "date": "2026-06-12",
+     "name": "CURPILLOS"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "SAN PEDRO Y SAN PABLO"
+    }
+   ]
+  },
+  "09060": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "SAN MARTÍN"
+    }
+   ]
+  },
+  "09064": {
+   "holidays": [
+    {
+     "date": "2026-08-07",
+     "name": "SANTO DOMNGO"
+    },
+    {
+     "date": "2026-08-18",
+     "name": "SANTA JUANA"
+    }
+   ]
+  },
+  "09065": {
+   "holidays": [
+    {
+     "date": "2026-08-13",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-08-14",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09067": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-12-28",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09070": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": "SANTA PIEDAD"
+    },
+    {
+     "date": "2026-12-29",
+     "name": "SANTA EUGENIA"
+    }
+   ]
+  },
+  "09073": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": "VIRGEN DEL CARMEN"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "SAN MARTÍN"
+    }
+   ]
+  },
+  "09074": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "NTRA. SRA. DE LA NATIVIDAD"
+    }
+   ]
+  },
+  "09075": {
+   "holidays": [
+    {
+     "date": "2026-10-07",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-12-10",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09076": {
+   "holidays": [
+    {
+     "date": "2026-09-24",
+     "name": "LAS MERCEDES"
+    },
+    {
+     "date": "2026-11-30",
+     "name": "SAN SATURNINO"
+    }
+   ]
+  },
+  "09078": {
+   "holidays": [
+    {
+     "date": "2026-06-13",
+     "name": "SAN ANTONIO"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "NATIVIDAD DE LA VIRGEN"
+    }
+   ]
+  },
+  "09085": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-07-27",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09086": {
+   "holidays": [
+    {
+     "date": "2026-01-14",
+     "name": "SANTA EUGENIA"
+    },
+    {
+     "date": "2026-06-24",
+     "name": "SAN JUAN"
+    }
+   ]
+  },
+  "09091": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "SAN JUAN"
+    },
+    {
+     "date": "2026-11-25",
+     "name": "SANTA CATALINA"
+    }
+   ]
+  },
+  "09095": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09098": {
+   "holidays": [
+    {
+     "date": "2026-08-26",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-08-27",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09100": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-12-10",
+     "name": "SANTA EULALIA"
+    }
+   ]
+  },
+  "09104": {
+   "holidays": [
+    {
+     "date": "2026-06-16",
+     "name": "SAN QUIRICO Y SANTA JULITA"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "VIRGEN DE LA TORRE"
+    }
+   ]
+  },
+  "09105": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "SAN SEBASTIAN"
+    },
+    {
+     "date": "2026-07-16",
+     "name": "VIRGEN DEL CARMEN"
+    }
+   ]
+  },
+  "09110": {
+   "holidays": [
+    {
+     "date": "2026-08-13",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-08-14",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09112": {
+   "holidays": [
+    {
+     "date": "2026-06-26",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-11-13",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09114": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-07-18",
+     "name": "SANTA MARINA"
+    }
+   ]
+  },
+  "09115": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-11-12",
+     "name": "SAN MILLÁN"
+    }
+   ]
+  },
+  "09119": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09120": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "SAN JUAN"
+    },
+    {
+     "date": "2026-09-28",
+     "name": "SAN COSME Y SAN DAMIÁN"
+    }
+   ]
+  },
+  "09122": {
+   "holidays": [
+    {
+     "date": "2026-11-12",
+     "name": "SAN MILLÁN"
+    },
+    {
+     "date": "2026-12-04",
+     "name": "SANTA BÁRBARA"
+    }
+   ]
+  },
+  "09124": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": "NTRA. SRA. DE LA NATIVIDAD"
+    },
+    {
+     "date": "2026-11-23",
+     "name": "SANTA CECILIA"
+    }
+   ]
+  },
+  "09125": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "SAN PEDRO"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "VIRGEN DE LA NATIVIDAD"
+    }
+   ]
+  },
+  "09131": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-08-28",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09132": {
+   "holidays": [
+    {
+     "date": "2026-09-11",
+     "name": "FIESTAS DE GRACIA"
+    },
+    {
+     "date": "2026-11-30",
+     "name": "SAN ANDRÉS"
+    }
+   ]
+  },
+  "09133": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-11-18",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09134": {
+   "holidays": [
+    {
+     "date": "2026-06-22",
+     "name": "SAN JUAN"
+    },
+    {
+     "date": "2026-09-21",
+     "name": "DIA DEL CRISTO"
+    }
+   ]
+  },
+  "09135": {
+   "holidays": [
+    {
+     "date": "2026-09-29",
+     "name": "SAN MIGUEL"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "SAN MARTÍN"
+    }
+   ]
+  },
+  "09136": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": "STO. CRISTO DEL CARMELO"
+    },
+    {
+     "date": "2026-08-28",
+     "name": "SAN MAMÉS"
+    }
+   ]
+  },
+  "09139": {
+   "holidays": [
+    {
+     "date": "2026-06-26",
+     "name": "SAN JUAN"
+    },
+    {
+     "date": "2026-08-21",
+     "name": "SAN BARTOLOMÉ"
+    }
+   ]
+  },
+  "09140": {
+   "holidays": [
+    {
+     "date": "2026-08-10",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-08-11",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09141": {
+   "holidays": [
+    {
+     "date": "2026-06-01",
+     "name": "FIESTA DEL PADRE ETERNO"
+    },
+    {
+     "date": "2026-06-02",
+     "name": "FIESTA DEL PADRE ETERNO"
+    }
+   ]
+  },
+  "09144": {
+   "holidays": [
+    {
+     "date": "2026-08-20",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-08-21",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09151": {
+   "holidays": [
+    {
+     "date": "2026-08-14",
+     "name": "SAN ROQUE"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "NTRA. SRA. VIRGEN DEL RÍO"
+    }
+   ]
+  },
+  "09152": {
+   "holidays": [
+    {
+     "date": "2026-09-07",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09154": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "SAN PEDRO"
+    },
+    {
+     "date": "2026-09-21",
+     "name": "SANTA LUCÍA"
+    }
+   ]
+  },
+  "09155": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "BEATA JUANA DE HAZA"
+    },
+    {
+     "date": "2026-08-03",
+     "name": "SAN MIGUEL"
+    }
+   ]
+  },
+  "09160": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-06-24",
+     "name": "SAN JUAN BAUTISTA"
+    }
+   ]
+  },
+  "09162": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09163": {
+   "holidays": [
+    {
+     "date": "2026-08-14",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09164": {
+   "holidays": [
+    {
+     "date": "2026-06-13",
+     "name": "SAN ANTONIO"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "VIRGEN DE LA SERNA"
+    }
+   ]
+  },
+  "09166": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "NTRA. SRA. DE SEPTIEMBRE"
+    }
+   ]
+  },
+  "09168": {
+   "holidays": [
+    {
+     "date": "2026-02-12",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09170": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": "SAN BARTOLOMÉ"
+    },
+    {
+     "date": "2026-08-25",
+     "name": "SAN BARTOLOMÉ"
+    }
+   ]
+  },
+  "09172": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "SAN JUAN"
+    },
+    {
+     "date": "2026-08-10",
+     "name": "SAN LORENZO"
+    }
+   ]
+  },
+  "09175": {
+   "holidays": [
+    {
+     "date": "2026-05-02",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09177": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "SAN MIGUEL"
+    }
+   ]
+  },
+  "09179": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-11-24",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09180": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "SAN MARTÍN"
+    }
+   ]
+  },
+  "09181": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": "DÍA LA CRUZ"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "SAN MARTÍN"
+    }
+   ]
+  },
+  "09189": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-07-18",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09194": {
+   "holidays": [
+    {
+     "date": "2026-09-07",
+     "name": "NTRA. SRA. DE LA NATIVIDAD"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "NTRA. SRA. DE LA NATIVIDAD"
+    }
+   ]
+  },
+  "09196": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09197": {
+   "holidays": [
+    {
+     "date": "2026-07-03",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-07-04",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09201": {
+   "holidays": [
+    {
+     "date": "2026-08-11",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-08-12",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09209": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-10-05",
+     "name": "NTRA. SRA. DEL ROSARIO"
+    }
+   ]
+  },
+  "09211": {
+   "holidays": [
+    {
+     "date": "2026-05-18",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09213": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "SAN PEDRO Y SAN PABLO"
+    }
+   ]
+  },
+  "09214": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO LABRADOR"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "SAN DEDRO"
+    }
+   ]
+  },
+  "09215": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-06-13",
+     "name": "ROMERIA SAN BERNABÉ"
+    }
+   ]
+  },
+  "09217": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-06-24",
+     "name": "SAN JUAN"
+    }
+   ]
+  },
+  "09218": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-09-04",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09219": {
+   "holidays": [
+    {
+     "date": "2026-05-25",
+     "name": "SAN JUAN DEL MONTE"
+    },
+    {
+     "date": "2026-09-12",
+     "name": "NTRA. SRA. DE ALTAMIRA"
+    }
+   ]
+  },
+  "09223": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "FIESTA LOCAL"
+    }
+   ],
+   "note": "The annex prints the first day as 29/06/2025 (sic) in the 2026 list; taken as 29 June 2026 (the Junta's open-data calendar also gives 29/06/2026)."
+  },
+  "09224": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-08-21",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09227": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "SAN JUAN"
+    },
+    {
+     "date": "2026-09-24",
+     "name": "NTRA. SRA. DE LAS MERCEDES"
+    }
+   ]
+  },
+  "09228": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "VIRGEN DE ÉGIDO"
+    }
+   ]
+  },
+  "09232": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": "SAN ROQUE"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "SAN MIGUEL"
+    }
+   ]
+  },
+  "09235": {
+   "holidays": [
+    {
+     "date": "2026-09-03",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-09-04",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09238": {
+   "holidays": [
+    {
+     "date": "2026-08-26",
+     "name": "SAN VITORES"
+    },
+    {
+     "date": "2026-10-21",
+     "name": "SANTA PAULINA"
+    }
+   ]
+  },
+  "09239": {
+   "holidays": [
+    {
+     "date": "2026-08-28",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-09-16",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09241": {
+   "holidays": [
+    {
+     "date": "2026-05-28",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-12-14",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09242": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-06-24",
+     "name": "SAN JUAN"
+    }
+   ]
+  },
+  "09247": {
+   "holidays": [
+    {
+     "date": "2026-01-24",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-06-06",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09249": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "SAN BLAS"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    }
+   ]
+  },
+  "09250": {
+   "holidays": [
+    {
+     "date": "2026-02-23",
+     "name": "SAN PEDRO DE CÁTEDRA"
+    },
+    {
+     "date": "2026-09-21",
+     "name": "SAN MATEO"
+    }
+   ]
+  },
+  "09251": {
+   "holidays": [
+    {
+     "date": "2026-07-10",
+     "name": "CRISTO DE BARRIO"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "ACCIÓN DE GRACIAS"
+    }
+   ]
+  },
+  "09255": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-08-31",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09256": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09259": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-06-10",
+     "name": "SAN CRISTOBAL"
+    }
+   ]
+  },
+  "09267": {
+   "holidays": [
+    {
+     "date": "2026-05-21",
+     "name": "VIRGEN DE LA PEÑA"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "SAN MIGUEL ARCANGEL"
+    }
+   ]
+  },
+  "09268": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-08-28",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09270": {
+   "holidays": [
+    {
+     "date": "2026-07-03",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-07-06",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09272": {
+   "holidays": [
+    {
+     "date": "2026-04-25",
+     "name": "SAN MARCOS"
+    },
+    {
+     "date": "2026-09-28",
+     "name": "SAN COSME Y SAN DAMIÁN"
+    }
+   ]
+  },
+  "09274": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-09-12",
+     "name": "GRACIAS"
+    }
+   ]
+  },
+  "09276": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-10-05",
+     "name": "FIESTAS PATRONALES"
+    }
+   ]
+  },
+  "09279": {
+   "holidays": [
+    {
+     "date": "2026-06-11",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-06-12",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09281": {
+   "holidays": [
+    {
+     "date": "2026-09-07",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09283": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-12-10",
+     "name": "SANTA EULALIA"
+    }
+   ]
+  },
+  "09288": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-08-03",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09297": {
+   "holidays": [
+    {
+     "date": "2026-06-12",
+     "name": "CURPILLOS"
+    },
+    {
+     "date": "2026-09-28",
+     "name": "SAN FACUNDO"
+    }
+   ]
+  },
+  "09302": {
+   "holidays": [
+    {
+     "date": "2026-08-11",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-08-12",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09306": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-09-24",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09307": {
+   "holidays": [
+    {
+     "date": "2026-06-26",
+     "name": "SAN PELAYO"
+    },
+    {
+     "date": "2026-11-13",
+     "name": "SAN DIEGO DE ALCALÁ"
+    }
+   ]
+  },
+  "09309": {
+   "holidays": [
+    {
+     "date": "2026-08-27",
+     "name": "SAN ADRIÁN"
+    },
+    {
+     "date": "2026-08-28",
+     "name": "SAN ADRIÁN"
+    }
+   ]
+  },
+  "09312": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "DÍA DE GRACIAS"
+    }
+   ]
+  },
+  "09314": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": "VIRGEN DEL CARMEN"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "NATIVIDAD NTRA. SRA."
+    }
+   ]
+  },
+  "09315": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-06-24",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09321": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09325": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "SAN ESTEBAN"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "SAN PEDRO"
+    }
+   ]
+  },
+  "09330": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": "SAN ROQUE"
+    },
+    {
+     "date": "2026-09-21",
+     "name": "ACCION DE GRACIAS"
+    }
+   ]
+  },
+  "09332": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-09-15",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09337": {
+   "holidays": [
+    {
+     "date": "2026-02-13",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-06-24",
+     "name": "SAN JUAN"
+    }
+   ]
+  },
+  "09346": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-08-07",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09347": {
+   "holidays": [
+    {
+     "date": "2026-02-05",
+     "name": "SANTA AGUEDA"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "SAN PEDRO"
+    }
+   ]
+  },
+  "09350": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "LUNES DE PASCUA"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    }
+   ]
+  },
+  "09351": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-08-28",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09358": {
+   "holidays": [
+    {
+     "date": "2026-07-02",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-12-21",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09361": {
+   "holidays": [
+    {
+     "date": "2026-08-05",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-10-07",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09362": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-06-15",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09363": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "SANTA MARÍA LA REAL"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Castrillo de Murcia",
+     "holidays": [
+      {
+       "date": "2026-06-04",
+       "name": "CORPUS CHRISTI"
+      },
+      {
+       "date": "2026-12-04",
+       "name": "SANTA BÁRBARA"
+      }
+     ]
+    },
+    {
+     "name": "Cítores del Páramo",
+     "holidays": [
+      {
+       "date": "2026-06-22",
+       "name": "SAN JUAN"
+      },
+      {
+       "date": "2026-11-12",
+       "name": "SAN MILLÁN"
+      }
+     ]
+    },
+    {
+     "name": "Olmillos de Sasamon",
+     "holidays": [
+      {
+       "date": "2026-05-04",
+       "name": "LA CRUZ DE MAYO"
+      },
+      {
+       "date": "2026-08-14",
+       "name": "NUESTRA SEÑORA DE LA ASUNCIÓN"
+      }
+     ]
+    },
+    {
+     "name": "Villandiego",
+     "holidays": [
+      {
+       "date": "2026-07-08",
+       "name": "SANTA MARINA"
+      },
+      {
+       "date": "2026-09-14",
+       "name": "EXALTACIÓN DE LA SANTA CRUZ"
+      }
+     ]
+    },
+    {
+     "name": "Villasidro",
+     "holidays": [
+      {
+       "date": "2026-05-29",
+       "name": "SANTA MARÍA MAGDALENA"
+      },
+      {
+       "date": "2026-07-22",
+       "name": "SANTA MARÍA MAGDALENA"
+      }
+     ]
+    },
+    {
+     "name": "Yudego",
+     "holidays": [
+      {
+       "date": "2026-10-15",
+       "name": "SANTA TERESA"
+      },
+      {
+       "date": "2026-10-16",
+       "name": "SANTA TERESA"
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "09365": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-10-07",
+     "name": "VIRGEN DEL ROSARIO"
+    }
+   ]
+  },
+  "09368": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-07-24",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09369": {
+   "holidays": [
+    {
+     "date": "2026-02-05",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-09-07",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09373": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "FIESTA LOCAL"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Guadilla de Villamar",
+     "holidays": [
+      {
+       "date": "2026-05-04",
+       "name": "FIESTA LOCAL"
+      },
+      {
+       "date": "2026-05-15",
+       "name": "FIESTA LOCAL"
+      }
+     ]
+    }
+   ],
+   "note": "The list also gives days for localities of the municipality; see nucleos."
+  },
+  "09377": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "SAN ROQUE"
+    }
+   ]
+  },
+  "09384": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-08-28",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09386": {
+   "holidays": [
+    {
+     "date": "2026-07-25",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-07-27",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09387": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-11-30",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09390": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": "VIRGEN DEL CARMEN"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "SAN MARTÍN"
+    }
+   ]
+  },
+  "09391": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-10-05",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09394": {
+   "holidays": [
+    {
+     "date": "2026-01-22",
+     "name": "SAN VICENTE MÁRTIR"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "SAN BARTOLOMÉ"
+    }
+   ]
+  },
+  "09395": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09398": {
+   "holidays": [
+    {
+     "date": "2026-02-02",
+     "name": "LAS CANDELAS"
+    },
+    {
+     "date": "2026-10-07",
+     "name": "NTRA SRA DEL ROSARIO"
+    }
+   ]
+  },
+  "09406": {
+   "holidays": [
+    {
+     "date": "2026-08-03",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-10-07",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09408": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-08-21",
+     "name": "ACCIÓN DE GRACIAS"
+    }
+   ]
+  },
+  "09412": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09415": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-12-24",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09419": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-06-04",
+     "name": "CORPUS CHRISTI"
+    }
+   ]
+  },
+  "09427": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "SAN ROQUE"
+    }
+   ]
+  },
+  "09429": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "SAN MIGUEL"
+    }
+   ]
+  },
+  "09432": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-06-13",
+     "name": "SAN ANTONIO"
+    }
+   ]
+  },
+  "09434": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09439": {
+   "holidays": [
+    {
+     "date": "2026-06-12",
+     "name": "CURPILLOS"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "SAN PEDRO Y SAN PABLO"
+    }
+   ]
+  },
+  "09441": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-10-05",
+     "name": "EL ROSARIO"
+    }
+   ]
+  },
+  "09444": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-07-10",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09449": {
+   "holidays": [
+    {
+     "date": "2026-04-27",
+     "name": "PATROCINIO DE SAN JOSÉ"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO LABRADOR"
+    }
+   ]
+  },
+  "09450": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "SAN BLAS"
+    },
+    {
+     "date": "2026-05-04",
+     "name": "LA CRUZ"
+    }
+   ]
+  },
+  "09451": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-08-18",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09456": {
+   "holidays": [
+    {
+     "date": "2026-09-07",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "NATIVIDAD DE NUESTRA SEÑORA"
+    }
+   ]
+  },
+  "09458": {
+   "holidays": [
+    {
+     "date": "2026-02-23",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09460": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": "EL CARMEN"
+    },
+    {
+     "date": "2026-12-07",
+     "name": "SAN AMBROSIO"
+    }
+   ]
+  },
+  "09463": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": "SAN ROQUE"
+    },
+    {
+     "date": "2026-09-24",
+     "name": "NTRA. SRA. DE LA MERCED"
+    }
+   ]
+  },
+  "09464": {
+   "holidays": [
+    {
+     "date": "2026-08-07",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-08-10",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09472": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-06-24",
+     "name": "SAN JUAN"
+    }
+   ]
+  },
+  "09473": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-12-29",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09480": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "SAN ISIDRO"
+    },
+    {
+     "date": "2026-12-10",
+     "name": "STA. EULALIA DE MÉRIDA"
+    }
+   ]
+  },
+  "09483": {
+   "holidays": [
+    {
+     "date": "2026-07-02",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-11-30",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09903": {
+   "holidays": [
+    {
+     "date": "2026-07-18",
+     "name": "SANTA MARINA"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09904": {
+   "holidays": [],
+   "nucleos": [
+    {
+     "name": "Celada de la Torre",
+     "holidays": [
+      {
+       "date": "2026-07-24",
+       "name": "SANTA CRISTINA"
+      },
+      {
+       "date": "2026-07-27",
+       "name": "SANTIAGO APÓSTOL"
+      }
+     ]
+    },
+    {
+     "name": "Melgosa de Burgos",
+     "holidays": [
+      {
+       "date": "2026-10-03",
+       "name": "PRIMER SÁBADO"
+      },
+      {
+       "date": "2026-12-10",
+       "name": "SANTA EULALIA"
+      }
+     ]
+    },
+    {
+     "name": "Riocerezo",
+     "holidays": [
+      {
+       "date": "2026-06-24",
+       "name": "FIESTA LOCAL"
+      },
+      {
+       "date": "2026-08-21",
+       "name": "FIESTA LOCAL"
+      }
+     ]
+    },
+    {
+     "name": "Rioseras",
+     "holidays": [
+      {
+       "date": "2026-07-16",
+       "name": "VIRGEN DEL CARMEN"
+      },
+      {
+       "date": "2026-11-30",
+       "name": "SAN SATURNINO"
+      }
+     ]
+    },
+    {
+     "name": "Robredo Temiño",
+     "holidays": [
+      {
+       "date": "2026-06-24",
+       "name": "SAN JUAN BAUTISTA"
+      },
+      {
+       "date": "2026-08-15",
+       "name": "ASUNCIÓN DE LA VIRGEN"
+      }
+     ]
+    },
+    {
+     "name": "Temiño",
+     "holidays": [
+      {
+       "date": "2026-07-11",
+       "name": "FIESTA LOCAL"
+      },
+      {
+       "date": "2026-08-22",
+       "name": "FIESTA LOCAL"
+      }
+     ]
+    },
+    {
+     "name": "Tobes y Rahedo",
+     "holidays": [
+      {
+       "date": "2026-05-08",
+       "name": "FIESTA LOCAL"
+      },
+      {
+       "date": "2026-09-26",
+       "name": "FIESTA LOCAL"
+      }
+     ]
+    }
+   ],
+   "note": "The list gives days only for localities of the municipality, not for the whole municipality; see nucleos."
+  },
+  "09905": {
+   "holidays": [
+    {
+     "date": "2026-08-03",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  },
+  "09906": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "SAN PEDRO"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "NTRA. SRA. DE ACORRO"
+    }
+   ]
+  },
+  "09907": {
+   "holidays": [
+    {
+     "date": "2026-06-05",
+     "name": "CURPILLOS"
+    },
+    {
+     "date": "2026-10-05",
+     "name": "FIESTAS PATRONALES"
+    }
+   ]
+  },
+  "09908": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "FIESTA LOCAL"
+    },
+    {
+     "date": "2026-06-15",
+     "name": "FIESTA LOCAL"
+    }
+   ]
+  }
+ }
+}

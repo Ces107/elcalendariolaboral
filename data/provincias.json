@@ -1,0 +1,565 @@
+{
+ "source": {
+  "title": "INE, Relación de municipios y sus códigos por provincias",
+  "detail": "Relación de municipios y códigos por comunidades autónomas y provincias a 1 de enero de 2026",
+  "url": "https://www.ine.es/daco/daco42/codmun/diccionario26.xlsx"
+ },
+ "count": 52,
+ "provincias": [
+  {
+   "code": "01",
+   "name": "Álava",
+   "slug": "alava",
+   "aliases": [
+    "Araba",
+    "Araba/Álava"
+   ],
+   "region": "pais-vasco",
+   "capital_ine": "01059",
+   "capital_name": "Vitoria-Gasteiz",
+   "municipios": 51
+  },
+  {
+   "code": "02",
+   "name": "Albacete",
+   "slug": "albacete",
+   "aliases": [],
+   "region": "castilla-la-mancha",
+   "capital_ine": "02003",
+   "capital_name": "Albacete",
+   "municipios": 87
+  },
+  {
+   "code": "03",
+   "name": "Alicante",
+   "slug": "alicante",
+   "aliases": [
+    "Alacant"
+   ],
+   "region": "comunitat-valenciana",
+   "capital_ine": "03014",
+   "capital_name": "Alacant/Alicante",
+   "municipios": 141
+  },
+  {
+   "code": "04",
+   "name": "Almería",
+   "slug": "almeria",
+   "aliases": [],
+   "region": "andalucia",
+   "capital_ine": "04013",
+   "capital_name": "Almería",
+   "municipios": 103
+  },
+  {
+   "code": "05",
+   "name": "Ávila",
+   "slug": "avila",
+   "aliases": [],
+   "region": "castilla-y-leon",
+   "capital_ine": "05019",
+   "capital_name": "Ávila",
+   "municipios": 248
+  },
+  {
+   "code": "06",
+   "name": "Badajoz",
+   "slug": "badajoz",
+   "aliases": [],
+   "region": "extremadura",
+   "capital_ine": "06015",
+   "capital_name": "Badajoz",
+   "municipios": 165
+  },
+  {
+   "code": "07",
+   "name": "Illes Balears",
+   "slug": "illes-balears",
+   "aliases": [
+    "Baleares",
+    "Islas Baleares"
+   ],
+   "region": "baleares",
+   "capital_ine": "07040",
+   "capital_name": "Palma",
+   "municipios": 67
+  },
+  {
+   "code": "08",
+   "name": "Barcelona",
+   "slug": "barcelona",
+   "aliases": [],
+   "region": "cataluna",
+   "capital_ine": "08019",
+   "capital_name": "Barcelona",
+   "municipios": 311
+  },
+  {
+   "code": "09",
+   "name": "Burgos",
+   "slug": "burgos",
+   "aliases": [],
+   "region": "castilla-y-leon",
+   "capital_ine": "09059",
+   "capital_name": "Burgos",
+   "municipios": 371
+  },
+  {
+   "code": "10",
+   "name": "Cáceres",
+   "slug": "caceres",
+   "aliases": [],
+   "region": "extremadura",
+   "capital_ine": "10037",
+   "capital_name": "Cáceres",
+   "municipios": 223
+  },
+  {
+   "code": "11",
+   "name": "Cádiz",
+   "slug": "cadiz",
+   "aliases": [],
+   "region": "andalucia",
+   "capital_ine": "11012",
+   "capital_name": "Cádiz",
+   "municipios": 45
+  },
+  {
+   "code": "12",
+   "name": "Castellón",
+   "slug": "castellon",
+   "aliases": [
+    "Castelló",
+    "Castellón de la Plana"
+   ],
+   "region": "comunitat-valenciana",
+   "capital_ine": "12040",
+   "capital_name": "Castelló de la Plana/Castellón de la Plana",
+   "municipios": 135
+  },
+  {
+   "code": "13",
+   "name": "Ciudad Real",
+   "slug": "ciudad-real",
+   "aliases": [],
+   "region": "castilla-la-mancha",
+   "capital_ine": "13034",
+   "capital_name": "Ciudad Real",
+   "municipios": 102
+  },
+  {
+   "code": "14",
+   "name": "Córdoba",
+   "slug": "cordoba",
+   "aliases": [],
+   "region": "andalucia",
+   "capital_ine": "14021",
+   "capital_name": "Córdoba",
+   "municipios": 77
+  },
+  {
+   "code": "15",
+   "name": "A Coruña",
+   "slug": "a-coruna",
+   "aliases": [
+    "La Coruña",
+    "Coruña"
+   ],
+   "region": "galicia",
+   "capital_ine": "15030",
+   "capital_name": "A Coruña",
+   "municipios": 93
+  },
+  {
+   "code": "16",
+   "name": "Cuenca",
+   "slug": "cuenca",
+   "aliases": [],
+   "region": "castilla-la-mancha",
+   "capital_ine": "16078",
+   "capital_name": "Cuenca",
+   "municipios": 238
+  },
+  {
+   "code": "17",
+   "name": "Girona",
+   "slug": "girona",
+   "aliases": [
+    "Gerona"
+   ],
+   "region": "cataluna",
+   "capital_ine": "17079",
+   "capital_name": "Girona",
+   "municipios": 221
+  },
+  {
+   "code": "18",
+   "name": "Granada",
+   "slug": "granada",
+   "aliases": [],
+   "region": "andalucia",
+   "capital_ine": "18087",
+   "capital_name": "Granada",
+   "municipios": 174
+  },
+  {
+   "code": "19",
+   "name": "Guadalajara",
+   "slug": "guadalajara",
+   "aliases": [],
+   "region": "castilla-la-mancha",
+   "capital_ine": "19130",
+   "capital_name": "Guadalajara",
+   "municipios": 288
+  },
+  {
+   "code": "20",
+   "name": "Gipuzkoa",
+   "slug": "gipuzkoa",
+   "aliases": [
+    "Guipúzcoa"
+   ],
+   "region": "pais-vasco",
+   "capital_ine": "20069",
+   "capital_name": "Donostia/San Sebastián",
+   "municipios": 88
+  },
+  {
+   "code": "21",
+   "name": "Huelva",
+   "slug": "huelva",
+   "aliases": [],
+   "region": "andalucia",
+   "capital_ine": "21041",
+   "capital_name": "Huelva",
+   "municipios": 80
+  },
+  {
+   "code": "22",
+   "name": "Huesca",
+   "slug": "huesca",
+   "aliases": [],
+   "region": "aragon",
+   "capital_ine": "22125",
+   "capital_name": "Huesca",
+   "municipios": 202
+  },
+  {
+   "code": "23",
+   "name": "Jaén",
+   "slug": "jaen",
+   "aliases": [],
+   "region": "andalucia",
+   "capital_ine": "23050",
+   "capital_name": "Jaén",
+   "municipios": 97
+  },
+  {
+   "code": "24",
+   "name": "León",
+   "slug": "leon",
+   "aliases": [],
+   "region": "castilla-y-leon",
+   "capital_ine": "24089",
+   "capital_name": "León",
+   "municipios": 211
+  },
+  {
+   "code": "25",
+   "name": "Lleida",
+   "slug": "lleida",
+   "aliases": [
+    "Lérida"
+   ],
+   "region": "cataluna",
+   "capital_ine": "25120",
+   "capital_name": "Lleida",
+   "municipios": 231
+  },
+  {
+   "code": "26",
+   "name": "La Rioja",
+   "slug": "la-rioja",
+   "aliases": [
+    "Rioja"
+   ],
+   "region": "la-rioja",
+   "capital_ine": "26089",
+   "capital_name": "Logroño",
+   "municipios": 174
+  },
+  {
+   "code": "27",
+   "name": "Lugo",
+   "slug": "lugo",
+   "aliases": [],
+   "region": "galicia",
+   "capital_ine": "27028",
+   "capital_name": "Lugo",
+   "municipios": 67
+  },
+  {
+   "code": "28",
+   "name": "Madrid",
+   "slug": "madrid",
+   "aliases": [],
+   "region": "madrid",
+   "capital_ine": "28079",
+   "capital_name": "Madrid",
+   "municipios": 179
+  },
+  {
+   "code": "29",
+   "name": "Málaga",
+   "slug": "malaga",
+   "aliases": [],
+   "region": "andalucia",
+   "capital_ine": "29067",
+   "capital_name": "Málaga",
+   "municipios": 103
+  },
+  {
+   "code": "30",
+   "name": "Murcia",
+   "slug": "murcia",
+   "aliases": [
+    "Región de Murcia"
+   ],
+   "region": "murcia",
+   "capital_ine": "30030",
+   "capital_name": "Murcia",
+   "municipios": 45
+  },
+  {
+   "code": "31",
+   "name": "Navarra",
+   "slug": "navarra",
+   "aliases": [
+    "Comunidad Foral de Navarra",
+    "Nafarroa"
+   ],
+   "region": "navarra",
+   "capital_ine": "31201",
+   "capital_name": "Pamplona/Iruña",
+   "municipios": 272
+  },
+  {
+   "code": "32",
+   "name": "Ourense",
+   "slug": "ourense",
+   "aliases": [
+    "Orense"
+   ],
+   "region": "galicia",
+   "capital_ine": "32054",
+   "capital_name": "Ourense",
+   "municipios": 92
+  },
+  {
+   "code": "33",
+   "name": "Asturias",
+   "slug": "asturias",
+   "aliases": [
+    "Principado de Asturias"
+   ],
+   "region": "asturias",
+   "capital_ine": "33044",
+   "capital_name": "Oviedo",
+   "municipios": 78
+  },
+  {
+   "code": "34",
+   "name": "Palencia",
+   "slug": "palencia",
+   "aliases": [],
+   "region": "castilla-y-leon",
+   "capital_ine": "34120",
+   "capital_name": "Palencia",
+   "municipios": 191
+  },
+  {
+   "code": "35",
+   "name": "Las Palmas",
+   "slug": "las-palmas",
+   "aliases": [],
+   "region": "canarias",
+   "capital_ine": "35016",
+   "capital_name": "Las Palmas de Gran Canaria",
+   "municipios": 34
+  },
+  {
+   "code": "36",
+   "name": "Pontevedra",
+   "slug": "pontevedra",
+   "aliases": [],
+   "region": "galicia",
+   "capital_ine": "36038",
+   "capital_name": "Pontevedra",
+   "municipios": 61
+  },
+  {
+   "code": "37",
+   "name": "Salamanca",
+   "slug": "salamanca",
+   "aliases": [],
+   "region": "castilla-y-leon",
+   "capital_ine": "37274",
+   "capital_name": "Salamanca",
+   "municipios": 362
+  },
+  {
+   "code": "38",
+   "name": "Santa Cruz de Tenerife",
+   "slug": "santa-cruz-de-tenerife",
+   "aliases": [],
+   "region": "canarias",
+   "capital_ine": "38038",
+   "capital_name": "Santa Cruz de Tenerife",
+   "municipios": 54
+  },
+  {
+   "code": "39",
+   "name": "Cantabria",
+   "slug": "cantabria",
+   "aliases": [],
+   "region": "cantabria",
+   "capital_ine": "39075",
+   "capital_name": "Santander",
+   "municipios": 102
+  },
+  {
+   "code": "40",
+   "name": "Segovia",
+   "slug": "segovia",
+   "aliases": [],
+   "region": "castilla-y-leon",
+   "capital_ine": "40194",
+   "capital_name": "Segovia",
+   "municipios": 209
+  },
+  {
+   "code": "41",
+   "name": "Sevilla",
+   "slug": "sevilla",
+   "aliases": [],
+   "region": "andalucia",
+   "capital_ine": "41091",
+   "capital_name": "Sevilla",
+   "municipios": 106
+  },
+  {
+   "code": "42",
+   "name": "Soria",
+   "slug": "soria",
+   "aliases": [],
+   "region": "castilla-y-leon",
+   "capital_ine": "42173",
+   "capital_name": "Soria",
+   "municipios": 183
+  },
+  {
+   "code": "43",
+   "name": "Tarragona",
+   "slug": "tarragona",
+   "aliases": [],
+   "region": "cataluna",
+   "capital_ine": "43148",
+   "capital_name": "Tarragona",
+   "municipios": 184
+  },
+  {
+   "code": "44",
+   "name": "Teruel",
+   "slug": "teruel",
+   "aliases": [],
+   "region": "aragon",
+   "capital_ine": "44216",
+   "capital_name": "Teruel",
+   "municipios": 236
+  },
+  {
+   "code": "45",
+   "name": "Toledo",
+   "slug": "toledo",
+   "aliases": [],
+   "region": "castilla-la-mancha",
+   "capital_ine": "45168",
+   "capital_name": "Toledo",
+   "municipios": 204
+  },
+  {
+   "code": "46",
+   "name": "Valencia",
+   "slug": "valencia",
+   "aliases": [
+    "València"
+   ],
+   "region": "comunitat-valenciana",
+   "capital_ine": "46250",
+   "capital_name": "València",
+   "municipios": 266
+  },
+  {
+   "code": "47",
+   "name": "Valladolid",
+   "slug": "valladolid",
+   "aliases": [],
+   "region": "castilla-y-leon",
+   "capital_ine": "47186",
+   "capital_name": "Valladolid",
+   "municipios": 225
+  },
+  {
+   "code": "48",
+   "name": "Bizkaia",
+   "slug": "bizkaia",
+   "aliases": [
+    "Vizcaya"
+   ],
+   "region": "pais-vasco",
+   "capital_ine": "48020",
+   "capital_name": "Bilbao",
+   "municipios": 113
+  },
+  {
+   "code": "49",
+   "name": "Zamora",
+   "slug": "zamora",
+   "aliases": [],
+   "region": "castilla-y-leon",
+   "capital_ine": "49275",
+   "capital_name": "Zamora",
+   "municipios": 248
+  },
+  {
+   "code": "50",
+   "name": "Zaragoza",
+   "slug": "zaragoza",
+   "aliases": [],
+   "region": "aragon",
+   "capital_ine": "50297",
+   "capital_name": "Zaragoza",
+   "municipios": 293
+  },
+  {
+   "code": "51",
+   "name": "Ceuta",
+   "slug": "ceuta",
+   "aliases": [],
+   "region": "ceuta",
+   "capital_ine": "51001",
+   "capital_name": "Ceuta",
+   "municipios": 1
+  },
+  {
+   "code": "52",
+   "name": "Melilla",
+   "slug": "melilla",
+   "aliases": [],
+   "region": "melilla",
+   "capital_ine": "52001",
+   "capital_name": "Melilla",
+   "municipios": 1
+  }
+ ]
+}

@@ -1,0 +1,3273 @@
+{
+ "source_id": "euskadi-2026",
+ "source": {
+  "title": "Calendario laboral de Euskadi para el 2026 (Open Data Euskadi, Gobierno Vasco): fiestas de la CAE, de los Territorios Históricos y de cada municipio, según los boletines oficiales",
+  "url": "https://opendata.euskadi.eus/contenidos/ds_eventos/calendario_laboral_2026/opendata/calendario_laboral_2026.csv",
+  "published": "2025-11-19"
+ },
+ "region": "pais-vasco",
+ "count": 252,
+ "unmatched": [],
+ "municipios": {
+  "01001": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01002": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01003": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-07-06",
+     "name": ""
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01004": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Virgen de la Encina"
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01006": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro Labrador"
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01008": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-12-28",
+     "name": ""
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01009": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01010": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava. The second local day differs by part of the municipality (Izoria: 7/1 San Julián; Maroño: 17/1 San Antón; Olabezar: 24/1 San Babilás; Menoio: 25/4 San Marcos; Erbi: 4/5 La Cruz; Etxegoien: 8/5 Nuestra Señora de la Antigua; Respaldiza: 15/5 San Isidro; Añes: 21/5 San Ramiro; Murga: 24/6 San Juan; Menagarai: 29/6 San Pedro; Salmantón: 18/7 Santa Marina; Zuaza: 18/7 Santa Marina; Luiaondo: 22/7 La Magdalena; Retes de Llanteno: 22/7 La Magdalena; Agiñaga: 27/7 Santiago; Llanteno: 27/7 Santiago; Quejana: 5/8 Las Nieves; Lujo: 17/8 La Asunción; Sojo: 31/8 San Emeterio; Beotegi: 29/9 San Miguel; Costera: 29/9 San Miguel; Ozeka: 8/10 Nuestra Señora del Rosario; Madaria: 23/11 San Clemente; Lejarzo: 9/12 La Inmaculada); only the territory-wide day is listed for the whole municipality."
+  },
+  "01011": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-07-10",
+     "name": "San Cristóbal"
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01013": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01014": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Asunción de Nuestra Señora"
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01016": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01017": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01018": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-08-05",
+     "name": ""
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01019": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Día de la Virgen"
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01020": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-06-24",
+     "name": ""
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01021": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01022": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Virgen de la Plaza"
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01023": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01027": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01028": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-11-30",
+     "name": "2º día de Acción de Gracias"
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01030": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "San Bartolomé"
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01031": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-06-24",
+     "name": ""
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01032": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "La Virgen del Campo"
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01033": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-08-24",
+     "name": ""
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01034": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "San Roque"
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01036": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01037": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-06-22",
+     "name": "San Adrián"
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01039": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-10-22",
+     "name": "Las Virgenillas"
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01041": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-06-02",
+     "name": "San Juan de Ortega"
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01042": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "San Bartolomé"
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01043": {
+   "holidays": [
+    {
+     "date": "2026-01-22",
+     "name": "San Vicente y San Anastasio"
+    },
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01044": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro Labrador"
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01046": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro Labrador"
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01047": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-08-31",
+     "name": ""
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01049": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-07-10",
+     "name": "San Cristóbal"
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01051": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01052": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Nuestra Señora Virgen del Valle"
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01053": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-11-12",
+     "name": "San Millán"
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01054": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-10-05",
+     "name": ""
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01055": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-05-15",
+     "name": ""
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01056": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro Labrador"
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01057": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "San Torcuato"
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01058": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01059": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-08-05",
+     "name": "Virgen Blanca"
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01060": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-08-21",
+     "name": "Nuestra Señora de Bercijana"
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01061": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-06-13",
+     "name": "Fiestas de Zalduondo"
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava. 13/6 falls on a Saturday; recorded as published."
+  },
+  "01062": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-08-05",
+     "name": ""
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01063": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "San Miguel"
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "01901": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava. Dataset label: 'Iruña de Oca - Nanclares de la Oca'."
+  },
+  "01902": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-09-16",
+     "name": "Fiesta Local de Lantarón"
+    }
+   ],
+   "note": "28/4 (San Prudencio) is the territory-wide local day of Álava."
+  },
+  "20001": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20002": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-08-14",
+     "name": "Andra Mari"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20003": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "San Miguel Arcángel"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20004": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20005": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": ""
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20006": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Natividad de la Virgen"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20007": {
+   "holidays": [
+    {
+     "date": "2026-02-16",
+     "name": "Lunes de Carnaval"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20008": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "San Bartolomé"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20009": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20010": {
+   "holidays": [
+    {
+     "date": "2026-06-04",
+     "name": "Corpus Christi"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20011": {
+   "holidays": [
+    {
+     "date": "2026-07-17",
+     "name": ""
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20012": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-11-11",
+     "name": ""
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20013": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20014": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20015": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martín"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20016": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-08-07",
+     "name": ""
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20017": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-11-30",
+     "name": "San Andrés"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20018": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20019": {
+   "holidays": [
+    {
+     "date": "2026-05-18",
+     "name": ""
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20020": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": ""
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20021": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20022": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-08-10",
+     "name": "San Lorenzo"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20023": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-08-28",
+     "name": "San Agustín"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20024": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa. The second local day differs by part of the municipality (Goiatz: 14/8 Víspera de Andra Mari; Bidania: 24/8 San Bartolomé); only the territory-wide day is listed for the whole municipality."
+  },
+  "20025": {
+   "holidays": [
+    {
+     "date": "2026-05-25",
+     "name": "Lunes de Pentecostés"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20026": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20027": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Día de la Virgen"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20028": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-09",
+     "name": ""
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20029": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20030": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20031": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20032": {
+   "holidays": [
+    {
+     "date": "2026-01-17",
+     "name": "San Antón"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa. 17/1 falls on a Saturday; recorded as published."
+  },
+  "20033": {
+   "holidays": [
+    {
+     "date": "2026-07-03",
+     "name": ""
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20034": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": ""
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20035": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa. The second local day differs by part of the municipality (Barrio Ezkio: 8/5 S. Miguel; Barrio Santa Luzia-Anduaga: 29/6 San Pedro; Barrio Itsaso-Alegia: 22/7 M.ª Magdalena; Itsaso Centro: 24/8 San Bartolomé; Mendialdea: 8/9 Día de la Virgen de Kizkitza); only the territory-wide day is listed for the whole municipality."
+  },
+  "20036": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Ntra. Sra. de Guadalupe"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20037": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-29",
+     "name": ""
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20038": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "San Roque"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20039": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-08-06",
+     "name": "San Salvador"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20040": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20041": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20042": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-08-24",
+     "name": ""
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20043": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": ""
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20044": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-08-10",
+     "name": "San Lorenzo"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20045": {
+   "holidays": [
+    {
+     "date": "2026-06-30",
+     "name": ""
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20046": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "San Miguel"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20047": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-18",
+     "name": ""
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20048": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-08-03",
+     "name": ""
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20049": {
+   "holidays": [
+    {
+     "date": "2026-04-28",
+     "name": "San Prudencio"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20050": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa. Dataset label: 'Leaburu - Txarama'."
+  },
+  "20051": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": "Día siguiente Santa Cruz"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20052": {
+   "holidays": [
+    {
+     "date": "2026-05-14",
+     "name": ""
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20053": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "Exaltación de la Santa Cruz"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20054": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Virgen del Sagrario"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20055": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "San Juan Bautista"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20056": {
+   "holidays": [
+    {
+     "date": "2026-07-22",
+     "name": "Día de Magdalena"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20057": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20058": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20059": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "San Miguel"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20060": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": ""
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20061": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20062": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-11-30",
+     "name": ""
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20063": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-08-03",
+     "name": "San Esteban"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20064": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa. The second local day differs by part of the municipality (P. Antxo: 24/6 San Juan; P. Donibane: 29/6 San Pedro; P. San Pedro: 7/7 San Fermín; Trintxerpe: 16/7 Karmengo Ama); only the territory-wide day is listed for the whole municipality."
+  },
+  "20065": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "San Roke Txiki"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20066": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-11-11",
+     "name": ""
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20067": {
+   "holidays": [
+    {
+     "date": "2026-07-22",
+     "name": "Día de la Magdalena"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20068": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Festividad de la Virgen"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20069": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20070": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20071": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20072": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "San Miguel"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20073": {
+   "holidays": [
+    {
+     "date": "2026-07-02",
+     "name": "Santixabel"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20074": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-16",
+     "name": "San Martín Aguirre"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20075": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martín"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20076": {
+   "holidays": [
+    {
+     "date": "2026-07-27",
+     "name": "Día siguiente a Santa Ana"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20077": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-21",
+     "name": "Santa Anastasia"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20078": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-10-02",
+     "name": ""
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20079": {
+   "holidays": [
+    {
+     "date": "2026-06-26",
+     "name": "San Pelaio"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20080": {
+   "holidays": [
+    {
+     "date": "2026-07-02",
+     "name": "Santa Isabel"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20081": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20901": {
+   "holidays": [
+    {
+     "date": "2026-07-27",
+     "name": "Día Siguiente Santa Ana"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20902": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20903": {
+   "holidays": [
+    {
+     "date": "2026-07-24",
+     "name": ""
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20904": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20905": {
+   "holidays": [
+    {
+     "date": "2026-01-20",
+     "name": ""
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20906": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-29",
+     "name": ""
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "20907": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Gipuzkoa."
+  },
+  "48001": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Trokaz"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48002": {
+   "holidays": [
+    {
+     "date": "2026-06-15",
+     "name": "San Antonio"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48003": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": "Ntra. Sra. del Carmen"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48004": {
+   "holidays": [
+    {
+     "date": "2026-07-03",
+     "name": "San Martín"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48005": {
+   "holidays": [
+    {
+     "date": "2026-07-18",
+     "name": "Santa Marina"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia. 18/7 falls on a Saturday; recorded as published."
+  },
+  "48006": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48007": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48008": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-02",
+     "name": "San Antolín"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48009": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48010": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martín"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48011": {
+   "holidays": [
+    {
+     "date": "2026-07-22",
+     "name": "Santa María Magdalena"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48012": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "San Miguel Arcángel"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48013": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": "Nuestra Señora del Carmen"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48014": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48015": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-10-13",
+     "name": "San Fausto"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48016": {
+   "holidays": [
+    {
+     "date": "2026-07-27",
+     "name": "Santa Ana"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48017": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Nuestra Señora"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48018": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": ""
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48019": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48020": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-08-28",
+     "name": "Viernes de la Semana Grande"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia. 28/8 per the modifying resolution of 4-8-2025 (BOB 148, 06-08-2025); the original resolution (BOB 138) had 21/8."
+  },
+  "48021": {
+   "holidays": [
+    {
+     "date": "2026-07-10",
+     "name": "Santa Cristóbal"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48022": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-18",
+     "name": "Virgen del Suceso"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48023": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48024": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48025": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-02",
+     "name": "San Antolín"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48026": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": ""
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48027": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-10-13",
+     "name": "San Fausto"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48028": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": ""
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48029": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-12-28",
+     "name": "San Esteban"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48030": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-11-30",
+     "name": "San Andrés"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48031": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": ""
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48032": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-07",
+     "name": ""
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48033": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "San Miguel Arcángel"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48034": {
+   "holidays": [
+    {
+     "date": "2026-07-27",
+     "name": "Zezen eguna"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48035": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-08-06",
+     "name": "San Salvador"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48036": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "Exaltación de la Santa Cruz"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48037": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48038": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-11-30",
+     "name": "San Andrés"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48039": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48040": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "San Bartolomé"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48041": {
+   "holidays": [
+    {
+     "date": "2026-01-26",
+     "name": "San Polikarpo"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48042": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-28",
+     "name": "San Cosme y San Damián"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48043": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-08-05",
+     "name": "Nuestra Señora de Aguirre y de las Nieves"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48044": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-24",
+     "name": "Las Mercedes"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48045": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-08-10",
+     "name": "San Lorenzo"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48046": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48047": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Nuestra Señora"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48048": {
+   "holidays": [
+    {
+     "date": "2026-06-04",
+     "name": "Corpus Christi"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48049": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "San Miguel"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48050": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Erdoitzako Ama"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48051": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-08-05",
+     "name": "Ntra. Sra. de las Nieves"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48052": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48053": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "San Miguel"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48054": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": ""
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48055": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Andra Mari"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48056": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": "Día del Carmen"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48057": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-02",
+     "name": "San Antolín"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48058": {
+   "holidays": [
+    {
+     "date": "2026-02-18",
+     "name": "Miércoles de Ceniza"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48059": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-10-21",
+     "name": "Sta. Úrsula"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48060": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": "Día del Carmen"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48061": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-08-10",
+     "name": "San Lorenzo"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48062": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "San Miguel Arcángel"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48063": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48064": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48065": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Señora la Virgen de Udiarraga"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48066": {
+   "holidays": [
+    {
+     "date": "2026-07-30",
+     "name": ""
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48067": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-10-26",
+     "name": "Último Lunes de Octubre"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48068": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48069": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": ""
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48070": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48071": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": ""
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48072": {
+   "holidays": [
+    {
+     "date": "2026-07-20",
+     "name": "Santa Marina"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48073": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "Andra Mari"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48074": {
+   "holidays": [
+    {
+     "date": "2026-05-08",
+     "name": "Otxomaio"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48075": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-02",
+     "name": "San Antolín"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48076": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-11-30",
+     "name": "San Andrés"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48077": {
+   "holidays": [
+    {
+     "date": "2026-07-22",
+     "name": "Festividad de la Magdalena"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48078": {
+   "holidays": [
+    {
+     "date": "2026-07-01",
+     "name": "Virgen de la Guía"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48079": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "San Bartolomé"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48080": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-08-06",
+     "name": "Transfiguración del Señor-día de San Salvador"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48081": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Andra Mari"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48082": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": "Virgen del Carmen"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48083": {
+   "holidays": [
+    {
+     "date": "2026-05-18",
+     "name": "San Félix de Cantalicio"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48084": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro Apóstol"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48085": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48086": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Natividad de Nuestra Señora"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48087": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48088": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48089": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48090": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-10-23",
+     "name": "San Severino"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48091": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48092": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "San Juan Bautista"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48093": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "San Bartolomé"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48094": {
+   "holidays": [
+    {
+     "date": "2026-06-12",
+     "name": ""
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48095": {
+   "holidays": [
+    {
+     "date": "2026-07-03",
+     "name": ""
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48096": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-10-05",
+     "name": "Día de Gangas"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48097": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-08-10",
+     "name": ""
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48901": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro Labrador"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48902": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-08-28",
+     "name": "San Agustín"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48903": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "Festividad de San Pedro y Santa Lucía"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48904": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48905": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martín"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48906": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martín"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48907": {
+   "holidays": [
+    {
+     "date": "2026-07-27",
+     "name": ""
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48908": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Festividad de Andra Mari"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48909": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Andra Mari"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48910": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-29",
+     "name": "San Miguel"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48911": {
+   "holidays": [
+    {
+     "date": "2026-05-14",
+     "name": "La Ascensión"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48912": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-09-02",
+     "name": "San Antolín"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48913": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-10-15",
+     "name": "Día de la Independencia de Ziérbena"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48914": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-12-21",
+     "name": "Santo Tomás"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48915": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    },
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  },
+  "48916": {
+   "holidays": [
+    {
+     "date": "2026-07-31",
+     "name": "San Ignacio de Loyola"
+    },
+    {
+     "date": "2026-11-30",
+     "name": "San Andrés"
+    }
+   ],
+   "note": "31/7 (San Ignacio de Loyola) is the territory-wide local day of Bizkaia."
+  }
+ }
+}

@@ -1,0 +1,6922 @@
+{
+ "source_id": "bop-leon-2026",
+ "source": {
+  "title": "Resolución de 15 de septiembre de 2025, de la Oficina Territorial de Trabajo de León, por la que se fijan las fiestas locales de los distintos municipios de la provincia de León para el año 2026 (BOP León núm. 177, de 17-9-2025, CVE BOP-LE-2025-177019)",
+  "url": "https://trabajoyprevencion.jcyl.es/web/jcyl/binarios/868/589/03%20BOP%20FIESTAS%20LOCALES%20LEON%2026,0.pdf",
+  "published": "2025-09-17"
+ },
+ "region": "castilla-y-leon",
+ "count": 171,
+ "unmatched": [
+  "24002 Algadefe: not listed",
+  "24009 Balboa: not listed",
+  "24011 Barjas: not listed",
+  "24017 Bercianos del Páramo: not listed",
+  "24024 El Burgo Ranero: not listed",
+  "24031 Calzada del Coto: not listed",
+  "24032 Campazas: not listed",
+  "24033 Campo de Villavidel: not listed",
+  "24042 Castilfalé: not listed",
+  "24044 Castrillo de la Valduerna: not listed",
+  "24062 Cubillas de los Oteros: not listed",
+  "24074 Fuentes de Carbajal: not listed",
+  "24086 Joarilla de las Matas: not listed",
+  "24096 Maraña: not listed",
+  "24097 Matadeón de los Oteros: not listed",
+  "24098 Matallana de Torío: not listed",
+  "24099 Matanza: not listed",
+  "24104 Las Omañas: not listed",
+  "24106 Oseja de Sajambre: not listed",
+  "24114 La Pola de Gordón: not listed",
+  "24124 Quintana del Marco: not listed",
+  "24133 Rioseco de Tapia: not listed",
+  "24139 Sahagún: not listed",
+  "24146 San Esteban de Nogales: not listed",
+  "24149 San Millán de los Caballeros: not listed",
+  "24150 San Pedro Bercianos: not listed",
+  "24151 Santa Colomba de Curueño: not listed",
+  "24178 Valdemora: not listed",
+  "24181 Valderas: not listed",
+  "24189 Valverde de la Virgen: not listed",
+  "24190 Valverde-Enrique: not listed",
+  "24191 Vallecillo: not listed",
+  "24198 Vega de Valcarce: not listed",
+  "24203 Villabraz: not listed",
+  "24205 Villadangos del Páramo: not listed",
+  "24206 Toral de los Vados: not listed",
+  "24207 Villademor de la Vega: not listed",
+  "24217 Villamoratiel de las Matas: not listed",
+  "24224 Villares de Órbigo: not listed",
+  "24902 Villaornate y Castro: not listed"
+ ],
+ "municipios": {
+  "24001": {
+   "holidays": [
+    {
+     "date": "2026-07-24",
+     "name": ""
+    },
+    {
+     "date": "2026-12-04",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Liegos",
+     "holidays": [
+      {
+       "date": "2026-07-24",
+       "name": ""
+      },
+      {
+       "date": "2026-08-14",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "La Uña",
+     "holidays": [
+      {
+       "date": "2026-07-10",
+       "name": ""
+      },
+      {
+       "date": "2026-07-24",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos. 'Para todo el municipio' days are included for every locality."
+  },
+  "24003": {
+   "holidays": [
+    {
+     "date": "2026-02-18",
+     "name": ""
+    },
+    {
+     "date": "2026-05-15",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "La Nora del Río",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      },
+      {
+       "date": "2026-06-27",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Navianos de la Vega",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      },
+      {
+       "date": "2026-06-04",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos. 'Para todo el municipio' days are included for every locality."
+  },
+  "24004": {
+   "holidays": [
+    {
+     "date": "2026-06-13",
+     "name": "San Antonio"
+    },
+    {
+     "date": "2026-07-18",
+     "name": "Santa Marina"
+    }
+   ]
+  },
+  "24005": {
+   "holidays": [
+    {
+     "date": "2026-07-24",
+     "name": ""
+    },
+    {
+     "date": "2026-09-04",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Audanzas",
+     "holidays": [
+      {
+       "date": "2026-04-06",
+       "name": ""
+      },
+      {
+       "date": "2026-06-24",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Cazanuecos",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      },
+      {
+       "date": "2026-12-10",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Grajal de la Ribera",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      },
+      {
+       "date": "2026-12-10",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Ribera de la Polvorosa",
+     "holidays": [
+      {
+       "date": "2026-02-02",
+       "name": ""
+      },
+      {
+       "date": "2026-06-26",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24006": {
+   "holidays": [
+    {
+     "date": "2026-06-04",
+     "name": ""
+    },
+    {
+     "date": "2026-06-05",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Benazolve",
+     "holidays": [
+      {
+       "date": "2026-05-22",
+       "name": ""
+      },
+      {
+       "date": "2026-07-31",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Cillanueva",
+     "holidays": [
+      {
+       "date": "2026-08-06",
+       "name": ""
+      },
+      {
+       "date": "2026-08-07",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Fresnellino",
+     "holidays": [
+      {
+       "date": "2026-02-02",
+       "name": ""
+      },
+      {
+       "date": "2026-07-24",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "San Cibrián",
+     "holidays": [
+      {
+       "date": "2026-09-12",
+       "name": ""
+      },
+      {
+       "date": "2026-09-15",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Villalobar",
+     "holidays": [
+      {
+       "date": "2026-05-08",
+       "name": ""
+      },
+      {
+       "date": "2026-07-17",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24007": {
+   "holidays": [
+    {
+     "date": "2026-01-19",
+     "name": "San Fabián"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Día del Bierzo"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Campelo",
+     "holidays": [
+      {
+       "date": "2026-06-13",
+       "name": "San Antonio"
+      },
+      {
+       "date": "2026-09-08",
+       "name": "Día del Bierzo"
+      }
+     ]
+    },
+    {
+     "name": "Canedo",
+     "holidays": [
+      {
+       "date": "2026-02-02",
+       "name": "Las Candelas"
+      },
+      {
+       "date": "2026-09-08",
+       "name": "Día del Bierzo"
+      }
+     ]
+    },
+    {
+     "name": "Espanillo",
+     "holidays": [
+      {
+       "date": "2026-04-06",
+       "name": "La Pascua"
+      },
+      {
+       "date": "2026-09-08",
+       "name": "Día del Bierzo"
+      }
+     ]
+    },
+    {
+     "name": "Magaz de Arriba",
+     "holidays": [
+      {
+       "date": "2026-06-29",
+       "name": "San Pedro"
+      },
+      {
+       "date": "2026-09-08",
+       "name": "Día del Bierzo"
+      }
+     ]
+    },
+    {
+     "name": "San Juan de la Mata",
+     "holidays": [
+      {
+       "date": "2026-04-20",
+       "name": "La Divina Pastora"
+      },
+      {
+       "date": "2026-09-08",
+       "name": "Día del Bierzo"
+      }
+     ]
+    },
+    {
+     "name": "San Miguel de Arganza",
+     "holidays": [
+      {
+       "date": "2026-09-08",
+       "name": "Día del Bierzo"
+      },
+      {
+       "date": "2026-12-14",
+       "name": "Santa Lucía"
+      }
+     ]
+    },
+    {
+     "name": "San Vicente de Arganza",
+     "holidays": [
+      {
+       "date": "2026-01-22",
+       "name": "San Vicente"
+      },
+      {
+       "date": "2026-09-08",
+       "name": "Día del Bierzo"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos. 'Para todo el municipio' days are included for every locality."
+  },
+  "24008": {
+   "holidays": [
+    {
+     "date": "2026-07-24",
+     "name": "Festividad de Astures y Romanos"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "Santa Marta"
+    }
+   ]
+  },
+  "24010": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Carnaval Bañezano"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "San Roque"
+    }
+   ]
+  },
+  "24012": {
+   "holidays": [
+    {
+     "date": "2026-09-14",
+     "name": "El Cristo"
+    },
+    {
+     "date": "2026-12-30",
+     "name": "Santa Colomba"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Irede de Luna",
+     "holidays": [
+      {
+       "date": "2026-11-25",
+       "name": "Santa Catalina"
+      }
+     ]
+    },
+    {
+     "name": "Mallo de Luna",
+     "holidays": [
+      {
+       "date": "2026-07-29",
+       "name": "Santa Marta"
+      },
+      {
+       "date": "2026-09-08",
+       "name": "Ntra. Sra. del Cuartero"
+      }
+     ]
+    },
+    {
+     "name": "Miñera de Luna",
+     "holidays": [
+      {
+       "date": "2026-08-05",
+       "name": "Ntra. Sra de las Nieves"
+      }
+     ]
+    },
+    {
+     "name": "Mora de Luna",
+     "holidays": [
+      {
+       "date": "2026-08-06",
+       "name": "San Justo y Pastor"
+      }
+     ]
+    },
+    {
+     "name": "Portilla de Luna",
+     "holidays": [
+      {
+       "date": "2026-10-07",
+       "name": "Ntra. Sra. del Rosario"
+      }
+     ]
+    },
+    {
+     "name": "Sagüera de Luna",
+     "holidays": [
+      {
+       "date": "2026-11-30",
+       "name": "San Andrés"
+      }
+     ]
+    },
+    {
+     "name": "Vega de Caballeros",
+     "holidays": [
+      {
+       "date": "2026-08-17",
+       "name": "San Roque"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24014": {
+   "holidays": [
+    {
+     "date": "2026-09-14",
+     "name": "festividad del Cristo"
+    },
+    {
+     "date": "2026-09-15",
+     "name": "festividad del Cristo"
+    }
+   ]
+  },
+  "24015": {
+   "holidays": [
+    {
+     "date": "2026-09-14",
+     "name": ""
+    },
+    {
+     "date": "2026-09-15",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Antoñán del Valle",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      },
+      {
+       "date": "2026-08-08",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Gualtares del Orbigo",
+     "holidays": [
+      {
+       "date": "2026-04-25",
+       "name": ""
+      },
+      {
+       "date": "2026-08-08",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Quintanilla del Monte",
+     "holidays": [
+      {
+       "date": "2026-06-08",
+       "name": ""
+      },
+      {
+       "date": "2026-10-05",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Quintanilla del Valle",
+     "holidays": [
+      {
+       "date": "2026-08-15",
+       "name": ""
+      },
+      {
+       "date": "2026-08-17",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Vega de Antoñán",
+     "holidays": [
+      {
+       "date": "2026-08-21",
+       "name": ""
+      },
+      {
+       "date": "2026-08-22",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24016": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": ""
+    },
+    {
+     "date": "2026-09-09",
+     "name": ""
+    }
+   ]
+  },
+  "24018": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro Labrador"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Nuestra Señora de Perales"
+    }
+   ]
+  },
+  "24019": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Festividad de La Encina"
+    }
+   ]
+  },
+  "24020": {
+   "holidays": [
+    {
+     "date": "2026-01-28",
+     "name": "San Tirso"
+    },
+    {
+     "date": "2026-09-07",
+     "name": "San Tirso"
+    }
+   ]
+  },
+  "24021": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ]
+  },
+  "24022": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "Virgen de la Vega"
+    },
+    {
+     "date": "2026-06-13",
+     "name": "San Antonio"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "La Chana",
+     "holidays": [
+      {
+       "date": "2026-01-20",
+       "name": "San Fabián"
+      },
+      {
+       "date": "2026-12-12",
+       "name": "Santa Lucía"
+      }
+     ]
+    },
+    {
+     "name": "Orellán",
+     "holidays": [
+      {
+       "date": "2026-01-26",
+       "name": "San Pablo"
+      },
+      {
+       "date": "2026-06-29",
+       "name": "San Pedro"
+      }
+     ]
+    },
+    {
+     "name": "San Juan de Paluezas",
+     "holidays": [
+      {
+       "date": "2026-05-25",
+       "name": "Virgen de la Estrella"
+      },
+      {
+       "date": "2026-12-12",
+       "name": "Santa Lucia"
+      }
+     ]
+    },
+    {
+     "name": "Voces",
+     "holidays": [
+      {
+       "date": "2026-06-23",
+       "name": "San Juan"
+      },
+      {
+       "date": "2026-12-18",
+       "name": "Virgen de la O"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24023": {
+   "holidays": [
+    {
+     "date": "2026-07-24",
+     "name": ""
+    },
+    {
+     "date": "2026-08-25",
+     "name": ""
+    }
+   ]
+  },
+  "24025": {
+   "holidays": [
+    {
+     "date": "2026-08-06",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Casasuertes",
+     "holidays": [
+      {
+       "date": "2026-02-05",
+       "name": ""
+      },
+      {
+       "date": "2026-08-17",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Cuénabres",
+     "holidays": [
+      {
+       "date": "2026-02-11",
+       "name": ""
+      },
+      {
+       "date": "2026-09-14",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Lario",
+     "holidays": [
+      {
+       "date": "2026-01-07",
+       "name": ""
+      },
+      {
+       "date": "2026-06-13",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Polvoredo",
+     "holidays": [
+      {
+       "date": "2026-06-29",
+       "name": ""
+      },
+      {
+       "date": "2026-12-14",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Retuerto",
+     "holidays": [
+      {
+       "date": "2026-08-03",
+       "name": ""
+      },
+      {
+       "date": "2026-08-17",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Vegacerneja",
+     "holidays": [
+      {
+       "date": "2026-02-05",
+       "name": ""
+      },
+      {
+       "date": "2026-09-08",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24026": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Acebes del Páramo",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro"
+      },
+      {
+       "date": "2026-07-24",
+       "name": "Santiago Apóstol"
+      }
+     ]
+    },
+    {
+     "name": "Antoñanes del Páramo",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro"
+      },
+      {
+       "date": "2026-09-21",
+       "name": "Virgen de las Victorias"
+      }
+     ]
+    },
+    {
+     "name": "Grisuela del Páramo",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro"
+      },
+      {
+       "date": "2026-08-14",
+       "name": "Nuestra Señora"
+      }
+     ]
+    },
+    {
+     "name": "La Milla del Páramo",
+     "holidays": [
+      {
+       "date": "2026-04-22",
+       "name": "Virgen de las Angustias"
+      },
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro"
+      }
+     ]
+    },
+    {
+     "name": "Matalobos del Páramo",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro"
+      },
+      {
+       "date": "2026-06-04",
+       "name": "Corpus Christi"
+      }
+     ]
+    },
+    {
+     "name": "San Pedro de Pegas",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro"
+      },
+      {
+       "date": "2026-06-29",
+       "name": "San Pedro"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos. 'Para todo el municipio' days are included for every locality."
+  },
+  "24027": {
+   "holidays": [
+    {
+     "date": "2026-07-26",
+     "name": "Santa Ana"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martín"
+    }
+   ]
+  },
+  "24028": {
+   "holidays": [
+    {
+     "date": "2026-05-11",
+     "name": "San Miguel"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Jabares de los Oteros",
+     "holidays": [
+      {
+       "date": "2026-01-16",
+       "name": "San Antón"
+      },
+      {
+       "date": "2026-05-22",
+       "name": "Santa Rita"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24029": {
+   "holidays": [
+    {
+     "date": "2026-08-03",
+     "name": ""
+    },
+    {
+     "date": "2026-12-04",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Huergas de Babia",
+     "holidays": [
+      {
+       "date": "2026-09-28",
+       "name": ""
+      },
+      {
+       "date": "2026-12-04",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Lago de Babia",
+     "holidays": [
+      {
+       "date": "2026-06-04",
+       "name": ""
+      },
+      {
+       "date": "2026-12-04",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "La Riera de Babia",
+     "holidays": [
+      {
+       "date": "2026-09-02",
+       "name": ""
+      },
+      {
+       "date": "2026-12-04",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "La Cueta",
+     "holidays": [
+      {
+       "date": "2026-07-06",
+       "name": ""
+      },
+      {
+       "date": "2026-12-04",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "La Vega de los Viejos",
+     "holidays": [
+      {
+       "date": "2026-08-24",
+       "name": ""
+      },
+      {
+       "date": "2026-12-04",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Las Murias de Babia",
+     "holidays": [
+      {
+       "date": "2026-08-07",
+       "name": ""
+      },
+      {
+       "date": "2026-12-04",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Mena de Babia",
+     "holidays": [
+      {
+       "date": "2026-07-03",
+       "name": ""
+      },
+      {
+       "date": "2026-12-04",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Meroy",
+     "holidays": [
+      {
+       "date": "2026-06-12",
+       "name": ""
+      },
+      {
+       "date": "2026-12-04",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Peñalba de los Cilleros",
+     "holidays": [
+      {
+       "date": "2026-08-10",
+       "name": ""
+      },
+      {
+       "date": "2026-12-04",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Piedrafita de Babia",
+     "holidays": [
+      {
+       "date": "2026-07-22",
+       "name": ""
+      },
+      {
+       "date": "2026-12-04",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Quintanilla de Babia",
+     "holidays": [
+      {
+       "date": "2026-08-10",
+       "name": ""
+      },
+      {
+       "date": "2026-12-04",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "San Félix de Arce",
+     "holidays": [
+      {
+       "date": "2026-07-31",
+       "name": ""
+      },
+      {
+       "date": "2026-12-04",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Torre de Babia",
+     "holidays": [
+      {
+       "date": "2026-08-17",
+       "name": ""
+      },
+      {
+       "date": "2026-12-04",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos. 'Para todo el municipio' days are included for every locality."
+  },
+  "24030": {
+   "holidays": [
+    {
+     "date": "2026-04-06",
+     "name": "Lunes de Pascua"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    }
+   ]
+  },
+  "24034": {
+   "holidays": [
+    {
+     "date": "2026-01-23",
+     "name": "San Ildefonso"
+    },
+    {
+     "date": "2026-09-21",
+     "name": "Virgen de la Soledad"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Hervededo",
+     "holidays": [
+      {
+       "date": "2026-02-02",
+       "name": "Las Candelas"
+      },
+      {
+       "date": "2026-06-12",
+       "name": "San Antonio"
+      }
+     ]
+    },
+    {
+     "name": "La Válgoma",
+     "holidays": [
+      {
+       "date": "2026-05-14",
+       "name": "La Ascensión"
+      },
+      {
+       "date": "2026-12-09",
+       "name": "Santa Leocadia"
+      }
+     ]
+    },
+    {
+     "name": "Magaz de Abajo",
+     "holidays": [
+      {
+       "date": "2026-04-27",
+       "name": "Santa Elena"
+      },
+      {
+       "date": "2026-12-28",
+       "name": "San Juan"
+      }
+     ]
+    },
+    {
+     "name": "Narayola",
+     "holidays": [
+      {
+       "date": "2026-02-02",
+       "name": "Las Candelas"
+      },
+      {
+       "date": "2026-08-17",
+       "name": "San Roque"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24036": {
+   "holidays": [
+    {
+     "date": "2026-02-16",
+     "name": ""
+    },
+    {
+     "date": "2026-04-24",
+     "name": ""
+    }
+   ]
+  },
+  "24037": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro Labrador"
+    },
+    {
+     "date": "2026-07-24",
+     "name": "Santiago Apóstol"
+    }
+   ]
+  },
+  "24038": {
+   "holidays": [
+    {
+     "date": "2026-06-04",
+     "name": "Corpus Christi"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "La Encina"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Carracedo del Monasterio",
+     "holidays": [
+      {
+       "date": "2026-08-20",
+       "name": "San Bernardo"
+      },
+      {
+       "date": "2026-09-08",
+       "name": "La Encina"
+      }
+     ]
+    },
+    {
+     "name": "Posada del Bierzo",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro"
+      },
+      {
+       "date": "2026-09-08",
+       "name": "La Encina"
+      }
+     ]
+    },
+    {
+     "name": "Villadepalos",
+     "holidays": [
+      {
+       "date": "2026-07-22",
+       "name": "La Magdalena"
+      },
+      {
+       "date": "2026-09-08",
+       "name": "La Encina"
+      }
+     ]
+    },
+    {
+     "name": "Villamartín de la Abadía",
+     "holidays": [
+      {
+       "date": "2026-06-29",
+       "name": "San Pedro"
+      },
+      {
+       "date": "2026-09-08",
+       "name": "La Encina"
+      }
+     ]
+    },
+    {
+     "name": "Villaverde de la Abadía",
+     "holidays": [
+      {
+       "date": "2026-08-17",
+       "name": "San Roque"
+      },
+      {
+       "date": "2026-09-08",
+       "name": "La Encina"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos. 'Para todo el municipio' days are included for every locality."
+  },
+  "24039": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2026-05-26",
+     "name": "La Virgen del Villar"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Huerga del Río",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro"
+      },
+      {
+       "date": "2026-07-27",
+       "name": "Santa Ana"
+      }
+     ]
+    },
+    {
+     "name": "La Milla del Río",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro"
+      },
+      {
+       "date": "2026-06-24",
+       "name": "San Juan"
+      }
+     ]
+    },
+    {
+     "name": "Quiñones del Río",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro"
+      },
+      {
+       "date": "2026-06-13",
+       "name": "San Antonio"
+      }
+     ]
+    },
+    {
+     "name": "Villanueva de Carrizo",
+     "holidays": [
+      {
+       "date": "2026-04-24",
+       "name": "San Jorge"
+      },
+      {
+       "date": "2026-05-26",
+       "name": "La Virgen del Villar"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24040": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": "Nuestra Sra. del Carmen"
+    },
+    {
+     "date": "2026-07-17",
+     "name": "Nuestra Sra. del Carmen"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Benllera",
+     "holidays": [
+      {
+       "date": "2026-08-16",
+       "name": "San Roque"
+      },
+      {
+       "date": "2026-08-17",
+       "name": "San Roque"
+      }
+     ]
+    },
+    {
+     "name": "Otero de las Dueñas",
+     "holidays": [
+      {
+       "date": "2026-08-22",
+       "name": "Nuestra Señora de Fátima"
+      },
+      {
+       "date": "2026-08-24",
+       "name": "Nuestra Señora de Fátima"
+      }
+     ]
+    },
+    {
+     "name": "Piedrasecha",
+     "holidays": [
+      {
+       "date": "2026-08-08",
+       "name": ""
+      },
+      {
+       "date": "2026-08-10",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Santiago de las Villas",
+     "holidays": [
+      {
+       "date": "2026-09-15",
+       "name": "San Cipriano"
+      },
+      {
+       "date": "2026-09-17",
+       "name": "San Cipriano"
+      }
+     ]
+    },
+    {
+     "name": "Viñayo",
+     "holidays": [
+      {
+       "date": "2026-07-06",
+       "name": ""
+      },
+      {
+       "date": "2026-12-30",
+       "name": "Santa Columba"
+      }
+     ]
+    },
+    {
+     "name": "Cuevas de Viñayo",
+     "holidays": [
+      {
+       "date": "2026-08-08",
+       "name": ""
+      },
+      {
+       "date": "2026-08-10",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24041": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "24043": {
+   "holidays": [
+    {
+     "date": "2026-01-05",
+     "name": ""
+    },
+    {
+     "date": "2026-12-07",
+     "name": ""
+    }
+   ]
+  },
+  "24046": {
+   "holidays": [
+    {
+     "date": "2026-04-14",
+     "name": "Pasquilla"
+    },
+    {
+     "date": "2026-06-08",
+     "name": "Fiesta Sacramental"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Calzada de la Valdería",
+     "holidays": [
+      {
+       "date": "2026-01-16",
+       "name": "San Antón"
+      },
+      {
+       "date": "2026-08-06",
+       "name": "San Salvador"
+      }
+     ]
+    },
+    {
+     "name": "Felechares de la Valdería",
+     "holidays": [
+      {
+       "date": "2026-05-04",
+       "name": "Santa Elena"
+      },
+      {
+       "date": "2026-06-15",
+       "name": "Fiesta Sacramental"
+      }
+     ]
+    },
+    {
+     "name": "San Félix de la Valdería",
+     "holidays": [
+      {
+       "date": "2026-06-12",
+       "name": "San Antonio"
+      },
+      {
+       "date": "2026-08-31",
+       "name": "Fiesta patronal de la Entidad"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24047": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-06",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Morla de la Valdería",
+     "holidays": [
+      {
+       "date": "2026-08-24",
+       "name": ""
+      },
+      {
+       "date": "2026-12-10",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Nogarejas",
+     "holidays": [
+      {
+       "date": "2026-06-04",
+       "name": ""
+      },
+      {
+       "date": "2026-08-17",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Pinilla de la Valdería",
+     "holidays": [
+      {
+       "date": "2026-08-14",
+       "name": ""
+      },
+      {
+       "date": "2026-08-17",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Pobladura de Yuso",
+     "holidays": [
+      {
+       "date": "2026-08-12",
+       "name": ""
+      },
+      {
+       "date": "2026-08-13",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Torneros de la Valdería",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      },
+      {
+       "date": "2026-06-29",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24049": {
+   "holidays": [
+    {
+     "date": "2026-05-18",
+     "name": "San Bernardino"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "El Cristo"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Calamocos",
+     "holidays": [
+      {
+       "date": "2026-01-19",
+       "name": "San Antonio"
+      },
+      {
+       "date": "2026-09-14",
+       "name": "El Cristo"
+      }
+     ]
+    },
+    {
+     "name": "Matachana",
+     "holidays": [
+      {
+       "date": "2026-05-04",
+       "name": "Exaltación de la Santa Cruz"
+      },
+      {
+       "date": "2026-09-14",
+       "name": "El Cristo"
+      }
+     ]
+    },
+    {
+     "name": "San Pedro Castañero",
+     "holidays": [
+      {
+       "date": "2026-02-09",
+       "name": "Santa Apolonia"
+      },
+      {
+       "date": "2026-09-14",
+       "name": "El Cristo"
+      }
+     ]
+    },
+    {
+     "name": "Turienzo Castañero",
+     "holidays": [
+      {
+       "date": "2026-01-26",
+       "name": "Santo Tirso"
+      },
+      {
+       "date": "2026-09-14",
+       "name": "El Cristo"
+      }
+     ]
+    },
+    {
+     "name": "Villaverde de los Cestos",
+     "holidays": [
+      {
+       "date": "2026-09-14",
+       "name": "El Cristo"
+      },
+      {
+       "date": "2026-11-09",
+       "name": "San Martín"
+      }
+     ]
+    },
+    {
+     "name": "Viloria",
+     "holidays": [
+      {
+       "date": "2026-02-02",
+       "name": "Las Candelas"
+      },
+      {
+       "date": "2026-09-14",
+       "name": "El Cristo"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos. 'Para todo el municipio' days are included for every locality."
+  },
+  "24050": {
+   "holidays": [
+    {
+     "date": "2026-04-25",
+     "name": "San Marcos"
+    },
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    }
+   ]
+  },
+  "24051": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro Labrador"
+    },
+    {
+     "date": "2026-07-18",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Bustillo de Cea",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro Labrador"
+      },
+      {
+       "date": "2026-09-25",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Sahelices del Río",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro Labrador"
+      },
+      {
+       "date": "2026-08-17",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "San Pedro de Valderaduey",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro Labrador"
+      },
+      {
+       "date": "2026-07-03",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos. 'Para todo el municipio' days are included for every locality."
+  },
+  "24052": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2026-12-04",
+     "name": "Santa Bárbara"
+    }
+   ]
+  },
+  "24053": {
+   "holidays": [
+    {
+     "date": "2026-07-18",
+     "name": ""
+    },
+    {
+     "date": "2026-12-14",
+     "name": "Santa Lucía"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "San Juan de Torres",
+     "holidays": [
+      {
+       "date": "2026-05-06",
+       "name": "San Mamés"
+      },
+      {
+       "date": "2026-06-24",
+       "name": "San Juan"
+      }
+     ]
+    },
+    {
+     "name": "San Martín de Torres",
+     "holidays": [
+      {
+       "date": "2026-06-04",
+       "name": "Corpus Christi"
+      },
+      {
+       "date": "2026-08-08",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24054": {
+   "holidays": [
+    {
+     "date": "2026-05-11",
+     "name": "La Virgen de la Vega"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Nuestra Señora"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Bariones de la Vega",
+     "holidays": [
+      {
+       "date": "2026-05-20",
+       "name": "San Bernardino"
+      },
+      {
+       "date": "2026-08-06",
+       "name": "El Salvador"
+      }
+     ]
+    },
+    {
+     "name": "Lordemanos",
+     "holidays": [
+      {
+       "date": "2026-05-11",
+       "name": "La Virgen de la Vega"
+      },
+      {
+       "date": "2026-06-29",
+       "name": "San Pedro"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24055": {
+   "holidays": [
+    {
+     "date": "2026-01-30",
+     "name": ""
+    },
+    {
+     "date": "2026-08-24",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Alcoba de la Ribera",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      },
+      {
+       "date": "2026-06-29",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Azadón",
+     "holidays": [
+      {
+       "date": "2026-07-23",
+       "name": ""
+      },
+      {
+       "date": "2026-07-24",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Secarejo",
+     "holidays": [
+      {
+       "date": "2026-08-27",
+       "name": ""
+      },
+      {
+       "date": "2026-08-28",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Velilla de la Reina",
+     "holidays": [
+      {
+       "date": "2026-06-26",
+       "name": ""
+      },
+      {
+       "date": "2026-08-17",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Villarroquel",
+     "holidays": [
+      {
+       "date": "2026-09-28",
+       "name": ""
+      },
+      {
+       "date": "2026-09-29",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24056": {
+   "holidays": [
+    {
+     "date": "2026-05-28",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ]
+  },
+  "24057": {
+   "holidays": [
+    {
+     "date": "2026-01-07",
+     "name": ""
+    },
+    {
+     "date": "2026-06-01",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Almázcara",
+     "holidays": [
+      {
+       "date": "2026-04-04",
+       "name": ""
+      },
+      {
+       "date": "2026-12-28",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Cobrana",
+     "holidays": [
+      {
+       "date": "2026-01-28",
+       "name": ""
+      },
+      {
+       "date": "2026-07-27",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "San Miguel de las Dueñas",
+     "holidays": [
+      {
+       "date": "2026-08-21",
+       "name": ""
+      },
+      {
+       "date": "2026-09-28",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24058": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro Labrador"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Nava de los Oteros",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro Labrador"
+      },
+      {
+       "date": "2026-08-24",
+       "name": "San Bartolomé"
+      }
+     ]
+    },
+    {
+     "name": "Rebollar de los Oteros",
+     "holidays": [
+      {
+       "date": "2026-05-08",
+       "name": "San Miguel"
+      },
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro Labrador"
+      }
+     ]
+    },
+    {
+     "name": "San Justo de los Oteros",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro Labrador"
+      },
+      {
+       "date": "2026-08-16",
+       "name": "San Justo"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24059": {
+   "holidays": [
+    {
+     "date": "2026-06-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2026-08-03",
+     "name": ""
+    }
+   ]
+  },
+  "24060": {
+   "holidays": [
+    {
+     "date": "2026-08-24",
+     "name": ""
+    },
+    {
+     "date": "2026-09-15",
+     "name": ""
+    }
+   ]
+  },
+  "24061": {
+   "holidays": [
+    {
+     "date": "2026-09-16",
+     "name": "San Cipriano"
+    },
+    {
+     "date": "2026-10-05",
+     "name": "San Froilán"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Cabanillas",
+     "holidays": [
+      {
+       "date": "2026-05-02",
+       "name": "La Cruz"
+      },
+      {
+       "date": "2026-10-05",
+       "name": "San Froilán"
+      }
+     ]
+    },
+    {
+     "name": "Campo y Santibáñez",
+     "holidays": [
+      {
+       "date": "2026-08-29",
+       "name": "San Juan Degollado"
+      },
+      {
+       "date": "2026-10-05",
+       "name": "San Froilán"
+      }
+     ]
+    },
+    {
+     "name": "Cascantes",
+     "holidays": [
+      {
+       "date": "2026-10-05",
+       "name": "San Froilán"
+      },
+      {
+       "date": "2026-10-10",
+       "name": "Virgen de los Remedios"
+      }
+     ]
+    },
+    {
+     "name": "La Seca",
+     "holidays": [
+      {
+       "date": "2026-02-03",
+       "name": "San Blas"
+      },
+      {
+       "date": "2026-10-05",
+       "name": "San Froilán"
+      }
+     ]
+    },
+    {
+     "name": "Lorenzana",
+     "holidays": [
+      {
+       "date": "2026-09-15",
+       "name": "Santísimo Cristo de la Veracruz"
+      },
+      {
+       "date": "2026-10-05",
+       "name": "San Froilán"
+      }
+     ]
+    },
+    {
+     "name": "Valsemana",
+     "holidays": [
+      {
+       "date": "2026-06-13",
+       "name": "San Antonio"
+      },
+      {
+       "date": "2026-10-05",
+       "name": "San Froilán"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos. 'Para todo el municipio' days are included for every locality."
+  },
+  "24063": {
+   "holidays": [
+    {
+     "date": "2026-05-08",
+     "name": "San Miguel"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "Nuestra Señora"
+    }
+   ]
+  },
+  "24064": {
+   "holidays": [
+    {
+     "date": "2026-07-10",
+     "name": "San Cristóbal"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Virgen de La Encina"
+    }
+   ]
+  },
+  "24065": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    },
+    {
+     "date": "2026-10-05",
+     "name": "San Froilán"
+    }
+   ]
+  },
+  "24066": {
+   "holidays": [
+    {
+     "date": "2026-04-30",
+     "name": ""
+    },
+    {
+     "date": "2026-08-07",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Robledo de la Valduerna",
+     "holidays": [
+      {
+       "date": "2026-07-10",
+       "name": ""
+      },
+      {
+       "date": "2026-12-26",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Robledino de la Valduerna",
+     "holidays": [
+      {
+       "date": "2026-01-02",
+       "name": ""
+      },
+      {
+       "date": "2026-07-24",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24067": {
+   "holidays": [
+    {
+     "date": "2026-06-12",
+     "name": "San Antonio"
+    },
+    {
+     "date": "2026-08-11",
+     "name": "San Mamet"
+    }
+   ]
+  },
+  "24068": {
+   "holidays": [
+    {
+     "date": "2026-06-26",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "24069": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": "Virgen de la Vega"
+    },
+    {
+     "date": "2026-11-23",
+     "name": "San Clemente"
+    }
+   ]
+  },
+  "24070": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2026-12-04",
+     "name": "Santa Bárbara"
+    }
+   ]
+  },
+  "24071": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    },
+    {
+     "date": "2026-08-21",
+     "name": "Jesusín"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Boeza",
+     "holidays": [
+      {
+       "date": "2026-06-15",
+       "name": "San Antonio"
+      },
+      {
+       "date": "2026-09-08",
+       "name": "Virgen de la Encina"
+      }
+     ]
+    },
+    {
+     "name": "El Valle",
+     "holidays": [
+      {
+       "date": "2026-07-13",
+       "name": "El Corpus"
+      },
+      {
+       "date": "2026-12-22",
+       "name": "Santo Tomás"
+      }
+     ]
+    },
+    {
+     "name": "La Ribera de Folgoso",
+     "holidays": [
+      {
+       "date": "2026-04-13",
+       "name": "La Pilarica"
+      },
+      {
+       "date": "2026-06-08",
+       "name": "El Corpus"
+      }
+     ]
+    },
+    {
+     "name": "Rozuelo",
+     "holidays": [
+      {
+       "date": "2026-09-08",
+       "name": "Virgen de la Encina"
+      },
+      {
+       "date": "2026-09-09",
+       "name": "Virgen de la Encina"
+      }
+     ]
+    },
+    {
+     "name": "Tedejo",
+     "holidays": [
+      {
+       "date": "2026-01-26",
+       "name": "los Mártires"
+      },
+      {
+       "date": "2026-08-03",
+       "name": "El Corpus"
+      }
+     ]
+    },
+    {
+     "name": "Villaviciosa de San Miguel",
+     "holidays": [
+      {
+       "date": "2026-05-08",
+       "name": "San Miguel Arcángel"
+      },
+      {
+       "date": "2026-08-10",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24073": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro Labrador"
+    },
+    {
+     "date": "2026-06-04",
+     "name": "festividad del Corpus"
+    }
+   ]
+  },
+  "24076": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    },
+    {
+     "date": "2026-09-21",
+     "name": "Nuestra Señora de las Manzanedas"
+    }
+   ]
+  },
+  "24077": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro Labrador"
+    },
+    {
+     "date": "2026-07-16",
+     "name": "Nuestra Señora del Carmen"
+    }
+   ]
+  },
+  "24078": {
+   "holidays": [
+    {
+     "date": "2026-05-09",
+     "name": "San Gregorio"
+    },
+    {
+     "date": "2026-08-29",
+     "name": "San Juan Degollado"
+    }
+   ]
+  },
+  "24079": {
+   "holidays": [
+    {
+     "date": "2026-02-02",
+     "name": "San Blas"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro Labrador"
+    }
+   ]
+  },
+  "24080": {
+   "holidays": [
+    {
+     "date": "2026-05-08",
+     "name": "San Miguel"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Virgen de las Puertas"
+    }
+   ]
+  },
+  "24081": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro Labrador"
+    },
+    {
+     "date": "2026-11-23",
+     "name": "Santa Cecilia"
+    }
+   ]
+  },
+  "24082": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    }
+   ]
+  },
+  "24083": {
+   "holidays": [
+    {
+     "date": "2026-02-09",
+     "name": "Santa Apolonia"
+    },
+    {
+     "date": "2026-07-17",
+     "name": "Santa Marina"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Almagarinos",
+     "holidays": [
+      {
+       "date": "2026-06-15",
+       "name": "San Antonio de Padua"
+      },
+      {
+       "date": "2026-08-10",
+       "name": "San Pedro Advíncula"
+      }
+     ]
+    },
+    {
+     "name": "Colinas del Campo de Martín Moro Toledano",
+     "holidays": [
+      {
+       "date": "2026-06-24",
+       "name": "San Juan"
+      },
+      {
+       "date": "2026-06-25",
+       "name": "San Juan"
+      }
+     ]
+    },
+    {
+     "name": "Espina de Tremor",
+     "holidays": [
+      {
+       "date": "2026-06-04",
+       "name": "Corpus Christi"
+      },
+      {
+       "date": "2026-12-11",
+       "name": "Santa Lucía"
+      }
+     ]
+    },
+    {
+     "name": "Pobladura de las Regueras",
+     "holidays": [
+      {
+       "date": "2026-05-25",
+       "name": "Pascua de Pentecostés"
+      },
+      {
+       "date": "2026-08-17",
+       "name": "Nuestra Señora de la Asunción"
+      }
+     ]
+    },
+    {
+     "name": "Quintana de Fuseros",
+     "holidays": [
+      {
+       "date": "2026-05-04",
+       "name": "Santa Cruz"
+      },
+      {
+       "date": "2026-08-17",
+       "name": "San Roque"
+      }
+     ]
+    },
+    {
+     "name": "Rodrigatos de las Regueras",
+     "holidays": [
+      {
+       "date": "2026-01-16",
+       "name": "San Antón"
+      },
+      {
+       "date": "2026-07-03",
+       "name": "San Pelayo"
+      }
+     ]
+    },
+    {
+     "name": "Tremor de Arriba",
+     "holidays": [
+      {
+       "date": "2026-06-24",
+       "name": "San Juan"
+      },
+      {
+       "date": "2026-12-26",
+       "name": "San Esteban"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24084": {
+   "holidays": [
+    {
+     "date": "2026-07-18",
+     "name": "Santa Marina"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Nuestra Señora"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Albires",
+     "holidays": [
+      {
+       "date": "2026-09-14",
+       "name": "Exaltación de la Cruz"
+      },
+      {
+       "date": "2026-11-30",
+       "name": "San Andrés"
+      }
+     ]
+    },
+    {
+     "name": "Valdemorilla",
+     "holidays": [
+      {
+       "date": "2026-02-02",
+       "name": "Santa Brígida"
+      },
+      {
+       "date": "2026-11-11",
+       "name": "San Martín"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24087": {
+   "holidays": [
+    {
+     "date": "2026-07-25",
+     "name": "fiesta de verano"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "San Pedro de las Dueñas",
+     "holidays": [
+      {
+       "date": "2026-12-28",
+       "name": "Santos Inocentes"
+      }
+     ]
+    },
+    {
+     "name": "Santa Cristina del Páramo",
+     "holidays": [
+      {
+       "date": "2026-07-25",
+       "name": "Santiago Apóstol"
+      }
+     ]
+    },
+    {
+     "name": "Soguillo del Páramo",
+     "holidays": [
+      {
+       "date": "2026-05-08",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Para todo del municipio",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos. The resolution gives 1 day(s) for Laguna Dalga itself."
+  },
+  "24088": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2026-06-08",
+     "name": "Corpus Christi"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Cabañeros",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro"
+      },
+      {
+       "date": "2026-06-29",
+       "name": "San Pedro"
+      }
+     ]
+    },
+    {
+     "name": "Villamorico",
+     "holidays": [
+      {
+       "date": "2026-08-08",
+       "name": "La Asunción"
+      },
+      {
+       "date": "2026-09-19",
+       "name": "El Carmen"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24089": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    },
+    {
+     "date": "2026-10-05",
+     "name": "San Froilán"
+    }
+   ]
+  },
+  "24090": {
+   "holidays": [
+    {
+     "date": "2026-01-02",
+     "name": ""
+    },
+    {
+     "date": "2026-04-24",
+     "name": ""
+    }
+   ]
+  },
+  "24091": {
+   "holidays": [
+    {
+     "date": "2026-06-15",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ]
+  },
+  "24092": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Quintanilla",
+     "holidays": [
+      {
+       "date": "2026-05-04",
+       "name": ""
+      },
+      {
+       "date": "2026-08-10",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "San Román",
+     "holidays": [
+      {
+       "date": "2026-07-03",
+       "name": ""
+      },
+      {
+       "date": "2026-11-20",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Villaviciosa",
+     "holidays": [
+      {
+       "date": "2026-06-15",
+       "name": ""
+      },
+      {
+       "date": "2026-09-14",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24093": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-06-29",
+     "name": ""
+    }
+   ]
+  },
+  "24094": {
+   "holidays": [
+    {
+     "date": "2026-09-14",
+     "name": "Nuestra Señora la Virgen de Gracia"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "Feria de San Martín"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Villómar",
+     "holidays": [
+      {
+       "date": "2026-04-27",
+       "name": "Patrocinio de San José"
+      },
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro Labrador"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24095": {
+   "holidays": [
+    {
+     "date": "2026-05-08",
+     "name": ""
+    },
+    {
+     "date": "2026-08-14",
+     "name": ""
+    }
+   ]
+  },
+  "24100": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": "patrona de El Bierzo"
+    }
+   ]
+  },
+  "24101": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": ""
+    },
+    {
+     "date": "2026-10-05",
+     "name": ""
+    }
+   ]
+  },
+  "24102": {
+   "holidays": [
+    {
+     "date": "2026-08-14",
+     "name": ""
+    },
+    {
+     "date": "2026-08-21",
+     "name": ""
+    }
+   ]
+  },
+  "24103": {
+   "holidays": [
+    {
+     "date": "2026-06-12",
+     "name": "San Antonio"
+    },
+    {
+     "date": "2026-08-14",
+     "name": "Nuestra Señora"
+    }
+   ]
+  },
+  "24105": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    },
+    {
+     "date": "2026-10-05",
+     "name": "San Froilán"
+    }
+   ]
+  },
+  "24107": {
+   "holidays": [
+    {
+     "date": "2026-01-22",
+     "name": "San Vicente"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Fuentes de los Oteros",
+     "holidays": [
+      {
+       "date": "2026-05-19",
+       "name": "El Sacramento"
+      }
+     ]
+    },
+    {
+     "name": "Morilla de los Oteros",
+     "holidays": [
+      {
+       "date": "2026-06-24",
+       "name": "San Pelayo"
+      }
+     ]
+    },
+    {
+     "name": "Pobladura de los Oteros",
+     "holidays": [
+      {
+       "date": "2026-02-03",
+       "name": "San Blas"
+      }
+     ]
+    },
+    {
+     "name": "Quintanilla de los Oteros",
+     "holidays": [
+      {
+       "date": "2026-06-30",
+       "name": "San Pedro"
+      }
+     ]
+    },
+    {
+     "name": "Valdesaz de los Oteros",
+     "holidays": [
+      {
+       "date": "2026-08-17",
+       "name": "Ntra. Sra. de Agosto"
+      }
+     ]
+    },
+    {
+     "name": "Velilla de los Oteros",
+     "holidays": [
+      {
+       "date": "2026-08-06",
+       "name": "San Salvador"
+      }
+     ]
+    },
+    {
+     "name": "Para todo del municipio",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos. The resolution gives 1 day(s) for Pajares de los Oteros itself."
+  },
+  "24108": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": "Cristo de los Afligidos"
+    },
+    {
+     "date": "2026-10-05",
+     "name": "Nuestra Señora del Rosario"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Ribas de la Valduerna",
+     "holidays": [
+      {
+       "date": "2026-02-12",
+       "name": "Santa Eulalia"
+      },
+      {
+       "date": "2026-09-21",
+       "name": "Sacramental"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24109": {
+   "holidays": [
+    {
+     "date": "2026-05-18",
+     "name": "Nuestra Señora de Fátima"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "San Roque"
+    }
+   ]
+  },
+  "24110": {
+   "holidays": [
+    {
+     "date": "2026-08-05",
+     "name": "La Virgen de las Nieves"
+    },
+    {
+     "date": "2026-12-04",
+     "name": "Santa Bárbara"
+    }
+   ]
+  },
+  "24112": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": "Festividad posterior al día de la Asunción"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Festividad de Trascastro"
+    }
+   ]
+  },
+  "24113": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro Labrador"
+    },
+    {
+     "date": "2026-06-05",
+     "name": "Corpus Christi"
+    }
+   ]
+  },
+  "24115": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": "La Encina"
+    },
+    {
+     "date": "2026-09-09",
+     "name": ""
+    }
+   ]
+  },
+  "24116": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": "Nuestra Señora de Corona"
+    },
+    {
+     "date": "2026-10-05",
+     "name": "Feria de octubre"
+    }
+   ]
+  },
+  "24117": {
+   "holidays": [
+    {
+     "date": "2026-01-02",
+     "name": ""
+    },
+    {
+     "date": "2026-06-26",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Altobar de la Encomienda",
+     "holidays": [
+      {
+       "date": "2026-06-12",
+       "name": ""
+      },
+      {
+       "date": "2026-11-11",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Saludes de Castroponce",
+     "holidays": [
+      {
+       "date": "2026-06-01",
+       "name": ""
+      },
+      {
+       "date": "2026-08-06",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24118": {
+   "holidays": [
+    {
+     "date": "2026-08-23",
+     "name": "San Bartolomé"
+    },
+    {
+     "date": "2026-12-04",
+     "name": "Santa Bárbara"
+    }
+   ]
+  },
+  "24119": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "Las Candelas"
+    },
+    {
+     "date": "2026-08-06",
+     "name": "El Salvador"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Ferradillo",
+     "holidays": [
+      {
+       "date": "2026-08-24",
+       "name": "San Bartolomé"
+      },
+      {
+       "date": "2026-09-08",
+       "name": "La Encina"
+      }
+     ]
+    },
+    {
+     "name": "Paradela de Muces",
+     "holidays": [
+      {
+       "date": "2026-05-08",
+       "name": "San Miguel"
+      },
+      {
+       "date": "2026-06-13",
+       "name": "San Antonio"
+      }
+     ]
+    },
+    {
+     "name": "Santalla del Bierzo",
+     "holidays": [
+      {
+       "date": "2026-07-18",
+       "name": "Santa Marina"
+      },
+      {
+       "date": "2026-09-06",
+       "name": "El Carmen"
+      }
+     ]
+    },
+    {
+     "name": "Villalibre de la Jurisdicción",
+     "holidays": [
+      {
+       "date": "2026-01-17",
+       "name": "San Antonio"
+      },
+      {
+       "date": "2026-08-15",
+       "name": "San Roque"
+      }
+     ]
+    },
+    {
+     "name": "Villavieja",
+     "holidays": [
+      {
+       "date": "2026-01-17",
+       "name": "San Antonio"
+      },
+      {
+       "date": "2026-07-25",
+       "name": "Santiago Apóstol"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24120": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "San Roque"
+    }
+   ]
+  },
+  "24121": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro Labrador"
+    },
+    {
+     "date": "2026-08-05",
+     "name": ": Las Nieves"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Cofiñal",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro Labrador"
+      },
+      {
+       "date": "2026-09-07",
+       "name": "Las Ánimas"
+      }
+     ]
+    },
+    {
+     "name": "Isoba",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro Labrador"
+      },
+      {
+       "date": "2026-07-22",
+       "name": "La Magdalena"
+      }
+     ]
+    },
+    {
+     "name": "Redipollos",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro Labrador"
+      },
+      {
+       "date": "2026-08-24",
+       "name": "San Bartolomé"
+      }
+     ]
+    },
+    {
+     "name": "Solle",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro Labrador"
+      },
+      {
+       "date": "2026-08-17",
+       "name": "San Roque"
+      }
+     ]
+    },
+    {
+     "name": "San Cibrián de la Somoza",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro Labrador"
+      },
+      {
+       "date": "2026-09-16",
+       "name": "San Cipriano"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos. 'Para todo el municipio' days are included for every locality."
+  },
+  "24122": {
+   "holidays": [
+    {
+     "date": "2026-06-08",
+     "name": "Sagrado Corazón de Jesus"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "San Roquín"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Castroquilame",
+     "holidays": [
+      {
+       "date": "2026-01-23",
+       "name": "San Ildefonso"
+      },
+      {
+       "date": "2026-08-05",
+       "name": "Santa María Magdalena"
+      }
+     ]
+    },
+    {
+     "name": "Robledo de Sobrecastro",
+     "holidays": [
+      {
+       "date": "2026-07-25",
+       "name": "Santiago Apóstol"
+      },
+      {
+       "date": "2026-12-09",
+       "name": "Santa Leocadia"
+      }
+     ]
+    },
+    {
+     "name": "Salas de la Ribera",
+     "holidays": [
+      {
+       "date": "2026-08-28",
+       "name": "Santo Cristo"
+      },
+      {
+       "date": "2026-11-30",
+       "name": "San Andrés"
+      }
+     ]
+    },
+    {
+     "name": "San Pedro de Trones",
+     "holidays": [
+      {
+       "date": "2026-06-29",
+       "name": "San Pedro de Trones"
+      },
+      {
+       "date": "2026-06-30",
+       "name": "San Pedro de Trones"
+      }
+     ]
+    },
+    {
+     "name": "Las Vegas de Yeres",
+     "holidays": [
+      {
+       "date": "2026-08-24",
+       "name": "San Juan"
+      },
+      {
+       "date": "2026-12-18",
+       "name": "María de la Expectación"
+      }
+     ]
+    },
+    {
+     "name": "Yeres",
+     "holidays": [
+      {
+       "date": "2026-06-24",
+       "name": "San Juan"
+      },
+      {
+       "date": "2026-08-28",
+       "name": "San Pelayo"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24123": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-07-25",
+     "name": ""
+    }
+   ]
+  },
+  "24125": {
+   "holidays": [
+    {
+     "date": "2026-01-30",
+     "name": "Las Candelas"
+    },
+    {
+     "date": "2026-06-26",
+     "name": "San Pedro"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Herreros de Jamuz",
+     "holidays": [
+      {
+       "date": "2026-04-03",
+       "name": "San Juanín"
+      },
+      {
+       "date": "2026-08-14",
+       "name": "La Patrona"
+      }
+     ]
+    },
+    {
+     "name": "Palacios de Jamuz",
+     "holidays": [
+      {
+       "date": "2026-01-30",
+       "name": "Santo Tirso"
+      },
+      {
+       "date": "2026-07-24",
+       "name": "Santiago"
+      }
+     ]
+    },
+    {
+     "name": "Quintanilla de Flórez",
+     "holidays": [
+      {
+       "date": "2026-06-12",
+       "name": "San Antonio"
+      }
+     ]
+    },
+    {
+     "name": "Tabuyuelo de Jamuz",
+     "holidays": [
+      {
+       "date": "2026-01-23",
+       "name": "San Francisco"
+      },
+      {
+       "date": "2026-10-09",
+       "name": "Los Remedios"
+      }
+     ]
+    },
+    {
+     "name": "Torneros de Jamuz",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro"
+      },
+      {
+       "date": "2026-08-14",
+       "name": ": La Patrona de Nuestra Señora"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24127": {
+   "holidays": [
+    {
+     "date": "2026-06-30",
+     "name": ""
+    },
+    {
+     "date": "2026-10-03",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Regueras de Abajo",
+     "holidays": [
+      {
+       "date": "2026-06-13",
+       "name": ""
+      },
+      {
+       "date": "2026-08-01",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24129": {
+   "holidays": [
+    {
+     "date": "2026-08-14",
+     "name": ""
+    },
+    {
+     "date": "2026-08-17",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Pallide",
+     "holidays": [
+      {
+       "date": "2026-07-25",
+       "name": ""
+      },
+      {
+       "date": "2026-07-27",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Viego",
+     "holidays": [
+      {
+       "date": "2026-08-01",
+       "name": ""
+      },
+      {
+       "date": "2026-08-03",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Primajas",
+     "holidays": [
+      {
+       "date": "2026-08-08",
+       "name": ""
+      },
+      {
+       "date": "2026-08-10",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24130": {
+   "holidays": [
+    {
+     "date": "2026-02-05",
+     "name": "Santa Águeda"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "Quintanilla"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Carande",
+     "holidays": [
+      {
+       "date": "2026-08-13",
+       "name": "San Hipólito"
+      },
+      {
+       "date": "2026-08-17",
+       "name": "Quintanilla"
+      }
+     ]
+    },
+    {
+     "name": "Horcadas",
+     "holidays": [
+      {
+       "date": "2026-08-17",
+       "name": "Quintanilla"
+      },
+      {
+       "date": "2026-09-16",
+       "name": "Los Patronos"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos. 'Para todo el municipio' days are included for every locality."
+  },
+  "24131": {
+   "holidays": [
+    {
+     "date": "2026-05-11",
+     "name": "San Gregorio"
+    },
+    {
+     "date": "2026-06-08",
+     "name": "Corpus Cristi"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Castrotierra de la Valduerna.",
+     "holidays": [
+      {
+       "date": "2026-03-25",
+       "name": "Nuestra Señora"
+      },
+      {
+       "date": "2026-08-31",
+       "name": "San Bartolomé"
+      }
+     ]
+    },
+    {
+     "name": "San Félix de la Vega",
+     "holidays": [
+      {
+       "date": "2026-01-28",
+       "name": "Santo Tirso"
+      },
+      {
+       "date": "2026-06-01",
+       "name": "La Trinidad"
+      }
+     ]
+    },
+    {
+     "name": "Toral de Fondo",
+     "holidays": [
+      {
+       "date": "2026-06-01",
+       "name": "La Trinidad"
+      },
+      {
+       "date": "2026-08-24",
+       "name": "San Bartolomé"
+      }
+     ]
+    },
+    {
+     "name": "Toralino de la Vega",
+     "holidays": [
+      {
+       "date": "2026-05-18",
+       "name": "La Ascensión"
+      },
+      {
+       "date": "2026-08-07",
+       "name": "San Mamés"
+      }
+     ]
+    },
+    {
+     "name": "Villarnera de la Vega",
+     "holidays": [
+      {
+       "date": "2026-01-19",
+       "name": "San Antonio"
+      },
+      {
+       "date": "2026-09-08",
+       "name": "La Natividad"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24132": {
+   "holidays": [
+    {
+     "date": "2026-08-28",
+     "name": "San Juan"
+    },
+    {
+     "date": "2026-10-05",
+     "name": "San Froilán"
+    }
+   ]
+  },
+  "24134": {
+   "holidays": [
+    {
+     "date": "2026-06-08",
+     "name": "Corpus Christi"
+    },
+    {
+     "date": "2026-08-03",
+     "name": "Celada"
+    }
+   ]
+  },
+  "24136": {
+   "holidays": [
+    {
+     "date": "2026-08-22",
+     "name": ""
+    },
+    {
+     "date": "2026-08-27",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Moscas del Páramo",
+     "holidays": [
+      {
+       "date": "2026-08-01",
+       "name": ""
+      },
+      {
+       "date": "2026-08-02",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Valcavado del Páramo",
+     "holidays": [
+      {
+       "date": "2026-07-24",
+       "name": ""
+      },
+      {
+       "date": "2026-07-25",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24137": {
+   "holidays": [
+    {
+     "date": "2026-08-21",
+     "name": "Nuestra Señora Reina de los Ángeles"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "Nuestra Señora Reina de los Ángeles"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Alejico",
+     "holidays": [
+      {
+       "date": "2026-08-17",
+       "name": "San Roque"
+      }
+     ]
+    },
+    {
+     "name": "Olleros de Sabero",
+     "holidays": [
+      {
+       "date": "2026-08-06",
+       "name": "Santos Justo y Pastor"
+      },
+      {
+       "date": "2026-08-07",
+       "name": "Santos Justo y Pastor"
+      }
+     ]
+    },
+    {
+     "name": "Sahelices de Sabero",
+     "holidays": [
+      {
+       "date": "2026-09-14",
+       "name": "Nuestra Sra. de los Dolores"
+      },
+      {
+       "date": "2026-09-15",
+       "name": "Nuestra Sra. de los Dolores"
+      }
+     ]
+    },
+    {
+     "name": "Sotillos de Sabero",
+     "holidays": [
+      {
+       "date": "2026-07-16",
+       "name": "El Carmen"
+      },
+      {
+       "date": "2026-08-24",
+       "name": "San Bartolomé"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24141": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-07-31",
+     "name": ""
+    }
+   ]
+  },
+  "24142": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": ""
+    },
+    {
+     "date": "2026-10-05",
+     "name": ""
+    }
+   ]
+  },
+  "24143": {
+   "holidays": [
+    {
+     "date": "2026-01-28",
+     "name": "Santo Tirso"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "La Encina"
+    }
+   ]
+  },
+  "24144": {
+   "holidays": [
+    {
+     "date": "2026-02-06",
+     "name": ""
+    },
+    {
+     "date": "2026-05-15",
+     "name": ""
+    }
+   ]
+  },
+  "24145": {
+   "holidays": [
+    {
+     "date": "2026-08-07",
+     "name": ""
+    },
+    {
+     "date": "2026-09-29",
+     "name": ""
+    }
+   ]
+  },
+  "24148": {
+   "holidays": [
+    {
+     "date": "2026-04-13",
+     "name": ""
+    },
+    {
+     "date": "2026-04-14",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Celada",
+     "holidays": [
+      {
+       "date": "2026-01-24",
+       "name": ""
+      },
+      {
+       "date": "2026-07-06",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Nistal",
+     "holidays": [
+      {
+       "date": "2026-07-11",
+       "name": ""
+      },
+      {
+       "date": "2026-12-26",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "San Román de la Vega",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      },
+      {
+       "date": "2026-11-18",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24152": {
+   "holidays": [
+    {
+     "date": "2026-08-04",
+     "name": "Santa Isabel"
+    },
+    {
+     "date": "2026-12-18",
+     "name": "Santa Eva"
+    }
+   ]
+  },
+  "24153": {
+   "holidays": [
+    {
+     "date": "2026-07-24",
+     "name": "Santa Cristina"
+    },
+    {
+     "date": "2026-08-17",
+     "name": "La Asunción"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Matallana de Valmadrigal",
+     "holidays": [
+      {
+       "date": "2026-06-08",
+       "name": "Sacramento"
+      },
+      {
+       "date": "2026-07-06",
+       "name": "San Cristóbal"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24154": {
+   "holidays": [
+    {
+     "date": "2026-05-25",
+     "name": "El Cristo"
+    },
+    {
+     "date": "2026-08-21",
+     "name": "Santa Elena"
+    }
+   ]
+  },
+  "24155": {
+   "holidays": [
+    {
+     "date": "2026-05-25",
+     "name": "Lunes de Pentecostés"
+    },
+    {
+     "date": "2026-11-11",
+     "name": "San Martín"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Santibáñez de la Isla",
+     "holidays": [
+      {
+       "date": "2026-02-03",
+       "name": "San Blas"
+      },
+      {
+       "date": "2026-06-24",
+       "name": "San Juan"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24156": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro Labrador"
+    },
+    {
+     "date": "2026-10-05",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Banecidas",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro Labrador"
+      },
+      {
+       "date": "2026-09-18",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Castellanos",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro Labrador"
+      },
+      {
+       "date": "2026-08-16",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Villacintor",
+     "holidays": [
+      {
+       "date": "2026-02-12",
+       "name": ""
+      },
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro Labrador"
+      }
+     ]
+    },
+    {
+     "name": "Villamizar",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro Labrador"
+      },
+      {
+       "date": "2026-06-29",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos. 'Para todo el municipio' days are included for every locality."
+  },
+  "24157": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro Labrador"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "La Virgen de la Guía"
+    }
+   ]
+  },
+  "24158": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": ""
+    },
+    {
+     "date": "2026-10-06",
+     "name": ""
+    }
+   ]
+  },
+  "24159": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro Labrador"
+    },
+    {
+     "date": "2026-06-08",
+     "name": "lunes posterior al Corpus Christi"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "San Martín del Camino",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro Labrador"
+      },
+      {
+       "date": "2026-11-09",
+       "name": "lunes anterior al día de San Martín"
+      }
+     ]
+    },
+    {
+     "name": "Sardonedo",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro Labrador"
+      },
+      {
+       "date": "2026-06-24",
+       "name": "San Juan"
+      }
+     ]
+    },
+    {
+     "name": "Villamor de Órbigo",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro Labrador"
+      },
+      {
+       "date": "2026-06-08",
+       "name": "lunes posterior al Corpus Christi"
+      }
+     ]
+    },
+    {
+     "name": "Villavante",
+     "holidays": [
+      {
+       "date": "2026-02-02",
+       "name": "día de Las Candelas"
+      },
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro Labrador"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos. 'Para todo el municipio' days are included for every locality."
+  },
+  "24160": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro Labrador"
+    },
+    {
+     "date": "2026-06-12",
+     "name": "San Antonio"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Luengos",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro Labrador"
+      },
+      {
+       "date": "2026-05-19",
+       "name": "Santiago el Menor"
+      }
+     ]
+    },
+    {
+     "name": "Malillos",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro Labrador"
+      },
+      {
+       "date": "2026-07-24",
+       "name": "Santiago Apóstol"
+      }
+     ]
+    },
+    {
+     "name": "Reliegos",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro Labrador"
+      },
+      {
+       "date": "2026-09-16",
+       "name": "San Cornelio"
+      }
+     ]
+    },
+    {
+     "name": "Valdearcos",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro Labrador"
+      },
+      {
+       "date": "2026-10-06",
+       "name": "San Francisco"
+      }
+     ]
+    },
+    {
+     "name": "Villamarco",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro Labrador"
+      },
+      {
+       "date": "2026-12-09",
+       "name": "Inmaculada Concepción"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos. 'Para todo el municipio' days are included for every locality."
+  },
+  "24161": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Carnaval"
+    },
+    {
+     "date": "2026-07-24",
+     "name": "Santiago Apóstol"
+    }
+   ]
+  },
+  "24162": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    },
+    {
+     "date": "2026-10-05",
+     "name": "San Froilán"
+    }
+   ]
+  },
+  "24163": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    },
+    {
+     "date": "2026-10-05",
+     "name": "San Froilán"
+    }
+   ]
+  },
+  "24164": {
+   "holidays": [
+    {
+     "date": "2026-06-12",
+     "name": ""
+    },
+    {
+     "date": "2026-11-11",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Albegas de Luna",
+     "holidays": [
+      {
+       "date": "2026-08-17",
+       "name": ""
+      },
+      {
+       "date": "2026-08-18",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Aralla de Luna",
+     "holidays": [
+      {
+       "date": "2026-06-12",
+       "name": ""
+      },
+      {
+       "date": "2026-09-08",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Caldas de Luna",
+     "holidays": [
+      {
+       "date": "2026-07-16",
+       "name": ""
+      },
+      {
+       "date": "2026-07-17",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Pobladura de Luna",
+     "holidays": [
+      {
+       "date": "2026-01-20",
+       "name": ""
+      },
+      {
+       "date": "2026-01-21",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Rabanal de Luna",
+     "holidays": [
+      {
+       "date": "2026-08-13",
+       "name": ""
+      },
+      {
+       "date": "2026-08-14",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Robledo de Caldas",
+     "holidays": [
+      {
+       "date": "2026-08-06",
+       "name": ""
+      },
+      {
+       "date": "2026-08-31",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "La Vega de Robledo",
+     "holidays": [
+      {
+       "date": "2026-08-17",
+       "name": ""
+      },
+      {
+       "date": "2026-12-14",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24165": {
+   "holidays": [
+    {
+     "date": "2026-07-17",
+     "name": "La Virgen del Carmen"
+    },
+    {
+     "date": "2026-09-07",
+     "name": "La Virgen de La Encina"
+    }
+   ]
+  },
+  "24166": {
+   "holidays": [
+    {
+     "date": "2026-05-11",
+     "name": "Aparición de Miguel"
+    },
+    {
+     "date": "2026-09-28",
+     "name": "San Miguel Arcángel"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Alcaidón",
+     "holidays": [
+      {
+       "date": "2026-05-11",
+       "name": "Aparición de Miguel"
+      },
+      {
+       "date": "2026-09-28",
+       "name": "San Miguel Arcángel"
+      }
+     ]
+    },
+    {
+     "name": "Huerga de Garaballes",
+     "holidays": [
+      {
+       "date": "2026-06-15",
+       "name": "Sagrado Corazón"
+      },
+      {
+       "date": "2026-11-30",
+       "name": "San Andrés"
+      }
+     ]
+    },
+    {
+     "name": "Oteruelo de la Vega",
+     "holidays": [
+      {
+       "date": "2026-02-03",
+       "name": "San Blas"
+      },
+      {
+       "date": "2026-04-13",
+       "name": "Santo Toribio"
+      }
+     ]
+    },
+    {
+     "name": "Requejo de la Vega",
+     "holidays": [
+      {
+       "date": "2026-06-08",
+       "name": "Corpus Christi"
+      },
+      {
+       "date": "2026-09-21",
+       "name": "Bendito Cristo"
+      }
+     ]
+    },
+    {
+     "name": "Santa Colomba de la Vega",
+     "holidays": [
+      {
+       "date": "2026-07-06",
+       "name": "Sacramental"
+      },
+      {
+       "date": "2026-09-21",
+       "name": "Santa Colomba"
+      }
+     ]
+    },
+    {
+     "name": "Vecilla de la Vega",
+     "holidays": [
+      {
+       "date": "2026-10-05",
+       "name": "Nuestra Señora del Rosario"
+      },
+      {
+       "date": "2026-12-26",
+       "name": "San Esteban"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24167": {
+   "holidays": [
+    {
+     "date": "2026-06-05",
+     "name": "festividad del Corpus"
+    },
+    {
+     "date": "2026-12-09",
+     "name": "La Inmaculada"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Bobia",
+     "holidays": [
+      {
+       "date": "2026-06-05",
+       "name": "festividad del Corpus"
+      },
+      {
+       "date": "2026-09-29",
+       "name": "San Miguel Arcángel"
+      }
+     ]
+    },
+    {
+     "name": "Camposalinas",
+     "holidays": [
+      {
+       "date": "2026-01-07",
+       "name": "San Juliano"
+      },
+      {
+       "date": "2026-06-05",
+       "name": "festividad del Corpus"
+      }
+     ]
+    },
+    {
+     "name": "Canales-La Magdalena",
+     "holidays": [
+      {
+       "date": "2026-06-05",
+       "name": "festividad del Corpus"
+      },
+      {
+       "date": "2026-07-22",
+       "name": "La Magdalena"
+      }
+     ]
+    },
+    {
+     "name": "Carrizal de Luna",
+     "holidays": [
+      {
+       "date": "2026-06-05",
+       "name": "festividad del Corpus"
+      },
+      {
+       "date": "2026-12-14",
+       "name": "Santa Lucía"
+      }
+     ]
+    },
+    {
+     "name": "Garaño",
+     "holidays": [
+      {
+       "date": "2026-01-28",
+       "name": "Santo Tirso"
+      },
+      {
+       "date": "2026-06-05",
+       "name": "festividad del Corpus"
+      }
+     ]
+    },
+    {
+     "name": "Irián",
+     "holidays": [
+      {
+       "date": "2026-02-03",
+       "name": "San Blas"
+      },
+      {
+       "date": "2026-06-05",
+       "name": "festividad del Corpus"
+      }
+     ]
+    },
+    {
+     "name": "Lago de Omaña",
+     "holidays": [
+      {
+       "date": "2026-06-05",
+       "name": "festividad del Corpus"
+      },
+      {
+       "date": "2026-08-24",
+       "name": "San Bartolomé"
+      }
+     ]
+    },
+    {
+     "name": "Quintanilla",
+     "holidays": [
+      {
+       "date": "2026-06-05",
+       "name": "festividad del Corpus"
+      },
+      {
+       "date": "2026-08-05",
+       "name": "Nuestra Señora de las Nieves"
+      }
+     ]
+    },
+    {
+     "name": "Santovenia San Marcos",
+     "holidays": [
+      {
+       "date": "2026-06-05",
+       "name": "festividad del Corpus"
+      },
+      {
+       "date": "2026-08-10",
+       "name": "San Lorenzo"
+      }
+     ]
+    },
+    {
+     "name": "Villaceid",
+     "holidays": [
+      {
+       "date": "2026-06-05",
+       "name": "festividad del Corpus"
+      },
+      {
+       "date": "2026-09-16",
+       "name": "San Cipriano"
+      }
+     ]
+    },
+    {
+     "name": "Villayuste",
+     "holidays": [
+      {
+       "date": "2026-06-05",
+       "name": "festividad del Corpus"
+      },
+      {
+       "date": "2026-08-17",
+       "name": "San Roque"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos. 'Para todo el municipio' days are included for every locality."
+  },
+  "24168": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2026-09-21",
+     "name": "El Cristo"
+    }
+   ]
+  },
+  "24169": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "San Juan Bautista"
+    },
+    {
+     "date": "2026-12-04",
+     "name": "Santa Bárbara"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Librán",
+     "holidays": [
+      {
+       "date": "2026-07-25",
+       "name": "Santiago Apóstol"
+      },
+      {
+       "date": "2026-12-04",
+       "name": "Santa Bárbara"
+      }
+     ]
+    },
+    {
+     "name": "Matarrosa del Sil",
+     "holidays": [
+      {
+       "date": "2026-05-08",
+       "name": "San Miguel Arcángel"
+      },
+      {
+       "date": "2026-12-04",
+       "name": "Santa Bárbara"
+      }
+     ]
+    },
+    {
+     "name": "Pardamaza",
+     "holidays": [
+      {
+       "date": "2026-08-17",
+       "name": "San Roque"
+      },
+      {
+       "date": "2026-12-04",
+       "name": "Santa Bárbara"
+      }
+     ]
+    },
+    {
+     "name": "Pradilla",
+     "holidays": [
+      {
+       "date": "2026-07-22",
+       "name": "La Magdalena"
+      },
+      {
+       "date": "2026-12-04",
+       "name": "Santa Bárbara"
+      }
+     ]
+    },
+    {
+     "name": "San Pedro Mallo",
+     "holidays": [
+      {
+       "date": "2026-06-30",
+       "name": "San Pedro Apóstol"
+      },
+      {
+       "date": "2026-12-04",
+       "name": "Santa Bárbara"
+      }
+     ]
+    },
+    {
+     "name": "Santa Leocadia del Sil",
+     "holidays": [
+      {
+       "date": "2026-09-15",
+       "name": "Santo Cristo"
+      },
+      {
+       "date": "2026-12-04",
+       "name": "Santa Bárbara"
+      }
+     ]
+    },
+    {
+     "name": "Santa Marina del Sil",
+     "holidays": [
+      {
+       "date": "2026-07-18",
+       "name": "Santa Marina"
+      },
+      {
+       "date": "2026-12-04",
+       "name": "Santa Bárbara"
+      }
+     ]
+    },
+    {
+     "name": "Tombrio de Abajo",
+     "holidays": [
+      {
+       "date": "2026-08-08",
+       "name": "Santo Domingo"
+      },
+      {
+       "date": "2026-12-04",
+       "name": "Santa Bárbara"
+      }
+     ]
+    },
+    {
+     "name": "Tombrio de Arriba",
+     "holidays": [
+      {
+       "date": "2026-07-25",
+       "name": "Santiago Apóstol"
+      },
+      {
+       "date": "2026-12-04",
+       "name": "Santa Bárbara"
+      }
+     ]
+    },
+    {
+     "name": "Valdelaloba",
+     "holidays": [
+      {
+       "date": "2026-08-07",
+       "name": "San Mamés"
+      },
+      {
+       "date": "2026-12-04",
+       "name": "Santa Bárbara"
+      }
+     ]
+    },
+    {
+     "name": "Villar de las Traviesas",
+     "holidays": [
+      {
+       "date": "2026-07-25",
+       "name": "Santiago Apóstol"
+      },
+      {
+       "date": "2026-12-04",
+       "name": "Santa Bárbara"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos. 'Para todo el municipio' days are included for every locality."
+  },
+  "24170": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": ""
+    },
+    {
+     "date": "2026-12-04",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Albares de la Ribera",
+     "holidays": [
+      {
+       "date": "2026-06-13",
+       "name": ""
+      },
+      {
+       "date": "2026-12-04",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "La Granja de San Vicente",
+     "holidays": [
+      {
+       "date": "2026-07-10",
+       "name": ""
+      },
+      {
+       "date": "2026-12-04",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Las Ventas de Albares",
+     "holidays": [
+      {
+       "date": "2026-08-05",
+       "name": ""
+      },
+      {
+       "date": "2026-12-04",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Matavenero-Poibueno",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      },
+      {
+       "date": "2026-09-25",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "San Andrés de las Puentes",
+     "holidays": [
+      {
+       "date": "2026-11-30",
+       "name": ""
+      },
+      {
+       "date": "2026-12-04",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "San Facundo",
+     "holidays": [
+      {
+       "date": "2026-06-05",
+       "name": ""
+      },
+      {
+       "date": "2026-07-24",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Santa Cruz de Montes",
+     "holidays": [
+      {
+       "date": "2026-07-03",
+       "name": ""
+      },
+      {
+       "date": "2026-12-04",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Santa Marina de Torre",
+     "holidays": [
+      {
+       "date": "2026-07-18",
+       "name": ""
+      },
+      {
+       "date": "2026-12-04",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Tremor de Abajo",
+     "holidays": [
+      {
+       "date": "2026-08-21",
+       "name": ""
+      },
+      {
+       "date": "2026-08-22",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24171": {
+   "holidays": [
+    {
+     "date": "2026-01-28",
+     "name": "Santo Tirso"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Virgen de la Encina"
+    }
+   ]
+  },
+  "24172": {
+   "holidays": [
+    {
+     "date": "2026-01-05",
+     "name": ""
+    },
+    {
+     "date": "2026-04-24",
+     "name": ""
+    }
+   ]
+  },
+  "24173": {
+   "holidays": [
+    {
+     "date": "2026-07-27",
+     "name": "traslado Santa Cristina"
+    },
+    {
+     "date": "2026-08-24",
+     "name": "traslado Natividad de la Virgen María"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Armellada",
+     "holidays": [
+      {
+       "date": "2026-01-23",
+       "name": "traslado de Los Mártires"
+      },
+      {
+       "date": "2026-08-14",
+       "name": "traslado de Ntra. Señora de la Asunción"
+      }
+     ]
+    },
+    {
+     "name": "Gavilanes de Órbigo",
+     "holidays": [
+      {
+       "date": "2026-01-24",
+       "name": "traslado San Tirso"
+      },
+      {
+       "date": "2026-07-04",
+       "name": "traslado de Fiesta Sacramental"
+      }
+     ]
+    },
+    {
+     "name": "Palazuelo de Órbigo",
+     "holidays": [
+      {
+       "date": "2026-02-02",
+       "name": "Las Candelas"
+      },
+      {
+       "date": "2026-07-24",
+       "name": "traslado de Fiesta Sacramental"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24174": {
+   "holidays": [
+    {
+     "date": "2026-01-17",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2026-09-19",
+     "name": "San Cipriano"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Mansilla del Páramo",
+     "holidays": [
+      {
+       "date": "2026-06-06",
+       "name": "Octava del Corpus Christi"
+      },
+      {
+       "date": "2026-11-14",
+       "name": "San Martín"
+      }
+     ]
+    },
+    {
+     "name": "Villarrín del Páramo",
+     "holidays": [
+      {
+       "date": "2026-09-25",
+       "name": "San Miguel"
+      },
+      {
+       "date": "2026-09-26",
+       "name": "San Miguel"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24175": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    },
+    {
+     "date": "2026-10-05",
+     "name": "San Froilán"
+    }
+   ]
+  },
+  "24176": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    },
+    {
+     "date": "2026-12-27",
+     "name": "San Juan Apóstol"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Azares del Páramo",
+     "holidays": [
+      {
+       "date": "2026-05-29",
+       "name": "La Ascensión"
+      },
+      {
+       "date": "2026-05-30",
+       "name": "La Ascensión"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24177": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro Labrador"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "Exhaltación de la Santa Cruz, “El Cristo”"
+    }
+   ]
+  },
+  "24179": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": ""
+    },
+    {
+     "date": "2026-08-10",
+     "name": ""
+    }
+   ]
+  },
+  "24180": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro Labrador"
+    },
+    {
+     "date": "2026-06-15",
+     "name": "8ª del Corpus Christi"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "La Aldea del Puente",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro Labrador"
+      },
+      {
+       "date": "2026-07-02",
+       "name": "La Visitación"
+      }
+     ]
+    },
+    {
+     "name": "Quintana del Monte",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro Labrador"
+      },
+      {
+       "date": "2026-09-14",
+       "name": "La Santa Cruz"
+      }
+     ]
+    },
+    {
+     "name": "Quintana de Rueda",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro Labrador"
+      },
+      {
+       "date": "2026-06-05",
+       "name": "Corpus Christi"
+      }
+     ]
+    },
+    {
+     "name": "Sahelices del Payuelo",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro Labrador"
+      },
+      {
+       "date": "2026-06-01",
+       "name": "Santísima Trinidad"
+      }
+     ]
+    },
+    {
+     "name": "Villahibiera",
+     "holidays": [
+      {
+       "date": "2026-01-28",
+       "name": "Santo Tirso"
+      },
+      {
+       "date": "2026-09-25",
+       "name": "Santa Eugenia"
+      }
+     ]
+    },
+    {
+     "name": "Villalquite",
+     "holidays": [
+      {
+       "date": "2026-01-17",
+       "name": "San Antonio Abad"
+      },
+      {
+       "date": "2026-08-17",
+       "name": "La Asunción"
+      }
+     ]
+    },
+    {
+     "name": "Villamondrín de Rueda",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro Labrador"
+      },
+      {
+       "date": "2026-06-29",
+       "name": "San Pedro"
+      }
+     ]
+    },
+    {
+     "name": "Villaverde de la Chiquita",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro Labrador"
+      },
+      {
+       "date": "2026-09-29",
+       "name": "San Miguel"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24182": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-07-22",
+     "name": ""
+    }
+   ]
+  },
+  "24183": {
+   "holidays": [
+    {
+     "date": "2026-08-06",
+     "name": ""
+    },
+    {
+     "date": "2026-09-08",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Caminayo",
+     "holidays": [
+      {
+       "date": "2026-06-30",
+       "name": ""
+      },
+      {
+       "date": "2026-08-12",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Carrizal",
+     "holidays": [
+      {
+       "date": "2026-05-08",
+       "name": ""
+      },
+      {
+       "date": "2026-06-04",
+       "name": "Corpus Christi"
+      }
+     ]
+    },
+    {
+     "name": "Cegoñal",
+     "holidays": [
+      {
+       "date": "2026-01-07",
+       "name": ""
+      },
+      {
+       "date": "2026-09-12",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Morgovejo",
+     "holidays": [
+      {
+       "date": "2026-05-25",
+       "name": ""
+      },
+      {
+       "date": "2026-08-10",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Puente Almuhey",
+     "holidays": [
+      {
+       "date": "2026-07-31",
+       "name": ""
+      },
+      {
+       "date": "2026-09-15",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Soto de Valderrueda",
+     "holidays": [
+      {
+       "date": "2026-08-28",
+       "name": ""
+      },
+      {
+       "date": "2026-08-29",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Taranilla",
+     "holidays": [
+      {
+       "date": "2026-07-24",
+       "name": ""
+      },
+      {
+       "date": "2026-07-25",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Resto de las localidades del municipio",
+     "holidays": [
+      {
+       "date": "2026-07-31",
+       "name": ""
+      },
+      {
+       "date": "2026-08-06",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24184": {
+   "holidays": [
+    {
+     "date": "2026-06-24",
+     "name": "San Juan"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Ntra. Sra. de las Angustias"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "La Utrera",
+     "holidays": [
+      {
+       "date": "2026-07-17",
+       "name": "Santa Marina"
+      },
+      {
+       "date": "2026-07-20",
+       "name": "Santa Marina"
+      }
+     ]
+    },
+    {
+     "name": "Murias de Ponjos",
+     "holidays": [
+      {
+       "date": "2026-02-03",
+       "name": "Las Candelas"
+      },
+      {
+       "date": "2026-06-12",
+       "name": "Octava del Corpus"
+      }
+     ]
+    },
+    {
+     "name": "Paladín",
+     "holidays": [
+      {
+       "date": "2026-06-27",
+       "name": "San Pedro"
+      },
+      {
+       "date": "2026-06-29",
+       "name": "San Pedro"
+      }
+     ]
+    },
+    {
+     "name": "Ponjos",
+     "holidays": [
+      {
+       "date": "2026-01-19",
+       "name": "San Antón"
+      },
+      {
+       "date": "2026-06-13",
+       "name": "San Antonio"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24185": {
+   "holidays": [
+    {
+     "date": "2026-06-01",
+     "name": ""
+    },
+    {
+     "date": "2026-09-07",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Lagunas de Somoza",
+     "holidays": [
+      {
+       "date": "2026-05-30",
+       "name": ""
+      },
+      {
+       "date": "2026-08-17",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Val de San Román",
+     "holidays": [
+      {
+       "date": "2026-04-25",
+       "name": ""
+      },
+      {
+       "date": "2026-11-18",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24187": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2026-08-11",
+     "name": "Posterior a San Lorenzo"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Fontecha del Páramo",
+     "holidays": [
+      {
+       "date": "2026-06-23",
+       "name": "Corpus"
+      },
+      {
+       "date": "2026-12-15",
+       "name": "Posterior Santa Lucía"
+      }
+     ]
+    },
+    {
+     "name": "Palacios de Fontecha",
+     "holidays": [
+      {
+       "date": "2026-01-13",
+       "name": "Anterior San Antón"
+      },
+      {
+       "date": "2026-06-16",
+       "name": "San Adrián"
+      }
+     ]
+    },
+    {
+     "name": "Pobladura de Fontecha",
+     "holidays": [
+      {
+       "date": "2026-01-07",
+       "name": "Posterior a Epifanía"
+      },
+      {
+       "date": "2026-07-18",
+       "name": "Santa Marina"
+      }
+     ]
+    },
+    {
+     "name": "Vallejo",
+     "holidays": [
+      {
+       "date": "2026-07-25",
+       "name": "Santiago"
+      },
+      {
+       "date": "2026-12-30",
+       "name": "Santiago"
+      }
+     ]
+    },
+    {
+     "name": "Villagallegos",
+     "holidays": [
+      {
+       "date": "2026-06-26",
+       "name": "San Pelayo"
+      },
+      {
+       "date": "2026-08-18",
+       "name": "Posterior a San Roque"
+      }
+     ]
+    },
+    {
+     "name": "Villibañe",
+     "holidays": [
+      {
+       "date": "2026-05-05",
+       "name": "San Isidoro"
+      },
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24188": {
+   "holidays": [
+    {
+     "date": "2026-09-08",
+     "name": "Ntra. Sra. del Castillo Viejo"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "Bendito Cristo de Santa Marina"
+    }
+   ]
+  },
+  "24193": {
+   "holidays": [
+    {
+     "date": "2026-01-28",
+     "name": "San Tirso"
+    },
+    {
+     "date": "2026-06-08",
+     "name": "El Corpus"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Campohermoso",
+     "holidays": [
+      {
+       "date": "2026-01-07",
+       "name": "San Julián"
+      },
+      {
+       "date": "2026-07-25",
+       "name": "Santiago"
+      }
+     ]
+    },
+    {
+     "name": "La Cándana de Curueño",
+     "holidays": [
+      {
+       "date": "2026-08-07",
+       "name": ""
+      },
+      {
+       "date": "2026-12-14",
+       "name": "Santa Lucía"
+      }
+     ]
+    },
+    {
+     "name": "Sopeña de Curueño",
+     "holidays": [
+      {
+       "date": "2026-01-19",
+       "name": "Los Mártires"
+      },
+      {
+       "date": "2026-09-08",
+       "name": "La Natividad de la Virgen"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24194": {
+   "holidays": [
+    {
+     "date": "2026-08-05",
+     "name": ""
+    },
+    {
+     "date": "2026-11-09",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Coladilla",
+     "holidays": [
+      {
+       "date": "2026-07-03",
+       "name": ""
+      },
+      {
+       "date": "2026-11-09",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Valle de Vegacervera",
+     "holidays": [
+      {
+       "date": "2026-07-24",
+       "name": ""
+      },
+      {
+       "date": "2026-11-09",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Valporquero",
+     "holidays": [
+      {
+       "date": "2026-08-14",
+       "name": ""
+      },
+      {
+       "date": "2026-11-09",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Villar del Puerto",
+     "holidays": [
+      {
+       "date": "2026-09-07",
+       "name": ""
+      },
+      {
+       "date": "2026-11-09",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos. 'Para todo el municipio' days are included for every locality."
+  },
+  "24196": {
+   "holidays": [
+    {
+     "date": "2026-07-16",
+     "name": "Nuestra Sra. del Carmen"
+    },
+    {
+     "date": "2026-11-30",
+     "name": "San Andrés"
+    }
+   ]
+  },
+  "24197": {
+   "holidays": [
+    {
+     "date": "2026-01-16",
+     "name": ""
+    },
+    {
+     "date": "2026-08-05",
+     "name": ""
+    }
+   ]
+  },
+  "24199": {
+   "holidays": [
+    {
+     "date": "2026-08-13",
+     "name": "Nuestra Señora de la Asunción"
+    },
+    {
+     "date": "2026-08-14",
+     "name": "Nuestra Señora de la Asunción"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Candanedo de Boñar",
+     "holidays": [
+      {
+       "date": "2026-01-22",
+       "name": "San Vicente"
+      },
+      {
+       "date": "2026-07-27",
+       "name": "Santa Ana"
+      }
+     ]
+    },
+    {
+     "name": "La Mata de la Riba",
+     "holidays": [
+      {
+       "date": "2026-02-03",
+       "name": "San Blas"
+      },
+      {
+       "date": "2026-08-06",
+       "name": "San Justo y Pastor"
+      }
+     ]
+    },
+    {
+     "name": "La Devesa de Boñar",
+     "holidays": [
+      {
+       "date": "2026-07-16",
+       "name": "Nuestra Sra. del Carmen"
+      },
+      {
+       "date": "2026-10-07",
+       "name": "Ntra. Sra. del Rosario"
+      }
+     ]
+    },
+    {
+     "name": "La Losilla y San Adrián",
+     "holidays": [
+      {
+       "date": "2026-03-05",
+       "name": "San Adrián"
+      },
+      {
+       "date": "2026-09-08",
+       "name": "Natividad de Ntra. Sra"
+      }
+     ]
+    },
+    {
+     "name": "Llamera",
+     "holidays": [
+      {
+       "date": "2026-02-05",
+       "name": "Santa Águeda"
+      },
+      {
+       "date": "2026-09-21",
+       "name": "Ntra. Sra. de la Zarza"
+      }
+     ]
+    },
+    {
+     "name": "Lugán",
+     "holidays": [
+      {
+       "date": "2026-01-28",
+       "name": "Santo Tirso"
+      },
+      {
+       "date": "2026-10-07",
+       "name": "Ntra. Sra. del Rosario"
+      }
+     ]
+    },
+    {
+     "name": "Palazuelo de Boñar",
+     "holidays": [
+      {
+       "date": "2026-01-31",
+       "name": "Santa Eugenia"
+      },
+      {
+       "date": "2026-09-14",
+       "name": "El Cristo"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24201": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2026-10-05",
+     "name": "San Froilán"
+    }
+   ]
+  },
+  "24202": {
+   "holidays": [
+    {
+     "date": "2026-08-17",
+     "name": "San Roque"
+    },
+    {
+     "date": "2026-12-04",
+     "name": "Santa Bárbara"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Caboalles de Abajo",
+     "holidays": [
+      {
+       "date": "2026-08-24",
+       "name": "San Bartolomé"
+      },
+      {
+       "date": "2026-12-04",
+       "name": "Santa Bárbara"
+      }
+     ]
+    },
+    {
+     "name": "Caboalles de Arriba",
+     "holidays": [
+      {
+       "date": "2026-07-25",
+       "name": "Santiago Apóstol"
+      },
+      {
+       "date": "2026-12-04",
+       "name": "Santa Bárbara"
+      }
+     ]
+    },
+    {
+     "name": "El Villar de Santiago",
+     "holidays": [
+      {
+       "date": "2026-07-25",
+       "name": "Santiago Apóstol"
+      },
+      {
+       "date": "2026-12-04",
+       "name": "Santa Bárbara"
+      }
+     ]
+    },
+    {
+     "name": "Llamas de Laciana",
+     "holidays": [
+      {
+       "date": "2026-09-08",
+       "name": "La Virgen del Oteiro"
+      },
+      {
+       "date": "2026-12-04",
+       "name": "Santa Bárbara"
+      }
+     ]
+    },
+    {
+     "name": "Lumajo",
+     "holidays": [
+      {
+       "date": "2026-07-22",
+       "name": "La Magdalena"
+      },
+      {
+       "date": "2026-12-04",
+       "name": "Santa Bárbara"
+      }
+     ]
+    },
+    {
+     "name": "Orallo",
+     "holidays": [
+      {
+       "date": "2026-07-18",
+       "name": "Santa Marina"
+      },
+      {
+       "date": "2026-12-04",
+       "name": "Santa Bárbara"
+      }
+     ]
+    },
+    {
+     "name": "Rabanal de Abajo",
+     "holidays": [
+      {
+       "date": "2026-09-08",
+       "name": "La Virgen del Oteiro"
+      },
+      {
+       "date": "2026-12-04",
+       "name": "Santa Bárbara"
+      }
+     ]
+    },
+    {
+     "name": "Rabanal de Arriba",
+     "holidays": [
+      {
+       "date": "2026-09-08",
+       "name": "La Virgen del Oteiro"
+      },
+      {
+       "date": "2026-12-04",
+       "name": "Santa Bárbara"
+      }
+     ]
+    },
+    {
+     "name": "Rioscuro",
+     "holidays": [
+      {
+       "date": "2026-06-26",
+       "name": "San Pelayo"
+      },
+      {
+       "date": "2026-12-04",
+       "name": "Santa Bárbara"
+      }
+     ]
+    },
+    {
+     "name": "Robles de Laciana",
+     "holidays": [
+      {
+       "date": "2026-01-08",
+       "name": "San Julián"
+      },
+      {
+       "date": "2026-12-04",
+       "name": "Santa Bárbara"
+      }
+     ]
+    },
+    {
+     "name": "Sosas de Laciana",
+     "holidays": [
+      {
+       "date": "2026-11-30",
+       "name": "San Andrés"
+      },
+      {
+       "date": "2026-12-04",
+       "name": "Santa Bárbara"
+      }
+     ]
+    },
+    {
+     "name": "Villager de Laciana",
+     "holidays": [
+      {
+       "date": "2026-08-10",
+       "name": "San Lorenzo"
+      },
+      {
+       "date": "2026-12-04",
+       "name": "Santa Bárbara"
+      }
+     ]
+    },
+    {
+     "name": "Villaseca",
+     "holidays": [
+      {
+       "date": "2026-06-29",
+       "name": "San Pedro"
+      },
+      {
+       "date": "2026-12-04",
+       "name": "Santa Bárbara"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos. 'Para todo el municipio' days are included for every locality."
+  },
+  "24209": {
+   "holidays": [
+    {
+     "date": "2026-01-28",
+     "name": "Santo Tirso"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "Santísimo Cristo de la Esperanza, Patrón de Villafranca y del Bierzo"
+    }
+   ]
+  },
+  "24210": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro Labrador"
+    },
+    {
+     "date": "2026-12-04",
+     "name": "Santa Bárbara"
+    }
+   ]
+  },
+  "24211": {
+   "holidays": [
+    {
+     "date": "2026-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Villarrabines",
+     "holidays": [
+      {
+       "date": "2026-05-08",
+       "name": "San Miguel"
+      },
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos. 'Para todo el municipio' days are included for every locality."
+  },
+  "24212": {
+   "holidays": [
+    {
+     "date": "2026-09-07",
+     "name": "Nuestra Señora de la Zarza"
+    },
+    {
+     "date": "2026-09-08",
+     "name": "Nuestra Señora de la Zarza"
+    }
+   ]
+  },
+  "24213": {
+   "holidays": [
+    {
+     "date": "2026-06-02",
+     "name": "San Erasmo"
+    },
+    {
+     "date": "2026-09-14",
+     "name": ": Dulce nombre de María"
+    }
+   ]
+  },
+  "24214": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "Bto. Cristo de Fontoria"
+    }
+   ]
+  },
+  "24215": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro Labrador"
+    },
+    {
+     "date": "2026-08-03",
+     "name": "San Esteban"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Villacalabuey",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro Labrador"
+      },
+      {
+       "date": "2026-09-29",
+       "name": "San Miguel"
+      }
+     ]
+    },
+    {
+     "name": "Villapeceñil",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro Labrador"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos. 'Para todo el municipio' days are included for every locality."
+  },
+  "24216": {
+   "holidays": [
+    {
+     "date": "2026-02-09",
+     "name": "Santa Águeda"
+    },
+    {
+     "date": "2026-09-14",
+     "name": "fiesta Sacramental"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Fresno",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "Ascensión del Señor"
+      },
+      {
+       "date": "2026-08-03",
+       "name": "fiesta patronal del Santísimo Salvador"
+      }
+     ]
+    },
+    {
+     "name": "Miñambres",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "Ascensión del Señor"
+      },
+      {
+       "date": "2026-07-24",
+       "name": "Santiago Apóstol"
+      }
+     ]
+    },
+    {
+     "name": "Posada",
+     "holidays": [
+      {
+       "date": "2026-04-20",
+       "name": "San Isidoro"
+      },
+      {
+       "date": "2026-10-05",
+       "name": "fiesta Sacramental"
+      }
+     ]
+    },
+    {
+     "name": "Redelga",
+     "holidays": [
+      {
+       "date": "2026-02-28",
+       "name": "San Tirso"
+      },
+      {
+       "date": "2026-09-28",
+       "name": "fiesta Sacramental"
+      }
+     ]
+    },
+    {
+     "name": "Valle",
+     "holidays": [
+      {
+       "date": "2026-02-27",
+       "name": "San Félix"
+      },
+      {
+       "date": "2026-09-07",
+       "name": "fiesta Sacramental"
+      }
+     ]
+    },
+    {
+     "name": "Villalís",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "fiesta del Cristo"
+      },
+      {
+       "date": "2026-08-24",
+       "name": "Nuestra Señora de la Asunción"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24218": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-08-28",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Palanquinos",
+     "holidays": [
+      {
+       "date": "2026-04-06",
+       "name": ""
+      },
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Riego del Monte",
+     "holidays": [
+      {
+       "date": "2026-05-04",
+       "name": ""
+      },
+      {
+       "date": "2026-05-15",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Villacelama",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      },
+      {
+       "date": "2026-08-17",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos. 'Para todo el municipio' days are included for every locality."
+  },
+  "24219": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-09-07",
+     "name": ""
+    }
+   ]
+  },
+  "24221": {
+   "holidays": [
+    {
+     "date": "2026-04-27",
+     "name": ""
+    },
+    {
+     "date": "2026-09-14",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Villafer",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      },
+      {
+       "date": "2026-08-14",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24222": {
+   "holidays": [
+    {
+     "date": "2026-07-22",
+     "name": ""
+    },
+    {
+     "date": "2026-10-05",
+     "name": ""
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Canaleja de Torío",
+     "holidays": [
+      {
+       "date": "2026-09-26",
+       "name": ""
+      },
+      {
+       "date": "2026-10-05",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Castrillino",
+     "holidays": [
+      {
+       "date": "2026-09-29",
+       "name": ""
+      },
+      {
+       "date": "2026-10-05",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Navatejera",
+     "holidays": [
+      {
+       "date": "2026-05-08",
+       "name": ""
+      },
+      {
+       "date": "2026-10-05",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Robledo de Torío",
+     "holidays": [
+      {
+       "date": "2026-08-17",
+       "name": ""
+      },
+      {
+       "date": "2026-10-05",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Villamoros de las Regueras",
+     "holidays": [
+      {
+       "date": "2026-07-25",
+       "name": ""
+      },
+      {
+       "date": "2026-10-05",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Villanueva del Árbol",
+     "holidays": [
+      {
+       "date": "2026-06-26",
+       "name": ""
+      },
+      {
+       "date": "2026-10-05",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Villaobispo de las Regueras",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": ""
+      },
+      {
+       "date": "2026-10-05",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Villarrodrigo de las Regueras",
+     "holidays": [
+      {
+       "date": "2026-09-08",
+       "name": ""
+      },
+      {
+       "date": "2026-10-05",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Villasinta de Torío",
+     "holidays": [
+      {
+       "date": "2026-08-17",
+       "name": ""
+      },
+      {
+       "date": "2026-10-05",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos. 'Para todo el municipio' days are included for every locality."
+  },
+  "24223": {
+   "holidays": [
+    {
+     "date": "2026-06-15",
+     "name": ""
+    },
+    {
+     "date": "2026-07-20",
+     "name": ""
+    }
+   ]
+  },
+  "24225": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": ""
+    },
+    {
+     "date": "2026-06-24",
+     "name": ""
+    }
+   ]
+  },
+  "24226": {
+   "holidays": [
+    {
+     "date": "2026-11-27",
+     "name": "San Facundo y San Primitivo"
+    },
+    {
+     "date": "2026-11-28",
+     "name": "San Facundo y San Primitivo"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Arcayos",
+     "holidays": [
+      {
+       "date": "2026-09-05",
+       "name": "San Justiniano"
+      },
+      {
+       "date": "2026-09-07",
+       "name": "San Justiniano"
+      }
+     ]
+    },
+    {
+     "name": "Castroañe",
+     "holidays": [
+      {
+       "date": "2026-11-18",
+       "name": "San Román y San Andrés"
+      },
+      {
+       "date": "2026-11-30",
+       "name": "San Román y San Andrés"
+      }
+     ]
+    },
+    {
+     "name": "Santa María del Río",
+     "holidays": [
+      {
+       "date": "2026-09-08",
+       "name": "Nuestra Señora"
+      },
+      {
+       "date": "2026-09-09",
+       "name": "Nuestra Señora"
+      }
+     ]
+    },
+    {
+     "name": "Valdavida",
+     "holidays": [
+      {
+       "date": "2026-01-09",
+       "name": "San Julián"
+      },
+      {
+       "date": "2026-10-01",
+       "name": "Nuestra Señora del Rosario"
+      }
+     ]
+    },
+    {
+     "name": "Villacerán",
+     "holidays": [
+      {
+       "date": "2026-08-06",
+       "name": "El Salvador"
+      },
+      {
+       "date": "2026-08-07",
+       "name": "El Salvador"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24227": {
+   "holidays": [
+    {
+     "date": "2026-02-02",
+     "name": "Las Candelas"
+    },
+    {
+     "date": "2026-10-19",
+     "name": "San Pedro de Alcántara"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "Alija de la Ribera",
+     "holidays": [
+      {
+       "date": "2026-01-09",
+       "name": "San Juliano"
+      },
+      {
+       "date": "2026-05-25",
+       "name": "La Enramada"
+      }
+     ]
+    },
+    {
+     "name": "Castrillo de la Ribera",
+     "holidays": [
+      {
+       "date": "2026-06-15",
+       "name": "Sagrado Corazón"
+      },
+      {
+       "date": "2026-12-30",
+       "name": "Santiago el Mayor"
+      }
+     ]
+    },
+    {
+     "name": "Mancilleros",
+     "holidays": [
+      {
+       "date": "2026-07-24",
+       "name": "Santiago Apóstol"
+      },
+      {
+       "date": "2026-07-27",
+       "name": "Santiago Apóstol"
+      }
+     ]
+    },
+    {
+     "name": "Marialba de la Ribera",
+     "holidays": [
+      {
+       "date": "2026-06-01",
+       "name": "El Hábeas"
+      },
+      {
+       "date": "2026-12-28",
+       "name": "San Juan Apóstol"
+      }
+     ]
+    },
+    {
+     "name": "Marne",
+     "holidays": [
+      {
+       "date": "2026-06-15",
+       "name": "La Octava del Hábeas"
+      },
+      {
+       "date": "2026-08-05",
+       "name": "Nuestra Señora de las Nieves"
+      }
+     ]
+    },
+    {
+     "name": "Puente Villarente",
+     "holidays": [
+      {
+       "date": "2026-07-06",
+       "name": "San Pelayo"
+      },
+      {
+       "date": "2026-09-14",
+       "name": "La Cruz"
+      }
+     ]
+    },
+    {
+     "name": "Roderos",
+     "holidays": [
+      {
+       "date": "2026-01-19",
+       "name": "San Antonio"
+      },
+      {
+       "date": "2026-07-16",
+       "name": "Ntra. Sra. del Carmen"
+      }
+     ]
+    },
+    {
+     "name": "San Justo de las Requeras",
+     "holidays": [
+      {
+       "date": "2026-08-06",
+       "name": "San Justo y Pastor"
+      },
+      {
+       "date": "2026-12-14",
+       "name": "Santa Lucía"
+      }
+     ]
+    },
+    {
+     "name": "Santa Olaja de la Ribera",
+     "holidays": [
+      {
+       "date": "2026-06-08",
+       "name": "La Octava del Hábeas"
+      },
+      {
+       "date": "2026-12-10",
+       "name": "Santa Eulalia"
+      }
+     ]
+    },
+    {
+     "name": "Toldanos",
+     "holidays": [
+      {
+       "date": "2026-02-23",
+       "name": "La Cátedra de San Pedro"
+      },
+      {
+       "date": "2026-08-24",
+       "name": "La Virgen de la Mora"
+      }
+     ]
+    },
+    {
+     "name": "Valdesogo de Abajo",
+     "holidays": [
+      {
+       "date": "2026-01-02",
+       "name": "La Circuncisión del Señor"
+      },
+      {
+       "date": "2026-06-15",
+       "name": "La Octava del Hábeas"
+      }
+     ]
+    },
+    {
+     "name": "Valdesogo de Arriba",
+     "holidays": [
+      {
+       "date": "2026-05-04",
+       "name": "San Miguel Arcángel"
+      },
+      {
+       "date": "2026-05-05",
+       "name": "San Miguel Arcángel"
+      }
+     ]
+    },
+    {
+     "name": "Villarroañe",
+     "holidays": [
+      {
+       "date": "2026-06-26",
+       "name": "San Pelayo"
+      },
+      {
+       "date": "2026-08-14",
+       "name": "San Roque"
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24228": {
+   "holidays": [
+    {
+     "date": "2026-02-17",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro"
+    }
+   ]
+  },
+  "24229": {
+   "holidays": [
+    {
+     "date": "2026-05-15",
+     "name": "San Isidro Labrador"
+    },
+    {
+     "date": "2026-05-25",
+     "name": "Lunes de Pentecostés y La Virgen del Árbol"
+    }
+   ]
+  },
+  "24230": {
+   "holidays": [
+    {
+     "date": "2026-05-04",
+     "name": "Santa Cruz"
+    },
+    {
+     "date": "2026-05-11",
+     "name": "La Virgen de la Aldea"
+    }
+   ],
+   "nucleos": [
+    {
+     "name": "VIlaestrigo del Páramo",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro"
+      },
+      {
+       "date": "2026-08-03",
+       "name": ""
+      }
+     ]
+    },
+    {
+     "name": "Zambroncinos del Páramo",
+     "holidays": [
+      {
+       "date": "2026-05-15",
+       "name": "San Isidro"
+      },
+      {
+       "date": "2026-08-07",
+       "name": ""
+      }
+     ]
+    }
+   ],
+   "note": "The resolution also gives days for localities of the municipality (pedanías / entidades locales menores); see nucleos."
+  },
+  "24901": {
+   "holidays": [
+    {
+     "date": "2026-05-22",
+     "name": "Santa Rita"
+    },
+    {
+     "date": "2026-08-29",
+     "name": "San Juan Degollado"
+    }
+   ]
+  }
+ }
+}
