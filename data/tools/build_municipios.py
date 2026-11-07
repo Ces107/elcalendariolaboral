@@ -339,6 +339,16 @@ def add_population(out):
         m["pop"] = pj["pop"][m["ine"]]
     out["population"] = pj["source"]
     out["fields"]["pop"] = f'población oficial INE a {pj["source"]["date"]} (padrón)'
+    # lat/lon: Wikidata (CC0), data/tools/coords.json from fetch_coords.py (outliers already dropped there)
+    c = ROOT / "data" / "tools" / "coords.json"
+    if c.exists():
+        cj = json.loads(c.read_text("utf-8"))
+        for m in out["municipios"]:
+            m.pop("lat", None), m.pop("lon", None)
+            if m["ine"] in cj["coords"]:
+                m["lat"], m["lon"] = cj["coords"][m["ine"]]
+        out["coordinates"] = cj["source"]
+        out["fields"]["lat"] = "latitud/longitud del municipio (Wikidata P625, CC0)"
 
 
 def write_munis(out):

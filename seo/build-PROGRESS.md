@@ -64,3 +64,9 @@ further cuts would remove content. GitHub Pages limit 1 GB: site ~310 MB with PD
   most populated. (4) Province pages: "publicados" and "pendientes" lists, biggest first, A–Z toggle (app.js); region
   pages, hub and notes list cities by population. (5) All 7 sitemap files parse as XML.
   Overlap after (1)-(4): lean official 0.239 random pairs / 0.441 same region (the shared biggest-towns list).
+- 2026-11-07: coordinates from Wikidata (CC0, P772 + P625) via `data/tools/fetch_coords.py` -> `data/tools/coords.json`
+  -> `build_municipios.py --pop` adds lat/lon: 8,132 / 8,132 (100 %), 0 dropped by the 220 km province check; 20 random
+  points all inside their province box (8 of 8,132 just outside a padded 2-98 % box are real border towns: Treviño,
+  Cedillo, Mequinenza…). Municipality pages: "Cerca de <municipio>" = 6 nearest (haversine, any province) with km and
+  2027 dates/status, then "Más municipios de <provincia>" = 4 largest. Overlap: lean official 0.223 random pairs /
+  0.373 same region (was 0.239 / 0.441); pending 0.325 / 0.634. /sobre/ credits Wikidata (CC0).

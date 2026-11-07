@@ -538,6 +538,8 @@ def trust_pages(write, cities, loc):
              f'<li><b>Municipios y población:</b> la relación de municipios del INE y sus cifras oficiales de población '
              f'(revisión del padrón a 1 de enero de 2025), que usamos para ordenar las listas y el buscador '
              f'(<a href="https://www.ine.es/dynt3/inebase/es/index.htm?padre=517" rel="noopener">INE</a>).</li>'
+             f'<li><b>Municipios cercanos:</b> distancia entre las coordenadas de cada municipio de '
+             f'<a href="https://www.wikidata.org/" rel="noopener">Wikidata</a> (CC0).</li>'
              f'</ul><h2>Cómo trabajamos</h2><ul>'
              f'<li>Cada fecha se copia del documento oficial y se enlaza. Si un dato no está publicado, ponemos «pendiente de '
              f'publicación oficial» y no adelantamos fechas de prensa ni del año anterior.</li>'

@@ -143,6 +143,20 @@ def region_ics(x):
     return f"{B.ASSETS}ics/{k}.ics"
 
 
+def nearest(munis, k=6):
+    """x["near"] = [(municipality, km)] for the k nearest by great-circle distance (coordinates: Wikidata, CC0)."""
+    import numpy as np
+    xs = [x for x in munis if x["m"].get("lat") is not None]
+    lat = np.radians([x["m"]["lat"] for x in xs])
+    lon = np.radians([x["m"]["lon"] for x in xs])
+    for i, x in enumerate(xs):
+        h = np.sin((lat - lat[i]) / 2) ** 2 + np.cos(lat[i]) * np.cos(lat) * np.sin((lon - lon[i]) / 2) ** 2
+        d = 2 * 6371 * np.arcsin(np.sqrt(h))
+        d[i] = np.inf
+        idx = np.argpartition(d, k)[:k]
+        x["near"] = [(xs[j], max(1, int(round(d[j])))) for j in sorted(idx, key=lambda j: d[j])]
+
+
 def by_pop(xs):
     """Biggest first (INE official population), then name."""
     return sorted(xs, key=lambda y: (-(y["m"].get("pop") or 0), fold(y["name"])))
@@ -285,8 +299,11 @@ def muni_page(x, cat, write):
                           B.next_card(f["hols"], prev=B.prev26(x["region"], x["zone"], wide_and_partial(x["ref26"] or [])[0])) + stats + acts, f'<p class="ctx">{where}{offn}</p>{srcline}') + '</div>')
 
     pts = pts_rows(f["breaks"]) or f'<tr><td colspan="3">{B.t("no_bridges")}</td></tr>'
-    near = [y for y in by_pop(p["munis"]) if y is not x][:8]  # no reliable open coordinates: the biggest of the province
-    near_html = "".join(f'<li>{link(y)} <span class="m">{dates_of(y)}</span></li>' for y in near)
+    close = x.get("near") or []  # 6 nearest by distance (Wikidata coordinates), any province
+    seen = {id(y) for y, _ in close}
+    big = [y for y in by_pop(p["munis"]) if y is not x and id(y) not in seen][:4 if close else 8]
+    near_html = "".join(f'<li>{link(y)} <span class="m">{d} km · {dates_of(y)}</span></li>' for y, d in close)
+    big_html = "".join(f'<li>{link(y)} <span class="m">{dates_of(y)}</span></li>' for y in big)
     up = ('<p class="more-l">' + (f'<a href="{B.BASE}{p["path"]}">{E(p["label"])}: los {len(p["munis"])} municipios</a> · ' if p["path"] else "")
           + f'<a href="{B.BASE}{r["slug"]}/">Calendario laboral 2027 de {E(rname)}</a></p>')
     body = (B.section("festivos", f'Festivos 2027 en {E(name)}', hl_rows(f["hols"]) + loc_html)
@@ -294,7 +311,8 @@ def muni_page(x, cat, write):
             + B.section("calendario", "Calendario 2027", legend(kinds) + mini_year(f["hols"]), cls="cal")
             + B.section("puentes", f'Puentes 2027 en {E(name)}', f'<table class="tbl ptm"><thead><tr><th scope="col">Puente<th scope="col" class="num">Días libres'
                         f'<th scope="col">Vacaciones</thead><tbody>{pts}</tbody></table>')
-            + B.section("cerca", f'Más municipios de {E(p["name"])}', f'<ul class="links">{near_html}</ul>{up}'))
+            + (B.section("cerca", f'Cerca de {E(name)}', f'<ul class="links">{near_html}</ul>') if close else "")
+            + B.section("mas", f'Más municipios de {E(p["name"])}', f'<ul class="links">{big_html}</ul>{up}'))
     main = f'{hero}<div class="wrap body">{body}</div>'
 
     if ok and wide:
@@ -411,6 +429,7 @@ def write_pages(pages_mod, write):
     e27 = a27.get("municipios", {})
     for x in cat["munis"]:
         x["localities"] = (e27.get(x["ine"]) or {}).get("localities") if x["ok"] and x["kind"] == "page" else None
+    nearest(cat["munis"])
     for p in cat["provs"]:
         if p["path"]:
             prov_page(p, cat, write)
