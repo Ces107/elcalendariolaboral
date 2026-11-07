@@ -480,8 +480,10 @@ def break_html(kind, path, h1, crumb, sid, title, desc, rows):
              f'<tbody>{rows}</tbody></table>')
     ctx = (f'<p class="ctx">Días sin clase, fines de semana incluidos · '
            f'<time datetime="{DATA["updated"]}">actualizado {B.dmy(DATA["updated"])}</time></p>')
+    lab = {"semana_santa": ("semana-santa/", "Semana Santa 2027: festivos laborales por comunidad"),
+           "navidad": ("festivos/reyes/", "Reyes 2027: vuelta al cole y días laborables sin clase")}.get(kind)
     more = (f'<p class="more-l"><a href="{B.BASE}calendario-escolar/">Calendario escolar 2026-2027 por comunidad</a> · '
-            f'{break_links(kind)}</p>')
+            f'{break_links(kind)}' + (f' · <a href="{B.BASE}{lab[0]}">{lab[1]}</a>' if lab else "") + '</p>')
     main = (f'<div class="hero wrap">{B.crumbs_html(crumbs)}<h1>{E(h1)}</h1>{ctx}</div>'
             f'<div class="wrap body narrow"><section class="sec" id="{sid}">{table}{more}</section></div>')
     og = f"{B.SITE}{B.ASSETS}og/{OG[kind]}.png"

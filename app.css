@@ -47,6 +47,7 @@ button, input, select { font: inherit; color: inherit; }
 .menu { position: absolute; top: calc(100% + 4px); right: 0; z-index: 40; min-width: 180px; background: #fff; border: 1px solid var(--line); border-radius: 6px; box-shadow: 0 6px 20px rgba(16, 24, 40, .12); padding: 6px; }
 .menu a { display: flex; align-items: center; min-height: 40px; padding: 0 12px; border-radius: 4px; color: var(--ink); text-decoration: none; font-size: 15px; white-space: nowrap; }
 .menu a[aria-current] { font-weight: 700; }
+.menu-fest { left: 0; right: auto; }
 .menu-reg { left: 0; right: auto; display: grid; grid-template-columns: repeat(2, minmax(190px, 1fr)); column-gap: 4px; }
 .dd-lang .ln-s { display: none; }
 .dd-inst[hidden], [data-install][hidden], .menu-inst [hidden] { display: none; }

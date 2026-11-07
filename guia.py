@@ -165,10 +165,11 @@ def home_notes():
     b = best(B.all_breaks(nat))
     labs = sorted(s["lab"] for s in S.values())
     items = [
-        f'<b>Jueves Santo (25 de marzo):</b> festivo en {len(jt)} comunidades; laborable en {join(lacking("2027-03-25"))}.',
-        f'<b>Lunes de Pascua (29 de marzo):</b> festivo en {join(lp)}.',
-        f'<b>San José (19 de marzo):</b> festivo en {join(sj)}.',
-        f'<b>El 15 de agosto cae en domingo:</b> {join(m16)} lo pasan al lunes 16'
+        f'<b><a href="{B.BASE}semana-santa/">Jueves Santo</a> (25 de marzo):</b> festivo en {len(jt)} comunidades; '
+        f'laborable en {join(lacking("2027-03-25"))}.',
+        f'<b><a href="{B.BASE}semana-santa/#lunes-de-pascua">Lunes de Pascua</a> (29 de marzo):</b> festivo en {join(lp)}.',
+        f'<b><a href="{B.BASE}festivos/san-jose/">San José</a> (19 de marzo):</b> festivo en {join(sj)}.',
+        f'<b><a href="{B.BASE}festivos/15-de-agosto/">El 15 de agosto</a> cae en domingo:</b> {join(m16)} lo pasan al lunes 16'
         + (f'; {join(m11)}, al lunes 11 de octubre' if m11 else "") + f'. En {few(rest, 5)} no hay día extra.',
         f'<b>{join(E(h["name"]) + " (" + B.dm(h["date"]) + ")" for h in sat)} caen en sábado</b> y no se pasan a otro día.' if sat else "",
         f'<b>El mejor puente nacional:</b> {brk(b)}.' if b else "",
@@ -179,7 +180,11 @@ def home_notes():
             f'y 2 de ellos son locales. El Gobierno publica en el BOE los nacionales; cada comunidad puede cambiar algunos '
             f'por fiestas propias, y cada ayuntamiento propone sus 2 locales.</p>'
             f'<p><a href="{B.BASE}como-se-fijan-los-festivos/">Cómo se fijan los festivos, paso a paso</a> · '
-            f'<a href="{B.BASE}puentes/">Puentes 2027 de cada comunidad</a></p></details>')
+            f'<a href="{B.BASE}puentes/">Puentes 2027 de cada comunidad</a></p></details>'
+            f'<p class="more-l"><a href="{B.BASE}festivos/">Festivos 2027 mes a mes</a> · '
+            f'<a href="{B.BASE}festivos/reyes/">Reyes</a> · <a href="{B.BASE}semana-santa/">Semana Santa</a> · '
+            f'<a href="{B.BASE}festivos/12-de-octubre/">12 de octubre</a> · '
+            f'<a href="{B.BASE}festivos/puente-de-diciembre/">Puente de diciembre</a></p>')
     return B.section("claves", "Lo que cambia en 2027", notes(items) + more)
 
 
@@ -204,7 +209,8 @@ def easter_txt(s, name):
     rn = run_with(s["hols"], "2027-03-26")
     run = f'{B.drange(*rn)}, {rn[1] - rn[0] + 1} días seguidos sin coger vacaciones' if rn else ""
     nm = {"2027-03-25": "Jueves Santo", "2027-03-26": "Viernes Santo", "2027-03-29": "Lunes de Pascua"}
-    txt = f'<b>Semana Santa:</b> {join(nm[d] for d in days)} {"son festivos" if len(days) > 1 else "es festivo"}: {run}.'
+    txt = (f'<b><a href="{B.BASE}semana-santa/">Semana Santa</a>:</b> {join(nm[d] for d in days)} '
+           f'{"son festivos" if len(days) > 1 else "es festivo"}: {run}.')
     if "2027-03-25" not in s["dates"]:
         txt += f' El Jueves Santo es laborable, como solo pasa en {join(lacking("2027-03-25"))}.'
     elif "2027-03-29" not in s["dates"]:
@@ -227,12 +233,13 @@ def region_notes(r, cities):
     items = [f'<b>Los {len(chosen)} que elige {E(name)}:</b> '
              + "; ".join(f'{E(h["name"])}, {dl(h["date"])}{shared(h)}' for h in chosen) + "."]
     items.append(easter_txt(s, name))
+    ago = f'<b><a href="{B.BASE}festivos/15-de-agosto/">15 de agosto</a>:</b>'
     if "2027-08-16" in s["dates"]:
-        items.append("<b>15 de agosto:</b> cae en domingo y se disfruta el lunes 16 de agosto.")
+        items.append(f"{ago} cae en domingo y se disfruta el lunes 16 de agosto.")
     elif "2027-10-11" in s["dates"]:
-        items.append("<b>15 de agosto:</b> cae en domingo y se sustituye por el lunes 11 de octubre, que hace puente largo con el 12.")
+        items.append(f"{ago} cae en domingo y se sustituye por el lunes 11 de octubre, que hace puente largo con el 12.")
     else:
-        items.append("<b>15 de agosto:</b> cae en domingo y aquí no se traslada: no hay día extra.")
+        items.append(f"{ago} cae en domingo y aquí no se traslada: no hay día extra.")
     sat = [h for h in s["hols"] if D(h["date"]).weekday() >= 5]
     if sat:
         items.append(f'<b>En fin de semana:</b> {join(E(h["name"]) + " (" + B.dlong(h["date"]) + ")" for h in sat)}. No se pasan a otro día.')
@@ -266,6 +273,11 @@ def region_notes(r, cities):
             f'<p>Los 2 festivos locales los propone el pleno de cada ayuntamiento y los publica la autoridad laboral en el '
             f'boletín oficial. Hasta entonces, aquí salen como pendientes y no adelantamos fechas.</p>'
             f'<p><a href="{B.BASE}como-se-fijan-los-festivos/">Cómo se fijan los festivos, paso a paso</a></p></details>')
+    fest = [("festivos/reyes/", "Reyes")] + ([("festivos/san-jose/", "San José")] if "2027-03-19" in s["dates"] else []) + [
+        ("semana-santa/", "Semana Santa"), ("festivos/12-de-octubre/", "12 de octubre"),
+        ("festivos/puente-de-diciembre/", "puente de diciembre")]
+    more += (f'<p class="more-l">En {E(name)}: ' + " · ".join(f'<a href="{B.BASE}{p}">{n} 2027</a>' for p, n in fest)
+             + f' · <a href="{B.BASE}festivos/">todos los festivos 2027</a></p>')
     return B.section("claves", f'Lo propio de {E(name)} en 2027', notes(items) + more)
 
 
@@ -368,7 +380,10 @@ def page_puentes(write, cities):
             + upd(upd_date) + '</div>')
     nat_sec = B.section("nacionales", "Puentes nacionales 2027",
                         f'<table class="tbl pts">{B.pts_head()}<tbody>{"".join(B.pts_row(it) for it in nb)}</tbody></table>'
-                        f'<p class="m">Valen en toda España. En cada comunidad cambian según sus festivos propios.</p>')
+                        f'<p class="m">Valen en toda España. En cada comunidad cambian según sus festivos propios. En '
+                        f'detalle: <a href="{B.BASE}festivos/reyes/">Año Nuevo y Reyes</a> · '
+                        f'<a href="{B.BASE}semana-santa/">Semana Santa</a> · <a href="{B.BASE}festivos/12-de-octubre/">12 de '
+                        f'octubre</a> · <a href="{B.BASE}festivos/puente-de-diciembre/">puente de diciembre</a>.</p>')
     regs = []
     for k, s in S.items():
         r = s["r"]
@@ -480,7 +495,8 @@ def page_como(write, cities, loc):
         f'<h2>7. Festivos laborales y calendario escolar no son lo mismo</h2>'
         f'<p>Los días sin clase los fija cada consejería de educación y no coinciden siempre con los festivos laborales. '
         f'Están en el <a href="{B.BASE}calendario-escolar/">calendario escolar 2026-2027</a>.</p>'
-        f'<p class="more-l"><a href="{B.BASE}">Calendario laboral 2027</a> · <a href="{B.BASE}puentes/">Puentes 2027</a> · '
+        f'<p class="more-l"><a href="{B.BASE}">Calendario laboral 2027</a> · <a href="{B.BASE}festivos/">Festivos 2027 '
+        f'mes a mes</a> · <a href="{B.BASE}puentes/">Puentes 2027</a> · '
         f'<a href="{B.BASE}festivos-locales/">Festivos locales 2027</a></p>')
     qas = [("¿Cuántos festivos hay al año como máximo?", "14 festivos laborales, de los que 2 son locales (artículo 37.2 del Estatuto de los Trabajadores)."),
            ("¿Quién fija los festivos locales?", "El pleno de cada ayuntamiento propone 2 días y la autoridad laboral de la comunidad los publica en el boletín oficial."),

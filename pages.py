@@ -427,6 +427,8 @@ def write_pages(data, fix):
         guia.write_pages(write, cities, loc)
         import escolar
         escolar.write_pages(data, write)
+        import festivos  # after escolar: it reads the school breaks
+        festivos.write_pages(write, cities, sys.modules[__name__])
         import widget
         widget.write_pages(data, write, cities)
         import vacaciones

@@ -502,14 +502,19 @@ def wordmark():
 
 
 def header_html(here=""):
-    """Wordmark, nav (Comunidades menu, Festivos locales, Puentes) and the language menu."""
+    """Wordmark, nav (Comunidades menu; Festivos menu in Spanish, Festivos locales link in ca/gl/eu; Puentes) and the language menu."""
     regs = "".join(f'<a href="{BASE}{r["slug"]}/">{E(r["name"])}</a>' for r in REGIONS)
     pts_href = f"{BASE}puentes/" if LANG == "es" else ("#puentes" if here == "app" else f"{BASE}#puentes")
     return (f'<header class="hd"><div class="wrap hd-in">{wordmark()}'
             f'<nav class="nav" id="nav">'
             f'<details class="dd dd-reg"><summary>{t("nav_regions")}{CHEV}</summary><div class="menu menu-reg">{regs}</div></details>'
-            f'<a href="{BASE}festivos-locales/"{" aria-current=page" if here == "locals" else ""}>{t("nav_locals")}</a>'
-            f'<a href="{pts_href}">{t("nav_bridges")}</a>'
+            + (f'<details class="dd dd-fest"><summary>Festivos{CHEV}</summary><div class="menu menu-fest">'
+               f'<a href="{BASE}festivos/"{" aria-current=page" if here == "fest" else ""}>Festivos 2027</a>'
+               f'<a href="{BASE}semana-santa/">Semana Santa 2027</a>'
+               f'<a href="{BASE}festivos-locales/"{" aria-current=page" if here == "locals" else ""}>{t("nav_locals")} 2027</a>'
+               f'</div></details>' if LANG == "es" else
+               f'<a href="{BASE}festivos-locales/"{" aria-current=page" if here == "locals" else ""}>{t("nav_locals")}</a>')
+            + f'<a href="{pts_href}">{t("nav_bridges")}</a>'
             + (f'<a href="{BASE}vacaciones-2027/"{" aria-current=page" if here == "vac" else ""}>Vacaciones</a>' if LANG == "es" else "")
             + '</nav>'
             f'{install_html()}'
@@ -531,7 +536,10 @@ def footer_html(data):
     s = data["source"]
     return (f'<footer class="ft"><div class="wrap ft-in">'
             f'<section class="ft-reg"><h2>{t("nav_regions")}</h2><ul class="cols">{regs}</ul></section>'
-            f'<section><h2>{t("nav_locals")}</h2><ul><li><a href="{BASE}festivos-locales/">{t("nav_locals")} 2027</a></li>'
+            f'<section><h2>{t("nav_locals")}</h2><ul>'
+            + (f'<li><a href="{BASE}festivos/">Festivos 2027 en España</a></li>'
+               f'<li><a href="{BASE}semana-santa/">Semana Santa 2027</a></li>' if LANG == "es" else "")
+            + f'<li><a href="{BASE}festivos-locales/">{t("nav_locals")} 2027</a></li>'
             f'<li><a href="{ASSETS}calendario-laboral-2027-pdf/"{"" if LANG == "es" else " hreflang=es lang=es"}>Calendario laboral 2027 PDF</a></li></ul>'
             + (f'<h2>Calendario escolar</h2><ul><li><a href="{BASE}calendario-escolar/">Calendario escolar 2026-2027</a></li>'
                f'<li><a href="{BASE}vacaciones-escolares/navidad/">Vacaciones de Navidad 2026-2027</a></li>'
