@@ -115,7 +115,7 @@ def catalogue():
     mj, pj = load("municipios.json"), load("provincias.json")
     loc = overlay_locales(load("locales-2027.json"))
     all27, loc26 = load("locales-2027-all.json"), load("locales-2026.json")
-    cat = {"munis": [], "provs": [], "by_ine": {}, "conflicts": [], "unmatched": [], "has27": bool(all27), "has26": bool(loc26),
+    cat = {"munis": [], "provs": [], "by_ine": {}, "by_path": {}, "conflicts": [], "unmatched": [], "has27": bool(all27), "has26": bool(loc26),
            "src27": (all27 or {}).get("sources", {}), "src26": (loc26 or {}).get("sources", {})}
     _CAT = cat
     if not mj or not pj:
@@ -179,6 +179,7 @@ def catalogue():
         x["ok"] = x["status"] in OFFICIAL
         cat["munis"].append(x)
         cat["by_ine"][m["ine"]] = x
+        cat["by_path"][path] = x
         p["munis"].append(x)
     return cat
 
@@ -187,7 +188,7 @@ def index_rows():
     """(munis, provs) for buscar.build_index: every municipality with a page (all of them when MUNI_ON; otherwise only the
     existing city pages), provinces with a path only when their page is written."""
     cat = catalogue()
-    munis = [{"name": x["name"], "province_slug": x["prov"]["slug"], "path": x["path"], "ok": x["ok"],
+    munis = [{"name": x["name"], "province_slug": x["prov"]["slug"], "path": x["path"], "ok": x["ok"], "pop": x["m"].get("pop"),
               "aliases": sorted({a for a in {x["official_name"], *x["m"].get("aliases", [])} if "/" not in a and ", " not in a} - {x["name"]})}
              for x in cat["munis"] if MUNI_ON or x["kind"] == "city"]
     provs = [{"name": p["name"], "slug": p["slug"], "region": p["region"], "aliases": p.get("aliases", []),

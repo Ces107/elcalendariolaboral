@@ -311,9 +311,8 @@ def main(xlsx):
                       "ine_name": "nombre tal como lo publica el INE", "name_es": "forma castellana usual",
                       "island": "solo Canarias: isla (slug de data/2027.json zones.canarias)"},
            "municipios": munis}
-    head = json.dumps({k: v for k, v in out.items() if k != "municipios"}, ensure_ascii=False, indent=1)[:-2]
-    lines = ",\n".join(json.dumps(m, ensure_ascii=False, separators=(",", ":")) for m in munis)
-    (ROOT / "data" / "municipios.json").write_text(f'{head},\n "municipios": [\n{lines}\n]}}\n', "utf-8", newline="\n")
+    add_population(out)
+    write_munis(out)
     (ROOT / "data" / "provincias.json").write_text(
         json.dumps({**meta, "count": len(provs), "provincias": provs}, ensure_ascii=False, indent=1) + "\n", "utf-8")
     print(f"{len(munis)} municipios, {len(provs)} provincias, {len(dups)} duplicate slugs disambiguated")
@@ -329,5 +328,30 @@ def main(xlsx):
                    "el-hierro": 3}, isl
 
 
+def add_population(out):
+    """`pop` (INE official population, data/tools/poblacion.json from fetch_poblacion.py) on every municipality."""
+    p = ROOT / "data" / "tools" / "poblacion.json"
+    if not p.exists():
+        print("no data/tools/poblacion.json: run fetch_poblacion.py for `pop`")
+        return
+    pj = json.loads(p.read_text("utf-8"))
+    for m in out["municipios"]:
+        m["pop"] = pj["pop"][m["ine"]]
+    out["population"] = pj["source"]
+    out["fields"]["pop"] = f'población oficial INE a {pj["source"]["date"]} (padrón)'
+
+
+def write_munis(out):
+    head = json.dumps({k: v for k, v in out.items() if k != "municipios"}, ensure_ascii=False, indent=1)[:-2]
+    lines = ",\n".join(json.dumps(m, ensure_ascii=False, separators=(",", ":")) for m in out["municipios"])
+    (ROOT / "data" / "municipios.json").write_text(f'{head},\n "municipios": [\n{lines}\n]}}\n', "utf-8", newline="\n")
+
+
 if __name__ == "__main__":
-    main(sys.argv[1])
+    if sys.argv[1] == "--pop":  # only add or refresh `pop` in the existing data/municipios.json (no xlsx needed)
+        cur = json.loads((ROOT / "data" / "municipios.json").read_text("utf-8"))
+        add_population(cur)
+        write_munis(cur)
+        print(len(cur["municipios"]), "municipios with pop")
+    else:
+        main(sys.argv[1])

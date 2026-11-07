@@ -54,3 +54,13 @@ further cuts would remove content. GitHub Pages limit 1 GB: site ~310 MB with PD
   titles/descriptions), test_pdf (436 PDF), test_utilidades OK. Playwright 390/1366: no horizontal scroll, CLS <= 0.03.
   The four data files and `data/tools/` are NOT committed by this agent (they belong to the data agents): a clean
   clone builds without municipality pages until they are committed.
+- 2026-11-07, polish round: (1) "Próximo festivo" now includes the 2026 days still ahead (data/2026.json for the
+  comunidad/island + the municipality's official 2026 locals), with the year ("Martes 8 de diciembre de 2026"),
+  server-rendered at build time and recomputed in the browser; 2027 tiles unchanged. (2) `pop` (INE padrón
+  1-1-2025, `data/tools/fetch_poblacion.py` -> `data/tools/poblacion.json` -> `build_municipios.py --pop`) in
+  municipios.json and buscar.json; ranking exact > prefix > word > substring, comunidad/provincia tiers kept,
+  then population ("castello" -> Castellón de la Plana first). (3) No open coordinates reachable without the CNIG
+  form (download centre answers 403, IGN WFS has no INE codes): block renamed "Más municipios de <provincia>", the 8
+  most populated. (4) Province pages: "publicados" and "pendientes" lists, biggest first, A–Z toggle (app.js); region
+  pages, hub and notes list cities by population. (5) All 7 sitemap files parse as XML.
+  Overlap after (1)-(4): lean official 0.239 random pairs / 0.441 same region (the shared biggest-towns list).

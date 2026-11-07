@@ -85,7 +85,7 @@
       j.p.forEach(function (p) {
         if (p[2]) rows.push({ n: p[0], s: 'p', ri: p[1], p: p[2], k: [p[0]].concat(p[3] ? p[3].split('|') : []) });
       });
-      j.m.forEach(function (m) { rows.push({ n: m[0], s: 'm', pi: m[1], p: m[2], ok: m[4] === 1, k: [m[0]].concat(m[3] ? m[3].split('|') : []) }); });
+      j.m.forEach(function (m) { rows.push({ n: m[0], s: 'm', pi: m[1], p: m[2], ok: m[3] === 1, pop: m[4] || 0, k: [m[0]].concat(m[5] ? m[5].split('|') : []) }); });
       rows.forEach(function (r) { r.f = r.k.map(fold); });
       SIDX = { rows: rows, r: j.r, p: j.p };
       SWAIT.splice(0).forEach(function (f) { f(); });
@@ -107,7 +107,8 @@
       if (best < 9) out.push([best, r]);
     });
     var tier = { r: 0, p: 1, m: 2 };
-    out.sort(function (a, b) { return a[0] - b[0] || (a[0] ? tier[a[1].s] - tier[b[1].s] : tier[b[1].s] - tier[a[1].s]) || a[1].n.length - b[1].n.length || (a[1].n < b[1].n ? -1 : 1); });
+    /* exact, then prefix, word start, substring; comunidades/provincias keep their tier; then population (INE) */
+    out.sort(function (a, b) { return a[0] - b[0] || (a[0] ? tier[a[1].s] - tier[b[1].s] : tier[b[1].s] - tier[a[1].s]) || (b[1].pop || 0) - (a[1].pop || 0) || a[1].n.length - b[1].n.length || (a[1].n < b[1].n ? -1 : 1); });
     return out.slice(0, 8).map(function (x) { return x[1]; });
   }
   function subOf(r) {
@@ -159,6 +160,20 @@
     if (q && form.classList.contains('sb-big')) { inp.value = decodeURIComponent(q[1].replace(/\+/g, ' ')); loadIdx(function () { inp.focus(); show(); }); }
   });
 
+  /* ------------------------------------------------------------ listas de municipios: población / A-Z */
+  all('[data-sort]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var az = b.getAttribute('data-sort') === 'az';
+      all('[data-sort]').forEach(function (o) { var on = o === b; o.classList.toggle('on', on); o.setAttribute('aria-pressed', String(on)); });
+      all('ul[data-sortable]').forEach(function (ul) {
+        var lis = all('li', ul);
+        if (!ul._pop) ul._pop = lis.slice();
+        (az ? lis.slice().sort(function (x, y) { return x.getAttribute('data-a') < y.getAttribute('data-a') ? -1 : 1; }) : ul._pop)
+          .forEach(function (li) { ul.appendChild(li); });
+      });
+    });
+  });
+
   /* ------------------------------------------------------------ compartir */
   all('[data-share]').forEach(function (b) {
     b.addEventListener('click', function () {
@@ -186,7 +201,7 @@
     var y = +h[0].slice(0, 4), m = +h[0].slice(5, 7) - 1, dd = +h[0].slice(8);
     var days = Math.round((Date.UTC(y, m, dd) - Date.UTC(NOW0.getFullYear(), NOW0.getMonth(), NOW0.getDate())) / 864e5);
     var wd = NXT.wd[(new Date(Date.UTC(y, m, dd)).getUTCDay() + 6) % 7];
-    var date = NXT.eu ? NXT.mof[m] + ' ' + (dd === 11 || dd === 31 ? dd : dd + 'a') + ', ' + wd : wd + ' ' + dd + ' ' + NXT.mof[m];
+    var date = NXT.eu ? y + 'ko ' + NXT.mof[m] + ' ' + (dd === 11 || dd === 31 ? dd : dd + 'a') + ', ' + wd : wd + ' ' + dd + ' ' + NXT.mof[m] + ' de ' + y;
     var set = function (k, v) { var el = NX.querySelector('[data-nx-' + k + ']'); if (el) el.textContent = v; };
     set('m', NXT.mon3[m]); set('d', dd); set('t', date.charAt(0).toUpperCase() + date.slice(1)); set('n', h[1]); set('k', NXT.k[h[2]] || '');
     NX.querySelector('[data-nx-t]').setAttribute('datetime', h[0]);
@@ -195,12 +210,14 @@
     NX.className = 'nx k-' + h[2];
     NX.hidden = false;
   }
-  if (NX) { try { nextCard(JSON.parse(NX.getAttribute('data-hols') || '[]')); } catch (e) { /* tarjeta del servidor */ } }
+  var NXH = []; /* días que quedan del año en curso (2026) + los de 2027 */
+  if (NX) { try { NXH = JSON.parse(NX.getAttribute('data-hols') || '[]'); nextCard(NXH); } catch (e) { /* tarjeta del servidor */ } }
+  var PREV = NXH.filter(function (x) { return x[0] < '2027'; });
 
   /* ------------------------------------------------------------ .ics de un municipio sin archivo propio (data-hols) */
   all('a[data-ics]').forEach(function (a) {
     try {
-      var hols = JSON.parse(NX.getAttribute('data-hols')), name = a.getAttribute('data-ics'), host = location.host || 'elcalendariolaboral.es';
+      var hols = JSON.parse(NX.getAttribute('data-hols')).filter(function (h) { return h[0] >= '2027'; }), name = a.getAttribute('data-ics'), host = location.host || 'elcalendariolaboral.es';
       var L = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//' + host + '//Calendario laboral 2027//ES', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH', 'X-WR-CALNAME:Festivos 2027 · ' + name];
       hols.forEach(function (h) {
         var s = h[0].replace(/-/g, ''), n = new Date(Date.UTC(+h[0].slice(0, 4), +h[0].slice(5, 7) - 1, +h[0].slice(8) + 1)).toISOString().slice(0, 10).replace(/-/g, '');
@@ -393,7 +410,7 @@
     var hols = holidays();
     HOLS = hols;
     HD = offDays(hols).hd;
-    nextCard(hols.map(function (h) { return [h.date, h.name, h.kind]; }));
+    nextCard(PREV.concat(hols.map(function (h) { return [h.date, h.name, h.kind]; })));
     if (GRID) paint(hols);
     if (!APP) return;
     var isCan = S.region === 'canarias' && !S.zone && !CITY;

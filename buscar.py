@@ -5,7 +5,8 @@ The index is fetched by app.js on the first focus of a search box (never inlined
 
     {"r": [[name, path, aliases]],                 comunidades (path below the site root)
      "p": [[name, region_idx, path, aliases]],     provincias (path "" while the province has no page)
-     "m": [[name, prov_idx, path, aliases, ok]]}   municipios with a page; ok 1 = official 2027 local holidays
+     "m": [[name, prov_idx, path, ok, pop, aliases?]]}  municipios with a page; ok 1 = official 2027 local holidays,
+                                                     pop = INE population (ranking tie-breaker)
 
 aliases: "|"-joined other names (bilingual halves, exonyms: Castellón|Castelló). app.js folds accents and case.
 """
@@ -34,11 +35,11 @@ def build_index(data, munis, provs):
                                                                      VARIANT.get(r["slug"], "")] if x)] for r in regs]
     pi = {p["slug"]: k for k, p in enumerate(provs)}
     p_rows = [[p["name"], ri[p["region"]], p.get("path") or "", "|".join(p.get("aliases") or [])] for p in provs]
-    m_rows = sorted(([m["name"], pi[m["province_slug"]], m["path"], "|".join(a for a in m.get("aliases") or [] if a != m["name"]),
-                      1 if m["ok"] else 0] for m in munis), key=lambda x: (x[0], x[1]))
-    for row in m_rows:  # trailing empties cost bytes on 8,000 rows
-        if not row[3] and not row[4]:
-            del row[3:]
+    m_rows = sorted(([m["name"], pi[m["province_slug"]], m["path"], 1 if m["ok"] else 0, m.get("pop") or 0,
+                      "|".join(a for a in m.get("aliases") or [] if a != m["name"])] for m in munis), key=lambda x: (x[0], x[1]))
+    for row in m_rows:  # no aliases: 5 columns
+        if not row[5]:
+            del row[5]
     return {"r": r_rows, "p": p_rows, "m": m_rows}
 
 

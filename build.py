@@ -812,30 +812,66 @@ def sq(s):
     return E(s, quote=False).replace("'", "&#39;")
 
 
+_D26 = None
+
+
+def data26():
+    """data/2026.json in this language: the holidays still left this year, for the next-holiday card only."""
+    global _D26
+    if _D26 is None:
+        p = ROOT / "data" / "2026.json"
+        _D26 = localize(json.loads(p.read_text("utf-8"))) if p.exists() else {"holidays": [], "zones": {}}
+    return _D26
+
+
+def prev26(region=None, zone=None, locals26=()):
+    """2026 holidays from the build day on (national, or the comunidad's + island/Arán, + the municipality's official
+    2026 local days). Only the "Próximo festivo" card uses them; every 2027 count stays 2027."""
+    d26 = data26()
+    if region:
+        try:
+            hols = region_holidays(d26, region, zone)
+        except StopIteration:  # a zone option missing in 2026
+            hols = region_holidays(d26, region)
+    else:
+        hols = [{"date": h["date"], "name": h["name"], "kind": "n"} for h in d26["holidays"] if h["regions"] == "all"]
+    seen = {h["date"] for h in hols}
+    hols = hols + [{"date": h["date"], "name": h.get("name") or "Fiesta local", "kind": "l"} for h in locals26 if h["date"] not in seen]
+    return sorted((h for h in hols if h["date"] >= TODAY), key=lambda h: h["date"])
+
+
+def dlong_y(x):
+    """'martes 8 de diciembre de 2026' (eu: '2026ko abenduaren 8a, asteartea')."""
+    d = _d(x)
+    return f"{d.year}ko {dlong(d)}" if LANG == "eu" else f"{dlong(d)} de {d.year}"
+
+
 def next_hol(hols, today=None):
-    ref = max(today or TODAY, f"{YEAR}-01-01")
-    return next((h for h in hols if h["date"] >= ref), None)
+    return next((h for h in hols if h["date"] >= (today or TODAY)), None)
 
 
-def next_card(hols, cfg=False):
+def next_card(hols, cfg=False, prev=()):
     """'Próximo festivo' card, server-rendered from the build day (TODAY); app.js recomputes it with the visitor's date
-    and adds the countdown. data-hols carries [date, name, kind] so pages without the planner (municipios) can do it
-    too. cfg=True also writes the labels for app.js (Spanish is its default)."""
-    h = next_hol(hols)
+    and adds the countdown. prev: the 2026 days still ahead (prev26), so in Nov-Dec 2026 the card shows 8 Dec 2026, not
+    1 Jan 2027. data-hols carries [date, name, kind] so pages without the planner (municipios) can do it too. cfg=True
+    also writes the labels for app.js (Spanish is its default)."""
+    allh = list(prev) + [h for h in hols if h["date"] >= f"{YEAR}-01-01"]
+    h = next_hol(allh)
     if not h:
         return ""
     d = _d(h["date"])
-    data = json.dumps([[x["date"], x["name"], x["kind"]] for x in hols], ensure_ascii=False, separators=(",", ":"))
+    data = json.dumps([[x["date"], x["name"], x["kind"]] for x in allh], ensure_ascii=False, separators=(",", ":"))
     lab = ""
     if LANG != "es" or cfg:
         lab = json.dumps({"k": {k: t(v) for k, v in KINDS.items()}, "today": t("today"), "tomorrow": t("tomorrow"),
                           "left": T.get("days_left") or ES["days_left"], "wd": T["_wd"], "mon3": T["_mon3"], "mof": T["_mof"],
                           "eu": LANG == "eu"}, ensure_ascii=False, separators=(",", ":"))
         lab = f" data-t='{sq(lab)}'"
+    txt = dlong_y(d)
     return (f'<div class="nx k-{h["kind"]}" id="next" data-hols=\'{sq(data)}\'{lab}>'
             f'<p class="nx-tile" aria-hidden="true"><span data-nx-m>{T["_mon3"][d.month - 1]}</span><b data-nx-d>{d.day}</b></p>'
             f'<div class="nx-b"><p class="nx-l">{t("next_hol")} <span class="nx-c" data-nx-c></span></p>'
-            f'<p class="nx-t"><time data-nx-t datetime="{h["date"]}">{E(dlong(d)[0].upper() + dlong(d)[1:])}</time></p>'
+            f'<p class="nx-t"><time data-nx-t datetime="{h["date"]}">{E(txt[0].upper() + txt[1:])}</time></p>'
             f'<p class="nx-n"><span data-nx-n>{E(h["name"])}</span> · <span class="nx-k" data-nx-k>{scope_txt(h["kind"])}</span></p>'
             f'</div></div>')
 
@@ -962,7 +998,7 @@ def app_main(data, r, city=None, hero_extra="", more="", cities=(), pending=(), 
     acts = actions_html(f'{ASSETS}ics/{key}.ics', f'{t("ics_file")}-{key}.ics', h1)
     ans, _, meta = lead.partition('<p class="upd">')
     meta = ('<p class="upd">' + meta if meta else "") + hero_extra
-    hero = (f'<div class="hero wrap">{crumbs}{hero_grid(f"<h1>{E(h1)}</h1>{ans}", next_card(hols) + stats + acts, meta)}'
+    hero = (f'<div class="hero wrap">{crumbs}{hero_grid(f"<h1>{E(h1)}</h1>{ans}", next_card(hols, prev=prev26(slug, city["zone"] if city else None, (city or {}).get("ref26") or ())) + stats + acts, meta)}'
             f'<div class="pickers">{sel}</div></div>')
 
     kinds = ["n", "r"] + (["i"] if slug == "canarias" else []) + ["l"]

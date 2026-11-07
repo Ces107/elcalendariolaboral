@@ -143,6 +143,11 @@ def region_ics(x):
     return f"{B.ASSETS}ics/{k}.ics"
 
 
+def by_pop(xs):
+    """Biggest first (INE official population), then name."""
+    return sorted(xs, key=lambda y: (-(y["m"].get("pop") or 0), fold(y["name"])))
+
+
 def dates_of(x):
     if not x["ok"]:
         return "pendiente"
@@ -159,7 +164,7 @@ def notes_official(x, f, p, st, rname):
     for h in wide:
         sh = [y for y in st["by_date"].get(h["date"], []) if y is not x]
         if sh:
-            ex = sorted(sh, key=lambda y: (not y["m"]["capital"], fold(y["name"])))[:3]
+            ex = by_pop(sh)[:3]
             items.append(f'<b>El {B.dm(h["date"])} en {E(p["name"])}:</b> también es fiesta local en {len(sh)} '
                          f'municipio{"s" if len(sh) != 1 else ""} más, como {join(link(y) for y in ex)}.')
         else:
@@ -167,7 +172,7 @@ def notes_official(x, f, p, st, rname):
     mine = sorted(h["date"] for h in wide)
     twins = [y for y in st["ok"] if y is not x and len(mine) == 2 and sorted(h["date"] for h in wide_of(y)) == mine]
     if twins:
-        tw = sorted(twins, key=lambda y: fold(y["name"]))
+        tw = by_pop(twins)
         items.append(f'<b>Los mismos días que</b> {join(link(y) for y in tw[:5])}' + (f' y {len(tw) - 5} más' if len(tw) > 5 else "") + ".")
     top = st["dates"].most_common(1)
     if top and top[0][0] not in mine and top[0][1] > 1:
@@ -209,7 +214,7 @@ def notes_pending(x, f, p, st, rname):
         top = st["dates"].most_common(1)[0]
         items.append(f'<b>En {E(p["name"])}</b> ya tienen fecha {len(st["ok"])} de {len(p["munis"])} municipios'
                      + (f'; el día más repetido es el {B.dlong(top[0])} ({top[1]}).' if top[1] > 1 else
-                        f' ({join(link(y) for y in st["ok"][:3])}).'))
+                        f' ({join(link(y) for y in by_pop(st["ok"])[:3])}).'))
     b = guia.best(f["breaks"])
     if b:
         items.append(f'<b>Mejor puente de {E(rname)}:</b> {guia.brk(b)}.')
@@ -277,12 +282,10 @@ def muni_page(x, cat, write):
     acts = acts.replace('data-x="dl"', f'data-ics="{E(name)}" data-key="{m["ine"]}"', 1)
     hero = (f'<div class="hero wrap">{B.crumbs_html(crumbs)}'
             + B.hero_grid(f'<h1>Calendario laboral {E(name)} 2027</h1><p class="lead">{lead}</p>',
-                          B.next_card(f["hols"]) + stats + acts, f'<p class="ctx">{where}{offn}</p>{srcline}') + '</div>')
+                          B.next_card(f["hols"], prev=B.prev26(x["region"], x["zone"], wide_and_partial(x["ref26"] or [])[0])) + stats + acts, f'<p class="ctx">{where}{offn}</p>{srcline}') + '</div>')
 
     pts = pts_rows(f["breaks"]) or f'<tr><td colspan="3">{B.t("no_bridges")}</td></tr>'
-    sib = sorted(p["munis"], key=lambda y: fold(y["name"]))
-    k = sib.index(x)
-    near = [y for y in sib[max(0, k - 4):k + 5] if y is not x]
+    near = [y for y in by_pop(p["munis"]) if y is not x][:8]  # no reliable open coordinates: the biggest of the province
     near_html = "".join(f'<li>{link(y)} <span class="m">{dates_of(y)}</span></li>' for y in near)
     up = ('<p class="more-l">' + (f'<a href="{B.BASE}{p["path"]}">{E(p["label"])}: los {len(p["munis"])} municipios</a> · ' if p["path"] else "")
           + f'<a href="{B.BASE}{r["slug"]}/">Calendario laboral 2027 de {E(rname)}</a></p>')
@@ -291,7 +294,7 @@ def muni_page(x, cat, write):
             + B.section("calendario", "Calendario 2027", legend(kinds) + mini_year(f["hols"]), cls="cal")
             + B.section("puentes", f'Puentes 2027 en {E(name)}', f'<table class="tbl ptm"><thead><tr><th scope="col">Puente<th scope="col" class="num">Días libres'
                         f'<th scope="col">Vacaciones</thead><tbody>{pts}</tbody></table>')
-            + B.section("cerca", f'Cerca, en {E(p["name"])}', f'<ul class="links">{near_html}</ul>{up}'))
+            + B.section("cerca", f'Más municipios de {E(p["name"])}', f'<ul class="links">{near_html}</ul>{up}'))
     main = f'{hero}<div class="wrap body">{body}</div>'
 
     if ok and wide:
@@ -359,13 +362,14 @@ def prov_page(p, cat, write):
     else:
         lead = (f'Los festivos locales de 2027 de los {n} municipios de {E(place)} aún no se han publicado en el boletín oficial. '
                 f'Mientras, valen los {len(base)} festivos de {E(r["name"])}.')
-    letters = defaultdict(list)
-    for x in munis:
-        letters[(fold(x["name"])[:1] or "#").upper()].append(x)
-    rows = "".join(f'<h3 class="h3" id="l-{L}">{L}</h3><ul class="links">'
-                   + "".join(f'<li>{link(x)} <span class="m">{dates_of(x)}</span></li>' for x in xs) + "</ul>"
-                   for L, xs in sorted(letters.items()))
-    az = " ".join(f'<a href="#l-{L}">{L}</a>' for L in sorted(letters))
+    def ul(xs):  # biggest first (INE population); app.js re-sorts A-Z with the toggle (data-a = folded name)
+        return ('<ul class="links" data-sortable>' + "".join(
+            f'<li data-a="{E(fold(x["name"]))}">{link(x)} <span class="m">{dates_of(x)}</span></li>' for x in by_pop(xs)) + "</ul>")
+    pub, pen = [x for x in munis if x["ok"]], [x for x in munis if not x["ok"]]
+    rows = ((f'<h3 class="h3">Con festivos de 2027 publicados ({len(pub)})</h3>{ul(pub)}' if pub else "")
+            + (f'<h3 class="h3">Pendientes de publicación ({len(pen)})</h3>{ul(pen)}' if pen else ""))
+    az = ('<p class="srt" role="group" aria-label="Orden"><button type="button" class="btn sm on" data-sort="pop" aria-pressed="true">'
+          'Por población</button><button type="button" class="btn sm" data-sort="az" aria-pressed="false">A–Z</button></p>')
     chips = "".join(f'<li class="k-{h["kind"]}">{B.sw(h["kind"])}{B.dmon(h["date"])} · {E(h["name"])}</li>' for h in base)
     crumbs = [("España", ""), (r["name"], f'{r["slug"]}/'), (p["label"], p["path"])]
     upd_date = UPDATED or P.DATA["updated"]
@@ -377,7 +381,7 @@ def prov_page(p, cat, write):
     body = (B.section("claves", "Lo que dicen las fechas", guia.notes(items))
             + B.section("comunidad", f'Los {len(base)} festivos de {E(r["name"])}', f'<ul class="dchips">{chips}</ul>'
                         f'<p class="more-l"><a href="{B.BASE}{r["slug"]}/">Calendario laboral 2027 de {E(r["name"])}</a></p>')
-            + B.section("municipios", f'Los {n} municipios', f'<p class="az">{az}</p>{rows}'))
+            + B.section("municipios", f'Los {n} municipios', f'{az}{rows}'))
     main = f'{hero}<div class="wrap body narrow">{body}</div>'
     pn = "Madrid" if p["uni"] and r["slug"] == "madrid" else p["name"]
     if n_ok:

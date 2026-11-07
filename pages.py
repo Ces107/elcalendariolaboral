@@ -175,7 +175,10 @@ def city_ctx(c, regions):
     zone = CITY_ZONE.get(c["slug"]) or ("general" if c["region"] == "cataluna" else None)
     name = city_name(c, regions)
     hols = B.page_holidays(DATA, r, {"zone": zone, "holidays": c["holidays"]})
-    return {"c": c, "r": r, "slug": c["slug"], "zone": zone, "title_name": name, "holidays": c["holidays"],
+    import muni
+    m = muni.catalogue()["by_path"].get(f'{r["slug"]}/{c["slug"]}/')
+    ref26 = muni.wide_and_partial(m["ref26"])[0] if m and m.get("ref26") else []  # 2026 locals: next-holiday card only
+    return {"c": c, "r": r, "slug": c["slug"], "zone": zone, "ref26": ref26, "title_name": name, "holidays": c["holidays"],
             "path": f'{r["slug"]}/{c["slug"]}/', "hols": hols, "n": len(hols), "boe": len(hols) - 2,
             "pts": B.puentes(hols), "lab": B.workdays(hols), "src_label": source_label(c),
             "pending_bulletin": c["status"] == "ayuntamiento",
@@ -424,7 +427,7 @@ def home_page():
     stats = B.stats_html([(None, tn("n_nat", len(nat))), (None, lab_rng), (None, tn("n_pts", len(B.puentes(nat))))])
     hero = ('<div class="hero wrap">'
             + B.hero_grid(f'<h1>{E(t("h1"))}</h1>{guia.home_lead() if ES else ""}{B.search_box("q-home", big=True)}',
-                          B.next_card(nat) + stats,
+                          B.next_card(nat, prev=B.prev26()) + stats,
                           f'<div class="pickers">{B.region_select(None)}</div>'
                           f'<p class="ctx">{E(n_regions)} · <a href="{DATA["source"]["url"]}" rel="noopener">{t("data_source")}</a></p>{upd}')
             + '</div>')
@@ -465,6 +468,10 @@ def write_pages(data, fix):
     _written.clear()
     regions = {r["slug"]: r for r in data["regions"]}
     loc = load_locales()
+    import muni
+    by_path = muni.catalogue()["by_path"]
+    pop = lambda c: (by_path.get(f'{c["region"]}/{c["slug"]}/') or {"m": {}})["m"].get("pop") or 0  # noqa: E731
+    loc = {**loc, "cities": sorted(loc["cities"], key=lambda c: -pop(c))}  # published and pending lists: biggest first
     cities = published_cities(loc, regions)
     ALL_CITIES = cities
     upd = guia.lastmod(data["updated"], B.CONTENT_UPDATED)
