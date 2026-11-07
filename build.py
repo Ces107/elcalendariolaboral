@@ -651,6 +651,7 @@ def head_html(title, desc, path, og_img, extra="", hreflang=True, langs=None, in
 <link rel="apple-touch-icon" href="{ASSETS}icons/apple-touch-icon.png">
 {CSP}
 <link rel="preload" href="{ASSETS}fonts/public-sans-400.woff2?v={{F400}}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{ASSETS}fonts/public-sans-600.woff2?v={{F600}}" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{ASSETS}fonts/public-sans-700.woff2?v={{F700}}" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{ASSETS}app.css?v={{CSSV}}">
 {AD_HINTS + ADSENSE if ADS_PAGE else ""}
@@ -1284,7 +1285,7 @@ def main():
     sidx = buscar.index_bytes(buscar.build_index(load(), *muni.index_rows()))
     sidxv = buscar.index_hash(sidx)
     fix = lambda s: (s.replace("{CSSV}", cssv).replace("{JSV}", jsv).replace("{SIDXV}", sidxv)  # noqa: E731
-                     .replace("{F400}", fonts["400"]).replace("{F700}", fonts["700"]))
+                     .replace("{F400}", fonts["400"]).replace("{F600}", fonts["600"]).replace("{F700}", fonts["700"]))
 
     OUT.mkdir(exist_ok=True)
     (OUT / "privacidad").mkdir(exist_ok=True)
