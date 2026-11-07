@@ -23,7 +23,7 @@ from collections import Counter, defaultdict
 
 import build as B
 
-MUNI_ON = os.environ.get("CL_MUNI", "0") == "1"
+MUNI_ON = os.environ.get("CL_MUNI", "1") == "1"  # CL_MUNI=0: only the existing pages
 OFFICIAL = ("boletin", "ayuntamiento")
 NO_PROV_PAGE = {"ceuta", "melilla"}
 # Val d'Aran (Conselh Generau d'Aran): its 9 municipalities take the Aran zone of data/2027.json (Fiesta de Arán)
@@ -52,6 +52,59 @@ def names_of(m):
 
 
 _CAT = None
+_LOC = None
+
+
+def short_src(title, fallback="Boletín oficial"):
+    """'BOP Toledo núm. 203' from '... (BOP Toledo núm. 203, 22-X-2026, inserción 4840)'."""
+    m = re.search(r"\(((?:BO|DO)[^()]*(?:\([^()]*\)[^()]*)*)\)\s*$", title or "")
+    return m.group(1).split(",")[0].strip() if m else fallback
+
+
+def wide_and_partial(hols):
+    """Municipality-wide days, and days printed for one parish/valley only ('…, en la parroquia de Lugones')."""
+    wide, part = [], []
+    for h in hols:
+        n = (h.get("name") or "").lower()
+        if re.search(r"\ben (la|el) (parroquia|valle|barrio|pedan)", n) and "todo" not in n:
+            part.append(h)
+        else:
+            wide.append(h)
+    return wide, part
+
+
+def overlay_locales(loc):
+    """locales-2027.json with what locales-2027-all.json adds for the same cities (same slugs and URLs):
+    - an 'unpublished' city that is now in a bulletin with exactly 2 municipality-wide days gets them (new=True: its
+      page is new, so it carries no ads until AdSense has reviewed the site);
+    - a city published from the council's agreement whose dates are now in a bulletin, identical, takes the bulletin
+      as its source. Different dates are never merged: they go to the conflict list (catalogue()['conflicts'])."""
+    global _LOC
+    if _LOC is not None:
+        return _LOC
+    mj, all27 = load("municipios.json"), load("locales-2027-all.json")
+    if not mj or not all27:
+        _LOC = loc
+        return loc
+    ine = {(m["region"], m["slug"]): m["ine"] for m in mj["municipios"]}
+    srcs = all27.get("sources", {})
+    out = dict(loc)
+    out["cities"] = []
+    for c in loc["cities"]:
+        c = dict(c)
+        e = all27["municipios"].get(ine.get((c["region"], c["slug"]), ""))
+        if e and e.get("status") in OFFICIAL and len(e.get("holidays") or []) == 2 and not e.get("localities"):
+            s = srcs.get(e.get("source"), {})
+            src = {"title": s.get("title", ""), "url": s.get("url", ""), "checked": all27.get("updated")}
+            if c["status"] not in OFFICIAL or not c["holidays"]:
+                c.update(status=e["status"], source=src, new=True,
+                         holidays=[{"date": h["date"], "name": h.get("name") or "Fiesta local"} for h in e["holidays"]])
+            elif (c["status"] == "ayuntamiento" and e["status"] == "boletin" and s.get("url")
+                  and sorted(h["date"] for h in c["holidays"]) == sorted(h["date"] for h in e["holidays"])):
+                c.update(status="boletin", source={**src, "title": s["title"]})
+        out["cities"].append(c)
+    _LOC = out
+    return out
 
 
 def catalogue():
@@ -60,7 +113,7 @@ def catalogue():
     if _CAT is not None:
         return _CAT
     mj, pj = load("municipios.json"), load("provincias.json")
-    loc = load("locales-2027.json")
+    loc = overlay_locales(load("locales-2027.json"))
     all27, loc26 = load("locales-2027-all.json"), load("locales-2026.json")
     cat = {"munis": [], "provs": [], "by_ine": {}, "conflicts": [], "unmatched": [], "has27": bool(all27), "has26": bool(loc26),
            "src27": (all27 or {}).get("sources", {}), "src26": (loc26 or {}).get("sources", {})}
@@ -107,7 +160,7 @@ def catalogue():
         x = {"m": m, "ine": m["ine"], "name": m["name_es"], "official_name": m["name"], "path": path, "kind": kind, "prov": p,
              "region": m["region"], "zone": zone, "status": None, "hol27": None, "src27": None, "note": None, "ref26": None, "src26": None}
         e = o27.get(m["ine"])
-        if e and e.get("status") in OFFICIAL and e.get("holidays"):
+        if e and e.get("status") in OFFICIAL and (e.get("holidays") or e.get("localities")):
             x.update(status=e["status"], hol27=sorted(e["holidays"], key=lambda h: h["date"]), note=e.get("note"),
                      src27=cat["src27"].get(e.get("source")) or ({"title": e["source"], "url": ""} if e.get("source") else None))
         if kind == "city":
@@ -115,14 +168,15 @@ def catalogue():
             x.update(status=c["status"], hol27=c["holidays"], src27={"title": c["source"]["title"], "url": c["source"]["url"]})
             if e and e.get("holidays"):
                 a = sorted(h["date"] for h in c["holidays"])
-                b = sorted(h["date"] for h in e["holidays"])
+                b = sorted(h["date"] for h in wide_and_partial(e["holidays"])[0])  # parish days are not a conflict
                 if a != b:
                     cat["conflicts"].append({"ine": m["ine"], "name": m["name_es"], "locales-2027": a, "locales-2027-all": b,
                                              "source_all": e.get("source")})
         r26 = ((loc26 or {}).get("municipios") or {}).get(m["ine"])
-        if r26 and r26.get("holidays"):
-            x.update(ref26=sorted(r26["holidays"], key=lambda h: h["date"]), src26=cat["src26"].get(r26.get("source")))
-        x["ok"] = bool(x["hol27"])
+        if r26 and (r26.get("holidays") or r26.get("nucleos")):  # reference only: never used in 2027 counts
+            x.update(ref26=sorted(r26.get("holidays") or [], key=lambda h: h["date"]), nuc26=r26.get("nucleos") or [],
+                     src26=cat["src26"].get(r26.get("source")))
+        x["ok"] = x["status"] in OFFICIAL
         cat["munis"].append(x)
         cat["by_ine"][m["ine"]] = x
         p["munis"].append(x)
@@ -134,7 +188,7 @@ def index_rows():
     existing city pages), provinces with a path only when their page is written."""
     cat = catalogue()
     munis = [{"name": x["name"], "province_slug": x["prov"]["slug"], "path": x["path"], "ok": x["ok"],
-              "aliases": sorted({x["official_name"], *x["m"].get("aliases", [])} - {x["name"]})}
+              "aliases": sorted({a for a in {x["official_name"], *x["m"].get("aliases", [])} if "/" not in a and ", " not in a} - {x["name"]})}
              for x in cat["munis"] if MUNI_ON or x["kind"] == "city"]
     provs = [{"name": p["name"], "slug": p["slug"], "region": p["region"], "aliases": p.get("aliases", []),
               "path": p["path"] if MUNI_ON else "", "label": p["label"]} for p in cat["provs"]]

@@ -110,7 +110,7 @@ for p in pages:
     check(len(_h.unescape(title)) <= 60, f"{rel}: título de {len(_h.unescape(title))} > 60: {title}")
     check(len(_h.unescape(desc)) <= 155, f"{rel}: descripción de {len(_h.unescape(desc))} > 155")
     check(h.count("<h1") == 1, f"{rel}: debe tener un solo h1")
-    check('"@type": "Event"' not in h, f"{rel}: sin marcado Event")
+    check(not re.search(r'"@type": ?"Event"', h), f"{rel}: sin marcado Event")
 check(len(pages) == len(paths_in_sm), f"sitemap {len(paths_in_sm)} urls != {len(pages)} páginas")
 _seen = {}
 for p in pages:
@@ -120,12 +120,20 @@ for p in pages:
         _seen.setdefault(tag, p.relative_to(ROOT))
 
 # páginas de ciudad: solo las publicadas, con sus 2 fechas oficiales
-loc = json.loads((ROOT / "data" / "locales-2027.json").read_text("utf-8"))
+raw = json.loads((ROOT / "data" / "locales-2027.json").read_text("utf-8"))
+for c in raw["cities"]:  # the file the city pages come from: exactly 2 dates per published city
+    if c["status"] in ("boletin", "ayuntamiento") and c["holidays"]:
+        check(len(c["holidays"]) == 2, f"{c['slug']}: {len(c['holidays'])} festivos locales en locales-2027.json")
+import muni  # noqa: E402
+loc = muni.overlay_locales(raw)  # + the cities now in a bulletin (locales-2027-all.json): same URLs
 from pages import CITY_ZONE  # noqa: E402
 for c in loc["cities"]:
     f = ROOT / c["region"] / c["slug"] / "index.html"
     published = c["status"] in ("boletin", "ayuntamiento") and c["holidays"]
-    check(f.exists() == bool(published), f"{c['region']}/{c['slug']}: página {'falta' if published else 'sobra'}")
+    if published or not f.exists():
+        check(f.exists() == bool(published), f"{c['region']}/{c['slug']}: página {'falta' if published else 'sobra'}")
+    else:  # pending: only the lean municipality page (munipages.py), noindex until its bulletin is out
+        check('name="robots" content="noindex' in f.read_text("utf-8"), f"{c['region']}/{c['slug']}: pendiente e indexable")
     if c["region"] == "canarias":
         check(c["slug"] in CITY_ZONE, f"{c['slug']}: falta su isla en pages.ISLAND_CITIES")
     if c["holidays"]:
@@ -137,7 +145,8 @@ for c in loc["cities"]:
             check(isla not in ds, f"{c['slug']}: un local coincide con la fiesta de su isla")
     if published:
         h = f.read_text("utf-8")
-        # exactly 2 per city; a parish or valley with its own day is explained in "note" (Siero/Lugones, Mieres/Turón)
+        # 2 municipality-wide days per city page; a parish or valley with its own day is explained in "note"
+        # (Siero/Lugones, Mieres/Turón); village and territory days of other municipalities live in munipages.py
         check(len(c["holidays"]) == 2, f"{c['slug']}: {len(c['holidays'])} festivos locales")
         check(c["status"] == "ayuntamiento" or re.search(r"\b(BO[A-Z]*|DO[A-Z]*)\b", c["source"]["title"]),
               f"{c['slug']}: estado boletin sin boletín en el título de la fuente")
@@ -222,7 +231,7 @@ for path, img in (("calendario-escolar/", "escolar.png"), ("vacaciones-escolares
                   ("vacaciones-escolares/semana-santa/", "escolar-semana-santa.png"), ("vacaciones-escolares/carnaval/", "escolar-carnaval.png")):
     h = (ROOT / path / "index.html").read_text("utf-8")
     check(og_of(h) == img and (ROOT / "og" / img).exists(), f"/{path}: og:image {og_of(h)}")
-    check('"@type": "BreadcrumbList"' in h, f"/{path}: falta BreadcrumbList")
+    check(re.search(r'"@type": ?"BreadcrumbList"', h), f"/{path}: falta BreadcrumbList")
 cat = json.loads((ROOT / "data" / "escolar-2027-28.json").read_text("utf-8"))["regions"][0]
 hc = (ROOT / "calendario-escolar" / "cataluna" / "index.html").read_text("utf-8")
 check('id="curso-2027-2028"' in hc and f'datetime="{cat["stages"][0]["start"]}"' in hc, "cataluña: falta el curso 2027-2028")

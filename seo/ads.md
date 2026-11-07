@@ -13,6 +13,12 @@ unit each, mid-page, `festivos.py`), /calendario-escolar/ (+ regions, loader onl
 noindex pages, the vacation planner, PDF hub, festivos-locales hub, widget, /semana/, /dias-habiles/, privacy, legal,
 404 (`head_html(..., ads=False)`). See `seo/AUDIT-2026-11.md`.
 
+Since 2026-11-07 (`seo/build-PROGRESS.md`), also without ads until AdSense approves the site: the 50 province pages and
+the ~8,000 municipality pages of `munipages.py`, the 13 city pages that got their 2027 locals from
+`locales-2027-all.json` (`c["new"]` in `muni.overlay_locales`), and `/buscar/`. To turn them on after approval: in
+`munipages.py` change `ads=False` in both `head_html` calls (they have no `ad()` slots yet: add one `hub` unit after the
+"Qué cambian" notes, never next to the hero actions), and in `pages.city_page` drop `ads=not c.get("new")`.
+
 ## Positions
 
 | `AD_SLOTS` key | Where | Pages |

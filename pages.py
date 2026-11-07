@@ -41,7 +41,9 @@ _fix = None
 
 
 def load_locales():
-    return json.loads((B.ROOT / "data" / "locales-2027.json").read_text("utf-8"))
+    """locales-2027.json, with the bulletin data of locales-2027-all.json laid over it (muni.overlay_locales)."""
+    import muni
+    return muni.overlay_locales(json.loads((B.ROOT / "data" / "locales-2027.json").read_text("utf-8")))
 
 
 def D(iso):
@@ -64,7 +66,7 @@ def first_sentences(s, limit):
 
 
 def ld(*objs):
-    return "".join(f'<script type="application/ld+json">{json.dumps({"@context": SCHEMA, **o}, ensure_ascii=False)}</script>'
+    return "".join(f'<script type="application/ld+json">{json.dumps({"@context": SCHEMA, **o}, ensure_ascii=False, separators=(",", ":"))}</script>'
                    for o in objs if o)
 
 
@@ -112,13 +114,26 @@ def write(path, page, lastmod, langs=None):
     d = B.OUT / path
     d.mkdir(parents=True, exist_ok=True)
     noindex = 'name="robots" content="noindex' in page
-    if not noindex and '"@type": "WebPage"' not in page:  # every indexable page states its content date
+    if not noindex and not re.search(r'"@type": ?"WebPage"', page):  # every indexable page states its content date
         m = re.search(r"<title>(.*?)</title>", page)
         page = page.replace("</head>", ld(webpage_ld(html.unescape(m.group(1)), path, lastmod)) + "\n</head>", 1)
     (d / "index.html").write_text(_fix(page), "utf-8", newline="\n")
     if noindex:
         return  # reachable, but not in the sitemap
     _written.append((path, lastmod, langs) if langs else (path, lastmod))
+
+
+def prov_links(region, province=None):
+    """Links to the province pages of munipages.py (all municipalities with their status), Spanish, when MUNI_ON."""
+    import muni
+    if not (ES and muni.MUNI_ON):
+        return ""
+    ps = [p for p in muni.catalogue()["provs"] if p["region"] == region and p["path"] and (province is None or p["name"] == province)]
+    if not ps:
+        return ""
+    lab = "Todos los municipios" if province is None else "Los demás municipios"
+    return (f'<p class="more-l">{lab}: ' + " · ".join(f'<a href="{B.BASE}{p["path"]}">{E(p["label"])} ({len(p["munis"])})</a>' for p in ps)
+            + "</p>")
 
 
 def school_link(r):
@@ -217,7 +232,7 @@ def city_page(x, siblings, mine, pend):
     rnames = B.R(r)
     near = B.section("locales", E(B.fill(t("h_loc"), rnames)),
                      city_list(siblings) + f'<p class="more-l"><a href="{B.BASE}{r["slug"]}/">{E(B.fill(t("h1_region"), rnames))}</a> · '
-                     f'<a href="{B.BASE}festivos-locales/">{t("nav_locals")} 2027</a>{school_link(r)}</p>')
+                     f'<a href="{B.BASE}festivos-locales/">{t("nav_locals")} 2027</a>{school_link(r)}</p>' + prov_links(r["slug"], c["province"]))
     key = f'{r["slug"]}-{c["slug"]}'
     upd_date = guia.lastmod(src["checked"], DATA["updated"], B.CONTENT_UPDATED if ES else None)
     lds = [crumbs_ld(crumbs), webpage_ld(title, x["path"], upd_date) if ES else None, list_ld(B.fill(t("h_hol"), {**rnames, "region": name, "region_in": x["in"]}), x["hols"]),
@@ -226,7 +241,9 @@ def city_page(x, siblings, mine, pend):
            faq_ld(qas)]
     ctx = {**x, "crumbs": B.crumbs_html(crumbs)}
     # Spanish: indexable, no hreflang. ca/gl/eu: the same template translated, kept for users but noindex (seo/AUDIT-2026-11.md)
-    head = B.head_html(title, desc, x["path"], f"{B.SITE}{B.ASSETS}og/{key}.png", ld(*lds), alts=False, index=ES)
+    # c["new"]: published after the AdSense review request (muni.overlay_locales): no ads until the site is approved
+    head = B.head_html(title, desc, x["path"], f"{B.SITE}{B.ASSETS}og/{key}.png", ld(*lds), alts=False, index=ES,
+                       ads=not c.get("new"))
     lead = guia.city_lead(x) + guia.upd(upd_date) if ES else ""
     notes = guia.city_notes(x, ALL_CITIES) if ES else ""
     main = B.app_main(DATA, r, ctx, srcline, notes + near + faq_html(qas), mine, pend, lead)
@@ -352,7 +369,7 @@ def region_page(r, cities, pending):
     pend = f'<p class="m">Pendientes de publicar: {E(", ".join(pending))}.</p>' if pending and ES else ""
     locs = B.section("locales", E(B.fill(t("h_loc"), names)),
                      city_list(cities) + pend + f'<p class="more-l"><a href="{B.BASE}festivos-locales/">{t("nav_locals")} 2027</a>{school_link(r)}'
-                     f'{workdays_link(r)}</p>')
+                     f'{workdays_link(r)}</p>' + prov_links(slug))
     crumbs = [(t("spain"), ""), (name, f"{slug}/")]
     hname = B.fill(t("h_hol"), names)
     upd_date = guia.lastmod(DATA["updated"], B.CONTENT_UPDATED if ES else None)
@@ -480,7 +497,8 @@ def write_pages(data, fix):
         import muni
         buscar.page(data, muni.index_rows()[1], write, upd)
         if muni.MUNI_ON:
-            muni.write_pages(sys.modules[__name__], write)
+            import munipages
+            munipages.write_pages(sys.modules[__name__], write)
     return list(_written)
 
 

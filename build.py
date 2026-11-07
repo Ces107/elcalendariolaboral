@@ -480,12 +480,10 @@ ADSENSE = ('<script async src="https://pagead2.googlesyndication.com/pagead/js/a
            'crossorigin="anonymous"></script>')
 SW_JS = ("<script>if('serviceWorker'in navigator)addEventListener('load',function(){navigator.serviceWorker.register('"
          + ASSETS + "sw.js',{scope:'" + ASSETS + "'}).catch(function(){})});</script>")
-CHEV = '<svg class="chev" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M1.5 3.5 5 7l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>'
-GLOBE = ('<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.3"/>'
-         '<path d="M1.5 8h13M8 1.5c2 2 2.8 4.2 2.8 6.5S10 12.5 8 14.5M8 1.5C6 3.5 5.2 5.7 5.2 8S6 12.5 8 14.5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>')
-BURGER = '<svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.8"/></svg>'
-DLOAD = ('<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v8m-3.5-3.5L8 10l3.5-3.5M3 13.5h10" fill="none" '
-         'stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>')
+CHEV = '<i class="ic chev ic-chev" aria-hidden="true"></i>'
+GLOBE = '<i class="ic ic-globe" aria-hidden="true"></i>'
+BURGER = '<i class="ic ic-burger" aria-hidden="true"></i>'
+DLOAD = '<i class="ic ic-dload" aria-hidden="true"></i>'
 # PWA install button until the Play app is out: label, iPhone steps, other browsers' steps
 INSTALL = {
     "es": ("Instalar app", "En iPhone: pulsa Compartir y luego «Añadir a pantalla de inicio».",
@@ -519,8 +517,7 @@ def wordmark():
     return f'<a class="brand" href="{BASE}"><i class="mark" aria-hidden="true"></i>elcalendariolaboral<span class="tld">.es</span></a>'
 
 
-MAG = ('<svg class="mag" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="7.5" cy="7.5" r="5.5" fill="none" '
-       'stroke="currentColor" stroke-width="1.8"/><path d="m11.6 11.6 4.6 4.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>')
+MAG = '<i class="ic mag ic-mag" aria-hidden="true"></i>'
 
 
 def search_box(id_, big=False):
@@ -534,16 +531,17 @@ def search_box(id_, big=False):
             f'<ul class="sb-l" id="{id_}-l" role="listbox" aria-label="{E(t("search"))}" hidden></ul></form>')
 
 
-def header_html(here=""):
+def header_html(here="", lean=False):
     """Wordmark, nav (Comunidades menu; Festivos menu in Spanish, Festivos locales link in ca/gl/eu; Puentes), search and
-    the language menu."""
+    the language menu. lean (8,000 municipality pages, Spanish only): Comunidades is a link, no install or language menu."""
     regs = "".join(f'<a href="{BASE}{r["slug"]}/">{E(r["name"])}</a>' for r in REGIONS)
     srch = (f'<details class="dd dd-srch"><summary aria-label="{E(t("search"))}">{MAG}<span class="sr-l">{t("search_go")}</span></summary>'
             f'<div class="menu menu-srch">{search_box("q-hd")}</div></details>')
     pts_href = f"{BASE}puentes/" if LANG == "es" else ("#puentes" if here == "app" else f"{BASE}#puentes")
     return (f'<header class="hd"><div class="wrap hd-in">{wordmark()}'
             f'<nav class="nav" id="nav">'
-            f'<details class="dd dd-reg"><summary>{t("nav_regions")}{CHEV}</summary><div class="menu menu-reg">{regs}</div></details>'
+            + (f'<a href="{BASE}#comunidades">{t("nav_regions")}</a>' if lean else
+               f'<details class="dd dd-reg"><summary>{t("nav_regions")}{CHEV}</summary><div class="menu menu-reg">{regs}</div></details>')
             + (f'<details class="dd dd-fest"><summary>Festivos{CHEV}</summary><div class="menu menu-fest">'
                f'<a href="{BASE}festivos/"{" aria-current=page" if here == "fest" else ""}>Festivos 2027</a>'
                f'<a href="{BASE}semana-santa/">Semana Santa 2027</a>'
@@ -553,10 +551,10 @@ def header_html(here=""):
             + f'<a href="{pts_href}">{t("nav_bridges")}</a>'
             + (f'<a href="{BASE}vacaciones-2027/"{" aria-current=page" if here == "vac" else ""}>Vacaciones</a>' if LANG == "es" else "")
             + '</nav>'
-            f'{srch}{install_html()}'
-            f'<details class="dd dd-lang"><summary>{GLOBE}<span class="ln-l">{LANG_NAMES[LANG]}</span><span class="ln-s">{LANG.upper()}</span>{CHEV}</summary>'
-            f'<div class="menu menu-lang">{lang_links()}</div></details>'
-            f'<button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="nav" aria-label="{t("menu")}">{BURGER}</button>'
+            + srch + ("" if lean else
+                      f'{install_html()}<details class="dd dd-lang"><summary>{GLOBE}<span class="ln-l">{LANG_NAMES[LANG]}</span>'
+                      f'<span class="ln-s">{LANG.upper()}</span>{CHEV}</summary><div class="menu menu-lang">{lang_links()}</div></details>')
+            +             f'<button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="nav" aria-label="{t("menu")}">{BURGER}</button>'
             f'</div></header>')
 
 
@@ -804,14 +802,9 @@ def tools_html(key=None, ics_name="", monthly=True):
     return f'<div class="tools">{out}</div>'
 
 
-GCAL_I = ('<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="12" rx="2" fill="none" '
-          'stroke="currentColor" stroke-width="1.5"/><path d="M1.5 6.5h13M5 1v3m6-3v3" stroke="currentColor" stroke-width="1.5"/>'
-          '<path d="M8 8.5v4M6 10.5h4" stroke="currentColor" stroke-width="1.5"/></svg>')
-SHARE_I = ('<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="12" cy="3.5" r="2" fill="none" stroke="currentColor" '
-           'stroke-width="1.5"/><circle cx="4" cy="8" r="2" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12.5" r="2" '
-           'fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m5.8 7 4.4-2.5M5.8 9l4.4 2.5" stroke="currentColor" stroke-width="1.5"/></svg>')
-PRINT_I = ('<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6V1.5h8V6M4 12H2.5A1 1 0 0 1 1.5 11V7a1 1 0 0 1 1-1h11a1 '
-           '1 0 0 1 1 1v4a1 1 0 0 1-1 1H12M4 9.5h8v5H4z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>')
+GCAL_I = '<i class="ic ic-gcal" aria-hidden="true"></i>'
+SHARE_I = '<i class="ic ic-share" aria-hidden="true"></i>'
+PRINT_I = '<i class="ic ic-print" aria-hidden="true"></i>'
 
 
 def sq(s):
@@ -865,7 +858,7 @@ def gcal_event(date, name, place):
     """Google Calendar 'add event' link for one all-day holiday."""
     d = _d(date)
     n = d + dt.timedelta(1)
-    q = f"action=TEMPLATE&text={quote(name + ' · ' + place)}&dates={d:%Y%m%d}/{n:%Y%m%d}&details={quote(SITE + BASE)}"
+    q = f"action=TEMPLATE&text={quote(name + ' · ' + place)}&dates={d:%Y%m%d}/{n:%Y%m%d}"
     return f"https://calendar.google.com/calendar/render?{q}"
 
 
@@ -894,15 +887,26 @@ def scripts(data):
             f'<script src="{ASSETS}app.js?v={{JSV}}"></script>\n{SW_JS}')
 
 
-def page(head, body_cls, header_here, main, data, attrs="", js=True):
+def footer_lean(data):
+    """Footer of the municipality and province pages: the trust and data links, without the long lists."""
+    s = data["source"]
+    links = [("festivos/", "Festivos 2027"), ("festivos-locales/", "Festivos locales 2027"), ("puentes/", "Puentes 2027"),
+             ("buscar/", "Todas las provincias"), ("widget/", "Widget para tu web"), ("sobre/", "Quién hace esta web"), ("contacto/", "Contacto"),
+             ("aviso-legal/", "Aviso legal"), ("privacidad/", "Privacidad")]
+    li = "".join(f'<li><a href="{ASSETS}{p}">{n}</a></li>' for p, n in links)
+    return (f'<footer class="ft"><div class="wrap"><ul class="ft-l">{li}<li><a href="{s["url"]}" rel="noopener">{t("data_source")}</a></li>'
+            f'</ul></div><div class="wrap ft-b">© 2026 {HOST}</div></footer>')
+
+
+def page(head, body_cls, header_here, main, data, attrs="", js=True, lean=False):
     tail = scripts(data) if js else f'<script src="{ASSETS}app.js?v={{JSV}}"></script>\n{SW_JS}'
     return head + f"""<body class="{body_cls}"{attrs}>
 <a class="skip" href="#main">{E(t("h1"))}</a>
-{header_html(header_here)}
+{header_html(header_here, lean)}
 <main id="main">
 {main}
 </main>
-{footer_html(data)}
+{footer_lean(data) if lean else footer_html(data)}
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 {tail}
 </body>
