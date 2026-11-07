@@ -4,7 +4,7 @@ Live URLs (elcalendariolaboral.es), Lighthouse 13.6 headless (Playwright Chromiu
 busy PC: Performance and TBT vary ±10 points between runs; treat them as indicative. "before" = live before this pass,
 "after" = live with commit 8d8e52113 (minified deferred JS, versioned fonts with 3 preloads, CSP, ad preconnect).
 The last change (font-display: optional, commit after 8d8e52113) aims at the festivos desktop CLS and was not re-measured.
-Reports: `before-*`, `after-*` (intermediate, with content-visibility, reverted) and `final-*` (.report.json/.html).
+Reports: `before-*` and `final-*` (.report.json/.html).
 
 | Page | Device | Performance | Accessibility | Best practices | SEO | LCP | CLS | TBT |
 |---|---|---|---|---|---|---|---|---|
