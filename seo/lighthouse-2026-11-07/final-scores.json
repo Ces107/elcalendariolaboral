@@ -1,0 +1,166 @@
+{
+ "home/mobile": {
+  "performance": 70,
+  "accessibility": 100,
+  "best-practices": 100,
+  "seo": 100,
+  "lcp": "1.1\u00a0s",
+  "cls": "0",
+  "tbt": "2,770\u00a0ms",
+  "fails": []
+ },
+ "home/desktop": {
+  "performance": 83,
+  "accessibility": 100,
+  "best-practices": 100,
+  "seo": 100,
+  "lcp": "0.6\u00a0s",
+  "cls": "0",
+  "tbt": "370\u00a0ms",
+  "fails": []
+ },
+ "comunidad/mobile": {
+  "performance": 71,
+  "accessibility": 100,
+  "best-practices": 100,
+  "seo": 100,
+  "lcp": "1.0\u00a0s",
+  "cls": "0",
+  "tbt": "2,430\u00a0ms",
+  "fails": []
+ },
+ "comunidad/desktop": {
+  "performance": 99,
+  "accessibility": 100,
+  "best-practices": 100,
+  "seo": 100,
+  "lcp": "0.8\u00a0s",
+  "cls": "0.003",
+  "tbt": "80\u00a0ms",
+  "fails": []
+ },
+ "ciudad/mobile": {
+  "performance": 71,
+  "accessibility": 100,
+  "best-practices": 100,
+  "seo": 100,
+  "lcp": "0.9\u00a0s",
+  "cls": "0",
+  "tbt": "2,260\u00a0ms",
+  "fails": []
+ },
+ "ciudad/desktop": {
+  "performance": 90,
+  "accessibility": 100,
+  "best-practices": 100,
+  "seo": 100,
+  "lcp": "1.0\u00a0s",
+  "cls": "0",
+  "tbt": "210\u00a0ms",
+  "fails": []
+ },
+ "municipio-oficial/mobile": {
+  "performance": 89,
+  "accessibility": 100,
+  "best-practices": 100,
+  "seo": 100,
+  "lcp": "1.1\u00a0s",
+  "cls": "0",
+  "tbt": "420\u00a0ms",
+  "fails": []
+ },
+ "municipio-oficial/desktop": {
+  "performance": 95,
+  "accessibility": 100,
+  "best-practices": 100,
+  "seo": 100,
+  "lcp": "0.5\u00a0s",
+  "cls": "0",
+  "tbt": "160\u00a0ms",
+  "fails": []
+ },
+ "municipio-pendiente/mobile": {
+  "performance": 77,
+  "accessibility": 100,
+  "best-practices": 100,
+  "seo": 63,
+  "lcp": "1.0\u00a0s",
+  "cls": "0",
+  "tbt": "1,100\u00a0ms",
+  "fails": [
+   "is-crawlable(0)"
+  ]
+ },
+ "municipio-pendiente/desktop": {
+  "performance": 100,
+  "accessibility": 100,
+  "best-practices": 100,
+  "seo": 63,
+  "lcp": "0.4\u00a0s",
+  "cls": "0.002",
+  "tbt": "0\u00a0ms",
+  "fails": [
+   "is-crawlable(0)"
+  ]
+ },
+ "provincia/mobile": {
+  "performance": 82,
+  "accessibility": 100,
+  "best-practices": 100,
+  "seo": 100,
+  "lcp": "0.9\u00a0s",
+  "cls": "0",
+  "tbt": "730\u00a0ms",
+  "fails": []
+ },
+ "provincia/desktop": {
+  "performance": 100,
+  "accessibility": 100,
+  "best-practices": 100,
+  "seo": 100,
+  "lcp": "0.3\u00a0s",
+  "cls": "0",
+  "tbt": "0\u00a0ms",
+  "fails": []
+ },
+ "festivos/mobile": {
+  "performance": 75,
+  "accessibility": 100,
+  "best-practices": 100,
+  "seo": 100,
+  "lcp": "0.9\u00a0s",
+  "cls": "0",
+  "tbt": "1,340\u00a0ms",
+  "fails": []
+ },
+ "festivos/desktop": {
+  "performance": 87,
+  "accessibility": 100,
+  "best-practices": 100,
+  "seo": 100,
+  "lcp": "0.4\u00a0s",
+  "cls": "0.079",
+  "tbt": "280\u00a0ms",
+  "fails": []
+ },
+ "semana-santa/mobile": {
+  "performance": 72,
+  "accessibility": 100,
+  "best-practices": 100,
+  "seo": 100,
+  "lcp": "0.9\u00a0s",
+  "cls": "0",
+  "tbt": "1,930\u00a0ms",
+  "fails": []
+ },
+ "semana-santa/desktop": {
+  "performance": 87,
+  "accessibility": 100,
+  "best-practices": 100,
+  "seo": 100,
+  "lcp": "0.3\u00a0s",
+  "cls": "0.003",
+  "tbt": "310\u00a0ms",
+  "fails": []
+ }
+}
