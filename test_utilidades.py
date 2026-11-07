@@ -108,7 +108,7 @@ else:
     print("node not found: JS checks skipped")
 
 # ---------------------------------------------------------------- generated pages
-sm = (ROOT / "sitemap.xml").read_text("utf-8")
+sm = "".join(p.read_text("utf-8") for p in sorted(ROOT.glob("sitemap-*.xml")))  # sitemap.xml is the index
 for path, only in ((U.PATH_WK, U.ONLY_WK), (U.PATH_DH, U.ONLY_DH), (U.PATH_DL, U.ONLY_DL), (U.PATH_CH, U.ONLY_CH)):
     for lang in only:
         url = f"{B.SITE}{B.lang_base(lang)}{path}"

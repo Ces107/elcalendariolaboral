@@ -80,6 +80,13 @@ def faq_ld(qas):
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": strip(a)}} for q, a in qas]}
 
 
+def webpage_ld(name, path, date):
+    """WebPage with the visible 'Actualizado' date (never the build date)."""
+    return {"@type": "WebPage", "name": name, "url": B.URL + path, "inLanguage": B.IN_LANG[B.LANG], "dateModified": date,
+            "isPartOf": {"@type": "WebSite", "@id": f"{B.SITE}{B.ASSETS}#web", "name": t("site_name"), "url": f"{B.SITE}{B.ASSETS}"},
+            "publisher": {"@type": "Organization", "@id": f"{B.SITE}{B.ASSETS}#org", "name": t("site_name")}}
+
+
 def list_ld(name, hols):
     return {"@type": "ItemList", "name": name, "numberOfItems": len(hols), "itemListElement": [
         {"@type": "ListItem", "position": k + 1, "name": f'{h["name"]} · {B.dlong(h["date"])} 2027'} for k, h in enumerate(hols)]}
@@ -104,8 +111,12 @@ def write(path, page, lastmod, langs=None):
     """langs: the languages this page exists in, when not all of them (the sitemap lists only those)."""
     d = B.OUT / path
     d.mkdir(parents=True, exist_ok=True)
+    noindex = 'name="robots" content="noindex' in page
+    if not noindex and '"@type": "WebPage"' not in page:  # every indexable page states its content date
+        m = re.search(r"<title>(.*?)</title>", page)
+        page = page.replace("</head>", ld(webpage_ld(html.unescape(m.group(1)), path, lastmod)) + "\n</head>", 1)
     (d / "index.html").write_text(_fix(page), "utf-8", newline="\n")
-    if 'name="robots" content="noindex' in page:
+    if noindex:
         return  # reachable, but not in the sitemap
     _written.append((path, lastmod, langs) if langs else (path, lastmod))
 
@@ -167,13 +178,18 @@ def city_page(x, siblings, mine, pend):
     c, r, name = x["c"], x["r"], x["title_name"]
     h1, h2 = x["holidays"]
     if ES:
-        title = B.pick(60, f"Calendario laboral 2027 {name}: festivos y puentes", f"Calendario laboral 2027 {name}: festivos locales",
-                       f"Festivos 2027 {name}: calendario laboral", f"Calendario laboral 2027 {name}")
+        sn = c["name"]  # "Valencia", not "Valencia capital": the dates make it the city
+        d1, d2 = B.dmon(h1["date"]), B.dmon(h2["date"])
+        title = B.pick(60, f"Calendario laboral {sn} 2027: festivos {d1} y {d2} | Puentes",
+                       f"Calendario laboral {sn} 2027: festivos {d1} y {d2}", f"Calendario laboral {sn} 2027: {d1} y {d2}",
+                       f"Festivos {sn} 2027: {d1} y {d2}", f"Calendario laboral {sn} 2027")
+        nm = lambda h: "" if h["name"].startswith("Fiesta local") else f' ({h["name"]})'  # noqa: E731
+        tail = f'Con los {x["boe"]} de {r["name"]}: {x["n"]} festivos, {len(x["pts"])} puentes y {x["lab"]} días laborables.'
         desc = B.pick(155,
-                      f'Festivos 2027 en {name}: los {x["boe"]} de {r["name"]} y los 2 locales ({B.dlong(h1["date"])} y {B.dlong(h2["date"])}), con puentes, días laborables y descarga a tu calendario.',
-                      f'Festivos 2027 en {name}: los {x["boe"]} de {r["name"]} y los 2 locales ({B.dmon(h1["date"])} y {B.dmon(h2["date"])}), con puentes, días laborables y descarga a tu calendario.',
-                      f'Festivos 2027 en {name}: los {x["boe"]} de {r["name"]} y los 2 locales ({B.dmon(h1["date"])} y {B.dmon(h2["date"])}), con puentes y descarga a tu calendario.',
-                      f'Festivos 2027 en {name}: {x["boe"]} del BOE y 2 locales ({B.dmon(h1["date"])} y {B.dmon(h2["date"])}).')
+                      f'Festivos locales de {sn} en 2027: {B.dlong(h1["date"])}{nm(h1)} y {B.dlong(h2["date"])}{nm(h2)}. {tail}',
+                      f'Festivos locales de {sn} en 2027: {B.dlong(h1["date"])} y {B.dlong(h2["date"])}. {tail}',
+                      f'Festivos locales de {sn} en 2027: {d1} y {d2}. {tail}',
+                      f'Festivos locales de {sn} en 2027: {d1} y {d2}. {x["n"]} festivos, {len(x["pts"])} puentes y {x["lab"]} días laborables.')
     else:
         suffix = t("title_region").split(":", 1)[1].strip()
         title = B.pick(60, f'{t("h1")} · {name}: {suffix}', f'{t("h1")} · {name}', name)
@@ -203,14 +219,14 @@ def city_page(x, siblings, mine, pend):
                      city_list(siblings) + f'<p class="more-l"><a href="{B.BASE}{r["slug"]}/">{E(B.fill(t("h1_region"), rnames))}</a> · '
                      f'<a href="{B.BASE}festivos-locales/">{t("nav_locals")} 2027</a>{school_link(r)}</p>')
     key = f'{r["slug"]}-{c["slug"]}'
-    lds = [crumbs_ld(crumbs), list_ld(B.fill(t("h_hol"), {**rnames, "region": name, "region_in": x["in"]}), x["hols"]),
+    upd_date = guia.lastmod(src["checked"], DATA["updated"], B.CONTENT_UPDATED if ES else None)
+    lds = [crumbs_ld(crumbs), webpage_ld(title, x["path"], upd_date) if ES else None, list_ld(B.fill(t("h_hol"), {**rnames, "region": name, "region_in": x["in"]}), x["hols"]),
            dataset_ld(B.fill(t("h_hol"), {**rnames, "region": name, "region_in": x["in"]}), desc,
                       x["path"], c["name"], [DATA["source"]["url"], src["url"]], [("text/calendar", f"ics/{key}.ics"), ("text/csv", f"csv/{key}.csv")]),
            faq_ld(qas)]
     ctx = {**x, "crumbs": B.crumbs_html(crumbs)}
     # Spanish: indexable, no hreflang. ca/gl/eu: the same template translated, kept for users but noindex (seo/AUDIT-2026-11.md)
     head = B.head_html(title, desc, x["path"], f"{B.SITE}{B.ASSETS}og/{key}.png", ld(*lds), alts=False, index=ES)
-    upd_date = guia.lastmod(src["checked"], DATA["updated"], B.CONTENT_UPDATED if ES else None)
     lead = guia.city_lead(x) + guia.upd(upd_date) if ES else ""
     notes = guia.city_notes(x, ALL_CITIES) if ES else ""
     main = B.app_main(DATA, r, ctx, srcline, notes + near + faq_html(qas), mine, pend, lead)
@@ -281,9 +297,19 @@ def region_facts(r):
 def region_titles(r, f):
     names = B.R(r)
     if ES:
-        title = B.pick(60, t("title_region", region=r["name"]), t("title_region2", region=r["name"]))
-        desc = B.pick(155, t("desc_region", region=r["name"], n=f["n"], p=len(f["pts"])),
-                      f'Festivos 2027 en {r["name"]}: los {f["n"]} del BOE con su día, {len(f["pts"])} puentes y planificador. Añade tus 2 locales.')
+        nm, n, p = r["name"], f["n"] + (1 if f["can"] else 0), len(f["pts"])
+        lab = B.workdays(f["hols"], 1 if f["can"] else 0)
+        title = B.pick(60, f"Calendario laboral {nm} 2027: {n} festivos y {p} puentes",
+                       f"Calendario laboral {nm} 2027: {n} festivos y puentes", f"Calendario laboral {nm} 2027: {n} festivos",
+                       t("title_region", region=nm), t("title_region2", region=nm))
+        own = ", ".join(f'{h["name"]} ({B.dmon(h["date"])})' for h in f["own"])
+        isl = " y la fiesta de cada isla" if f["can"] else ""
+        desc = B.pick(155,
+                      f'{nm} tiene {f["n"]} festivos en 2027{isl}: {len(f["nat"])} nacionales y {len(f["own"])} propios, '
+                      f'{own}. {p} puentes y {lab} días laborables.',
+                      f'{nm} tiene {f["n"]} festivos en 2027{isl}: {len(f["nat"])} nacionales y {len(f["own"])} propios, '
+                      f'{", ".join(B.dmon(h["date"]) for h in f["own"])}. {p} puentes y {lab} días laborables.',
+                      f'Festivos 2027 en {nm}: {f["n"]}{isl}, {p} puentes y {lab} días laborables, más los 2 locales de tu municipio.')
         return title, desc
     cands = []
     if names["seo"]:
@@ -329,12 +355,13 @@ def region_page(r, cities, pending):
                      f'{workdays_link(r)}</p>')
     crumbs = [(t("spain"), ""), (name, f"{slug}/")]
     hname = B.fill(t("h_hol"), names)
-    lds = [crumbs_ld(crumbs), list_ld(hname, f["hols"]),
+    upd_date = guia.lastmod(DATA["updated"], B.CONTENT_UPDATED if ES else None)
+    lds = [crumbs_ld(crumbs), webpage_ld(title, f"{slug}/", upd_date), list_ld(hname, f["hols"]),
            dataset_ld(hname, desc, f"{slug}/", r["official"], DATA["source"]["url"],
                       [("text/calendar", f"ics/{slug}.ics"), ("text/csv", f"csv/{slug}.csv")]),
            faq_ld(qas)]
     head = B.head_html(title, desc, f"{slug}/", f"{B.SITE}{B.ASSETS}og/{slug}.png", ld(*lds))
-    lead = (guia.region_lead(r) if ES else "") + guia.upd(guia.lastmod(DATA["updated"], B.CONTENT_UPDATED if ES else None))
+    lead = (guia.region_lead(r) if ES else "") + guia.upd(upd_date)
     notes = guia.region_notes(r, ALL_CITIES) if ES else ""
     main = B.app_main(DATA, r, None, "", notes + locs + faq_html(qas), cities, pending, lead)
     return B.page(head, "app", "app", main, DATA, B.app_attrs(r))
@@ -363,16 +390,27 @@ def home_page():
                 f"261 de lunes a viernes. Restando los festivos quedan entre {min(labs)} y {max(labs)}, según la comunidad, sin contar los 2 locales."),
                ("¿Cuándo es Semana Santa 2027?", "Del domingo 21 al domingo 28 de marzo. Jueves Santo es el 25 y Viernes Santo el 26.")]
     if ES:
-        title, desc = t("title_home"), t("desc_home")
+        nlabs = sorted(B.workdays(f["hols"], 1 if f["can"] else 0) for f in regs.values())
+        title = "Calendario laboral 2027: festivos y puentes de España"
+        desc = B.pick(155, f'Calendario laboral 2027 según el BOE: {len(nat)} festivos nacionales, los de cada comunidad y los '
+                           f'2 locales de tu municipio. Puentes y de {nlabs[0]} a {nlabs[-1]} días laborables.',
+                      t("desc_home"))
     else:
         title, desc = B.pick(60, t("title_home"), t("h1")), first_sentences(t("desc_home"), 155)
     sp = {"region": t("spain"), "region_in": t("in_spain"), "region_of": t("spain")}
     chips = "".join(f'<li><a href="{B.BASE}{r["slug"]}/">{E(r["name"])}</a></li>' for r in DATA["regions"])
     n_regions = B.I18N["ui"]["n_regions"][B.LANG] if B.I18N else "19 comunidades"
-    upd = guia.upd(guia.lastmod(DATA["updated"], B.CONTENT_UPDATED if ES else None), src=False)
-    hero = (f'<div class="hero wrap"><h1>{E(t("h1"))}</h1>{guia.home_lead() if ES else ""}<p class="ctx">{E(n_regions)} · {tn("n_nat", len(nat))} · '
-            f'<a href="{DATA["source"]["url"]}" rel="noopener">{t("data_source")}</a></p>{upd}<p class="next" id="next" hidden></p>'
-            f'<div class="pickers">{B.region_select(None)}</div></div>')
+    upd_date = guia.lastmod(DATA["updated"], B.CONTENT_UPDATED if ES else None)
+    upd = guia.upd(upd_date, src=False)
+    labs = sorted(B.workdays(f["hols"], 1 if f["can"] else 0) for f in regs.values())
+    lab_rng = tn("n_lab", labs[-1]).replace(str(labs[-1]), f"{labs[0]}–{labs[-1]}", 1)
+    stats = B.stats_html([(None, tn("n_nat", len(nat))), (None, lab_rng), (None, tn("n_pts", len(B.puentes(nat))))])
+    hero = ('<div class="hero wrap">'
+            + B.hero_grid(f'<h1>{E(t("h1"))}</h1>{guia.home_lead() if ES else ""}{B.search_box("q-home", big=True)}',
+                          B.next_card(nat) + stats,
+                          f'<div class="pickers">{B.region_select(None)}</div>'
+                          f'<p class="ctx">{E(n_regions)} · <a href="{DATA["source"]["url"]}" rel="noopener">{t("data_source")}</a></p>{upd}')
+            + '</div>')
     cal_sec = B.section("calendario", t("h_cal"), B.legend_html(["n"]) + B.year_html(nat), B.tools_html(), "cal")
     school = (f'<p class="more-l"><a href="{B.BASE}calendario-escolar/">Calendario escolar 2026-2027</a> · '
               f'<a href="{B.BASE}vacaciones-escolares/navidad/">Vacaciones de Navidad 2026-2027</a> · '
@@ -385,10 +423,13 @@ def home_page():
     pts_sec = B.section("puentes", E(B.fill(t("h_pts"), sp)), f'<table class="tbl pts">{B.pts_head()}<tbody>{prow}</tbody></table>{vac}')
     notes = guia.home_notes() if ES else ""
     main = f'{hero}<div class="wrap body">{cal_sec}{B.ad("cal")}{reg_sec}{hol_sec}{pts_sec}{notes}{faq_html(qas)}</div>{B.POP}'
-    lds = [{"@type": "WebSite", "name": t("site_name"), "alternateName": B.HOST, "url": B.URL, "inLanguage": B.IN_LANG[B.LANG]},
-           {"@type": "Organization", "name": t("site_name"), "url": f"{B.SITE}{B.ASSETS}", "logo": f"{B.SITE}{B.ASSETS}icons/icon-512.png",
-            "email": B.EMAIL, "publishingPrinciples": f"{B.SITE}{B.ASSETS}sobre/"},
-           faq_ld(qas)]
+    org = f"{B.SITE}{B.ASSETS}#org"
+    # No SearchAction: Google retired the sitelinks search box (Nov 2024) and /buscar/ is a noindex fallback.
+    lds = [{"@type": "WebSite", "@id": f"{B.SITE}{B.ASSETS}#web", "name": t("site_name"), "alternateName": B.HOST, "url": B.URL,
+            "inLanguage": B.IN_LANG[B.LANG], "publisher": {"@id": org}},
+           {"@type": "Organization", "@id": org, "name": t("site_name"), "url": f"{B.SITE}{B.ASSETS}",
+            "logo": f"{B.SITE}{B.ASSETS}icons/icon-512.png", "email": B.EMAIL, "publishingPrinciples": f"{B.SITE}{B.ASSETS}sobre/"},
+           webpage_ld(title, "", upd_date), faq_ld(qas)]
     head = B.head_html(title, desc, "", f"{B.SITE}{B.ASSETS}og/espana.png", ld(*lds))
     return B.page(head, "home", "", main, DATA)
 
@@ -435,6 +476,11 @@ def write_pages(data, fix):
         vacaciones.write_pages(data, write, cities)
         import pdfhub
         pdfhub.write_page(data, write, cities)
+        import buscar
+        import muni
+        buscar.page(data, muni.index_rows()[1], write, upd)
+        if muni.MUNI_ON:
+            muni.write_pages(sys.modules[__name__], write)
     return list(_written)
 
 
@@ -472,7 +518,8 @@ def write_shared(data, img=True):
         (B.ROOT / "csv" / f"{key}.csv").write_bytes(csv_text(rows).encode("utf-8"))
         (B.ROOT / "ics" / f"{key}.ics").write_bytes(B.ics_text(x["hols"], x["title_name"], key).encode("utf-8"))
         if img:
-            B.og_image(B.ROOT / "og" / f"{key}.png", x["title_name"], t("og_sub", n=x["n"], p=len(x["pts"])), x["hols"])
+            B.og_image(B.ROOT / "og" / f"{key}.png", x["title_name"], f'{t("og_sub", n=x["n"], p=len(x["pts"]))} · {x["lab"]} laborables',
+                       x["hols"], [(h["date"], "l") for h in x["holidays"]], "Festivos locales")
     if img and ES:
         import escolar
         escolar.og_images()

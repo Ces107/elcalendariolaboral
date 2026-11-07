@@ -63,6 +63,155 @@
   if ($('region')) $('region').addEventListener('change', function () { if (this.value) location.href = BASE + this.value + '/'; });
   if ($('city')) $('city').addEventListener('change', function () { location.href = this.value; });
 
+  var ASSETS0 = html.getAttribute('data-assets') || BASE;
+  var esc0 = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+  function toast0(msg) {
+    var t = $('toast'); if (!t) return;
+    t.textContent = msg; t.classList.add('on');
+    clearTimeout(toast0.h); toast0.h = setTimeout(function () { t.classList.remove('on'); }, 2600);
+  }
+
+  /* ------------------------------------------------------------ buscador de municipios (índice estático, se pide al enfocar) */
+  var SIDX = null, SWAIT = [];
+  var fold = function (s) { return String(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(); };
+  function loadIdx(cb) {
+    if (SIDX) return cb();
+    SWAIT.push(cb);
+    if (SWAIT.length > 1) return;
+    var v = html.getAttribute('data-sidx') || '';
+    fetch(ASSETS0 + 'buscar.json' + (v && v.charAt(0) !== '{' ? '?v=' + v : '')).then(function (r) { return r.json(); }).then(function (j) {
+      var rows = [];
+      j.r.forEach(function (r) { rows.push({ n: r[0], s: 'r', p: r[1], k: [r[0]].concat(r[2] ? r[2].split('|') : []) }); });
+      j.p.forEach(function (p) {
+        if (p[2]) rows.push({ n: p[0], s: 'p', ri: p[1], p: p[2], k: [p[0]].concat(p[3] ? p[3].split('|') : []) });
+      });
+      j.m.forEach(function (m) { rows.push({ n: m[0], s: 'm', pi: m[1], p: m[2], ok: m[4] === 1, k: [m[0]].concat(m[3] ? m[3].split('|') : []) }); });
+      rows.forEach(function (r) { r.f = r.k.map(fold); });
+      SIDX = { rows: rows, r: j.r, p: j.p };
+      SWAIT.splice(0).forEach(function (f) { f(); });
+    }).catch(function () { SWAIT = []; });
+  }
+  var SL = { es: ['Comunidad autónoma', 'Provincia', 'Sin resultados', 'oficial', 'pendiente'], ca: ['Comunitat autònoma', 'Província', 'Cap resultat', 'oficial', 'pendent'],
+    gl: ['Comunidade autónoma', 'Provincia', 'Sen resultados', 'oficial', 'pendente'], eu: ['Autonomia erkidegoa', 'Probintzia', 'Emaitzarik ez', 'ofiziala', 'zain'] }[html.lang] ||
+    ['Comunidad autónoma', 'Provincia', 'Sin resultados', 'oficial', 'pendiente'];
+  function find(q) {
+    q = fold(q);
+    if (!q) return [];
+    var out = [];
+    SIDX.rows.forEach(function (r) {
+      var best = 9;
+      r.f.forEach(function (k) {
+        var s = k === q ? 0 : k.indexOf(q) === 0 ? 1 : (' ' + k).indexOf(' ' + q) >= 0 ? 2 : q.length > 2 && k.indexOf(q) > 0 ? 3 : 9;
+        if (s < best) best = s;
+      });
+      if (best < 9) out.push([best, r]);
+    });
+    var tier = { r: 0, p: 1, m: 2 };
+    out.sort(function (a, b) { return a[0] - b[0] || (a[0] ? tier[a[1].s] - tier[b[1].s] : tier[b[1].s] - tier[a[1].s]) || a[1].n.length - b[1].n.length || (a[1].n < b[1].n ? -1 : 1); });
+    return out.slice(0, 8).map(function (x) { return x[1]; });
+  }
+  function subOf(r) {
+    if (r.s === 'r') return SL[0];
+    if (r.s === 'p') return SL[1] + ' · ' + SIDX.r[r.ri][0];
+    var p = SIDX.p[r.pi], reg = SIDX.r[p[1]][0];
+    return p[0] === reg ? reg : p[0] + ' · ' + reg;
+  }
+  all('form[data-sb]').forEach(function (form) {
+    var inp = form.querySelector('input'), list = form.querySelector('.sb-l'), act = -1, res = [];
+    function close() { list.hidden = true; inp.setAttribute('aria-expanded', 'false'); inp.removeAttribute('aria-activedescendant'); act = -1; }
+    function mark(k) {
+      var lis = all('li[role=option]', list);
+      lis.forEach(function (li, j) { li.setAttribute('aria-selected', String(j === k)); });
+      act = k;
+      if (lis[k]) { inp.setAttribute('aria-activedescendant', lis[k].id); lis[k].scrollIntoView({ block: 'nearest' }); }
+    }
+    function show() {
+      if (!SIDX) return;
+      res = find(inp.value);
+      if (!inp.value.trim()) { close(); return; }
+      list.innerHTML = res.length ? res.map(function (r, j) {
+        var tag = r.s === 'm' ? '<span class="sb-t ' + (r.ok ? 'ok' : 'pe') + '">' + (r.ok ? SL[3] : SL[4]) + '</span>' : '';
+        return '<li role="option" id="' + inp.id + '-o' + j + '" aria-selected="false"><a href="' + ASSETS0 + r.p + '" tabindex="-1"><b>' + esc0(r.n) + '</b>' +
+          '<span class="sb-s">' + esc0(subOf(r)) + '</span>' + tag + '</a></li>';
+      }).join('') : '<li class="sb-0">' + SL[2] + '</li>';
+      list.hidden = false; inp.setAttribute('aria-expanded', 'true'); act = -1;
+      if (res.length) mark(0);
+    }
+    inp.addEventListener('focus', function () { loadIdx(show); });
+    inp.addEventListener('input', function () { loadIdx(show); });
+    inp.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (list.hidden) { loadIdx(show); return; }
+        if (res.length) mark((act + (e.key === 'ArrowDown' ? 1 : res.length - 1)) % res.length);
+      } else if (e.key === 'Escape' && !list.hidden) { e.stopPropagation(); close(); }
+    });
+    form.addEventListener('submit', function (e) {
+      if (res.length) { e.preventDefault(); location.href = ASSETS0 + res[Math.max(act, 0)].p; }
+      else if (SIDX) { e.preventDefault(); show(); }
+    });
+    list.addEventListener('mousedown', function (e) { e.preventDefault(); });
+    list.addEventListener('click', function (e) { var a = e.target.closest('a'); if (a) location.href = a.href; });
+    inp.addEventListener('blur', function () { setTimeout(close, 150); });
+    var dd = form.closest('details');
+    if (dd) dd.addEventListener('toggle', function () { if (dd.open) setTimeout(function () { inp.focus(); }, 0); });
+    var q = /[?&]q=([^&]*)/.exec(location.search);
+    if (q && form.classList.contains('sb-big')) { inp.value = decodeURIComponent(q[1].replace(/\+/g, ' ')); loadIdx(function () { inp.focus(); show(); }); }
+  });
+
+  /* ------------------------------------------------------------ compartir */
+  all('[data-share]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var url = location.href.split('#')[0], title = b.getAttribute('data-title') || doc.title, msg = b.getAttribute('data-copied') || 'Enlace copiado';
+      if (navigator.share) { navigator.share({ title: title, url: url }).catch(function () { /* cancelado */ }); return; }
+      var done = function () { toast0(msg); };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(done, function () { window.prompt(title, url); });
+      else window.prompt(title, url);
+    });
+  });
+
+  /* ------------------------------------------------------------ próximo festivo (la tarjeta viene hecha del servidor) */
+  var NX = $('next');
+  var NXT = (function () {
+    var d = { k: { n: 'Nacional', r: 'Autonómico', i: 'Insular', l: 'Local' }, today: 'Hoy', tomorrow: 'Mañana', left: { one: 'Falta {n} día', other: 'Faltan {n} días' },
+      wd: ['lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado', 'domingo'], mon3: ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'],
+      mof: ['de enero', 'de febrero', 'de marzo', 'de abril', 'de mayo', 'de junio', 'de julio', 'de agosto', 'de septiembre', 'de octubre', 'de noviembre', 'de diciembre'], eu: false };
+    try { var o = NX && NX.getAttribute('data-t'); return o ? JSON.parse(o) : d; } catch (e) { return d; }
+  })();
+  var NOW0 = new Date(), TODAY0 = NOW0.getFullYear() + '-' + ('0' + (NOW0.getMonth() + 1)).slice(-2) + '-' + ('0' + NOW0.getDate()).slice(-2);
+  function nextCard(hols) { /* hols: [[iso, name, kind]] */
+    if (!NX) return;
+    var h = hols.filter(function (x) { return x[0] >= TODAY0; })[0];
+    if (!h) { NX.hidden = true; return; }
+    var y = +h[0].slice(0, 4), m = +h[0].slice(5, 7) - 1, dd = +h[0].slice(8);
+    var days = Math.round((Date.UTC(y, m, dd) - Date.UTC(NOW0.getFullYear(), NOW0.getMonth(), NOW0.getDate())) / 864e5);
+    var wd = NXT.wd[(new Date(Date.UTC(y, m, dd)).getUTCDay() + 6) % 7];
+    var date = NXT.eu ? NXT.mof[m] + ' ' + (dd === 11 || dd === 31 ? dd : dd + 'a') + ', ' + wd : wd + ' ' + dd + ' ' + NXT.mof[m];
+    var set = function (k, v) { var el = NX.querySelector('[data-nx-' + k + ']'); if (el) el.textContent = v; };
+    set('m', NXT.mon3[m]); set('d', dd); set('t', date.charAt(0).toUpperCase() + date.slice(1)); set('n', h[1]); set('k', NXT.k[h[2]] || '');
+    NX.querySelector('[data-nx-t]').setAttribute('datetime', h[0]);
+    var left = NXT.left, txt = days === 0 ? NXT.today : days === 1 ? NXT.tomorrow : (days === 1 ? left.one : left.other).replace('{n}', days);
+    set('c', txt);
+    NX.className = 'nx k-' + h[2];
+    NX.hidden = false;
+  }
+  if (NX) { try { nextCard(JSON.parse(NX.getAttribute('data-hols') || '[]')); } catch (e) { /* tarjeta del servidor */ } }
+
+  /* ------------------------------------------------------------ .ics de un municipio sin archivo propio (data-hols) */
+  all('a[data-ics]').forEach(function (a) {
+    try {
+      var hols = JSON.parse(NX.getAttribute('data-hols')), name = a.getAttribute('data-ics'), host = location.host || 'elcalendariolaboral.es';
+      var L = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//' + host + '//Calendario laboral 2027//ES', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH', 'X-WR-CALNAME:Festivos 2027 · ' + name];
+      hols.forEach(function (h) {
+        var s = h[0].replace(/-/g, ''), n = new Date(Date.UTC(+h[0].slice(0, 4), +h[0].slice(5, 7) - 1, +h[0].slice(8) + 1)).toISOString().slice(0, 10).replace(/-/g, '');
+        L.push('BEGIN:VEVENT', 'UID:' + s + '-' + h[2] + '-' + a.getAttribute('data-key') + '@' + host, 'DTSTAMP:20261107T000000Z', 'DTSTART;VALUE=DATE:' + s, 'DTEND;VALUE=DATE:' + n,
+          'SUMMARY:' + h[1].replace(/[\\,;]/g, function (c) { return '\\' + c; }), 'TRANSP:TRANSPARENT', 'END:VEVENT');
+      });
+      L.push('END:VCALENDAR');
+      a.href = URL.createObjectURL(new Blob([L.join('\r\n') + '\r\n'], { type: 'text/calendar;charset=utf-8' }));
+    } catch (e) { /* queda el .ics de la comunidad */ }
+  });
+
   if (!$('cal-data')) return;
   var D = JSON.parse($('cal-data').textContent);
   var T = JSON.parse($('cal-i18n').textContent);
@@ -220,17 +369,6 @@
   var HD = {}, HOLS = [], VITEMS = [], icsUrl = null, focusIdx = null;
   var markable = function (i) { return APP && !weekend(i) && !HD[ISO[i]]; };
 
-  function nextLine(hols) {
-    var el = $('next');
-    if (!el) return;
-    var h = hols.filter(function (x) { return x.date >= TODAY; })[0];
-    if (!h) { el.hidden = true; return; }
-    var days = Math.round((Date.UTC(+h.date.slice(0, 4), +h.date.slice(5, 7) - 1, +h.date.slice(8)) - Date.UTC(NOW.getFullYear(), NOW.getMonth(), NOW.getDate())) / 864e5);
-    var when = days === 0 ? T.today : days === 1 ? T.tomorrow : tn('days_left', days);
-    el.innerHTML = '<span class="m">' + T.next_hol + ':</span> <b>' + esc(cap(dlong(IDX[h.date]))) + '</b> · ' + esc(h.name) + ' <span class="m">· ' + when + '</span>';
-    el.hidden = false;
-  }
-
   function paint(hols) {
     var hd = {}; hols.forEach(function (h) { if (!hd[h.date]) hd[h.date] = h; });
     if (focusIdx == null) { focusIdx = IDX[TODAY] != null ? IDX[TODAY] : 0; }
@@ -255,7 +393,7 @@
     var hols = holidays();
     HOLS = hols;
     HD = offDays(hols).hd;
-    nextLine(hols);
+    nextCard(hols.map(function (h) { return [h.date, h.name, h.kind]; }));
     if (GRID) paint(hols);
     if (!APP) return;
     var isCan = S.region === 'canarias' && !S.zone && !CITY;
@@ -263,7 +401,8 @@
     var addb = $('addloc');
     if (addb) addb.hidden = S.locals.filter(Boolean).length >= 2;
     var lab = 0; for (var i = 0; i < N; i++) if (!weekend(i) && !HD[ISO[i]]) lab++;
-    $('c-n').textContent = tn('n_hol', hols.length + (isCan ? 1 : 0)); $('c-l').textContent = tn('n_lab', lab - (isCan ? 1 : 0));
+    var stat = function (id, s) { var el = $(id); if (el) el.innerHTML = esc(s).replace(/\d+/, '<b>$&</b>'); };
+    stat('c-n', tn('n_hol', hols.length + (isCan ? 1 : 0))); stat('c-l', tn('n_lab', lab - (isCan ? 1 : 0))); stat('c-p', tn('n_pts', bridges(hols).length));
     $('plist').innerHTML = breaks(hols).map(function (it) { return ptsRow(it, hols); }).join('') || '<tr><td colspan="3">' + T.no_bridges + '</td></tr>';
     VITEMS = plan(hols, S.n, 4);
     $('vlist').innerHTML = VITEMS.map(planRow).join('');
@@ -282,6 +421,8 @@
     var webcal = 'webcal://' + HOST + ASSETS + 'ics/' + S.region + suffix + '.ics';
     $('gc').href = 'https://calendar.google.com/calendar/r?cid=' + encodeURIComponent(webcal);
     $('wc').href = webcal;
+    all('[data-x=dl]').forEach(function (a) { a.href = icsUrl; a.download = $('dl').download; });
+    all('[data-x=gc]').forEach(function (a) { a.href = $('gc').href; });
     var pk = S.region + suffix;
     all('[data-pdf]').forEach(function (a) {
       var fn = 'calendario-laboral-2027-' + pk + a.getAttribute('data-pdf') + '.pdf';

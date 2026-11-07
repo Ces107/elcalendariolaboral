@@ -81,7 +81,7 @@ SKIP = {".git", ".well-known", "data", "seo", "icons", "og", "ics", "csv", "priv
 allp = sorted(p for p in ROOT.rglob("index.html") if not SKIP & set(p.relative_to(ROOT).parts[:-1]))
 noidx = [p for p in allp if 'name="robots" content="noindex' in p.read_text("utf-8")]
 pages = [p for p in allp if p not in noidx]
-sm = (ROOT / "sitemap.xml").read_text("utf-8")
+sm = "".join(p.read_text("utf-8") for p in sorted(ROOT.glob("sitemap-*.xml"), key=lambda p: p.name != "sitemap-general.xml"))  # index; general first (home = site)
 locs = re.findall(r"<loc>([^<]+)</loc>", sm)
 site = locs[0].rstrip("/") if locs else ""
 paths_in_sm = {u[len(site):] for u in locs}

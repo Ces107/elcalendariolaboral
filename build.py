@@ -44,6 +44,8 @@ URL = SITE + BASE
 OUT = ROOT if LANG == "es" else ROOT / LANG
 YEAR = 2027
 DAYS = [dt.date(YEAR, 1, 1) + dt.timedelta(i) for i in range(365)]
+# Reference day for the server-rendered "Próximo festivo" (app.js recomputes it in the browser). CL_TODAY for tests.
+TODAY = os.environ.get("CL_TODAY") or dt.date.today().isoformat()
 E = html.escape
 
 
@@ -109,6 +111,21 @@ ES = {
     "og_l1": "Calendario laboral 2027", "og_home": "Festivos y puentes", "og_home_sub": "19 comunidades · BOE 13-10-2026",
     "og_sub": "{n} festivos · {p} puentes",
     "app_name": "Calendario laboral 2027", "app_short": "Laboral 2027", "app_desc": "Festivos, puentes y vacaciones 2027 por comunidad.",
+    "search": "Busca tu municipio", "search_ph": "Municipio, provincia o comunidad", "search_go": "Buscar",
+    "search_none": "Sin resultados", "share": "Compartir", "copied": "Enlace copiado", "k_region": "Comunidad autónoma",
+    "k_prov": "Provincia", "st_ok": "publicado", "st_pend": "pendiente", "n_wd": "días laborables",
+}
+# Search and share labels in the other languages (ui labels only, no editorial text)
+EXTRA = {
+    "ca": {"search": "Cerca el teu municipi", "search_ph": "Municipi, província o comunitat", "search_go": "Cerca",
+           "search_none": "Cap resultat", "share": "Comparteix", "copied": "Enllaç copiat", "k_region": "Comunitat autònoma",
+           "k_prov": "Província", "st_ok": "publicat", "st_pend": "pendent"},
+    "gl": {"search": "Busca o teu concello", "search_ph": "Concello, provincia ou comunidade", "search_go": "Buscar",
+           "search_none": "Sen resultados", "share": "Compartir", "copied": "Ligazón copiada", "k_region": "Comunidade autónoma",
+           "k_prov": "Provincia", "st_ok": "publicado", "st_pend": "pendente"},
+    "eu": {"search": "Bilatu zure udalerria", "search_ph": "Udalerria, probintzia edo erkidegoa", "search_go": "Bilatu",
+           "search_none": "Emaitzarik ez", "share": "Partekatu", "copied": "Esteka kopiatuta", "k_region": "Autonomia erkidegoa",
+           "k_prov": "Probintzia", "st_ok": "argitaratua", "st_pend": "zain"},
 }
 # Spanish "de <comunidad>" for the H1
 ES_OF = {"pais-vasco": "del País Vasco", "comunitat-valenciana": "de la Comunidad Valenciana"}
@@ -194,6 +211,7 @@ def strings(lang):
         "privacy_ads": U("privacy_ads"), "privacy_links": U("privacy_links"),
         "og_l1": site, "og_home": U("og_title"), "app_desc": U("manifest_description"),
     })
+    t.update(EXTRA.get(lang, {}))
     t["_months"], t["_mon3"], t["_wd"], t["_wd3"] = M["full"], M["short"], W["full"], W["short"]
     t["_mof"] = M["gen"] if lang == "eu" else M["of"]
     t["_wdh"] = [x.capitalize() for x in W["two"]]
@@ -443,7 +461,7 @@ OWNER = "César Pereiro"
 EMAIL = "helping.info.agent@gmail.com"
 # Last substantive change of the page text (home, comunidades, ciudades, guides). Bump only with real content changes:
 # it is the visible "Actualizado", dateModified and the sitemap lastmod (never the build date).
-CONTENT_UPDATED = "2026-11-06"
+CONTENT_UPDATED = "2026-11-07"
 
 
 def ad(pos):
@@ -501,9 +519,27 @@ def wordmark():
     return f'<a class="brand" href="{BASE}"><i class="mark" aria-hidden="true"></i>elcalendariolaboral<span class="tld">.es</span></a>'
 
 
+MAG = ('<svg class="mag" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="7.5" cy="7.5" r="5.5" fill="none" '
+       'stroke="currentColor" stroke-width="1.8"/><path d="m11.6 11.6 4.6 4.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>')
+
+
+def search_box(id_, big=False):
+    """Municipality search (app.js): the index is fetched on first focus from {ASSETS}buscar.json, never inlined.
+    Without JS the form opens /buscar/, a plain list of comunidades and provincias."""
+    lab = (f'<label class="sb-lab" for="{id_}">{t("search")}</label>' if big else f'<label class="vh" for="{id_}">{t("search")}</label>')
+    return (f'<form class="sb{" sb-big" if big else ""}" role="search" action="{ASSETS}buscar/" method="get" data-sb>{lab}'
+            f'<div class="sb-f">{MAG}<input id="{id_}" name="q" type="search" autocomplete="off" spellcheck="false" '
+            f'placeholder="{E(t("search_ph"))}" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="{id_}-l">'
+            f'<button type="submit" class="sb-go">{t("search_go")}</button></div>'
+            f'<ul class="sb-l" id="{id_}-l" role="listbox" aria-label="{E(t("search"))}" hidden></ul></form>')
+
+
 def header_html(here=""):
-    """Wordmark, nav (Comunidades menu; Festivos menu in Spanish, Festivos locales link in ca/gl/eu; Puentes) and the language menu."""
+    """Wordmark, nav (Comunidades menu; Festivos menu in Spanish, Festivos locales link in ca/gl/eu; Puentes), search and
+    the language menu."""
     regs = "".join(f'<a href="{BASE}{r["slug"]}/">{E(r["name"])}</a>' for r in REGIONS)
+    srch = (f'<details class="dd dd-srch"><summary aria-label="{E(t("search"))}">{MAG}<span class="sr-l">{t("search_go")}</span></summary>'
+            f'<div class="menu menu-srch">{search_box("q-hd")}</div></details>')
     pts_href = f"{BASE}puentes/" if LANG == "es" else ("#puentes" if here == "app" else f"{BASE}#puentes")
     return (f'<header class="hd"><div class="wrap hd-in">{wordmark()}'
             f'<nav class="nav" id="nav">'
@@ -517,7 +553,7 @@ def header_html(here=""):
             + f'<a href="{pts_href}">{t("nav_bridges")}</a>'
             + (f'<a href="{BASE}vacaciones-2027/"{" aria-current=page" if here == "vac" else ""}>Vacaciones</a>' if LANG == "es" else "")
             + '</nav>'
-            f'{install_html()}'
+            f'{srch}{install_html()}'
             f'<details class="dd dd-lang"><summary>{GLOBE}<span class="ln-l">{LANG_NAMES[LANG]}</span><span class="ln-s">{LANG.upper()}</span>{CHEV}</summary>'
             f'<div class="menu menu-lang">{lang_links()}</div></details>'
             f'<button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="nav" aria-label="{t("menu")}">{BURGER}</button>'
@@ -578,7 +614,7 @@ def head_html(title, desc, path, og_img, extra="", hreflang=True, langs=None, in
     canon = (f'<link rel="canonical" href="{canonical}"><meta name="robots" content="max-image-preview:large,max-snippet:-1">'
              if index else '<meta name="robots" content="noindex,follow">')
     return f"""<!doctype html>
-<html lang="{LANG}" data-base="{BASE}" data-assets="{ASSETS}">
+<html lang="{LANG}" data-base="{BASE}" data-assets="{ASSETS}" data-sidx="{{SIDXV}}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -727,7 +763,7 @@ def pts_row(it):
 JS_KEYS = ["k_n", "k_r", "k_i", "k_l", "no_vac", "no_bridges", "island_holiday", "pick_island", "remove_local", "local_holiday",
            "local_toast", "vac_days", "vac_added", "vac_removed", "vac_cleared", "add_vac", "rm_vac", "n_hol", "n_lab", "n_days",
            "next_hol", "days_left", "tomorrow", "today", "ics_file", "ics_calname", "vac_event", "add_local", "add_short", "rm_short",
-           "free_n", "see_cal"]
+           "free_n", "see_cal", "n_pts"]
 
 
 def js_strings():
@@ -766,6 +802,89 @@ def tools_html(key=None, ics_name="", monthly=True):
                 f'<a id="gc" href="https://calendar.google.com/calendar/r?cid={quote(webcal, safe="")}" rel="noopener" target="_blank">{t("gcal")}</a>'
                 f'<a id="wc" href="{webcal}">{t("apple")}</a></div></details>')
     return f'<div class="tools">{out}</div>'
+
+
+GCAL_I = ('<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="12" rx="2" fill="none" '
+          'stroke="currentColor" stroke-width="1.5"/><path d="M1.5 6.5h13M5 1v3m6-3v3" stroke="currentColor" stroke-width="1.5"/>'
+          '<path d="M8 8.5v4M6 10.5h4" stroke="currentColor" stroke-width="1.5"/></svg>')
+SHARE_I = ('<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="12" cy="3.5" r="2" fill="none" stroke="currentColor" '
+           'stroke-width="1.5"/><circle cx="4" cy="8" r="2" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12.5" r="2" '
+           'fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m5.8 7 4.4-2.5M5.8 9l4.4 2.5" stroke="currentColor" stroke-width="1.5"/></svg>')
+PRINT_I = ('<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6V1.5h8V6M4 12H2.5A1 1 0 0 1 1.5 11V7a1 1 0 0 1 1-1h11a1 '
+           '1 0 0 1 1 1v4a1 1 0 0 1-1 1H12M4 9.5h8v5H4z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>')
+
+
+def sq(s):
+    """Text for a single-quoted attribute (compact JSON in data-*)."""
+    return E(s, quote=False).replace("'", "&#39;")
+
+
+def next_hol(hols, today=None):
+    ref = max(today or TODAY, f"{YEAR}-01-01")
+    return next((h for h in hols if h["date"] >= ref), None)
+
+
+def next_card(hols, cfg=False):
+    """'Próximo festivo' card, server-rendered from the build day (TODAY); app.js recomputes it with the visitor's date
+    and adds the countdown. data-hols carries [date, name, kind] so pages without the planner (municipios) can do it
+    too. cfg=True also writes the labels for app.js (Spanish is its default)."""
+    h = next_hol(hols)
+    if not h:
+        return ""
+    d = _d(h["date"])
+    data = json.dumps([[x["date"], x["name"], x["kind"]] for x in hols], ensure_ascii=False, separators=(",", ":"))
+    lab = ""
+    if LANG != "es" or cfg:
+        lab = json.dumps({"k": {k: t(v) for k, v in KINDS.items()}, "today": t("today"), "tomorrow": t("tomorrow"),
+                          "left": T.get("days_left") or ES["days_left"], "wd": T["_wd"], "mon3": T["_mon3"], "mof": T["_mof"],
+                          "eu": LANG == "eu"}, ensure_ascii=False, separators=(",", ":"))
+        lab = f" data-t='{sq(lab)}'"
+    return (f'<div class="nx k-{h["kind"]}" id="next" data-hols=\'{sq(data)}\'{lab}>'
+            f'<p class="nx-tile" aria-hidden="true"><span data-nx-m>{T["_mon3"][d.month - 1]}</span><b data-nx-d>{d.day}</b></p>'
+            f'<div class="nx-b"><p class="nx-l">{t("next_hol")} <span class="nx-c" data-nx-c></span></p>'
+            f'<p class="nx-t"><time data-nx-t datetime="{h["date"]}">{E(dlong(d)[0].upper() + dlong(d)[1:])}</time></p>'
+            f'<p class="nx-n"><span data-nx-n>{E(h["name"])}</span> · <span class="nx-k" data-nx-k>{scope_txt(h["kind"])}</span></p>'
+            f'</div></div>')
+
+
+def hero_grid(text, panel, meta=""):
+    """Answer on the left, panel (next holiday, counts, actions) on the right; on phones text, panel, then the
+    update/source lines."""
+    return (f'<div class="hero-g"><div class="hero-t">{text}</div><div class="panel">{panel}</div>'
+            f'{f"<div class=hero-m>{meta}</div>" if meta else ""}</div>')
+
+
+def stats_html(items):
+    """[(id, '14 festivos')]: the number in bold. app.js rewrites the ones with an id when locals or the island change."""
+    import re as _re
+    li = "".join(f'<li{f" id={i}" if i else ""}>{_re.sub(r"(\d+(?:[–-]\d+)?)", r"<b>\1</b>", E(s), count=1)}</li>' for i, s in items)
+    return f'<ul class="stats">{li}</ul>'
+
+
+def gcal_event(date, name, place):
+    """Google Calendar 'add event' link for one all-day holiday."""
+    d = _d(date)
+    n = d + dt.timedelta(1)
+    q = f"action=TEMPLATE&text={quote(name + ' · ' + place)}&dates={d:%Y%m%d}/{n:%Y%m%d}&details={quote(SITE + BASE)}"
+    return f"https://calendar.google.com/calendar/render?{q}"
+
+
+def actions_html(ics_url, ics_name, title, gcal=None):
+    """Hero actions: Google Calendar, .ics, print, share. gcal: [(label, url)] for a menu of single events (municipio
+    pages); default, the subscription to the same .ics (cid=webcal://…). Never next to an ad unit (the hero has none)."""
+    webcal = f"webcal://{HOST}{ics_url}"
+    if gcal:
+        items = "".join(f'<a href="{E(u)}" rel="noopener" target="_blank">{E(lab)}</a>' for lab, u in gcal)
+        g = (f'<details class="dd dd-cal dd-gc"><summary class="btn act">{GCAL_I}<span>{t("gcal")}</span>{CHEV}</summary>'
+             f'<div class="menu menu-cal">{items}</div></details>')
+    else:
+        g = (f'<a class="btn act" data-x="gc" href="https://calendar.google.com/calendar/r?cid={quote(webcal, safe="")}" rel="noopener" '
+             f'target="_blank">{GCAL_I}<span>{t("gcal")}</span></a>')
+    return (f'<div class="acts">{g}'
+            f'<a class="btn act" data-x="dl" href="{ics_url}" download="{ics_name}">{DLOAD}<span>.ics</span></a>'
+            f'<button class="btn act" type="button" data-print>{PRINT_I}<span>{t("print")}</span></button>'
+            f'<button class="btn act" type="button" data-share data-title="{E(title)}" data-copied="{E(t("copied"))}">{SHARE_I}'
+            f'<span>{t("share")}</span></button></div>')
 
 
 def scripts(data):
@@ -830,14 +949,16 @@ def app_main(data, r, city=None, hero_extra="", more="", cities=(), pending=(), 
     else:
         h1 = fill(t("h1_region"), names)
         crumbs = crumbs_html([(t("spain"), ""), (r["name"], f"{slug}/")])
-    ctx = (f'<p class="ctx"><span>{E(r["official"])}</span> · <span id="c-n">{tn("n_hol", n)}</span> · '
-           f'<span id="c-l">{tn("n_lab", lab)}</span></p>')
     sel = region_select(slug) + city_select(r, cities, pending, city["slug"] if city else None)
     if zone:
         zopts = (f'<option value="">{t("pick_island")}</option>' if is_can else "") + "".join(
             f'<option value="{o["slug"]}">{E(t("zone_general") if o["slug"] == "general" else o["name"])}</option>' for o in zone["options"])
         sel += f'<div class="field"><label for="zone">{t("island") if is_can else t("zone")}</label><select id="zone">{zopts}</select></div>'
-    hero = (f'<div class="hero wrap">{crumbs}<h1>{E(h1)}</h1>{lead}{ctx}{hero_extra}<p class="next" id="next" hidden></p>'
+    stats = stats_html([("c-n", tn("n_hol", n)), ("c-l", tn("n_lab", lab)), ("c-p", tn("n_pts", len(puentes(hols))))])
+    acts = actions_html(f'{ASSETS}ics/{key}.ics', f'{t("ics_file")}-{key}.ics', h1)
+    ans, _, meta = lead.partition('<p class="upd">')
+    meta = ('<p class="upd">' + meta if meta else "") + hero_extra
+    hero = (f'<div class="hero wrap">{crumbs}{hero_grid(f"<h1>{E(h1)}</h1>{ans}", next_card(hols) + stats + acts, meta)}'
             f'<div class="pickers">{sel}</div></div>')
 
     kinds = ["n", "r"] + (["i"] if slug == "canarias" else []) + ["l"]
@@ -893,8 +1014,11 @@ def page_404(data):
     homes = "".join(f'<a class="btn" href="{lang_base(x)}" hreflang="{x}" lang="{x}">{LANG_NAMES[x]}</a>' for x in LANGS)
     chips = "".join(f'<li><a href="{BASE}{r["slug"]}/">{E(r["name"])}</a></li>' for r in REGIONS)
     main = (f'<div class="wrap doc"><p class="e404">404</p><h1>Página no encontrada</h1>'
-            f'<div class="tools">{homes}</div></div><div class="wrap body narrow">'
-            + section("comunidades", t("pick_region"), f'<ul class="chips">{chips}</ul>') + '</div>')
+            f'{search_box("q-404", big=True)}<div class="tools">{homes}</div></div><div class="wrap body narrow">'
+            + section("comunidades", t("pick_region"), f'<ul class="chips">{chips}</ul>'
+                      f'<p class="more-l"><a href="{BASE}festivos/">Festivos 2027</a> · <a href="{BASE}puentes/">Puentes 2027</a> · '
+                      f'<a href="{BASE}festivos-locales/">Festivos locales 2027</a> · <a href="{ASSETS}buscar/">Todas las provincias</a></p>')
+            + '</div>')
     head = head_html("Página no encontrada · El Calendario Laboral", t("desc_home"), "404.html", f"{SITE}{ASSETS}og/espana.png", hreflang=False)
     return page(head, "pg", "", main, data, js=False)
 
@@ -914,10 +1038,15 @@ def font(size, weight="b"):
 
 INK, BG, MUT, LINE, WE = (27, 31, 36), (255, 255, 255), (90, 98, 112), (216, 220, 226), (238, 240, 243)
 NAT, REG, RED = (244, 184, 177), (246, 210, 122), (200, 16, 46)
+LOC, ISL = (203, 189, 245), (169, 223, 214)
+OG_FILL = {"n": NAT, "r": REG, "l": LOC, "i": ISL}
+OG_INK = {"n": (92, 15, 10), "r": (74, 47, 0), "l": (44, 24, 114), "i": (7, 63, 56)}
 
 
-def og_image(path, label, sub, hols):
-    """Same look as the page: the wordmark with its red mark, dark type on white, the year as a grid of squares."""
+def og_image(path, label, sub, hols, dates=None, dates_label=""):
+    """Same look as the page: the wordmark with its red mark, dark type on white, the year as a grid of squares.
+    dates: [(iso, kind)] shown as coloured date chips under the name (the answer: the local days of a city, the
+    comunidad's own days), with dates_label above them."""
     from PIL import Image, ImageDraw
     W, H, S = 1200, 630, 2
     im = Image.new("RGB", (W * S, H * S), BG)
@@ -930,7 +1059,19 @@ def og_image(path, label, sub, hols):
     d.text((X, 150 * S), t("og_l1"), font=font(36 * S, "sb"), fill=MUT)
     size = 76 if len(label) <= 11 else (60 if len(label) <= 16 else (46 if len(label) <= 20 else 34))
     d.text((X, 200 * S), label, font=font(size * S, "b"), fill=INK)
-    d.text((X, 330 * S), sub, font=font(30 * S, "sb"), fill=MUT)
+    if dates:
+        d.text((X, 312 * S), dates_label, font=font(24 * S, "sb"), fill=MUT)
+        fs = 34 if len(dates) <= 3 else 28
+        cx = X
+        for iso, k in dates[:4]:
+            txt = dmon(iso)
+            tw = d.textlength(txt, font=font(fs * S, "b"))
+            d.rounded_rectangle((cx, 352 * S, cx + tw + 36 * S, 412 * S), 12 * S, fill=OG_FILL.get(k, REG))
+            d.text((cx + 18 * S, (382 - fs * 0.62) * S), txt, font=font(fs * S, "b"), fill=OG_INK.get(k, INK))
+            cx += tw + 52 * S
+        d.text((X, 460 * S), sub, font=font(28 * S, "sb"), fill=MUT)
+    else:
+        d.text((X, 330 * S), sub, font=font(30 * S, "sb"), fill=MUT)
     kind = {h["date"]: h["kind"] for h in hols}
     x0, y0, c, gx, gy = 700 * S, 58 * S, 17 * S, 30 * S, 22 * S
     for m in range(12):
@@ -944,9 +1085,9 @@ def og_image(path, label, sub, hols):
             idx = first.weekday() + dd
             cx, cy = ox + (idx % 7) * c, oy + 24 * S + (idx // 7) * c
             k = kind.get(day.isoformat())
-            fill_ = NAT if k == "n" else REG if k else (WE if day.weekday() >= 5 else BG)
+            fill_ = OG_FILL.get(k, REG) if k else (WE if day.weekday() >= 5 else BG)
             d.rectangle((cx + S, cy + S, cx + c - S, cy + c - S), fill=fill_, outline=LINE)
-    im = im.resize((W, H), Image.LANCZOS).quantize(colors=64, method=Image.Quantize.MEDIANCUT)
+    im = im.resize((W, H), Image.LANCZOS).quantize(colors=128, method=Image.Quantize.MAXCOVERAGE)
     im.save(path, optimize=True)
 
 
@@ -997,6 +1138,46 @@ def sitemap(urls_by_path):
     return "\n".join(sm) + "\n"
 
 
+SEGMENTS = ("general", "comunidades", "provincias", "municipios", "festivos")
+FEST_PATHS = ("festivos/", "semana-santa/", "festivos-locales/", "puentes/", "como-se-fijan-los-festivos/")
+
+
+def segment(p, regions):
+    parts = [x for x in p.split("/") if x]
+    if parts and parts[0] in regions:
+        if len(parts) == 1:
+            return "comunidades"
+        if len(parts) == 2:
+            return "provincias" if parts[1].startswith("provincia-de-") or parts[1] == "municipios" else "municipios"
+    if p.startswith(FEST_PATHS):
+        return "festivos"
+    return "general"
+
+
+def write_sitemaps(pages_written, regions):
+    """sitemap_index.xml -> sitemap-<segment>.xml. sitemap.xml is a copy of the index (the URL Search Console already
+    has). Only indexable canonical pages are in pages_written (pages.write() leaves noindex pages out)."""
+    seg = {s: [] for s in SEGMENTS}
+    for w in pages_written:
+        seg[segment(w[0], regions)].append(w)
+    for f in ROOT.glob("sitemap-*.xml"):
+        f.unlink()
+    idx = ['<?xml version="1.0" encoding="UTF-8"?>', '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    counts = {}
+    for s, ws in seg.items():
+        if not ws:
+            continue
+        (ROOT / f"sitemap-{s}.xml").write_text(sitemap(ws), "utf-8", newline="\n")
+        counts[s] = sum(len(w[2]) if len(w) > 2 and w[2] else len(LANGS) for w in ws)
+        idx.append(f"  <sitemap><loc>{SITE}{ASSETS}sitemap-{s}.xml</loc><lastmod>{max(w[1] for w in ws)}</lastmod></sitemap>")
+    idx.append("</sitemapindex>")
+    txt = "\n".join(idx) + "\n"
+    (ROOT / "sitemap_index.xml").write_text(txt, "utf-8", newline="\n")
+    (ROOT / "sitemap.xml").write_text(txt, "utf-8", newline="\n")
+    (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {SITE}{ASSETS}sitemap_index.xml\n", "utf-8", newline="\n")
+    return counts
+
+
 def main():
     global REGIONS
     if LANG == "es" and not os.environ.get("CL_CHILD"):
@@ -1007,7 +1188,12 @@ def main():
     data = localize(load())
     REGIONS = data["regions"]
     cssv, jsv = short_hash(ROOT / "app.css"), short_hash(ROOT / "app.js")
-    fix = lambda s: s.replace("{CSSV}", cssv).replace("{JSV}", jsv)  # noqa: E731
+    sys.modules.setdefault("build", sys.modules[__name__])
+    import buscar
+    import muni
+    sidx = buscar.index_bytes(buscar.build_index(load(), *muni.index_rows()))
+    sidxv = buscar.index_hash(sidx)
+    fix = lambda s: s.replace("{CSSV}", cssv).replace("{JSV}", jsv).replace("{SIDXV}", sidxv)  # noqa: E731
 
     OUT.mkdir(exist_ok=True)
     (OUT / "privacidad").mkdir(exist_ok=True)
@@ -1036,7 +1222,10 @@ def main():
         for r in data["regions"]:
             hols = region_holidays(data, r["slug"])
             n = len(hols) + (1 if r["slug"] == "canarias" else 0)
-            og_image(ROOT / "og" / f"{r['slug']}.png", r["name"], t("og_sub", n=n, p=len(puentes(hols))), hols)
+            own = [(h["date"], "r") for h in hols if h["kind"] == "r"]
+            lab = workdays(hols, 1 if r["slug"] == "canarias" else 0)
+            og_image(ROOT / "og" / f"{r['slug']}.png", r["name"], f'{t("og_sub", n=n, p=len(puentes(hols)))} · {lab} laborables',
+                     hols, own, "Festivos propios de la comunidad")
         icons(ROOT / "icons")
 
     pages.write_shared(data, "--no-img" not in sys.argv)
@@ -1044,7 +1233,8 @@ def main():
         import pdfs
         pdfs.write_all(data, pages.published_cities(pages.load_locales(), {r["slug"]: r for r in data["regions"]}))
     (ROOT / "404.html").write_text(fix(page_404(data)), "utf-8", newline="\n")
-    (ROOT / "sitemap.xml").write_text(sitemap(pages_written), "utf-8", newline="\n")
+    (ROOT / "buscar.json").write_bytes(sidx)
+    seg_counts = write_sitemaps(pages_written, {r["slug"] for r in data["regions"]})
 
     manifest = {
         "name": t("app_name"), "short_name": t("app_short"), "lang": LANG, "description": t("app_desc"),
@@ -1061,7 +1251,7 @@ def main():
              f"{ASSETS}icons/icon-192.png", f"{ASSETS}icons/icon-512.png"]
     sw = (ROOT / "sw.src.js").read_text("utf-8").replace("__VERSION__", ver).replace("__SHELL__", json.dumps(shell))
     (ROOT / "sw.js").write_text(sw, "utf-8", newline="\n")
-    print(f"ok · {sum(len(w[2]) if len(w) > 2 else len(LANGS) for w in pages_written)} urls · sw {ver}")
+    print(f"ok · {sum(seg_counts.values())} urls {seg_counts} · search index {len(sidx) // 1024} KB · sw {ver}")
 
 
 if __name__ == "__main__":

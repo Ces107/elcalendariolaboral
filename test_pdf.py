@@ -72,7 +72,7 @@ for f, page, label, hols in entries:
         check(f'href="{href}"' in pg, f"{f}: not linked from /{page}")
 
 # hub page: in the sitemap, linked from the footer, BreadcrumbList
-sm = (ROOT / "sitemap.xml").read_text("utf-8")
+sm = "".join(p.read_text("utf-8") for p in sorted(ROOT.glob("sitemap-*.xml")))  # sitemap.xml is the index
 check(f"<loc>{B.SITE}{B.ASSETS}{pdfhub.PATH}</loc>" in sm, "hub not in sitemap")
 check('"BreadcrumbList"' in hub, "hub: no BreadcrumbList")
 check("calendario laboral 2027 pdf" in re.search(r"<title>(.*?)</title>", hub).group(1).lower(), "hub title")

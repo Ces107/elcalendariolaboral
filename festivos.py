@@ -478,7 +478,7 @@ def page_san_jose(write, cities):
                    f'<td data-l="Vacaciones escolares de Semana Santa">{cole}</td></tr>')
     title = "San José 2027: viernes 19 de marzo, ¿dónde es festivo?"
     desc = (f'El 19 de marzo de 2027 es viernes y festivo en {join(regs()[k]["name"] for k in have)}. Cómo unirlo con '
-            f'Semana Santa y por qué no es festivo en el resto.')
+            f'Semana Santa y dónde es laborable.')
     lead_html = lead(f'San José cae en <b>{dl(iso)}</b> de 2027. Es festivo en <b>{join(rl(k) for k in have)}</b>; en las '
                      f'otras {len(lack)} comunidades es laborable. Donde es festivo, da un fin de semana largo de 3 días sin pedir '
                      f'nada, y una semana después llega Semana Santa.')
@@ -759,7 +759,7 @@ def page_semana_santa(write, cities):
     loc = local_changes(cities, iso(vie), 1)
     title = "Semana Santa 2027: fechas, festivos y vacaciones"
     desc = (f'Semana Santa 2027 es del {ramos.day} al {es.day} de marzo. Viernes Santo es festivo en toda España, Jueves Santo '
-            f'en {len(jt)} comunidades y Lunes de Pascua en {len(lp)}. Puentes y colegios.')
+            f'en {len(jt)} comunidades y Lunes de Pascua en {len(lp)}. Y los colegios.')
     lead_html = lead(f'Semana Santa 2027 va del <b>{dl(iso(ramos))} al {dl(iso(es))}</b>. Viernes Santo ({B.dm(iso(vie))}) '
                      f'es festivo en toda España, Jueves Santo ({B.dm(iso(jue))}) en {len(jt)} comunidades y Lunes de Pascua '
                      f'({B.dm(iso(lun))}) en {len(lp)}.')
