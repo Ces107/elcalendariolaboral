@@ -49,3 +49,8 @@ further cuts would remove content. GitHub Pages limit 1 GB: site ~310 MB with PD
   Albacete/Cuenca/Guadalajara): pages flip to index automatically (`python build.py`).
 - After AdSense approval: ads on the new pages (`seo/ads.md`).
 - La Rioja has no 2026 reference (Cloudflare); its 165/174 have 2027 official anyway.
+- 2026-11-07: **pushed c6add0af** (Phase 2): live checked with curl (municipality page, noindex on a pending one,
+  promoted Granada without ads, province page, 5 sitemaps in the index). Tests: test_data (4,471 URLs, unique
+  titles/descriptions), test_pdf (436 PDF), test_utilidades OK. Playwright 390/1366: no horizontal scroll, CLS <= 0.03.
+  The four data files and `data/tools/` are NOT committed by this agent (they belong to the data agents): a clean
+  clone builds without municipality pages until they are committed.
