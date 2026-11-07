@@ -169,7 +169,7 @@ QA_NAT = ("¿Y si tengo 30 días naturales?", "30 días naturales equivalen a 22
 def vac_script(cfg):
     js = json.dumps(cfg, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     return (f'<script id="vac-data" type="application/json">{js}</script>\n'
-            f'<script src="{B.ASSETS}vac.js?v={B.short_hash(B.ROOT / "vac.js")}"></script>')
+            f'<script defer src="{B.ASSETS}vac.min.js?v={B.short_hash(B.ROOT / "vac.min.js")}"></script>')
 
 
 def base_cfg():

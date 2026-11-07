@@ -122,7 +122,7 @@ for path, only in ((U.PATH_WK, U.ONLY_WK), (U.PATH_DH, U.ONLY_DH), (U.PATH_DL, U
         check(f'<link rel="canonical" href="{url}">' in head, f"{url}: canonical")
         check('"FAQPage"' in head and '"BreadcrumbList"' in head, f"{url}: FAQPage / BreadcrumbList")
         check(('hreflang="ca"' in head) == (len(only) > 1), f"{url}: hreflang")
-        check(("util.js?v=" in h) == (path != U.PATH_DL), f"{url}: util.js only where the page computes in the browser")
+        check(("util.min.js?v=" in h) == (path != U.PATH_DL), f"{url}: util.js only where the page computes in the browser")
     check(f'href="{B.ASSETS}{path}"' in (ROOT / "index.html").read_text("utf-8"), f"home: no footer link to /{path}")
 
 wk = (ROOT / U.PATH_WK / "index.html").read_text("utf-8")

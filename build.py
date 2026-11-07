@@ -18,6 +18,7 @@ import hashlib
 import html
 import json
 import os
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -476,6 +477,21 @@ def ad(pos):
             f'<script>(adsbygoogle=window.adsbygoogle||[]).push({{}});</script></aside>')
 
 
+# Pages with ads open the AdSense and consent (Funding Choices) connections early.
+AD_HINTS = ('<link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>'
+            '<link rel="dns-prefetch" href="https://fundingchoicesmessages.google.com">\n')
+# Content-Security-Policy as <meta> (GitHub Pages sends no custom headers, so HSTS, COOP and X-Frame-Options cannot be
+# set: seo/AUDIT-2026-11.md). What the site uses: its own files; AdSense and its consent message (Funding Choices),
+# whose scripts, frames and beacons live on googlesyndication.com, doubleclick.net, google.com, gstatic.com,
+# googletagservices.com and adtrafficquality.google; inline scripts (service worker registration, the ad push,
+# AdSense's own) need 'unsafe-inline' because a static site cannot send per-request nonces. No Trusted Types: AdSense
+# writes HTML strings into the page and would break.
+_G = ("https://*.googlesyndication.com https://*.doubleclick.net https://*.google.com https://*.google.es https://*.gstatic.com "
+      "https://*.googletagservices.com https://*.adtrafficquality.google https://*.googleadservices.com")
+CSP = ("<meta http-equiv=\"Content-Security-Policy\" content=\"default-src 'self'; "
+       f"script-src 'self' 'unsafe-inline' {_G}; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; "
+       f"font-src 'self'; connect-src 'self' {_G}; frame-src 'self' {_G}; worker-src 'self'; manifest-src 'self'; "
+       "object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests\">")
 ADSENSE = ('<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9914165605609514" '
            'crossorigin="anonymous"></script>')
 SW_JS = ("<script>if('serviceWorker'in navigator)addEventListener('load',function(){navigator.serviceWorker.register('"
@@ -633,9 +649,11 @@ def head_html(title, desc, path, og_img, extra="", hreflang=True, langs=None, in
 <link rel="manifest" href="{ASSETS}manifest.webmanifest">
 <link rel="icon" href="{ASSETS}icons/icon-192.png" type="image/png">
 <link rel="apple-touch-icon" href="{ASSETS}icons/apple-touch-icon.png">
-<link rel="preload" href="{ASSETS}fonts/public-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+{CSP}
+<link rel="preload" href="{ASSETS}fonts/public-sans-400.woff2?v={{F400}}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{ASSETS}fonts/public-sans-700.woff2?v={{F700}}" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{ASSETS}app.css?v={{CSSV}}">
-{ADSENSE if ADS_PAGE else ""}
+{AD_HINTS + ADSENSE if ADS_PAGE else ""}
 {extra}
 </head>
 """
@@ -920,7 +938,7 @@ def scripts(data):
     compact = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
     return (f'<script id="cal-data" type="application/json">{compact}</script>\n'
             f'<script id="cal-i18n" type="application/json">{js_strings()}</script>\n'
-            f'<script src="{ASSETS}app.js?v={{JSV}}"></script>\n{SW_JS}')
+            f'<script defer src="{ASSETS}app.min.js?v={{JSV}}"></script>\n{SW_JS}')
 
 
 def footer_lean(data):
@@ -935,7 +953,7 @@ def footer_lean(data):
 
 
 def page(head, body_cls, header_here, main, data, attrs="", js=True, lean=False):
-    tail = scripts(data) if js else f'<script src="{ASSETS}app.js?v={{JSV}}"></script>\n{SW_JS}'
+    tail = scripts(data) if js else f'<script defer src="{ASSETS}app.min.js?v={{JSV}}"></script>\n{SW_JS}'
     return head + f"""<body class="{body_cls}"{attrs}>
 <a class="skip" href="#main">{E(t("h1"))}</a>
 {header_html(header_here, lean)}
@@ -1225,22 +1243,48 @@ def write_sitemaps(pages_written, regions):
     return counts
 
 
+def minify_js():
+    """app.js, util.js, vac.js -> *.min.js (esbuild via npx). The readable files stay the source and what the node tests
+    run. Without esbuild the source is copied, so the site still works."""
+    for name in ("app", "util", "vac"):
+        src, dst = ROOT / f"{name}.js", ROOT / f"{name}.min.js"
+        try:
+            subprocess.run(f'npx -y esbuild@0.24.0 "{src}" --minify --target=es2015 --log-level=error --outfile="{dst}"',
+                           shell=True, check=True, timeout=300)
+        except Exception as e:  # noqa: BLE001
+            print("esbuild unavailable, copying", name, e)
+            dst.write_bytes(src.read_bytes())
+
+
+def version_fonts(fonts):
+    """app.css: the font URLs carry ?v=<hash>, so browsers and the service worker keep them until they change."""
+    p = ROOT / "app.css"
+    css = p.read_text("utf-8")
+    new = re.sub(r"fonts/public-sans-(\d+)\.woff2(\?v=\w+)?", lambda m: f"fonts/public-sans-{m.group(1)}.woff2?v={fonts[m.group(1)]}", css)
+    if new != css:
+        p.write_text(new, "utf-8", newline="\n")
+
+
 def main():
     global REGIONS
+    fonts = {w: short_hash(ROOT / "fonts" / f"public-sans-{w}.woff2") for w in ("400", "600", "700")}
     if LANG == "es" and not os.environ.get("CL_CHILD"):
+        minify_js()
+        version_fonts(fonts)
         for x in LANGS:
             if x != "es":
                 env = {**os.environ, "CL_LANG": x, "CL_CHILD": "1", "CL_LANGS": ",".join(LANGS)}
                 subprocess.run([sys.executable, str(Path(__file__).resolve()), *sys.argv[1:]], env=env, check=True)
     data = localize(load())
     REGIONS = data["regions"]
-    cssv, jsv = short_hash(ROOT / "app.css"), short_hash(ROOT / "app.js")
+    cssv, jsv = short_hash(ROOT / "app.css"), short_hash(ROOT / "app.min.js")
     sys.modules.setdefault("build", sys.modules[__name__])
     import buscar
     import muni
     sidx = buscar.index_bytes(buscar.build_index(load(), *muni.index_rows()))
     sidxv = buscar.index_hash(sidx)
-    fix = lambda s: s.replace("{CSSV}", cssv).replace("{JSV}", jsv).replace("{SIDXV}", sidxv)  # noqa: E731
+    fix = lambda s: (s.replace("{CSSV}", cssv).replace("{JSV}", jsv).replace("{SIDXV}", sidxv)  # noqa: E731
+                     .replace("{F400}", fonts["400"]).replace("{F700}", fonts["700"]))
 
     OUT.mkdir(exist_ok=True)
     (OUT / "privacidad").mkdir(exist_ok=True)
@@ -1293,8 +1337,8 @@ def main():
     }
     (ROOT / "manifest.webmanifest").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", "utf-8", newline="\n")
 
-    ver = "v4-" + short_hash(ROOT / "index.html", ROOT / "app.css", ROOT / "app.js", ROOT / "data" / "2027.json")
-    shell = [f"{ASSETS}app.css?v={cssv}", f"{ASSETS}app.js?v={jsv}", f"{ASSETS}manifest.webmanifest",
+    ver = "v4-" + short_hash(ROOT / "index.html", ROOT / "app.css", ROOT / "app.min.js", ROOT / "data" / "2027.json")
+    shell = [f"{ASSETS}app.css?v={cssv}", f"{ASSETS}app.min.js?v={jsv}", f"{ASSETS}manifest.webmanifest",
              f"{ASSETS}icons/icon-192.png", f"{ASSETS}icons/icon-512.png"]
     sw = (ROOT / "sw.src.js").read_text("utf-8").replace("__VERSION__", ver).replace("__SHELL__", json.dumps(shell))
     (ROOT / "sw.js").write_text(sw, "utf-8", newline="\n")

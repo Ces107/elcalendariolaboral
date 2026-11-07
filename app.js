@@ -433,13 +433,17 @@
       if (weekend(i)) c.push('we');
       if (h) c.push(h.kind); else if (v) c.push('v');
       if (ISO[i] === TODAY) c.push('today');
-      el.className = c.join(' ');
+      /* only what changed: the server markup is already right, so the first paint writes almost nothing */
+      var cn = c.join(' ');
+      if (el.className !== cn) el.className = cn;
       var tip = h ? h.name : v ? T.vac_event : '';
-      if (tip) el.title = tip; else el.removeAttribute('title');
-      el.setAttribute('aria-label', cap(dlong(i)) + (tip ? ' · ' + tip : ''));
-      el.tabIndex = i === focusIdx ? 0 : -1;
+      if (tip) { if (el.title !== tip) el.title = tip; } else if (el.hasAttribute('title')) el.removeAttribute('title');
+      var al = cap(dlong(i)) + (tip ? ' · ' + tip : '');
+      if (el.getAttribute('aria-label') !== al) el.setAttribute('aria-label', al);
+      var ti = i === focusIdx ? 0 : -1;
+      if (el.tabIndex !== ti) el.tabIndex = ti;
     }
-    for (var m = 1; m <= 12; m++) { var ul = $('mh' + m); if (ul) ul.innerHTML = monthItems(m, hols); }
+    for (var m = 1; m <= 12; m++) { var ul = $('mh' + m), mi = monthItems(m, hols); if (ul && ul.innerHTML !== mi) ul.innerHTML = mi; }
   }
   function vacCount() { return Object.keys(S.vac).filter(function (d) { return S.vac[d] && IDX[d] != null && markable(IDX[d]); }).length; }
 

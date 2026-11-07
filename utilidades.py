@@ -478,7 +478,7 @@ def weeks(year):
 def js_cfg(cfg):
     js = json.dumps(cfg, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     return (f'<script id="u-data" type="application/json">{js}</script>\n'
-            f'<script src="{B.ASSETS}util.js?v={B.short_hash(B.ROOT / "util.js")}"></script>')
+            f'<script defer src="{B.ASSETS}util.min.js?v={B.short_hash(B.ROOT / "util.min.js")}"></script>')
 
 
 def base_cfg():
