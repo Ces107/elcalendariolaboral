@@ -65,5 +65,5 @@ def page(data, provs, write, upd):
             f'<div class="wrap body narrow">' + B.section("lista", "Comunidades y provincias", f'<ul class="tree">{"".join(blocks)}</ul>')
             + '</div>')
     head = B.head_html("Buscar municipio · El Calendario Laboral", "Busca el calendario laboral 2027 de tu municipio.", PATH,
-                       f"{B.SITE}{B.ASSETS}og/espana.png", index=False, ads=False)
+                       f"{B.SITE}{B.ASSETS}og/espana.png", index=False, ads=False, langs=["es"])
     write(PATH, B.page(head, "pg", "", main, data, js=False), upd)

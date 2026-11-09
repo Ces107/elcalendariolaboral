@@ -457,8 +457,9 @@ AD_SLOTS = {  # position -> AdSense display unit id (data-ad-slot)
 # without their own editorial text (seo/AUDIT-2026-11.md). Add "ca" here once AdSense has reviewed the site.
 ADS_LANGS = {"es"}
 ADS_PAGE = True  # set by head_html(): False on noindex, legal, tool and listing pages (no loader, no units)
-# Site owner and contact (sobre, contacto, aviso legal, privacidad). No ID number, no address, no photo.
-OWNER = "César Pereiro"
+# Site owner and contact (sobre, contacto, aviso legal, privacidad, cookies). Semi-anonymous brand: no personal name, ID
+# number, address or photo; the place is "Valencia (España)" at most.
+OWNER = "El Calendario Laboral, proyecto independiente con sede en Valencia (España)"
 EMAIL = "helping.info.agent@gmail.com"
 # Last substantive change of the page text (home, comunidades, ciudades, guides). Bump only with real content changes:
 # it is the visible "Actualizado", dateModified and the sitemap lastmod (never the build date).
@@ -536,13 +537,15 @@ def wordmark():
 MAG = '<i class="ic mag ic-mag" aria-hidden="true"></i>'
 
 
-def search_box(id_, big=False):
+def search_box(id_, big=False, region=None, ph=None):
     """Municipality search (app.js): the index is fetched on first focus from {ASSETS}buscar.json, never inlined.
-    Without JS the form opens /buscar/, a plain list of comunidades and provincias."""
+    Without JS the form opens /buscar/, a plain list of comunidades and provincias.
+    region: that comunidad's results rank first (data-r); ph: placeholder instead of the generic one."""
     lab = (f'<label class="sb-lab" for="{id_}">{t("search")}</label>' if big else f'<label class="vh" for="{id_}">{t("search")}</label>')
-    return (f'<form class="sb{" sb-big" if big else ""}" role="search" action="{ASSETS}buscar/" method="get" data-sb>{lab}'
+    dr = f' data-r="{region}/"' if region else ""
+    return (f'<form class="sb{" sb-big" if big else ""}" role="search" action="{ASSETS}buscar/" method="get" data-sb{dr}>{lab}'
             f'<div class="sb-f">{MAG}<input id="{id_}" name="q" type="search" autocomplete="off" spellcheck="false" '
-            f'placeholder="{E(t("search_ph"))}" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="{id_}-l">'
+            f'placeholder="{E(ph or t("search_ph"))}" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="{id_}-l">'
             f'<button type="submit" class="sb-go">{t("search_go")}</button></div>'
             f'<ul class="sb-l" id="{id_}-l" role="listbox" aria-label="{E(t("search"))}" hidden></ul></form>')
 
@@ -603,7 +606,7 @@ def footer_html(data):
                'Agenda 2027 en papel, con estos festivos →</a></li>' if LANG == "es" else "")
             + f'<li><a href="#inst" data-install hidden>{INSTALL.get(LANG, INSTALL["es"])[0]}</a></li>'
             + "".join(f'<li><a href="{ASSETS}{p}"{"" if LANG == "es" else " hreflang=es lang=es"}>{n}</a></li>'
-                      for p, n in (("sobre/", "Quién hace esta web"), ("contacto/", "Contacto"), ("aviso-legal/", "Aviso legal")))
+                      for p, n in (("sobre/", "Quién hace esta web"), ("contacto/", "Contacto"), ("aviso-legal/", "Aviso legal"), ("cookies/", "Cookies")))
             + f'<li><a href="{BASE}privacidad/">{t("privacy")}</a></li></ul>'
             f'<p class="ft-lang">{lang_links()}</p></section>'
             f'</div><div class="wrap ft-b">© 2026 {HOST}</div></footer>')
@@ -947,7 +950,7 @@ def footer_lean(data):
     s = data["source"]
     links = [("festivos/", "Festivos 2027"), ("festivos-locales/", "Festivos locales 2027"), ("puentes/", "Puentes 2027"),
              ("buscar/", "Todas las provincias"), ("widget/", "Widget para tu web"), ("sobre/", "Quién hace esta web"), ("contacto/", "Contacto"),
-             ("aviso-legal/", "Aviso legal"), ("privacidad/", "Privacidad")]
+             ("aviso-legal/", "Aviso legal"), ("privacidad/", "Privacidad"), ("cookies/", "Cookies")]
     li = "".join(f'<li><a href="{ASSETS}{p}">{n}</a></li>' for p, n in links)
     return (f'<footer class="ft"><div class="wrap"><ul class="ft-l">{li}<li><a href="{s["url"]}" rel="noopener">{t("data_source")}</a></li>'
             f'</ul></div><div class="wrap ft-b">© 2026 {HOST}</div></footer>')
@@ -996,8 +999,9 @@ def home_city_select():
 
 # ---------------------------------------------------------------- app page (region and city)
 
-def app_main(data, r, city=None, hero_extra="", more="", cities=(), pending=(), lead=""):
-    """Region or city page: hero with pickers, calendar, puentes, planner, full list, then `more` (locals, FAQ)."""
+def app_main(data, r, city=None, hero_extra="", more="", cities=(), pending=(), lead="", top=""):
+    """Region or city page: hero with pickers, calendar, `top` (comunidad: its municipalities), puentes, planner, full list,
+    then `more` (locals, FAQ)."""
     slug = r["slug"]
     names = R(r)
     hols = page_holidays(data, r, city)
@@ -1043,7 +1047,7 @@ def app_main(data, r, city=None, hero_extra="", more="", cities=(), pending=(), 
                               f'<input type="date" id="locin" min="2027-01-01" max="2027-12-31" aria-label="{t("local_holiday")}" tabindex="-1" class="vh"></div>')
     hol_sec = section("festivos", E(fill(t("h_hol"), pnames)), f'<ol class="hl" id="hlist">{items}</ol>{addloc}')
     foot = f'<p class="pfoot">{HOST}{BASE}{city["path"] if city else slug + "/"} · {E(data["source"]["boe"])}</p>'
-    return f'{hero}<div class="wrap body">{cal_sec}{ad("cal")}{pts_sec}{vac_sec}{hol_sec}{ad("list")}{more}{foot}</div>{POP}'
+    return f'{hero}<div class="wrap body">{cal_sec}{ad("cal")}{top}{pts_sec}{vac_sec}{hol_sec}{ad("list")}{more}{foot}</div>{POP}'
 
 
 POP = '<div class="pop" id="pop" role="dialog" hidden><p class="pop-d" id="pop-d"></p><p class="pop-h" id="pop-h"></p><div class="pop-a" id="pop-a"></div></div>'
@@ -1068,8 +1072,8 @@ def privacy_page(data):
             f'<p>{t("privacy_links")}</p>'
             f'<p>{t("data_source").split(":")[0]}: {link}, {E(src["boe"])}. '
             f'<a href="mailto:{EMAIL}">{EMAIL}</a></p>'
-            + (f'<p>Responsable: {OWNER}. Más datos en el <a href="{ASSETS}aviso-legal/">aviso legal</a> y en '
-               f'<a href="{ASSETS}sobre/">quién hace esta web</a>.</p>' if LANG == "es" else "")
+            + (f'<p>Responsable: {OWNER}. Más datos en el <a href="{ASSETS}aviso-legal/">aviso legal</a>, la '
+               f'<a href="{ASSETS}cookies/">política de cookies</a> y en <a href="{ASSETS}sobre/">quién hace esta web</a>.</p>' if LANG == "es" else "")
             + '</div>')
     head = head_html(t("title_privacy"), t("desc_privacy"), "privacidad/", f"{SITE}{ASSETS}og/espana.png", ads=False)
     return page(head, "pg", "", main, data, js=False)
@@ -1085,7 +1089,7 @@ def page_404(data):
                       f'<p class="more-l"><a href="{BASE}festivos/">Festivos 2027</a> · <a href="{BASE}puentes/">Puentes 2027</a> · '
                       f'<a href="{BASE}festivos-locales/">Festivos locales 2027</a> · <a href="{ASSETS}buscar/">Todas las provincias</a></p>')
             + '</div>')
-    head = head_html("Página no encontrada · El Calendario Laboral", t("desc_home"), "404.html", f"{SITE}{ASSETS}og/espana.png", hreflang=False)
+    head = head_html("Página no encontrada · El Calendario Laboral", t("desc_home"), "404.html", f"{SITE}{ASSETS}og/espana.png", hreflang=False, langs=["es"])
     return page(head, "pg", "", main, data, js=False)
 
 
@@ -1344,6 +1348,9 @@ def main():
     sw = (ROOT / "sw.src.js").read_text("utf-8").replace("__VERSION__", ver).replace("__SHELL__", json.dumps(shell))
     (ROOT / "sw.js").write_text(sw, "utf-8", newline="\n")
     print(f"ok · {sum(seg_counts.values())} urls {seg_counts} · search index {len(sidx) // 1024} KB · sw {ver}")
+    import pages as _P
+    if _P.thin_no_ads:
+        print(f"ads off (< {_P.THIN_ADS} words): {sorted(set(_P.thin_no_ads))}")
 
 
 if __name__ == "__main__":

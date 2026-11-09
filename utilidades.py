@@ -759,7 +759,17 @@ def dl_page(data, write):
     hero = (f'<div class="hero wrap">{ch}<h1>{E(h1)}</h1><p class="ctx">{E(L("dl_intro"))} '
             f'<a href="{src["url"]}" rel="noopener">{src["id"]}</a></p></div>')
     sec = B.section("comunidades", L("dl_h2"), tbl)
-    main = f'{hero}<div class="wrap body">{sec}{B.ad("hub")}<div class="narrow">{fh}</div></div>'
+    notes = ""
+    if B.LANG == "es":  # computed from the table above, nothing else
+        tot = [(zone or name, sum(ms)) for slug, name, zone, ms in rows if not (slug == "canarias" and not zone)]
+        q = [sum(mode[k] for k in range(i, i + 3)) for i in (0, 3, 6, 9)]
+        names = lambda n: join([x for x, t in tot if t == n]) if sum(1 for _, t in tot if t == n) <= 5 else f'{sum(1 for _, t in tot if t == n)} comunidades o islas'  # noqa: E731
+        items = [f'<b>Más días laborables:</b> {hi}, en {names(hi)}. <b>Menos:</b> {lo}, en {names(lo)}.',
+                 f'<b>Por trimestres</b> (lo más común): {q[0]} · {q[1]} · {q[2]} · {q[3]}.',
+                 f'<b>Con los 2 festivos locales</b> en día laborable, quedan de {lo - 2} a {hi - 2}. Los de tu municipio, en '
+                 f'<a href="{B.BASE}festivos-locales/">festivos locales 2027</a>.']
+        notes = B.section("claves", "Lo que dicen las cifras", '<ul class="notes">' + "".join(f"<li>{x}</li>" for x in items) + "</ul>")
+    main = f'{hero}<div class="wrap body">{sec}<div class="narrow">{notes}</div>{B.ad("hub")}<div class="narrow">{fh}</div></div>'
     head = B.head_html(L("dl_title"), L("dl_desc"), PATH_DL, f"{B.SITE}{B.ASSETS}og/espana.png", ld(cld, fld),
                        langs=langs_arg(ONLY_DL))
     write(PATH_DL, B.page(head, "pg", "", main, data, js=False), data["updated"], langs_arg(ONLY_DL))

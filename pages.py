@@ -109,10 +109,33 @@ def faq_html(qas):
     return B.section("faq", t("h_faq"), f'<div class="faq">{items}</div>')
 
 
+THIN_ADS = 250  # visible words of 2+ letters in <main>, month grids left out: below it a page carries no ads (seo/ads.md)
+_RX_GRID = re.compile(r"<caption>Enero</caption>.*?<caption>Diciembre</caption>.*?(?:</table>|</div>)", re.S)
+_RX_AD = re.compile(r'<aside class="ad ad-[a-z]+".*?</aside>', re.S)
+thin_no_ads = []  # paths whose ads the guard removed (printed by the build, listed in seo/ADSENSE-READINESS-*.md)
+
+
+def main_words(page):
+    """Same count as seo/audit_site.py: words of 2+ letters in <main>, without scripts and the 12-month grid."""
+    m = re.search(r"<main\b.*?</main>", page, re.S)
+    t = _RX_GRID.sub(" ", m.group(0) if m else "")
+    t = re.sub(r"<script\b.*?</script>|<style\b.*?</style>", " ", t, flags=re.S)
+    return len(re.findall(r"[^\W\d_]{2,}", html.unescape(re.sub(r"<[^>]+>", " ", t))))
+
+
+def no_thin_ads(path, page):
+    """Policy guard: a page with the AdSense loader but less than THIN_ADS words loses the loader and its units."""
+    if B.ADSENSE not in page or main_words(page) >= THIN_ADS:
+        return page
+    thin_no_ads.append(path)
+    return _RX_AD.sub("", page.replace(B.AD_HINTS + B.ADSENSE, "").replace(B.ADSENSE, ""))
+
+
 def write(path, page, lastmod, langs=None):
     """langs: the languages this page exists in, when not all of them (the sitemap lists only those)."""
     d = B.OUT / path
     d.mkdir(parents=True, exist_ok=True)
+    page = no_thin_ads(path, page)
     noindex = 'name="robots" content="noindex' in page
     if not noindex and not re.search(r'"@type": ?"WebPage"', page):  # every indexable page states its content date
         m = re.search(r"<title>(.*?)</title>", page)
@@ -145,7 +168,36 @@ def quick_access(r):
     links = " · ".join(f'<a href="{B.ASSETS}{p["path"]}">{E(p["label"])} <span class="m">({len(p["munis"])})</span></a>' for p in ps)
     n = sum(len(p["munis"]) for p in ps)
     lab = f"Los {n} municipios" if ES else t("municipio")
-    return f'<div class="qa">{B.search_box("q-reg")}<p class="qa-l"><b>{lab}:</b> {links}</p></div>'
+    caps = {p.get("capital_ine") for p in ps}
+    ex = [x["name"] for x in sorted((x for p in ps for x in p["munis"] if x["ine"] not in caps),
+                                    key=lambda x: -(x["m"].get("pop") or 0))[:2]]
+    ph = f'Ej.: {", ".join(ex)}' if ES and len(ex) == 2 else None
+    return (f'<div class="qa">{B.search_box("q-reg", big=True, region=r["slug"], ph=ph)}'
+            f'<p class="qa-l"><b>{lab}:</b> {links}</p></div>')
+
+
+def muni_directory(r):
+    """Comunidad page, Spanish: every province with its published / pending count and its biggest municipalities
+    (2027 dates, or 'pendiente'), each linking to its page; the province page lists all of them."""
+    import muni
+    import munipages as MP
+    if not (ES and muni.MUNI_ON):
+        return ""
+    ps = [p for p in muni.catalogue()["provs"] if p["region"] == r["slug"] and p["path"] and p["munis"]]
+    if not ps:
+        return ""
+    k = 24 if len(ps) == 1 else 12 if len(ps) <= 3 else 6  # Castilla y León: 9 provinces x 6, not a 100-row wall
+    out = []
+    for p in sorted(ps, key=lambda p: muni.fold(p["name"])):
+        ok = sum(1 for x in p["munis"] if x["ok"])
+        pen = len(p["munis"]) - ok
+        cnt = " · ".join(s for s in (f"{ok} publicado{'s' if ok != 1 else ''}" if ok else "", f"{pen} pendiente{'s' if pen != 1 else ''}" if pen else "") if s)
+        li = "".join(f'<li>{MP.link(x)} <span class="m{"" if x["ok"] else " pe"}">{MP.dates_of(x)}</span></li>'
+                     for x in MP.by_pop(p["munis"])[:k])
+        out.append(f'<h3 class="h3"><a href="{B.BASE}{p["path"]}">{E(p["label"])}</a> <span class="m">{cnt}</span></h3>'
+                   f'<ul class="links">{li}</ul>'
+                   f'<p class="more-l"><a href="{B.BASE}{p["path"]}">Los {len(p["munis"])} municipios →</a></p>')
+    return "".join(out)
 
 
 def school_link(r):
@@ -382,9 +434,12 @@ def region_page(r, cities, pending):
                 f'Cada ayuntamiento fija 2. Aquí están los de las ciudades ya publicadas: <a href="{B.BASE}festivos-locales/#{slug}">festivos locales 2027</a>.')]
     names = B.R(r)
     pend = f'<p class="m">Pendientes de publicar: {E(", ".join(pending))}.</p>' if pending and ES else ""
-    locs = B.section("locales", E(B.fill(t("h_loc"), names)),
-                     city_list(cities) + pend + f'<p class="more-l"><a href="{B.BASE}festivos-locales/">{t("nav_locals")} 2027</a>{school_link(r)}'
-                     f'{workdays_link(r)}</p>' + prov_links(slug))
+    dirx = muni_directory(r)
+    more_l = f'<p class="more-l"><a href="{B.BASE}festivos-locales/">{t("nav_locals")} 2027</a>{school_link(r)}{workdays_link(r)}</p>'
+    if dirx:  # every municipality reachable from here: no separate city list / pending line / province line
+        locs = B.section("locales", E(B.fill(t("h_loc"), names)), dirx + more_l)
+    else:
+        locs = B.section("locales", E(B.fill(t("h_loc"), names)), city_list(cities) + pend + more_l + prov_links(slug))
     crumbs = [(t("spain"), ""), (name, f"{slug}/")]
     hname = B.fill(t("h_hol"), names)
     upd_date = guia.lastmod(DATA["updated"], B.CONTENT_UPDATED if ES else None)
@@ -395,7 +450,8 @@ def region_page(r, cities, pending):
     head = B.head_html(title, desc, f"{slug}/", f"{B.SITE}{B.ASSETS}og/{slug}.png", ld(*lds))
     lead = (guia.region_lead(r) if ES else "") + quick_access(r) + guia.upd(upd_date)
     notes = guia.region_notes(r, ALL_CITIES) if ES else ""
-    main = B.app_main(DATA, r, None, "", notes + locs + faq_html(qas), cities, pending, lead)
+    main = (B.app_main(DATA, r, None, "", notes + faq_html(qas), cities, pending, lead, top=locs) if dirx
+            else B.app_main(DATA, r, None, "", notes + locs + faq_html(qas), cities, pending, lead))
     return B.page(head, "app", "app", main, DATA, B.app_attrs(r))
 
 

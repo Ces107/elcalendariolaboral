@@ -439,8 +439,10 @@ def page_como(write, cities, loc):
             c2.setdefault((h["date"], h["name"]), h)
     c3 = sorted({h["name"] for h in hs if h["code"] == 3})
     m16, m11 = having("2027-08-16"), having("2027-10-11")
-    n_pub = len(cities)
-    n_pen = sum(1 for c in loc["cities"] if c["status"] not in P.PUBLISHED or not c["holidays"])
+    import muni
+    n_pub = sum(1 for x in muni.catalogue()["munis"] if x["ok"]) or len(cities)
+    n_all = len(muni.catalogue()["munis"])
+    n_pen = (n_all - n_pub) if n_all else sum(1 for c in loc["cities"] if c["status"] not in P.PUBLISHED or not c["holidays"])
     title = "Cómo se fijan los festivos laborales en España"
     desc = ("Quién decide los festivos: hasta 14 al año, los nacionales del BOE, los que cambia cada comunidad y los 2 "
             "locales de cada ayuntamiento. Ejemplo: 2027.")
@@ -481,8 +483,8 @@ def page_como(write, cities, loc):
         + f' y las demás no añaden ningún día. El 1 de mayo y el 25 de diciembre caen en sábado y no se trasladan.</p>'
         f'<h2>5. Los 2 festivos locales</h2>'
         f'<p>Los propone el pleno de cada ayuntamiento y los aprueba y publica la autoridad laboral en el boletín oficial '
-        f'(el de la comunidad o el de la provincia). Solo valen en ese municipio. Llevamos {n_pub} municipios con fecha '
-        f'oficial para 2027 y {n_pen} pendientes: solo publicamos una fecha cuando sale en un boletín o en un acuerdo del '
+        f'(el de la comunidad o el de la provincia). Solo valen en ese municipio. Llevamos {n_pub:} municipios con fecha '
+        f'oficial para 2027 y {n_pen:} pendientes: solo publicamos una fecha cuando sale en un boletín o en un acuerdo del '
         f'pleno publicado por el ayuntamiento.</p>'
         f'<table class="tbl hub"><caption class="vh">Dónde se publican los festivos de 2027</caption><thead><tr>'
         f'<th scope="col">Comunidad</th><th scope="col">Boletín de la comunidad</th><th scope="col">Festivos locales 2027 publicados en</th>'
@@ -522,18 +524,21 @@ def trust_pages(write, cities, loc):
     src = P.DATA["source"]
     mail = f'<a href="mailto:{B.EMAIL}">{B.EMAIL}</a>'
     date = B.CONTENT_UPDATED
-    n_pub = len(cities)
+    import muni
+    n_pub = sum(1 for x in muni.catalogue()["munis"] if x["ok"]) or len(cities)
+    n_all = len(muni.catalogue()["munis"])
     doc_page(write, "sobre/", "Quién hace El Calendario Laboral y de dónde salen los datos",
              "El Calendario Laboral es una web independiente: festivos 2027 sacados del BOE y de los boletines oficiales, "
              "con la fuente al lado de cada fecha.",
              "Quién hace esta web",
-             f'<p>El Calendario Laboral es una web independiente que hace {B.OWNER} desde Valencia. No es una web oficial ni '
+             f'<p>El Calendario Laboral es una web independiente hecha en Valencia (España). No es una web oficial ni '
              f'depende de ninguna administración.</p>'
              f'<h2>De dónde salen los datos</h2><ul>'
              f'<li><b>Festivos nacionales y de cada comunidad:</b> la resolución del BOE '
              f'<a href="{src["url"]}" rel="noopener">{src["id"]}</a> ({E(src["boe"])}).</li>'
              f'<li><b>Festivos locales:</b> el boletín oficial de la provincia o de la comunidad, o el acuerdo del pleno '
-             f'publicado por el ayuntamiento. Hoy hay {n_pub} municipios con fecha oficial; cada uno enlaza su fuente.</li>'
+             f'publicado por el ayuntamiento. Hoy hay {n_pub} de {n_all} municipios con fecha oficial de 2027; cada uno enlaza su '
+             f'fuente.</li>'
              f'<li><b>Calendario escolar:</b> la orden o resolución de cada consejería de educación, enlazada en cada página.</li>'
              f'<li><b>Municipios y población:</b> la relación de municipios del INE y sus cifras oficiales de población '
              f'(revisión del padrón a 1 de enero de 2025), que usamos para ordenar las listas y el buscador '
@@ -560,11 +565,12 @@ def trust_pages(write, cities, loc):
              f'o de tu provincia, o acuerdo del pleno). Sin fuente oficial no podemos cambiar una fecha.</p>'
              f'<h2>Para el widget o los datos</h2><p>El <a href="{B.ASSETS}widget/">widget</a> y los archivos CSV e ICS se '
              f'pueden usar en tu web enlazando a esta página.</p>'
-             f'<p>Respondemos por correo; no hay formulario ni guardamos tus datos.</p>', date)
+             f'<h2>Quién responde</h2><p>El equipo de El Calendario Laboral, en Valencia (España). Respondemos por correo, '
+             f'normalmente en unos días; no hay formulario ni guardamos tus datos.</p>', date)
     doc_page(write, "aviso-legal/", "Aviso legal · El Calendario Laboral",
              "Aviso legal de elcalendariolaboral.es: titular, contacto, condiciones de uso y responsabilidad sobre los datos.",
              "Aviso legal",
-             f'<h2>Titular</h2><p>Esta web, {B.HOST}, es de {B.OWNER}. Contacto: {mail}.</p>'
+             f'<h2>Titular</h2><p>{B.HOST} es {B.OWNER}. Contacto: {mail}.</p>'
              f'<h2>Objeto</h2><p>Informar de los festivos laborales, el calendario escolar y los puentes de España, con '
              f'herramientas gratuitas para planificar las vacaciones.</p>'
              f'<h2>Responsabilidad</h2><p>Los datos se toman de fuentes oficiales y se enlazan. Aun así, la información es '
@@ -577,6 +583,31 @@ def trust_pages(write, cities, loc):
              f'<a href="{B.BASE}privacidad/">política de privacidad</a>.</p>'
              f'<h2>Ley aplicable</h2><p>Esta web se rige por la ley española, incluida la Ley 34/2002 de servicios de la '
              f'sociedad de la información.</p>', date)
+    cell = lambda *xs: "<tr>" + "".join(f"<td>{x}</td>" for x in xs) + "</tr>"  # noqa: E731
+    keep = "Hasta que la borres"
+    doc_page(write, "cookies/", "Política de cookies · El Calendario Laboral",
+             "Qué guarda elcalendariolaboral.es en tu navegador (nada en servidores) y qué cookies usa Google AdSense en las "
+             "páginas con anuncios.",
+             "Cookies",
+             '<p>Esta web no instala cookies propias ni usa analítica.</p>'
+             '<h2>Lo que se guarda en tu navegador</h2><table class="tbl"><thead><tr><th scope="col">Clave</th>'
+             '<th scope="col">Para qué</th><th scope="col">Duración</th></tr></thead><tbody>'
+             + cell("<code>cl27.region</code>", "Abrir la web en tu comunidad", keep)
+             + cell("<code>cl27.zone.*</code>", "Tu isla o zona", keep)
+             + cell("<code>cl27.loc.*</code>", "Los festivos locales que añades", keep)
+             + cell("<code>cl27.vac.*</code>", "Los días de vacaciones que marcas", keep)
+             + cell("<code>cl27.n</code>", "Cuántos días de vacaciones planificas", keep)
+             + '</tbody></table><p>Es almacenamiento local (<i>localStorage</i>): no sale de tu dispositivo.</p>'
+             '<h2>Cookies de Google en las páginas con anuncios</h2><p>La portada, las comunidades, las ciudades y las guías '
+             'cargan Google AdSense. Google y sus socios pueden usar cookies (por ejemplo <code>__gads</code>, <code>__gpi</code> '
+             'o <code>IDE</code>) para mostrar anuncios, limitar cuántas veces ves uno y medirlos. En la UE, un aviso de '
+             'consentimiento de Google te deja aceptar, rechazar o elegir antes; tu elección se guarda en cookies de Google '
+             '(<code>FCCDCF</code>, <code>FCNEC</code>).</p><p><a href="https://policies.google.com/technologies/cookies?hl=es" '
+             'rel="noopener">Cómo usa Google las cookies</a> · <a href="https://adssettings.google.com/" rel="noopener">'
+             'Tus preferencias de anuncios</a></p>'
+             '<h2>Cómo cambiarlo</h2><p>Borra las cookies y los datos de este sitio en tu navegador: lo guardado desaparece y '
+             'el aviso de consentimiento vuelve a salir. Las páginas de municipio y provincia, las herramientas y los textos '
+             f'legales no cargan ningún script de Google.</p><p>Más en <a href="{B.BASE}privacidad/">privacidad</a>.</p>', date)
 
 
 def write_pages(write, cities, loc):

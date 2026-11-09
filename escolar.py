@@ -416,12 +416,83 @@ def hub_page():
     ctx = (f'<p class="ctx">Infantil y Primaria · días sin clase con fines de semana · '
            f'<time datetime="{DATA["updated"]}">actualizado {B.dmy(DATA["updated"])}</time></p>')
     main = (f'<div class="hero wrap">{B.crumbs_html(crumbs)}<h1>{E(h1)}</h1>{ctx}</div>'
-            f'<div class="wrap body narrow"><section class="sec" id="comunidades">{table}{more}</section>{B.ad("hub")}</div>')
+            f'<div class="wrap body narrow"><section class="sec" id="comunidades">{table}{more}</section>{hub_notes()}{B.ad("hub")}</div>')
     title = "Calendario escolar 2026-2027 en España por comunidad"
     desc = ("Calendario escolar 2026-2027 de las 19 comunidades: primer y último día de clase y vacaciones de Navidad "
             "y Semana Santa, según cada norma oficial.")
     head = B.head_html(title, desc, "calendario-escolar/", f"{B.SITE}{B.ASSETS}og/escolar.png", ld(crumbs_ld(crumbs)), langs=ONLY)
     return B.page(head, "pg sch", "", main, PDATA, js=False)
+
+
+# ---------------------------------------------------------------- computed notes (break pages, hub): only the files' dates
+
+def entities():
+    """(display name, comunidad slug, Course): one per comunidad, or one per province where the provinces set it."""
+    out = []
+    for r, e, cs in courses():
+        if provinces_mode(e):
+            out += [(n, r["slug"], c) for n, _, c, _ in provinces(e)]
+        else:
+            out.append((r["name"], r["slug"], cs[0]))
+    return out
+
+
+def who(names):
+    names = list(dict.fromkeys(names))
+    return join(names) if len(names) <= 4 else f"{len(names)} comunidades o provincias"
+
+
+def work_days_off(slug, s, e):
+    """Monday-Friday days of [s, e] that are not a 2026 or 2027 holiday of the comunidad: days a working parent covers."""
+    hd = {h["date"] for h in B.region_holidays(B.data26(), slug)} | {h["date"] for h in B.region_holidays(LAB, slug)}
+    return sum(1 for d in days(s, e) if d.weekday() < 5 and d.isoformat() not in hd)
+
+
+def back_day(c, e):
+    d = e + DAY
+    while d.weekday() >= 5 or d.isoformat() in c.off:
+        d += DAY
+    return d
+
+
+def break_notes(kind):
+    xs = [(n, slug, c, c.get(kind)) for n, slug, c in entities()]
+    xs = [x for x in xs if x[3]]
+    if len(xs) < 3:
+        return ""
+    by = lambda f: sorted(xs, key=f)  # noqa: E731
+    ln = by(lambda x: -x[3]["n"])
+    hi, lo = ln[0][3]["n"], ln[-1][3]["n"]
+    starts = by(lambda x: x[3]["s"])
+    s0, s1 = starts[0][3]["s"], starts[-1][3]["s"]
+    backs = [(n, back_day(c, b["e"])) for n, _, c, b in xs]
+    bmin, bmax = min(d for _, d in backs), max(d for _, d in backs)
+    wk = [(n, work_days_off(slug, b["s"], b["e"])) for n, slug, c, b in xs]
+    wmin, wmax = min(w for _, w in wk), max(w for _, w in wk)
+    items = [
+        f'<b>Más largas:</b> {hi} días en {who(n for n, _, _, b in xs if b["n"] == hi)}. '
+        f'<b>Más cortas:</b> {lo} en {who(n for n, _, _, b in xs if b["n"] == lo)}.',
+        f'<b>Primer día sin clase:</b> {B.dlong(s0)} en {who(n for n, _, _, b in xs if b["s"] == s0)}'
+        + (f'; el último en empezar, {B.dlong(s1)}, en {who(n for n, _, _, b in xs if b["s"] == s1)}.' if s1 != s0 else "."),
+        f'<b>Vuelta a clase:</b> {B.dlong(bmin)} en {who(n for n, d in backs if d == bmin)}'
+        + (f'; {B.dlong(bmax)} en {who(n for n, d in backs if d == bmax)}.' if bmax != bmin else "."),
+        f'<b>Si trabajas de lunes a viernes:</b> de {wmin} a {wmax} días laborables sin cole (sin contar festivos). '
+        f'{wmax} en {who(n for n, w in wk if w == wmax)}; {wmin} en {who(n for n, w in wk if w == wmin)}.',
+    ]
+    return B.section("claves", "Lo que dicen las fechas", '<ul class="notes">' + "".join(f"<li>{x}</li>" for x in items) + "</ul>")
+
+
+def hub_notes():
+    xs = [(n, c) for n, _, c in entities() if c.start and c.end]
+    if len(xs) < 3:
+        return ""
+    s0, s1 = min(c.start for _, c in xs), max(c.start for _, c in xs)
+    e0, e1 = min(c.end for _, c in xs), max(c.end for _, c in xs)
+    items = [f'<b>Empiezan antes:</b> {who(n for n, c in xs if c.start == s0)}, el {B.dlong_y(s0)}; '
+             f'las últimas, el {B.dlong(s1)} ({who(n for n, c in xs if c.start == s1)}).',
+             f'<b>Terminan más tarde:</b> {who(n for n, c in xs if c.end == e1)}, el {B.dlong_y(e1)}; '
+             f'antes que nadie, el {B.dlong(e0)} ({who(n for n, c in xs if c.end == e0)}).']
+    return B.section("claves", "Lo que dicen las fechas", '<ul class="notes">' + "".join(f"<li>{x}</li>" for x in items) + "</ul>")
 
 
 BREAK_PAGES = {
@@ -485,7 +556,8 @@ def break_html(kind, path, h1, crumb, sid, title, desc, rows):
     more = (f'<p class="more-l"><a href="{B.BASE}calendario-escolar/">Calendario escolar 2026-2027 por comunidad</a> · '
             f'{break_links(kind)}' + (f' · <a href="{B.BASE}{lab[0]}">{lab[1]}</a>' if lab else "") + '</p>')
     main = (f'<div class="hero wrap">{B.crumbs_html(crumbs)}<h1>{E(h1)}</h1>{ctx}</div>'
-            f'<div class="wrap body narrow"><section class="sec" id="{sid}">{table}{more}</section></div>')
+            f'<div class="wrap body narrow"><section class="sec" id="{sid}">{table}{more}</section>'
+            f'{break_notes(kind) if kind in BREAK_PAGES else ""}</div>')
     og = f"{B.SITE}{B.ASSETS}og/{OG[kind]}.png"
     head = B.head_html(title, desc, path, og, ld(crumbs_ld(crumbs)), langs=ONLY)
     return path, B.page(head, "pg sch", "", main, PDATA, js=False)

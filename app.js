@@ -87,11 +87,11 @@
     var v = html.getAttribute('data-sidx') || '';
     fetch(ASSETS0 + 'buscar.json' + (v && v.charAt(0) !== '{' ? '?v=' + v : '')).then(function (r) { return r.json(); }).then(function (j) {
       var rows = [];
-      j.r.forEach(function (r) { rows.push({ n: r[0], s: 'r', p: r[1], k: [r[0]].concat(r[2] ? r[2].split('|') : []) }); });
+      j.r.forEach(function (r, i) { rows.push({ n: r[0], s: 'r', ri: i, p: r[1], k: [r[0]].concat(r[2] ? r[2].split('|') : []) }); });
       j.p.forEach(function (p) {
         if (p[2]) rows.push({ n: p[0], s: 'p', ri: p[1], p: p[2], k: [p[0]].concat(p[3] ? p[3].split('|') : []) });
       });
-      j.m.forEach(function (m) { rows.push({ n: m[0], s: 'm', pi: m[1], p: m[2], ok: m[3] === 1, pop: m[4] || 0, k: [m[0]].concat(m[5] ? m[5].split('|') : []) }); });
+      j.m.forEach(function (m) { rows.push({ n: m[0], s: 'm', pi: m[1], ri: j.p[m[1]][1], p: m[2], ok: m[3] === 1, pop: m[4] || 0, k: [m[0]].concat(m[5] ? m[5].split('|') : []) }); });
       rows.forEach(function (r) { r.f = r.k.map(fold); });
       SIDX = { rows: rows, r: j.r, p: j.p };
       SWAIT.splice(0).forEach(function (f) { f(); });
@@ -100,9 +100,12 @@
   var SL = { es: ['Comunidad autónoma', 'Provincia', 'Sin resultados', 'oficial', 'pendiente'], ca: ['Comunitat autònoma', 'Província', 'Cap resultat', 'oficial', 'pendent'],
     gl: ['Comunidade autónoma', 'Provincia', 'Sen resultados', 'oficial', 'pendente'], eu: ['Autonomia erkidegoa', 'Probintzia', 'Emaitzarik ez', 'ofiziala', 'zain'] }[html.lang] ||
     ['Comunidad autónoma', 'Provincia', 'Sin resultados', 'oficial', 'pendiente'];
-  function find(q) {
+  function find(q, reg) {
     q = fold(q);
     if (!q) return [];
+    var rk = -1;
+    if (reg) SIDX.r.forEach(function (r, k) { if (r[1] === reg) rk = k; });
+    var inR = function (r) { return r.ri === rk ? 1 : 0; };
     var out = [];
     SIDX.rows.forEach(function (r) {
       var best = 9;
@@ -113,8 +116,8 @@
       if (best < 9) out.push([best, r]);
     });
     var tier = { r: 0, p: 1, m: 2 };
-    /* exact, then prefix, word start, substring; comunidades/provincias keep their tier; then population (INE) */
-    out.sort(function (a, b) { return a[0] - b[0] || (a[0] ? tier[a[1].s] - tier[b[1].s] : tier[b[1].s] - tier[a[1].s]) || (b[1].pop || 0) - (a[1].pop || 0) || a[1].n.length - b[1].n.length || (a[1].n < b[1].n ? -1 : 1); });
+    /* exact, then prefix, word start, substring; comunidades/provincias keep their tier; this page's comunidad first; then population (INE) */
+    out.sort(function (a, b) { return a[0] - b[0] || (a[0] ? tier[a[1].s] - tier[b[1].s] : tier[b[1].s] - tier[a[1].s]) || inR(b[1]) - inR(a[1]) || (b[1].pop || 0) - (a[1].pop || 0) || a[1].n.length - b[1].n.length || (a[1].n < b[1].n ? -1 : 1); });
     return out.slice(0, 8).map(function (x) { return x[1]; });
   }
   function subOf(r) {
@@ -124,7 +127,7 @@
     return p[0] === reg ? reg : p[0] + ' · ' + reg;
   }
   all('form[data-sb]').forEach(function (form) {
-    var inp = form.querySelector('input'), list = form.querySelector('.sb-l'), act = -1, res = [];
+    var inp = form.querySelector('input'), list = form.querySelector('.sb-l'), act = -1, res = [], reg = form.getAttribute('data-r');
     function close() { list.hidden = true; inp.setAttribute('aria-expanded', 'false'); inp.removeAttribute('aria-activedescendant'); act = -1; }
     function mark(k) {
       var lis = all('li[role=option]', list);
@@ -134,7 +137,7 @@
     }
     function show() {
       if (!SIDX) return;
-      res = find(inp.value);
+      res = find(inp.value, reg);
       if (!inp.value.trim()) { close(); return; }
       list.innerHTML = res.length ? res.map(function (r, j) {
         var tag = r.s === 'm' ? '<span class="sb-t ' + (r.ok ? 'ok' : 'pe') + '">' + (r.ok ? SL[3] : SL[4]) + '</span>' : '';

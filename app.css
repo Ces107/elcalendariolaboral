@@ -560,6 +560,8 @@ select option:disabled { color: #8a929e; }
 .mc td.i { background: var(--i); color: var(--i-i); font-weight: 700; }
 .mc td.l { background: var(--l); color: var(--l-i); font-weight: 700; }
 .h3 { font-size: 16px; margin: 20px 0 8px; }
+.h3 .m { font-size: 13px; font-weight: 400; margin-left: 6px; }
+.links .m.pe { font-style: italic; }
 .az { display: flex; flex-wrap: wrap; gap: 4px; margin: 0 0 8px; }
 .az a { display: inline-flex; min-width: 32px; height: 32px; align-items: center; justify-content: center; border: 1px solid var(--line); border-radius: 4px; text-decoration: none; font-weight: 600; }
 .dchips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
