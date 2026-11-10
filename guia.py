@@ -355,7 +355,7 @@ def hub_notes(cities):
         f'<b>El mes con más fiestas locales:</b> {B.T["_months"][m - 1]}, con {mn}.',
     ]
     return B.section("claves", "Lo que dicen los festivos locales de 2027", notes(items)
-                     + f'<p class="m">Calculado con los {len(cities)} municipios publicados. '
+                     + f'<p class="m">Calculado con las {len(cities)} ciudades de la tabla. '
                        f'<a href="{B.BASE}como-se-fijan-los-festivos/">Cómo se fijan los festivos locales</a></p>')
 
 

@@ -350,10 +350,15 @@ def hub_locales(loc, regions, cities):
                 "Cada ayuntamiento propone 2 días al año y la autoridad laboral de la comunidad los publica en el boletín oficial."),
                ("¿Por qué no sale mi ciudad?",
                 "Porque aún no hay publicación oficial. Solo damos fechas de un boletín o de un acuerdo del pleno publicado por el ayuntamiento.")]
-        title = "Festivos locales 2027 por ciudad: fechas oficiales"
-        desc = (f"Los 2 festivos locales de 2027 de {n_pub} ciudades, con su fuente oficial: boletín o acuerdo del pleno. "
+        import muni
+        cat = muni.catalogue()
+        m_ok, m_all = sum(1 for x in cat["munis"] if x["ok"]), len(cat["munis"])
+        title = "Festivos locales 2027 por ciudad y provincia: fechas oficiales"
+        desc = (f"Los 2 festivos locales de 2027 de {m_ok} municipios, con su fuente oficial: boletín o acuerdo del pleno. "
+                f"Por ciudad y por provincia; los demás, en cuanto se publiquen.") if m_ok else (
+                f"Los 2 festivos locales de 2027 de {n_pub} ciudades, con su fuente oficial: boletín o acuerdo del pleno. "
                 f"Las demás, en cuanto se publiquen.")
-        ctx = f'<p class="ctx">{n_pub} ciudades publicadas · {n_pen} pendientes · <time datetime="{loc["updated"]}">actualizado {B.dmy(loc["updated"])}</time></p>'
+        ctx = (f'<p class="ctx">{m_ok} de {m_all} municipios publicados' if m_ok else f'<p class="ctx">{n_pub} ciudades publicadas · {n_pen} pendientes') +             f' · <time datetime="{loc["updated"]}">actualizado {B.dmy(loc["updated"])}</time></p>'
     else:
         title = f'{t("nav_locals")} 2027 · El Calendario Laboral'
         names = ", ".join(x["title_name"] for x in cities)
@@ -361,11 +366,21 @@ def hub_locales(loc, regions, cities):
         ctx = f'<p class="ctx">{t("col_city")}: {n_pub}</p>' if B.LANG != "eu" else ""
     h1 = f'{t("nav_locals")} 2027'
     crumbs = [(t("spain"), ""), (h1, "festivos-locales/")]
-    lead = (guia.lead(f'{n_pub} municipios ya tienen sus <b>2 festivos locales de 2027</b> publicados oficialmente; '
-                      f'{n_pen} siguen pendientes y no les ponemos fecha hasta que salga en el boletín o en el acuerdo del pleno.')
-            if ES else "")
+    lead = ""
+    if ES:
+        import muni
+        cat = muni.catalogue()
+        m_ok, m_all = sum(1 for x in cat["munis"] if x["ok"]), len(cat["munis"])
+        a_ok, a_pen = (m_ok, m_all - m_ok) if m_all else (n_pub, n_pen)
+        lead = guia.lead(f'{a_ok} municipios ya tienen sus <b>2 festivos locales de 2027</b> publicados oficialmente; '
+                         f'{a_pen} siguen pendientes y no les ponemos fecha hasta que salga en el boletín o en el acuerdo del pleno.')
+        provs = [p for p in cat["provs"] if p["path"] and p["munis"]]
+        if provs:  # every province page: the way to the other 8,000 municipalities
+            li = "".join(f'<li><a href="{B.BASE}{p["path"]}">{E(p["label"])}</a> <span class="m">{sum(1 for x in p["munis"] if x["ok"])}'
+                         f' de {len(p["munis"])}</span></li>' for p in sorted(provs, key=lambda p: muni.fold(p["name"])))
+            blocks.insert(0, B.section("provincias", "Por provincia: todos los municipios", f'<ul class="links">{li}</ul>'))
     main = (f'<div class="hero wrap">{B.crumbs_html(crumbs)}<h1>{E(h1)}</h1>{lead}{ctx}</div>'
-            f'<div class="wrap body narrow">{guia.hub_notes(cities) if ES else ""}{"".join(blocks)}{B.ad("hub")}{faq_html(qas)}</div>')
+            f'<div class="wrap body narrow">{guia.hub_notes(cities) if ES else ""}{"".join(blocks)}{faq_html(qas)}</div>')  # no ad(): this page has ads=False
     head = B.head_html(title, desc, "festivos-locales/", f"{B.SITE}{B.ASSETS}og/espana.png", ld(crumbs_ld(crumbs), faq_ld(qas)), ads=False)
     return B.page(head, "pg", "locals", main, DATA, js=False)
 

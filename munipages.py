@@ -404,10 +404,10 @@ def prov_page(p, cat, write):
     pn = "Madrid" if p["uni"] and r["slug"] == "madrid" else p["name"]
     if n_ok:
         top2 = [B.dmon(d) for d, _ in st["dates"].most_common(2)]
-        title = B.pick(60, f'Festivos locales 2027 {pn}: {n_ok} municipios publicados', f'Festivos locales 2027 en {pn}')
-        desc = B.pick(155, f'Festivos locales 2027 de los {n} municipios de {pn}: {n_ok} ya publicados, los días más repetidos '
+        title = B.pick(60, f'Festivos locales 2027 {pn}: {n_ok} municipio{"s" if n_ok != 1 else ""} publicado{"s" if n_ok != 1 else ""}', f'Festivos locales 2027 en {pn}')
+        desc = B.pick(155, f'Festivos locales 2027 de los {n} municipios de {pn}: {n_ok} ya publicado{"s" if n_ok != 1 else ""}, los días más repetidos '
                            f'({join(top2)}) y los {len(base)} festivos de {r["name"]}.',
-                      f'Festivos locales 2027 de los {n} municipios de {pn}: {n_ok} publicados y los {len(base)} de {r["name"]}.')
+                      f'Festivos locales 2027 de los {n} municipios de {pn}: {n_ok} publicado{"s" if n_ok != 1 else ""} y los {len(base)} de {r["name"]}.')
     else:
         title = B.pick(60, f'Festivos locales 2027 {pn}: los {n} municipios', f'Festivos locales 2027 en {pn}')
         desc = B.pick(155, f'Festivos locales 2027 de los {n} municipios de {pn}: pendientes del boletín oficial. Mientras, los '
