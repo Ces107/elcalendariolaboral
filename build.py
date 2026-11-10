@@ -97,7 +97,7 @@ ES = {
     "add_local": "Añadir festivo local", "remove_local": "Quitar festivo local", "local_holiday": "Festivo local",
     "local_toast": "Festivo local: {date}",
     "island": "Isla", "zone": "Zona", "zone_general": "Zona general", "pick_island": "Elige tu isla", "island_holiday": "Fiesta de tu isla",
-    "privacy": "Privacidad", "data_source": "Datos: BOE del 13 de octubre de 2026", "locals": "Locales",
+    "privacy": "Privacidad", "data_source": "Datos: BOE del 13 de octubre de 2026", "unofficial": "Web no oficial: no está vinculada a ningún organismo público", "locals": "Locales",
     "n_hol": {"one": "{n} festivo", "other": "{n} festivos"}, "n_pts": {"one": "{n} puente", "other": "{n} puentes"},
     "n_days": {"one": "{n} día", "other": "{n} días"},
     "n_lab": {"one": "{n} día laborable", "other": "{n} días laborables"},
@@ -210,7 +210,7 @@ def strings(lang):
         "local_toast": U("local_toast"),
         "island": U("island"), "zone": U("zone"), "zone_general": U("zone_general"), "pick_island": U("pick_island"),
         "island_holiday": U("island_holiday"),
-        "privacy": U("privacy"), "data_source": U("data_source"), "locals": U("locals"),
+        "privacy": U("privacy"), "data_source": U("data_source"), "unofficial": U("unofficial"), "locals": U("locals"),
         "n_hol": U("n_holidays"), "n_pts": U("n_bridges"), "n_lab": U("n_workdays"), "n_nat": U("n_national"),
         "crumbs": None,
         "ics_calname": f"{hol_word} 2027 · {{label}}", "vac_event": U("vacation"),
@@ -662,7 +662,7 @@ def footer_html(data):
                       for p, n in TRUST.get(LANG, TRUST["es"]))
             + f'<li><a href="{BASE}privacidad/">{t("privacy")}</a></li></ul>'
             f'<p class="ft-lang">{lang_links()}</p></section>'
-            f'</div><div class="wrap ft-b">© 2026 {HOST}</div></footer>')
+            f'</div><div class="wrap ft-b">© 2026 {HOST} · {t("unofficial")}</div></footer>')
 
 
 def head_html(title, desc, path, og_img, extra="", hreflang=True, langs=None, index=True, ads=True, alts=True):
@@ -1020,7 +1020,7 @@ def footer_lean(data):
                  ("aviso-legal/", "Aviso legal"), ("privacidad/", "Privacidad"), ("cookies/", "Cookies")]
         li = "".join(f'<li><a href="{ASSETS}{p}">{n}</a></li>' for p, n in links)
     return (f'<footer class="ft"><div class="wrap"><ul class="ft-l">{li}<li><a href="{s["url"]}" rel="noopener">{t("data_source")}</a></li>'
-            f'</ul></div><div class="wrap ft-b">© 2026 {HOST}</div></footer>')
+            f'</ul></div><div class="wrap ft-b">© 2026 {HOST} · {t("unofficial")}</div></footer>')
 
 
 def page(head, body_cls, header_here, main, data, attrs="", js=True, lean=False):

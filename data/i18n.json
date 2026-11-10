@@ -1328,6 +1328,12 @@
    "ca": "Festa de la teva illa",
    "gl": "Festa da túa illa",
    "eu": "Zure uharteko jaia"
+  },
+  "unofficial": {
+   "es": "Web no oficial: no está vinculada a ningún organismo público",
+   "ca": "Web no oficial: no està vinculada a cap organisme públic",
+   "gl": "Web non oficial: non está vinculada a ningún organismo público",
+   "eu": "Web ez-ofiziala: ez dago inongo erakunde publikori lotuta"
   }
  },
  "months": {
