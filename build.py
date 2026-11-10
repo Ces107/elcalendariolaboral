@@ -25,8 +25,10 @@ from pathlib import Path
 from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parent
-SITE = os.environ.get("CL_SITE", "https://ces107.github.io").rstrip("/")
-ASSETS = os.environ.get("CL_BASE", "/calendario-laboral-2027/")  # css, js, ics, og, icons: shared by every language
+# Defaults = the live site, so build.py and the tests agree without env vars (the old ces107.github.io copy is
+# redirect stubs since Oct 2026; set CL_SITE / CL_BASE only to build somewhere else).
+SITE = os.environ.get("CL_SITE", "https://elcalendariolaboral.es").rstrip("/")
+ASSETS = os.environ.get("CL_BASE", "/")  # css, js, ics, og, icons: shared by every language
 HOST = SITE.split("://", 1)[1]
 LANG = os.environ.get("CL_LANG", "es")
 LANGS = [x for x in os.environ.get("CL_LANGS", "es,ca,gl,eu").split(",") if x] or ["es"]
