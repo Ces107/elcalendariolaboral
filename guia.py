@@ -374,7 +374,7 @@ def page_puentes(write, cities):
             f'El mejor, {B.drange(b["s"], b["e"])}.')
     crumbs = [("España", ""), ("Puentes 2027", "puentes/")]
     upd_date = lastmod(P.DATA["updated"], B.CONTENT_UPDATED)
-    hero = (f'<div class="hero wrap">{B.crumbs_html(crumbs)}<h1>Puentes 2027</h1>'
+    hero = (f'<div class="hero wrap">{B.crumbs_html(crumbs)}{B.lang_chip("puentes/", B.es_ca("puentes/"))}<h1>Puentes 2027</h1>'
             + lead(f'Con los festivos nacionales, el mejor puente de 2027 es <b>{brk(b)}</b>. Cada comunidad suma los suyos: '
                    f'de {len(least["pts"])} a {len(most["pts"])} puentes según dónde trabajes.')
             + upd(upd_date) + '</div>')
@@ -416,8 +416,8 @@ def page_puentes(write, cities):
             f'{join(s["r"]["name"] for s in S.values() if len(s["pts"]) == len(most["pts"]))}, con {len(most["pts"])}.')]
     main = (f'{hero}<div class="wrap body narrow">{nat_sec}{reg_sec}{B.ad("hub")}{how}{P.faq_html(qas)}</div>')
     lds = [P.crumbs_ld(crumbs), webpage_ld(title, "puentes/", upd_date), P.faq_ld(qas)]
-    head = B.head_html(title, desc, "puentes/", f"{B.SITE}{B.ASSETS}og/espana.png", P.ld(*lds), langs=["es"])
-    write("puentes/", B.page(head, "pg", "", main, P.DATA, js=False), upd_date, ["es"])
+    head = B.head_html(title, desc, "puentes/", f"{B.SITE}{B.ASSETS}og/espana.png", P.ld(*lds), langs=B.es_ca("puentes/"))
+    write("puentes/", B.page(head, "pg", "", main, P.DATA, js=False), upd_date, B.es_ca("puentes/"))
 
 
 def webpage_ld(name, path, date):
@@ -514,10 +514,10 @@ def page_como(write, cities, loc):
 
 def doc_page(write, path, title, desc, h1, body, date):
     crumbs = [("España", ""), (h1, path)]
-    main = f'<div class="wrap doc guide">{B.crumbs_html(crumbs)}<h1>{E(h1)}</h1>{upd(date, src=False)}{body}</div>'
+    main = f'<div class="wrap doc guide">{B.crumbs_html(crumbs)}{B.lang_chip(path, B.es_ca(path))}<h1>{E(h1)}</h1>{upd(date, src=False)}{body}</div>'
     head = B.head_html(title, desc, path, f"{B.SITE}{B.ASSETS}og/espana.png",
-                       P.ld(P.crumbs_ld(crumbs), webpage_ld(title, path, date)), langs=["es"], ads=False)
-    write(path, B.page(head, "pg", "", main, P.DATA, js=False), date, ["es"])
+                       P.ld(P.crumbs_ld(crumbs), webpage_ld(title, path, date)), langs=B.es_ca(path), ads=False)
+    write(path, B.page(head, "pg", "", main, P.DATA, js=False), date, B.es_ca(path))
 
 
 def trust_pages(write, cities, loc):

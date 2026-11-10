@@ -70,6 +70,12 @@
   if (CSEL) CSEL.addEventListener('change', function () { if (this.value) location.href = this.value; });
 
   var ASSETS0 = html.getAttribute('data-assets') || BASE;
+  // Search and municipality picker: a page that exists in this language (comunitats, and the subtrees in data-lp) stays in it
+  var LP = (html.getAttribute('data-lp') || '').split(',').filter(Boolean);
+  function U(p) {
+    var own = BASE !== ASSETS0 && (/^[^/]+\/$/.test(p) || LP.some(function (x) { return p.indexOf(x) === 0; }));
+    return (own ? BASE : ASSETS0) + p;
+  }
   var esc0 = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
   function toast0(msg) {
     var t = $('toast'); if (!t) return;
@@ -97,6 +103,7 @@
       SWAIT.splice(0).forEach(function (f) { f(); });
     }).catch(function () { SWAIT = []; });
   }
+  var CAP = html.lang === 'ca' ? { 'Alicante': " d'Alacant", 'Castellón': ' de Castelló', 'Valencia': ' de València' } : {};
   var SL = { es: ['Comunidad autónoma', 'Provincia', 'Sin resultados', 'oficial', 'pendiente'], ca: ['Comunitat autònoma', 'Província', 'Cap resultat', 'oficial', 'pendent'],
     gl: ['Comunidade autónoma', 'Provincia', 'Sen resultados', 'oficial', 'pendente'], eu: ['Autonomia erkidegoa', 'Probintzia', 'Emaitzarik ez', 'ofiziala', 'zain'] }[html.lang] ||
     ['Comunidad autónoma', 'Provincia', 'Sin resultados', 'oficial', 'pendiente'];
@@ -141,7 +148,7 @@
       if (!inp.value.trim()) { close(); return; }
       list.innerHTML = res.length ? res.map(function (r, j) {
         var tag = r.s === 'm' ? '<span class="sb-t ' + (r.ok ? 'ok' : 'pe') + '">' + (r.ok ? SL[3] : SL[4]) + '</span>' : '';
-        return '<li role="option" id="' + inp.id + '-o' + j + '" aria-selected="false"><a href="' + ASSETS0 + r.p + '" tabindex="-1"><b>' + esc0(r.n) + '</b>' +
+        return '<li role="option" id="' + inp.id + '-o' + j + '" aria-selected="false"><a href="' + U(r.p) + '" tabindex="-1"><b>' + esc0(r.n) + '</b>' +
           '<span class="sb-s">' + esc0(subOf(r)) + '</span>' + tag + '</a></li>';
       }).join('') : '<li class="sb-0">' + SL[2] + '</li>';
       list.hidden = false; inp.setAttribute('aria-expanded', 'true'); act = -1;
@@ -157,7 +164,7 @@
       } else if (e.key === 'Escape' && !list.hidden) { e.stopPropagation(); close(); }
     });
     form.addEventListener('submit', function (e) {
-      if (res.length) { e.preventDefault(); location.href = ASSETS0 + res[Math.max(act, 0)].p; }
+      if (res.length) { e.preventDefault(); location.href = U(res[Math.max(act, 0)].p); }
       else if (SIDX) { e.preventDefault(); show(); }
     });
     list.addEventListener('mousedown', function (e) { e.preventDefault(); });
@@ -195,11 +202,11 @@
         (groups[r.pi] = groups[r.pi] || []).push(r);
       });
       var coll = window.Intl && Intl.Collator ? new Intl.Collator('es').compare : function (a, b) { return a < b ? -1 : 1; };
-      var h = '<option value="' + ASSETS0 + region + '/">' + esc0(SIDX.r[ri][0]) + '</option>';
+      var h = '<option value="' + U(region + '/') + '">' + esc0(SIDX.r[ri][0]) + '</option>';
       Object.keys(groups).sort(function (a, b) { return coll(SIDX.p[a][0], SIDX.p[b][0]); }).forEach(function (pi) {
         var p = SIDX.p[pi];
-        h += '<optgroup label="' + esc0(p[0] === SIDX.r[ri][0] ? p[0] : SL[1] + ' de ' + p[0]) + '">' + groups[pi].sort(function (a, b) { return coll(a.n, b.n); }).map(function (r) {
-          var u = ASSETS0 + r.p;
+        h += '<optgroup label="' + esc0(p[0] === SIDX.r[ri][0] ? p[0] : SL[1] + (CAP[p[0]] || ' de ' + p[0])) + '">' + groups[pi].sort(function (a, b) { return coll(a.n, b.n); }).map(function (r) {
+          var u = U(r.p);
           return '<option value="' + u + '"' + (cur === u ? ' selected' : '') + '>' + esc0(r.n) + (r.ok ? '' : ' · ' + SL[4]) + '</option>';
         }).join('') + '</optgroup>';
       });

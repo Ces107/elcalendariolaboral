@@ -294,7 +294,7 @@ def muni_page(x, cat, write):
     gc.append((f'Festivos de {rname} (suscripción)', "https://calendar.google.com/calendar/r?cid=" + B.quote(f"webcal://{B.HOST}{ics}", safe="")))
     acts = B.actions_html(ics, f'festivos-2027-{m["slug"]}.ics', f"Calendario laboral {name} 2027", gc)
     acts = acts.replace('data-x="dl"', f'data-ics="{E(name)}" data-key="{m["ine"]}"', 1)
-    hero = (f'<div class="hero wrap">{B.crumbs_html(crumbs)}'
+    hero = (f'<div class="hero wrap">{B.crumbs_html(crumbs)}{B.lang_chip(x["path"], B.es_ca(x["path"]))}'
             + B.hero_grid(f'<h1>Calendario laboral {E(name)} 2027</h1><p class="lead">{lead}</p>',
                           B.next_card(f["hols"], prev=B.prev26(x["region"], x["zone"], wide_and_partial(x["ref26"] or [])[0])) + stats + acts, f'<p class="ctx">{where}{offn}</p>{srcline}') + '</div>')
 
@@ -331,8 +331,8 @@ def muni_page(x, cat, write):
                            f'Locales {"por localidad" if ok else "pendientes de publicación"}.',
                       f'Calendario laboral 2027 de {name}: festivos de {rname} y puentes.')
     head = B.head_html(title, desc, x["path"], f'{B.SITE}{B.ASSETS}og/{x["region"]}.png',
-                       P.ld(P.crumbs_ld(crumbs), P.webpage_ld(title, x["path"], upd_date)), langs=["es"], index=ok, ads=False)
-    write(x["path"], B.page(head, "pg mu", "", main, P.DATA, js=False, lean=True), upd_date, ["es"])
+                       P.ld(P.crumbs_ld(crumbs), P.webpage_ld(title, x["path"], upd_date)), langs=B.es_ca(x["path"]), index=ok, ads=False)
+    write(x["path"], B.page(head, "pg mu", "", main, P.DATA, js=False, lean=True), upd_date, B.es_ca(x["path"]))
 
 
 # ---------------------------------------------------------------- province
@@ -394,7 +394,7 @@ def prov_page(p, cat, write):
     stats = B.stats_html([(None, f"{n} municipios"), (None, f"{n_ok} publicados"), (None, f"{pend} pendientes")])
     meta = (f'<p class="upd">Actualizado: <time datetime="{upd_date}">{B.dmy(upd_date)}</time> · Comunidad: '
             f'<a href="{P.DATA["source"]["url"]}" rel="noopener">{P.DATA["source"]["id"]}</a></p>')
-    hero = (f'<div class="hero wrap">{B.crumbs_html(crumbs)}'
+    hero = (f'<div class="hero wrap">{B.crumbs_html(crumbs)}{B.lang_chip(p["path"], B.es_ca(p["path"]))}'
             + B.hero_grid(f'<h1>{E(h1)}</h1><p class="lead">{lead}</p>', stats + B.search_box("q-prov"), meta) + '</div>')
     body = (B.section("claves", "Lo que dicen las fechas", guia.notes(items))
             + B.section("comunidad", f'Los {len(base)} festivos de {E(r["name"])}', f'<ul class="dchips">{chips}</ul>'
@@ -413,8 +413,8 @@ def prov_page(p, cat, write):
         desc = B.pick(155, f'Festivos locales 2027 de los {n} municipios de {pn}: pendientes del boletín oficial. Mientras, los '
                            f'{len(base)} festivos de {r["name"]}.', f'Festivos locales 2027 en {pn}: pendientes del boletín.')
     head = B.head_html(title, desc, p["path"], f'{B.SITE}{B.ASSETS}og/{r["slug"]}.png',
-                       P.ld(P.crumbs_ld(crumbs), P.webpage_ld(title, p["path"], upd_date)), langs=["es"], ads=False)
-    write(p["path"], B.page(head, "pg", "", main, P.DATA, js=False, lean=True), upd_date, ["es"])
+                       P.ld(P.crumbs_ld(crumbs), P.webpage_ld(title, p["path"], upd_date)), langs=B.es_ca(p["path"]), ads=False)
+    write(p["path"], B.page(head, "pg", "", main, P.DATA, js=False, lean=True), upd_date, B.es_ca(p["path"]))
 
 
 def write_pages(pages_mod, write):

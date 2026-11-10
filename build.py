@@ -122,7 +122,12 @@ ES = {
 EXTRA = {
     "ca": {"search": "Cerca el teu municipi", "search_ph": "Municipi, província o comunitat", "search_go": "Cerca",
            "search_none": "Cap resultat", "share": "Comparteix", "copied": "Enllaç copiat", "k_region": "Comunitat autònoma",
-           "k_prov": "Província", "st_ok": "publicat", "st_pend": "pendent"},
+           "k_prov": "Província", "st_ok": "publicat", "st_pend": "pendent",
+           # Catalan-only labels (the Spanish keys of NO_TR): Softcatalà/Optimot forms
+           "menu": "Menú", "crumbs": "Ruta de navegació", "pending": "aprovat pel ple, pendent del butlletí",
+           "pending_short": "(pendent)", "unpublished": "pendent de publicar", "h_faq": "Preguntes freqüents",
+           "csv": "Excel (CSV)", "apple": "Apple / Outlook", "ics_file": "festius-2027", "n_wd": "dies feiners",
+           "app_name": "Calendari laboral 2027", "app_short": "Laboral 2027"},
     "gl": {"search": "Busca o teu concello", "search_ph": "Concello, provincia ou comunidade", "search_go": "Buscar",
            "search_none": "Sen resultados", "share": "Compartir", "copied": "Ligazón copiada", "k_region": "Comunidade autónoma",
            "k_prov": "Provincia", "st_ok": "publicado", "st_pend": "pendente"},
@@ -319,12 +324,57 @@ def dmy(iso):
 
 # ---------------------------------------------------------------- data
 
+# Comunitats where the Catalan version also has province and municipality pages (seo/plan.md §13.9: Catalan demand)
+CA_REGIONS = ("cataluna", "comunitat-valenciana", "baleares")
+# Pages below the region level that exist in Catalan besides those regions' subtree
+CA_PAGES = ("", "festivos-locales/", "puentes/", "sobre/", "contacto/", "aviso-legal/", "cookies/", "privacidad/")
+_SLUGS = {r["slug"] for r in json.loads((ROOT / "data" / "2027.json").read_text("utf-8"))["regions"]}
+# Trust pages: Catalan labels (ca has its own pages), Spanish pages for gl/eu
+TRUST = {"es": (("sobre/", "Quién hace esta web"), ("contacto/", "Contacto"), ("aviso-legal/", "Aviso legal"), ("cookies/", "Cookies")),
+         "ca": (("sobre/", "Qui fa aquest web"), ("contacto/", "Contacte"), ("aviso-legal/", "Avís legal"), ("cookies/", "Galetes"))}
+
+
+def ca_has(path):
+    """True if `path` (below the language base) has a Catalan page: home, the 19 comunitats, the hub, ponts, trust
+    pages, the utilities, and every province / municipality / city page of the 3 Catalan-speaking comunitats."""
+    if path in CA_PAGES or path.startswith(("semana/", "dias-habiles/", "dias-laborables-2027/", "cambio-de-hora/")):
+        return True
+    parts = [x for x in path.split("/") if x]
+    return bool(parts) and (len(parts) == 1 and parts[0] in _SLUGS or parts[0] in CA_REGIONS)
+
+
+def es_ca(path):
+    """langs for a page built in Spanish and, when ca_has(path), in Catalan (hreflang pair + sitemap)."""
+    return ["es", "ca"] if "ca" in LANGS and ca_has(path) else ["es"]
+
+
+def lang_chip(path, langs):
+    """Visible ES | CA switch next to the breadcrumbs, on pages that exist in both (the header menu stays)."""
+    if len(langs) < 2 or "ca" not in langs:
+        return ""
+    return ('<p class="lsw">' + "".join(
+        f'<a href="{lang_base(x)}{path}" hreflang="{x}" lang="{x}"{" aria-current=true" if x == LANG else ""}>{x.upper()}</a>'
+        for x in ("es", "ca")) + "</p>")
+
+
+def boe_label(s, lang=LANG):
+    """'BOE núm. 254, de 13 de octubre de 2026' in this language (Catalan: 'de 13 d'octubre de 2026')."""
+    if lang != "ca":
+        return s
+    es_m = I18N["months"]["es"]["full"]
+    def sub(m):
+        k = es_m.index(m.group(2).lower()) + 1
+        return f'{dm(dt.date(int(m.group(3)), k, int(m.group(1))))} de {m.group(3)}'
+    return re.sub(r"(\d{1,2}) de ([a-záéíóú]+) de (\d{4})", sub, s)
+
+
 def localize(data, lang=LANG, i18n=None):
     """Copy of data with names in `lang` (data/i18n.json top-level views). Missing names stay Spanish."""
     tr = (I18N if i18n is None else i18n).get(lang, {})
     if not tr or lang == "es":
         return data
     d = copy.deepcopy(data)
+    d["source"]["boe"] = boe_label(d["source"]["boe"], lang)
     for r in d["regions"]:
         r["name"] = tr.get("regions", {}).get(r["slug"], r["name"])
         r["short"] = tr.get("regions", {}).get(r["slug"], r["short"])
@@ -457,7 +507,7 @@ AD_SLOTS = {  # position -> AdSense display unit id (data-ad-slot)
 
 # Ads only on Spanish pages: Galician and Basque are not AdSense languages, and the Catalan pages are translations
 # without their own editorial text (seo/AUDIT-2026-11.md). Add "ca" here once AdSense has reviewed the site.
-ADS_LANGS = {"es"}
+ADS_LANGS = {"es", "ca"}  # ca: same rules as Spanish (indexable, >= 250 words, ads=True pages only)
 ADS_PAGE = True  # set by head_html(): False on noindex, legal, tool and listing pages (no loader, no units)
 # Site owner and contact (sobre, contacto, aviso legal, privacidad, cookies). Semi-anonymous brand: no personal name, ID
 # number, address or photo; the place is "Valencia (España)" at most.
@@ -474,7 +524,8 @@ def ad(pos):
     slot = AD_SLOTS.get(pos)
     if not (ADS_ON and slot and ADS_PAGE):
         return ""
-    return (f'<aside class="ad ad-{pos}" aria-label="Publicidad"><p class="ad-l">Publicidad</p>'
+    lab = "Publicitat" if LANG == "ca" else "Publicidad"
+    return (f'<aside class="ad ad-{pos}" aria-label="{lab}"><p class="ad-l">{lab}</p>'
             f'<ins class="adsbygoogle" style="display:block" data-ad-client="{AD_CLIENT}" data-ad-slot="{slot}" '
             f'data-ad-format="auto" data-full-width-responsive="true"></ins>'
             f'<script>(adsbygoogle=window.adsbygoogle||[]).push({{}});</script></aside>')
@@ -558,7 +609,7 @@ def header_html(here="", lean=False):
     regs = "".join(f'<a href="{BASE}{r["slug"]}/">{E(r["name"])}</a>' for r in REGIONS)
     srch = (f'<details class="dd dd-srch"><summary aria-label="{E(t("search"))}">{MAG}<span class="sr-l">{t("search_go")}</span></summary>'
             f'<div class="menu menu-srch">{search_box("q-hd")}</div></details>')
-    pts_href = f"{BASE}puentes/" if LANG == "es" else ("#puentes" if here == "app" else f"{BASE}#puentes")
+    pts_href = f"{BASE}puentes/" if LANG in ("es", "ca") else ("#puentes" if here == "app" else f"{BASE}#puentes")
     return (f'<header class="hd"><div class="wrap hd-in">{wordmark()}'
             f'<nav class="nav" id="nav">'
             + (f'<a href="{BASE}#comunidades">{t("nav_regions")}</a>' if lean else
@@ -595,7 +646,7 @@ def footer_html(data):
             + (f'<li><a href="{BASE}festivos/">Festivos 2027 en España</a></li>'
                f'<li><a href="{BASE}semana-santa/">Semana Santa 2027</a></li>' if LANG == "es" else "")
             + f'<li><a href="{BASE}festivos-locales/">{t("nav_locals")} 2027</a></li>'
-            f'<li><a href="{ASSETS}calendario-laboral-2027-pdf/"{"" if LANG == "es" else " hreflang=es lang=es"}>Calendario laboral 2027 PDF</a></li></ul>'
+            f'<li><a href="{ASSETS}calendario-laboral-2027-pdf/"{"" if LANG == "es" else " hreflang=es lang=es"}>{"Calendari laboral 2027 en PDF" if LANG == "ca" else "Calendario laboral 2027 PDF"}</a></li></ul>'
             + (f'<h2>Calendario escolar</h2><ul><li><a href="{BASE}calendario-escolar/">Calendario escolar 2026-2027</a></li>'
                f'<li><a href="{BASE}vacaciones-escolares/navidad/">Vacaciones de Navidad 2026-2027</a></li>'
                f'<li><a href="{BASE}vacaciones-escolares/semana-santa/">Vacaciones de Semana Santa 2027</a></li>'
@@ -603,12 +654,12 @@ def footer_html(data):
                f'<h2>Vacaciones</h2><ul><li><a href="{BASE}vacaciones-2027/">Maximiza tus vacaciones 2027</a></li></ul>' if LANG == "es" else "")
             + util_footer() + '</section>'
             f'<section><h2>El Calendario Laboral</h2><ul><li><a href="{s["url"]}" rel="noopener">{t("data_source")}</a></li>'
-            f'<li><a href="{ASSETS}widget/"{"" if LANG == "es" else " hreflang=es lang=es"}>Widget para tu web</a></li>'
+            f'<li><a href="{ASSETS}widget/"{"" if LANG == "es" else " hreflang=es lang=es"}>{"Widget per al teu web" if LANG == "ca" else "Widget para tu web"}</a></li>'
             + ('<li><a href="https://www.amazon.es/s?k=Calma+Planners" target="_blank" rel="sponsored noopener">'
                'Agenda 2027 en papel, con estos festivos →</a></li>' if LANG == "es" else "")
             + f'<li><a href="#inst" data-install hidden>{INSTALL.get(LANG, INSTALL["es"])[0]}</a></li>'
-            + "".join(f'<li><a href="{ASSETS}{p}"{"" if LANG == "es" else " hreflang=es lang=es"}>{n}</a></li>'
-                      for p, n in (("sobre/", "Quién hace esta web"), ("contacto/", "Contacto"), ("aviso-legal/", "Aviso legal"), ("cookies/", "Cookies")))
+            + "".join(f'<li><a href="{BASE if LANG == "ca" else ASSETS}{p}"{"" if LANG in ("es", "ca") else " hreflang=es lang=es"}>{n}</a></li>'
+                      for p, n in TRUST.get(LANG, TRUST["es"]))
             + f'<li><a href="{BASE}privacidad/">{t("privacy")}</a></li></ul>'
             f'<p class="ft-lang">{lang_links()}</p></section>'
             f'</div><div class="wrap ft-b">© 2026 {HOST}</div></footer>')
@@ -630,10 +681,11 @@ def head_html(title, desc, path, og_img, extra="", hreflang=True, langs=None, in
     alts = "".join(f'<link rel="alternate" hreflang="{x}" href="{SITE}{lang_base(x)}{path}">' for x in PAGE_LANGS) if show else ""
     if show:
         alts += f'<link rel="alternate" hreflang="x-default" href="{SITE}{lang_base("es")}{path}">'
+    LP = f' data-lp="{",".join(r + "/" for r in CA_REGIONS)}"' if LANG == "ca" else ""
     canon = (f'<link rel="canonical" href="{canonical}"><meta name="robots" content="max-image-preview:large,max-snippet:-1">'
              if index else '<meta name="robots" content="noindex,follow">')
     return f"""<!doctype html>
-<html lang="{LANG}" data-base="{BASE}" data-assets="{ASSETS}" data-sidx="{{SIDXV}}">
+<html lang="{LANG}" data-base="{BASE}" data-assets="{ASSETS}" data-sidx="{{SIDXV}}"{LP}>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -848,6 +900,9 @@ def data26():
     return _D26
 
 
+CA_26 = {"Lunes siguiente al Día de la Constitución Española": "Dilluns següent al Dia de la Constitució", "San Esteban": "Sant Esteve"}
+
+
 def prev26(region=None, zone=None, locals26=()):
     """2026 holidays from the build day on (national, or the comunidad's + island/Arán, + the municipality's official
     2026 local days). Only the "Próximo festivo" card uses them; every 2027 count stays 2027."""
@@ -860,6 +915,9 @@ def prev26(region=None, zone=None, locals26=()):
     else:
         hols = [{"date": h["date"], "name": h["name"], "kind": "n"} for h in d26["holidays"] if h["regions"] == "all"]
     seen = {h["date"] for h in hols}
+    if LANG == "ca":  # 2026-only names missing from data/i18n.json (DOGC: Sant Esteve); 2026 local names are often Spanish
+        hols = [{**h, "name": CA_26.get(h["name"], h["name"])} for h in hols]
+        locals26 = [{**h, "name": "Festa local"} for h in locals26]
     hols = hols + [{"date": h["date"], "name": h.get("name") or "Fiesta local", "kind": "l"} for h in locals26 if h["date"] not in seen]
     return sorted((h for h in hols if h["date"] >= TODAY), key=lambda h: h["date"])
 
@@ -950,10 +1008,17 @@ def scripts(data):
 def footer_lean(data):
     """Footer of the municipality and province pages: the trust and data links, without the long lists."""
     s = data["source"]
-    links = [("festivos/", "Festivos 2027"), ("festivos-locales/", "Festivos locales 2027"), ("puentes/", "Puentes 2027"),
-             ("buscar/", "Todas las provincias"), ("widget/", "Widget para tu web"), ("sobre/", "Quién hace esta web"), ("contacto/", "Contacto"),
-             ("aviso-legal/", "Aviso legal"), ("privacidad/", "Privacidad"), ("cookies/", "Cookies")]
-    li = "".join(f'<li><a href="{ASSETS}{p}">{n}</a></li>' for p, n in links)
+    if LANG == "ca":
+        own = [("", "Calendari laboral 2027"), ("festivos-locales/", "Festius locals 2027"), ("puentes/", "Ponts 2027"),
+               *TRUST["ca"][:3], ("privacidad/", "Privadesa"), TRUST["ca"][3]]
+        li = ("".join(f'<li><a href="{BASE}{p}">{n}</a></li>' for p, n in own)
+              + "".join(f'<li><a href="{ASSETS}{p}" hreflang="es" lang="es">{n}</a></li>'
+                        for p, n in (("buscar/", "Totes les províncies"), ("widget/", "Widget per al teu web"))))
+    else:
+        links = [("festivos/", "Festivos 2027"), ("festivos-locales/", "Festivos locales 2027"), ("puentes/", "Puentes 2027"),
+                 ("buscar/", "Todas las provincias"), ("widget/", "Widget para tu web"), ("sobre/", "Quién hace esta web"), ("contacto/", "Contacto"),
+                 ("aviso-legal/", "Aviso legal"), ("privacidad/", "Privacidad"), ("cookies/", "Cookies")]
+        li = "".join(f'<li><a href="{ASSETS}{p}">{n}</a></li>' for p, n in links)
     return (f'<footer class="ft"><div class="wrap"><ul class="ft-l">{li}<li><a href="{s["url"]}" rel="noopener">{t("data_source")}</a></li>'
             f'</ul></div><div class="wrap ft-b">© 2026 {HOST}</div></footer>')
 
@@ -1021,6 +1086,8 @@ def app_main(data, r, city=None, hero_extra="", more="", cities=(), pending=(), 
     else:
         h1 = fill(t("h1_region"), names)
         crumbs = crumbs_html([(t("spain"), ""), (r["name"], f"{slug}/")])
+        if LANG == "ca" or slug in CA_REGIONS:
+            crumbs += lang_chip(f"{slug}/", ["es", "ca"] if "ca" in LANGS else [])
     sel = region_select(slug) + city_select(r, cities, pending, city["slug"] if city else None)
     if zone:
         zopts = (f'<option value="">{t("pick_island")}</option>' if is_can else "") + "".join(

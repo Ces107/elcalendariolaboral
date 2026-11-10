@@ -35,6 +35,8 @@ CITY_ZONE = {c: island for island, cs in ISLAND_CITIES.items() for c in cs}
 VARIANT = {"cataluna": "Catalunya", "pais-vasco": "Euskadi", "comunitat-valenciana": "Comunitat Valenciana, GVA",
            "baleares": "Illes Balears"}
 ES = B.LANG == "es"
+CA = B.LANG == "ca"
+import ca as CAT  # noqa: E402  Catalan text (seo/plan.md §13: Catalan first)
 
 _written = []
 _fix = None
@@ -110,7 +112,8 @@ def faq_html(qas):
 
 
 THIN_ADS = 250  # visible words of 2+ letters in <main>, month grids left out: below it a page carries no ads (seo/ads.md)
-_RX_GRID = re.compile(r"<caption>Enero</caption>.*?<caption>Diciembre</caption>.*?(?:</table>|</div>)", re.S)
+_RX_GRID = re.compile(r"<caption>(?:Enero|Gener|Xaneiro|Urtarrila)</caption>.*?<caption>(?:Diciembre|Desembre|Decembro|Abendua)</caption>"
+                      r".*?(?:</table>|</div>)", re.S)
 _RX_AD = re.compile(r'<aside class="ad ad-[a-z]+".*?</aside>', re.S)
 thin_no_ads = []  # paths whose ads the guard removed (printed by the build, listed in seo/ADSENSE-READINESS-*.md)
 
@@ -149,6 +152,8 @@ def write(path, page, lastmod, langs=None):
 def prov_links(region, province=None):
     """Links to the province pages of munipages.py (all municipalities with their status), Spanish, when MUNI_ON."""
     import muni
+    if CA:
+        return CAT.prov_links(region, province)
     if not (ES and muni.MUNI_ON):
         return ""
     ps = [p for p in muni.catalogue()["provs"] if p["region"] == region and p["path"] and (province is None or p["name"] == province)]
@@ -162,6 +167,8 @@ def prov_links(region, province=None):
 def quick_access(r):
     """Right under the answer on a comunidad page: the search box and the province pages (every municipality)."""
     import muni
+    if CA:
+        return CAT.quick_access(r)
     ps = [p for p in muni.catalogue()["provs"] if p["region"] == r["slug"] and p["path"]] if muni.MUNI_ON else []
     if not ps:
         return ""
@@ -181,6 +188,8 @@ def muni_directory(r):
     (2027 dates, or 'pendiente'), each linking to its page; the province page lists all of them."""
     import muni
     import munipages as MP
+    if CA:
+        return CAT.muni_directory(r)
     if not (ES and muni.MUNI_ON):
         return ""
     ps = [p for p in muni.catalogue()["provs"] if p["region"] == r["slug"] and p["path"] and p["munis"]]
@@ -236,6 +245,13 @@ def source_label(c):
 
 def city_ctx(c, regions):
     r = regions[c["region"]]
+    cat_ca = CA and c["region"] in B.CA_REGIONS
+    if cat_ca:  # Catalan name (València) and holiday names; same dates
+        import muni
+        mx = muni.catalogue()["by_path"].get(f'{r["slug"]}/{c["slug"]}/')
+        c = {**c, "name": CAT.name_of(mx) if mx else c["name"],
+             "holidays": [{**h, "name": CAT.hol_name(h["name"])} for h in c["holidays"]]}
+        c["ca_name"] = c["name"]
     zone = CITY_ZONE.get(c["slug"]) or ("general" if c["region"] == "cataluna" else None)
     name = city_name(c, regions)
     hols = B.page_holidays(DATA, r, {"zone": zone, "holidays": c["holidays"]})
@@ -244,10 +260,10 @@ def city_ctx(c, regions):
     ref26 = muni.wide_and_partial(m["ref26"])[0] if m and m.get("ref26") else []  # 2026 locals: next-holiday card only
     return {"c": c, "r": r, "slug": c["slug"], "zone": zone, "ref26": ref26, "title_name": name, "holidays": c["holidays"],
             "path": f'{r["slug"]}/{c["slug"]}/', "hols": hols, "n": len(hols), "boe": len(hols) - 2,
-            "pts": B.puentes(hols), "lab": B.workdays(hols), "src_label": source_label(c),
-            "pending_bulletin": c["status"] == "ayuntamiento",
-            "in": f"en {name}" if ES else f"· {name}",
-            "h1": f'{t("h1")} de {name}' if ES else f'{t("h1")}: {name}'}
+            "pts": B.puentes(hols), "lab": B.workdays(hols), "src_label": CAT.source_label(c) if cat_ca else source_label(c),
+            "pending_bulletin": c["status"] == "ayuntamiento", "ca": cat_ca,
+            "in": f"en {name}" if ES else (CAT.de(name) if cat_ca else f"· {name}"),
+            "h1": f'{t("h1")} de {name}' if ES else (f"Calendari laboral {name} 2027" if cat_ca else f'{t("h1")}: {name}')}
 
 
 def published_cities(loc, regions):
@@ -272,6 +288,8 @@ def city_page(x, siblings, mine, pend):
                       f'Festivos locales de {sn} en 2027: {B.dlong(h1["date"])} y {B.dlong(h2["date"])}. {tail}',
                       f'Festivos locales de {sn} en 2027: {d1} y {d2}. {tail}',
                       f'Festivos locales de {sn} en 2027: {d1} y {d2}. {x["n"]} festivos, {len(x["pts"])} puentes y {x["lab"]} días laborables.')
+    elif x["ca"]:
+        title, desc = CAT.city_titles(x)
     else:
         suffix = t("title_region").split(":", 1)[1].strip()
         title = B.pick(60, f'{t("h1")} · {name}: {suffix}', f'{t("h1")} · {name}', name)
@@ -280,7 +298,7 @@ def city_page(x, siblings, mine, pend):
                       f'{name}: {tn("n_hol", x["n"])}, {tn("n_pts", len(x["pts"]))}. {t("locals")}: {B.dm(h1["date"])}, {B.dm(h2["date"])}.')
     crumbs = [(t("spain"), ""), (r["name"], f'{r["slug"]}/'), (name, x["path"])]
     src = c["source"]
-    status = f' · {t("pending")}' if x["pending_bulletin"] and ES else ""
+    status = f' · {t("pending")}' if x["pending_bulletin"] and (ES or x["ca"]) else ""
     srcline = (f'<p class="src">{t("locals")}: <a href="{E(src["url"])}" rel="noopener" title="{E(src["title"])}">{E(x["src_label"])}</a>{status}'
                f' · <a href="{DATA["source"]["url"]}" rel="noopener">{t("data_source")}</a></p>')
     qas = []
@@ -296,23 +314,31 @@ def city_page(x, siblings, mine, pend):
             (f'¿El {B.dmon(h1["date"])} es festivo en toda la provincia de {c["province"]}?',
              f'No. Los festivos locales solo valen en el municipio de {E(c["name"])}.'),
         ]
+    elif x["ca"]:
+        qas = CAT.city_faq(x)
     rnames = B.R(r)
     near = B.section("locales", E(B.fill(t("h_loc"), rnames)),
                      city_list(siblings) + f'<p class="more-l"><a href="{B.BASE}{r["slug"]}/">{E(B.fill(t("h1_region"), rnames))}</a> · '
                      f'<a href="{B.BASE}festivos-locales/">{t("nav_locals")} 2027</a>{school_link(r)}</p>' + prov_links(r["slug"], c["province"]))
     key = f'{r["slug"]}-{c["slug"]}'
-    upd_date = guia.lastmod(src["checked"], DATA["updated"], B.CONTENT_UPDATED if ES else None)
-    lds = [crumbs_ld(crumbs), webpage_ld(title, x["path"], upd_date) if ES else None, list_ld(B.fill(t("h_hol"), {**rnames, "region": name, "region_in": x["in"]}), x["hols"]),
+    upd_date = guia.lastmod(src["checked"], DATA["updated"], B.CONTENT_UPDATED if ES or x["ca"] else None)
+    lds = [crumbs_ld(crumbs), webpage_ld(title, x["path"], upd_date) if ES or x["ca"] else None, list_ld(B.fill(t("h_hol"), {**rnames, "region": name, "region_in": x["in"]}), x["hols"]),
            dataset_ld(B.fill(t("h_hol"), {**rnames, "region": name, "region_in": x["in"]}), desc,
                       x["path"], c["name"], [DATA["source"]["url"], src["url"]], [("text/calendar", f"ics/{key}.ics"), ("text/csv", f"csv/{key}.csv")]),
            faq_ld(qas)]
-    ctx = {**x, "crumbs": B.crumbs_html(crumbs)}
-    # Spanish: indexable, no hreflang. ca/gl/eu: the same template translated, kept for users but noindex (seo/AUDIT-2026-11.md)
+    pair = r["slug"] in B.CA_REGIONS and (ES or x["ca"])
+    # Spanish: indexable. Catalan-speaking comunitats: es + ca indexable with hreflang (ca.py writes the Catalan text).
+    # Other ca/gl/eu city pages: the same template translated, kept for users but noindex (seo/AUDIT-2026-11.md).
     # c["new"]: published after the AdSense review request (muni.overlay_locales): no ads until the site is approved
-    head = B.head_html(title, desc, x["path"], f"{B.SITE}{B.ASSETS}og/{key}.png", ld(*lds), alts=False, index=ES,
-                       ads=not c.get("new"))
-    lead = guia.city_lead(x) + guia.upd(upd_date) if ES else ""
-    notes = guia.city_notes(x, ALL_CITIES) if ES else ""
+    head = B.head_html(title, desc, x["path"], f"{B.SITE}{B.ASSETS}og/{key}.png", ld(*lds), alts=pair, index=ES or x["ca"],
+                       ads=not c.get("new"), langs=B.es_ca(x["path"]) if pair else None)
+    ctx = {**x, "crumbs": B.crumbs_html(crumbs) + (B.lang_chip(x["path"], ["es", "ca"]) if pair else "")}
+    if ES:
+        lead, notes = guia.city_lead(x) + guia.upd(upd_date), guia.city_notes(x, ALL_CITIES)
+    elif x["ca"]:
+        lead, notes = CAT.city_lead(x) + guia.upd(upd_date), CAT.city_notes(x, ALL_CITIES)
+    else:
+        lead, notes = "", ""
     main = B.app_main(DATA, r, ctx, srcline, notes + near + faq_html(qas), mine, pend, lead)
     return B.page(head, "app", "app", main, DATA, B.app_attrs(r, ctx))
 
@@ -329,7 +355,7 @@ def hub_locales(loc, regions, cities):
             if x:
                 h1, h2 = x["holidays"]
                 src = c["source"]
-                kind = "Fuente" if ES else x["src_label"]
+                kind = "Fuente" if ES else "Font" if CA else x["src_label"]
                 rows.append(f'<tr><th scope="row"><a href="{B.BASE}{x["path"]}">{E(x["title_name"])}</a></th>'
                             f'<td>{tm(h1["date"], B.dm(h1["date"]))}<br>{tm(h2["date"], B.dm(h2["date"]))}</td>'
                             f'<td><a href="{E(src["url"])}" rel="noopener" title="{E(src["title"])}">{E(kind)}</a></td></tr>')
@@ -367,6 +393,13 @@ def hub_locales(loc, regions, cities):
     h1 = f'{t("nav_locals")} 2027'
     crumbs = [(t("spain"), ""), (h1, "festivos-locales/")]
     lead = ""
+    if CA:
+        title, desc, lead, ctx, hsec, psec, qas = CAT.hub_text(cities)
+        ctx = ctx.replace("{d}", loc["updated"]).replace("{dd}", B.dmy(loc["updated"]))
+        head = B.head_html(title, desc, "festivos-locales/", f"{B.SITE}{B.ASSETS}og/espana.png", ld(crumbs_ld(crumbs), faq_ld(qas)), ads=False)
+        main = (f'<div class="hero wrap">{B.crumbs_html(crumbs)}{B.lang_chip("festivos-locales/", ["es", "ca"])}<h1>{E(h1)}</h1>{lead}{ctx}</div>'
+                f'<div class="wrap body narrow">{hsec}{psec}{"".join(blocks)}{faq_html(qas)}</div>')
+        return B.page(head, "pg", "locals", main, DATA, js=False)
     if ES:
         import muni
         cat = muni.catalogue()
@@ -414,6 +447,8 @@ def region_titles(r, f):
     if names["seo"]:
         seo = {k: (f'{v} ({names["seo"]})' if k in ("region", "region_in") else v) for k, v in names.items()}
         cands += [B.fill(t("title_region"), seo), B.fill(t("title_region2"), seo)]
+        if CA:  # 'Calendari laboral 2027: País Valencià (Comunitat Valenciana)': both names people search, within 60
+            cands.append(f'{t("h1")}: {names["region"]} ({names["seo"]})')
     cands += [B.fill(t("title_region"), names), B.fill(t("title_region2"), names)]
     title = B.pick(60, *cands)
     desc = first_sentences(B.fill(t("desc_region"), names, n=f["n"] + (1 if f["can"] else 0), p=len(f["pts"])), 155)
@@ -447,6 +482,8 @@ def region_page(r, cities, pending):
                q2, (f"¿Qué pasa con el 15 de agosto de 2027 en {name}?", a3),
                (f"¿Dónde veo los festivos de mi municipio en {name}?",
                 f'Cada ayuntamiento fija 2. Aquí están los de las ciudades ya publicadas: <a href="{B.BASE}festivos-locales/#{slug}">festivos locales 2027</a>.')]
+    if CA:
+        qas = CAT.region_faq(r, f)
     names = B.R(r)
     pend = f'<p class="m">Pendientes de publicar: {E(", ".join(pending))}.</p>' if pending and ES else ""
     dirx = muni_directory(r)
@@ -457,14 +494,14 @@ def region_page(r, cities, pending):
         locs = B.section("locales", E(B.fill(t("h_loc"), names)), city_list(cities) + pend + more_l + prov_links(slug))
     crumbs = [(t("spain"), ""), (name, f"{slug}/")]
     hname = B.fill(t("h_hol"), names)
-    upd_date = guia.lastmod(DATA["updated"], B.CONTENT_UPDATED if ES else None)
+    upd_date = guia.lastmod(DATA["updated"], B.CONTENT_UPDATED if ES or CA else None)
     lds = [crumbs_ld(crumbs), webpage_ld(title, f"{slug}/", upd_date), list_ld(hname, f["hols"]),
            dataset_ld(hname, desc, f"{slug}/", r["official"], DATA["source"]["url"],
                       [("text/calendar", f"ics/{slug}.ics"), ("text/csv", f"csv/{slug}.csv")]),
            faq_ld(qas)]
     head = B.head_html(title, desc, f"{slug}/", f"{B.SITE}{B.ASSETS}og/{slug}.png", ld(*lds))
-    lead = (guia.region_lead(r) if ES else "") + quick_access(r) + guia.upd(upd_date)
-    notes = guia.region_notes(r, ALL_CITIES) if ES else ""
+    lead = (guia.region_lead(r) if ES else CAT.region_lead(r) if CA else "") + quick_access(r) + guia.upd(upd_date)
+    notes = guia.region_notes(r, ALL_CITIES) if ES else CAT.region_notes(r, ALL_CITIES) if CA else ""
     main = (B.app_main(DATA, r, None, "", notes + faq_html(qas), cities, pending, lead, top=locs) if dirx
             else B.app_main(DATA, r, None, "", notes + locs + faq_html(qas), cities, pending, lead))
     return B.page(head, "app", "app", main, DATA, B.app_attrs(r))
@@ -492,6 +529,8 @@ def home_page():
                ("¿Cuántos días laborables tiene 2027?",
                 f"261 de lunes a viernes. Restando los festivos quedan entre {min(labs)} y {max(labs)}, según la comunidad, sin contar los 2 locales."),
                ("¿Cuándo es Semana Santa 2027?", "Del domingo 21 al domingo 28 de marzo. Jueves Santo es el 25 y Viernes Santo el 26.")]
+    if CA:
+        qas = CAT.home_faq(regs, nat)
     if ES:
         nlabs = sorted(B.workdays(f["hols"], 1 if f["can"] else 0) for f in regs.values())
         title = "Calendario laboral 2027: festivos y puentes de España"
@@ -501,15 +540,16 @@ def home_page():
     else:
         title, desc = B.pick(60, t("title_home"), t("h1")), first_sentences(t("desc_home"), 155)
     sp = {"region": t("spain"), "region_in": t("in_spain"), "region_of": t("spain")}
-    chips = "".join(f'<li><a href="{B.BASE}{r["slug"]}/">{E(r["name"])}</a></li>' for r in DATA["regions"])
+    order = sorted(DATA["regions"], key=lambda r: r["slug"] not in B.CA_REGIONS) if CA else DATA["regions"]
+    chips = "".join(f'<li><a href="{B.BASE}{r["slug"]}/">{E(r["name"])}</a></li>' for r in order)
     n_regions = B.I18N["ui"]["n_regions"][B.LANG] if B.I18N else "19 comunidades"
-    upd_date = guia.lastmod(DATA["updated"], B.CONTENT_UPDATED if ES else None)
+    upd_date = guia.lastmod(DATA["updated"], B.CONTENT_UPDATED if ES or CA else None)
     upd = guia.upd(upd_date, src=False)
     labs = sorted(B.workdays(f["hols"], 1 if f["can"] else 0) for f in regs.values())
     lab_rng = tn("n_lab", labs[-1]).replace(str(labs[-1]), f"{labs[0]}–{labs[-1]}", 1)
     stats = B.stats_html([(None, tn("n_nat", len(nat))), (None, lab_rng), (None, tn("n_pts", len(B.puentes(nat))))])
-    hero = ('<div class="hero wrap">'
-            + B.hero_grid(f'<h1>{E(t("h1"))}</h1>{guia.home_lead() if ES else ""}{B.search_box("q-home", big=True)}'
+    hero = ('<div class="hero wrap">' + (B.lang_chip("", ["es", "ca"]) if CA else "")
+            + B.hero_grid(f'<h1>{E(t("h1"))}</h1>{guia.home_lead() if ES else CAT.home_lead() if CA else ""}{B.search_box("q-home", big=True)}'
                           f'<div class="pickers">{B.region_select(None)}{B.home_city_select()}</div>',
                           B.next_card(nat, prev=B.prev26()) + stats,
                           f'<p class="ctx">{E(n_regions)} · <a href="{DATA["source"]["url"]}" rel="noopener">{t("data_source")}</a></p>{upd}')
@@ -524,7 +564,7 @@ def home_page():
     prow = "".join(B.pts_row(it) for it in B.all_breaks(nat))
     vac = f'<p class="more-l"><a href="{B.BASE}vacaciones-2027/">Maximiza tus vacaciones 2027 →</a></p>' if ES else ""
     pts_sec = B.section("puentes", E(B.fill(t("h_pts"), sp)), f'<table class="tbl pts">{B.pts_head()}<tbody>{prow}</tbody></table>{vac}')
-    notes = guia.home_notes() if ES else ""
+    notes = guia.home_notes() if ES else CAT.home_notes() if CA else ""
     main = f'{hero}<div class="wrap body">{cal_sec}{B.ad("cal")}{reg_sec}{hol_sec}{pts_sec}{notes}{faq_html(qas)}</div>{B.POP}'
     org = f"{B.SITE}{B.ASSETS}#org"
     # No SearchAction: Google retired the sitelinks search box (Nov 2024) and /buscar/ is a noindex fallback.
@@ -548,6 +588,7 @@ def write_pages(data, fix):
     global DATA, _fix, ALL_CITIES
     DATA, _fix = data, fix
     guia.init(sys.modules[__name__])
+    CAT.P = sys.modules[__name__]
     _written.clear()
     regions = {r["slug"]: r for r in data["regions"]}
     loc = load_locales()
@@ -567,10 +608,17 @@ def write_pages(data, fix):
         sib = [s for s in cities if s["r"]["slug"] == x["r"]["slug"] and s is not x][:10]
         mine = [s for s in cities if s["r"]["slug"] == x["r"]["slug"]]
         pend = [c["name"] for c in loc["cities"] if c["region"] == x["r"]["slug"] and (c["status"] not in PUBLISHED or not c["holidays"])]
-        write(x["path"], city_page(x, sib, mine, pend), guia.lastmod(x["c"]["source"]["checked"], upd), ["es"])
+        write(x["path"], city_page(x, sib, mine, pend), guia.lastmod(x["c"]["source"]["checked"], upd),
+              B.es_ca(x["path"]) if x["r"]["slug"] in B.CA_REGIONS else ["es"])
     write("festivos-locales/", hub_locales(loc, regions, cities), loc["updated"])
     import utilidades
     utilidades.write_pages(data, write, cities)
+    if CA:
+        CAT.page_puentes(write, cities)
+        CAT.trust_pages(write, cities)
+        import muni
+        if muni.MUNI_ON:
+            CAT.write_muni_pages(sys.modules[__name__], write)
     if ES:
         guia.write_pages(write, cities, loc)
         import escolar

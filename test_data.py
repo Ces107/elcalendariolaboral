@@ -91,8 +91,8 @@ for p in noidx:  # noindex: out of the sitemap, no canonical, no hreflang, no ad
     h = p.read_text("utf-8")
     check(rel not in paths_in_sm, f"{rel}: noindex pero en el sitemap")
     check('rel="canonical"' not in h and "hreflang=\"" not in h.split("</head>")[0] and ADS not in h, f"{rel}: noindex con canonical, hreflang o anuncios")
-for p in allp:  # AdSense only on Spanish pages (gl/eu are not AdSense languages)
-    if p.relative_to(ROOT).parts[0] in ("ca", "gl", "eu"):
+for p in allp:  # AdSense on Spanish and Catalan pages (Catalan is an AdSense language, support.google.com/adsense/answer/9727; gl/eu are not)
+    if p.relative_to(ROOT).parts[0] in ("gl", "eu"):
         check(ADS not in p.read_text("utf-8"), f"{p.relative_to(ROOT)}: anuncios fuera del castellano")
 check(not any("fonts.googleapis" in p.read_text("utf-8") for p in allp[:40]), "Google Fonts: la tipografía se sirve desde /fonts/")
 for path in ("sobre/", "contacto/", "aviso-legal/", "puentes/", "como-se-fijan-los-festivos/"):
