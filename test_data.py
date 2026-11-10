@@ -263,6 +263,29 @@ check(len(list(emb.iterdir())) == len(keys), f"widget: {len(list(emb.iterdir()))
 for p in pages:
     check("/widget/" in p.read_text("utf-8").split('<footer', 1)[-1], f"{p.relative_to(ROOT)}: falta «Widget para tu web» en el pie")
 
+# comunidad pages (10 Nov 2026): every province page linked in the directory right after the calendar, search
+# ranked to the comunidad; no AdSense on a page under pages.THIN_ADS words; no ad unit without the loader
+import muni  # noqa: E402
+import pages as P  # noqa: E402
+
+for s in slugs:
+    ps = [p for p in muni.catalogue()["provs"] if p["region"] == s and p["path"] and p["munis"]]
+    if not ps:
+        continue
+    h = (ROOT / s / "index.html").read_text("utf-8")
+    loc_i, cal_i, pts_i = h.find('id="locales"'), h.find('id="calendario"'), h.find('id="puentes"')
+    check(cal_i < loc_i < pts_i, f"/{s}/: los municipios no van justo después del calendario")
+    sec = h[loc_i:h.find("</section>", loc_i)]
+    for p in ps:
+        check(f'href="/{p["path"]}"' in sec, f"/{s}/: falta {p['label']} en el directorio")
+    check(f'data-r="{s}/"' in h and 'class="sb sb-big"' in h, f"/{s}/: buscador grande con la comunidad")
+for p in pages:
+    h = p.read_text("utf-8")
+    if 'class="adsbygoogle"' in h:
+        check(build.ADSENSE in h, f"{p.relative_to(ROOT)}: bloque de anuncio sin el script de AdSense")
+    if build.ADSENSE in h:
+        check(P.main_words(h) >= P.THIN_ADS, f"{p.relative_to(ROOT)}: anuncios con menos de {P.THIN_ADS} palabras")
+
 print(f"{len(fails)} fallos" if fails else f"OK: 19 comunidades, 12 festivos cada una, días de la semana correctos; {len(pages)} páginas en el sitemap")
 for f in fails:
     print(" -", f)

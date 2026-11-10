@@ -353,9 +353,9 @@ def hub_locales(loc, regions, cities):
         import muni
         cat = muni.catalogue()
         m_ok, m_all = sum(1 for x in cat["munis"] if x["ok"]), len(cat["munis"])
-        title = "Festivos locales 2027 por ciudad y provincia: fechas oficiales"
-        desc = (f"Los 2 festivos locales de 2027 de {m_ok} municipios, con su fuente oficial: boletín o acuerdo del pleno. "
-                f"Por ciudad y por provincia; los demás, en cuanto se publiquen.") if m_ok else (
+        title = "Festivos locales 2027 por ciudad y provincia (oficiales)"
+        desc = (f"Los 2 festivos locales de 2027 de {m_ok} municipios, con su fuente oficial, por ciudad y por provincia. "
+                f"Los demás, en cuanto se publiquen.") if m_ok else (
                 f"Los 2 festivos locales de 2027 de {n_pub} ciudades, con su fuente oficial: boletín o acuerdo del pleno. "
                 f"Las demás, en cuanto se publiquen.")
         ctx = (f'<p class="ctx">{m_ok} de {m_all} municipios publicados' if m_ok else f'<p class="ctx">{n_pub} ciudades publicadas · {n_pen} pendientes') +             f' · <time datetime="{loc["updated"]}">actualizado {B.dmy(loc["updated"])}</time></p>'

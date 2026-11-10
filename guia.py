@@ -523,7 +523,7 @@ def doc_page(write, path, title, desc, h1, body, date):
 def trust_pages(write, cities, loc):
     src = P.DATA["source"]
     mail = f'<a href="mailto:{B.EMAIL}">{B.EMAIL}</a>'
-    date = B.CONTENT_UPDATED
+    date = max(B.CONTENT_UPDATED, "2026-11-10")  # owner line, counts and the cookies page changed on 10 Nov 2026
     import muni
     n_pub = sum(1 for x in muni.catalogue()["munis"] if x["ok"]) or len(cities)
     n_all = len(muni.catalogue()["munis"])
