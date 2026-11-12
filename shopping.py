@@ -93,8 +93,9 @@ CSS = """
 .shop-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:14px}
 .shop-it a{display:flex;flex-direction:column;height:100%;border:1px solid var(--line,#dde1e6);border-radius:6px;overflow:hidden;color:inherit;text-decoration:none;background:#fff}
 .shop-it a:hover{border-color:#a9b1bc}
-.shop-it .im{aspect-ratio:4/3;background:#f3f4f6;display:flex;align-items:center;justify-content:center}
-.shop-it img{width:100%;height:100%;object-fit:contain}
+.shop.doc>*{max-width:none}
+.shop-it .im{aspect-ratio:4/3;background:#f3f4f6;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.shop-it img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
 .shop-it .tx{display:flex;flex-direction:column;gap:6px;padding:10px 10px 12px;flex:1}
 .shop-it .nm{font-weight:600;font-size:14px;line-height:1.3}
 .shop-it .mt{margin-top:auto;display:flex;gap:6px;align-items:center;font-size:12px;font-weight:600}
