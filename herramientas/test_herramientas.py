@@ -85,7 +85,7 @@ HELP = r"""
 const H = require(process.argv[1]); const a = [];
 const eq = (x, y, m) => { if (JSON.stringify(x) !== JSON.stringify(y)) a.push(m + ': ' + JSON.stringify(x) + ' != ' + JSON.stringify(y)); };
 eq(H.num(1234567.891), '1.234.567,89', 'num'); eq(H.eur(-0.001), '0,00 €', 'eur -0'); eq(H.val('1.234,5'), 1234.5, 'val es');
-eq(H.val('1234.5'), 1234.5, 'val dot'); eq(isNaN(H.val('')), true, 'val empty'); eq(H.parse('2027-02-30'), null, 'parse invalid');
+eq(H.val('1234.5'), 1234.5, 'val dot'); eq(H.val('36.000'), 36000, 'val thousands'); eq(H.val('1.5'), 1.5, 'val decimal dot'); eq(isNaN(H.val('')), true, 'val empty'); eq(H.parse('2027-02-30'), null, 'parse invalid');
 eq(H.monthDays(2028, 2), 29, 'leap'); eq(H.diff(H.parse('2026-12-31'), H.parse('2027-01-01')), 1, 'diff');
 eq(H.wd(H.parse('2027-01-04')), 0, 'monday');
 console.log(JSON.stringify(a));

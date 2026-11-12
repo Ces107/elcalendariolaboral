@@ -11,6 +11,7 @@ import datetime as dt
 import html
 import importlib
 import json
+import os
 import pkgutil
 import re
 import subprocess
@@ -86,6 +87,9 @@ def registry():
         slugs = [t["slug"] for t in out]
         dup = {s for s in slugs if slugs.count(s) > 1}
         assert not dup, f"duplicate tool slugs: {dup}"
+        only = [x for x in os.environ.get("HT_ONLY", "").split(",") if x]  # publish only these (reviewed) tools: hubs, sitemap, links
+        if only:
+            out = [t for t in out if t["slug"] in only]
         _TOOLS = sorted(out, key=lambda t: (t["order"], t["slug"]))
     return _TOOLS
 

@@ -32,7 +32,7 @@
   /* '1.234,5' | '1234.5' | '1234,5' -> 1234.5; empty or junk -> NaN */
   function val(s) {
     s = String(s == null ? '' : s).trim().replace(/\s|€|%/g, '');
-    if (s.indexOf(',') >= 0) s = s.replace(/\./g, '').replace(',', '.');
+    if (s.indexOf(',') >= 0 || /^-?\d{1,3}(\.\d{3})+$/.test(s)) s = s.replace(/\./g, '').replace(',', '.'); /* '36.000' = 36000 */
     if (!/^-?\d*\.?\d+$/.test(s)) return NaN;
     return parseFloat(s);
   }
