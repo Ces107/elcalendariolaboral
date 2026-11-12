@@ -302,7 +302,10 @@ def crumbs(lang, items):
     import pages
     if lang == "es":
         items = [(L["es"]["home"], "")] + items
-    return B.crumbs_html(items), pages.crumbs_ld(items)
+    h = B.crumbs_html(items)
+    if lang == "en":
+        h = re.sub(r'aria-label="[^"]*"', 'aria-label="Breadcrumb"', h, count=1)
+    return h, pages.crumbs_ld(items)
 
 
 def faq_html(lang, qas):

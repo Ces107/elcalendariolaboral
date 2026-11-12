@@ -134,13 +134,21 @@ Per-tool `credits` render on the tool page and are aggregated at `/utilidades/cr
 
 ## Status
 
+**Publishing only reviewed tools**: `HT_ONLY=slug1,slug2,...` (environment) limits the registry, so hubs, sitemap,
+credits, footer and related links only show those tools. Use it with `python -m herramientas.build --hub` and with
+`build.py` while unreviewed pack tools sit in `herramientas/tools/`. Without it, every tool file on disk is published.
+
 | slug | state | sources |
 |---|---|---|
-| cuadrante-turnos | built | ET arts. 34, 36, 37 (BOE-A-2015-11430); RD 1561/1995; calendario laboral 2027 BOE-A-2026-21254 |
-| registro-jornada | todo (U1) | |
-| calculadora-vacaciones | todo (U1) | |
-| calculadora-finiquito | todo (U1) | |
-| calculadora-paro | todo (U1) | |
+| cuadrante-turnos | live 2026-11-12 | ET arts. 34, 36, 37 (BOE-A-2015-11430); RD 1561/1995; calendario laboral 2027 BOE-A-2026-21254 |
+| registro-jornada | live 2026-11-12 | ET art. 34.9, 12.4.c, 35; RDL 8/2019 (BOE-A-2019-3481); LISOS art. 7.5; guía MITES. Digital-registry royal decree: not confirmed in BOE as of 12 Nov 2026, page says so |
+| calculadora-vacaciones | live 2026-11-12 | ET art. 38; ILO C132 |
+| calculadora-finiquito | live 2026-11-12 | ET arts. 38, 49.1.c, 53.1.b, 56.1, DT 11.ª; Ley IRPF art. 7.e (exención 180.000 €) |
+| calculadora-paro | live 2026-11-12 | SEPE (70 % first 180 days, 60 % from day 181); LGSS arts. 269-270; IPREM 2026 = 600 €/month (PGE 2023 prorrogados, confirmed only by secondary sources: page says "según la normativa vigente a 12 de noviembre de 2026"); topes 560/749 · 1.225/1.400/1.575 |
+
+Testing without a browser: a jsdom smoke script (load the page, run h.js + t.js, change inputs, print the result
+text): `plusUltra/coord/b1112/jsdom-smoke.js` (`npm i jsdom@24.1.3` in a scratch folder, then
+`node jsdom-smoke.js utilidades/<slug>/ "?query" '[["inputId","value"]]'`). It caught the "36.000" parsing bug.
 
 Links into the tools from the rest of the site (full build only): header "Utilidades" (hidden 861-1080 px, no room),
 footer block (hub + tools with `footer: True`), home (after the utility links), each comunidad page (cuadrante,
