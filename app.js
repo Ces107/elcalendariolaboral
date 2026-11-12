@@ -205,9 +205,11 @@
       var h = '<option value="' + U(region + '/') + '">' + esc0(SIDX.r[ri][0]) + '</option>';
       Object.keys(groups).sort(function (a, b) { return coll(SIDX.p[a][0], SIDX.p[b][0]); }).forEach(function (pi) {
         var p = SIDX.p[pi];
-        h += '<optgroup label="' + esc0(p[0] === SIDX.r[ri][0] ? p[0] : SL[1] + (CAP[p[0]] || ' de ' + p[0])) + '">' + groups[pi].sort(function (a, b) { return coll(a.n, b.n); }).map(function (r) {
+        /* data-s: short group name, data-k: other names (Sagunto|Sagunt), data-n: population; the search dropdown uses them */
+        h += '<optgroup label="' + esc0(p[0] === SIDX.r[ri][0] ? p[0] : SL[1] + (CAP[p[0]] || ' de ' + p[0])) + '" data-s="' + esc0(p[0]) + '">' + groups[pi].sort(function (a, b) { return coll(a.n, b.n); }).map(function (r) {
           var u = U(r.p);
-          return '<option value="' + u + '"' + (cur === u ? ' selected' : '') + '>' + esc0(r.n) + (r.ok ? '' : ' · ' + SL[4]) + '</option>';
+          return '<option value="' + u + '"' + (cur === u ? ' selected' : '') + (r.k.length > 1 ? ' data-k="' + esc0(r.k.slice(1).join('|')) + '"' : '') +
+            (r.pop ? ' data-n="' + r.pop + '"' : '') + '>' + esc0(r.n) + (r.ok ? '' : ' · ' + SL[4]) + '</option>';
         }).join('') + '</optgroup>';
       });
       sel.innerHTML = h;
@@ -216,10 +218,198 @@
   }
   if (CSEL && !HOMESEL && CSEL.getAttribute('data-region')) {
     var fillNow = function () { if (!CSEL._f) { CSEL._f = 1; fillCity(CSEL, CSEL.getAttribute('data-region')); } };
-    ['focus', 'pointerdown', 'touchstart'].forEach(function (ev) { CSEL.addEventListener(ev, fillNow, { passive: true }); });
+    /* on the field, so the search dropdown that covers the select triggers it too */
+    var CFLD = CSEL.closest('.field') || CSEL.parentNode;
+    ['focusin', 'pointerdown', 'touchstart'].forEach(function (ev) { CFLD.addEventListener(ev, fillNow, { passive: true }); });
     var idle = window.requestIdleCallback || function (f) { setTimeout(f, 1500); };
     window.addEventListener('load', function () { idle(fillNow, { timeout: 3000 }); });
   }
+
+  /* ------------------------------------------------------------ desplegables con búsqueda (todas las páginas)
+     A <select> with 8+ options (and the municipality pickers, filled later by fillCity) gets an input on top of it: same
+     box (the select stays in place, invisible, and keeps the value) and a list below that filters as you type. Picking
+     sets the select and fires input + change, so each page's own logic is unchanged; .value, .selectedIndex, focus() and
+     showPicker() on the select reach the input. Menus (details.dd) with 10+ links get a filter on top. */
+  var CBT = { ca: ['Cerca…', 'Cap resultat'], gl: ['Buscar…', 'Sen resultados'], eu: ['Bilatu…', 'Emaitzarik ez'], en: ['Search…', 'No results'] }[html.lang] ||
+    ['Buscar…', 'Sin resultados'];
+  var COARSE = !!(window.matchMedia && matchMedia('(pointer: coarse)').matches), CBP = null, cbN = 0;
+  /* folded keys vs folded query: -1 equal, 0 starts with it, 1 a word starts with it, 2 inside; several words: 3 each starts a word, 4 each inside; 9 no */
+  function score(keys, q) {
+    var qw = q.split(' '), best = 9;
+    keys.forEach(function (k) {
+      var s = k === q ? -1 : k.indexOf(q) === 0 ? 0 : (' ' + k).indexOf(' ' + q) >= 0 ? 1 : k.indexOf(q) > 0 ? 2 : qw.length < 2 ? 9 :
+        qw.every(function (w) { return (' ' + k).indexOf(' ' + w) >= 0; }) ? 3 : qw.every(function (w) { return k.indexOf(w) >= 0; }) ? 4 : 9;
+      if (s < best) best = s;
+    });
+    return best;
+  }
+  var SVD = Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype, 'value'), SID = Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype, 'selectedIndex');
+  function combo(sel) {
+    sel._cb = 1;
+    var id = 'cb' + (++cbN), wrap = doc.createElement('div'), inp = doc.createElement('input'), list = doc.createElement('div');
+    var open = false, typed = false, act = -1, opts = [], K = new WeakMap(), had = doc.activeElement === sel;
+    wrap.className = 'cb';
+    sel.parentNode.insertBefore(wrap, sel);
+    wrap.appendChild(sel); wrap.appendChild(inp); wrap.appendChild(list);
+    inp.type = 'text'; inp.id = id; inp.className = 'cb-i'; inp.placeholder = CBT[0]; inp.autocomplete = 'off'; inp.spellcheck = false;
+    [['role', 'combobox'], ['aria-autocomplete', 'list'], ['aria-expanded', 'false'], ['aria-controls', id + '-l'], ['autocapitalize', 'off'], ['autocorrect', 'off']]
+      .forEach(function (a) { inp.setAttribute(a[0], a[1]); });
+    list.id = id + '-l'; list.className = 'cb-l'; list.setAttribute('role', 'listbox'); list.hidden = true;
+    var labs = Array.prototype.slice.call(sel.labels || []), name = labs.length ? labs[0].textContent.trim() : sel.getAttribute('aria-label') || sel.title;
+    labs.forEach(function (l) { l.htmlFor = id; });
+    if (name) { list.setAttribute('aria-label', name); if (!labs.length) inp.setAttribute('aria-label', name); }
+
+    function si() { return SID.get.call(sel); }
+    function cur() { var o = sel.options[si()]; return o ? o.label : ''; }
+    function sync() { inp.disabled = sel.disabled; if (open && inp.disabled) hide(); if (!open) inp.value = cur(); }
+    function keys(o) { /* the option's text and its other names (data-k="Sagunt"), folded */
+      var k = K.get(o);
+      if (!k) K.set(o, k = [o.label].concat((o.getAttribute('data-k') || '').split('|')).filter(Boolean).map(fold));
+      return k;
+    }
+    function mark(k) {
+      if (opts[act]) opts[act].setAttribute('aria-selected', 'false');
+      act = k;
+      var el = opts[k];
+      if (!el) { inp.removeAttribute('aria-activedescendant'); return; }
+      el.setAttribute('aria-selected', 'true'); inp.setAttribute('aria-activedescendant', el.id);
+      var t = el.offsetTop, b = t + el.offsetHeight;
+      if (t < list.scrollTop) list.scrollTop = t; else if (b > list.scrollTop + list.clientHeight) list.scrollTop = b - list.clientHeight;
+    }
+    function move(d) {
+      var n = opts.length, k = act < 0 ? (d > 0 ? -1 : n) : act;
+      for (var j = 0; j < n; j++) { k = (k + d + n) % n; if (!opts[k].hasAttribute('aria-disabled')) return mark(k); }
+    }
+    /* typed: matches ranked (equal, start, word start, inside; then population, then the select's order), province on
+       the right; not typed: every option in order, under its optgroup */
+    function render(first) {
+      var q = typed ? fold(inp.value) : '', s0 = si(), hits = [], h = '', g = null, gk = 0, many = sel.getElementsByTagName('optgroup').length > 1;
+      Array.prototype.forEach.call(sel.options, function (o, i) {
+        var s = o.hidden || (q && o.disabled && !o.value) ? 9 : q ? score(keys(o), q) : 0;
+        if (s < 9) hits.push([s, i, o]);
+      });
+      if (q) hits.sort(function (a, b) { return a[0] - b[0] || (b[2].getAttribute('data-n') || 0) - (a[2].getAttribute('data-n') || 0) || a[1] - b[1]; });
+      hits.forEach(function (x) {
+        var o = x[2], og = o.parentNode.tagName === 'OPTGROUP' ? o.parentNode : null;
+        if (!q && og !== g) {
+          h += (g ? '</div>' : '') + (og ? '<div role="group" aria-labelledby="' + id + '-g' + (++gk) + '"><div class="cb-g" role="presentation" id="' + id + '-g' + gk + '">' +
+            esc0(og.label) + '</div>' : '');
+          g = og;
+        }
+        h += '<div role="option" id="' + id + '-o' + x[1] + '" data-i="' + x[1] + '" aria-selected="false"' + (o.disabled || (og && og.disabled) ? ' aria-disabled="true"' : '') +
+          (x[1] === s0 ? ' class="on"' : '') + '><span>' + esc0(o.label) + '</span>' +
+          (q && og && many ? '<span class="cb-s">' + esc0(og.getAttribute('data-s') || og.label) + '</span>' : '') + '</div>';
+      });
+      if (g) h += '</div>';
+      list.innerHTML = h || '<div class="cb-0" role="option" aria-disabled="true" aria-selected="false">' + esc0(CBT[1]) + '</div>';
+      opts = list.querySelectorAll('[data-i]'); act = -1;
+      var k = -1;
+      for (var j = 0; j < opts.length && k < 0; j++) if (!opts[j].hasAttribute('aria-disabled') && (q || +opts[j].getAttribute('data-i') === s0)) k = j;
+      list.scrollTop = 0;
+      mark(k);
+      if (first && !q && opts[k]) list.scrollTop = opts[k].offsetTop - (list.clientHeight - opts[k].offsetHeight) / 2;
+    }
+    /* below the input, or above when there is more room there; on touch screens the field first goes up under the
+       header (label still in view), so the list keeps room above the on-screen keyboard (visualViewport) */
+    function place(scroll) {
+      var vv = window.visualViewport, vt = vv ? vv.offsetTop : 0, vh = vv ? vv.height : innerHeight, r = inp.getBoundingClientRect(), dy = r.top - vt - 88;
+      if (scroll && COARSE && (dy > 8 || dy < -8)) { scrollBy(0, dy); r = inp.getBoundingClientRect(); }
+      var below = vt + vh - r.bottom - 12, above = r.top - vt - 68, up = below < 180 && above > below;
+      list.classList.toggle('up', up);
+      list.style.maxHeight = Math.round(Math.max(120, Math.min(360, up ? above : below))) + 'px';
+    }
+    function show(all) {
+      if (inp.disabled) return;
+      if (all) { typed = false; inp.value = ''; }
+      var first = !open;
+      if (first) { open = true; list.hidden = false; inp.setAttribute('aria-expanded', 'true'); CBP = place; place(true); }
+      render(first);
+    }
+    function hide() {
+      if (open) {
+        open = typed = false; act = -1; opts = []; list.hidden = true; list.innerHTML = '';
+        inp.setAttribute('aria-expanded', 'false'); inp.removeAttribute('aria-activedescendant');
+        if (CBP === place) CBP = null;
+      }
+      inp.value = cur();
+      if (doc.activeElement === inp) inp.select(); /* typing again replaces it */
+    }
+    function pick(i) {
+      var o = sel.options[i], ch = si() !== i;
+      if (!o || o.disabled) return;
+      SID.set.call(sel, i);
+      hide();
+      if (ch) { sel.dispatchEvent(new Event('input', { bubbles: true })); sel.dispatchEvent(new Event('change', { bubbles: true })); }
+    }
+    inp.addEventListener('focus', function () { if (!open) inp.select(); }); /* also on focus() from the page: typing replaces the label */
+    inp.addEventListener('click', function () { if (!open) show(true); });
+    inp.addEventListener('input', function (e) { e.stopPropagation(); typed = true; show(); }); /* the page only hears the select */
+    inp.addEventListener('change', function (e) { e.stopPropagation(); });
+    inp.addEventListener('blur', function () { setTimeout(function () { if (doc.activeElement !== inp) hide(); }, 150); });
+    inp.addEventListener('keydown', function (e) {
+      var k = e.key;
+      if (e.isComposing) return;
+      if (k === 'ArrowDown' || k === 'ArrowUp') {
+        e.preventDefault();
+        if (!open) show(true); else if (!e.altKey) move(k === 'ArrowDown' ? 1 : -1); else if (k === 'ArrowUp') hide();
+      } else if (k === 'Enter') {
+        e.preventDefault();
+        if (!open) show(true); else if (opts[act]) pick(+opts[act].getAttribute('data-i')); else hide();
+      } else if (k === 'Escape' && open) { e.preventDefault(); e.stopPropagation(); hide(); }
+      else if (k === 'Tab') hide();
+    });
+    list.addEventListener('mousedown', function (e) { e.preventDefault(); });
+    list.addEventListener('click', function (e) {
+      var el = e.target.closest('[data-i]');
+      if (!el || el.hasAttribute('aria-disabled')) return;
+      pick(+el.getAttribute('data-i'));
+      if (COARSE) inp.blur();
+    });
+    new MutationObserver(function () { K = new WeakMap(); sync(); if (open) render(); })
+      .observe(sel, { childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ['disabled', 'label', 'selected', 'hidden'] });
+    [['value', SVD], ['selectedIndex', SID]].forEach(function (p) {
+      Object.defineProperty(sel, p[0], { configurable: true, get: function () { return p[1].get.call(sel); }, set: function (v) { p[1].set.call(sel, v); sync(); } });
+    });
+    sel.focus = function (o) { sync(); inp.focus(o); };
+    sel.showPicker = function () { sync(); inp.focus(); show(true); };
+    sel.addEventListener('change', sync);
+    if (sel.form) sel.form.addEventListener('reset', function () { setTimeout(sync, 0); });
+    sync();
+    if (had) inp.focus();
+  }
+  if (window.visualViewport) visualViewport.addEventListener('resize', function () { if (CBP) CBP(); });
+  window.addEventListener('resize', function () { if (CBP) CBP(); });
+  all('select').forEach(function (s) {
+    if (s.multiple || s.size > 1) return;
+    if (s.options.length >= 8 || s.hasAttribute('data-region') || s.hasAttribute('data-home')) return combo(s);
+    var mo = new MutationObserver(function () { if (s.options.length >= 8 && !s._cb) { mo.disconnect(); combo(s); } });
+    mo.observe(s, { childList: true, subtree: true });
+  });
+  /* long link menus (Comunidades): a filter on top; Enter opens the first match, arrows walk the links */
+  dds.forEach(function (d) {
+    var m = d.querySelector('.menu'), ls = m ? all('a', m) : [];
+    if (ls.length < 10 || d.classList.contains('dd-cal')) return;
+    var q = doc.createElement('input'), none = doc.createElement('p'), ks = ls.map(function (a) { return [fold(a.textContent)]; });
+    q.type = 'search'; q.className = 'dd-q'; q.placeholder = CBT[0]; q.autocomplete = 'off'; q.spellcheck = false;
+    q.setAttribute('aria-label', CBT[0].replace('…', '')); q.setAttribute('autocapitalize', 'off'); q.setAttribute('autocorrect', 'off');
+    none.className = 'dd-0'; none.textContent = CBT[1]; none.hidden = true;
+    m.insertBefore(q, m.firstChild); m.appendChild(none);
+    function filt() {
+      var t = fold(q.value), n = 0;
+      ls.forEach(function (a, k) { var ok = !t || score(ks[k], t) < 9; a.hidden = !ok; if (ok) n++; });
+      none.hidden = n > 0;
+    }
+    q.addEventListener('input', filt);
+    m.addEventListener('keydown', function (e) {
+      var v = [q].concat(ls.filter(function (a) { return !a.hidden; })), k = v.indexOf(doc.activeElement);
+      if (e.key === 'Enter' && e.target === q) { e.preventDefault(); if (v[1]) v[1].click(); }
+      else if ((e.key === 'ArrowDown' || e.key === 'ArrowUp') && k >= 0) { e.preventDefault(); v[(k + (e.key === 'ArrowDown' ? 1 : v.length - 1)) % v.length].focus(); }
+    });
+    d.addEventListener('toggle', function () {
+      if (d.open) { if (!COARSE) setTimeout(function () { q.focus(); }, 0); }
+      else if (q.value) { q.value = ''; filt(); }
+    });
+  });
 
   /* ------------------------------------------------------------ compartir */
   all('[data-share]').forEach(function (b) {

@@ -421,7 +421,8 @@ def shell(lang, hd, main, data, cls):
                  f'<footer class="ft"><div class="wrap"><ul class="ft-l"><li><a href="{B.BASE}{HUB["en"]}">{S["all"]}</a></li>'
                  f'<li><a href="{B.ASSETS}sobre/" hreflang="es" lang="es">About (Spanish)</a></li><li><a href="{B.ASSETS}contacto/" hreflang="es" lang="es">Contact</a></li>'
                  f'<li><a href="{B.ASSETS}privacidad/" hreflang="es" lang="es">Privacy</a></li></ul></div>'
-                 f'<div class="wrap ft-b">© 2026 {B.HOST}</div></footer></body></html>\n')
+                 f'<div class="wrap ft-b">© 2026 {B.HOST}</div></footer>'
+                 f'<script defer src="{B.ASSETS}app.min.js?v={{JSV}}"></script></body></html>\n')  # app.js: dropdowns you can type in
 
 
 def tool_page(t, ctx):

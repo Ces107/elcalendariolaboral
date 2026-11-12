@@ -656,3 +656,31 @@ select option:disabled { color: #8a929e; }
 .hero-t .pickers { margin-top: 14px; }
 select:disabled { opacity: .6; cursor: default; }
 @media (max-width: 640px) { .qa-l { font-size: 14px; } }
+
+/* ---------------------------------------------------------------- dropdowns you can type in (app.js combo): the select keeps
+   its box, invisible; the input covers it with the select's look; the list opens below it (.up: above). Long menus: .dd-q */
+.cb { position: relative; display: inline-flex; flex-direction: column; }
+.cb > select { visibility: hidden; }
+.cb-i { position: absolute; top: 0; left: 0; width: 100%; height: 100%; min-width: 0; margin: 0; padding: 0 36px 0 12px; border: 1px solid #a9b1bc; border-radius: 4px; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 10 10'%3E%3Cpath d='M1.5 3.5 5 7l3.5-3.5' fill='none' stroke='%235b6472' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right 12px center; font-size: 15px; text-overflow: ellipsis; cursor: pointer; -webkit-appearance: none; appearance: none; }
+.cb-i[aria-expanded="true"], .dd-q { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 18 18'%3E%3Ccircle cx='7.5' cy='7.5' r='5.5' fill='none' stroke='%235b6472' stroke-width='1.8'/%3E%3Cpath d='m11.6 11.6 4.6 4.6' stroke='%235b6472' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E"); }
+.cb-i::placeholder, .dd-q::placeholder { color: var(--mut); opacity: 1; }
+.cb-i:disabled { opacity: .6; cursor: default; }
+.cb-i:focus, .dd-q:focus { cursor: text; border-color: var(--brand); outline: 0; box-shadow: 0 0 0 3px rgba(11, 79, 140, .18); }
+.cb-l { position: absolute; z-index: 45; top: calc(100% + 4px); left: 0; right: 0; padding: 4px; background: #fff; border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 10px 28px rgba(16, 24, 40, .16); max-height: 360px; overflow-y: auto; overscroll-behavior: contain; font-size: 15px; line-height: 1.3; }
+.cb-l.up { top: auto; bottom: calc(100% + 4px); }
+.cb-l [role="option"] { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 40px; padding: 6px 10px; border-radius: 6px; color: var(--ink); cursor: pointer; overflow-wrap: anywhere; }
+.cb-l .on { font-weight: 600; }
+.cb-l [aria-disabled="true"] { color: #8a929e; cursor: default; }
+.cb-g { padding: 10px 10px 4px; font-size: 12px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--mut); }
+.cb-s { flex: none; font-size: 13px; font-weight: 400; color: var(--mut); }
+.dd-q { grid-column: 1 / -1; display: block; width: 100%; height: 40px; margin: 0 0 4px; padding: 0 10px 0 36px; border: 1px solid #a9b1bc; border-radius: 4px; background-color: #fff; background-repeat: no-repeat; background-position: 11px center; font-size: 15px; -webkit-appearance: none; appearance: none; }
+.dd-0 { grid-column: 1 / -1; margin: 0; padding: 8px 12px; color: var(--mut); font-size: 14px; }
+@media (hover: hover) {
+  .cb-i:hover { border-color: var(--mut); }
+  .cb-l [role="option"]:hover { background: var(--bg2); }
+  .cb-l [aria-disabled="true"]:hover { background: none; }
+}
+.cb-l [role="option"][aria-selected="true"] { background: var(--brand-bg); }
+.cb-i:focus { border-color: var(--brand); }
+@media (pointer: coarse) { .cb-i, .dd-q { font-size: 16px; } .cb-l [role="option"] { min-height: 44px; } }
+@media print { .cb-l, .dd-q { display: none !important; } }
