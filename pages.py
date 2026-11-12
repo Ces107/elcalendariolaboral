@@ -488,6 +488,9 @@ def region_page(r, cities, pending):
     pend = f'<p class="m">Pendientes de publicar: {E(", ".join(pending))}.</p>' if pending and ES else ""
     dirx = muni_directory(r)
     more_l = f'<p class="more-l"><a href="{B.BASE}festivos-locales/">{t("nav_locals")} 2027</a>{school_link(r)}{workdays_link(r)}</p>'
+    if ES:  # tools that use this comunidad's holidays
+        import herramientas
+        more_l += f'<p class="more-l">{herramientas.links(["cuadrante-turnos", "registro-jornada", "calculadora-vacaciones"])}</p>'
     if dirx:  # every municipality reachable from here: no separate city list / pending line / province line
         locs = B.section("locales", E(B.fill(t("h_loc"), names)), dirx + more_l)
     else:
@@ -559,7 +562,11 @@ def home_page():
               f'<a href="{B.BASE}vacaciones-escolares/navidad/">Vacaciones de Navidad 2026-2027</a> · '
               f'<a href="{B.BASE}vacaciones-escolares/semana-santa/">Vacaciones de Semana Santa 2027</a></p>') if ES else ""
     import utilidades
-    reg_sec = B.section("comunidades", t("pick_region"), f'<ul class="chips">{chips}</ul>{school}{utilidades.home_links()}')
+    ul = utilidades.home_links()
+    if ES:  # + the tools hub
+        import herramientas
+        ul = ul.replace("</p>", herramientas.home_link() + "</p>", 1)
+    reg_sec = B.section("comunidades", t("pick_region"), f'<ul class="chips">{chips}</ul>{school}{ul}')
     hol_sec = B.section("festivos", E(B.fill(t("h_hol"), sp)), f'<ol class="hl">{"".join(B.hol_item(h) for h in nat)}</ol>')
     prow = "".join(B.pts_row(it) for it in B.all_breaks(nat))
     vac = f'<p class="more-l"><a href="{B.BASE}vacaciones-2027/">Maximiza tus vacaciones 2027 →</a></p>' if ES else ""
@@ -631,6 +638,8 @@ def write_pages(data, fix):
         vacaciones.write_pages(data, write, cities)
         import pdfhub
         pdfhub.write_page(data, write, cities)
+        import herramientas  # /utilidades/ hub and tools (seo/herramientas-PROGRESS.md)
+        herramientas.write_pages(data, write, cities)
         import buscar
         import muni
         buscar.page(data, muni.index_rows()[1], write, upd)

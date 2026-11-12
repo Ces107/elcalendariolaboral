@@ -621,7 +621,8 @@ def header_html(here="", lean=False):
                f'</div></details>' if LANG == "es" else
                f'<a href="{BASE}festivos-locales/"{" aria-current=page" if here == "locals" else ""}>{t("nav_locals")}</a>')
             + f'<a href="{pts_href}">{t("nav_bridges")}</a>'
-            + (f'<a href="{BASE}vacaciones-2027/"{" aria-current=page" if here == "vac" else ""}>Vacaciones</a>' if LANG == "es" else "")
+            + (f'<a href="{BASE}vacaciones-2027/"{" aria-current=page" if here == "vac" else ""}>Vacaciones</a>'
+               f'<a class="nav-u" href="{BASE}utilidades/"{" aria-current=page" if here == "util" else ""}>Utilidades</a>' if LANG == "es" else "")
             + '</nav>'
             + srch + ("" if lean else
                       f'{install_html()}<details class="dd dd-lang"><summary>{GLOBE}<span class="ln-l">{LANG_NAMES[LANG]}</span>'
@@ -634,7 +635,8 @@ def util_footer():
     """Links to the utility pages (utilidades.py), in the middle column of the footer."""
     sys.modules.setdefault("build", sys.modules[__name__])
     import utilidades
-    return utilidades.footer_links()
+    import herramientas  # the tools hub and its top tools join the block
+    return utilidades.footer_links().replace("</ul>", herramientas.footer_items() + "</ul>", 1)
 
 
 def footer_html(data):
@@ -1277,11 +1279,14 @@ def sitemap(urls_by_path):
     return "\n".join(sm) + "\n"
 
 
-SEGMENTS = ("general", "comunidades", "provincias", "municipios", "festivos")
+SEGMENTS = ("general", "comunidades", "provincias", "municipios", "festivos", "utilidades")
 FEST_PATHS = ("festivos/", "semana-santa/", "festivos-locales/", "puentes/", "como-se-fijan-los-festivos/")
+UTIL_PATHS = ("utilidades/", "en/tools/")  # herramientas/: the tools hub and its tools
 
 
 def segment(p, regions):
+    if p.startswith(UTIL_PATHS):
+        return "utilidades"
     parts = [x for x in p.split("/") if x]
     if parts and parts[0] in regions:
         if len(parts) == 1:

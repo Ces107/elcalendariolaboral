@@ -692,6 +692,9 @@ def dh_page(data, write, cities):
     keys = ["res_a", "nat_days", "n_hol_in", "after", "no_loc", "out", "all_region", "isla", "zona"]
     js = {**base_cfg(), **cfg, "page": "dh", "min": str(LO), "max": str(HI), "loc": LOC_FROM, "mof": B.T["_mof"],
           "k": {x: B.t(B.KINDS[x]) for x in B.KINDS}, "s": {x: L(x) for x in keys}}
+    if B.LANG == "es":  # the tools that use the same holidays (herramientas/)
+        import herramientas
+        hol_sec += f'<p class="more-l">{herramientas.links(["registro-jornada", "cuadrante-turnos", "calculadora-vacaciones"])}</p>'
     main = f'{hero}<div class="wrap body narrow">{hol_sec}{B.ad("hub")}{fh}</div>' + js_cfg(js)
     head = B.head_html(L("dh_title"), L("dh_desc"), PATH_DH, f"{B.SITE}{B.ASSETS}og/espana.png",
                        ld(cld, app_ld(h1, PATH_DH, L("dh_desc")), fld), langs=langs_arg(ONLY_DH), ads=False)
