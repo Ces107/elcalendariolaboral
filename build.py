@@ -577,6 +577,13 @@ HOUSE_TXT = {  # label, then per card: (title, copy, button)
            "teselo": ("Teselo: block puzzle", "Fit the pieces, clear rows and columns", "Play"),
            "agenda": ("2027 Weekly Planner", "A paperback planner for the whole year", "View on Amazon")},
 }
+TESELO_AD_TXT = {  # the playable Teselo promo: button, hook, combo message, after-the-combo line
+    "es": ("Jugar gratis", "¿Encaja?", "¡Combo ×2!", "300 niveles más"),
+    "ca": ("Juga gratis", "Hi encaixa?", "Combo ×2!", "300 nivells més"),
+    "gl": ("Xogar de balde", "Encaixa?", "Combo ×2!", "300 niveis máis"),
+    "eu": ("Jolastu doan", "Sartzen da?", "Konbo ×2!", "300 maila gehiago"),
+    "en": ("Play free", "Does it fit?", "Combo ×2!", "300 more levels"),
+}
 _HOUSE_JS = ("<script>!function(s){var b=s.parentNode,c=[].slice.call(b.querySelectorAll('.hp')),u=window.hpU=window.hpU||{},"
              "p=[],i;c.forEach(function(x){if(!u[x.dataset.k])for(var n=+x.dataset.w;n--;)p.push(x)});"
              "if(p.length){var k=p[Math.random()*p.length|0];u[k.dataset.k]=1;c.forEach(function(x){x.hidden=x!==k})}"
@@ -615,7 +622,17 @@ def house_ads(pos, lang, topic=None):
     for k, (key, url, img, tk, w) in enumerate(cards):
         title, line, btn = tx[tk]
         rel = ' target="_blank" rel="sponsored noopener"' if url.startswith("http") else ""
-        more = (f'<a class="btn sm" href="{TESELO_PLAY}"{rel}>Google Play</a>' if key == "teselo" and TESELO_PLAY_PUBLIC else "")
+        if key == "teselo":  # the playable promo: the whole card is the link, promo/teselo-ad.js paints the canvas
+            cta, hook, combo, more_lv = TESELO_AD_TXT.get(lang, TESELO_AD_TXT["es"])
+            out.append(f'<div class="hp tsl" data-k="teselo" data-w="{w}" data-cta="{E(cta)}" data-hook="{E(hook)}" '
+                       f'data-combo="{E(combo)}" data-more="{E(more_lv)}"{"" if k == pick else " hidden"}>'
+                       f'<a class="tsl-a" href="{url}"{rel} aria-label="{E(title)}: {E(cta)}">'
+                       f'<canvas class="tsl-c" aria-hidden="true"></canvas><span class="tsl-fb">'
+                       f'<img src="{ASSETS}promo/{img}.webp" alt="" width="{PROMO_W[img]}" height="176" loading="lazy">'
+                       f'<span class="hp-t"><b>{E(title)}</b><span>{E(line)}</span><span class="hp-c"><span class="btn p sm">{E(btn)}</span></span></span>'
+                       f'</span></a><script src="{ASSETS}promo/teselo-ad.js?v={short_hash(ROOT / "promo" / "teselo-ad.js")}" defer></script></div>')
+            continue
+        more = ""
         out.append(f'<div class="hp" data-k="{key}" data-w="{w}"{"" if k == pick else " hidden"}>'
                    f'<img src="{ASSETS}promo/{img}.webp" alt="" width="{PROMO_W[img]}" height="176" loading="lazy">'
                    f'<div class="hp-t"><b>{E(title)}</b><span>{E(line.format(n=n))}</span>'
