@@ -183,7 +183,7 @@
       specs.forEach(function (s) {
         var raw = rawOf(s);
         if (s.type === 'place') { if (raw.r) p.set(s.id + 'r', raw.r); if (raw.m) p.set(s.id + 'm', raw.m); }
-        else if (s.type === 'check') { if (raw) p.set(s.id, '1'); }
+        else if (s.type === 'check') { var dflt = s.value === true || s.value === '1' || s.value === 1; if (raw !== dflt) p.set(s.id, raw ? '1' : '0'); }
         else if (raw !== '' && String(raw) !== String(s.value)) p.set(s.id, raw);
       });
       var t = p.toString();
