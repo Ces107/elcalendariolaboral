@@ -657,8 +657,9 @@ def footer_html(data):
             + util_footer() + '</section>'
             f'<section><h2>El Calendario Laboral</h2><ul><li><a href="{s["url"]}" rel="noopener">{t("data_source")}</a></li>'
             f'<li><a href="{ASSETS}widget/"{"" if LANG == "es" else " hreflang=es lang=es"}>{"Widget per al teu web" if LANG == "ca" else "Widget para tu web"}</a></li>'
-            + ('<li><a href="https://www.amazon.es/s?k=Calma+Planners" target="_blank" rel="sponsored noopener">'
-               'Agenda 2027 en papel, con estos festivos →</a></li>' if LANG == "es" else "")
+            + ('<li><a href="https://www.amazon.es/dp/B0HQ8FVGZS" target="_blank" rel="sponsored noopener">'
+               'Agenda 2027 en papel, con estos festivos →</a></li>'
+               f'<li><a href="{BASE}shopping/">Tienda Calma Planners</a></li>' if LANG == "es" else "")
             + f'<li><a href="#inst" data-install hidden>{INSTALL.get(LANG, INSTALL["es"])[0]}</a></li>'
             + "".join(f'<li><a href="{BASE if LANG == "ca" else ASSETS}{p}"{"" if LANG in ("es", "ca") else " hreflang=es lang=es"}>{n}</a></li>'
                       for p, n in TRUST.get(LANG, TRUST["es"]))
@@ -1368,6 +1369,8 @@ def main():
     OUT.mkdir(exist_ok=True)
     (OUT / "privacidad").mkdir(exist_ok=True)
     (OUT / "privacidad" / "index.html").write_text(fix(privacy_page(data)), "utf-8", newline="\n")
+    import shopping  # Calma Planners shop page (/shopping/, Spanish only)
+    shopping.write(sys.modules[__name__], data, fix)
     sys.modules.setdefault("build", sys.modules[__name__])  # pages.py does "import build": reuse this module
     import pages
     pages_written = pages.write_pages(data, fix)
