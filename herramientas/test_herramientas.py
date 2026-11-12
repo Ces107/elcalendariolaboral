@@ -28,12 +28,16 @@ cities = pages.published_cities(pages.load_locales(), {r["slug"]: r for r in dat
 ctx = HT.Ctx(data, cities)
 
 ONLY = [a for a in sys.argv[1:] if not a.startswith("-")]
+if ONLY:
+    HT.strict(ONLY)  # only the given tools must load; other broken tool files are skipped with a warning
 TOOLS = [t for t in HT.registry() if not ONLY or t["slug"] in ONLY]
+if not ONLY and not HT.only_slugs():  # full test: every tool file on disk must load
+    fails += [f"{s}: broken tool file: {e}" for s, e in sorted(HT.BROKEN.items())]
 if ONLY and len(TOOLS) != len(set(ONLY)):
     fails.append(f"unknown slugs: {sorted(set(ONLY) - {t['slug'] for t in TOOLS})}")
 jobs = []
 for t in TOOLS:
-    C = {}
+    C = {"lang": t["lang"]}  # as runtime_cfg: h.js reads typed numbers by page language
     if t["hol"] or any(i["type"] == "place" for i in t["inputs"]):
         C["hol"] = ctx.hol(t["hol"] or (2026, 2027))
     d = HT._call(t["data"], ctx)
@@ -49,6 +53,7 @@ const jobs = JSON.parse(require('fs').readFileSync(0, 'utf8'));
 const out = [];
 function get(o, p) { return p.split('.').reduce((x, k) => (x == null ? undefined : x[k]), o); }
 for (const j of jobs) {
+  H.lang = j.C.lang || 'es';
   let f;
   try { f = eval('(' + j.js + ')'); } catch (e) { out.push(j.slug + ': compute does not parse: ' + e.message); continue; }
   j.cases.forEach((c, n) => {
@@ -86,6 +91,15 @@ const H = require(process.argv[1]); const a = [];
 const eq = (x, y, m) => { if (JSON.stringify(x) !== JSON.stringify(y)) a.push(m + ': ' + JSON.stringify(x) + ' != ' + JSON.stringify(y)); };
 eq(H.num(1234567.891), '1.234.567,89', 'num'); eq(H.eur(-0.001), '0,00 €', 'eur -0'); eq(H.val('1.234,5'), 1234.5, 'val es');
 eq(H.val('1234.5'), 1234.5, 'val dot'); eq(H.val('36.000'), 36000, 'val thousands'); eq(H.val('1.5'), 1.5, 'val decimal dot'); eq(isNaN(H.val('')), true, 'val empty'); eq(H.parse('2027-02-30'), null, 'parse invalid');
+// typed numbers by page language (H.lang, set by run() from the page; val(s, lang) overrides it)
+[['1.234,56', 1234.56], ['12.5', 12.5], ['12.50', 12.5], ['1.234', 1234], ['1.234.567', 1234567], ['1,5', 1.5], ['1,234', 1.234],
+ ['1 234,56 €', 1234.56], ['€3', 3], ['3 €', 3], ['−5,5', -5.5], ['1.234.567,89', 1234567.89], ['1,234.50', 1234.5], ['21 %', 21],
+ ['abc', NaN], ['1.2.3', NaN], ['', NaN]].forEach(c => eq(H.val(c[0], 'es'), c[1], 'val es ' + c[0]));
+[['1,234.50', 1234.5], ['$1,234.50', 1234.5], ['£12.5', 12.5], ['€3', 3], ['1,234', 1234], ['1,234,567', 1234567], ['12.5', 12.5],
+ ['1.234', 1.234], ['12,5', 12.5], ['US$ 20', 20], ['-$5.25', -5.25], ['$-5', -5], ['1.234,56', 1234.56], ['20 USD', 20], ['15%', 15],
+ ['1,23,4', NaN], ['$', NaN], ['', NaN]].forEach(c => eq(H.val(c[0], 'en'), c[1], 'val en ' + c[0]));
+H.lang = 'en'; eq(H.val('1,234'), 1234, 'val H.lang en'); eq(H.read({ type: 'money' }, '$1,000'), 1000, 'read money en'); H.lang = 'es';
+eq(H.val('1,234'), 1.234, 'val H.lang es'); eq(H.read({ type: 'money' }, '1.000,5 €'), 1000.5, 'read money es');
 eq(H.monthDays(2028, 2), 29, 'leap'); eq(H.diff(H.parse('2026-12-31'), H.parse('2027-01-01')), 1, 'diff');
 eq(H.wd(H.parse('2027-01-04')), 0, 'monday');
 console.log(JSON.stringify(a));

@@ -68,28 +68,71 @@ MON_EN = ["January", "February", "March", "April", "May", "June", "July", "Augus
 # ---------------------------------------------------------------- registry
 
 _TOOLS = None
+_STRICT = None  # slugs that must load (set by strict()); None = full mode
+BROKEN = {}     # slug -> error: tool files registry() skipped because they fail to import or fail check_tool
+
+
+def strict(slugs):
+    """Slug mode (build/test of given slugs): those must load, a broken one raises; any other broken tool file is
+    skipped with a warning on stderr. Call before the first registry()."""
+    global _STRICT, _TOOLS
+    _STRICT, _TOOLS = set(slugs), None
+
+
+def only_slugs():
+    """HT_ONLY (environment): publish only these (reviewed) tools: hubs, sitemap, credits, footer, related links."""
+    return [x.strip() for x in os.environ.get("HT_ONLY", "").split(",") if x.strip()]
 
 
 def registry():
-    """Every tool module in herramientas/tools/ (files starting with _ are skipped), checked, in hub order."""
+    """Every tool module in herramientas/tools/ (files starting with _ are skipped), checked, in hub order.
+    A file that fails to import or fails check_tool (or shares its slug with another file) is skipped and listed in
+    BROKEN, with a warning on stderr, unless its slug is required: the strict() slugs in slug mode, else the HT_ONLY
+    slugs (full / hub mode); a required broken tool raises."""
     global _TOOLS
     if _TOOLS is None:
+        import sys
+        only = only_slugs()
+        must = _STRICT if _STRICT is not None else set(only)
         out = []
+        BROKEN.clear()
         for m in pkgutil.iter_modules([str(HERE / "tools")]):
             if m.name.startswith("_"):
                 continue
-            mod = importlib.import_module(f"herramientas.tools.{m.name}")
-            t = {"order": 100, "twin": None, "related": [], "intro": "", "tests": [], "hol": (), "data": None, "crumb": None, "k": "",
-                 "link": True, "css": "", "credits": [], "cat_name": None, "footer": False, "file": m.name, **mod.TOOL}
-            t["crumb"] = t["crumb"] or t["name"]
-            check_tool(t)
+            guess, mod = m.name.replace("_", "-"), None
+            try:
+                mod = importlib.import_module(f"herramientas.tools.{m.name}")
+                t = {"order": 100, "twin": None, "related": [], "intro": "", "tests": [], "hol": (), "data": None, "crumb": None, "k": "",
+                     "link": True, "css": "", "credits": [], "cat_name": None, "footer": False, "file": m.name, **mod.TOOL}
+                t["crumb"] = t["crumb"] or t["name"]
+                check_tool(t)
+            except Exception as e:  # noqa: BLE001
+                tool = getattr(mod, "TOOL", None)
+                slug = str(tool.get("slug") or guess) if isinstance(tool, dict) else guess
+                if slug in must or guess in must:
+                    raise RuntimeError(f"tool {slug} (herramientas/tools/{m.name}.py): {type(e).__name__}: {e}") from e
+                BROKEN[slug] = f"herramientas/tools/{m.name}.py: {type(e).__name__}: {e}"
+                continue
             out.append(t)
-        slugs = [t["slug"] for t in out]
-        dup = {s for s in slugs if slugs.count(s) > 1}
-        assert not dup, f"duplicate tool slugs: {dup}"
-        only = [x for x in os.environ.get("HT_ONLY", "").split(",") if x]  # publish only these (reviewed) tools: hubs, sitemap, links
+        files = {}
+        for t in out:
+            files.setdefault(t["slug"], []).append(t["file"])
+        for s, fs in files.items():
+            if len(fs) > 1:
+                if s in must:
+                    raise RuntimeError(f"duplicate tool slug {s}: herramientas/tools/{fs}")
+                BROKEN[s] = f"duplicate slug in herramientas/tools/{fs}: all skipped"
+        out = [t for t in out if len(files[t["slug"]]) == 1]
         if only:
             out = [t for t in out if t["slug"] in only]
+        if BROKEN:
+            lines = "\n".join(f"    {s}: {err[:300]}" for s, err in sorted(BROKEN.items()))
+            if _STRICT is not None:
+                print(f"warning: {len(BROKEN)} other tool file(s) broken, skipped (not requested):\n{lines}", file=sys.stderr)
+            else:
+                bar = "!" * 78
+                print(f"{bar}\n!!! {len(BROKEN)} BROKEN TOOL FILE(S) SKIPPED: not built, not in hubs, sitemap, credits or links"
+                      f"{' (none of them in HT_ONLY)' if only else ''}\n{lines}\n{bar}", file=sys.stderr)
         _TOOLS = sorted(out, key=lambda t: (t["order"], t["slug"]))
     return _TOOLS
 
@@ -247,7 +290,7 @@ def runtime_cfg(t, ctx):
         if i.get("options"):
             s["options"] = [[str(o[0]), "", o[2]] if len(o) > 2 else [str(o[0])] for o in i["options"]]  # value, -, sets
         spec.append(s)
-    cfg = {"slug": t["slug"], "inputs": spec, "link": t["link"],
+    cfg = {"slug": t["slug"], "lang": t["lang"], "inputs": spec, "link": t["link"],
            "s": {k: S[k] for k in ("print", "ics", "link", "copied", "err", "nat_only", "all_region", "isla", "zona")}}
     if t["hol"] or any(i["type"] == "place" for i in t["inputs"]):
         cfg["hol"] = ctx.hol(t["hol"] or (2026, 2027))

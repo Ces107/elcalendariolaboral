@@ -29,10 +29,18 @@
     return (neg && +s.join('') !== 0 ? '−' : '') + i + (s[1] ? ',' + s[1] : '');
   }
   function eur(x) { return num(x, 2) + ' €'; }
-  /* '1.234,5' | '1234.5' | '1234,5' -> 1234.5; empty or junk -> NaN */
-  function val(s) {
-    s = String(s == null ? '' : s).trim().replace(/\s|€|%/g, '');
-    if (s.indexOf(',') >= 0 || /^-?\d{1,3}(\.\d{3})+$/.test(s)) s = s.replace(/\./g, '').replace(',', '.'); /* '36.000' = 36000 */
+  /* Typed number -> Number; empty or junk -> NaN. Currency symbols/codes, %, spaces are stripped; '−' is a minus.
+     Both separators present: the LAST one is the decimal mark ('1.234,56' = '1,234.56' = 1234.56) in any language.
+     lang 'es' (default; H.lang = page language): ',' decimal; '.' thousands only as full groups ('36.000' = 36000,
+       '1.234.567'), otherwise decimal ('12.5', '1.25').
+     lang 'en': '.' decimal; ',' thousands as full groups ('1,234' = 1234, '$1,234.50'); a single comma that is not
+       a full group is read as a decimal comma ('12,5' = 12.5). */
+  function val(s, lang) {
+    s = String(s == null ? '' : s).replace(/[\s  €£¥₹%]|(?:US|CA|AU|C|A)?\$|EUR|USD|GBP|CAD|AUD/gi, '').replace(/^\+/, '').replace(/^[−–]/, '-');
+    var en = (lang || H.lang) === 'en', c = s.indexOf(','), d = s.indexOf('.');
+    if (c >= 0 && d >= 0) s = s.lastIndexOf(',') > s.lastIndexOf('.') ? s.replace(/\./g, '').replace(',', '.') : s.replace(/,/g, '');
+    else if (c >= 0) s = (en || s.indexOf(',', c + 1) >= 0) && /^-?\d{1,3}(,\d{3})+$/.test(s) ? s.replace(/,/g, '') : s.replace(',', '.');
+    else if (d >= 0 && /^-?\d{1,3}(\.\d{3})+$/.test(s) && (!en || s.indexOf('.', d + 1) >= 0)) s = s.replace(/\./g, '');
     if (!/^-?\d*\.?\d+$/.test(s)) return NaN;
     return parseFloat(s);
   }
@@ -71,10 +79,11 @@
 
   var H = { DAY: DAY, parse: parse, iso: iso, add: add, diff: diff, leap: leap, yearDays: yearDays, monthDays: monthDays, wd: wd,
     r2: r2, esc: esc, num: num, eur: eur, val: val, plural: plural, holidays: holidays, holidayMap: holidayMap, icsEsc: icsEsc,
-    icsDate: icsDate, read: read };
+    icsDate: icsDate, read: read, lang: 'es' /* page language: how val() reads separators (run() sets it) */ };
   if (typeof module === 'object' && module.exports) { module.exports = H; return; }
   root.H = H;
   if (typeof document === 'undefined') return;
+  H.lang = (document.documentElement.lang || 'es').slice(0, 2);
 
   /* ------------------------------------------------------------ browser */
   var doc = document, $ = function (id) { return doc.getElementById(id); };
@@ -104,6 +113,7 @@
     var el = $('h-data');
     if (!el) return;
     var C = JSON.parse(el.textContent), S = C.s, specs = C.inputs, out = $('out'), touched = false;
+    if (C.lang) H.lang = C.lang;
     var q = new URLSearchParams(location.search);
 
     /* place pickers */

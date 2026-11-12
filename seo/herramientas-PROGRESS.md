@@ -38,12 +38,28 @@ cd elcalendariolaboral
 MSYS_NO_PATHCONV=1 python -m herramientas.build <slug> [<slug> ...]      # only your tools: index.html + t.js
 MSYS_NO_PATHCONV=1 python herramientas/test_herramientas.py --pages <slug> [...]   # your node test cases + page checks
 MSYS_NO_PATHCONV=1 python -m herramientas.build                         # LEAD: everything + hubs + sitemap-utilidades.xml
+MSYS_NO_PATHCONV=1 python -m herramientas.build --hub                   # LEAD: shared runtime/css + hubs + credits + sitemap
 ```
 
 `python -m herramientas.build` with slugs takes a few seconds and never touches other tools' folders, the hubs or
 the sitemap: safe for parallel agents. The lead runs it without arguments at merge time (and `build.py`, the full
 site build, also renders all tools, the hubs and the sitemap segment). Every definition is validated on load
-(`check_tool`): a broken tool file breaks everyone's build, so run the test right after editing.
+(`check_tool`); run the test right after editing.
+
+**Broken tool files** (import error, `check_tool` failure, two files with one slug) never stop other people's work:
+
+| mode | a broken tool file that is required | any other broken tool file |
+|---|---|---|
+| slug mode: `build <slugs>`, `test_herramientas.py [--pages] <slugs>` | required = the given slugs: **error, exit 1** | skipped, one `warning:` block on stderr |
+| full / `--hub` / `build.py`, `HT_ONLY` set | required = the `HT_ONLY` slugs: **error, the build stops** | skipped, loud `!!! BROKEN TOOL FILE(S) SKIPPED` block on stderr |
+| full / `--hub` / `build.py`, no `HT_ONLY` | none | skipped, loud block on stderr |
+| `test_herramientas.py` with no slugs and no `HT_ONLY` | every file: each broken one is a test failure | - |
+
+**For the lead's merge**: a skipped tool is absent from everything the build writes (its page is not rebuilt, and it
+is left out of the hubs, sitemap, credits, footer and related links), so a draft never gets published and never
+stops the merge; read the stderr block and tell its owner. A merged tool (in `HT_ONLY`) that breaks stops the build
+instead of silently dropping a live page from the hubs and the sitemap. `herramientas.BROKEN` holds the skipped
+slugs and errors.
 
 **Commit rule** (lead / U1 only; pack agents do not run git): `git add` explicit paths only, never `-A`, `.` or
 `commit -a`: `herramientas/tools/<module>.py herramientas/icons/<new>.svg utilidades/<slug>/` (+ `en/tools/<slug>/`).
@@ -95,7 +111,7 @@ letters/digits, unique. Common keys: `more: True` (inside "Más opciones"), `sho
 
 | type | renders | compute gets `v[id]` |
 |---|---|---|
-| `number` | text input, numeric keyboard, optional `unit` suffix | Number (`NaN` if empty/invalid; "1.234,5" accepted) |
+| `number` | text input, numeric keyboard, optional `unit` suffix | Number (`NaN` if empty/invalid; read by page language, see below) |
 | `money` | same, `€` suffix by default, decimal keyboard | Number |
 | `date` | date picker; `today: True` = visitor's date by default | `Date` (UTC midnight) or `null` |
 | `month` | select of months `min`..`max` ("2026-01".."2027-12" by default); `today: True` | `"YYYY-MM"` |
@@ -105,11 +121,21 @@ letters/digits, unique. Common keys: `more: True` (inside "Más opciones"), `sho
 | `text`, `time` | text / time input | string |
 | `place` | comunidad + municipio selects (municipios = published cities, islands, Arán) | holiday list `[[iso, name, kind]]`; also `v[id+"_label"]`, `v[id+"_r"]`, `v[id+"_m"]` |
 
+Typed numbers (`number`, `money`, and `H.val(s[, lang])` in compute code) follow the page language (`H.lang`, set
+from the tool's `lang`; node tests set it too). Both languages strip spaces, `%`, `€ $ £ ¥ ₹`, `US$`, `EUR USD GBP CAD
+AUD` and read `−` as a minus; when both `.` and `,` appear, the last one is the decimal mark (`1.234,56` = `1,234.50`
+style on any page).
+- `es`: `,` decimal (`1,5`, `1.234,56 €`); `.` = thousands only in full groups (`36.000`, `1.234.567`), otherwise a
+  decimal point (`12.5`, `12.50`).
+- `en`: `.` decimal; `,` = thousands in full groups (`1,234`, `$1,234.50`, `1,234,567`); a single comma that is not a
+  full group is a decimal comma (`12,5` = 12.5). `£12.5`, `€3`, `-$5.25`, `20 USD` all work.
+- Output formatting is unchanged: `H.num` / `H.eur` always write Spanish style; English tools format their own output.
+
 ### compute function (`js`)
 
 `function (v, H, C) { ... }`, ES2015, no DOM, no network. `v`: values by input id (types above). `C`: `{d: <data>,
 hol: <holiday data>}`. `H`: helpers from `h.js`: `parse iso add diff leap yearDays monthDays wd r2 esc num eur val
-plural holidays holidayMap icsEsc icsDate`. Return:
+plural holidays holidayMap icsEsc icsDate lang`. Return:
 
 ```js
 { err: 'Mensaje' }                         // instead of a result (invalid input): shown in a red box
@@ -136,7 +162,8 @@ Per-tool `credits` render on the tool page and are aggregated at `/utilidades/cr
 
 **Publishing only reviewed tools**: `HT_ONLY=slug1,slug2,...` (environment) limits the registry, so hubs, sitemap,
 credits, footer and related links only show those tools. Use it with `python -m herramientas.build --hub` and with
-`build.py` while unreviewed pack tools sit in `herramientas/tools/`. Without it, every tool file on disk is published.
+`build.py` while unreviewed pack tools sit in `herramientas/tools/`. Without it, every tool file on disk that loads is
+published. The `HT_ONLY` tools are also the required ones in full / hub mode (see "Broken tool files").
 
 | slug | state | sources |
 |---|---|---|

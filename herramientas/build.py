@@ -4,7 +4,10 @@
     python -m herramientas.build slug [slug ...]   only those tools: <folder>/index.html + <folder>/t.js  (parallel agents)
     python -m herramientas.build                   everything: shared runtime/css, every tool, hubs, credits,
                                                    sitemap-utilidades.xml and its line in sitemap_index.xml   (lead)
-    python -m herramientas.build --hub             hubs, credits and the sitemap only
+    python -m herramientas.build --hub             shared runtime/css, hubs, credits and the sitemap (no tool pages)
+
+A broken tool file (import error, check_tool failure, duplicate slug) is skipped with a warning on stderr unless it is
+required: the given slugs in slug mode, the HT_ONLY slugs in full / --hub mode; a required broken tool stops the build.
 
 Run from the repository root (MSYS_NO_PATHCONV=1 in Git Bash). Links into the tools from the rest of the site (header,
 footer, home, comunidades, /dias-habiles/) only change with the full site build (build.py).
@@ -60,8 +63,11 @@ def write_sitemap():
 def main(argv):
     hub_only = "--hub" in argv
     slugs = [a for a in argv if not a.startswith("-")] or None
+    if slugs:
+        HT.strict(slugs)  # the requested tools fail hard; other broken tool files are skipped with a warning
     data, cities = setup()
     if hub_only:
+        HT.build_shared()  # utilidades/a/h.js + h.css: the shared runtime goes out with the hubs
         HT.write_hubs(HT.Ctx(data, cities), pages.write)
     else:
         HT.write_pages(data, pages.write, cities, slugs)
