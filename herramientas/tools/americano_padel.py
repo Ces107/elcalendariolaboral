@@ -307,7 +307,7 @@ TOOL = {
     "blocks": blocks,
     "faq": FAQ,
     "sources": [("Social golfer problem · CSPLib prob010 (problema de repartir grupos sin repetir compañeros)", "https://www.csplib.org/Problems/prob010/"),
-                ("Whist tournament (diseños donde cada jugador es pareja de todos una vez) · Wolfram MathWorld", "https://mathworld.wolfram.com/WhistTournament.html")],
+                ("Social Golfer Problem · Wolfram MathWorld", "https://mathworld.wolfram.com/SocialGolferProblem.html")],
     "credits": [D.MULBERRY],
     "related": ["liguilla-round-robin", "cuadro-torneo", "amigo-invisible"],
     "tests": [

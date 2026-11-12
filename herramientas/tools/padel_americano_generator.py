@@ -83,7 +83,7 @@ TOOL = {
     "blocks": BLOCKS,
     "faq": FAQ,
     "sources": [("Social golfer problem · CSPLib prob010", "https://www.csplib.org/Problems/prob010/"),
-                ("Whist tournament (every player partners every other once) · Wolfram MathWorld", "https://mathworld.wolfram.com/WhistTournament.html")],
+                ("Social Golfer Problem · Wolfram MathWorld", "https://mathworld.wolfram.com/SocialGolferProblem.html")],
     "credits": [D.MULBERRY_EN],
     "related": ["round-robin-generator", "tournament-bracket-generator"],
     "tests": [

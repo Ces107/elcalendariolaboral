@@ -11,7 +11,7 @@ BODY = r"""
   }
   var k, info;
   if (v.modo === 'm') {
-    var A1 = area(v.f1, v.a1, v.b1), A2 = area(v.f2, v.a2, v.b2);
+    var A1 = area(v.f1, v.a1, v.lado1), A2 = area(v.f2, v.a2, v.lado2);
     if (!ok(A1)) return { err: T.e_m1 };
     if (!ok(A2)) return { err: T.e_m2 };
     k = A2 / A1;
@@ -85,10 +85,10 @@ def inputs(lang):
         {"id": "r2", "type": "number", "label": "Quiero" if es else "I need", "value": 6, "w": "s", "step": "0.5", "show": ("modo", ["r"])},
         {"id": "f1", "type": "select", "label": "Molde receta" if es else "Recipe pan", "value": "r", "options": shapes, "show": m},
         {"id": "a1", "type": "number", "label": lab_a, "value": 20 if es else 8, "unit": u, "w": "s", "step": "0.5", "show": m},
-        {"id": "b1", "type": "number", "label": "Otro lado" if es else "Other side", "value": "", "unit": u, "w": "s", "step": "0.5", "show": m},
+        {"id": "lado1", "type": "number", "label": "Otro lado" if es else "Other side", "value": "", "unit": u, "w": "s", "step": "0.5", "show": m},
         {"id": "f2", "type": "select", "label": "Mi molde" if es else "My pan", "value": "r", "options": shapes, "show": m},
         {"id": "a2", "type": "number", "label": lab_a, "value": 24 if es else 9, "unit": u, "w": "s", "step": "0.5", "show": m},
-        {"id": "b2", "type": "number", "label": "Otro lado" if es else "Other side", "value": "", "unit": u, "w": "s", "step": "0.5", "show": m},
+        {"id": "lado2", "type": "number", "label": "Otro lado" if es else "Other side", "value": "", "unit": u, "w": "s", "step": "0.5", "show": m},
         {"id": "ing", "type": "text", "label": "Ingredientes" if es else "Ingredients", "value": "", "w": "xl", "maxlength": 1200,
          "placeholder": "200 g harina; 3 huevos; 1/2 cucharadita de sal" if es else "2 1/4 cups flour; 2 eggs; 1/2 tsp salt"},
     ]
@@ -98,7 +98,7 @@ TESTS = [
     ({}, {"n.k": 1.5}),
     ({"modo": "m"}, {"n.k": 1.44}),
     ({"modo": "m", "a1": "22", "f2": "c", "a2": "20"}, {"n.k": 1.05}),
-    ({"modo": "m", "f1": "x", "a1": "30", "b1": "20", "a2": "26"}, {"n.k": 0.88}),
+    ({"modo": "m", "f1": "x", "a1": "30", "lado1": "20", "a2": "26"}, {"n.k": 0.88}),
     ({"ing": "200 g harina; 3 huevos; 1/2 cdta sal, 1,5 dl leche"}, {"n.items": [300, 4.5, 0.75, 2.25]}),
     ({"r1": "0"}, {"err": T_ES["e_r1"]}),
 ]

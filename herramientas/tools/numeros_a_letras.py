@@ -133,7 +133,7 @@ TOOL = {
     "blocks": BLOCKS,
     "faq": FAQ,
     "sources": [("RAE · Diccionario panhispánico de dudas: cardinales", RAE), ("RAE · DPD: uno", RAE_UNO),
-                ("Ley 19/1985 Cambiaria y del Cheque, art. 7 (BOE)", "https://www.boe.es/buscar/act.php?id=BOE-A-1985-12978")],
+                ("Ley 19/1985 Cambiaria y del Cheque, art. 7 (BOE)", "https://www.boe.es/buscar/act.php?id=BOE-A-1985-14880")],
     "related": ["factura-retencion-irpf", "precio-sin-iva", "iban-desde-ccc", "letra-dni-nie"],
     "tests": [
         ({"cant": "1.234,50"}, {"n.text": "Mil doscientos treinta y cuatro euros con cincuenta céntimos"}),

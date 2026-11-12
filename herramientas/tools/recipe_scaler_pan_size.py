@@ -69,7 +69,7 @@ TOOL = {
     "related": ["cups-to-grams", "bakers-percentage-calculator", "oven-temperature-conversion", "party-food-calculator"],
     "tests": [
         ({"modo": "m"}, {"n.k": 1.27}),
-        ({"modo": "m", "a1": "9", "f2": "x", "a2": "9", "b2": "13"}, {"n.k": 1.84}),
+        ({"modo": "m", "a1": "9", "f2": "x", "a2": "9", "lado2": "13"}, {"n.k": 1.84}),
         ({"ing": "2 1/4 cups flour; 2 eggs; ½ tsp salt; 1/2 cup milk", "r1": "2", "r2": "4"}, {"n.items": [4.5, 4, 1, 1]}),
         ({"modo": "m", "a2": ""}, {"err": T_EN["e_m2"]}),
     ],

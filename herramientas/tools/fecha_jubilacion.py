@@ -86,7 +86,8 @@ hacen falta, además, al menos 15 años cotizados, dos de ellos en los últimos 
     ("Ejemplo", """
 <p>Nacida el 10 de junio de 1965, con 35 años cotizados el 12 de noviembre de 2026 y sin dejar de trabajar. El 10 de junio de 2030
 cumple 65 años y habrá cotizado unos 38 años y 6 meses: llega justo al mínimo, así que se jubila a los <b>65</b> ese mismo día. Si
-hubiera empezado a cotizar unos meses más tarde, su edad sería de 67 años, en 2032.</p>
+le faltaran unos meses de cotización, se jubilaría el día en que los complete, y si no los completa antes de cumplir 67, a los 67,
+el 10 de junio de 2032.</p>
 <p>Con la anticipada involuntaria (despido colectivo u objetivo, y seis meses inscrita como demandante de empleo) podría
 jubilarse cuatro años antes de su edad, el 10 de junio de 2028, a los 63, porque tendrá más de 33 años cotizados.</p>"""),
     ("Jubilación anticipada", f"""
