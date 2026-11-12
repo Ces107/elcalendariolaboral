@@ -32,6 +32,22 @@ Never: inside the month grid (`.year`), the share card (`.vres`), the widget emb
 print (`@media print { .ad { display: none } }`), the PDFs. Each unit is `<aside class="ad">` with a small "Publicidad"
 label and a reserved `min-height: 300px` (no layout shift).
 
+## House ads (since 2026-11-12)
+
+Every `ad(pos)` position also carries our own promos (`build.house_ads`, texts in `build.HOUSE_TXT`, images in `promo/`):
+Agenda semanal 2027 on Amazon (school pages: Cuaderno del profesor; English tools: the 2027 Weekly Planner on amazon.com),
+Calma Planners on Etsy, Teselo (web game) and the /shopping/ page (not on English pages). All cards are in the HTML; a
+small inline script shows one at random per view (`data-w` weight 3 for the relevant product, no card twice on a page);
+without JS the build's pick shows.
+
+- With AdSense (`ad-g`): the card sits on the `<ins>` in one grid cell, label "Nuestros productos". `ins[data-ad-status=filled]`
+  hides the card and shows the "Publicidad" label (`:has()`, or the script's `.on` class); `unfilled` collapses the unit.
+  The card fills the reserved 280 px, so nothing moves.
+- Without AdSense (gl/eu, noindex, tools, `ads=False`, thin pages: `pages.no_thin_ads` keeps the promos via
+  `build.house_only`): a compact card, label "Nuestros productos" (ca/gl/eu/en translated).
+- Promo text does not count as content (`pages.main_words` and `seo/audit_site.py` drop the `<aside class="ad">`).
+- Teselo on Google Play: set `TESELO_PLAY_PUBLIC = True` once the listing is public (adds a "Google Play" button).
+
 ## When AdSense approves the site
 
 1. AdSense → Ads → By ad unit → Display ads: create 4 units, responsive, named `ecl-cal`, `ecl-list`, `ecl-vac`, `ecl-hub`.

@@ -407,11 +407,38 @@ select option:disabled { color: #8a929e; }
   .vrank .num { width: 64px; }
 }
 
-/* ---------------------------------------------------------------- ad slots (build.ad, off until ADS_ON): space reserved, never in print */
-.ad { margin-top: 56px; min-height: 300px; }
+/* ---------------------------------------------------------------- ad slots (build.ad): AdSense unit + our own promos (.hp) stacked
+   in one grid cell, space reserved, never in print. The promo shows until AdSense fills the unit; an unfilled unit collapses. */
+.ad { margin-top: 56px; }
+.ad-g { min-height: 300px; }
 .ad-l { margin: 0 0 4px; font-size: 11px; color: var(--mut); }
+.ad-s { display: grid; }
+.ad-s > * { grid-area: 1 / 1; min-width: 0; }
 .ad ins { min-height: 280px; }
-@media (max-width: 640px) { .ad { margin-top: 40px; } }
+.ad-s ins[data-ad-status="unfilled"] { display: none !important; }
+.ad-g .l-g, .ad.on .l-h, .ad.on .hp { display: none; }
+.ad.on .l-g { display: inline; }
+.ad:has(ins[data-ad-status="filled"]) .hp { display: none; }
+.ad:has(ins[data-ad-status="filled"]) .l-h { display: none; }
+.ad:has(ins[data-ad-status="filled"]) .l-g { display: inline; }
+.hp { position: relative; z-index: 1; display: flex; align-items: center; gap: 16px; padding: 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg2); }
+.hp[hidden] { display: none; }
+.hp img { flex: none; width: auto; height: 88px; border-radius: 3px; }
+.hp-t { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; min-width: 0; }
+.hp-t b { font-size: 17px; line-height: 1.25; color: var(--ink); }
+.hp-t > span { font-size: 14px; line-height: 1.35; color: var(--mut); }
+.hp-c { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+.hp-c .p::after { content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; }
+.hp-c .p ~ .btn { position: relative; z-index: 1; }
+.ad-g .hp { min-height: 280px; justify-content: center; gap: 24px; }
+.ad-g .hp img { height: 176px; }
+.ad-g .hp-t b { font-size: 20px; }
+@media (max-width: 640px) {
+  .ad { margin-top: 40px; }
+  .ad-g .hp { flex-direction: column; gap: 8px; text-align: center; }
+  .ad-g .hp img { height: 104px; }
+  .ad-g .hp-t { align-items: center; }
+}
 @media print { .ad { display: none !important; } }
 
 /* ---------------------------------------------------------------- utility pages (utilidades.py): date inputs like the selects */

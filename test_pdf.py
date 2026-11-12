@@ -85,12 +85,24 @@ if not B.ADS_ON:
         if ".git" not in p.parts:
             check('class="adsbygoogle"' not in p.read_text("utf-8"), f"{p}: ad unit while ADS_ON is False")
 B.ADS_ON, B.AD_SLOTS["cal"] = True, "1234567890"
+B.ADS_PAGE = True
 u = B.ad("cal")
-check('data-ad-slot="1234567890"' in u and "Publicidad" in u and 'class="ad ad-cal"' in u, "ad unit markup")
+check('data-ad-slot="1234567890"' in u and "Publicidad" in u and 'class="ad ad-cal ad-g"' in u, "ad unit markup")
+# house ads: our 4 promos ride in every position (one shown), stacked on the AdSense unit or alone without it
+check(u.count('class="hp"') == 4 and u.count(" hidden>") == 3 and "amazon.es/dp/B0HQ8FVGZS" in u and B.TESELO_WEB in u
+      and "etsy.com/es/shop/CalmaPlanners" in u and 'href="/shopping/"' in u.replace(B.ASSETS + "shopping/", "/shopping/"),
+      "house ads in the unit")
+check(B.house_only(u).startswith('<aside class="ad ad-cal" aria-label="Nuestros productos">')
+      and "adsbygoogle" not in B.house_only(u) and B.house_only(u).count('class="hp"') == 4, "thin guard keeps the house ads")
 B.AD_SLOTS["list"] = ""
-check(B.ad("list") == "", "ad without slot id must be empty")
+h = B.ad("list")
+check("adsbygoogle" not in h and h.count('class="hp"') == 4, "ad without slot id: house ads only")
 B.ADS_PAGE = False
-check(B.ad("cal") == "", "ad on a page without ads (noindex, legal, tool) must be empty")
+h = B.ad("cal")
+check("adsbygoogle" not in h and h.count('class="hp"') == 4, "page without AdSense (noindex, legal, tool): house ads only")
+check(B.ad("hub", "en").count('class="hp"') == 3 and "amazon.com/dp/B0HQ96KT81" in B.ad("hub", "en"), "English tool pages: 3 promos")
+for f in ("agenda-2027", "profesor", "planner-en", "etsy", "teselo", "tienda"):
+    check((ROOT / "promo" / f"{f}.webp").exists(), f"promo/{f}.webp missing")
 css = (ROOT / "app.css").read_text("utf-8")
 check(re.search(r"@media print \{ \.ad \{ display: none", css), "ads hidden in print")
 

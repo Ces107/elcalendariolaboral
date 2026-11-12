@@ -440,7 +440,7 @@ def tool_page(t, ctx):
         lds.append({"@type": "WebPage", "name": t["title"], "url": B.SITE + B.ASSETS + p, "inLanguage": "en", "dateModified": t["updated"]})
     hd = head(lang, t["title"], t["desc"], p, style + alternates(t) + ld(*lds), ads=True)  # first: it sets B.ADS_PAGE for B.ad()
     # one ad unit, between the explanation and the FAQ: never inside the form or the result (pages.write drops it < 250 words)
-    main = (f'{hero}<div class="wrap body narrow">{blocks}{B.ad("hub")}{faq_html(lang, qas)}'
+    main = (f'{hero}<div class="wrap body narrow">{blocks}{B.ad("hub", lang)}{faq_html(lang, qas)}'
             f'{upd_line(lang, t["updated"], t["sources"], t["credits"])}'
             f'{related_html(t)}</div>{js}')
     return shell(lang, hd, main, ctx.data, f"t-{t['slug']}")

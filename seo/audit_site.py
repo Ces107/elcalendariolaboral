@@ -42,7 +42,7 @@ GROUPED = {"festivos", "vacaciones-2027", "calendario-escolar", "vacaciones-esco
 
 
 def words(main):
-    t = RX_GRID.sub(" ", main)
+    t = RX_GRID.sub(" ", re.sub(r'<aside class="ad ad-[a-z]+[^"]*".*?</aside>', " ", main, flags=re.S))  # ad positions
     t = re.sub(r"<script\b.*?</script>|<style\b.*?</style>", " ", t, flags=re.S)
     t = html.unescape(re.sub(r"<[^>]+>", " ", t))
     return len(re.findall(r"[^\W\d_]{2,}", t))  # words of 2+ letters: no day numbers

@@ -518,17 +518,117 @@ EMAIL = "helping.info.agent@gmail.com"
 CONTENT_UPDATED = "2026-11-07"
 
 
-def ad(pos):
-    """One manual ad unit, or nothing while ADS_ON is False, the slot id is missing or the page has no ads. Never
-    inside the calendar grid, the share card, print or the widget embeds (those pages don't call this)."""
+def ad(pos, lang=None):
+    """One ad position: the AdSense unit with our own promos ("house ads") stacked on it, or the house promos alone on
+    pages without AdSense (ADS_PAGE False, ADS_ON False, no slot id). The promos show until AdSense fills the unit
+    (data-ad-status="filled" hides them, "unfilled" collapses the unit: app.css). Never inside the calendar grid, the
+    share card, print or the widget embeds (those pages don't call this). lang: page language when it is not LANG
+    (English tool pages)."""
+    lang = lang or LANG
     slot = AD_SLOTS.get(pos)
+    hl = HOUSE_TXT.get(lang, HOUSE_TXT["es"])["label"]
+    house = house_ads(pos, lang)
     if not (ADS_ON and slot and ADS_PAGE):
-        return ""
-    lab = "Publicitat" if LANG == "ca" else "Publicidad"
-    return (f'<aside class="ad ad-{pos}" aria-label="{lab}"><p class="ad-l">{lab}</p>'
+        return f'<aside class="ad ad-{pos}" aria-label="{hl}"><p class="ad-l">{hl}</p><div class="ad-s">{house}</div></aside>'
+    lab = "Publicitat" if lang == "ca" else "Publicidad"
+    return (f'<aside class="ad ad-{pos} ad-g" aria-label="{lab}"><p class="ad-l"><span class="l-g">{lab}</span>'
+            f'<span class="l-h">{hl}</span></p><div class="ad-s">'
             f'<ins class="adsbygoogle" style="display:block" data-ad-client="{AD_CLIENT}" data-ad-slot="{slot}" '
             f'data-ad-format="auto" data-full-width-responsive="true"></ins>'
-            f'<script>(adsbygoogle=window.adsbygoogle||[]).push({{}});</script></aside>')
+            f'<script>(adsbygoogle=window.adsbygoogle||[]).push({{}});</script>{house}</div></aside>')
+
+
+# House ads: our own products in the ad positions (seo/ads.md). Each position carries every card for the page language;
+# the inline script shows one at random per page view (weight data-w, no card twice on a page) and, for browsers
+# without :has(), marks the position "on" once AdSense fills the unit. Without JS the build's pick shows.
+# Images: promo/*.webp, 176 px tall (made from shopping/img and the Teselo brand icon).
+TESELO_WEB = "https://ces107.github.io/teselo/"
+TESELO_PLAY = "https://play.google.com/store/apps/details?id=io.github.ces107.teselo"
+TESELO_PLAY_PUBLIC = False  # the Play listing answers 404 until it is public; True adds a second "Google Play" button
+PROMO_W = {"agenda-2027": 117, "profesor": 125, "planner-en": 117, "etsy": 176, "teselo": 176, "tienda": 200}
+HOUSE_TXT = {  # label, then per card: (title, copy, button)
+    "es": {"label": "Nuestros productos",
+           "etsy": ("Calma Planners en Etsy", "Plantillas 2027 para imprimir y en Excel", "Ver en Etsy"),
+           "shop": ("Agendas y plantillas 2027", "{n} productos con los festivos de esta web", "Ver tienda"),
+           "teselo": ("Teselo: puzle de bloques", "Encaja piezas, limpia filas y columnas", "Jugar"),
+           "agenda": ("Agenda semanal 2027", "En papel, con los festivos de España", "Ver en Amazon"),
+           "profe": ("Cuaderno del profesor 2026-2027", "En papel, para todo el curso", "Ver en Amazon")},
+    "ca": {"label": "Els nostres productes",
+           "etsy": ("Calma Planners a Etsy", "Plantilles 2027 per imprimir i en Excel", "Veure a Etsy"),
+           "shop": ("Agendes i plantilles 2027", "{n} productes amb els festius d'aquest web", "Veure botiga"),
+           "teselo": ("Teselo: trencaclosques de blocs", "Encaixa peces, buida files i columnes", "Jugar"),
+           "agenda": ("Agenda setmanal 2027", "En paper, amb els festius d'Espanya", "Veure a Amazon"),
+           "profe": ("Quadern del professor 2026-2027", "En paper, per a tot el curs", "Veure a Amazon")},
+    "gl": {"label": "Os nosos produtos",
+           "etsy": ("Calma Planners en Etsy", "Modelos 2027 para imprimir e en Excel", "Ver en Etsy"),
+           "shop": ("Axendas e modelos 2027", "{n} produtos cos festivos desta web", "Ver tenda"),
+           "teselo": ("Teselo: crebacabezas de bloques", "Encaixa pezas, baleira filas e columnas", "Xogar"),
+           "agenda": ("Axenda semanal 2027", "En papel, cos festivos de España", "Ver en Amazon"),
+           "profe": ("Caderno do profesorado 2026-2027", "En papel, para todo o curso", "Ver en Amazon")},
+    "eu": {"label": "Gure produktuak",
+           "etsy": ("Calma Planners Etsyn", "2027ko txantiloiak, inprimatzeko eta Excelen", "Ikusi Etsyn"),
+           "shop": ("2027ko agendak eta txantiloiak", "{n} produktu, webgune honetako jaiegunekin", "Ikusi denda"),
+           "teselo": ("Teselo: bloke-puzzlea", "Sartu piezak, garbitu errenkadak eta zutabeak", "Jolastu"),
+           "agenda": ("2027ko asteko agenda", "Paperean, Espainiako jaiegunekin", "Ikusi Amazonen"),
+           "profe": ("Irakaslearen koadernoa 2026-2027", "Paperean, ikasturte osorako", "Ikusi Amazonen")},
+    "en": {"label": "Our products",
+           "etsy": ("Calma Planners on Etsy", "Printable and Excel planners for 2027", "View on Etsy"),
+           "teselo": ("Teselo: block puzzle", "Fit the pieces, clear rows and columns", "Play"),
+           "agenda": ("2027 Weekly Planner", "A paperback planner for the whole year", "View on Amazon")},
+}
+_HOUSE_JS = ("<script>!function(s){var b=s.parentNode,c=[].slice.call(b.querySelectorAll('.hp')),u=window.hpU=window.hpU||{},"
+             "p=[],i;c.forEach(function(x){if(!u[x.dataset.k])for(var n=+x.dataset.w;n--;)p.push(x)});"
+             "if(p.length){var k=p[Math.random()*p.length|0];u[k.dataset.k]=1;c.forEach(function(x){x.hidden=x!==k})}"
+             "i=b.querySelector('ins');if(i&&window.MutationObserver)new MutationObserver(function(){"
+             "b.parentNode.classList.toggle('on',i.getAttribute('data-ad-status')=='filled')}).observe(i,{attributes:true})"
+             "}(document.currentScript)</script>")
+_POS_I = {"cal": 0, "vac": 1, "list": 2, "hub": 3}
+
+
+def house_ads(pos, lang):
+    """The promo cards for one position (see HOUSE_TXT): the build's pick visible, the rest hidden for the script."""
+    import shopping  # the catalogue: Etsy shop URL and product count
+    tx = HOUSE_TXT.get(lang, HOUSE_TXT["es"])
+    school = PAGE_PATH.startswith(("calendario-escolar", "vacaciones-escolares"))
+    etsy = shopping.ETSY_SHOP.replace("/es/", "/") if lang == "en" else shopping.ETSY_SHOP
+    if lang == "en":
+        agenda = ("https://www.amazon.com/dp/B0HQ96KT81", "planner-en", "agenda")
+    elif school:
+        agenda = ("https://www.amazon.es/dp/B0HR1RPDCP", "profesor", "profe")
+    else:
+        agenda = ("https://www.amazon.es/dp/B0HQ8FVGZS", "agenda-2027", "agenda")
+    # (key, url, image, text key, weight): the relevant product weighs 3 (vacation and school pages -> the agenda or
+    # the teacher's notebook, PDF hub -> the printable calendar on Etsy)
+    vac = pos == "vac" or PAGE_PATH.startswith("vacaciones") or school
+    cards = [("agenda", agenda[0], agenda[1], agenda[2], 3 if vac else 1),
+             ("etsy", etsy, "etsy", "etsy", 3 if PAGE_PATH.startswith("calendario-laboral-2027-pdf") else 1),
+             ("teselo", TESELO_WEB, "teselo", "teselo", 1),
+             ("shop", f"{ASSETS}shopping/", "tienda", "shop", 1)]
+    cards = [c for c in cards if c[3] in tx]
+    n = len(shopping.AMAZON) + len(shopping.ETSY)
+    pick = (int(hashlib.md5(PAGE_PATH.encode()).hexdigest(), 16) + _POS_I.get(pos, 0)) % len(cards)
+    if max(c[4] for c in cards) > 1:  # without JS the relevant product shows
+        pick = max(range(len(cards)), key=lambda k: cards[k][4])
+    out = []
+    for k, (key, url, img, tk, w) in enumerate(cards):
+        title, line, btn = tx[tk]
+        rel = ' target="_blank" rel="sponsored noopener"' if url.startswith("http") else ""
+        more = (f'<a class="btn sm" href="{TESELO_PLAY}"{rel}>Google Play</a>' if key == "teselo" and TESELO_PLAY_PUBLIC else "")
+        out.append(f'<div class="hp" data-k="{key}" data-w="{w}"{"" if k == pick else " hidden"}>'
+                   f'<img src="{ASSETS}promo/{img}.webp" alt="" width="{PROMO_W[img]}" height="176" loading="lazy">'
+                   f'<div class="hp-t"><b>{E(title)}</b><span>{E(line.format(n=n))}</span>'
+                   f'<span class="hp-c"><a class="btn p sm" href="{url}"{rel}>{E(btn)}</a>{more}</span></div></div>')
+    return "".join(out) + _HOUSE_JS
+
+
+_RX_G = re.compile(r'<aside class="ad (ad-[a-z]+) ad-g" aria-label="[^"]*"><p class="ad-l"><span class="l-g">[^<]*</span>'
+                   r'<span class="l-h">([^<]*)</span></p><div class="ad-s"><ins class="adsbygoogle".*?</ins>'
+                   r'<script>\(adsbygoogle[^<]*</script>', re.S)
+
+
+def house_only(page):
+    """Every AdSense unit of a page becomes its house promos alone (pages.no_thin_ads: thin pages lose AdSense)."""
+    return _RX_G.sub(lambda m: f'<aside class="ad {m[1]}" aria-label="{m[2]}"><p class="ad-l">{m[2]}</p><div class="ad-s">', page)
 
 
 # Pages with ads open the AdSense and consent (Funding Choices) connections early.
@@ -1408,6 +1508,7 @@ def main():
     (ROOT / "404.html").write_text(fix(page_404(data)), "utf-8", newline="\n")
     (ROOT / "buscar.json").write_bytes(sidx)
     seg_counts = write_sitemaps(pages_written, {r["slug"] for r in data["regions"]})
+    shopping.add_to_sitemap(sys.modules[__name__])  # /shopping/ is written outside pages.write: keep it in the sitemap
 
     manifest = {
         "name": t("app_name"), "short_name": t("app_short"), "lang": LANG, "description": t("app_desc"),

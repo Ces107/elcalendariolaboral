@@ -114,24 +114,25 @@ def faq_html(qas):
 THIN_ADS = 250  # visible words of 2+ letters in <main>, month grids left out: below it a page carries no ads (seo/ads.md)
 _RX_GRID = re.compile(r"<caption>(?:Enero|Gener|Xaneiro|Urtarrila)</caption>.*?<caption>(?:Diciembre|Desembre|Decembro|Abendua)</caption>"
                       r".*?(?:</table>|</div>)", re.S)
-_RX_AD = re.compile(r'<aside class="ad ad-[a-z]+".*?</aside>', re.S)
+_RX_AD = re.compile(r'<aside class="ad ad-[a-z]+[^"]*".*?</aside>', re.S)  # AdSense unit and/or house promos (B.ad)
 thin_no_ads = []  # paths whose ads the guard removed (printed by the build, listed in seo/ADSENSE-READINESS-*.md)
 
 
 def main_words(page):
     """Same count as seo/audit_site.py: words of 2+ letters in <main>, without scripts and the 12-month grid."""
     m = re.search(r"<main\b.*?</main>", page, re.S)
-    t = _RX_GRID.sub(" ", m.group(0) if m else "")
+    t = _RX_GRID.sub(" ", _RX_AD.sub(" ", m.group(0)) if m else "")  # ad positions are not content
     t = re.sub(r"<script\b.*?</script>|<style\b.*?</style>", " ", t, flags=re.S)
     return len(re.findall(r"[^\W\d_]{2,}", html.unescape(re.sub(r"<[^>]+>", " ", t))))
 
 
 def no_thin_ads(path, page):
-    """Policy guard: a page with the AdSense loader but less than THIN_ADS words loses the loader and its units."""
+    """Policy guard: a page with the AdSense loader but less than THIN_ADS words loses the loader and its units (the
+    house promos of each position stay)."""
     if B.ADSENSE not in page or main_words(page) >= THIN_ADS:
         return page
     thin_no_ads.append(path)
-    return _RX_AD.sub("", page.replace(B.AD_HINTS + B.ADSENSE, "").replace(B.ADSENSE, ""))
+    return B.house_only(page.replace(B.AD_HINTS + B.ADSENSE, "").replace(B.ADSENSE, ""))
 
 
 def write(path, page, lastmod, langs=None):
