@@ -6,6 +6,10 @@ L32004 = "https://www.boe.es/buscar/act.php?id=BOE-A-2004-21830"
 LEC = "https://www.boe.es/buscar/act.php?id=BOE-A-2000-323"
 TESORO = "https://www.boe.es/boe/dias/2026/07/01/pdfs/BOE-A-2026-14327.pdf"
 BDE = "https://clientebancario.bde.es/pcb/es/"
+LPGE23 = "https://www.boe.es/buscar/act.php?id=BOE-A-2022-22128#da-42"   # DA 42.ª: 3,25 % legal, 4,0625 % LGT art. 26.6
+TESORO1 = "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-27201"     # 1.er semestre 2026: 2,15 + 8 = 10,15 %
+# COM checked in the BOE (V1, 2026-11-12): 2023-1 BOE-A-2022-24416, 2023-2 -2023-15221, 2024-1 -2023-26709, 2024-2 -2024-13089,
+# 2025-1 -2024-27618, 2025-2 -2025-13217, 2026-1 -2025-27201, 2026-2 -2026-14327. 2020-2022 = 0 % ECB + 8.
 # yearly rates (%), from the LPGE of each year (2024-2026: LPGE 2023 extended)
 LEGAL = {2020: 3.0, 2021: 3.0, 2022: 3.0, 2023: 3.25, 2024: 3.25, 2025: 3.25, 2026: 3.25, 2027: 3.25}
 TRIB = {2020: 3.75, 2021: 3.75, 2022: 3.75, 2023: 4.0625, 2024: 4.0625, 2025: 4.0625, 2026: 4.0625, 2027: 4.0625}
@@ -17,13 +21,15 @@ LAST = {"legal": 2026, "trib": 2026, "proc": 2026, "com": "2026-2"}
 BLOCKS = [
     ("Qué interés aplicar", f"""
 <p>En 2026 el <b>interés legal del dinero</b> es del <b>3,25 %</b> y el <b>interés de demora tributario</b>, del <b>4,0625 %</b>:
-los mismos desde 2023, porque los Presupuestos de 2023 siguen prorrogados. El legal se usa en deudas civiles sin interés pactado
+los que fijó la <a href="{LPGE23}" rel="noopener">disposición adicional 42.ª de la Ley 31/2022</a> de Presupuestos para 2023,
+que siguen prorrogados porque no se han aprobado otros (artículo 134.4 de la Constitución). El legal se usa en deudas civiles sin interés pactado
 (una fianza no devuelta, una deuda entre particulares); el tributario, en las deudas con Hacienda y en las devoluciones que
 Hacienda paga tarde (<a href="{LGT}#a26" rel="noopener">artículo 26 de la Ley General Tributaria</a>: el legal más un 25 %).</p>
 <p>Entre empresas, o entre una empresa y la Administración, se aplica el <b>interés de demora comercial</b> de la
 <a href="{L32004}#a7" rel="noopener">Ley 3/2004 contra la morosidad</a>: el tipo del Banco Central Europeo más 8 puntos, publicado
 cada semestre. Es del <b>10,40 % en el segundo semestre de 2026</b> (<a href="{TESORO}" rel="noopener">resolución del Tesoro de
-30 de junio de 2026</a>) y fue del 10,15 % en el primero. Y si hay sentencia, desde la fecha de la sentencia corre el
+30 de junio de 2026</a>) y fue del 10,15 % en el primero (<a href="{TESORO1}" rel="noopener">resolución de 23 de diciembre
+de 2025</a>). Y si hay sentencia, desde la fecha de la sentencia corre el
 <b>interés procesal</b>, el legal más dos puntos: 5,25 % (<a href="{LEC}#a576" rel="noopener">artículo 576 de la LEC</a>).</p>"""),
     ("Cómo se calcula", """
 <p>Interés = importe × tipo × días / 365 (366 en los años bisiestos). Si el periodo cruza un cambio de tipo (un año nuevo o, en
@@ -109,7 +115,9 @@ TOOL = {
     "js": JS,
     "blocks": BLOCKS,
     "faq": FAQ,
-    "sources": [("Resolución del Tesoro, interés de demora comercial 2.º semestre 2026 (BOE-A-2026-14327)", TESORO),
+    "sources": [("Ley 31/2022 de Presupuestos para 2023, disp. adicional 42.ª (BOE)", LPGE23),
+                ("Resolución del Tesoro, interés de demora comercial 2.º semestre 2026 (BOE-A-2026-14327)", TESORO),
+                ("Resolución del Tesoro, 1.er semestre 2026 (BOE-A-2025-27201)", TESORO1),
                 ("Ley 3/2004 de lucha contra la morosidad, art. 7 (BOE)", L32004), ("Ley 58/2003 General Tributaria, art. 26 (BOE)", LGT),
                 ("Ley 1/2000 de Enjuiciamiento Civil, art. 576 (BOE)", LEC)],
     "related": ["actualizar-alquiler", "factura-retencion-irpf", "dividir-gastos", "precio-sin-iva"],

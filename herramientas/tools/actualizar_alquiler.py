@@ -50,7 +50,8 @@ del INE a noviembre de 2026, el IPC interanual de {mlabel(last_ipc)} es del {n(I
 diciembre de 2027, si no hay un nuevo acuerdo con el inquilino, la subida no puede pasar del <b>2 %</b>, y no hay subida
 ninguna si la renta ya está por encima del precio de referencia de la zona. Un alquiler de 800 € que se actualiza en
 diciembre de 2026 pasa como mucho a {e(816)}, no a {e(800 * (1 + IPC[last_ipc] / 100))}. Es un decreto-ley pendiente de
-convalidación en el Congreso: si se deroga, desmarca «Tope legal» en «Más opciones».</p>
+convalidación: la Diputación Permanente del Congreso lo vota el 12 de noviembre de 2026 y, a esa fecha, el BOE no ha publicado
+ni su convalidación ni su derogación. Si se deroga, desmarca «Tope legal» en «Más opciones».</p>
 <table class="tbl"><thead><tr><th>Mes del índice</th><th>IPC</th><th>IRAV</th></tr></thead><tbody>{rows}</tbody></table>
 <p class="hnote">* Indicador adelantado; el INE publica el dato definitivo a mediados del mes siguiente.</p>"""),
         ("IPC o IRAV: cuál se aplica", f"""

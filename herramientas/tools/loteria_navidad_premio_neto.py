@@ -39,7 +39,9 @@ y el reintegro) se cobran enteros.</p>
 <tbody>{rows}</tbody></table>
 <p>El sorteo del 22 de diciembre de 2026 reparte por serie 4 millones al primer premio, 1,25 millones al segundo, 500.000 € al
 tercero, 200.000 € a cada uno de los dos cuartos y 60.000 € a cada uno de los ocho quintos. Cada serie tiene diez décimos, de
-ahí los importes por décimo de la tabla.</p>"""),
+ahí los importes por décimo de la tabla. Son los importes del programa de los últimos años; para 2026 Loterías anuncia 205
+series y 2.870 millones en premios (el 70 % de la emisión, 14 millones por serie, como ese programa), pero <b>no hemos podido
+consultar el programa oficial de 2026</b>: compruébalo en <a href="{SELAE}" rel="noopener">loteriasyapuestas.es</a>.</p>"""),
         ("Participaciones y décimos compartidos", f"""
 <p>La exención de 40.000 € es <b>por décimo</b>, no por persona: si el décimo se reparte, cada uno tiene exenta la parte que le
 toca. Una participación de 3 € que «juega 2,50 €» es la octava parte de un décimo: del Gordo le corresponden

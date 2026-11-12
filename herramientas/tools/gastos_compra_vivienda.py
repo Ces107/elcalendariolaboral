@@ -6,10 +6,21 @@ LITP = "https://www.boe.es/buscar/act.php?id=BOE-A-1993-25359"
 NOT = "https://www.boe.es/buscar/act.php?id=BOE-A-1989-28111"
 REG = "https://www.boe.es/buscar/act.php?id=BOE-A-1989-28112"
 L52019 = "https://www.boe.es/buscar/act.php?id=BOE-A-2019-3814"
-# slug: (name, ITP: rate % or [[upper limit, %], ...] progressive (None = rest), AJD %, note)
+# Regional texts checked 2026-11-12 (verifier V1): scales and foral rates read in the consolidated official text.
+ARA = "https://www.boe.es/buscar/act.php?id=BOA-d-2005-90006"          # Aragón DLeg 1/2005, art. 121-1
+AST = "https://www.asturias.es/documents/4911212/4919217/consulta_1_2018.pdf/73a57008-17d2-f53c-87cc-e927cff59ad5"  # art. 26 DLeg 2/2014: one rate on the whole value
+BAL = "https://www.boe.es/buscar/act.php?id=BOE-A-2014-6925"           # Illes Balears DLeg 1/2014, art. 10 (consolidated 13-06-2026)
+EXT = "https://www.boe.es/buscar/act.php?id=BOE-A-2018-8159"           # Extremadura DLeg 1/2018, art. 36 (consolidated 04-08-2026)
+CYL = "https://www.boe.es/buscar/act.php?id=BOCL-h-2013-90254"         # Castilla y León DLeg 1/2013, arts. 24-25
+CAT = "https://www.boe.es/buscar/act.php?id=BOE-A-2025-10270"          # Cataluña DL 5/2025, art. 641-1 Código tributario
+NAV = "https://www.boe.es/buscar/act.php?id=BON-n-1999-90001"          # Navarra DFLeg 129/1999, arts. 8 and 22 (consolidated 20-04-2026)
+BIZ = "https://www.bizkaia.eus/documents/880307/15187815/ca_1_2011.pdf/50b78491-3852-b68f-f9d5-2db574a48917"  # Bizkaia NF 1/2011, arts. 13 and 44
+IGIC = "https://www.boe.es/buscar/act.php?id=BOE-A-2012-9282"          # Canarias Ley 4/2012, arts. 51 and 58
+# slug: (name, ITP: rate % | [[upper limit, %], ...] marginal scale (None = rest) | {"p": [...]} one rate on the whole value, AJD %, note)
 CA = {
     "andalucia": ("Andalucía", 7, 1.2), "aragon": ("Aragón", [[400000, 8], [450000, 8.5], [500000, 9], [750000, 9.5], [None, 10]], 1.5),
-    "asturias": ("Asturias", [[300000, 8], [500000, 9], [None, 10]], 1.2),
+    "asturias": ("Asturias", {"p": [[300000, 8], [500000, 9], [None, 10]]}, 1.2,
+                 "En Asturias el tipo del tramo (8 % hasta 300.000 €, 9 % hasta 500.000 €, 10 % por encima) se aplica a todo el valor."),
     "baleares": ("Illes Balears", [[400000, 8], [600000, 9], [1000000, 10], [2000000, 12], [None, 13]], 1.5),
     "canarias": ("Canarias", 6.5, 0.75), "cantabria": ("Cantabria", 9, 1.5),
     "castilla-la-mancha": ("Castilla-La Mancha", 9, 1.5), "castilla-y-leon": ("Castilla y León", [[250000, 8], [None, 10]], 1.5),
@@ -17,7 +28,13 @@ CA = {
     "comunitat-valenciana": ("Comunitat Valenciana", "val", 1.4),
     "extremadura": ("Extremadura", [[360000, 8], [600000, 10], [None, 11]], 1.5), "galicia": ("Galicia", 8, 1.5),
     "la-rioja": ("La Rioja", 7, 1), "madrid": ("Comunidad de Madrid", 6, 0.75), "murcia": ("Región de Murcia", 7.75, 1.5),
-    "navarra": ("Navarra", 6, 0.5), "pais-vasco": ("País Vasco", 4, 0.5), "ceuta": ("Ceuta", 3, 0.25), "melilla": ("Melilla", 3, 0.25),
+    "navarra": ("Navarra", 6, 0.5,
+                "Navarra: 5 % para familias con dos o más hijos (hasta 180.304 €) y 4 % en municipios en riesgo de despoblación, no aplicados."),
+    "pais-vasco": ("País Vasco", 4, 0.5,
+                   "Tipos de Bizkaia: 4 % la vivienda y 2,5 % si tiene hasta 120 m² construidos o eres familia numerosa (no aplicado). "
+                   "En Gipuzkoa y Álava el 4 % sale de guías fiscales: no lo hemos verificado en su texto oficial."),
+    "ceuta": ("Ceuta", 3, 0.25, "Ceuta: tipos estatales (6 % y 0,5 %) con la bonificación del 50 % del art. 57 bis de la ley del ITP."),
+    "melilla": ("Melilla", 3, 0.25, "Melilla: tipos estatales (6 % y 0,5 %) con la bonificación del 50 % del art. 57 bis de la ley del ITP."),
 }
 
 BLOCKS = [
@@ -33,11 +50,17 @@ el dinero ahorrado: los bancos financian como mucho el 80 % del precio y casi nu
 <p>Los tipos generales son los del informe <a href="{TRIB}" rel="noopener">Tributación Autonómica. Medidas 2026</a> del Ministerio
 de Hacienda. Madrid aplica el 6 %; Canarias el 6,5 %; Andalucía y La Rioja el 7 %; Murcia el 7,75 %; Galicia el 8 %; Cantabria y
 Castilla-La Mancha el 9 %; la Comunitat Valenciana el 9 % desde el 1 de junio de 2026 (11 % si el valor pasa de un millón).
-Castilla y León aplica el 8 % hasta un límite y el 10 % al resto, y Cataluña, Asturias, Aragón, Extremadura y Baleares usan
-escalas por tramos (en Cataluña, 10 % hasta 600.000 €, 11 % hasta 900.000 €, 12 % hasta 1,5 millones y 13 % por encima).</p>
-<p>Navarra y el País Vasco tienen su propia normativa foral (6 % y 4 % para vivienda) y en Ceuta y Melilla la cuota se bonifica
-al 50 %. Casi todas las comunidades tienen <b>tipos reducidos</b> para jóvenes, familias numerosas, personas con discapacidad o
-viviendas baratas en municipios pequeños, que esta calculadora no aplica: si puedes acogerte, el impuesto baja mucho.</p>"""),
+<a href="{CYL}" rel="noopener">Castilla y León</a> aplica el 8 % hasta 250.000 € y el 10 % al resto. Cataluña, Aragón, Extremadura
+y Baleares usan escalas por tramos: en <a href="{CAT}" rel="noopener">Cataluña</a>, 10 % hasta 600.000 €, 11 % hasta 900.000 €, 12 %
+hasta 1,5 millones y 13 % por encima; en <a href="{ARA}" rel="noopener">Aragón</a>, del 8 % hasta 400.000 € al 10 % desde 750.000 €;
+en <a href="{EXT}" rel="noopener">Extremadura</a>, 8 %, 10 % desde 360.000 € y 11 % desde 600.000 €; en
+<a href="{BAL}" rel="noopener">Baleares</a>, del 8 % hasta 400.000 € al 13 % desde 2 millones. En <a href="{AST}" rel="noopener">Asturias</a>
+no es una escala: el valor decide un único tipo (8 %, 9 % o 10 %) que se aplica a todo el precio.</p>
+<p>Navarra y el País Vasco tienen normativa foral: en <a href="{NAV}" rel="noopener">Navarra</a>, 6 % de ITP y 0,5 % de AJD; en
+<a href="{BIZ}" rel="noopener">Bizkaia</a>, 4 % para vivienda (2,5 % hasta 120 m² construidos) y 0,5 % de AJD. En Ceuta y Melilla se
+aplican los tipos estatales con una bonificación del 50 %, y la vivienda nueva no paga IVA sino IPSI. Casi todas las comunidades
+tienen <b>tipos reducidos</b> para jóvenes, familias numerosas, personas con discapacidad o viviendas baratas en municipios
+pequeños, que esta calculadora no aplica: si puedes acogerte, el impuesto baja mucho.</p>"""),
     ("Notaría, registro, gestoría e hipoteca", f"""
 <p>La notaría y el registro cobran por <a href="{NOT}" rel="noopener">aranceles fijados por real decreto</a>, que crecen poco con el
 precio; la calculadora los estima con esos aranceles (rebaja del 5 % incluida), más copias, folios e IVA. La gestoría, que liquida
@@ -75,12 +98,20 @@ function (v, H, C) {
   if (v.tipo === 'usada') {
     if (R[1] === 'val') { rate = p > 1e6 ? 11 : 9; tax = p * rate / 100; rows.push(['ITP ' + H.num(rate, 0) + ' %', H.eur(tax)]); }
     else if (typeof R[1] === 'number') { tax = p * R[1] / 100; rows.push(['ITP ' + H.num(R[1], 2).replace(/,?0+$/, '') + ' %', H.eur(tax)]); }
+    else if (R[1].p) { /* one rate, chosen by the value, on the whole value (Asturias) */
+      for (var j = 0; j < R[1].p.length; j++) { if (R[1].p[j][0] === null || p <= R[1].p[j][0]) { rate = R[1].p[j][1]; break; } }
+      tax = p * rate / 100; rows.push(['ITP ' + H.num(rate, 0) + ' % sobre todo el valor', H.eur(tax)]);
+    }
     else { tax = scale(p, R[1]); rows.push(['ITP por tramos · ' + H.num(tax / p * 100, 2) + ' % medio', H.eur(tax)]); }
   } else {
-    var ivaR = v.ca === 'canarias' ? 7 : v.vpo ? 4 : 10, iva = p * ivaR / 100, ajd = p * R[2] / 100;
+    var cm = v.ca === 'ceuta' || v.ca === 'melilla', can = v.ca === 'canarias';
+    var ivaR = cm ? 0 : can ? (v.vpo ? 0 : 7) : v.vpo ? 4 : 10, iva = p * ivaR / 100, ajd = p * R[2] / 100;
     tax = iva + ajd;
-    rows.push([(v.ca === 'canarias' ? 'IGIC ' : 'IVA ') + ivaR + ' %', H.eur(iva)], ['AJD ' + H.num(R[2], 2).replace(/,?0+$/, '') + ' %', H.eur(ajd)]);
+    rows.push(cm ? ['IPSI (no incluido)', '—'] : [(can ? 'IGIC ' : 'IVA ') + ivaR + ' %', H.eur(iva)], ['AJD ' + H.num(R[2], 2).replace(/,?0+$/, '') + ' %', H.eur(ajd)]);
   }
+  var xn = R[3] && v.tipo === 'usada' ? ' ' + R[3] : '';
+  if (v.tipo !== 'usada' && cm) xn = ' En Ceuta y Melilla no hay IVA: la vivienda nueva paga IPSI, con el tipo que fija cada ciudad, y no está sumado. AJD con bonificación del 50 %.';
+  if (v.tipo !== 'usada' && can) xn = ' Canarias: IGIC del 7 %; 0 % en VPO y 3 % o 5 % para vivienda habitual con requisitos de edad, familia y precio (no aplicados).';
   /* notary (RD 1426/1989) and registry (RD 1427/1989) fees, scales in % (the decrees give per mil), 5 % cut, + copies/entries, + 21 % VAT */
   var not = v.notaria >= 0 ? v.notaria : H.r2((aran(p, 90.15, [[24040.49, 0.45], [54090.98, 0.15], [144242.91, 0.1], [595001.98, 0.05], [null, 0.03]]) * 0.95 + 250) * 1.21);
   var reg = v.registro >= 0 ? v.registro : H.r2((aran(p, 24.04, [[24040.49, 0.175], [54090.98, 0.125], [144242.91, 0.075], [595001.98, 0.03], [null, 0.02]]) * 0.95 + 150) * 1.21);
@@ -93,7 +124,7 @@ function (v, H, C) {
   return {
     label: 'Gastos de compra', big: H.eur(total),
     sub: H.num(total / p * 100, 1) + ' % del precio · necesitas ' + H.eur(p + total) + (v.hip ? ' (' + H.eur(p * 0.2 + total) + ' ahorrados si el banco financia el 80 %)' : ''),
-    rows: rows, note: 'Tipos generales de ' + H.esc(R[0]) + ' en 2026, sin reducciones por edad, familia o vivienda protegida.',
+    rows: rows, note: 'Tipos generales de ' + H.esc(R[0]) + ' en 2026, sin reducciones por edad, familia o vivienda protegida.' + xn,
     n: { tax: H.r2(tax), total: total }
   };
 }
@@ -117,7 +148,7 @@ TOOL = {
         {"id": "tipo", "type": "seg", "label": "Vivienda", "value": "usada", "options": [("usada", "Usada"), ("nueva", "Nueva")]},
         {"id": "ca", "type": "select", "label": "Comunidad", "value": "madrid", "options": [(k, x[0]) for k, x in CA.items()]},
         {"id": "hip", "type": "check", "label": "Con hipoteca", "value": True},
-        {"id": "vpo", "type": "check", "label": "Protegida (IVA 4 %)", "value": False, "show": ("tipo", ["nueva"]), "more": True},
+        {"id": "vpo", "type": "check", "label": "Protegida (VPO)", "value": False, "show": ("tipo", ["nueva"]), "more": True},
         {"id": "notaria", "type": "money", "label": "Notaría", "value": "", "more": True, "w": "s"},
         {"id": "registro", "type": "money", "label": "Registro", "value": "", "more": True, "w": "s"},
         {"id": "gestoria", "type": "money", "label": "Gestoría", "value": 350, "more": True, "w": "s"},
@@ -128,7 +159,12 @@ TOOL = {
     "faq": FAQ,
     "sources": [("Ministerio de Hacienda · Tributación Autonómica. Medidas 2026", TRIB), ("Ley del ITP y AJD (BOE)", LITP),
                 ("Ley 37/1992 del IVA, art. 91 (BOE)", LIVA), ("Arancel notarial, RD 1426/1989 (BOE)", NOT),
-                ("Arancel de los registradores, RD 1427/1989 (BOE)", REG), ("Ley 5/2019 de crédito inmobiliario (BOE)", L52019)],
+                ("Arancel de los registradores, RD 1427/1989 (BOE)", REG), ("Ley 5/2019 de crédito inmobiliario (BOE)", L52019),
+                ("Aragón · DLeg 1/2005, art. 121-1 (BOE)", ARA), ("Asturias · consulta 1/2018 sobre el art. 26 del DLeg 2/2014", AST),
+                ("Illes Balears · DLeg 1/2014, art. 10 (BOE)", BAL), ("Extremadura · DLeg 1/2018, art. 36 (BOE)", EXT),
+                ("Castilla y León · DLeg 1/2013, arts. 24-25 (BOE)", CYL), ("Cataluña · Decreto-ley 5/2025, art. 641-1 (BOE)", CAT),
+                ("Navarra · DFLeg 129/1999, arts. 8 y 22 (BOE)", NAV), ("Bizkaia · Norma Foral 1/2011, arts. 13 y 44", BIZ),
+                ("Canarias · Ley 4/2012, arts. 51 y 58 (IGIC, BOE)", IGIC)],
     "related": ["actualizar-alquiler", "intereses-demora", "precio-sin-iva", "cuota-autonomos-2026"],
     "tests": [
         ({"precio": "200000", "ca": "madrid"}, {"n.tax": 12000}),
@@ -136,6 +172,10 @@ TOOL = {
         ({"precio": "700000", "ca": "cataluna"}, {"n.tax": 71000}),
         ({"precio": "300000", "ca": "castilla-y-leon"}, {"n.tax": 25000}),
         ({"precio": "1200000", "ca": "comunitat-valenciana"}, {"n.tax": 132000}),
+        ({"precio": "400000", "ca": "asturias"}, {"n.tax": 36000}),
+        ({"precio": "500000", "ca": "aragon"}, {"n.tax": 40750}),
+        ({"precio": "200000", "ca": "ceuta", "tipo": "nueva"}, {"n.tax": 500}),
+        ({"precio": "200000", "ca": "canarias", "tipo": "nueva"}, {"n.tax": 15500}),
         ({"precio": "0", "ca": "madrid"}, {"err": "Escribe el precio de la vivienda."}),
     ],
 }

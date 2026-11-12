@@ -3,6 +3,8 @@
 ORDEN = "https://www.boe.es/buscar/act.php?id=BOE-A-2026-7296"
 LGSS = "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724"
 SS = "https://www.seg-social.es/wps/portal/wss/internet/Trabajadores/CotizacionRecaudacionTrabajadores/10721/10957/583"
+LETA = "https://www.boe.es/buscar/act.php?id=BOE-A-2007-13409"
+RDL13 = "https://www.boe.es/buscar/act.php?id=BOE-A-2022-12482"
 RATE = 31.5  # 28.30 contingencias comunes + 1.30 profesionales + 0.90 cese + 0.10 formación + 0.90 MEI
 SOC_MIN = 1424.40
 # (upper limit of monthly net income, base mínima, base máxima); None = no limit
@@ -43,11 +45,16 @@ tu tramo: una base más alta da más pensión, más paro de autónomo y más baj
 rendimientos reales, la Seguridad Social regulariza: si cotizaste de menos, te reclama la diferencia; si cotizaste de más, te la
 devuelve de oficio.</p>"""),
         ("Tarifa plana y autónomos societarios", f"""
-<p>Los nuevos autónomos pagan una <b>cuota reducida de 80 € al mes</b> los primeros 12 meses, ampliables otros 12 si los
-rendimientos no llegan al salario mínimo (artículo 38 ter de la LGSS). La calculadora la aplica si marcas «Tarifa plana».</p>
+<p>Los nuevos autónomos pagan una <b>cuota reducida</b> los primeros 12 meses, ampliables otros 12 si los rendimientos no llegan
+al salario mínimo (<a href="{LETA}" rel="noopener">artículo 38 ter de la Ley del Estatuto del Trabajo Autónomo</a>). La ley
+deja la cuantía a los Presupuestos; los <b>80 € al mes</b> los fijó el <a href="{RDL13}" rel="noopener">Real Decreto-ley 13/2022</a>
+solo para 2023-2025. Para 2026 no hay Presupuestos ni otra norma publicada con la cifra: la calculadora usa 80 €, el importe que
+se sigue aplicando según las guías profesionales, pero <b>no lo hemos podido verificar en una fuente oficial</b>. Marca «Tarifa
+plana» para aplicarla.</p>
 <p>Los <b>autónomos societarios</b> (socios que controlan su sociedad y administradores) no pueden cotizar por debajo de la base
-mínima del grupo 7 del régimen general, que en 2026 es de 1.424,40 €: su cuota mínima es de {e(SOC_MIN * RATE / 100)} al mes
-aunque sus rendimientos estén en un tramo inferior.</p>"""),
+mínima del grupo 7 del régimen general (<a href="{LGSS}#a308" rel="noopener">art. 308.1.a), regla 4.ª, LGSS</a>), que en 2026 es de
+1.424,40 € según el artículo 3 de la Orden PJC/297/2026: su cuota mínima es de {e(SOC_MIN * RATE / 100)} al mes aunque sus
+rendimientos estén en un tramo inferior.</p>"""),
     ]
 
 
@@ -79,7 +86,7 @@ function (v, H, C) {
   if (v.tipo === 'soc' && bmin < C.d.soc) { bmin = C.d.soc; if (bmax < bmin) bmax = Math.max(bmin, 5101.2); note = 'Societario: base mínima de ' + H.eur(C.d.soc) + '.'; }
   var name = k < 3 ? 'reducida, tramo ' + (k + 1) : 'general, tramo ' + (k - 2);
   var cuota = H.r2(bmin * R), cmax = H.r2(bmax * R);
-  if (v.tp) { cuota = 80; note = 'Tarifa plana: 80 € al mes durante 12 meses (art. 38 ter LGSS).'; }
+  if (v.tp) { cuota = 80; note = 'Tarifa plana: 80 € al mes durante 12 meses (art. 38 ter de la Ley 20/2007). Cifra fijada para 2023-2025; para 2026 no figura en ninguna norma publicada: sin verificar.'; }
   return {
     label: 'Cuota mínima al mes', big: H.eur(cuota),
     sub: 'Tabla ' + name + ' · ' + H.eur(cuota * 12) + ' al año',
@@ -114,7 +121,9 @@ TOOL = {
     "js": JS,
     "blocks": blocks,
     "faq": FAQ,
-    "sources": [("Orden PJC/297/2026, de cotización 2026 (BOE)", ORDEN), ("Ley General de la Seguridad Social, arts. 38 ter y 308 (BOE)", LGSS),
+    "sources": [("Orden PJC/297/2026, de cotización 2026, arts. 3 y 18 (BOE)", ORDEN), ("Ley General de la Seguridad Social, art. 308 (BOE)", LGSS),
+                ("Ley 20/2007 del Estatuto del Trabajo Autónomo, art. 38 ter (BOE)", LETA),
+                ("Real Decreto-ley 13/2022, disp. transitoria 5.ª (BOE)", RDL13),
                 ("Seguridad Social · Cotización de autónomos", SS)],
     "related": ["factura-retencion-irpf", "precio-sin-iva", "kilometraje-dietas", "calculadora-finiquito"],
     "tests": [

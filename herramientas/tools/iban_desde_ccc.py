@@ -3,10 +3,14 @@
 BDE = "https://www.bde.es/wbe/es/entidades-profesionales/supervisadas/"
 SEPA = "https://www.ecb.europa.eu/paym/integration/retail/sepa/html/index.en.html"
 SWIFT = "https://www.swift.com/standards/data-standards/iban-international-bank-account-number"
+REG = "https://www.bde.es/f/webbe/SGE/regis/ficheros/es/Registro_EntCredito.xlsx"  # BdE register of credit institutions
+# Codes checked against REG (dated 05/11/2026) on 2026-11-12: Cajasur -> Kutxabank 01/10/2025, EVO -> Bankinter 01/04/2025,
+# Targobank -> Abanca 31/05/2024, Popular -> Santander 2018, Banesto -> Santander 2013, Bankia -> CaixaBank 2021, Liberbank -> Unicaja 2021.
 BANKS = {"0049": "Banco Santander", "0182": "BBVA", "2100": "CaixaBank", "0081": "Banco Sabadell", "0128": "Bankinter",
          "2080": "Abanca", "1465": "ING", "0073": "Openbank", "3058": "Cajamar", "2085": "Ibercaja", "2095": "Kutxabank",
          "2103": "Unicaja", "0019": "Deutsche Bank", "0061": "Banca March", "1491": "Triodos Bank", "3035": "Laboral Kutxa",
-         "0237": "Cajasur", "0239": "EVO Banco", "0216": "Targobank", "0186": "Banco Mediolanum", "3025": "Caja de Ingenieros",
+         "0237": "Cajasur (hoy Kutxabank)", "0239": "EVO Banco (hoy Bankinter)", "0216": "Targobank (hoy Abanca)",
+         "0186": "Banco Mediolanum", "3025": "Caja de Ingenieros",
          "0083": "Renta 4 Banco", "0075": "Banco Popular (hoy Santander)", "0030": "Banesto (hoy Santander)",
          "2038": "Bankia (hoy CaixaBank)", "2048": "Liberbank (hoy Unicaja)"}
 
@@ -90,7 +94,7 @@ TOOL = {
     "blocks": BLOCKS,
     "faq": FAQ,
     "sources": [("SWIFT · IBAN (ISO 13616), registro oficial", SWIFT), ("Banco Central Europeo · SEPA", SEPA),
-                ("Banco de España · Entidades supervisadas", BDE)],
+                ("Banco de España · Entidades supervisadas", BDE), ("Banco de España · Registro de entidades de crédito (códigos)", REG)],
     "related": ["validar-cif-nif", "letra-dni-nie", "factura-retencion-irpf"],
     "tests": [
         ({"cuenta": "2100 0418 45 0200051332"}, {"n.iban": "ES9121000418450200051332", "n.ccOk": True}),

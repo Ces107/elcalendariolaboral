@@ -1,7 +1,8 @@
 """Próxima ITV: next inspection dates by vehicle category and age (RD 920/2017, art. 6), with an .ics reminder."""
 
 RD920 = "https://www.boe.es/buscar/act.php?id=BOE-A-2017-12841"
-DGT = "https://www.dgt.es/nuestros-servicios/tu-vehiculo/tus-vehiculos/inspeccion-tecnica-de-vehiculos/"
+DGT = "https://revista.dgt.es/es/motor/noticias/2022/01ENERO/0112-Vehiculos-Sin-ITV.shtml"  # 200 € caducada/desfavorable, 500 € negativa
+LTSV = "https://www.boe.es/buscar/act.php?id=BOE-A-2015-11722"  # arts. 76.o (grave), 77.ll (muy grave), 80.1 (200 € / 500 €)
 # type: (label, exempt years, [(from age in years, months between inspections)])
 RULES = {
     "m1": ("Turismo o autocaravana", 4, [(4, 24), (10, 12)]),
@@ -49,8 +50,8 @@ FAQ = [
     ("¿Cuándo pasa la primera ITV un coche nuevo?",
      "A los 4 años de su primera matriculación. Después cada dos años hasta los 10 y, desde entonces, todos los años."),
     ("¿Puedo circular con la ITV caducada?",
-     "No. Es una infracción grave con multa de 200 €, que sube a 500 € si la última inspección fue negativa. Con la ITV caducada solo "
-     "puedes circular para ir a la estación a pasarla."),
+     "No. Es una infracción grave (art. 76.o de la Ley de Tráfico) con multa de 200 € (art. 80). Según la DGT, si la última "
+     "inspección fue negativa, por defectos muy graves, la multa sube a 500 €, la de las infracciones muy graves."),
     ("¿Cuánto antes puedo pasar la ITV sin perder días?",
      "Hasta 30 días naturales antes de la fecha de caducidad: en ese caso la nueva validez se cuenta desde la caducidad, no desde el "
      "día en que la pasas."),
@@ -124,7 +125,8 @@ TOOL = {
     "js": JS,
     "blocks": BLOCKS,
     "faq": FAQ,
-    "sources": [("Real Decreto 920/2017, art. 6 (BOE)", RD920), ("DGT · Inspección técnica de vehículos", DGT)],
+    "sources": [("Real Decreto 920/2017, art. 6 (BOE)", RD920), ("Ley sobre Tráfico (RDLeg 6/2015), arts. 76, 77 y 80 (BOE)", LTSV),
+                ("Revista DGT · multas por circular sin ITV", DGT)],
     "related": ["multa-trafico-descuento", "kilometraje-dietas", "coste-viaje-coche", "etiqueta-dgt"],
     "tests": [
         ({"tipo": "m1", "matr": "2016-03-15"}, {"n.list": ["2020-03-15", "2022-03-15", "2024-03-15", "2026-03-15", "2027-03-15", "2028-03-15"]}),
