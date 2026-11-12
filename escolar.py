@@ -416,7 +416,7 @@ def hub_page():
     ctx = (f'<p class="ctx">Infantil y Primaria · días sin clase con fines de semana · '
            f'<time datetime="{DATA["updated"]}">actualizado {B.dmy(DATA["updated"])}</time></p>')
     main = (f'<div class="hero wrap">{B.crumbs_html(crumbs)}<h1>{E(h1)}</h1>{ctx}</div>'
-            f'<div class="wrap body narrow"><section class="sec" id="comunidades">{table}{more}</section>{hub_notes()}{B.ad("hub")}</div>')
+            f'<div class="wrap body narrow"><section class="sec" id="comunidades">{table}{more}</section>{hub_notes()}{B.ad("hub", topic="school")}</div>')
     title = "Calendario escolar 2026-2027 en España por comunidad"
     desc = ("Calendario escolar 2026-2027 de las 19 comunidades: primer y último día de clase y vacaciones de Navidad "
             "y Semana Santa, según cada norma oficial.")

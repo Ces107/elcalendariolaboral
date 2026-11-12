@@ -741,6 +741,7 @@ def muni_page(x, cat, write, REG, UPDATED):
           + f'<a href="{B.BASE}{r["slug"]}/">Calendari laboral 2027 {names["region_in"]}</a></p>')
     body = (B.section("festivos", f'Festius 2027 {de(name)}', MP.hl_rows(f["hols"]) + loc_html)
             + B.section("claves", f'Què canvien els festius {de(name)}' if ok and wide else f'{E(name)} el 2027', notes(items))
+            + B.ad("hub", adsense=False)  # our promos only, as munipages.muni_page (seo/ads.md)
             + B.section("calendario", "Calendari 2027", MP.legend(kinds) + mini_year(f["hols"]), cls="cal")
             + B.section("puentes", f'Ponts 2027 {de(name)}', f'<table class="tbl ptm"><thead><tr><th scope="col">Pont<th scope="col" class="num">Dies de festa'
                         f'<th scope="col">Vacances</thead><tbody>{pts}</tbody></table>')
@@ -832,6 +833,7 @@ def prov_page(p, cat, write, REG, UPDATED):
     hero = (f'<div class="hero wrap">{B.crumbs_html(crumbs)}{chip(p["path"])}'
             + B.hero_grid(f'<h1>{E(h1)}</h1><p class="lead">{lead}</p>', stats + B.search_box("q-prov"), meta) + '</div>')
     body = (B.section("claves", "El que diuen les dates", notes(items))
+            + B.ad("hub", adsense=False)  # our promos only, as munipages.prov_page (seo/ads.md)
             + B.section("comunidad", f'Els {len(base)} festius {names["region_of"]}', f'<ul class="dchips">{chips}</ul>'
                         f'<p class="more-l"><a href="{B.BASE}{r["slug"]}/">Calendari laboral 2027 {names["region_in"]}</a></p>')
             + B.section("municipios", f'Els {n} municipis', f'{az}{rows}'))

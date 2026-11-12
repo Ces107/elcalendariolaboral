@@ -257,7 +257,7 @@ def hub_page(fs, write):
     lds = pages.ld(pages.crumbs_ld(crumbs), pages.faq_ld(qas), app_ld(h1, PATH, desc))
     head = B.head_html(title, desc, PATH, f"{B.SITE}{B.ASSETS}og/vacaciones-2027.png", lds, langs=ONLY, ads=False)
     cfg = {**base_cfg(), "hub": True, "regions": [r["slug"] for r in DATA["regions"]]}
-    main = f'{hero}<div class="wrap body narrow">{rank}{B.ad("hub")}{pages.faq_html(qas)}</div>{vac_script(cfg)}'
+    main = f'{hero}<div class="wrap body narrow">{rank}{B.ad("hub", topic="vac")}{pages.faq_html(qas)}</div>{vac_script(cfg)}'
     write(PATH, B.page(head, "pg vac", "vac", main, DATA, js=False), DATA["updated"], ONLY)
 
 

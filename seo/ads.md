@@ -16,8 +16,10 @@ noindex pages, the vacation planner, PDF hub, festivos-locales hub, widget, /sem
 Since 2026-11-07 (`seo/build-PROGRESS.md`), also without ads until AdSense approves the site: the 50 province pages and
 the ~8,000 municipality pages of `munipages.py`, the 13 city pages that got their 2027 locals from
 `locales-2027-all.json` (`c["new"]` in `muni.overlay_locales`), and `/buscar/`. To turn them on after approval: in
-`munipages.py` change `ads=False` in both `head_html` calls (they have no `ad()` slots yet: add one `hub` unit after the
-"Qué cambian" notes, never next to the hero actions), and in `pages.city_page` drop `ads=not c.get("new")`.
+`munipages.py` change `ads=False` in both `head_html` calls and drop `adsense=False` from their `B.ad("hub", ...)` (the
+slot after the "Qué cambian" / "Lo que dicen las fechas" notes, house promos only until then), and in `pages.city_page`
+drop `ads=not c.get("new")`. Those pages build their body before `head_html`, so `ADS_PAGE` is the previous page's
+there: check that the unit comes with the loader (test_data.py does).
 
 ## Positions
 
@@ -36,9 +38,11 @@ label and a reserved `min-height: 300px` (no layout shift).
 
 Every `ad(pos)` position also carries our own promos (`build.house_ads`, texts in `build.HOUSE_TXT`, images in `promo/`):
 Agenda semanal 2027 on Amazon (school pages: Cuaderno del profesor; English tools: the 2027 Weekly Planner on amazon.com),
-Calma Planners on Etsy, Teselo (web game) and the /shopping/ page (not on English pages). All cards are in the HTML; a
-small inline script shows one at random per view (`data-w` weight 3 for the relevant product, no card twice on a page);
-without JS the build's pick shows.
+Calma Planners on Etsy, Teselo (its landing, ces107.github.io/teselojuego/) and the /shopping/ page (not on English
+pages). All cards are in the HTML; a small inline script shows one at random per view (`data-w`, no card twice on a
+page); without JS the build's pick shows. `ad(pos, topic=...)` weights the relevant product 3: `school`
+(/calendario-escolar/: the teacher's notebook replaces the agenda), `vac` (/vacaciones-2027/ and the `vac` position:
+the agenda), `pdf` (PDF hub: Etsy). Also on the province and municipality pages (`munipages.py`, one `hub` position).
 
 - With AdSense (`ad-g`): the card sits on the `<ins>` in one grid cell, label "Nuestros productos". `ins[data-ad-status=filled]`
   hides the card and shows the "Publicidad" label (`:has()`, or the script's `.on` class); `unfilled` collapses the unit.

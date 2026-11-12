@@ -101,8 +101,20 @@ B.ADS_PAGE = False
 h = B.ad("cal")
 check("adsbygoogle" not in h and h.count('class="hp"') == 4, "page without AdSense (noindex, legal, tool): house ads only")
 check(B.ad("hub", "en").count('class="hp"') == 3 and "amazon.com/dp/B0HQ96KT81" in B.ad("hub", "en"), "English tool pages: 3 promos")
+B.ADS_PAGE = True
+check("adsbygoogle" not in B.ad("hub", adsense=False), "adsense=False: house ads only")
+s = B.ad("hub", topic="school")
+check("amazon.es/dp/B0HR1RPDCP" in s and 'data-k="agenda" data-w="3">' in s, "school topic: teacher's notebook first")
+check('data-k="etsy" data-w="3">' in B.ad("hub", topic="pdf"), "pdf topic: Etsy first")
 for f in ("agenda-2027", "profesor", "planner-en", "etsy", "teselo", "tienda"):
     check((ROOT / "promo" / f"{f}.webp").exists(), f"promo/{f}.webp missing")
+# built pages: the promos where the positions are, the right product first, never in widget embeds or the shop
+for path, want in (("", 'class="hp"'), ("madrid/", 'class="hp"'), ("calendario-escolar/", "promo/profesor.webp"),
+                   ("calendario-laboral-2027-pdf/", 'data-k="etsy" data-w="3">'), ("vacaciones-2027/", 'data-k="agenda" data-w="3">'),
+                   ("comunitat-valenciana/ademuz/", 'class="hp"'), ("en/tools/age-calculator/", "amazon.com/dp/B0HQ96KT81")):
+    check(want in (ROOT / path / "index.html").read_text("utf-8"), f"/{path}: house ads ({want})")
+for p in [ROOT / "shopping" / "index.html", *(ROOT / "widget" / "embed").glob("*/index.html")]:
+    check('class="hp"' not in p.read_text("utf-8"), f"{p.relative_to(ROOT)}: house ads where there must be none")
 css = (ROOT / "app.css").read_text("utf-8")
 check(re.search(r"@media print \{ \.ad \{ display: none", css), "ads hidden in print")
 

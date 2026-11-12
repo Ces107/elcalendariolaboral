@@ -72,7 +72,7 @@ def write_page(data, write, cities):
     ctx = f'<p class="ctx">{n_files} PDF · A4 · <a href="{src["url"]}" rel="noopener">{src["id"]}</a></p>'
     main = (f'<div class="hero wrap">{B.crumbs_html(crumbs)}<h1>{E(h1)}</h1>{ctx}</div>'
             f'<div class="wrap body narrow">{B.section("comunidades", B.t("pick_region"), f"<ul class=chips>{chips}</ul>")}'
-            f'{"".join(blocks[:3])}{B.ad("hub")}{"".join(blocks[3:])}</div>')
+            f'{"".join(blocks[:3])}{B.ad("hub", topic="pdf")}{"".join(blocks[3:])}</div>')
     docs = {"@type": "ItemList", "name": h1, "numberOfItems": len(data["regions"]), "itemListElement": [
         {"@type": "ListItem", "position": k + 1, "name": f'Calendario laboral 2027 {r["name"]} PDF',
          "url": f'{B.SITE}{B.ASSETS}{file_of(r["slug"])}'} for k, r in enumerate(data["regions"])]}

@@ -308,6 +308,7 @@ def muni_page(x, cat, write):
           + f'<a href="{B.BASE}{r["slug"]}/">Calendario laboral 2027 de {E(rname)}</a></p>')
     body = (B.section("festivos", f'Festivos 2027 en {E(name)}', hl_rows(f["hols"]) + loc_html)
             + B.section("claves", f'Qué cambian los festivos de {E(name)}' if ok and wide else f'{E(name)} en 2027', guia.notes(items))
+            + B.ad("hub", adsense=False)  # our promos only: ads=False below (seo/ads.md); the AdSense unit goes here later
             + B.section("calendario", "Calendario 2027", legend(kinds) + mini_year(f["hols"]), cls="cal")
             + B.section("puentes", f'Puentes 2027 en {E(name)}', f'<table class="tbl ptm"><thead><tr><th scope="col">Puente<th scope="col" class="num">Días libres'
                         f'<th scope="col">Vacaciones</thead><tbody>{pts}</tbody></table>')
@@ -397,6 +398,7 @@ def prov_page(p, cat, write):
     hero = (f'<div class="hero wrap">{B.crumbs_html(crumbs)}{B.lang_chip(p["path"], B.es_ca(p["path"]))}'
             + B.hero_grid(f'<h1>{E(h1)}</h1><p class="lead">{lead}</p>', stats + B.search_box("q-prov"), meta) + '</div>')
     body = (B.section("claves", "Lo que dicen las fechas", guia.notes(items))
+            + B.ad("hub", adsense=False)  # our promos only: ads=False below (seo/ads.md)
             + B.section("comunidad", f'Los {len(base)} festivos de {E(r["name"])}', f'<ul class="dchips">{chips}</ul>'
                         f'<p class="more-l"><a href="{B.BASE}{r["slug"]}/">Calendario laboral 2027 de {E(r["name"])}</a></p>')
             + B.section("municipios", f'Los {n} municipios', f'{az}{rows}'))

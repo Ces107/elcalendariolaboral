@@ -518,17 +518,18 @@ EMAIL = "helping.info.agent@gmail.com"
 CONTENT_UPDATED = "2026-11-07"
 
 
-def ad(pos, lang=None):
+def ad(pos, lang=None, topic=None, adsense=True):
     """One ad position: the AdSense unit with our own promos ("house ads") stacked on it, or the house promos alone on
-    pages without AdSense (ADS_PAGE False, ADS_ON False, no slot id). The promos show until AdSense fills the unit
-    (data-ad-status="filled" hides them, "unfilled" collapses the unit: app.css). Never inside the calendar grid, the
-    share card, print or the widget embeds (those pages don't call this). lang: page language when it is not LANG
-    (English tool pages)."""
+    pages without AdSense (ADS_PAGE False, ADS_ON False, no slot id, adsense=False). The promos show until AdSense fills
+    the unit (data-ad-status="filled" hides them, "unfilled" collapses the unit: app.css). Never inside the calendar
+    grid, the share card, print or the widget embeds (those pages don't call this). lang: page language when it is not
+    LANG (English tool pages). topic: "school", "vac" or "pdf" puts the matching product first (house_ads).
+    adsense=False: promos only, for pages built before their head_html (ADS_PAGE is still the previous page's)."""
     lang = lang or LANG
     slot = AD_SLOTS.get(pos)
     hl = HOUSE_TXT.get(lang, HOUSE_TXT["es"])["label"]
-    house = house_ads(pos, lang)
-    if not (ADS_ON and slot and ADS_PAGE):
+    house = house_ads(pos, lang, topic)
+    if not (ADS_ON and slot and ADS_PAGE and adsense):
         return f'<aside class="ad ad-{pos}" aria-label="{hl}"><p class="ad-l">{hl}</p><div class="ad-s">{house}</div></aside>'
     lab = "Publicitat" if lang == "ca" else "Publicidad"
     return (f'<aside class="ad ad-{pos} ad-g" aria-label="{lab}"><p class="ad-l"><span class="l-g">{lab}</span>'
@@ -542,7 +543,7 @@ def ad(pos, lang=None):
 # the inline script shows one at random per page view (weight data-w, no card twice on a page) and, for browsers
 # without :has(), marks the position "on" once AdSense fills the unit. Without JS the build's pick shows.
 # Images: promo/*.webp, 176 px tall (made from shopping/img and the Teselo brand icon).
-TESELO_WEB = "https://ces107.github.io/teselo/"
+TESELO_WEB = "https://ces107.github.io/teselojuego/"  # the landing (it links to the web game and Google Play)
 TESELO_PLAY = "https://play.google.com/store/apps/details?id=io.github.ces107.teselo"
 TESELO_PLAY_PUBLIC = False  # the Play listing answers 404 until it is public; True adds a second "Google Play" button
 PROMO_W = {"agenda-2027": 117, "profesor": 125, "planner-en": 117, "etsy": 176, "teselo": 176, "tienda": 200}
@@ -585,11 +586,13 @@ _HOUSE_JS = ("<script>!function(s){var b=s.parentNode,c=[].slice.call(b.querySel
 _POS_I = {"cal": 0, "vac": 1, "list": 2, "hub": 3}
 
 
-def house_ads(pos, lang):
-    """The promo cards for one position (see HOUSE_TXT): the build's pick visible, the rest hidden for the script."""
+def house_ads(pos, lang, topic=None):
+    """The promo cards for one position (see HOUSE_TXT): the build's pick visible, the rest hidden for the script.
+    topic (from the caller: many pages build their body before head_html sets PAGE_PATH): "school" -> the teacher's
+    notebook instead of the agenda, weight 3; "vac" (and the vac position) -> the agenda, weight 3; "pdf" -> Etsy, 3."""
     import shopping  # the catalogue: Etsy shop URL and product count
     tx = HOUSE_TXT.get(lang, HOUSE_TXT["es"])
-    school = PAGE_PATH.startswith(("calendario-escolar", "vacaciones-escolares"))
+    school = topic == "school"
     etsy = shopping.ETSY_SHOP.replace("/es/", "/") if lang == "en" else shopping.ETSY_SHOP
     if lang == "en":
         agenda = ("https://www.amazon.com/dp/B0HQ96KT81", "planner-en", "agenda")
@@ -597,11 +600,10 @@ def house_ads(pos, lang):
         agenda = ("https://www.amazon.es/dp/B0HR1RPDCP", "profesor", "profe")
     else:
         agenda = ("https://www.amazon.es/dp/B0HQ8FVGZS", "agenda-2027", "agenda")
-    # (key, url, image, text key, weight): the relevant product weighs 3 (vacation and school pages -> the agenda or
-    # the teacher's notebook, PDF hub -> the printable calendar on Etsy)
-    vac = pos == "vac" or PAGE_PATH.startswith("vacaciones") or school
+    # (key, url, image, text key, weight)
+    vac = pos == "vac" or topic in ("vac", "school")
     cards = [("agenda", agenda[0], agenda[1], agenda[2], 3 if vac else 1),
-             ("etsy", etsy, "etsy", "etsy", 3 if PAGE_PATH.startswith("calendario-laboral-2027-pdf") else 1),
+             ("etsy", etsy, "etsy", "etsy", 3 if topic == "pdf" else 1),
              ("teselo", TESELO_WEB, "teselo", "teselo", 1),
              ("shop", f"{ASSETS}shopping/", "tienda", "shop", 1)]
     cards = [c for c in cards if c[3] in tx]
