@@ -293,3 +293,78 @@ EASTER_JS = r"""
 MOON_CSS = (".mo{display:block;margin:1px auto 0}.mo-d{fill:#3b3f6b}.mo-l{fill:#f6e7a8}"
             ".ml td{height:40px;vertical-align:top}.ml td.ph{box-shadow:inset 0 0 0 2px #3b3f6b}.ml td small{display:block;font-size:10px;font-weight:700;line-height:1}"
             ".mt{width:100%;margin-top:16px}.mt td,.mt th{text-align:left}.mt td .mo{display:inline-block;vertical-align:-4px;margin:0 4px 0 0}")
+
+# Date helpers shared by the date tools. Needs a strings object L with lang, wd (Monday first), mon.
+# addMonths clamps to the last day of the month (Código Civil art. 5: "de fecha a fecha", last day if there is none).
+DATE_JS = r"""
+  function addMonths(d, n) {
+    var y = d.getUTCFullYear(), m = d.getUTCMonth() + n, ty = y + Math.floor(m / 12), tm = ((m % 12) + 12) % 12;
+    var last = new Date(Date.UTC(ty, tm + 1, 0)).getUTCDate();
+    var r = new Date(Date.UTC(2000, tm, Math.min(d.getUTCDate(), last))); r.setUTCFullYear(ty); return r;
+  }
+  function ymd(a, b) { /* a <= b: whole years, months, then days */
+    var mo = (b.getUTCFullYear() - a.getUTCFullYear()) * 12 + b.getUTCMonth() - a.getUTCMonth();
+    if (addMonths(a, mo) > b) mo--;
+    return [Math.floor(mo / 12), mo % 12, H.diff(addMonths(a, mo), b), mo];
+  }
+  function nf(n) { return L.lang === 'es' ? H.num(n, 0) : String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+  function fdate(d, wd) {
+    var y = d.getUTCFullYear(), s = L.lang === 'es' ? d.getUTCDate() + ' de ' + L.mon[d.getUTCMonth()] + ' de ' + y
+      : d.getUTCDate() + ' ' + L.mon[d.getUTCMonth()] + ' ' + y;
+    return (wd ? L.wd[H.wd(d)] + (L.lang === 'es' ? ', ' : ' ') : '') + s;
+  }
+  function isoWeek(d) { /* [ISO year, ISO week] */
+    var t = H.add(d, 3 - H.wd(d)); /* the Thursday of that week decides the year */
+    return [t.getUTCFullYear(), Math.floor((doy(t) - 1) / 7) + 1];
+  }
+  function doy(d) { var j1 = new Date(Date.UTC(2000, 0, 1)); j1.setUTCFullYear(d.getUTCFullYear()); return H.diff(j1, d) + 1; }
+  function pl(n, one, many) { return nf(n) + ' ' + (n === 1 ? one : many); }
+"""
+
+
+# ---------------------------------------------------------------- Chinese New Year (Python twin + JS)
+# Rules of the modern Chinese calendar (time of China, UTC+8): month 11 is the lunation that contains the December solstice;
+# months begin on the day of the new moon; if 13 new moons separate two months 11, the first month with no principal
+# term (zhongqi, sun longitude a multiple of 30 deg) is a leap month. New Year = month 1 = two months after month 11,
+# or three when the leap month falls in month 11 or 12 (e.g. 2033-34). Checked against the Hong Kong Observatory tables.
+
+def sun_lon(jd):
+    T = (jd - 2451545) / 36525
+    L0 = (280.46646 + T * (36000.76983 + T * 0.0003032)) % 360
+    M = 357.52911 + T * (35999.05029 - 0.0001537 * T)
+    C = _s(M) * (1.914602 - T * (0.004817 + 0.000014 * T)) + _s(2 * M) * (0.019993 - 0.000101 * T) + _s(3 * M) * 0.000289
+    return (L0 + C - 0.00569 - 0.00478 * _s(125.04 - 1934.136 * T)) % 360
+
+
+def term_jd(year, lon):
+    """JD (UT) when the apparent sun longitude reaches `lon` (deg) in the 12 months that start at the March equinox of `year`."""
+    jd = 2451545 + (year - 2000) * 365.2422 + 79 + lon / 360 * 365.2422
+    for _ in range(6):
+        jd += ((lon - sun_lon(jd) + 540) % 360 - 180) / 0.98565
+    return jd
+
+
+def _cst_day(jd):
+    return math.floor(jd + 0.5 + 8 / 24)  # JD-based day number in UTC+8
+
+
+def cny(y):
+    """Gregorian date of the Chinese New Year of year y (1901-2099)."""
+    def nm_day(k):
+        return _cst_day(phase_jde(k) - delta_t(2000 + k / 12.3685) / 86400)
+
+    def m11(year):  # k of the new moon starting the lunation that contains the December solstice of `year`
+        sd = _cst_day(term_jd(year, 270))
+        k = math.floor((year + 0.97 - 2000) * 12.3685) - 1
+        while nm_day(k + 1) <= sd:
+            k += 1
+        while nm_day(k) > sd:
+            k -= 1
+        return k
+    ka, kb = m11(y - 1), m11(y)
+    k = ka + 2
+    if kb - ka == 13:
+        z300, z330 = _cst_day(term_jd(y - 1, 300)), _cst_day(term_jd(y - 1, 330))
+        if not (nm_day(ka + 1) <= z300 < nm_day(ka + 2)) or not (nm_day(ka + 2) <= z330 < nm_day(ka + 3)):
+            k = ka + 3
+    return dt.date(1858, 11, 17) + dt.timedelta(days=nm_day(k) - 2400001)

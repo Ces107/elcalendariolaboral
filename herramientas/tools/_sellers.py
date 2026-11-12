@@ -28,6 +28,70 @@ KDP_DEL = "https://kdp.amazon.com/en_US/help/topic/G200634500"
 KDP_COVER = "https://kdp.amazon.com/en_US/help/topic/G201953020"
 KDP_APLUS = "https://kdp.amazon.com/en_US/help/topic/GCKLH8V7ULLD5EXY"
 
+KDP_EBCOVER = "https://kdp.amazon.com/en_US/help/topic/GZCSY2RL5G699Y4D"
+PINTEREST = "https://help.pinterest.com/en/business/article/pinterest-product-specs"
+YT_THUMB = "https://support.google.com/youtube/answer/72431"
+INSTAGRAM = "https://help.instagram.com/1631821640426723"
+
+# Image sizes (checked 12 Nov 2026): id, platform, label es, label en, width, height, note es, note en
+IMG = [
+    ("etsy-foto", "Etsy", "Foto de anuncio (4:3)", "Listing photo (4:3)", 2667, 2000,
+     "Etsy pide 2000 px o más por lado y la primera foto horizontal o cuadrada; mínimo 635 px; mejor < 1 MB",
+     "Etsy asks for 2,000 px or more on each side, first photo landscape or square; 635 px minimum; keep under 1 MB"),
+    ("etsy-banner", "Etsy", "Banner grande", "Big banner", 1600, 400, "Mínimo 1200 × 300", "Minimum 1,200 × 300"),
+    ("etsy-mini", "Etsy", "Banner mini", "Mini banner", 1600, 213, "Mínimo 1200 × 160", "Minimum 1,200 × 160"),
+    ("etsy-logo", "Etsy", "Logo de la tienda", "Shop logo", 500, 500, "", ""),
+    ("etsy-perfil", "Etsy", "Foto de perfil", "Profile photo", 400, 400, "", ""),
+    ("pin", "Pinterest", "Pin (2:3)", "Pin (2:3)", 1000, 1500, "Los pines más anchos que 2:3 se recortan en el feed",
+     "Pins wider than 2:3 may be cropped in the feed"),
+    ("ig-post", "Instagram", "Post vertical (4:5)", "Portrait post (4:5)", 1080, 1350, "", ""),
+    ("ig-sq", "Instagram", "Post cuadrado", "Square post", 1080, 1080, "", ""),
+    ("ig-story", "Instagram", "Historia o reel (9:16)", "Story or reel (9:16)", 1080, 1920, "", ""),
+    ("yt-thumb", "YouTube", "Miniatura de vídeo (16:9)", "Video thumbnail (16:9)", 3840, 2160, "Mínimo 640 px de ancho",
+     "Minimum 640 px wide"),
+    ("yt-short", "YouTube", "Miniatura de Short (9:16)", "Shorts thumbnail (9:16)", 2160, 3840, "Mínimo 640 px de alto",
+     "Minimum 640 px tall"),
+    ("yt-banner", "YouTube", "Banner del canal", "Channel banner", 2560, 1440,
+     "Texto y logo en el centro, 1546 × 423 px, visible en todos los dispositivos",
+     "Keep text and logo in the central 1,546 × 423 px, visible on every device"),
+    ("kdp-ebook", "Amazon KDP", "Portada de eBook", "eBook cover", 1600, 2560, "Solo la cubierta delantera", "Front cover only"),
+    ("aplus-overlay", "Amazon KDP", "A+ imagen con texto encima", "A+ image & text overlay", 1940, 600, "Mínimo 970 × 300; máx. 3 MB",
+     "Minimum 970 × 300; max 3 MB"),
+    ("aplus-3", "Amazon KDP", "A+ tres imágenes", "A+ three images", 600, 600, "Mínimo 300 × 300; máx. 3 MB", "Minimum 300 × 300; max 3 MB"),
+]
+
+IMG_JS = r"""
+  /* centre crop of an iw x ih image to the target ratio tw:th, and the resize factor to reach tw x th */
+  function crop(iw, ih, tw, th) {
+    var R = tw / th, cw, ch;
+    if (iw / ih > R) { ch = ih; cw = Math.round(ih * R); } else { cw = iw; ch = Math.round(iw / R); }
+    return { cw: cw, ch: ch, x: Math.round((iw - cw) / 2), y: Math.round((ih - ch) / 2), k: tw / cw, lost: 1 - cw * ch / (iw * ih) };
+  }
+  function cropSvg(iw, ih, c, alt) {
+    var s = 300 / Math.max(iw, ih), W = iw * s, Hh = ih * s;
+    return '<svg class="ic-p" viewBox="0 0 ' + W.toFixed(1) + ' ' + Hh.toFixed(1) + '" role="img" aria-label="' + alt + '">' +
+      '<rect width="' + W.toFixed(1) + '" height="' + Hh.toFixed(1) + '" class="ic-i"/>' +
+      '<rect x="' + (c.x * s).toFixed(1) + '" y="' + (c.y * s).toFixed(1) + '" width="' + (c.cw * s).toFixed(1) + '" height="' + (c.ch * s).toFixed(1) + '" class="ic-c"/></svg>';
+  }
+"""
+IMG_CSS = (".ic-p{display:block;width:100%;max-width:320px;height:auto;margin:14px 0}.ic-i{fill:#d9dee5}"
+           ".ic-c{fill:#fff;stroke:#c8102e;stroke-width:2;stroke-dasharray:6 4}")
+
+
+def img_data(lang):
+    i = 2 if lang == "es" else 3
+    return {r[0]: [r[4], r[5], r[6 if lang == "es" else 7], r[1] + " · " + r[i]] for r in IMG}
+
+
+def img_table(lang):
+    es = lang == "es"
+    n = (lambda x: f"{x:,}".replace(",", ".")) if es else (lambda x: f"{x:,}")  # noqa: E731
+    head = '<tr><th>Plataforma</th><th>Imagen</th><th class="num">Píxeles</th></tr>' if es else \
+        '<tr><th>Platform</th><th>Image</th><th class="num">Pixels</th></tr>'
+    rows = "".join(f'<tr><td>{r[1]}</td><td>{r[2] if es else r[3]}</td><td class="num">{n(r[4])} × {n(r[5])}</td></tr>' for r in IMG)
+    return f'<table class="tbl"><thead>{head}</thead><tbody>{rows}</tbody></table>'
+
+
 SYM = {"USD": "$", "EUR": "€", "GBP": "£", "CAD": "C$", "AUD": "A$", "JPY": "¥", "PLN": "zł", "SEK": "kr"}
 
 # ---------------------------------------------------------------- money formatting (JS + Python twin)
@@ -104,6 +168,50 @@ def etsy(price, ship, wrap=0.0, list_=0.17, pp=4.0, pf=0.30, rof=0.88, ads=0.0, 
             "pct": fees / sale * 100, "be": be}
 
 
+# ---------------------------------------------------------------- Etsy listing checker
+
+# Rules from the Etsy Open API v3 spec (createDraftListing): title chars = letters, numbers, punctuation, math symbols,
+# spaces, ™©®, and % : & + only once each; tags = letters, numbers, spaces, - ' ™©®; title <= 140; 13 tags <= 20 chars.
+LISTING_JS = r"""
+  function rx(src, fb) { try { return new RegExp(src, 'gu'); } catch (e) { return fb; } }
+  var BAD_T = rx('[^\\p{L}\\p{M}\\p{Nd}\\p{P}\\p{Sm}\\p{Zs}\u2122\u00a9\u00ae]', /[$^`<>~|]/g);
+  var BAD_G = rx('[^\\p{L}\\p{M}\\p{Nd}\\p{Zs}\\-\'\u2122\u00a9\u00ae]', /[^A-Za-z0-9\u00c0-\u024f \-'\u2122\u00a9\u00ae]/g);
+  function uniq(a) { var o = [], s = {}; a.forEach(function (x) { if (!s[x]) { s[x] = 1; o.push(x); } }); return o; }
+  function norm(w) { return w.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''); }
+  /* -> {issues: [[level e|w, code, arg]], tlen, words, tags: [[tag, len, bad]]} */
+  function checkListing(title, tagsRaw, STOP) {
+    var is = [], t = String(title || '').replace(/\s+/g, ' ').trim(), tlen = Array.from(t).length;
+    if (!tlen) is.push(['e', 'tEmpty']);
+    if (tlen > 140) is.push(['e', 'tLong', tlen - 140]);
+    var bad = uniq(t.match(BAD_T) || []);
+    if (bad.length) is.push(['e', 'tChars', bad.join(' ')]);
+    ['%', ':', '&', '+'].forEach(function (c) { var k = t.split(c).length - 1; if (k > 1) is.push(['e', 'tOnce', c + ' ×' + k]); });
+    var words = t.split(/[\s,.;:|\/\-–—()&+!?¡¿"]+/).filter(function (w) { return w; });
+    var caps = words.filter(function (w) { return w.length > 1 && w === w.toUpperCase() && w !== w.toLowerCase(); });
+    if (caps.length > 3) is.push(['w', 'tCaps', caps.length]);
+    var cnt = {}, rep = [];
+    words.forEach(function (w) { var k = norm(w); if (k.length > 2 && !STOP[k]) cnt[k] = (cnt[k] || 0) + 1; });
+    Object.keys(cnt).forEach(function (k) { if (cnt[k] > 1) rep.push(k + ' ×' + cnt[k]); });
+    if (rep.length) is.push(['w', 'tRep', rep.join(', ')]);
+    if (words.length > 15) is.push(['w', 'tWords', words.length]);
+    var raw = String(tagsRaw || '').split(/[,\n;]+/).map(function (x) { return x.replace(/\s+/g, ' ').trim(); }).filter(function (x) { return x; });
+    var tags = raw.map(function (g) { var b = uniq(g.match(BAD_G) || []); return [g, Array.from(g).length, b.join(' ')]; });
+    if (!tags.length) is.push(['w', 'gNone']);
+    if (tags.length > 13) is.push(['e', 'gMany', tags.length]);
+    else if (tags.length && tags.length < 13) is.push(['w', 'gFew', 13 - tags.length]);
+    var longT = tags.filter(function (x) { return x[1] > 20; }).map(function (x) { return x[0]; });
+    if (longT.length) is.push(['e', 'gLong', longT.join(', ')]);
+    var badT = tags.filter(function (x) { return x[2]; }).map(function (x) { return x[0] + ' (' + x[2] + ')'; });
+    if (badT.length) is.push(['e', 'gChars', badT.join(', ')]);
+    var seen = {}, dup = [];
+    tags.forEach(function (x) { var k = norm(x[0]); if (seen[k]) dup.push(x[0]); seen[k] = 1; });
+    if (dup.length) is.push(['e', 'gDup', uniq(dup).join(', ')]);
+    var one = tags.filter(function (x) { return x[0].indexOf(' ') < 0; }).length;
+    if (one > 3) is.push(['w', 'gOne', one]);
+    return { issues: is, tlen: tlen, words: words.length, tags: tags };
+  }
+"""
+
 # ---------------------------------------------------------------- KDP
 
 # Marketplaces: id, label, currency, printing-cost group. Paperback VAT added on top of the list price (books rate of
@@ -132,7 +240,7 @@ KDP_COST = {
 KDP_60 = {"com": 9.99, "eu": 9.99, "uk": 7.99, "ca": 13.99, "au": 13.99, "jp": 1000, "pl": 40, "se": 110}
 # eBooks (G200634560 / G200634500): 70 % band, delivery cost per MB, 35 % minimum by file size (<3, 3-10, >=10 MB), max;
 # VAT included in the list price and removed before the royalty (books rate of the marketplace country).
-KDP_EB = {
+KDP_EBOOK = {
     "com": {"band": [2.99, 12.99], "mb": 0.15, "min35": [0.99, 1.99, 2.99], "max": 200, "vat": 0},
     "uk": {"band": [1.77, 12.99], "mb": 0.10, "min35": [0.77, 1.25, 1.49], "max": 150, "vat": 0},
     "eu": {"band": [2.69, 12.99], "mb": 0.12, "min35": [0.89, 1.79, 2.69], "max": 215, "vat": None},
@@ -148,7 +256,7 @@ SPINE = {"bw": 0.002252, "cr": 0.0025, "sc": 0.002252, "pc": 0.002347}  # inches
 
 
 def kdp_data():
-    return {"mk": {m: {"cur": c, "g": g, "vat": v} for m, _, c, g, v in KDP_MK}, "cost": KDP_COST, "t60": KDP_60, "eb": KDP_EB,
+    return {"mk": {m: {"cur": c, "g": g, "vat": v, "lab": lab} for m, lab, c, g, v in KDP_MK}, "cost": KDP_COST, "t60": KDP_60, "eb": KDP_EBOOK,
             "ebvat": EB_VAT_EU, "pages": PAGES}
 
 
@@ -184,6 +292,37 @@ KDP_JS = r"""
       at60: 0.6 * t60 - cost, ed: 0.4 * price - cost };
   }
 """
+
+
+COVER_JS = r"""
+  /* KDP paperback cover: bleed 0.125 in on the outside edges; spine = pages x paper factor (inches) */
+  var SPF = { bw: 0.002252, cr: 0.0025, sc: 0.002252, pc: 0.002347 }, PGL = { bw: [24, 828], cr: [24, 776], sc: [72, 600], pc: [24, 828] };
+  function cover(w, h, pages, paper) {
+    var sp = pages * SPF[paper];
+    return { sp: sp, W: 0.25 + w * 2 + sp, Ht: h + 0.25, text: pages >= 79 };
+  }
+  /* to-scale sketch: bleed (outer), trim, spine band, dashed safe areas 0.125 in inside the trim */
+  function coverSvg(w, h, r, L) {
+    var k = 40, W = r.W * k, Hh = r.Ht * k, b = 0.125 * k, s = r.sp * k, x1 = b + w * k, x2 = x1 + s, zw = (w - 0.25) * k;
+    var R = function (x, y, ww, hh, c) { return '<rect x="' + x.toFixed(1) + '" y="' + y.toFixed(1) + '" width="' + ww.toFixed(1) + '" height="' + hh.toFixed(1) + '" class="' + c + '"/>'; };
+    var T = function (x, y, txt, rot) { return '<text x="' + x.toFixed(1) + '" y="' + y.toFixed(1) + '" text-anchor="middle"' + (rot ? ' transform="rotate(90 ' + x.toFixed(1) + ' ' + y.toFixed(1) + ')"' : '') + '>' + txt + '</text>'; };
+    return '<svg class="kc" viewBox="-2 -2 ' + (W + 4).toFixed(1) + ' ' + (Hh + 4).toFixed(1) + '" role="img" aria-label="' + L.alt + '">' +
+      R(0, 0, W, Hh, 'kc-b') + R(b, b, W - 2 * b, Hh - 2 * b, 'kc-t') + R(x1, b, s, Hh - 2 * b, 'kc-s') +
+      R(2 * b, 2 * b, zw, Hh - 4 * b, 'kc-z') + R(x2 + b, 2 * b, zw, Hh - 4 * b, 'kc-z') +
+      T(b + w * k / 2, Hh / 2, L.back) + T(x2 + w * k / 2, Hh / 2, L.front) + (s > 16 ? T(x1 + s / 2, Hh / 2, L.spine, true) : '') +
+      '</svg>';
+  }
+"""
+COVER_CSS = (".kc{display:block;width:100%;max-width:720px;height:auto;margin:16px 0;font:600 15px system-ui,sans-serif}"
+             ".kc-b{fill:#f6d5d9;stroke:#c8102e;stroke-width:1}.kc-t{fill:#fff;stroke:#333;stroke-width:1}"
+             ".kc-s{fill:#e8eef6;stroke:#0b4f8c;stroke-width:1}.kc-z{fill:none;stroke:#0b4f8c;stroke-width:1;stroke-dasharray:4 3}"
+             ".kc text{fill:#333}.kc-leg{display:flex;flex-wrap:wrap;gap:6px 16px;list-style:none;padding:0;font-size:14px}"
+             ".kc-leg i{display:inline-block;width:14px;height:10px;margin-right:6px;vertical-align:middle}")
+
+
+def cover(w, h, pages, paper):
+    sp = pages * SPINE[paper]
+    return {"sp": sp, "W": 0.25 + 2 * w + sp, "H": h + 0.25}
 
 
 def kdp_cost(g, ink, pages, large):
