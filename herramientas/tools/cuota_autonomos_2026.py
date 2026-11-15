@@ -90,7 +90,7 @@ function (v, H, C) {
   return {
     label: 'Cuota mínima al mes', big: H.eur(cuota),
     sub: 'Tabla ' + name + ' · ' + H.eur(cuota * 12) + ' al año',
-    rows: [['Rendimiento neto', H.eur(rn)], ['Gastos genéricos ' + (g * 100) + ' %', '− ' + H.eur(rn > 0 ? rn * g : 0)], ['Rendimiento al mes', H.eur(mon)],
+    rows: [['Rendimiento neto', H.eur(rn)], ['Gastos genéricos ' + Math.round(g * 100) + ' %', '− ' + H.eur(rn > 0 ? rn * g : 0)], ['Rendimiento al mes', H.eur(mon)],
       ['Base mínima', H.eur(bmin)], ['Base máxima del tramo', H.eur(bmax)], ['Cuota con la base máxima', H.eur(cmax)], ['Tu cuota', H.eur(cuota), 'tot']],
     note: note,
     n: { tramo: k + 1, mon: mon, cuota: cuota }
