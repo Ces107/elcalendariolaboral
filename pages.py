@@ -330,7 +330,7 @@ def city_page(x, siblings, mine, pend):
     pair = r["slug"] in B.CA_REGIONS and (ES or x["ca"])
     # Spanish: indexable. Catalan-speaking comunitats: es + ca indexable with hreflang (ca.py writes the Catalan text).
     # Other ca/gl/eu city pages: the same template translated, kept for users but noindex (seo/AUDIT-2026-11.md).
-    # c["new"]: published after the AdSense review request (muni.overlay_locales): no ads until the site is approved
+    # c["new"]: published recently (muni.overlay_locales): no ads
     head = B.head_html(title, desc, x["path"], f"{B.SITE}{B.ASSETS}og/{key}.png", ld(*lds), alts=pair, index=ES or x["ca"],
                        ads=not c.get("new"), langs=B.es_ca(x["path"]) if pair else None)
     ctx = {**x, "crumbs": B.crumbs_html(crumbs) + (B.lang_chip(x["path"], ["es", "ca"]) if pair else "")}
@@ -342,6 +342,12 @@ def city_page(x, siblings, mine, pend):
         lead, notes = "", ""
     main = B.app_main(DATA, r, ctx, srcline, notes + near + faq_html(qas), mine, pend, lead)
     return B.page(head, "app", "app", main, DATA, B.app_attrs(r, ctx))
+
+
+def locals_updated():
+    """Date of the last refresh of the municipal local-holiday data (locales-2027-all.json): the pages that show its counts carry it."""
+    import muni
+    return (muni.load("locales-2027-all.json") or {}).get("updated") or DATA["updated"]
 
 
 def hub_locales(loc, regions, cities):
@@ -385,7 +391,7 @@ def hub_locales(loc, regions, cities):
                 f"Los demás, en cuanto se publiquen.") if m_ok else (
                 f"Los 2 festivos locales de 2027 de {n_pub} ciudades, con su fuente oficial: boletín o acuerdo del pleno. "
                 f"Las demás, en cuanto se publiquen.")
-        ctx = (f'<p class="ctx">{m_ok} de {m_all} municipios publicados' if m_ok else f'<p class="ctx">{n_pub} ciudades publicadas · {n_pen} pendientes') +             f' · <time datetime="{loc["updated"]}">actualizado {B.dmy(loc["updated"])}</time></p>'
+        ctx = (f'<p class="ctx">{m_ok} de {m_all} municipios publicados' if m_ok else f'<p class="ctx">{n_pub} ciudades publicadas · {n_pen} pendientes') +             f' · <time datetime="{locals_updated()}">actualizado {B.dmy(locals_updated())}</time></p>'
     else:
         title = f'{t("nav_locals")} 2027 · El Calendario Laboral'
         names = ", ".join(x["title_name"] for x in cities)
@@ -396,7 +402,7 @@ def hub_locales(loc, regions, cities):
     lead = ""
     if CA:
         title, desc, lead, ctx, hsec, psec, qas = CAT.hub_text(cities)
-        ctx = ctx.replace("{d}", loc["updated"]).replace("{dd}", B.dmy(loc["updated"]))
+        ctx = ctx.replace("{d}", locals_updated()).replace("{dd}", B.dmy(locals_updated()))
         head = B.head_html(title, desc, "festivos-locales/", f"{B.SITE}{B.ASSETS}og/espana.png", ld(crumbs_ld(crumbs), faq_ld(qas)), ads=False)
         main = (f'<div class="hero wrap">{B.crumbs_html(crumbs)}{B.lang_chip("festivos-locales/", ["es", "ca"])}<h1>{E(h1)}</h1>{lead}{ctx}</div>'
                 f'<div class="wrap body narrow">{hsec}{psec}{"".join(blocks)}{faq_html(qas)}</div>')
@@ -406,7 +412,7 @@ def hub_locales(loc, regions, cities):
         cat = muni.catalogue()
         m_ok, m_all = sum(1 for x in cat["munis"] if x["ok"]), len(cat["munis"])
         a_ok, a_pen = (m_ok, m_all - m_ok) if m_all else (n_pub, n_pen)
-        lead = guia.lead(f'{a_ok} municipios ya tienen sus <b>2 festivos locales de 2027</b> publicados oficialmente; '
+        lead = guia.lead(f'{a_ok} municipios tienen ya sus <b>festivos locales de 2027</b> en un documento oficial; '
                          f'{a_pen} siguen pendientes y no les ponemos fecha hasta que salga en el boletín o en el acuerdo del pleno.')
         provs = [p for p in cat["provs"] if p["path"] and p["munis"]]
         if provs:  # every province page: the way to the other 8,000 municipalities
@@ -501,7 +507,7 @@ def region_page(r, cities, pending):
         locs = B.section("locales", E(B.fill(t("h_loc"), names)), city_list(cities) + pend + more_l + prov_links(slug))
     crumbs = [(t("spain"), ""), (name, f"{slug}/")]
     hname = B.fill(t("h_hol"), names)
-    upd_date = guia.lastmod(DATA["updated"], B.CONTENT_UPDATED if ES or CA else None)
+    upd_date = guia.lastmod(DATA["updated"], B.CONTENT_UPDATED if ES or CA else None, locals_updated() if ES or CA else None)
     lds = [crumbs_ld(crumbs), webpage_ld(title, f"{slug}/", upd_date), list_ld(hname, f["hols"]),
            dataset_ld(hname, desc, f"{slug}/", r["official"], DATA["source"]["url"],
                       [("text/calendar", f"ics/{slug}.ics"), ("text/csv", f"csv/{slug}.csv")]),
@@ -550,7 +556,7 @@ def home_page():
     order = sorted(DATA["regions"], key=lambda r: r["slug"] not in B.CA_REGIONS) if CA else DATA["regions"]
     chips = "".join(f'<li><a href="{B.BASE}{r["slug"]}/">{E(r["name"])}</a></li>' for r in order)
     n_regions = B.I18N["ui"]["n_regions"][B.LANG] if B.I18N else "19 comunidades"
-    upd_date = guia.lastmod(DATA["updated"], B.CONTENT_UPDATED if ES or CA else None)
+    upd_date = guia.lastmod(DATA["updated"], B.CONTENT_UPDATED if ES or CA else None, locals_updated() if ES or CA else None)
     upd = guia.upd(upd_date, src=False)
     labs = sorted(B.workdays(f["hols"], 1 if f["can"] else 0) for f in regs.values())
     lab_rng = tn("n_lab", labs[-1]).replace(str(labs[-1]), f"{labs[0]}–{labs[-1]}", 1)

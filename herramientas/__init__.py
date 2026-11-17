@@ -67,7 +67,7 @@ MON_EN = ["January", "February", "March", "April", "May", "June", "July", "Augus
 
 # ---------------------------------------------------------------- registry
 
-# Published tools (17 Nov 2026, AdSense "contenido de poco valor" + topical focus): only what a visitor of a Spanish
+# Published tools (17 Nov 2026, topical focus): only what a visitor of a Spanish
 # working-calendar site needs: work and payroll calculators, date/calendar tools, school-calendar tools. The ~85
 # unrelated calculators (cooking, DIY, sport, e-commerce...) and the 50 English tools stay as source files but are NOT
 # built, listed or put in the sitemap. HT_ONLY (environment) still overrides this for development.

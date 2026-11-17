@@ -86,7 +86,7 @@ if not B.ADS_ON:
             check('class="adsbygoogle"' not in p.read_text("utf-8"), f"{p}: ad unit while ADS_ON is False")
 HP = lambda x: len(re.findall(r'<div class="hp[ "]', x))  # the Teselo card is class="hp tsl"
 PROMO_BUILT = B.PROMOS_ON  # what the built pages carry; the markup checks below run with promos forced on
-if not PROMO_BUILT:  # AdSense re-review: no promos and no manual units anywhere
+if not PROMO_BUILT:  # promos and manual units are off: nothing of them anywhere
     check(B.ad("cal") == "" and B.ad("hub", adsense=False) == "", "ad(): nothing while ADS_ON and PROMOS_ON are False")
     for p in (ROOT / "index.html", ROOT / "madrid" / "index.html", ROOT / "puentes" / "index.html"):
         t = p.read_text("utf-8")

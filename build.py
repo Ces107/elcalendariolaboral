@@ -508,9 +508,8 @@ AD_SLOTS = {  # position -> AdSense display unit id (data-ad-slot)
 # Ads only on Spanish pages: Galician and Basque are not AdSense languages, and the Catalan pages are translations
 # without their own editorial text (seo/AUDIT-2026-11.md). Add "ca" here once AdSense has reviewed the site.
 ADS_LANGS = {"es", "ca"}  # ca: same rules as Spanish (indexable, >= 250 words, ads=True pages only)
-# 17 Nov 2026, AdSense re-review ("Contenido de poco valor"): while the review is pending the pages carry NO ad boxes and NO
-# own-product promos (house ads, "Nuestros productos", footer Amazon/Etsy/shop links, /shopping/). The AdSense loader stays in
-# the <head>. After approval: ADS_ON True restores the manual units, PROMOS_ON True the promos (one slot per page at most).
+# Ads and own-product promos are two switches, both off by default: ADS_ON (manual AdSense units) and PROMOS_ON (house promos,
+# footer product links, /shopping/). The AdSense loader stays in the <head> of the content pages either way.
 PROMOS_ON = False
 ADS_PAGE = True  # set by head_html(): False on noindex, legal, tool and listing pages (no loader, no units)
 # Site owner and contact (sobre, contacto, aviso legal, privacidad, cookies). Semi-anonymous brand: no personal name, ID
@@ -1499,7 +1498,7 @@ def main():
     OUT.mkdir(exist_ok=True)
     (OUT / "privacidad").mkdir(exist_ok=True)
     (OUT / "privacidad" / "index.html").write_text(fix(privacy_page(data)), "utf-8", newline="\n")
-    import shopping  # Calma Planners shop page (/shopping/, Spanish only): off while PROMOS_ON is False (AdSense re-review)
+    import shopping  # Calma Planners shop page (/shopping/, Spanish only): off while PROMOS_ON is False
     if PROMOS_ON:
         shopping.write(sys.modules[__name__], data, fix)
     elif (ROOT / "shopping" / "index.html").exists():

@@ -110,7 +110,7 @@ else:
 # ---------------------------------------------------------------- generated pages
 sm = "".join(p.read_text("utf-8") for p in sorted(ROOT.glob("sitemap-*.xml")))  # sitemap.xml is the index
 for path, only in ((U.PATH_WK, U.ONLY_WK), (U.PATH_DH, U.ONLY_DH), (U.PATH_DL, U.ONLY_DL), (U.PATH_CH, U.ONLY_CH)):
-    only = [x for x in only if x in B.LANGS]  # gl/eu are not built while the AdSense review is pending (build.LANGS)
+    only = [x for x in only if x in B.LANGS]  # gl/eu are not built (build.LANGS)
     for lang in only:
         url = f"{B.SITE}{B.lang_base(lang)}{path}"
         check(f"<loc>{url}</loc>" in sm, f"{url}: not in sitemap")

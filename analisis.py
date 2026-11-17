@@ -7,7 +7,7 @@
     /analisis/cuando-publica-cada-provincia-sus-festivos-locales/  bulletin dates 2026 vs 2027 and what is still pending
     /analisis/mejores-puentes-2027-por-comunidad/                best puentes per comunidad and what they cost
 
-Why: AdSense flagged the site "Contenido de poco valor" (seo/ADSENSE-REAPPLY-2026-11-17.md, fixes 5 and 6). These pages
+Why: original analysis computed from our own data, the one thing a copy of the BOE cannot offer. These pages
 are the one thing a copy of the BOE cannot give: findings computed across ~4,000 municipalities.
 
 Rule (as guia.py and festivos.py): every count, date, name and ranking is computed at build time from
@@ -650,7 +650,7 @@ def page_repeated(S):
         srow.append([lbl, num(v["n"]), num(len(v["dates"])), f'{tm(d, dm(d))} ({num(n)})'])
     t2 = B.section("santos", "Los nombres que más se repiten",
                    guide(f'Solo el {pct(R["named"], n_e)} de los días lleva nombre en el boletín; el resto se publica como fecha sin más '
-                         f'o como "fiesta local". Con esa parte, estos son los santos y fiestas más citados. Unimos las formas que '
+                         f'o como «fiesta local», «fiestas patronales» u otro nombre genérico (esos no los contamos como nombre). Con esa parte, estos son los santos y fiestas más citados. Unimos las formas que '
                          f'nombran lo mismo en otra lengua o con otras palabras (San Xoán y San Juan, Sant Roc y San Roque).',
                          split_txt)
                    + table(["Fiesta", "Municipios", "Fechas distintas", "Fecha más usada"], srow))
@@ -1190,7 +1190,8 @@ def page_bridges(S):
     t2 = B.section("locales", "Lo que añaden las fiestas locales",
                    guide(f'Los dos días locales cambian el mapa. De los {num(tot_n)} municipios con sus dos fiestas de 2027 publicadas '
                          f'en comunidades con boletín, {num(tot_add)} ({pct(tot_add, tot_n)}) consiguen al menos un puente que su comunidad '
-                         f'sola no da. En la última columna, el puente más largo que da un festivo local en cada comunidad (a igualdad, el '
+                         f'sola no da (un puente cuenta como nuevo si incluye alguno de sus días locales y no coincide en fechas y '
+                         f'días de vacaciones con ninguno de los de la comunidad). En la última columna, el puente más largo que da un festivo local en cada comunidad (a igualdad, el '
                          f'municipio más poblado).')
                    + table(["Comunidad", "Municipios publicados", "Con un puente local", "El más largo gracias a un festivo local"], loc_rows))
     mean = guide(

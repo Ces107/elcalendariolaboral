@@ -21,8 +21,18 @@ B = None
 DATA = None
 
 
+def _loc_text(localities):
+    """'La Xara: 2027-09-03 Fiestas patronales, 2027-09-21 San Mateo | Jesús Pobre: …' from the data's `localities`."""
+    out = []
+    for l in localities or []:
+        hs = ", ".join(f'{h["date"]} {h.get("name") or ""}'.strip() for h in (l.get("holidays") or []))
+        out.append(f'{l.get("name", "")}: {hs}'.strip(": "))
+    return " | ".join(out)
+
+
 def _rows(cat, regions):
     import muni
+    raw = (muni.load("locales-2027-all.json") or {}).get("municipios", {})
     out = []
     for x in cat["munis"]:
         if not x.get("ok") or not (x.get("hol27") or x.get("note")):
@@ -30,7 +40,16 @@ def _rows(cat, regions):
         wide, part = muni.wide_and_partial(x["hol27"] or [])
         wide = sorted(wide, key=lambda h: h["date"])
         src = x.get("src27") or {}
-        extra = "; ".join(f'{h["date"]} {h.get("name") or ""}'.strip() for h in sorted(part, key=lambda h: h["date"]))
+        extra_p = [f'{h["date"]} {h.get("name") or ""}'.strip() for h in sorted(part, key=lambda h: h["date"])]
+        loc_t = _loc_text((raw.get(x["ine"]) or {}).get("localities"))
+        extra = " | ".join(t for t in ((("; ".join(extra_p)) if extra_p else ""), loc_t) if t)
+        nota = ""
+        if extra and len(wide) < 2:
+            nota = "El documento oficial no da dos fechas para todo el municipio: hay días solo para parte del municipio (columna anterior)."
+        elif extra:
+            nota = "Además hay días solo para parte del municipio (columna anterior)."
+        elif len(wide) < 2:
+            nota = "El documento oficial no da dos fechas para todo el municipio; ver la página del municipio."
         row = {
             "ine": x["ine"], "municipio": x["name"], "provincia": x["prov"]["name"], "comunidad": regions.get(x["region"], x["region"]),
             "estado": {"boletin": "boletín oficial", "ayuntamiento": "acuerdo del ayuntamiento"}.get(x["status"], x["status"]),
@@ -39,7 +58,7 @@ def _rows(cat, regions):
             h = wide[k] if k < len(wide) else None
             row[f"fecha_{k + 1}"] = h["date"] if h else ""
             row[f"nombre_{k + 1}"] = (h.get("name") or "") if h else ""
-        row.update({"solo_parte_del_municipio": extra, "fuente": src.get("title", ""), "fuente_url": src.get("url", ""),
+        row.update({"solo_parte_del_municipio": extra, "nota": nota, "fuente": src.get("title", ""), "fuente_url": src.get("url", ""),
                     "pagina": f"{B.SITE}{B.ASSETS}{x['path']}"})
         out.append(row)
     out.sort(key=lambda r: (r["comunidad"], r["provincia"], r["municipio"]))
@@ -47,7 +66,7 @@ def _rows(cat, regions):
 
 
 FIELDS = ["ine", "municipio", "provincia", "comunidad", "estado", "fecha_1", "nombre_1", "fecha_2", "nombre_2", "fecha_3", "nombre_3",
-          "solo_parte_del_municipio", "fuente", "fuente_url", "pagina"]
+          "solo_parte_del_municipio", "nota", "fuente", "fuente_url", "pagina"]
 
 
 def _csv(rows):
@@ -88,6 +107,7 @@ def write(b, data, fix):
             ("estado", "«boletín oficial» o «acuerdo del ayuntamiento» (pendiente de boletín)"),
             ("fecha_1 … fecha_3, nombre_1 … nombre_3", "Festivos locales de todo el municipio (AAAA-MM-DD) y su nombre, si el documento lo da"),
             ("solo_parte_del_municipio", "Días que el documento limita a una parroquia, pedanía o localidad"),
+            ("nota", "Aviso cuando el documento no da dos fechas para todo el municipio o añade días por localidad"),
             ("fuente, fuente_url", "Título y enlace del documento oficial"),
             ("pagina", "La página de este sitio con ese municipio")]
     cols_tr = "".join(f"<tr><th scope=\"row\"><code>{E(a)}</code></th><td>{E(b_)}</td></tr>" for a, b_ in cols)

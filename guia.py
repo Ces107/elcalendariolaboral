@@ -259,7 +259,27 @@ def region_notes(r, cities):
     elif z:
         items.append(f'<b>Arán:</b> {E(z["note"])}')
     mine = [x for x in cities if x["r"]["slug"] == r["slug"]]
-    if mine:
+    import muni
+    ms = [x for x in muni.catalogue()["munis"] if x["region"] == r["slug"]]
+    ok = [x for x in ms if x["ok"]]
+    if ok:  # counts from the municipal catalogue (every municipality with an official document), not only the rich city pages
+        n_ok, n_all = len(ok), len(ms)
+        labs = []
+        for x in ok:
+            lab = "acuerdo del pleno del ayuntamiento" if x["status"] == "ayuntamiento" else muni.short_src((x.get("src27") or {}).get("title"))
+            lab = re.sub(r"\s+núm\..*$|\s+nº.*$", "", lab).strip()
+            if lab == "Boletín oficial":
+                lab = "boletín oficial del territorio"
+            if lab not in labs:
+                labs.append(lab)
+        srcs = join(labs[:6]) + (" y otros" if len(labs) > 6 else "")
+        if n_ok >= n_all:
+            tail = " Todos los municipios de la comunidad tienen ya su fecha." if n_all > 1 else ""
+            items.append(f'<b>Festivos locales:</b> {"el municipio" if n_all == 1 else f"los {n_all} municipios"} con fecha oficial ({srcs}).{tail}')
+        else:
+            items.append(f'<b>Festivos locales:</b> {n_ok} de {n_all} municipios con fecha oficial ({srcs}). '
+                         f'Los {n_all - n_ok} restantes, pendientes de publicación oficial.')
+    elif mine:
         items.append(f'<b>Festivos locales:</b> {len(mine)} municipios ya publicados, con fecha oficial '
                      f'({join(local_sources(r["slug"], cities))}). El resto, pendiente de publicación oficial.')
     else:
@@ -348,7 +368,7 @@ def hub_notes(cities):
     months = Counter(D(h["date"]).month for _, h in days)
     m, mn = months.most_common(1)[0]
     items = [
-        "<b>Los días más repetidos:</b> " + "; ".join(f'{B.dm(d)}{label(d)}, en {n} municipios' for d, n in top) + ".",
+        f"<b>Los días más repetidos entre las {len(cities)} ciudades de la tabla:</b> " + "; ".join(f'{B.dm(d)}{label(d)}, en {n} municipios' for d, n in top) + ".",
         f'<b>En lunes o viernes:</b> {long_} de los {len(days)} días locales, que dan un fin de semana largo sin coger nada.',
         f'<b>Con puente:</b> {bridge} días locales caen en martes o jueves (o junto a otro festivo) y hacen puente cogiendo 1 o 2 días.',
         f'<b>En sábado:</b> {wd[5]} días locales; para quien trabaja de lunes a viernes no suman un día libre.',
@@ -540,6 +560,8 @@ def trust_pages(write, cities, loc):
              f'publicado por el ayuntamiento. Hoy hay {n_pub} de {n_all} municipios con fecha oficial de 2027; cada uno enlaza su '
              f'fuente.</li>'
              f'<li><b>Calendario escolar:</b> la orden o resolución de cada consejería de educación, enlazada en cada página.</li>'
+             f'<li><b>Datos abiertos:</b> los festivos locales de 2027 de todos los municipios con fecha oficial están en un '
+             f'<a href="{B.BASE}datos/">CSV descargable</a> (licencia CC BY 4.0), con el documento de origen de cada fila.</li>'
              f'<li><b>Municipios y población:</b> la relación de municipios del INE y sus cifras oficiales de población '
              f'(revisión del padrón a 1 de enero de 2025), que usamos para ordenar las listas y el buscador '
              f'(<a href="https://www.ine.es/dynt3/inebase/es/index.htm?padre=517" rel="noopener">INE</a>).</li>'
