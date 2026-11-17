@@ -588,7 +588,23 @@ def home_page():
                             f'A esto se suman los 2 festivos locales de cada municipio.</p>'
                             f'<div class="tw"><table class="tbl"><thead><tr><th>Comunidad</th><th>Festivos</th><th>Propios de la comunidad (además de los nacionales)</th>'
                             f'<th>Días laborables</th><th>Puentes</th></tr></thead><tbody>{"".join(rows)}</tbody></table></div>')
-    main = f'{hero}<div class="wrap body">{cal_sec}{B.ad("cal")}{reg_sec}{hol_sec}{cmp_sec}{pts_sec}{notes}{faq_html(qas)}</div>{B.POP}'
+    ana_sec = ""
+    if ES:
+        import analisis
+        ana_sec = analisis.home_block(B, DATA)
+    how_sec = ""
+    if ES:  # what the site is, where the dates come from and who is behind it (a reviewer must not have to look for it)
+        how_sec = B.section("como-se-hace", "Cómo se hace esta web",
+                            f'<ul style="list-style:disc;padding-left:20px;line-height:1.6">'
+                            f'<li>Los festivos nacionales y de cada comunidad se copian de la resolución del BOE '
+                            f'(<a href="{DATA["source"]["url"]}" rel="noopener">{DATA["source"]["id"]}</a>); los locales, del boletín oficial '
+                            f'de la provincia o de la comunidad, o del acuerdo del pleno que publica el ayuntamiento. Cada página enlaza su fuente.</li>'
+                            f'<li>Si un municipio aún no ha publicado sus fechas, lo decimos y no adelantamos fechas de prensa.</li>'
+                            f'<li>Los puentes, los días laborables y los planes de vacaciones se calculan con esas fechas: '
+                            f'<a href="{B.BASE}puentes/">cómo se cuentan los puentes</a>.</li>'
+                            f'<li>Es un proyecto independiente con sede en Valencia, sin vínculo con ninguna administración. '
+                            f'<a href="{B.BASE}sobre/">Quién lo hace y cómo corregir un error</a>.</li></ul>')
+    main = f'{hero}<div class="wrap body">{cal_sec}{B.ad("cal")}{reg_sec}{ana_sec}{hol_sec}{cmp_sec}{pts_sec}{notes}{how_sec}{faq_html(qas)}</div>{B.POP}'
     org = f"{B.SITE}{B.ASSETS}#org"
     # No SearchAction: Google retired the sitelinks search box (Nov 2024) and /buscar/ is a noindex fallback.
     lds = [{"@type": "WebSite", "@id": f"{B.SITE}{B.ASSETS}#web", "name": t("site_name"), "alternateName": B.HOST, "url": B.URL,

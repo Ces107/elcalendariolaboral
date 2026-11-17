@@ -747,6 +747,7 @@ def header_html(here="", lean=False):
                f'<a href="{BASE}festivos-locales/"{" aria-current=page" if here == "locals" else ""}>{t("nav_locals")}</a>')
             + f'<a href="{pts_href}">{t("nav_bridges")}</a>'
             + (f'<a href="{BASE}vacaciones-2027/"{" aria-current=page" if here == "vac" else ""}>Vacaciones</a>'
+               f'<a href="{BASE}analisis/"{" aria-current=page" if here == "analisis" else ""}>Análisis</a>'
                f'<a class="nav-u" href="{BASE}utilidades/"{" aria-current=page" if here == "util" else ""}>Utilidades</a>' if LANG == "es" else "")
             + '</nav>'
             + srch + ("" if lean else
@@ -1505,6 +1506,9 @@ def main():
     sys.modules.setdefault("build", sys.modules[__name__])  # pages.py does "import build": reuse this module
     import pages
     pages_written = pages.write_pages(data, fix)
+    if LANG == "es":  # /analisis/: editorial analyses computed from our own data (AdSense: original content)
+        import analisis
+        pages_written += analisis.write(sys.modules[__name__], data, fix)
     if LANG != "es":
         print(f"ok · {LANG} · {len(pages_written) + 1} pages in {OUT}")
         return

@@ -115,6 +115,13 @@ def wd(iso):
     return B.T["_wd"][D(iso).weekday()]
 
 
+def fit_desc(s, limit=155):
+    """Meta description within the site's 155 characters (test_data.py): drop trailing sentences, then words."""
+    while len(s) > limit and ". " in s.rstrip(". "):
+        s = s.rstrip(". ").rsplit(". ", 1)[0] + "."
+    return s if len(s) <= limit else s[:limit - 1].rsplit(" ", 1)[0] + "…"
+
+
 def wd26(iso):
     """Weekday of the same day and month in 2026."""
     return B.T["_wd"][D(iso).replace(year=2026).weekday()]
@@ -554,7 +561,7 @@ def render(S, path, title, desc, h1, crumb, lead, sections, based_on, ad_after=1
         body.insert(min(ad_after, len(body)), B.ad("hub"))
     hero = f'<div class="hero wrap">{B.crumbs_html(crumbs)}<h1>{E(h1)}</h1>{lead}{byline(S)}</div>'
     main = f'{hero}<div class="wrap body narrow">{"".join(body)}</div>'
-    return B.page(head, "pg", "", main, DATA, js=False)
+    return B.page(head, "pg", "analisis", main, DATA, js=False)  # header_html marks the "Análisis" nav item
 
 
 # ---------------------------------------------------------------- 1. most repeated local days
@@ -582,7 +589,6 @@ def page_repeated(S):
     mname = lambda m: B.T["_months"][m - 1]  # noqa: E731
     summer = sum(R["month"].get(m, 0) for m in (6, 7, 8, 9))
     pair, pair_n = R["pairs"].most_common(1)[0] if R["pairs"] else ((), 0)
-    shared_pairs = sum(1 for k, v in R["pairs"].items() if v > 1)
     in_shared = sum(v for v in R["pairs"].values() if v > 1)
     saints = [(k, v) for k, v in R["saints"] if v["n"] >= 2][:12]
     pend = [REG[s]["name"] for s in S["pending_regions"]]
@@ -611,7 +617,7 @@ def page_repeated(S):
                       f'menos el 80 % de los municipios publicados: es una fiesta de toda la provincia o del territorio histórico, '
                       f'y por eso pesa tanto en la tabla.')
 
-    lead = (f'<p class="lead">El festivo local más repetido de 2027 es el <b>{dl(d1)}</b>{nm(d1, 1)}: lo tienen '
+    lead = (f'<p class="lead">El festivo local más repetido de 2027 es el <b>{dl(d1)}</b>{nm(d1)}: lo tienen '
             f'<b>{pl(c1, "municipio", "municipios")}</b> de los {num(n_m)} con fiestas locales ya publicadas. Le siguen el '
             f'{dm(d2)} ({num(c2)}) y el {dm(d3)} ({num(c3)}).</p>')
     intro = guide(
@@ -634,8 +640,8 @@ def page_repeated(S):
                      f'{E(S["provs"][pr[0][0]]["name"])} ({num(pr[0][1])})' if pr else "—"])
     t1 = B.section("ranking", "Las 15 fechas más repetidas",
                    table(["Fecha", "Día", "Municipios", "% de los publicados", "Nombre más citado (veces)", "Provincia con más"], rows)
-                   + f'<p class="m">"Nombre más citado": cuántos boletines dan ese nombre al día; el resto lo publica sin nombre, como "Fiesta '
-                     f'local" o con otro nombre. "—": ningún boletín le da nombre.</p>')
+                   + '<p class="m">"Nombre más citado": cuántos boletines dan ese nombre al día; el resto lo publica sin nombre, como "Fiesta '
+                     'local" o con otro nombre. "—": ningún boletín le da nombre.</p>')
     srow = []
     for k, v in saints:
         d, n = v["dates"].most_common(1)[0]
@@ -649,16 +655,16 @@ def page_repeated(S):
                          split_txt)
                    + table(["Fiesta", "Municipios", "Fechas distintas", "Fecha más usada"], srow))
     prow = []
-    for ps in sorted((p for p in R["prov_n"] if p in bull_provs(S)), key=lambda s: fold(S["provs"][s]["name"])):
+    for ps in sorted((p for p in R["prov_n"] if p in bull_provs(S) and R["prov_n"][p] >= 5), key=lambda s: fold(S["provs"][s]["name"])):
         c = R["prov_dates"][ps]
         d, n = sorted(c.items(), key=lambda kv: (-kv[1], kv[0]))[0]
         ties = sum(1 for v in c.values() if v == n)
         prow.append([plink(S["provs"][ps]), num(R["prov_n"][ps]), f'{tm(d, dm(d))}' + (f' <span class="m">(empate ×{ties})</span>' if ties > 1 else ""),
                      f'{num(n)} ({pct(n, R["prov_n"][ps], 0)})', num(len(c))])
     t3 = B.section("provincias", "Por provincia",
-                   guide(f'La fecha más repetida en cada provincia con boletín de 2027, cuántos municipios la tienen y cuántas fechas '
-                         f'distintas usa la provincia en total. Las provincias sin boletín, con solo algún acuerdo municipal publicado, '
-                         f'no aparecen.')
+                   guide('La fecha más repetida en cada provincia con boletín de 2027, cuántos municipios la tienen y cuántas fechas '
+                         'distintas usa la provincia en total. Entran las provincias con boletín y al menos 5 municipios; Ceuta y '
+                         'Melilla son un solo municipio, y las provincias sin boletín solo tienen algún acuerdo municipal suelto.')
                    + table(["Provincia", "Municipios", "Fecha más repetida", "La tienen", "Fechas distintas"], prow))
     pair_txt = ""
     if pair_n > 1:
@@ -674,7 +680,7 @@ def page_repeated(S):
         f'<b>Límites.</b> El ranking cambia a medida que se publican más boletines. Hoy faltan comunidades enteras '
         f'({few(pend, 6)}), así que las fiestas habituales en esas comunidades todavía no pesan en el ranking. '
         f'Tampoco contamos los días que solo valen en una pedanía o un núcleo del municipio.' if pend else
-        f'<b>Límites.</b> Tampoco contamos los días que solo valen en una pedanía o un núcleo del municipio.',
+        '<b>Límites.</b> Tampoco contamos los días que solo valen en una pedanía o un núcleo del municipio.',
     )
     meth = method_box([
         f'<b>Datos:</b> fiestas locales de 2027 de {num(len(S["ok"]))} municipios con publicación oficial (boletín o acuerdo publicado por el '
@@ -688,9 +694,10 @@ def page_repeated(S):
         '<b>Empates:</b> a igual número de municipios, ordenamos por fecha.',
     ])
     title = f"Festivos locales más repetidos de 2027: {dm(d1)} en {num(c1)} municipios"
-    desc = (f"Análisis de {num(n_m)} municipios: el {dm(d1)} es el festivo local más repetido de 2027 ({num(c1)}), seguido del "
-            f"{dm(d2)} y el {dm(d3)}. Ranking de fechas, santos y provincias.")
-    page = render(S, path, B.pick(70, title, "Festivos locales más repetidos de 2027"), B.pick(160, desc, desc[:157] + "…"),
+    desc = (f"El {dm(d1)} es el festivo local más repetido de 2027: {num(c1)} de {num(n_m)} municipios. Le siguen el {dm(d2)} y el "
+            f"{dm(d3)}. Fechas, santos y provincias.")
+    page = render(S, path, B.pick(60, title, f"Festivos locales más repetidos de 2027: el {dm(d1)}",
+                                  "Festivos locales más repetidos de 2027"), fit_desc(desc),
                   "Los festivos locales más repetidos de 2027", "Festivos más repetidos", lead,
                   [B.section("claves", "Lo que dicen los datos", intro), t1, t2, t3,
                    B.section("para-ti", "Qué significa y qué no sabemos", mean), meth, related(slug)],
@@ -742,25 +749,29 @@ def page_weekend(S):
         f'De los {num(days)} días de fiesta local que hemos contado para 2027, {num(c["sab"])} caen en sábado, {num(c["dom"])} en domingo '
         f'y {num(c["coin"])} coinciden con un festivo que ya fija la comunidad o el Estado. En total, {pl(lost_days, "día", "días")} '
         f'({pct(lost_days, days)}) que no añaden un día libre entre semana. En {pl(both, "municipio", "municipios")} pasa con los dos.',
-        (f'Los sábados pesan mucho más que los domingos. ' if c["sab"] > 3 * c["dom"] else "")
+        ('Los sábados pesan mucho más que los domingos. ' if c["sab"] > 3 * c["dom"] else "")
         + f'Las fechas que más arrastran son {join(pd(d) for d, _ in topd[:3])}. ' + common_we,
-        f'Los ayuntamientos proponen la fecha sabiendo en qué día de la semana cae, y ninguna norma general traslada al lunes un '
-        f'festivo local que cae en fin de semana. ' + isidro_txt
+        'Los ayuntamientos proponen la fecha sabiendo en qué día de la semana cae, y ninguna norma general traslada al lunes un '
+        'festivo local que cae en fin de semana. ' + isidro_txt
         + (f' En 2027 también caen en sábado {pl(len(nat_sat), "festivo nacional", "festivos nacionales")}, '
            f'{join(f"{E(h["name"])} ({dm(h["date"])})" for h in nat_sat)}, que tampoco se recuperan.' if nat_sat else ""),
     )
+    shift = defaultdict(list)
+    for d, _ in topd[:3]:
+        shift[(wd26(d), wd(d))].append(dm(d))
+    shift_txt = " ".join(f'El {join([ds[0]] + ["el " + x for x in ds[1:]])} {"cayó" if len(ds) == 1 else "cayeron"} en {a} en 2026 y '
+                         f'{"cae" if len(ds) == 1 else "caen"} en {b} en 2027.' for (a, b), ds in shift.items()) + " "
     cmp_txt = ""
     if W["m26"]:
         cmp_txt = guide(
             f'<b>Comparación con 2026.</b> Con las fiestas locales de 2026 de {num(W["m26"])} municipios, {num(c26["sab"])} días cayeron en '
-            f'sábado, {num(c26["dom"])} en domingo y {num(c26["coin"])} coincidieron con otro festivo: {pct(lost26, days26)} del total, '
+            f'sábado, {num(c26["dom"])} en domingo y {num(c26["coin"])} coincidieron con otro festivo: el {pct(lost26, days26)} del total, '
             f'frente al {pct(lost_days, days)} de 2027. ' +
             (f'Mirando solo los {num(same["n"])} municipios que tienen datos de los dos años, los que pierden al menos un día pasan de '
              f'{num(same["lose26"])} en 2026 a {num(same["lose27"])} en 2027.' if same["n"] else ""),
             'La diferencia viene sobre todo del calendario: una fiesta fija en un día del mes avanza un día de la semana de un año a '
-            'otro (dos tras un 29 de febrero). ' + join(f'El {dm(d)} cayó en {wd26(d)} en 2026 y cae en {wd(d)} en 2027'
-                                                         for d, _ in topd[:2]) + '. Por eso los municipios que pierden un día un año '
-            'suelen recuperarlo al siguiente.')
+            'otro (dos tras un 29 de febrero). ' + shift_txt + 'Por eso los municipios que pierden un día un año suelen recuperarlo al '
+            'siguiente.')
     rows = []
     for ps, p in sorted(((k, v) for k, v in W["per"].items() if k in bull_provs(S)),
                         key=lambda kv: (-kv[1]["lose"] / kv[1]["munis"], fold(S["provs"][kv[0]]["name"]))):
@@ -806,14 +817,14 @@ def page_weekend(S):
     title = f"Festivos locales en fin de semana en 2027: {num(n_lose)} municipios"
     desc = (f"{num(n_lose)} de {num(n_m)} municipios ({pct(n_lose, n_m)}) tienen en 2027 un festivo local en sábado, domingo o sobre otro "
             f"festivo. Por provincia, fechas y comparación con 2026.")
-    page = render(S, path, B.pick(70, title, "Festivos locales en fin de semana en 2027"), B.pick(160, desc, desc[:157] + "…"),
+    page = render(S, path, B.pick(60, title, "Festivos locales en fin de semana en 2027"), fit_desc(desc),
                   "Festivos locales que caen en fin de semana en 2027", "Festivos en fin de semana", lead,
                   [B.section("claves", "Lo que dicen los datos", intro + cmp_txt), t1, t2,
                    B.section("para-ti", "Qué significa y qué no sabemos", mean), meth, related(slug)],
                   [DATA["source"]["url"], (S["d26"] or {}).get("source", {}).get("url")])
     summary = (f'{num(n_lose)} municipios ({pct(n_lose, n_m)}) tienen un festivo local en sábado, domingo o sobre otro festivo. '
                f'Por provincia y frente a 2026.')
-    return path, page, summary, (num(n_lose), "municipios con un festivo local en fin de semana")
+    return path, page, summary, (num(n_lose), "municipios pierden un festivo local entre semana")
 
 
 # ---------------------------------------------------------------- 3. working days per province
@@ -853,18 +864,38 @@ def page_workdays(S):
         f'La diferencia entre municipios sale de tres cosas. <b>Primera, la comunidad:</b> sin contar fiestas locales, una comunidad '
         f'deja entre {rmin} y {rmax} días laborables ({join(rlink(s) for s in rhi)} {"tiene" if len(rhi) == 1 else "tienen"} {rmax}; '
         + (f'{join(rlink(s) for s in rlo)}, {rmin}' if len(rlo) <= 5 else f'las otras {len(rlo)}, {rmin}') +
-        f'). Depende de cuántos festivos propios caen entre semana y de si la comunidad pasa al lunes los que caen en domingo, como '
-        f'el 15 de agosto.' if rmin != rmax else
+        '). Depende de cuántos festivos propios caen entre semana y de si la comunidad pasa al lunes los que caen en domingo, como '
+        'el 15 de agosto.' if rmin != rmax else
         f'La diferencia entre municipios sale de tres cosas. <b>Primera, la comunidad:</b> sin contar fiestas locales, todas las '
         f'comunidades dejan {rmin} días laborables en 2027, así que aquí no hay diferencia.',
         f'<b>Segunda, el día de la semana de las fiestas locales:</b> en {pl(eff.get(2, 0), "municipio", "municipios")} '
         f'({pct(eff.get(2, 0), n)}) los dos días caen entre semana y restan dos laborables; en {num(eff.get(1, 0))} solo resta uno, '
         f'y en {num(eff.get(0, 0))} ninguno, porque caen en fin de semana o sobre otro festivo '
         f'(<a href="{B.BASE}{path_of(PAGES[1][0])}">análisis de festivos locales en fin de semana</a>). {high_txt}',
-        f'<b>Tercera, Canarias:</b> cada isla tiene su fiesta insular. En 2027 cae entre semana en {num(isl_wk)} de las {num(len(isl))} '
-        f'islas, así que sus municipios parten de un laborable menos que el resto de Canarias ({reg["canarias"]} sin la fiesta de la isla).'
-        if isl else "",
+        f'<b>Tercera, Canarias:</b> cada isla tiene su fiesta insular. Canarias deja {reg["canarias"]} días laborables sin ella; en 2027 la '
+        f'fiesta de la isla cae entre semana en {num(isl_wk)} de las {num(len(isl))} islas, y en esas islas cada municipio parte de '
+        f'{reg["canarias"] - 1} antes de restar sus fiestas locales.' if isl else "",
     )
+    caps = [x for x in S["full"] if x["m"].get("capital")]
+    cap_c = Counter(x["A"]["lab"] for x in caps)
+    cap_hi = by_pop([x for x in caps if x["A"]["lab"] > (mode if cap_c else 0)])
+    spread = max((max(x["A"]["lab"] for x in xs) - min(x["A"]["lab"] for x in xs)) for xs in Wd["per"].values()) if Wd["per"] else 0
+    cap_we = [x for x in cap_hi if x["A"]["eff"] < 2]
+    cap_base = [x for x in cap_hi if x["A"]["eff"] == 2]
+    cap_txt = ""
+    if caps:
+        cap_txt = guide(
+            f'<b>Las capitales.</b> De las {num(len(caps))} capitales de provincia con sus dos fiestas publicadas, '
+            + join(f'{num(c)} {"tiene" if c == 1 else "tienen"} {v}' for v, c in sorted(cap_c.items())) + '. '
+            + (f'Por encima de {mode} quedan {join(f"{mlink(x)} ({x["A"]["lab"]})" for x in cap_hi)}. ' if cap_hi else "")
+            + (f'En {join(mlink(x) for x in cap_we)} es porque alguna fiesta local cae en fin de semana o sobre otro festivo. '
+               if cap_we else "")
+            + (f'En {join(mlink(x) for x in cap_base)} las dos fiestas caen entre semana, pero su comunidad parte de más días '
+               f'laborables. ' if cap_base else ""),
+            f'<b>Vecinos con cifras distintas.</b> En {pl(sum(1 for xs in Wd["per"].values() if len({x["A"]["lab"] for x in xs}) > 1), "provincia", "provincias")} '
+            f'conviven municipios con días laborables distintos. La mayor diferencia dentro de una misma provincia es de '
+            f'{pl(spread, "día", "días")}' + (': lo que separa a un municipio con sus dos fiestas entre semana de otro que tiene las dos en '
+                                             'fin de semana o sobre otro festivo.' if spread == 2 else '.'))
     rows = []
     for ps, xs in sorted(((k, v) for k, v in Wd["per"].items() if k in bull_provs(S)), key=lambda kv: fold(S["provs"][kv[0]]["name"])):
         ls = [x["A"]["lab"] for x in xs]
@@ -876,8 +907,8 @@ def page_workdays(S):
                      fmt_med(median(ls)), f'{mn} <span class="m">{mlink(xmn[0])}{" y " + pl(len(xmn) - 1, "más", "más") if len(xmn) > 1 else ""}</span>',
                      f'{mx} <span class="m">{mlink(xmx[0])}{" y " + pl(len(xmx) - 1, "más", "más") if len(xmx) > 1 else ""}</span>'])
     t1 = B.section("provincias", "Días laborables 2027 por provincia",
-                   guide('Base: días laborables de la comunidad (y de la isla en Canarias) sin fiestas locales. Mínimo y máximo con el '
-                         'municipio más poblado de los que empatan.')
+                   guide('Provincias con boletín de 2027. Base: días laborables de la comunidad (y de la isla en Canarias) sin fiestas '
+                         'locales. En mínimo y máximo, el municipio más poblado de los que empatan y cuántos más tienen esa cifra.')
                    + table(["Provincia", "Municipios", "Base sin locales", "Mediana", "Mínimo", "Máximo"], rows))
     drow = [[str(v), num(c), pct(c, n)] for v, c in dist]
     t2 = B.section("distribucion", "Cuántos municipios hay en cada cifra",
@@ -891,10 +922,10 @@ def page_workdays(S):
                          'locales. Es el punto de partida de cada municipio.')
                    + table(["Comunidad", "Días laborables sin locales"], rrow))
     mean = guide(
-        f'<b>Qué significa para ti.</b> Si tu jornada se calcula por días laborables (horas anuales, cuadrantes, plazos de vacaciones '
-        f'en días hábiles), dos municipios vecinos pueden tener uno o dos días de diferencia. Para tu cuenta exacta, abre la página de '
-        f'tu municipio: muestra sus días laborables con sus dos fiestas. Si tu convenio fija 22 días laborables de vacaciones, '
-        f'restan sobre esta cifra.',
+        '<b>Qué significa para ti.</b> Si tu jornada se calcula por días laborables (horas anuales, cuadrantes, plazos de vacaciones '
+        'en días hábiles), dos municipios vecinos pueden tener uno o dos días de diferencia. Para tu cuenta exacta, abre la página de '
+        'tu municipio: muestra sus días laborables con sus dos fiestas. Si tu convenio fija 22 días laborables de vacaciones, '
+        'restan sobre esta cifra.',
         '<b>Límites.</b> Contamos días de lunes a viernes; no restamos vacaciones, días de convenio ni puentes que conceda la empresa. '
         'Los municipios con fiestas de 2027 aún sin publicar no entran, así que la mediana de una provincia con pocos municipios '
         'publicados puede moverse.' + (f' Faltan, entre otras, {few([REG[s]["name"] for s in S["pending_regions"]], 6)}.' if S["pending_regions"] else ""),
@@ -914,9 +945,9 @@ def page_workdays(S):
     title = f"Días laborables 2027 por provincia: de {lo} a {hi} según el municipio"
     desc = (f"Días laborables de 2027 en {num(n)} municipios: entre {lo} y {hi}, mediana {fmt_med(med)}. Por provincia, con la base de "
             f"cada comunidad y por qué cambia.")
-    page = render(S, path, B.pick(70, title, "Días laborables 2027 por provincia"), B.pick(160, desc, desc[:157] + "…"),
+    page = render(S, path, B.pick(60, title, f"Días laborables 2027 por provincia: de {lo} a {hi}", "Días laborables 2027 por provincia"), fit_desc(desc),
                   "Días laborables 2027 por provincia", "Días laborables por provincia", lead,
-                  [B.section("claves", "Lo que dicen los datos", intro), t1, t2, t3,
+                  [B.section("claves", "Lo que dicen los datos", intro + cap_txt), t1, t2, t3,
                    B.section("para-ti", "Qué significa y qué no sabemos", mean), meth, related(slug)],
                   [DATA["source"]["url"]])
     summary = f'Entre {lo} y {hi} días laborables según el municipio (mediana {fmt_med(med)}). Por provincia y por qué cambia.'
@@ -953,22 +984,41 @@ def page_publication(S):
     lead = (f'<p class="lead">A {dy(S["upd27"])}, <b>{pl(len(with27), "provincia tiene", "provincias tienen")}</b> sus fiestas locales de 2027 '
             f'en un boletín oficial y <b>{num(len(pending))} siguen pendientes</b>. La primera fue {join(pn(v) for v in firsts)} '
             f'({dy(first["d27"])}); la última hasta ahora, {join(pn(v) for v in lasts)} ({dy(last["d27"])}).</p>')
+    def grp(xs, key):
+        xs = sorted(xs, key=key)
+        return f' ({few((pn(v) for v in xs), 4)})' if xs else ""
+
+    by_reg = defaultdict(list)
+    for v in with27:
+        by_reg[v["p"]["region"]].append(v)
+    multi = {r: vs for r, vs in by_reg.items() if len(vs) > 1}
+    one_day = sorted((r for r, vs in multi.items() if len({v["d27"] for v in vs}) == 1), key=lambda r: fold(REG[r]["name"]))
+    spread = sorted(((r, min(vs, key=lambda v: v["d27"]), max(vs, key=lambda v: v["d27"])) for r, vs in multi.items()
+                     if len({v["d27"] for v in vs}) > 1), key=lambda t: -(D(t[2]["d27"]) - D(t[1]["d27"])).days)
+    reg_txt = ""
+    if one_day:
+        reg_txt += (f'En {join(rlink(r) for r in one_day)}, todas las provincias salen el mismo día porque hay un solo boletín para la '
+                    f'comunidad. ')
+    if spread:
+        reg_txt += (f'En cambio, en {join(rlink(r) for r, _, _ in spread)} cada provincia publica por su cuenta: ' + "; ".join(
+            f'{E(REG[r]["name"])} fue del {dm(a["d27"])} ({pn(a)}) al {dm(b["d27"])} ({pn(b)}), '
+            f'{pl((D(b["d27"]) - D(a["d27"])).days, "día", "días")} de diferencia' for r, a, b in spread) + '.')
     intro = guide(
-        f'Las fiestas locales no salen en el BOE. Las fija cada comunidad o, en muchas, la delegación provincial de trabajo, y se '
-        f'publican en el boletín autonómico o en el de la provincia, cada una con su calendario. Hemos anotado la fecha del boletín de '
-        f'cada provincia en 2026 y en 2027. Hoy tenemos fiestas de 2027 para {num(ok_total)} de los {num(all_total)} municipios '
-        f'({pct(ok_total, all_total)}).',
+        f'Las fiestas locales no salen en el BOE. Las determina la autoridad laboral de cada comunidad a propuesta del pleno de cada '
+        f'ayuntamiento, y se publican en el boletín de la comunidad o en el de la provincia, cada uno con su calendario. Hemos anotado '
+        f'la fecha del boletín de cada provincia en 2026 y en 2027. Hoy tenemos fiestas de 2027 para {num(ok_total)} de los '
+        f'{num(all_total)} municipios ({pct(ok_total, all_total)}).',
         f'Antes del 1 de octubre de 2026 ya habían publicado {pl(sep30, "provincia", "provincias")}. ' +
-        (f'Frente al año anterior, {pl(len(earlier), "provincia", "provincias")} {"ha" if len(earlier) == 1 else "han"} publicado más de una semana antes '
-         f'({few((pn(v) for v in sorted(earlier, key=lambda v: v["delta"])), 4)}), {num(len(later))} más de una semana después '
-         f'({few((pn(v) for v in sorted(later, key=lambda v: -v["delta"])), 4)}) y {num(len(similar))} en fechas parecidas.' if cmp_ else ""),
-        f'Las que tienen un solo boletín para toda la comunidad publican todas sus provincias el mismo día; en Castilla y León o Galicia, '
-        f'en cambio, cada provincia va por su lado y la diferencia entre la primera y la última puede ser de meses.',
+        (f'Frente al año anterior, {pl(len(earlier), "provincia", "provincias")} {"ha" if len(earlier) == 1 else "han"} publicado más de '
+         f'una semana antes{grp(earlier, lambda v: v["delta"])}, {num(len(later))} más de una semana después{grp(later, lambda v: -v["delta"])} '
+         f'y {num(len(similar))} con menos de una semana de diferencia.' if cmp_ else ""),
+        reg_txt,
     )
     pend_txt = ""
     if pending:
         items = [f'{plink(v["p"])}: ' + (f'en 2026 salió el {dy(v["d26"])}' if v["d26"] and not v["agg26"] else
-                                         "sin fecha de 2026 comparable") +
+                                         "las fiestas de 2026 están en datos abiertos, sin fecha de boletín" if v["agg26"] else
+                                         "sin fiestas de 2026 en nuestros datos") +
                  (f'; {pl(v["council"], "ayuntamiento ya ha publicado", "ayuntamientos ya han publicado")} su acuerdo' if v["council"] else "")
                  for v in pending]
         pend_txt = B.section("pendientes", f'Las {num(len(pending))} provincias pendientes',
@@ -993,24 +1043,27 @@ def page_publication(S):
         ps = sorted(partial, key=lambda v: v["ok"] / v["all"])
         part_txt = (f'Publicar no siempre es publicarlo todo. En {pl(len(partial), "provincia", "provincias")} con boletín, alguno de sus municipios '
                     f'aún no tiene días de 2027 en nuestros datos; los casos con más hueco son '
-                    f'{few((f"{pn(v)} ({num(v["ok"])} de {num(v["all"])})" for v in ps), 4)}. Puede ser que el boletín no los incluya '
-                    f'(los aprueba una resolución posterior) o que el municipio no haya pedido días propios.')
+                    f'{few((f"{pn(v)} ({num(v["ok"])} de {num(v["all"])})" for v in ps), 4)}. O el boletín no da días para esos '
+                    f'municipios, o nuestra lectura aún no los recoge; mientras tanto sus páginas siguen como pendientes y muestran 2026 '
+                    f'como referencia.')
     mean = guide(
-        f'<b>Qué significa para ti.</b> Si tu provincia está pendiente, no planifiques con las fechas de otro año ni con lo que adelante '
-        f'la prensa: el día cuenta cuando sale en el boletín. Cada página de municipio se actualiza cuando entra su publicación.',
+        '<b>Qué significa para ti.</b> Si tu provincia está pendiente, no planifiques con las fechas de otro año ni con lo que adelante '
+        'la prensa: el día cuenta cuando sale en el boletín. Cada página de municipio se actualiza cuando entra su publicación.',
         part_txt,
         (f'<b>Las fechas se corrigen.</b> {pl(len(fixes26), "provincia tuvo", "provincias tuvieron")} correcciones o modificaciones de '
          f'su boletín de 2026 después de la primera publicación ({few((pn(v) for v in sorted(fixes26, key=lambda v: fold(v["p"]["name"]))), 6)}). '
          f'Por eso cada municipio enlaza a su fuente y anotamos la fecha de comprobación.') if fixes26 else "",
     )
     agg = [v for v in rows_all if v["agg26"]]
+    no26 = sorted((v for v in rows_all if not v["b"]), key=lambda v: fold(v["p"]["name"]))
     meth = method_box([
         f'<b>2027:</b> fecha del boletín oficial del que salen las fiestas de cada provincia (data/locales-2027-all.json, datos a {dy(S["upd27"])}). '
         f'Si una provincia tiene más de un boletín, usamos el que da los días a más municipios.',
-        f'<b>2026:</b> la misma fecha para las fiestas de 2026 (data/locales-2026.json). Es la primera publicación; las correcciones '
-        f'posteriores no cambian la fecha.',
+        '<b>2026:</b> la misma fecha para las fiestas de 2026 (data/locales-2026.json). Es la primera publicación; las correcciones '
+        'posteriores no cambian la fecha.',
         (f'<b>Sin comparación:</b> en {few((pn(v) for v in agg), 4)} las fiestas de 2026 salen de un conjunto de datos abiertos, '
          f'no de un boletín con fecha, así que no calculamos la diferencia.') if agg else "",
+        (f'<b>Sin datos de 2026:</b> {few((pn(v) for v in no26), 4)}; aparece con "—".') if no26 else "",
         '<b>Pendiente:</b> ninguna fiesta de 2027 de la provincia en un boletín. Los acuerdos de pleno publicados por un ayuntamiento '
         'cuentan para su municipio, no para la provincia.',
         '<b>Esta lista cambia</b> cada vez que entra un boletín nuevo: la fecha de "Actualizado" lo indica.',
@@ -1019,7 +1072,8 @@ def page_publication(S):
     desc = (f"Fecha del boletín de festivos locales de 2027 en cada provincia frente a 2026: {num(len(with27))} publicadas y "
             f"{num(len(pending))} pendientes a {B.dmy(S['upd27'])}.")
     srcs = sorted({(v["a"]["src"] or {}).get("url") for v in with27 if v["a"] and v["a"]["src"]} - {None, ""})
-    page = render(S, path, B.pick(70, title, "Cuándo publica cada provincia sus festivos locales"), B.pick(160, desc, desc[:157] + "…"),
+    page = render(S, path, B.pick(60, title, f"Festivos locales 2027: {num(len(pending))} provincias aún sin publicar",
+                                  "Cuándo publica cada provincia sus festivos locales"), fit_desc(desc),
                   "Cuándo publica cada provincia sus festivos locales", "Fechas de publicación", lead,
                   [B.section("claves", "Lo que dicen los datos", intro), t1, pend_txt,
                    B.section("para-ti", "Qué significa y qué no sabemos", mean), meth, related(slug)],
@@ -1044,12 +1098,23 @@ def page_bridges(S):
     least = min(counts.values())
     smost = [s for s, c in counts.items() if c == most]
     sleast = [s for s, c in counts.items() if c == least]
-    bests = {s: v["ranked"][0] for s, v in reg.items() if v["ranked"]}
-    longest = max(bests.values(), key=lambda it: (it["len"], -it["cost"]))
-    s_long = [s for s, it in bests.items() if (it["len"], it["cost"]) == (longest["len"], longest["cost"])]
+    def score(it):
+        return (it["len"] / it["cost"], it["len"])
+
+    def key(it):
+        return (it["s"], it["e"], it["cost"])
+
+    tops = {s: [it for it in v["ranked"] if score(it) == score(v["ranked"][0])] for s, v in reg.items() if v["ranked"]}
+    nkey = key(nbest) if nbest else None
+    nkeys = {key(it) for it in npts}
+    with_nat = [s for s, ts in tops.items() if nkey in {key(it) for it in ts}]
+    own_best = {s: [it for it in ts if key(it) not in nkeys] for s, ts in tops.items()}
+    own_best = {s: ts for s, ts in own_best.items() if ts}
+    costs = sorted(((v["cost"], v["free"], s) for s, v in reg.items()), key=lambda t: (t[0], fold(REG[t[2]]["name"])))
     loc = Br["loc"]
-    tot_n = sum(g["n"] for g in loc.values())
-    tot_add = sum(g["add"] for g in loc.values())
+    live = [r for r in loc if r not in S["pending_regions"]]
+    tot_n = sum(loc[r]["n"] for r in live)
+    tot_add = sum(loc[r]["add"] for r in live)
 
     def rng(it):
         return B.drange(it["s"], it["e"])
@@ -1057,19 +1122,33 @@ def page_bridges(S):
     def brk(it):
         return f'{rng(it)}: {it["len"]} días libres pidiendo {pl(it["cost"], "día", "días")} ({B.dlist(it["take"])})'
 
+    def short(it):
+        return f'{rng(it)}, {it["len"]} días por {pl(it["cost"], "día", "días")}'
+
+    own_txt = ""
+    if own_best:
+        own_txt = (' ' + "; ".join(f'{rlink(s)} tiene uno propio que rinde lo mismo o más: {short(ts[0])}' for s, ts in
+                                   sorted(own_best.items(), key=lambda kv: fold(REG[kv[0]]["name"]))) + '.')
+    lo_c, hi_c = costs[0], costs[-1]
+
     lead = (f'<p class="lead">Con los festivos nacionales, el puente más rentable de 2027 es <b>{brk(nbest)}</b>. Cada comunidad añade los '
             f'suyos: de {least} a {most} puentes según dónde trabajes.</p>') if nbest else ""
     intro = guide(
-        f'Un puente, en estas cuentas, es un día laborable suelto (o dos) entre un festivo y el fin de semana: pides esos días y '
-        f'enlazas varios días libres seguidos. Medimos cada puente por su rendimiento: días libres que consigues por cada día de '
-        f'vacaciones que gastas. Lo hemos calculado con los festivos nacionales y de comunidad del BOE para las 19 comunidades.',
+        'Un puente, en estas cuentas, es un día laborable suelto (o dos) entre un festivo y el fin de semana: pides esos días y '
+        'enlazas varios días libres seguidos. Medimos cada puente por su rendimiento: días libres que consigues por cada día de '
+        'vacaciones que gastas. Lo hemos calculado con los festivos nacionales y de comunidad del BOE para las 19 comunidades.',
         f'{join(rlink(s) for s in smost)} {"es la comunidad" if len(smost) == 1 else "son las comunidades"} con más puentes ({most}); '
-        f'{join(rlink(s) for s in sleast)}, {"la que menos" if len(sleast) == 1 else "las que menos"} ({least}). El puente más largo de los '
-        f'mejores de cada comunidad es {rng(longest)}, {longest["len"]} días libres por {pl(longest["cost"], "día", "días")} de vacaciones, en '
-        f'{few((rlink(s) for s in s_long), 6)}.',
+        + (f'{join(rlink(s) for s in sleast)}, {"la que menos" if len(sleast) == 1 else "las que menos"} ({least}).' if len(sleast) <= 4
+           else f'{len(sleast)} comunidades se quedan en {least}.')
+        + ((f' El puente nacional de {rng(nbest)} es el mejor, o empata con el mejor, en todas las comunidades.' if len(with_nat) == len(reg)
+            else f' El puente nacional de {rng(nbest)} es el mejor, o empata con el mejor, en {num(len(with_nat))} de las '
+                 f'{num(len(reg))} comunidades.') if nbest else "") + own_txt,
         f'Hacerlos todos tiene un coste. En la tabla, "Todos" suma los días de vacaciones que pedirías para hacer cada puente de tu '
-        f'comunidad y los días libres seguidos que te darían: un buen punto de partida para repartir los 30 días naturales de vacaciones '
-        f'que garantiza el <a href="{ET_URL}#a38" rel="noopener">artículo 38 del Estatuto de los Trabajadores</a>.',
+        f'comunidad y los días libres que te darían en total, fines de semana incluidos: desde {lo_c[0]} días de vacaciones para '
+        f'{lo_c[1]} días libres ({few((rlink(s) for c_, f_, s in costs if (c_, f_) == lo_c[:2]), 2)}) hasta {hi_c[0]} para {hi_c[1]} '
+        f'({few((rlink(s) for c_, f_, s in costs if (c_, f_) == hi_c[:2]), 2)}). Es un buen punto de partida para '
+        f'repartir los 30 días naturales de vacaciones que garantiza el <a href="{ET_URL}#a38" rel="noopener">artículo 38 del '
+        f'Estatuto de los Trabajadores</a>.',
     )
     rows = []
     for r in DATA["regions"]:
@@ -1079,13 +1158,16 @@ def page_bridges(S):
             continue
         b1 = v["ranked"][0]
         b2 = v["ranked"][1] if len(v["ranked"]) > 1 else None
-        rows.append([rlink(r["slug"]), str(len(v["pts"])),
-                     f'{rng(b1)} <span class="m">{b1["len"]} días · pides {B.dlist(b1["take"])}</span>',
-                     f'{rng(b2)} <span class="m">{b2["len"]} días · pides {b2["cost"]}</span>' if b2 else "—",
-                     f'{v["cost"]} → {v["free"]}'])
+        nt = len(tops[r["slug"]])
+
+        def cell(it, tie=""):
+            return f'{rng(it)} <span class="m">{it["len"]} días · pides {B.dlist(it["take"])}{tie}</span>'
+        rows.append([rlink(r["slug"]), str(len(v["pts"])), cell(b1, " · empate" if nt > 1 else ""),
+                     cell(b2, " · empate" if nt > 1 else "") if b2 else "—", f'{v["cost"]} → {v["free"]}'])
     t1 = B.section("tabla", "El mejor puente de cada comunidad",
-                   guide('Ordenados por días libres por día de vacaciones; a igual rendimiento, el más largo. "Todos": días de vacaciones → días '
-                         'libres seguidos si haces todos los puentes de la comunidad.')
+                   guide('Ordenados por días libres por día de vacaciones; a igual rendimiento, el más largo, y si siguen empatados, el '
+                         'primero del año ("empate"). "Todos": días de vacaciones → días libres en total si haces todos los puentes '
+                         'de la comunidad.')
                    + table(["Comunidad", "Puentes", "El mejor", "El segundo", "Todos"], rows))
     isl_txt = ""
     if Br["isl"]:
@@ -1100,15 +1182,16 @@ def page_bridges(S):
     loc_rows = []
     for r in DATA["regions"]:
         g = loc.get(r["slug"])
-        if not g or not g["n"]:
+        if not g or not g["n"] or r["slug"] not in live:
             continue
         b = g["best"]
         loc_rows.append([rlink(r["slug"]), num(g["n"]), f'{num(g["add"])} ({pct(g["add"], g["n"], 0)})',
                          f'{mlink(b[2])} <span class="m">{rng(b[1])}, {b[1]["len"]} días pidiendo {b[1]["cost"]}</span>' if b else "—"])
     t2 = B.section("locales", "Lo que añaden las fiestas locales",
-                   guide(f'Los dos días locales cambian el mapa. De los {num(tot_n)} municipios con fiestas de 2027 publicadas, '
-                         f'{num(tot_add)} ({pct(tot_add, tot_n)}) consiguen al menos un puente que su comunidad sola no da. En la última '
-                         f'columna, el puente más largo que da un festivo local en cada comunidad (a igualdad, el municipio más poblado).')
+                   guide(f'Los dos días locales cambian el mapa. De los {num(tot_n)} municipios con sus dos fiestas de 2027 publicadas '
+                         f'en comunidades con boletín, {num(tot_add)} ({pct(tot_add, tot_n)}) consiguen al menos un puente que su comunidad '
+                         f'sola no da. En la última columna, el puente más largo que da un festivo local en cada comunidad (a igualdad, el '
+                         f'municipio más poblado).')
                    + table(["Comunidad", "Municipios publicados", "Con un puente local", "El más largo gracias a un festivo local"], loc_rows))
     mean = guide(
         f'<b>Qué significa para ti.</b> Empieza por el mejor puente de tu comunidad y suma después los de tus dos fiestas locales, que '
@@ -1129,10 +1212,10 @@ def page_bridges(S):
         '<b>Canarias</b> se calcula sin la fiesta de la isla en la tabla principal y con ella en su apartado. En Cataluña, Arán cambia '
         'un festivo y sus puentes pueden variar.',
     ])
-    title = f"Mejores puentes de 2027 por comunidad y cuántas vacaciones cuestan"
+    title = "Mejores puentes de 2027 por comunidad y cuántas vacaciones cuestan"
     desc = (f"El mejor puente de cada comunidad en 2027, cuántos días de vacaciones cuesta y qué añaden las fiestas locales: "
             f"de {least} a {most} puentes según la comunidad.")
-    page = render(S, path, B.pick(70, title, "Mejores puentes de 2027 por comunidad"), B.pick(160, desc, desc[:157] + "…"),
+    page = render(S, path, B.pick(60, title, "Mejores puentes 2027 por comunidad y lo que cuestan", "Mejores puentes de 2027 por comunidad"), fit_desc(desc),
                   "Los mejores puentes de 2027 por comunidad", "Mejores puentes", lead,
                   [B.section("claves", "Lo que dicen los datos", intro), t1, isl_txt, t2,
                    B.section("para-ti", "Qué significa y qué no sabemos", mean), meth, related(slug)],
@@ -1165,9 +1248,9 @@ def page_hub(S, items):
     )
     secs = [B.section("lista", "Análisis 2027", f'<ul class="notes">{li}</ul>'), B.section("como", "Cómo se hacen", intro)]
     title = "Análisis del calendario laboral 2027: festivos, puentes y datos"
-    desc = (f"Cinco análisis con datos propios de {num(len(S['ok']))} municipios: festivos locales más repetidos, en fin de semana, días "
-            f"laborables por provincia, publicación y puentes.")
-    return render(S, path, B.pick(70, title, "Análisis del calendario laboral 2027"), B.pick(160, desc, desc[:157] + "…"),
+    desc = (f"Cinco análisis con datos de {num(len(S['ok']))} municipios: festivos locales repetidos y en fin de semana, días "
+            f"laborables, publicación y puentes.")
+    return render(S, path, B.pick(60, title, "Análisis 2027: festivos locales, puentes y días laborables", "Análisis del calendario laboral 2027"), fit_desc(desc),
                   "Análisis del calendario laboral 2027", "", lead, secs, [], ad_after=None)
 
 
@@ -1175,4 +1258,86 @@ def page_hub(S, items):
 
 def nav_link():
     """For the main nav (Comunidades · Festivos · Puentes · Vacaciones · Escolar · Análisis · Herramientas)."""
-    return f'<a href
+    b = B or sys.modules["build"]
+    return f'<a href="{b.BASE}{HUB}">Análisis</a>'
+
+
+def cards(S):
+    """The three home figures (repeated date, weekend losses, working days), from the same numbers as the articles."""
+    d1, c1 = S["rep"]["top"][0]
+    labs = S["wd"]["labs"]
+    return [(path_of(PAGES[0][0]), num(c1), f"municipios con fiesta local el {dm(d1)}"),
+            (path_of(PAGES[1][0]), num(len(S["we"]["lose"])), "municipios pierden un festivo local entre semana"),
+            (path_of(PAGES[2][0]), f"{min(labs)}–{max(labs)}", "días laborables según el municipio")]
+
+
+def home_block(b=None, data=None):
+    """'Análisis 2027' row for the home: three cards with a computed figure each (existing .stats styles). Works before
+    or after write(): pass build and the localized data if write() has not run yet (pages.home_page runs first)."""
+    global B, DATA
+    if b is not None:
+        B, DATA = b, data
+    if B is None or DATA is None or B.LANG != "es":
+        return ""
+    li = "".join(f'<li><a href="{B.BASE}{p}"><b>{E(big)}</b>{E(txt)}</a></li>' for p, big, txt in cards(compute()))
+    return B.section("analisis", "Análisis 2027", f'<ul class="stats">{li}</ul>'
+                     f'<p class="more-l"><a href="{B.BASE}{HUB}">Todos los análisis 2027 →</a></p>')
+
+
+def write(b, data, fix):
+    """Write /analisis/ and the five articles. Returns [(path, lastmod, ['es'])] for build.write_sitemaps."""
+    global B, DATA, OUT, _ST
+    B, DATA = b, data
+    if B.LANG != "es":
+        return []
+    import pages as P
+    OUT = OUT or B.OUT
+    _ST = None
+    S = compute()
+    out, hub_items = [], []
+    for fn, (slug, lbl) in zip((page_repeated, page_weekend, page_workdays, page_publication, page_bridges), PAGES):
+        path, page, summary, _card = fn(S)
+        _write(P, path, page, fix)
+        hub_items.append((path, lbl, summary))
+        out.append((path, upd_date(S), ["es"]))
+    _write(P, HUB, page_hub(S, hub_items), fix)
+    out.insert(0, (HUB, upd_date(S), ["es"]))
+    return out
+
+
+def _write(P, path, page, fix):
+    page = P.no_thin_ads(path, page)  # the 250-word guard of pages.write (these pages are far above it)
+    d = OUT / path
+    d.mkdir(parents=True, exist_ok=True)
+    (d / "index.html").write_text(fix(page), "utf-8", newline="\n")
+
+
+def _standalone(argv):
+    """Same setup as herramientas/build.py: real head/header/footer, assets hashed like the last full build."""
+    global OUT
+    sys.path.insert(0, str(ROOT))
+    import build as b
+    sys.modules.setdefault("build", b)
+    import pages as P
+    data = b.localize(b.load())
+    b.REGIONS = data["regions"]
+    fonts = {w: b.short_hash(ROOT / "fonts" / f"public-sans-{w}.woff2") for w in ("400", "600", "700")}
+    cssv, jsv = b.short_hash(ROOT / "app.css"), b.short_hash(ROOT / "app.min.js")
+    m = re.search(r'data-sidx="(\w+)"', (ROOT / "index.html").read_text("utf-8"))
+    sidxv = m.group(1) if m else "0"
+    fix = lambda s: (s.replace("{CSSV}", cssv).replace("{JSV}", jsv).replace("{SIDXV}", sidxv)  # noqa: E731
+                     .replace("{F400}", fonts["400"]).replace("{F600}", fonts["600"]).replace("{F700}", fonts["700"]))
+    P.DATA, P._fix = data, fix
+    if "--out" in argv:
+        OUT = Path(argv[argv.index("--out") + 1]).resolve()
+    ws = write(b, data, fix)
+    for p, lm, _ in ws:
+        f = OUT / p / "index.html"
+        print(f"  {p}  {P.main_words(f.read_text('utf-8'))} words  {f.stat().st_size // 1024} KB  lastmod {lm}")
+    if P.thin_no_ads:
+        print("  no ads (< 250 words):", P.thin_no_ads)
+    print("home_block:", len(home_block()), "chars ·", nav_link())
+
+
+if __name__ == "__main__":
+    _standalone(sys.argv[1:])

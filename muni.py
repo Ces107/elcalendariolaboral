@@ -61,12 +61,26 @@ def short_src(title, fallback="Boletín oficial"):
     return m.group(1).split(",")[0].strip() if m else fallback
 
 
+def mark_partial(hols, note):
+    """Asturian concejos publish more than 2 festivities, some for one parish or village only ('San José en Posada y
+    Parroquia'). The data note says so ('some apply only to part of the concejo'); then a festivity counts for the whole
+    municipality only when its name says so ('en todo el concejo', 'excepto ...', 'resto del concejo'); the others are
+    marked part=True and shown as parish days (17 Nov 2026: Llanes was counted as '18 festivos')."""
+    if not (note and "apply only to part" in note and len(hols) > 2):
+        return hols
+    out = []
+    for h in hols:
+        n = (h.get("name") or "").lower()
+        out.append(h if re.search(r"todo|excepto|resto del", n) else {**h, "part": True})
+    return out
+
+
 def wide_and_partial(hols):
     """Municipality-wide days, and days printed for one parish/valley only ('…, en la parroquia de Lugones')."""
     wide, part = [], []
     for h in hols:
         n = (h.get("name") or "").lower()
-        if re.search(r"\ben (la|el) (parroquia|valle|barrio|pedan)", n) and "todo" not in n:
+        if h.get("part") or (re.search(r"\ben (la|el) (parroquia|valle|barrio|pedan)", n) and "todo" not in n):
             part.append(h)
         else:
             wide.append(h)
@@ -161,7 +175,7 @@ def catalogue():
              "region": m["region"], "zone": zone, "status": None, "hol27": None, "src27": None, "note": None, "ref26": None, "src26": None}
         e = o27.get(m["ine"])
         if e and e.get("status") in OFFICIAL and (e.get("holidays") or e.get("localities")):
-            x.update(status=e["status"], hol27=sorted(e["holidays"], key=lambda h: h["date"]), note=e.get("note"),
+            x.update(status=e["status"], hol27=sorted(mark_partial(e["holidays"], e.get("note")), key=lambda h: h["date"]), note=e.get("note"),
                      src27=cat["src27"].get(e.get("source")) or ({"title": e["source"], "url": ""} if e.get("source") else None))
         if kind == "city":
             c = rich[key]

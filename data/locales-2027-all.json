@@ -1,6 +1,6 @@
 {
  "year": 2027,
- "updated": "2026-11-07",
+ "updated": "2026-11-17",
  "about": "Fiestas locales de 2027 por municipio (clave: código INE de 5 cifras). Solo publicadas oficialmente: boletín (BOP/autonómico) o acuerdo del ayuntamiento publicado por el propio ayuntamiento. 'name' es null cuando la publicación da solo la fecha. 'localities' recoge días que solo rigen en una parte del municipio. Los municipios sin publicación oficial no aparecen.",
  "status_values": {
   "boletin": "publicado en boletín oficial",
@@ -42,6 +42,11 @@
    "url": "https://bomemelilla.es/bome/descargar/BOME-AX-2026-108.pdf",
    "published": "2026-09-30"
   },
+  "bop-alicante-210": {
+   "title": "Resolución de 29 de octubre de 2026 de la Dirección Territorial de Vivienda, Empleo, Juventud e Igualdad de Alicante, por la que se aprueba el calendario de fiestas locales, retribuidas y no recuperables, en el ámbito de la provincia de Alicante para el año 2027 (BOP Alicante núm. 210, 04-11-2026, edicto 8352)",
+   "url": "https://www.dip-alicante.es/bop2/pdftotal/2026/11/04_210/2026_008352.pdf",
+   "published": "2026-11-04"
+  },
   "bop-avila-129": {
    "title": "Junta de Castilla y León, Oficina Territorial de Trabajo de Ávila. Anuncio: calendario de fiestas de carácter local año 2027 (BOP Ávila núm. 129, 8-VII-2026, anuncio 1448/26)",
    "url": "https://www.diputacionavila.es/bops/2026/08-07-2026/08-07-2026_144826.pdf",
@@ -52,6 +57,11 @@
    "url": "https://trabajoyprevencion.jcyl.es/web/jcyl/binarios/532/765/Publicacion%20Fiestas%20Locales%20-%20bopbur-2026-145.pdf?blobheader=application%2Fpdf%3Bcharset%3DUTF-8&blobnocache=true",
    "published": "2026-08-04"
   },
+  "bop-castellon-136": {
+   "title": "Resolución de 29 de octubre de 2026 de la Dirección Territorial de Vivienda, Empleo, Juventud e Igualdad de Castellón, por la que se aprueba el calendario de fiestas locales, retribuidas y no recuperables, en el ámbito de la provincia de Castellón para el año 2027 (BOP Castellón núm. 136, 10-11-2026, anuncio 04772-2026)",
+   "url": "https://bop.dipcas.es/PortalBOP/api/descargarAnuncio/es/4NShdAoeCp",
+   "published": "2026-11-10"
+  },
   "bop-ciudadreal-202": {
    "title": "Delegación Provincial de Economía, Empresas y Empleo de Ciudad Real. Fiestas Locales para el año 2027 (BOP Ciudad Real núm. 202, 20-X-2026, anuncio 3389)",
    "url": "https://se1.dipucr.es:4443/SIGEM_BuscadorDocsWeb/getDocument.do?entidad=005&doc=7828286",
@@ -61,6 +71,11 @@
    "title": "Resolución do Departamento Territorial da Consellería de Emprego, Comercio e Emigración da Coruña sobre as festividades de carácter local na Provincia da Coruña (BOP A Coruña nº 187, 30/09/2026, anuncio 2026/6291)",
    "url": "https://bop.dacoruna.gal/bopportal/descargarPdf?page=1&fecha=20260930&numRegistro=2026/0000006291.pdf",
    "published": "2026-09-30"
+  },
+  "bop-cuenca-130": {
+   "title": "Resolución de 12/11/2026 de la Delegación Provincial de la Consejería de Economía, Empresas y Empleo en Cuenca por la que se determinan los festivos locales para los municipios de la provincia de Cuenca durante el año 2027 y se ordena su publicación (BOP Cuenca núm. 130, 13-11-2026, anuncio núm. 2719)",
+   "url": "https://www.dipucuenca.es/documents/34525/677c6742-e5d3-5de4-d58b-818c94f036b4",
+   "published": "2026-11-13"
   },
   "bop-leon-144": {
    "title": "Junta de Castilla y León, Oficina Territorial de Trabajo de León. Resolución de 20 de julio de 2026, por la que se fijan las Fiestas Locales de los distintos Municipios de la Provincia de León para el año 2027 (BOP León núm. 144, 31-VII-2026, CVE BOP-LE-2026-144033)",
@@ -1341,6 +1356,2411 @@
    "status": "boletin",
    "source": "botha-116",
    "note": "28 April (San Prudencio) is the territory-wide local day of Álava; the other day is the municipality's own."
+  },
+  "03001": {
+   "name": "L'Atzúbia",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2027-09-03",
+     "name": "Cristo del Milagro"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03002": {
+   "name": "Agost",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-03-03",
+     "name": "Día de la Vella"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210",
+   "note": "The bulletin prints the second day without its day number (\"de julio, lunes, Festividad de San Pedro Apóstol\"); only 3 March is listed here."
+  },
+  "03003": {
+   "name": "Agres",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-02-08",
+     "name": null
+    },
+    {
+     "date": "2027-09-06",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03004": {
+   "name": "Aigües",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-26",
+     "name": null
+    },
+    {
+     "date": "2027-08-27",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03005": {
+   "name": "Albatera",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "Día de San Vicente"
+    },
+    {
+     "date": "2027-10-07",
+     "name": "Día de la Virgen del Rosario"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03006": {
+   "name": "Alcalalí",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-06-24",
+     "name": null
+    },
+    {
+     "date": "2027-06-25",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03007": {
+   "name": "Alcosser",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-10-11",
+     "name": null
+    },
+    {
+     "date": "2027-12-07",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03008": {
+   "name": "Alcoleja",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2027-08-20",
+     "name": "Fiestas patronales"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03009": {
+   "name": "Alcoi/Alcoy",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-24",
+     "name": null
+    },
+    {
+     "date": "2027-04-26",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03010": {
+   "name": "Alfafara",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-06",
+     "name": null
+    },
+    {
+     "date": "2027-12-07",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03011": {
+   "name": "L'Alfàs del Pi",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-11-09",
+     "name": null
+    },
+    {
+     "date": "2027-11-10",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03012": {
+   "name": "Algorfa",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2027-07-16",
+     "name": "Virgen del Carmen"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03013": {
+   "name": "Algueña",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "2º lunes de pascua"
+    },
+    {
+     "date": "2027-07-30",
+     "name": "Día Patronos Algueña \"Santos Abdón y Senén\""
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03014": {
+   "name": "Alacant/Alicante",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-08",
+     "name": "Santa Faz"
+    },
+    {
+     "date": "2027-06-24",
+     "name": "Fogueres de Sant Joan"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03015": {
+   "name": "Almoradí",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-07-30",
+     "name": "Santicos de la Piedra"
+    },
+    {
+     "date": "2027-11-30",
+     "name": "San Andrés"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03016": {
+   "name": "Almudaina",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-01-15",
+     "name": "Sant Canut"
+    },
+    {
+     "date": "2027-08-20",
+     "name": "Sant Bertomeu"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03017": {
+   "name": "L'Alqueria d'Asnar",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-09-24",
+     "name": null
+    },
+    {
+     "date": "2027-09-27",
+     "name": "San Miguel"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03018": {
+   "name": "Altea",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-09-27",
+     "name": null
+    },
+    {
+     "date": "2027-09-28",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03019": {
+   "name": "Aspe",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-02-04",
+     "name": "Día de la Jira"
+    },
+    {
+     "date": "2027-08-05",
+     "name": "Virgen de las Nieves"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03020": {
+   "name": "Balones",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-03-25",
+     "name": null
+    },
+    {
+     "date": "2027-12-23",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03021": {
+   "name": "Banyeres de Mariola",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-22",
+     "name": "Día de la Entrada"
+    },
+    {
+     "date": "2027-04-23",
+     "name": "Día de San Jorge"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03022": {
+   "name": "Benasau",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-03-25",
+     "name": "Jueves Santo"
+    },
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03023": {
+   "name": "Beneixama",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2027-06-24",
+     "name": "San Juan"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03024": {
+   "name": "Benejúzar",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-05-27",
+     "name": "Corpus Christi"
+    },
+    {
+     "date": "2027-10-07",
+     "name": "Virgen del Rosario"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210",
+   "note": "The bulletin prints a weekday that does not match the date (2027-10-07 printed 'miércoles' but is a jueves); dates kept as published."
+  },
+  "03025": {
+   "name": "Benferri",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-09-30",
+     "name": "San Jerónimo"
+    },
+    {
+     "date": "2027-10-07",
+     "name": "Virgen del Rosario"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03026": {
+   "name": "Beniarbeig",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-03-25",
+     "name": "Jueves Santo"
+    },
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente Ferrer"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03027": {
+   "name": "Beniardà",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-02",
+     "name": "En Honor a la Virgen de los Dolores"
+    },
+    {
+     "date": "2027-08-03",
+     "name": "En Honor a la Virgen de los Dolores"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03028": {
+   "name": "Beniarrés",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-10-11",
+     "name": null
+    },
+    {
+     "date": "2027-12-07",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03029": {
+   "name": "Benigembla",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-10-11",
+     "name": null
+    },
+    {
+     "date": "2027-12-07",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03030": {
+   "name": "Benidoleig",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2027-08-06",
+     "name": "Fiesta patronal “La Purísima Concepción”"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03031": {
+   "name": "Benidorm",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-11-15",
+     "name": null
+    },
+    {
+     "date": "2027-11-16",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03032": {
+   "name": "Benifallim",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2027-09-29",
+     "name": "San Miguel"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03033": {
+   "name": "Benifato",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-26",
+     "name": null
+    },
+    {
+     "date": "2027-08-27",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03034": {
+   "name": "Benijófar",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "2º lunes de Pascua"
+    },
+    {
+     "date": "2027-07-26",
+     "name": "San Jaime, fiestas patronales"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03035": {
+   "name": "Benilloba",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": null
+    },
+    {
+     "date": "2027-09-03",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03036": {
+   "name": "Benillup",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-06",
+     "name": null
+    },
+    {
+     "date": "2027-08-13",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03037": {
+   "name": "Benimantell",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-06",
+     "name": "Fiestas en honor a Sant LLorenç"
+    },
+    {
+     "date": "2027-10-15",
+     "name": "Fiestas en honor al Santísimo Sacramento"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03038": {
+   "name": "Benimarfull",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-10-11",
+     "name": "Puente Hispanidad"
+    },
+    {
+     "date": "2027-12-07",
+     "name": "Puente Constitución"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03039": {
+   "name": "Benimassot",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-10-11",
+     "name": null
+    },
+    {
+     "date": "2027-12-07",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03040": {
+   "name": "Benimeli",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-19",
+     "name": "Virgen María Inmaculada"
+    },
+    {
+     "date": "2027-08-20",
+     "name": "Santísimo Ecce-Homo"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03041": {
+   "name": "Benissa",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-27",
+     "name": "Día del Riberer"
+    },
+    {
+     "date": "2027-06-29",
+     "name": "Moros y Cristianos"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210",
+   "note": "The bulletin prints a weekday that does not match the date (2027-04-27 printed 'lunes' but is a martes); dates kept as published. The bulletin prints a weekday that does not match the date (2027-06-29 printed 'lunes' but is a martes); dates kept as published."
+  },
+  "03042": {
+   "name": "El Poble Nou de Benitatxell/Benitachell",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-07-22",
+     "name": "Sta. María Magdalena"
+    },
+    {
+     "date": "2027-07-23",
+     "name": "San Roque"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03043": {
+   "name": "Biar",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente Ferrer, Anuncio Fiestas de mayo"
+    },
+    {
+     "date": "2027-05-12",
+     "name": "Dia de la Patrona dentro de las Fiestas de Moros y Cristianos"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03044": {
+   "name": "Bigastro",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2027-08-16",
+     "name": "San Joaquin"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03045": {
+   "name": "Bolulla",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-23",
+     "name": "Virgen de los Dolores"
+    },
+    {
+     "date": "2027-08-24",
+     "name": "Santísimo Sacramento"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03046": {
+   "name": "Busot",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2027-08-10",
+     "name": "San Lorenzo Mártir"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03047": {
+   "name": "Calp",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-05",
+     "name": "Madre de Dios de las Nieves"
+    },
+    {
+     "date": "2027-10-22",
+     "name": "Santísimo Cristo del Sudor"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03048": {
+   "name": "Callosa d'en Sarrià",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-07-23",
+     "name": "San Jaime"
+    },
+    {
+     "date": "2027-10-11",
+     "name": "Fiestas patronales"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03049": {
+   "name": "Callosa de Segura",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2027-08-16",
+     "name": "San Roque"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210",
+   "note": "The bulletin prints the de 2026 year on one date of this 2027 list; read as 2027."
+  },
+  "03050": {
+   "name": "El Campello",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-07-16",
+     "name": "Virgen del Carmen"
+    },
+    {
+     "date": "2027-10-15",
+     "name": "Santa Teresa de Jesús"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03051": {
+   "name": "El Camp de Mirra/Campo de Mirra",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2027-08-24",
+     "name": "Sant Bertomeu, patrón de la localidad"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03052": {
+   "name": "Cañada",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-01-07",
+     "name": "Reyes Magos"
+    },
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente Ferrer"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03053": {
+   "name": "Castalla",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-07-31",
+     "name": "Celebración Sant Jaume"
+    },
+    {
+     "date": "2027-09-02",
+     "name": "Fiestas de Moros y Cristianos"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03054": {
+   "name": "Castell de Castells",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": null
+    },
+    {
+     "date": "2027-07-26",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03055": {
+   "name": "Catral",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-02-05",
+     "name": null
+    },
+    {
+     "date": "2027-06-24",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03056": {
+   "name": "Cocentaina",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-19",
+     "name": null
+    },
+    {
+     "date": "2027-10-11",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03057": {
+   "name": "Confrides",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-23",
+     "name": "Fiestas de San José y la Virgen de los Dolores"
+    },
+    {
+     "date": "2027-08-24",
+     "name": "Fiestas de San José y la Virgen de los Dolores"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03058": {
+   "name": "Cox",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2027-07-16",
+     "name": "Virgen del Carmen"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03059": {
+   "name": "Crevillent",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-03-25",
+     "name": "Jueves Santo"
+    },
+    {
+     "date": "2027-10-04",
+     "name": "Fiestas Patronales"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03060": {
+   "name": "Quatretondeta",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-23",
+     "name": null
+    },
+    {
+     "date": "2027-10-11",
+     "name": "Fiestas patronales"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03061": {
+   "name": "Daya Nueva",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-09-29",
+     "name": "San Miguel"
+    },
+    {
+     "date": "2027-09-30",
+     "name": "Día de La Morera"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03062": {
+   "name": "Daya Vieja",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "Día de San Vicente"
+    },
+    {
+     "date": "2027-09-08",
+     "name": "Día de la Patrona, la Virgen de Monserrate"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03063": {
+   "name": "Dénia",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-07-07",
+     "name": "Santísima Sangre"
+    },
+    {
+     "date": "2027-08-16",
+     "name": "San Roque"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210",
+   "note": "The entidad local menor La Xara has its own days: 2027-09-03, 2027-09-21 (see localities). The entidad local menor Jesús Pobre has its own days: 2027-04-05, 2027-05-17 (see localities).",
+   "localities": [
+    {
+     "name": "La Xara",
+     "holidays": [
+      {
+       "date": "2027-09-03",
+       "name": "Fiestas patronales"
+      },
+      {
+       "date": "2027-09-21",
+       "name": "San Mateo"
+      }
+     ]
+    },
+    {
+     "name": "Jesús Pobre",
+     "holidays": [
+      {
+       "date": "2027-04-05",
+       "name": "San Vicente Ferrer"
+      },
+      {
+       "date": "2027-05-17",
+       "name": "Lunes de Pentecostés"
+      }
+     ]
+    }
+   ]
+  },
+  "03064": {
+   "name": "Dolores",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-09-17",
+     "name": null
+    },
+    {
+     "date": "2027-09-20",
+     "name": "Fiestas Patronales Nuestra Señora de los Dolores"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03065": {
+   "name": "Elx/Elche",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2027-12-29",
+     "name": "Venida de la Virgen"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03066": {
+   "name": "Elda",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-09-08",
+     "name": "Fiestas Patronales"
+    },
+    {
+     "date": "2027-09-09",
+     "name": "Fiestas Patronales"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03067": {
+   "name": "Fageca",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-20",
+     "name": "Fiestas Patronales Espíritu Santo"
+    },
+    {
+     "date": "2027-12-07",
+     "name": "Puente festividad Día de la Constitución Española"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03068": {
+   "name": "Famorca",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-03-18",
+     "name": null
+    },
+    {
+     "date": "2027-04-05",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03069": {
+   "name": "Finestrat",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-20",
+     "name": null
+    },
+    {
+     "date": "2027-08-24",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03070": {
+   "name": "Formentera del Segura",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-05-28",
+     "name": null
+    },
+    {
+     "date": "2027-08-23",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03071": {
+   "name": "Gata de Gorgos",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-06",
+     "name": "Santísimo Cristo"
+    },
+    {
+     "date": "2027-09-29",
+     "name": "San Miguel Arcángel"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03072": {
+   "name": "Gaianes",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-09-06",
+     "name": null
+    },
+    {
+     "date": "2027-09-07",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03073": {
+   "name": "Gorga",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-27",
+     "name": "Víspera de las fiestas patronales"
+    },
+    {
+     "date": "2027-10-11",
+     "name": "Víspera de fiesta Hispanidad"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03074": {
+   "name": "Granja de Rocamora",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-05-03",
+     "name": "Stma.Cruz"
+    },
+    {
+     "date": "2027-06-29",
+     "name": "San Pedro"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03075": {
+   "name": "El Castell de Guadalest",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-16",
+     "name": null
+    },
+    {
+     "date": "2027-08-17",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03076": {
+   "name": "Guardamar del Segura",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-07-23",
+     "name": "Víspera de la Festividad de Santiago Apóstol"
+    },
+    {
+     "date": "2027-10-07",
+     "name": "Virgen del Rosario"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03077": {
+   "name": "El Fondó de les Neus/Hondón de las Nieves",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-02-12",
+     "name": "Último jueves"
+    },
+    {
+     "date": "2027-08-05",
+     "name": "Nuestra Señora de las Nieves"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210",
+   "note": "The bulletin prints a weekday that does not match the date (2027-02-12 printed 'jueves' but is a viernes); dates kept as published."
+  },
+  "03078": {
+   "name": "Hondón de los Frailes",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-02-04",
+     "name": "“Último jueves”"
+    },
+    {
+     "date": "2027-08-30",
+     "name": "Fiestas Patronales"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03079": {
+   "name": "Ibi",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-09-10",
+     "name": null
+    },
+    {
+     "date": "2027-09-13",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03080": {
+   "name": "Jacarilla",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2027-09-08",
+     "name": "Virgen de Belén"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03081": {
+   "name": "Xaló",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-04",
+     "name": "Santo Domingo"
+    },
+    {
+     "date": "2027-10-18",
+     "name": "Virgen Pobre"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03082": {
+   "name": "Xàbia/Jávea",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-06-24",
+     "name": "Fiesta de San Juan"
+    },
+    {
+     "date": "2027-09-08",
+     "name": "Fiesta de Ntra. Sra. de Loreto"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03083": {
+   "name": "Xixona/Jijona",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2027-08-23",
+     "name": "Tercer día de las Fiestas de Moros y Cristianos"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03084": {
+   "name": "L'Orxa/Lorcha",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-07-16",
+     "name": null
+    },
+    {
+     "date": "2027-07-19",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03085": {
+   "name": "Llíber",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-16",
+     "name": null
+    },
+    {
+     "date": "2027-08-18",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03086": {
+   "name": "Millena",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-07-09",
+     "name": "Víspera de Fiestas Patronales"
+    },
+    {
+     "date": "2027-07-12",
+     "name": "Segundo día Fiestas Patronales"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03088": {
+   "name": "Monforte del Cid",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-05-17",
+     "name": null
+    },
+    {
+     "date": "2027-12-07",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03089": {
+   "name": "Monòver/Monóvar",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "Lunes de San Vicente"
+    },
+    {
+     "date": "2027-09-08",
+     "name": "Celebración de las Fiestas Patronales"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03090": {
+   "name": "Mutxamel",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-03-01",
+     "name": "Milagro de la Lágrima de la Mare de Déu de Loreto"
+    },
+    {
+     "date": "2027-09-09",
+     "name": "Mare de Déu de Loreto"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03091": {
+   "name": "Murla",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-05",
+     "name": null
+    },
+    {
+     "date": "2027-08-06",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03093": {
+   "name": "Novelda",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "Segundo Lunes de Pascua, fiesta tradicional de carácter local"
+    },
+    {
+     "date": "2027-07-22",
+     "name": "Santa María Magdalena Patrona de Novelda"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03094": {
+   "name": "La Nucia",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente del Cautivador"
+    },
+    {
+     "date": "2027-08-17",
+     "name": "Fiestas de agosto"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03095": {
+   "name": "Ondara",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-07-12",
+     "name": "Virgen de la Soledad"
+    },
+    {
+     "date": "2027-07-26",
+     "name": "Santa Ana"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03096": {
+   "name": "Onil",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-23",
+     "name": "Día de la Virgen"
+    },
+    {
+     "date": "2027-04-29",
+     "name": "Dia de la Entrada -Fiestas de Moros y Cristianos"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03097": {
+   "name": "Orba",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": null
+    },
+    {
+     "date": "2027-05-10",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03098": {
+   "name": "Orxeta",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-09-17",
+     "name": "Fiestas patronales en honor a Santo Tomás de Villanueva y San Nazario"
+    },
+    {
+     "date": "2027-09-20",
+     "name": "Fiestas patronales en honor a Santo Tomás de Villanueva y San Nazario"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03099": {
+   "name": "Orihuela",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-07-17",
+     "name": "Gloriosa Enseña del Oriol y Fiestas de la Reconquista"
+    },
+    {
+     "date": "2027-09-08",
+     "name": "Ntra. Sra. Virgen de Monserrate Patrona de Orihuela"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03100": {
+   "name": "Parcent",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2027-08-10",
+     "name": "San Lorenzo"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03101": {
+   "name": "Pedreguer",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2027-07-15",
+     "name": "San Buenaventura"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03102": {
+   "name": "Pego",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-02-09",
+     "name": "Día de la Crosta"
+    },
+    {
+     "date": "2027-06-30",
+     "name": "Santísimo Ecce-Homo"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03103": {
+   "name": "Penàguila",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-23",
+     "name": "Virgen del Patrocinio"
+    },
+    {
+     "date": "2027-12-07",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03104": {
+   "name": "Petrer",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-05-17",
+     "name": "Fiesta de Moros y Cristianos"
+    },
+    {
+     "date": "2027-10-07",
+     "name": "Fiesta Patronal en honor a la Virgen del Remedio"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03105": {
+   "name": "El Pinós/Pinoso",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-03-25",
+     "name": "Jueves Santo"
+    },
+    {
+     "date": "2027-04-05",
+     "name": "2º lunes de Pascua"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03106": {
+   "name": "Planes",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-10-01",
+     "name": null
+    },
+    {
+     "date": "2027-10-04",
+     "name": "Fiestas Mayores"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03107": {
+   "name": "Polop",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-16",
+     "name": "Fiestas del Porrat"
+    },
+    {
+     "date": "2027-10-04",
+     "name": "Fiestas de San Francisco de Asis"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03109": {
+   "name": "Rafal",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-10-07",
+     "name": null
+    },
+    {
+     "date": "2027-10-08",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03110": {
+   "name": "El Ràfol d'Almúnia",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-12",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210",
+   "note": "The bulletin prints the second day as \"viernes 143de agosto\" (a misprint); only 12 August is listed here."
+  },
+  "03111": {
+   "name": "Redován",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-09-08",
+     "name": null
+    },
+    {
+     "date": "2027-09-29",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03112": {
+   "name": "Relleu",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-09",
+     "name": "Fiestas de San Albert"
+    },
+    {
+     "date": "2027-09-27",
+     "name": "Fiestas de Nuestra Señora del Milagro y los Santos Médicos San Cosme y San Damià"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03113": {
+   "name": "Rojales",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-06-29",
+     "name": "San Pedro Apóstol"
+    },
+    {
+     "date": "2027-10-07",
+     "name": "Virgen del Rosario"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03114": {
+   "name": "La Romana",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "Lunes de San Vicente Ferrer"
+    },
+    {
+     "date": "2027-10-11",
+     "name": "Previo a Festividad del Pilar"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03115": {
+   "name": "Sagra",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": null
+    },
+    {
+     "date": "2027-08-06",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03116": {
+   "name": "Salinas",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-05-31",
+     "name": null
+    },
+    {
+     "date": "2027-06-01",
+     "name": "Fiestas de Moros y cristianos en Honor a la Virgen del Rosario"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03117": {
+   "name": "Sanet y Negrals",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-09-02",
+     "name": null
+    },
+    {
+     "date": "2027-09-03",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03118": {
+   "name": "San Fulgencio",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-10-11",
+     "name": null
+    },
+    {
+     "date": "2027-12-07",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03119": {
+   "name": "Sant Joan d'Alacant",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-06-24",
+     "name": null
+    },
+    {
+     "date": "2027-09-14",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03120": {
+   "name": "San Miguel de Salinas",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-09-28",
+     "name": "Víspera Patrón San Miguel Arcángel"
+    },
+    {
+     "date": "2027-09-29",
+     "name": "Patrón San Miguel Arcángel"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03121": {
+   "name": "Santa Pola",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-07-16",
+     "name": "Virgen del Carmen"
+    },
+    {
+     "date": "2027-09-08",
+     "name": "Virgen de Loreto"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03122": {
+   "name": "Sant Vicent del Raspeig/San Vicente del Raspeig",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "Fiestas Patronales y de Moros y Cristianos"
+    },
+    {
+     "date": "2027-04-06",
+     "name": "Fiestas Patronales y de Moros y Cristianos"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03123": {
+   "name": "Sax",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2027-12-27",
+     "name": "Cabildo"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03124": {
+   "name": "Sella",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-10-04",
+     "name": null
+    },
+    {
+     "date": "2027-10-05",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03125": {
+   "name": "Senija",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-05-03",
+     "name": "Fiestas patronales en honor a la Virgen de los Desamparados de Senija"
+    },
+    {
+     "date": "2027-05-04",
+     "name": "Fiestas patronales en honor a la Virgen de los Desamparados de Senija"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03127": {
+   "name": "Tàrbena",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-09",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210",
+   "note": "The bulletin prints \"9 de agosto, lunes; 9 de agosto, martes\": the second day is not clear (9 August 2027 is a Monday); only 9 August is listed here."
+  },
+  "03128": {
+   "name": "Teulada",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2027-07-15",
+     "name": "Virgen de los Desamparados"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03129": {
+   "name": "Tibi",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2027-07-22",
+     "name": "Día de la Santa"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03130": {
+   "name": "Tollos",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-07-30",
+     "name": "Fiestas patronales"
+    },
+    {
+     "date": "2027-07-31",
+     "name": "Fiestas patronales"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03131": {
+   "name": "Tormos",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": null
+    },
+    {
+     "date": "2027-08-27",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03132": {
+   "name": "La Torre de les Maçanes/Torremanzanas",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-05-07",
+     "name": "San Gregorio"
+    },
+    {
+     "date": "2027-07-26",
+     "name": "Santa Ana"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03133": {
+   "name": "Torrevieja",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2027-07-16",
+     "name": "Virgen del Carmen"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03134": {
+   "name": "La Vall d'Alcalà",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-01-15",
+     "name": "Fiesta de San Antonio"
+    },
+    {
+     "date": "2027-08-09",
+     "name": "Fiesta patronal de Alcalá de la Jovada"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210",
+   "note": "The bulletin prints a weekday that does not match the date (2027-01-15 printed 'lunes' but is a viernes); dates kept as published. The bulletin prints a weekday that does not match the date (2027-08-09 printed 'viernes' but is a lunes); dates kept as published."
+  },
+  "03135": {
+   "name": "La Vall d'Ebo",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2027-08-09",
+     "name": "Fiestas Patronales"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03136": {
+   "name": "La Vall de Gallinera",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-03-25",
+     "name": "Jueves Santo"
+    },
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente Ferrer"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03137": {
+   "name": "La Vall de Laguar",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-03-25",
+     "name": "Jueves Santo"
+    },
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente Ferrer"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03138": {
+   "name": "El Verger",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2027-08-16",
+     "name": "San Roque"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03139": {
+   "name": "La Vila Joiosa/Villajoyosa",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-07-29",
+     "name": "Santa Marta"
+    },
+    {
+     "date": "2027-09-29",
+     "name": "San Miguel"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03140": {
+   "name": "Villena",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2027-09-10",
+     "name": "Día posterior a la celebración de las Fiestas Patronales"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03901": {
+   "name": "Els Poblets",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2027-08-06",
+     "name": "Día del Divino Salvador"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03902": {
+   "name": "Pilar de la Horadada",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-07-30",
+     "name": "Aniversario de la Segregación"
+    },
+    {
+     "date": "2027-10-13",
+     "name": "Día posterior a la festividad de la Virgen del Pilar"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03903": {
+   "name": "Los Montesinos",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-07-30",
+     "name": "Fiestas Segregación del Ayuntamiento"
+    },
+    {
+     "date": "2027-10-11",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
+  },
+  "03904": {
+   "name": "San Isidro",
+   "province": "Alicante",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-10-11",
+     "name": "San Juan XXIII"
+    },
+    {
+     "date": "2027-12-07",
+     "name": "San Ambrosio"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-alicante-210"
   },
   "04001": {
    "name": "Abla",
@@ -18989,6 +21409,2302 @@
    "status": "boletin",
    "source": "boja-2026-210"
   },
+  "12001": {
+   "name": "Atzeneta del Maestrat",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": null
+    },
+    {
+     "date": "2027-05-21",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12002": {
+   "name": "Aín",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-16",
+     "name": "El Cristo"
+    },
+    {
+     "date": "2027-12-07",
+     "name": "San Ambrosio"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136",
+   "note": "The bulletin prints a weekday that does not match the date (2027-08-16 printed 'viernes' but is a lunes); date kept as published."
+  },
+  "12003": {
+   "name": "Albocàsser",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-01-25",
+     "name": "Conversió de Sant Pau"
+    },
+    {
+     "date": "2027-05-17",
+     "name": "Pascua Pentecostés"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12004": {
+   "name": "Alcalà de Xivert",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-29",
+     "name": null
+    },
+    {
+     "date": "2027-08-30",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12005": {
+   "name": "L'Alcora",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-03-30",
+     "name": "La Doblà"
+    },
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12006": {
+   "name": "Alcudia de Veo",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2027-09-29",
+     "name": "San Miguel"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12007": {
+   "name": "Alfondeguilla",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2027-11-15",
+     "name": "San Bartolomé"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12008": {
+   "name": "Algimia de Almonacid",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2027-12-27",
+     "name": "Tercer día de navidad"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12009": {
+   "name": "Almassora",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": null
+    },
+    {
+     "date": "2027-05-22",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12010": {
+   "name": "Almedíjar",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2027-08-09",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12011": {
+   "name": "Almenara",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-16",
+     "name": null
+    },
+    {
+     "date": "2027-09-27",
+     "name": "Lunes de feria"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12012": {
+   "name": "Altura",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": null
+    },
+    {
+     "date": "2027-09-24",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12013": {
+   "name": "Arañuel",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-05-21",
+     "name": "Santa Quiteria"
+    },
+    {
+     "date": "2027-10-01",
+     "name": "San Miguel"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12014": {
+   "name": "Ares del Maestrat",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-03-01",
+     "name": null
+    },
+    {
+     "date": "2027-05-17",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12015": {
+   "name": "Argelita",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-01-18",
+     "name": null
+    },
+    {
+     "date": "2027-05-03",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12016": {
+   "name": "Artana",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": null
+    },
+    {
+     "date": "2027-10-11",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12017": {
+   "name": "Ayódar",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-01-20",
+     "name": null
+    },
+    {
+     "date": "2027-10-04",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12018": {
+   "name": "Azuébar",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-13",
+     "name": null
+    },
+    {
+     "date": "2027-08-16",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12020": {
+   "name": "Barracas",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-06-29",
+     "name": null
+    },
+    {
+     "date": "2027-08-16",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12021": {
+   "name": "Betxí",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": null
+    },
+    {
+     "date": "2027-09-20",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12022": {
+   "name": "Bejís",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-02-03",
+     "name": null
+    },
+    {
+     "date": "2027-09-06",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12024": {
+   "name": "Benafer",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-06",
+     "name": null
+    },
+    {
+     "date": "2027-08-16",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12025": {
+   "name": "Benafigos",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-03-25",
+     "name": "Jueves Santo"
+    },
+    {
+     "date": "2027-09-08",
+     "name": "Día de la festividad de la Ortisella"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12026": {
+   "name": "Benassal",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-05-17",
+     "name": "San Cristóbal"
+    },
+    {
+     "date": "2027-08-16",
+     "name": "San Roque"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12027": {
+   "name": "Benicarló",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-03-18",
+     "name": null
+    },
+    {
+     "date": "2027-08-24",
+     "name": "San Bartolomé"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12028": {
+   "name": "Benicàssim/Benicasim",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-01-22",
+     "name": "San Antonio Abad y Santa Águeda"
+    },
+    {
+     "date": "2027-09-22",
+     "name": "Santo Tomás de Villanueva"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12029": {
+   "name": "Benlloc",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-03-01",
+     "name": "Lunes de Magdalena"
+    },
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12031": {
+   "name": "Borriol",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2027-08-23",
+     "name": "San Bartolomé"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12032": {
+   "name": "Borriana/Burriana",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2027-09-08",
+     "name": "Virgen de la Misericordia"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12033": {
+   "name": "Cabanes",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-05-07",
+     "name": null
+    },
+    {
+     "date": "2027-06-29",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12034": {
+   "name": "Càlig",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": null
+    },
+    {
+     "date": "2027-09-06",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12036": {
+   "name": "Canet lo Roig",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-05-10",
+     "name": "Fiesta de la Mare de Déu"
+    },
+    {
+     "date": "2027-09-27",
+     "name": "Fiesta de San Miquel"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12037": {
+   "name": "Castell de Cabres",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-03-01",
+     "name": null
+    },
+    {
+     "date": "2027-08-10",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12038": {
+   "name": "Castellfort",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-18",
+     "name": null
+    },
+    {
+     "date": "2027-09-08",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12039": {
+   "name": "Castellnovo",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-10-11",
+     "name": null
+    },
+    {
+     "date": "2027-12-07",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12040": {
+   "name": "Castelló de la Plana/Castellón de la Plana",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-03-01",
+     "name": "Lunes de la Magdalena"
+    },
+    {
+     "date": "2027-06-29",
+     "name": "San Pedro"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12041": {
+   "name": "Castillo de Villamalefa",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-09-20",
+     "name": null
+    },
+    {
+     "date": "2027-09-21",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12042": {
+   "name": "Catí",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-05-03",
+     "name": null
+    },
+    {
+     "date": "2027-11-11",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12043": {
+   "name": "Caudiel",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-09-13",
+     "name": "Segundo día de la festividad de la Virgen del Niño Perdido"
+    },
+    {
+     "date": "2027-10-21",
+     "name": "Santa Úrsula"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12044": {
+   "name": "Cervera del Maestre",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-01-20",
+     "name": null
+    },
+    {
+     "date": "2027-09-08",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12045": {
+   "name": "Cinctorres",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-01-29",
+     "name": null
+    },
+    {
+     "date": "2027-08-30",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12046": {
+   "name": "Cirat",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-05-07",
+     "name": null
+    },
+    {
+     "date": "2027-08-20",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12048": {
+   "name": "Cortes de Arenoso",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-01-15",
+     "name": null
+    },
+    {
+     "date": "2027-04-05",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12049": {
+   "name": "Costur",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-30",
+     "name": null
+    },
+    {
+     "date": "2027-08-16",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12050": {
+   "name": "Les Coves de Vinromà",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-10-11",
+     "name": null
+    },
+    {
+     "date": "2027-12-07",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12051": {
+   "name": "Culla",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-05-17",
+     "name": "San Cristóbal"
+    },
+    {
+     "date": "2027-05-28",
+     "name": "San Juan de Peñagolosa"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12052": {
+   "name": "Xert",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": null
+    },
+    {
+     "date": "2027-04-26",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12053": {
+   "name": "Chilches/Xilxes",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2027-09-20",
+     "name": "Día de Almas"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12055": {
+   "name": "Xodos/Chodos",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-03-25",
+     "name": null
+    },
+    {
+     "date": "2027-08-09",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12056": {
+   "name": "Chóvar",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-05-03",
+     "name": "Fiestas patronales"
+    },
+    {
+     "date": "2027-05-04",
+     "name": "Fiestas patronales"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12057": {
+   "name": "Eslida",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2027-08-25",
+     "name": "Santísimo Cristo del Calvario"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12058": {
+   "name": "Espadilla",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-16",
+     "name": null
+    },
+    {
+     "date": "2027-08-25",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12059": {
+   "name": "Fanzara",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-03-01",
+     "name": null
+    },
+    {
+     "date": "2027-10-11",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12060": {
+   "name": "Figueroles",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-05-17",
+     "name": null
+    },
+    {
+     "date": "2027-09-21",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12061": {
+   "name": "Forcall",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-01-18",
+     "name": null
+    },
+    {
+     "date": "2027-08-23",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12063": {
+   "name": "Fuente la Reina",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-02",
+     "name": "Ntra. Sra. de los Ángeles"
+    },
+    {
+     "date": "2027-08-16",
+     "name": "Asunción de la Virgen"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12064": {
+   "name": "Fuentes de Ayódar",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-02-03",
+     "name": null
+    },
+    {
+     "date": "2027-08-16",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12065": {
+   "name": "Gaibiel",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2027-09-06",
+     "name": "El Cristo de la Sed"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12067": {
+   "name": "Geldo",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-09-02",
+     "name": null
+    },
+    {
+     "date": "2027-09-03",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12068": {
+   "name": "Herbers",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-01-22",
+     "name": null
+    },
+    {
+     "date": "2027-08-24",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12069": {
+   "name": "Higueras",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-10-11",
+     "name": null
+    },
+    {
+     "date": "2027-12-07",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12070": {
+   "name": "La Jana",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-02-08",
+     "name": null
+    },
+    {
+     "date": "2027-04-09",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12071": {
+   "name": "Jérica",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-02-05",
+     "name": "Santa Águeda"
+    },
+    {
+     "date": "2027-07-14",
+     "name": "Cristo de la Sangre"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12072": {
+   "name": "Llucena/Lucena del Cid",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-06",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2027-09-29",
+     "name": "San Miguel"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12073": {
+   "name": "Ludiente",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-10-08",
+     "name": null
+    },
+    {
+     "date": "2027-10-11",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12074": {
+   "name": "La Llosa",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": null
+    },
+    {
+     "date": "2027-09-06",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12075": {
+   "name": "La Mata de Morella",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-01-22",
+     "name": "San Antonio Abad"
+    },
+    {
+     "date": "2027-01-25",
+     "name": "San Antonio Abad"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12076": {
+   "name": "Matet",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-01-18",
+     "name": "San Antonio Abad"
+    },
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12077": {
+   "name": "Moncofa",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-07-22",
+     "name": null
+    },
+    {
+     "date": "2027-07-23",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12078": {
+   "name": "Montán",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-20",
+     "name": "San Bernardo Abad"
+    },
+    {
+     "date": "2027-09-21",
+     "name": "Purisima"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12079": {
+   "name": "Montanejos",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-07-26",
+     "name": null
+    },
+    {
+     "date": "2027-09-06",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12080": {
+   "name": "Morella",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-01-07",
+     "name": null
+    },
+    {
+     "date": "2027-01-08",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12081": {
+   "name": "Navajas",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": null
+    },
+    {
+     "date": "2027-12-07",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12082": {
+   "name": "Nules",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2027-08-24",
+     "name": "San Bartolomé"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12083": {
+   "name": "Olocau del Rey",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-16",
+     "name": null
+    },
+    {
+     "date": "2027-12-07",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12084": {
+   "name": "Onda",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-06",
+     "name": null
+    },
+    {
+     "date": "2027-10-25",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12085": {
+   "name": "Orpesa/Oropesa del Mar",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-07-26",
+     "name": null
+    },
+    {
+     "date": "2027-10-04",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12087": {
+   "name": "Palanques",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-01-22",
+     "name": null
+    },
+    {
+     "date": "2027-08-23",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12088": {
+   "name": "Pavías",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2027-11-25",
+     "name": "Santa Catalina"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12089": {
+   "name": "Peníscola/Peñíscola",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": null
+    },
+    {
+     "date": "2027-09-09",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12090": {
+   "name": "Pina de Montalgrao",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-09-08",
+     "name": null
+    },
+    {
+     "date": "2027-09-09",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12091": {
+   "name": "Portell de Morella",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-10-11",
+     "name": null
+    },
+    {
+     "date": "2027-12-07",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12092": {
+   "name": "Puebla de Arenoso",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-06",
+     "name": null
+    },
+    {
+     "date": "2027-09-24",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12093": {
+   "name": "La Pobla de Benifassà",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-30",
+     "name": null
+    },
+    {
+     "date": "2027-12-07",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12094": {
+   "name": "La Pobla Tornesa",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2027-09-27",
+     "name": "San Miguel"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12095": {
+   "name": "Ribesalbes",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-07-10",
+     "name": null
+    },
+    {
+     "date": "2027-10-05",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12096": {
+   "name": "Rossell",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-05-17",
+     "name": null
+    },
+    {
+     "date": "2027-12-07",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12097": {
+   "name": "Sacañet",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-07-23",
+     "name": null
+    },
+    {
+     "date": "2027-12-03",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12098": {
+   "name": "La Salzadella",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-02-02",
+     "name": "Candelera"
+    },
+    {
+     "date": "2027-02-03",
+     "name": "San Blas"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12099": {
+   "name": "Sant Jordi/San Jorge",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-23",
+     "name": null
+    },
+    {
+     "date": "2027-10-11",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12100": {
+   "name": "Sant Mateu",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-09-21",
+     "name": null
+    },
+    {
+     "date": "2027-10-11",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12101": {
+   "name": "San Rafael del Río",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-03-25",
+     "name": "Jueves Santo"
+    },
+    {
+     "date": "2027-07-16",
+     "name": "Virgen del Carmen"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12102": {
+   "name": "Santa Magdalena de Pulpis",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-03-18",
+     "name": null
+    },
+    {
+     "date": "2027-04-05",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12103": {
+   "name": "La Serratella",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-03-01",
+     "name": null
+    },
+    {
+     "date": "2027-08-02",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12104": {
+   "name": "Segorbe",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-09-01",
+     "name": "Nuestra Señora de la Esperanza"
+    },
+    {
+     "date": "2027-09-03",
+     "name": "Nuestra Señora de Loreto"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12105": {
+   "name": "Sierra Engarcerán",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-06-24",
+     "name": null
+    },
+    {
+     "date": "2027-08-24",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12106": {
+   "name": "Soneja",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-09-23",
+     "name": "Santísimo Cristo de la Sangre"
+    },
+    {
+     "date": "2027-09-24",
+     "name": "San Miguel Arcángel"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12107": {
+   "name": "Sot de Ferrer",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-06-14",
+     "name": null
+    },
+    {
+     "date": "2027-10-11",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12108": {
+   "name": "Suera/Sueras",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2027-10-25",
+     "name": "Cristo de la Clemencia"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12109": {
+   "name": "Tales",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-11-08",
+     "name": null
+    },
+    {
+     "date": "2027-11-09",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12110": {
+   "name": "Teresa",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2027-10-15",
+     "name": "Santa Teresa"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12111": {
+   "name": "Tírig",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-10-11",
+     "name": null
+    },
+    {
+     "date": "2027-12-07",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12112": {
+   "name": "Todolella",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-02-01",
+     "name": null
+    },
+    {
+     "date": "2027-08-23",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12113": {
+   "name": "Toga",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-02",
+     "name": null
+    },
+    {
+     "date": "2027-08-03",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12114": {
+   "name": "Torás",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-09-08",
+     "name": "Virgen de la cueva Santa"
+    },
+    {
+     "date": "2027-09-09",
+     "name": "Santísimo Cristo de la Misericordia"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12115": {
+   "name": "El Toro",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-16",
+     "name": null
+    },
+    {
+     "date": "2027-12-07",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12116": {
+   "name": "Torralba del Pinar",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-06",
+     "name": "Stmo. Salvador"
+    },
+    {
+     "date": "2027-12-03",
+     "name": "Santa Bárbara"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12117": {
+   "name": "Torreblanca",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-01-22",
+     "name": null
+    },
+    {
+     "date": "2027-08-24",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12118": {
+   "name": "Torrechiva",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-01-18",
+     "name": null
+    },
+    {
+     "date": "2027-08-16",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12119": {
+   "name": "La Torre d'en Besora",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-01-22",
+     "name": null
+    },
+    {
+     "date": "2027-08-24",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12120": {
+   "name": "La Torre d'en Doménec",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-02",
+     "name": "San Onofre"
+    },
+    {
+     "date": "2027-08-03",
+     "name": "Sagrado Corazón de Jesús"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12121": {
+   "name": "Traiguera",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": null
+    },
+    {
+     "date": "2027-10-11",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12122": {
+   "name": "Les Useres/Useras",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-30",
+     "name": null
+    },
+    {
+     "date": "2027-08-06",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12123": {
+   "name": "Vallat",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-05-03",
+     "name": "Santa Cruz"
+    },
+    {
+     "date": "2027-12-27",
+     "name": "San Juan Evangelista"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12124": {
+   "name": "Vall d'Alba",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": null
+    },
+    {
+     "date": "2027-10-11",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12125": {
+   "name": "Vall de Almonacid",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": null
+    },
+    {
+     "date": "2027-08-06",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12126": {
+   "name": "La Vall d'Uixó",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente Ferrer"
+    },
+    {
+     "date": "2027-10-11",
+     "name": "Sagrada Familia"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12127": {
+   "name": "Vallibona",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-10-11",
+     "name": null
+    },
+    {
+     "date": "2027-12-07",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12128": {
+   "name": "Vilafamés",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-03-08",
+     "name": null
+    },
+    {
+     "date": "2027-04-05",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12129": {
+   "name": "Vilafranca/Villafranca del Cid",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-05-17",
+     "name": null
+    },
+    {
+     "date": "2027-09-08",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12130": {
+   "name": "Villahermosa del Río",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-01-18",
+     "name": null
+    },
+    {
+     "date": "2027-08-25",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12131": {
+   "name": "Villamalur",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-05-10",
+     "name": null
+    },
+    {
+     "date": "2027-08-23",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12132": {
+   "name": "Vilanova d'Alcolea",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-01-18",
+     "name": null
+    },
+    {
+     "date": "2027-08-23",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12133": {
+   "name": "Villanueva de Viver",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-08-20",
+     "name": null
+    },
+    {
+     "date": "2027-08-21",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12134": {
+   "name": "Vilar de Canes",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2027-08-10",
+     "name": "San Lorenzo"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12135": {
+   "name": "Vila-real",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": null
+    },
+    {
+     "date": "2027-05-17",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12136": {
+   "name": "La Vilavella",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2027-04-05",
+     "name": "San Vicente"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12137": {
+   "name": "Villores",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": null
+    },
+    {
+     "date": "2027-12-07",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12138": {
+   "name": "Vinaròs",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-01-20",
+     "name": "San Sebastián"
+    },
+    {
+     "date": "2027-06-24",
+     "name": "San Juan"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12139": {
+   "name": "Vistabella del Maestrat",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-03-01",
+     "name": null
+    },
+    {
+     "date": "2027-06-25",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12140": {
+   "name": "Viver",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-09",
+     "name": "Fiesta local de San Francisco"
+    },
+    {
+     "date": "2027-09-24",
+     "name": "Fiesta de San Miguel"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12141": {
+   "name": "Zorita del Maestrazgo",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-01-15",
+     "name": null
+    },
+    {
+     "date": "2027-09-10",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12142": {
+   "name": "Zucaina",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-03-01",
+     "name": null
+    },
+    {
+     "date": "2027-07-26",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12901": {
+   "name": "Les Alqueries/Alquerías del Niño Perdido",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-06-25",
+     "name": null
+    },
+    {
+     "date": "2027-10-08",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
+  "12902": {
+   "name": "Sant Joan de Moró",
+   "province": "Castellón",
+   "region": "comunitat-valenciana",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": null
+    },
+    {
+     "date": "2027-06-24",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-castellon-136"
+  },
   "13001": {
    "name": "Abenójar",
    "province": "Ciudad Real",
@@ -23716,6 +28432,4587 @@
    ],
    "status": "boletin",
    "source": "bop-coruna-187"
+  },
+  "16001": {
+   "name": "Abia de la Obispalía",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-24",
+     "name": null
+    },
+    {
+     "date": "2027-09-30",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16002": {
+   "name": "El Acebrón",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-01-20",
+     "name": null
+    },
+    {
+     "date": "2027-05-17",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16003": {
+   "name": "Alarcón",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-01-20",
+     "name": null
+    },
+    {
+     "date": "2027-09-14",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16004": {
+   "name": "Albaladejo del Cuende",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-13",
+     "name": null
+    },
+    {
+     "date": "2027-05-15",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16005": {
+   "name": "Albalate de las Nogueras",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-03",
+     "name": null
+    },
+    {
+     "date": "2027-10-07",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16006": {
+   "name": "Albendea",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-06-11",
+     "name": null
+    },
+    {
+     "date": "2027-09-08",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16007": {
+   "name": "La Alberca de Záncara",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-09-14",
+     "name": null
+    },
+    {
+     "date": "2027-09-15",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16008": {
+   "name": "Alcalá de la Vega",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-06-10",
+     "name": null
+    },
+    {
+     "date": "2027-06-11",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130",
+   "note": "The bulletin lists separate days for: El Cubillo 2027-01-14, 2027-01-15.",
+   "localities": [
+    {
+     "name": "El Cubillo",
+     "holidays": [
+      {
+       "date": "2027-01-14",
+       "name": null
+      },
+      {
+       "date": "2027-01-15",
+       "name": null
+      }
+     ]
+    }
+   ]
+  },
+  "16009": {
+   "name": "Alcantud",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-07",
+     "name": null
+    },
+    {
+     "date": "2027-05-10",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16010": {
+   "name": "Alcázar del Rey",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-14",
+     "name": null
+    },
+    {
+     "date": "2027-09-14",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16011": {
+   "name": "Alcohujate",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-08-23",
+     "name": null
+    },
+    {
+     "date": "2027-12-09",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16012": {
+   "name": "Alconchel de la Estrella",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-07",
+     "name": null
+    },
+    {
+     "date": "2027-08-16",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16013": {
+   "name": "Algarra",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-04-26",
+     "name": null
+    },
+    {
+     "date": "2027-05-17",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16014": {
+   "name": "Aliaguilla",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-06-14",
+     "name": null
+    },
+    {
+     "date": "2027-08-16",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16015": {
+   "name": "La Almarcha",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-09",
+     "name": null
+    },
+    {
+     "date": "2027-08-24",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16016": {
+   "name": "Almendros",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-08-27",
+     "name": null
+    },
+    {
+     "date": "2027-09-08",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16017": {
+   "name": "Almodóvar del Pinar",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-24",
+     "name": null
+    },
+    {
+     "date": "2027-08-05",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16018": {
+   "name": "Almonacid del Marquesado",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-04",
+     "name": null
+    },
+    {
+     "date": "2027-05-28",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16019": {
+   "name": "Altarejos",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-28",
+     "name": null
+    },
+    {
+     "date": "2027-09-08",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130",
+   "note": "The bulletin lists separate days for: Poveda de la Obispalía 2027-05-28, 2027-09-08.",
+   "localities": [
+    {
+     "name": "Poveda de la Obispalía",
+     "holidays": [
+      {
+       "date": "2027-05-28",
+       "name": null
+      },
+      {
+       "date": "2027-09-08",
+       "name": null
+      }
+     ]
+    }
+   ]
+  },
+  "16020": {
+   "name": "Arandilla del Arroyo",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-17",
+     "name": null
+    },
+    {
+     "date": "2027-09-16",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16022": {
+   "name": "Arcos de la Sierra",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-06-14",
+     "name": null
+    },
+    {
+     "date": "2027-08-24",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16023": {
+   "name": "Chillarón de Cuenca",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-22",
+     "name": null
+    },
+    {
+     "date": "2027-09-14",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130",
+   "note": "The bulletin lists separate days for: Arcos de la Cantera 2027-06-14, 2027-11-18.",
+   "localities": [
+    {
+     "name": "Arcos de la Cantera",
+     "holidays": [
+      {
+       "date": "2027-06-14",
+       "name": null
+      },
+      {
+       "date": "2027-11-18",
+       "name": null
+      }
+     ]
+    }
+   ]
+  },
+  "16024": {
+   "name": "Arguisuelas",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-08-10",
+     "name": null
+    },
+    {
+     "date": "2027-10-04",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16025": {
+   "name": "Arrancacepas",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-09-01",
+     "name": null
+    },
+    {
+     "date": "2027-12-07",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16026": {
+   "name": "Atalaya del Cañavate",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-04",
+     "name": null
+    },
+    {
+     "date": "2027-05-28",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16027": {
+   "name": "Barajas de Melo",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-09-08",
+     "name": null
+    },
+    {
+     "date": "2027-09-09",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16029": {
+   "name": "Barchín del Hoyo",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-28",
+     "name": null
+    },
+    {
+     "date": "2027-10-01",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16030": {
+   "name": "Bascuñana de San Pedro",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-06-29",
+     "name": null
+    },
+    {
+     "date": "2027-08-16",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16031": {
+   "name": "Beamud",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-08-12",
+     "name": null
+    },
+    {
+     "date": "2027-08-13",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16032": {
+   "name": "Belinchón",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-10",
+     "name": null
+    },
+    {
+     "date": "2027-10-11",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16033": {
+   "name": "Belmonte",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-08-24",
+     "name": null
+    },
+    {
+     "date": "2027-09-13",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16034": {
+   "name": "Belmontejo",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": null
+    },
+    {
+     "date": "2027-09-14",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16035": {
+   "name": "Beteta",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-09-17",
+     "name": null
+    },
+    {
+     "date": "2027-09-20",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16036": {
+   "name": "Boniches",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-17",
+     "name": null
+    },
+    {
+     "date": "2027-08-16",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16038": {
+   "name": "Buciegas",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-06-11",
+     "name": null
+    },
+    {
+     "date": "2027-08-02",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16039": {
+   "name": "Buenache de Alarcón",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-14",
+     "name": null
+    },
+    {
+     "date": "2027-09-16",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16040": {
+   "name": "Buenache de la Sierra",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-08-16",
+     "name": null
+    },
+    {
+     "date": "2027-10-07",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16041": {
+   "name": "Buendía",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-10",
+     "name": null
+    },
+    {
+     "date": "2027-09-13",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16042": {
+   "name": "Campillo de Altobuey",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-28",
+     "name": null
+    },
+    {
+     "date": "2027-09-08",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16043": {
+   "name": "Campillos-Paravientos",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-01-20",
+     "name": null
+    },
+    {
+     "date": "2027-08-16",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16044": {
+   "name": "Campillos-Sierra",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-06-14",
+     "name": null
+    },
+    {
+     "date": "2027-08-20",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16045": {
+   "name": "Canalejas del Arroyo",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-17",
+     "name": null
+    },
+    {
+     "date": "2027-09-08",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16046": {
+   "name": "Cañada del Hoyo",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-25",
+     "name": null
+    },
+    {
+     "date": "2027-09-14",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16047": {
+   "name": "Cañada Juncosa",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-03-19",
+     "name": null
+    },
+    {
+     "date": "2027-05-14",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16048": {
+   "name": "Cañamares",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-08-17",
+     "name": null
+    },
+    {
+     "date": "2027-11-12",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16049": {
+   "name": "El Cañavate",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-09-03",
+     "name": null
+    },
+    {
+     "date": "2027-09-06",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16050": {
+   "name": "Cañaveras",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-09-06",
+     "name": null
+    },
+    {
+     "date": "2027-11-15",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16051": {
+   "name": "Cañaveruelas",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-02",
+     "name": null
+    },
+    {
+     "date": "2027-05-15",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16052": {
+   "name": "Cañete",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-28",
+     "name": null
+    },
+    {
+     "date": "2027-09-08",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16053": {
+   "name": "Cañizares",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-09-08",
+     "name": null
+    },
+    {
+     "date": "2027-09-09",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16055": {
+   "name": "Carboneras de Guadazaón",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-10",
+     "name": null
+    },
+    {
+     "date": "2027-08-16",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16056": {
+   "name": "Cardenete",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-03-29",
+     "name": null
+    },
+    {
+     "date": "2027-10-11",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16057": {
+   "name": "Carrascosa",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-07-16",
+     "name": null
+    },
+    {
+     "date": "2027-12-11",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16058": {
+   "name": "Carrascosa de Haro",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": null
+    },
+    {
+     "date": "2027-06-14",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16060": {
+   "name": "Casas de Benítez",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-04",
+     "name": null
+    },
+    {
+     "date": "2027-05-14",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16061": {
+   "name": "Casas de Fernando Alonso",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-04",
+     "name": null
+    },
+    {
+     "date": "2027-08-25",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16062": {
+   "name": "Casas de Garcimolina",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-06-24",
+     "name": null
+    },
+    {
+     "date": "2027-08-30",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16063": {
+   "name": "Casas de Guijarro",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-01-18",
+     "name": null
+    },
+    {
+     "date": "2027-05-03",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16064": {
+   "name": "Casas de Haro",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-01-28",
+     "name": null
+    },
+    {
+     "date": "2027-08-30",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16065": {
+   "name": "Casas de los Pinos",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-02",
+     "name": null
+    },
+    {
+     "date": "2027-05-17",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130",
+   "note": "The bulletin lists separate days for: Casas de Roldan 2027-01-20, 2027-05-17; Los Estesos 2027-02-02, 2027-05-17.",
+   "localities": [
+    {
+     "name": "Casas de Roldan",
+     "holidays": [
+      {
+       "date": "2027-01-20",
+       "name": null
+      },
+      {
+       "date": "2027-05-17",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Los Estesos",
+     "holidays": [
+      {
+       "date": "2027-02-02",
+       "name": null
+      },
+      {
+       "date": "2027-05-17",
+       "name": null
+      }
+     ]
+    }
+   ]
+  },
+  "16066": {
+   "name": "Casasimarro",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-08-24",
+     "name": null
+    },
+    {
+     "date": "2027-12-27",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16067": {
+   "name": "Castejón",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-03",
+     "name": null
+    },
+    {
+     "date": "2027-05-17",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16068": {
+   "name": "Castillejo de Iniesta",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-08-28",
+     "name": null
+    },
+    {
+     "date": "2027-08-30",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16070": {
+   "name": "Castillejo-Sierra",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-08-13",
+     "name": null
+    },
+    {
+     "date": "2027-09-20",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16071": {
+   "name": "Castillo-Albaráñez",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-04-26",
+     "name": null
+    },
+    {
+     "date": "2027-12-13",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16072": {
+   "name": "Castillo de Garcimuñoz",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-08-12",
+     "name": null
+    },
+    {
+     "date": "2027-08-13",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16073": {
+   "name": "Cervera del Llano",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-02",
+     "name": null
+    },
+    {
+     "date": "2027-08-12",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16074": {
+   "name": "La Cierva",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-03",
+     "name": null
+    },
+    {
+     "date": "2027-10-04",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16078": {
+   "name": "Cuenca",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-06-01",
+     "name": null
+    },
+    {
+     "date": "2027-09-21",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130",
+   "note": "The bulletin lists separate days for: Cólliga 2027-06-14, 2027-08-24; Colliguilla 2027-06-24, 2027-07-16; la Melgosa 2027-06-01, 2027-09-21; Mohorte 2027-06-01, 2027-09-21; Nohales 2027-04-17, 2027-09-14; Tondos 2027-08-16, 2027-09-29; Valdecabras 2027-05-15, 2027-08-16; Villanueva de Los Escuderos 2027-06-14, 2027-08-16.",
+   "localities": [
+    {
+     "name": "Cólliga",
+     "holidays": [
+      {
+       "date": "2027-06-14",
+       "name": null
+      },
+      {
+       "date": "2027-08-24",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Colliguilla",
+     "holidays": [
+      {
+       "date": "2027-06-24",
+       "name": null
+      },
+      {
+       "date": "2027-07-16",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "la Melgosa",
+     "holidays": [
+      {
+       "date": "2027-06-01",
+       "name": null
+      },
+      {
+       "date": "2027-09-21",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Mohorte",
+     "holidays": [
+      {
+       "date": "2027-06-01",
+       "name": null
+      },
+      {
+       "date": "2027-09-21",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Nohales",
+     "holidays": [
+      {
+       "date": "2027-04-17",
+       "name": null
+      },
+      {
+       "date": "2027-09-14",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Tondos",
+     "holidays": [
+      {
+       "date": "2027-08-16",
+       "name": null
+      },
+      {
+       "date": "2027-09-29",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Valdecabras",
+     "holidays": [
+      {
+       "date": "2027-05-15",
+       "name": null
+      },
+      {
+       "date": "2027-08-16",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Villanueva de Los Escuderos",
+     "holidays": [
+      {
+       "date": "2027-06-14",
+       "name": null
+      },
+      {
+       "date": "2027-08-16",
+       "name": null
+      }
+     ]
+    }
+   ]
+  },
+  "16079": {
+   "name": "Cueva del Hierro",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-09-01",
+     "name": null
+    },
+    {
+     "date": "2027-09-02",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16081": {
+   "name": "Chumillas",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-04-29",
+     "name": null
+    },
+    {
+     "date": "2027-05-06",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16082": {
+   "name": "Enguídanos",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-03",
+     "name": null
+    },
+    {
+     "date": "2027-08-16",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16083": {
+   "name": "Fresneda de Altarejos",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-08-24",
+     "name": null
+    },
+    {
+     "date": "2027-08-25",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16084": {
+   "name": "Fresneda de la Sierra",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-03",
+     "name": null
+    },
+    {
+     "date": "2027-09-29",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16085": {
+   "name": "La Frontera",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": null
+    },
+    {
+     "date": "2027-11-30",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16086": {
+   "name": "Fuente de Pedro Naharro",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-05",
+     "name": null
+    },
+    {
+     "date": "2027-09-20",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16087": {
+   "name": "Fuentelespino de Haro",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-06-14",
+     "name": null
+    },
+    {
+     "date": "2027-10-27",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16088": {
+   "name": "Fuentelespino de Moya",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-22",
+     "name": null
+    },
+    {
+     "date": "2027-09-14",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16089": {
+   "name": "Fuentes",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-06-14",
+     "name": null
+    },
+    {
+     "date": "2027-10-04",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16091": {
+   "name": "Fuertescusa",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-10-07",
+     "name": null
+    },
+    {
+     "date": "2027-11-11",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16092": {
+   "name": "Gabaldón",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-17",
+     "name": null
+    },
+    {
+     "date": "2027-07-26",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16093": {
+   "name": "Garaballa",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-01-16",
+     "name": null
+    },
+    {
+     "date": "2027-09-09",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16094": {
+   "name": "Gascueña",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-07-12",
+     "name": null
+    },
+    {
+     "date": "2027-08-26",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16095": {
+   "name": "Graja de Campalbo",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-01-20",
+     "name": null
+    },
+    {
+     "date": "2027-04-29",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16096": {
+   "name": "Graja de Iniesta",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-04-23",
+     "name": null
+    },
+    {
+     "date": "2027-05-03",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16097": {
+   "name": "Henarejos",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-03-19",
+     "name": null
+    },
+    {
+     "date": "2027-09-08",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16098": {
+   "name": "El Herrumblar",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-01-28",
+     "name": null
+    },
+    {
+     "date": "2027-09-08",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16099": {
+   "name": "La Hinojosa",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-20",
+     "name": null
+    },
+    {
+     "date": "2027-08-20",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16100": {
+   "name": "Los Hinojosos",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-28",
+     "name": null
+    },
+    {
+     "date": "2027-10-11",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16101": {
+   "name": "El Hito",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-28",
+     "name": null
+    },
+    {
+     "date": "2027-12-07",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16102": {
+   "name": "Honrubia",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-04",
+     "name": null
+    },
+    {
+     "date": "2027-09-20",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16103": {
+   "name": "Hontanaya",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-14",
+     "name": null
+    },
+    {
+     "date": "2027-09-08",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16104": {
+   "name": "Hontecillas",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-01-16",
+     "name": null
+    },
+    {
+     "date": "2027-08-14",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16106": {
+   "name": "Horcajo de Santiago",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-09-17",
+     "name": null
+    },
+    {
+     "date": "2027-12-09",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16107": {
+   "name": "Huélamo",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-09-03",
+     "name": null
+    },
+    {
+     "date": "2027-10-11",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16108": {
+   "name": "Huelves",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-10",
+     "name": null
+    },
+    {
+     "date": "2027-09-29",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16109": {
+   "name": "Huérguina",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-28",
+     "name": null
+    },
+    {
+     "date": "2027-08-09",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16110": {
+   "name": "Huerta de la Obispalía",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-04",
+     "name": null
+    },
+    {
+     "date": "2027-09-08",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16111": {
+   "name": "Huerta del Marquesado",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-06-12",
+     "name": null
+    },
+    {
+     "date": "2027-07-22",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16112": {
+   "name": "Huete",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-07",
+     "name": null
+    },
+    {
+     "date": "2027-05-28",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16113": {
+   "name": "Iniesta",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-04",
+     "name": null
+    },
+    {
+     "date": "2027-08-25",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16115": {
+   "name": "Laguna del Marquesado",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-06-14",
+     "name": null
+    },
+    {
+     "date": "2027-08-24",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16116": {
+   "name": "Lagunaseca",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-08-16",
+     "name": null
+    },
+    {
+     "date": "2027-09-08",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16117": {
+   "name": "Landete",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-25",
+     "name": null
+    },
+    {
+     "date": "2027-08-17",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16118": {
+   "name": "Ledaña",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-04",
+     "name": null
+    },
+    {
+     "date": "2027-08-16",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16119": {
+   "name": "Leganiel",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-09-17",
+     "name": null
+    },
+    {
+     "date": "2027-09-20",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16121": {
+   "name": "Las Majadas",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-03",
+     "name": null
+    },
+    {
+     "date": "2027-09-08",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16122": {
+   "name": "Mariana",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-09-13",
+     "name": null
+    },
+    {
+     "date": "2027-09-14",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16123": {
+   "name": "Masegosa",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-10-01",
+     "name": null
+    },
+    {
+     "date": "2027-10-04",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16124": {
+   "name": "Las Mesas",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-01-14",
+     "name": null
+    },
+    {
+     "date": "2027-03-19",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16125": {
+   "name": "Minglanilla",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": null
+    },
+    {
+     "date": "2027-09-14",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16126": {
+   "name": "Mira",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-01-20",
+     "name": null
+    },
+    {
+     "date": "2027-05-28",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16128": {
+   "name": "Monreal del Llano",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": null
+    },
+    {
+     "date": "2027-08-27",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16129": {
+   "name": "Montalbanejo",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": null
+    },
+    {
+     "date": "2027-09-14",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16130": {
+   "name": "Montalbo",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-09-29",
+     "name": null
+    },
+    {
+     "date": "2027-09-30",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16131": {
+   "name": "Monteagudo de las Salinas",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-06-14",
+     "name": null
+    },
+    {
+     "date": "2027-08-16",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16132": {
+   "name": "Mota de Altarejos",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-08-09",
+     "name": null
+    },
+    {
+     "date": "2027-08-10",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16133": {
+   "name": "Mota del Cuervo",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-08-09",
+     "name": null
+    },
+    {
+     "date": "2027-08-27",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16134": {
+   "name": "Motilla del Palancar",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-09-01",
+     "name": null
+    },
+    {
+     "date": "2027-12-09",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16135": {
+   "name": "Moya",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-08-09",
+     "name": null
+    },
+    {
+     "date": "2027-08-18",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16137": {
+   "name": "Narboneta",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-09-30",
+     "name": null
+    },
+    {
+     "date": "2027-12-17",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16139": {
+   "name": "Olivares de Júcar",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-14",
+     "name": null
+    },
+    {
+     "date": "2027-08-16",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16140": {
+   "name": "Olmeda de la Cuesta",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-01-20",
+     "name": null
+    },
+    {
+     "date": "2027-05-14",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16141": {
+   "name": "Olmeda del Rey",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-08-05",
+     "name": null
+    },
+    {
+     "date": "2027-09-14",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16142": {
+   "name": "Olmedilla de Alarcón",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-01-18",
+     "name": null
+    },
+    {
+     "date": "2027-08-16",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16143": {
+   "name": "Olmedilla de Eliz",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": null
+    },
+    {
+     "date": "2027-11-30",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16145": {
+   "name": "Osa de la Vega",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-04-23",
+     "name": null
+    },
+    {
+     "date": "2027-09-13",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16146": {
+   "name": "Pajarón",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-02",
+     "name": null
+    },
+    {
+     "date": "2027-09-01",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16147": {
+   "name": "Pajaroncillo",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-08-16",
+     "name": null
+    },
+    {
+     "date": "2027-08-31",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16148": {
+   "name": "Palomares del Campo",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-04-26",
+     "name": null
+    },
+    {
+     "date": "2027-09-24",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16149": {
+   "name": "Palomera",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-10",
+     "name": null
+    },
+    {
+     "date": "2027-06-15",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16150": {
+   "name": "Paracuellos",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-04",
+     "name": null
+    },
+    {
+     "date": "2027-09-13",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16151": {
+   "name": "Paredes",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": null
+    },
+    {
+     "date": "2027-11-30",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16152": {
+   "name": "La Parra de las Vegas",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-14",
+     "name": null
+    },
+    {
+     "date": "2027-09-14",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16153": {
+   "name": "El Pedernoso",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-07-26",
+     "name": null
+    },
+    {
+     "date": "2027-07-27",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16154": {
+   "name": "Las Pedroñeras",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": null
+    },
+    {
+     "date": "2027-09-01",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16155": {
+   "name": "El Peral",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-03",
+     "name": null
+    },
+    {
+     "date": "2027-09-27",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16156": {
+   "name": "La Peraleja",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-03",
+     "name": null
+    },
+    {
+     "date": "2027-09-08",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16157": {
+   "name": "La Pesquera",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-28",
+     "name": null
+    },
+    {
+     "date": "2027-08-06",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16158": {
+   "name": "El Picazo",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-28",
+     "name": null
+    },
+    {
+     "date": "2027-10-04",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16160": {
+   "name": "Pineda de Gigüela",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-07-26",
+     "name": null
+    },
+    {
+     "date": "2027-10-04",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16161": {
+   "name": "Piqueras del Castillo",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-08",
+     "name": null
+    },
+    {
+     "date": "2027-08-23",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16162": {
+   "name": "Portalrubio de Guadamejud",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-06-14",
+     "name": null
+    },
+    {
+     "date": "2027-08-17",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16163": {
+   "name": "Portilla",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-08-16",
+     "name": null
+    },
+    {
+     "date": "2027-09-14",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16165": {
+   "name": "Poyatos",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-07-22",
+     "name": null
+    },
+    {
+     "date": "2027-07-24",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16166": {
+   "name": "Pozoamargo",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-08",
+     "name": null
+    },
+    {
+     "date": "2027-04-26",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16167": {
+   "name": "Pozorrubio de Santiago",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-04",
+     "name": null
+    },
+    {
+     "date": "2027-08-23",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16169": {
+   "name": "El Pozuelo",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-06-14",
+     "name": null
+    },
+    {
+     "date": "2027-09-13",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16170": {
+   "name": "Priego",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-09-13",
+     "name": null
+    },
+    {
+     "date": "2027-09-14",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16171": {
+   "name": "El Provencio",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-08-16",
+     "name": null
+    },
+    {
+     "date": "2027-08-17",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16172": {
+   "name": "Puebla de Almenara",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-14",
+     "name": null
+    },
+    {
+     "date": "2027-09-08",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16173": {
+   "name": "El Valle de Altomira",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [],
+   "status": "boletin",
+   "source": "bop-cuenca-130",
+   "note": "The bulletin gives no municipality-wide days, only separate days for each núcleo (see localities).",
+   "localities": [
+    {
+     "name": "Garcinarro",
+     "holidays": [
+      {
+       "date": "2027-05-14",
+       "name": null
+      },
+      {
+       "date": "2027-08-13",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Mazarulleque",
+     "holidays": [
+      {
+       "date": "2027-05-14",
+       "name": null
+      },
+      {
+       "date": "2027-08-13",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Jabalera",
+     "holidays": [
+      {
+       "date": "2027-02-03",
+       "name": null
+      },
+      {
+       "date": "2027-05-14",
+       "name": null
+      }
+     ]
+    }
+   ]
+  },
+  "16174": {
+   "name": "Puebla del Salvador",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-28",
+     "name": null
+    },
+    {
+     "date": "2027-08-06",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16175": {
+   "name": "Quintanar del Rey",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": null
+    },
+    {
+     "date": "2027-08-16",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16176": {
+   "name": "Rada de Haro",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-06",
+     "name": null
+    },
+    {
+     "date": "2027-08-16",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16177": {
+   "name": "Reíllo",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-07-27",
+     "name": null
+    },
+    {
+     "date": "2027-08-17",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16181": {
+   "name": "Rozalén del Monte",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-22",
+     "name": null
+    },
+    {
+     "date": "2027-06-11",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16185": {
+   "name": "Saceda-Trasierra",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-24",
+     "name": null
+    },
+    {
+     "date": "2027-09-14",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16186": {
+   "name": "Saelices",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-09-14",
+     "name": null
+    },
+    {
+     "date": "2027-09-15",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16187": {
+   "name": "Salinas del Manzano",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-08-16",
+     "name": null
+    },
+    {
+     "date": "2027-10-04",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16188": {
+   "name": "Salmeroncillos",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-03-19",
+     "name": null
+    },
+    {
+     "date": "2027-06-14",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16189": {
+   "name": "Salvacañete",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-28",
+     "name": null
+    },
+    {
+     "date": "2027-09-08",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16190": {
+   "name": "San Clemente",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-17",
+     "name": null
+    },
+    {
+     "date": "2027-08-19",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16191": {
+   "name": "San Lorenzo de la Parrilla",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-03",
+     "name": null
+    },
+    {
+     "date": "2027-08-10",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16192": {
+   "name": "San Martín de Boniches",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-08-13",
+     "name": null
+    },
+    {
+     "date": "2027-11-12",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16193": {
+   "name": "San Pedro Palmiches",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-17",
+     "name": null
+    },
+    {
+     "date": "2027-08-02",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16194": {
+   "name": "Santa Cruz de Moya",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-03",
+     "name": null
+    },
+    {
+     "date": "2027-05-25",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16195": {
+   "name": "Santa María del Campo Rus",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-01-18",
+     "name": null
+    },
+    {
+     "date": "2027-09-08",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16196": {
+   "name": "Santa María de los Llanos",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": null
+    },
+    {
+     "date": "2027-08-16",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16197": {
+   "name": "Santa María del Val",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-09-13",
+     "name": null
+    },
+    {
+     "date": "2027-09-14",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16198": {
+   "name": "Sisante",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-04",
+     "name": null
+    },
+    {
+     "date": "2027-09-14",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16199": {
+   "name": "Solera de Gabaldón",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-02",
+     "name": null
+    },
+    {
+     "date": "2027-05-06",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16202": {
+   "name": "Talayuelas",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-01-20",
+     "name": null
+    },
+    {
+     "date": "2027-06-14",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16203": {
+   "name": "Tarancón",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-01-28",
+     "name": null
+    },
+    {
+     "date": "2027-09-08",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16204": {
+   "name": "Tébar",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-24",
+     "name": null
+    },
+    {
+     "date": "2027-09-10",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16205": {
+   "name": "Tejadillos",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-07-16",
+     "name": null
+    },
+    {
+     "date": "2027-08-05",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16206": {
+   "name": "Tinajas",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-03",
+     "name": null
+    },
+    {
+     "date": "2027-08-23",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16209": {
+   "name": "Torralba",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-14",
+     "name": null
+    },
+    {
+     "date": "2027-12-20",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16211": {
+   "name": "Torrejoncillo del Rey",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-03",
+     "name": null
+    },
+    {
+     "date": "2027-08-27",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130",
+   "note": "The bulletin lists separate days for: Horcajada de la Torre 2027-08-20, 2027-09-08; Naharros 2027-05-27, 2027-08-13; Villar del Aguila 2027-01-20, 2027-08-06; Villar del Horno 2027-01-20, 2027-09-08; Villarejo Sobrehuerta 2027-07-27, 2027-09-09.",
+   "localities": [
+    {
+     "name": "Horcajada de la Torre",
+     "holidays": [
+      {
+       "date": "2027-08-20",
+       "name": null
+      },
+      {
+       "date": "2027-09-08",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Naharros",
+     "holidays": [
+      {
+       "date": "2027-05-27",
+       "name": null
+      },
+      {
+       "date": "2027-08-13",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Villar del Aguila",
+     "holidays": [
+      {
+       "date": "2027-01-20",
+       "name": null
+      },
+      {
+       "date": "2027-08-06",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Villar del Horno",
+     "holidays": [
+      {
+       "date": "2027-01-20",
+       "name": null
+      },
+      {
+       "date": "2027-09-08",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Villarejo Sobrehuerta",
+     "holidays": [
+      {
+       "date": "2027-07-27",
+       "name": null
+      },
+      {
+       "date": "2027-09-09",
+       "name": null
+      }
+     ]
+    }
+   ]
+  },
+  "16212": {
+   "name": "Torrubia del Campo",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-03",
+     "name": null
+    },
+    {
+     "date": "2027-09-08",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16213": {
+   "name": "Torrubia del Castillo",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-08-14",
+     "name": null
+    },
+    {
+     "date": "2027-08-17",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16215": {
+   "name": "Tragacete",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-06-24",
+     "name": null
+    },
+    {
+     "date": "2027-09-29",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16216": {
+   "name": "Tresjuncos",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-03",
+     "name": null
+    },
+    {
+     "date": "2027-12-07",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16217": {
+   "name": "Tribaldos",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-03",
+     "name": null
+    },
+    {
+     "date": "2027-07-26",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16218": {
+   "name": "Uclés",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-03",
+     "name": null
+    },
+    {
+     "date": "2027-08-23",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16219": {
+   "name": "Uña",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-08-16",
+     "name": null
+    },
+    {
+     "date": "2027-08-17",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16224": {
+   "name": "Valdemeca",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-07-02",
+     "name": null
+    },
+    {
+     "date": "2027-07-03",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16225": {
+   "name": "Valdemorillo de la Sierra",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-03",
+     "name": null
+    },
+    {
+     "date": "2027-08-16",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16227": {
+   "name": "Valdemoro-Sierra",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-06-14",
+     "name": null
+    },
+    {
+     "date": "2027-09-08",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16228": {
+   "name": "Valdeolivas",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-06-18",
+     "name": null
+    },
+    {
+     "date": "2027-09-17",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16231": {
+   "name": "Valhermoso de la Fuente",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-03",
+     "name": null
+    },
+    {
+     "date": "2027-05-15",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16234": {
+   "name": "Valsalobre",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-07-23",
+     "name": null
+    },
+    {
+     "date": "2027-07-24",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16236": {
+   "name": "Valverde de Júcar",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-01-08",
+     "name": null
+    },
+    {
+     "date": "2027-09-22",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16237": {
+   "name": "Valverdejo",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-08-20",
+     "name": null
+    },
+    {
+     "date": "2027-12-17",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16238": {
+   "name": "Vara de Rey",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-04",
+     "name": null
+    },
+    {
+     "date": "2027-05-17",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16239": {
+   "name": "Vega del Codorno",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-09-08",
+     "name": null
+    },
+    {
+     "date": "2027-09-09",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16240": {
+   "name": "Vellisca",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-03",
+     "name": null
+    },
+    {
+     "date": "2027-08-24",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16242": {
+   "name": "Villaconejos de Trabaque",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-03-19",
+     "name": null
+    },
+    {
+     "date": "2027-06-24",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16243": {
+   "name": "Villaescusa de Haro",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-09-14",
+     "name": null
+    },
+    {
+     "date": "2027-09-15",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16244": {
+   "name": "Villagarcía del Llano",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-04",
+     "name": null
+    },
+    {
+     "date": "2027-10-01",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16245": {
+   "name": "Villalba de la Sierra",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-09-07",
+     "name": null
+    },
+    {
+     "date": "2027-09-08",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16246": {
+   "name": "Villalba del Rey",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-01-20",
+     "name": null
+    },
+    {
+     "date": "2027-07-06",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16247": {
+   "name": "Villalgordo del Marquesado",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-03",
+     "name": null
+    },
+    {
+     "date": "2027-05-04",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16248": {
+   "name": "Villalpardo",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-04",
+     "name": null
+    },
+    {
+     "date": "2027-08-02",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16249": {
+   "name": "Villamayor de Santiago",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-04",
+     "name": null
+    },
+    {
+     "date": "2027-09-06",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16250": {
+   "name": "Villanueva de Guadamejud",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-03",
+     "name": null
+    },
+    {
+     "date": "2027-09-08",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16251": {
+   "name": "Villanueva de la Jara",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-08-05",
+     "name": null
+    },
+    {
+     "date": "2027-10-15",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130",
+   "note": "The bulletin lists separate days for: Casas de Santa Cruz 2027-04-29, 2027-08-11.",
+   "localities": [
+    {
+     "name": "Casas de Santa Cruz",
+     "holidays": [
+      {
+       "date": "2027-04-29",
+       "name": null
+      },
+      {
+       "date": "2027-08-11",
+       "name": null
+      }
+     ]
+    }
+   ]
+  },
+  "16253": {
+   "name": "Villar de Cañas",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-14",
+     "name": null
+    },
+    {
+     "date": "2027-09-08",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16254": {
+   "name": "Villar de Domingo García",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-08-16",
+     "name": null
+    },
+    {
+     "date": "2027-08-23",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130",
+   "note": "The bulletin lists separate days for: Noheda 2027-05-14, 2027-06-14.",
+   "localities": [
+    {
+     "name": "Noheda",
+     "holidays": [
+      {
+       "date": "2027-05-14",
+       "name": null
+      },
+      {
+       "date": "2027-06-14",
+       "name": null
+      }
+     ]
+    }
+   ]
+  },
+  "16255": {
+   "name": "Villar de la Encina",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-03",
+     "name": null
+    },
+    {
+     "date": "2027-08-16",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16258": {
+   "name": "Villar del Humo",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-17",
+     "name": null
+    },
+    {
+     "date": "2027-10-04",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16259": {
+   "name": "Villar del Infantado",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": null
+    },
+    {
+     "date": "2027-08-16",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16263": {
+   "name": "Villar de Olalla",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-03",
+     "name": null
+    },
+    {
+     "date": "2027-09-08",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130",
+   "note": "The bulletin lists separate days for: Barbalimpia 2027-08-20, 2027-12-27; Villarejo Seco 2027-02-03, 2027-08-16.",
+   "localities": [
+    {
+     "name": "Barbalimpia",
+     "holidays": [
+      {
+       "date": "2027-08-20",
+       "name": null
+      },
+      {
+       "date": "2027-12-27",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Villarejo Seco",
+     "holidays": [
+      {
+       "date": "2027-02-03",
+       "name": null
+      },
+      {
+       "date": "2027-08-16",
+       "name": null
+      }
+     ]
+    }
+   ]
+  },
+  "16264": {
+   "name": "Villarejo de Fuentes",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-25",
+     "name": null
+    },
+    {
+     "date": "2027-09-08",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16265": {
+   "name": "Villarejo de la Peñuela",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-03",
+     "name": null
+    },
+    {
+     "date": "2027-08-24",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16266": {
+   "name": "Villarejo-Periesteban",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-03",
+     "name": null
+    },
+    {
+     "date": "2027-11-23",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16269": {
+   "name": "Villares del Saz",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-03",
+     "name": null
+    },
+    {
+     "date": "2027-09-14",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16270": {
+   "name": "Villarrubio",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-08-09",
+     "name": null
+    },
+    {
+     "date": "2027-08-10",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16271": {
+   "name": "Villarta",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-03-29",
+     "name": null
+    },
+    {
+     "date": "2027-08-20",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16272": {
+   "name": "Villas de la Ventosa",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": null
+    },
+    {
+     "date": "2027-09-14",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130",
+   "note": "The bulletin lists the days per núcleo (Bolliga, Culebras, Fuentesbuenas, Valdecañas, la Ventosa, Villarejo del Espartal); all share the same two days, used here for the municipality."
+  },
+  "16273": {
+   "name": "Villaverde y Pasaconsol",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-02",
+     "name": null
+    },
+    {
+     "date": "2027-05-14",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16274": {
+   "name": "Víllora",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-03-29",
+     "name": null
+    },
+    {
+     "date": "2027-08-16",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16275": {
+   "name": "Vindel",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-07-27",
+     "name": null
+    },
+    {
+     "date": "2027-08-17",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16276": {
+   "name": "Yémeda",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-04-26",
+     "name": null
+    },
+    {
+     "date": "2027-08-02",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16277": {
+   "name": "Zafra de Záncara",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": null
+    },
+    {
+     "date": "2027-10-05",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16278": {
+   "name": "Zafrilla",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-06-07",
+     "name": null
+    },
+    {
+     "date": "2027-08-27",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16279": {
+   "name": "Zarza de Tajo",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-08",
+     "name": null
+    },
+    {
+     "date": "2027-06-14",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16280": {
+   "name": "Zarzuela",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-06-08",
+     "name": null
+    },
+    {
+     "date": "2027-10-04",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16901": {
+   "name": "Campos del Paraíso",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [],
+   "status": "boletin",
+   "source": "bop-cuenca-130",
+   "note": "The bulletin gives no municipality-wide days, only separate days for each núcleo (see localities).",
+   "localities": [
+    {
+     "name": "Carrascosa del Campo",
+     "holidays": [
+      {
+       "date": "2027-04-26",
+       "name": null
+      },
+      {
+       "date": "2027-07-26",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Loranca del Campo",
+     "holidays": [
+      {
+       "date": "2027-06-29",
+       "name": null
+      },
+      {
+       "date": "2027-09-09",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Olmedilla del Campo",
+     "holidays": [
+      {
+       "date": "2027-08-16",
+       "name": null
+      },
+      {
+       "date": "2027-12-13",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Valparaíso de Abajo",
+     "holidays": [
+      {
+       "date": "2027-06-14",
+       "name": null
+      },
+      {
+       "date": "2027-10-04",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Valparaíso de Arriba",
+     "holidays": [
+      {
+       "date": "2027-05-15",
+       "name": null
+      },
+      {
+       "date": "2027-09-29",
+       "name": null
+      }
+     ]
+    }
+   ]
+  },
+  "16902": {
+   "name": "Valdetórtola",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-03",
+     "name": null
+    },
+    {
+     "date": "2027-10-04",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16903": {
+   "name": "Las Valeras",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-01-18",
+     "name": null
+    },
+    {
+     "date": "2027-10-04",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16904": {
+   "name": "Fuentenava de Jábaga",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [],
+   "status": "boletin",
+   "source": "bop-cuenca-130",
+   "note": "The bulletin gives no municipality-wide days, only separate days for each núcleo (see localities).",
+   "localities": [
+    {
+     "name": "Fuentes Claras Chillaron",
+     "holidays": [
+      {
+       "date": "2027-05-15",
+       "name": null
+      },
+      {
+       "date": "2027-06-24",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Jábaga",
+     "holidays": [
+      {
+       "date": "2027-09-14",
+       "name": null
+      },
+      {
+       "date": "2027-10-15",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Navalón",
+     "holidays": [
+      {
+       "date": "2027-05-14",
+       "name": null
+      },
+      {
+       "date": "2027-08-14",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Sotoca",
+     "holidays": [
+      {
+       "date": "2027-02-03",
+       "name": null
+      },
+      {
+       "date": "2027-08-18",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Villar del Saz de Navalón",
+     "holidays": [
+      {
+       "date": "2027-01-20",
+       "name": null
+      },
+      {
+       "date": "2027-05-14",
+       "name": null
+      }
+     ]
+    }
+   ]
+  },
+  "16905": {
+   "name": "Arcas",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-05-14",
+     "name": null
+    },
+    {
+     "date": "2027-09-14",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16906": {
+   "name": "Los Valdecolmenas",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-06-14",
+     "name": null
+    },
+    {
+     "date": "2027-09-17",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130"
+  },
+  "16908": {
+   "name": "Pozorrubielos de la Mancha",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-02-04",
+     "name": null
+    },
+    {
+     "date": "2027-08-16",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130",
+   "note": "The bulletin lists the days per núcleo (Pozoseco, Rubielos Altos, Rubielos Bajos); all share the same two days, used here for the municipality."
+  },
+  "16909": {
+   "name": "Sotorribas",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [],
+   "status": "boletin",
+   "source": "bop-cuenca-130",
+   "note": "The bulletin gives no municipality-wide days, only separate days for each núcleo (see localities).",
+   "localities": [
+    {
+     "name": "Collados",
+     "holidays": [
+      {
+       "date": "2027-06-14",
+       "name": null
+      },
+      {
+       "date": "2027-08-28",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Pajares",
+     "holidays": [
+      {
+       "date": "2027-02-02",
+       "name": null
+      },
+      {
+       "date": "2027-06-22",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Ribagorda",
+     "holidays": [
+      {
+       "date": "2027-05-14",
+       "name": null
+      },
+      {
+       "date": "2027-06-14",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Ribatajadilla",
+     "holidays": [
+      {
+       "date": "2027-06-14",
+       "name": null
+      },
+      {
+       "date": "2027-07-27",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Sotos",
+     "holidays": [
+      {
+       "date": "2027-06-01",
+       "name": null
+      },
+      {
+       "date": "2027-10-04",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Torrecilla",
+     "holidays": [
+      {
+       "date": "2027-06-14",
+       "name": null
+      },
+      {
+       "date": "2027-08-16",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Villaseca",
+     "holidays": [
+      {
+       "date": "2027-01-23",
+       "name": null
+      },
+      {
+       "date": "2027-06-14",
+       "name": null
+      }
+     ]
+    }
+   ]
+  },
+  "16910": {
+   "name": "Villar y Velasco",
+   "province": "Cuenca",
+   "region": "castilla-la-mancha",
+   "holidays": [
+    {
+     "date": "2027-09-01",
+     "name": null
+    },
+    {
+     "date": "2027-09-14",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-cuenca-130",
+   "note": "The bulletin lists the days per núcleo (Cuevas de Velasco, Villar del Maestre); all share the same two days, used here for the municipality."
   },
   "18001": {
    "name": "Agrón",
