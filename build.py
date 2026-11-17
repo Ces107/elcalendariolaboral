@@ -31,7 +31,7 @@ SITE = os.environ.get("CL_SITE", "https://elcalendariolaboral.es").rstrip("/")
 ASSETS = os.environ.get("CL_BASE", "/")  # css, js, ics, og, icons: shared by every language
 HOST = SITE.split("://", 1)[1]
 LANG = os.environ.get("CL_LANG", "es")
-LANGS = [x for x in os.environ.get("CL_LANGS", "es,ca,gl,eu").split(",") if x] or ["es"]
+LANGS = [x for x in os.environ.get("CL_LANGS", "es,ca").split(",") if x] or ["es"]
 if LANG not in LANGS:
     LANGS.append(LANG)
 LANG_NAMES = {"es": "Español", "ca": "Català", "gl": "Galego", "eu": "Euskara"}
@@ -495,7 +495,7 @@ def pick(limit, *cands):
 # ---------------------------------------------------------------- html parts
 
 # Manual ad units (seo/ads.md). ON since 2026-11-04 (AdSense approved, units ecl-cal/list/vac/hub).
-ADS_ON = True
+ADS_ON = False
 AD_CLIENT = "ca-pub-9914165605609514"
 AD_SLOTS = {  # position -> AdSense display unit id (data-ad-slot)
     "cal": "8499996958",   # region/city/home: between the calendar and the next section
@@ -508,6 +508,10 @@ AD_SLOTS = {  # position -> AdSense display unit id (data-ad-slot)
 # Ads only on Spanish pages: Galician and Basque are not AdSense languages, and the Catalan pages are translations
 # without their own editorial text (seo/AUDIT-2026-11.md). Add "ca" here once AdSense has reviewed the site.
 ADS_LANGS = {"es", "ca"}  # ca: same rules as Spanish (indexable, >= 250 words, ads=True pages only)
+# 17 Nov 2026, AdSense re-review ("Contenido de poco valor"): while the review is pending the pages carry NO ad boxes and NO
+# own-product promos (house ads, "Nuestros productos", footer Amazon/Etsy/shop links, /shopping/). The AdSense loader stays in
+# the <head>. After approval: ADS_ON True restores the manual units, PROMOS_ON True the promos (one slot per page at most).
+PROMOS_ON = False
 ADS_PAGE = True  # set by head_html(): False on noindex, legal, tool and listing pages (no loader, no units)
 # Site owner and contact (sobre, contacto, aviso legal, privacidad, cookies). Semi-anonymous brand: no personal name, ID
 # number, address or photo; the place is "Valencia (España)" at most.
@@ -527,8 +531,10 @@ def ad(pos, lang=None, topic=None, adsense=True):
     adsense=False: promos only, for pages built before their head_html (ADS_PAGE is still the previous page's)."""
     lang = lang or LANG
     slot = AD_SLOTS.get(pos)
+    if not (ADS_ON or PROMOS_ON):
+        return ""
     hl = HOUSE_TXT.get(lang, HOUSE_TXT["es"])["label"]
-    house = house_ads(pos, lang, topic)
+    house = house_ads(pos, lang, topic) if PROMOS_ON else ""
     if not (ADS_ON and slot and ADS_PAGE and adsense):
         return f'<aside class="ad ad-{pos}" aria-label="{hl}"><p class="ad-l">{hl}</p><div class="ad-s">{house}</div></aside>'
     lab = "Publicitat" if lang == "ca" else "Publicidad"
@@ -778,7 +784,7 @@ def footer_html(data):
             f'<li><a href="{ASSETS}widget/"{"" if LANG == "es" else " hreflang=es lang=es"}>{"Widget per al teu web" if LANG == "ca" else "Widget para tu web"}</a></li>'
             + ('<li><a href="https://www.amazon.es/dp/B0HQ8FVGZS" target="_blank" rel="sponsored noopener">'
                'Agenda 2027 en papel, con estos festivos →</a></li>'
-               f'<li><a href="{BASE}shopping/">Tienda Calma Planners</a></li>' if LANG == "es" else "")
+               f'<li><a href="{BASE}shopping/">Tienda Calma Planners</a></li>' if LANG == "es" and PROMOS_ON else "")
             + f'<li><a href="#inst" data-install hidden>{INSTALL.get(LANG, INSTALL["es"])[0]}</a></li>'
             + "".join(f'<li><a href="{BASE if LANG == "ca" else ASSETS}{p}"{"" if LANG in ("es", "ca") else " hreflang=es lang=es"}>{n}</a></li>'
                       for p, n in TRUST.get(LANG, TRUST["es"]))
@@ -1438,7 +1444,10 @@ def write_sitemaps(pages_written, regions):
     txt = "\n".join(idx) + "\n"
     (ROOT / "sitemap_index.xml").write_text(txt, "utf-8", newline="\n")
     (ROOT / "sitemap.xml").write_text(txt, "utf-8", newline="\n")
-    (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {SITE}{ASSETS}sitemap_index.xml\n", "utf-8", newline="\n")
+    # The repo is served as-is by GitHub Pages: keep crawlers out of the source, the data sources and the working notes.
+    (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nDisallow: /seo/\nDisallow: /herramientas/\nDisallow: /data/\n"
+                                     f"Disallow: /promo/\nDisallow: /*.py$\nDisallow: /*.md$\n"
+                                     f"Sitemap: {SITE}{ASSETS}sitemap_index.xml\n", "utf-8", newline="\n")
     return counts
 
 
@@ -1488,8 +1497,11 @@ def main():
     OUT.mkdir(exist_ok=True)
     (OUT / "privacidad").mkdir(exist_ok=True)
     (OUT / "privacidad" / "index.html").write_text(fix(privacy_page(data)), "utf-8", newline="\n")
-    import shopping  # Calma Planners shop page (/shopping/, Spanish only)
-    shopping.write(sys.modules[__name__], data, fix)
+    import shopping  # Calma Planners shop page (/shopping/, Spanish only): off while PROMOS_ON is False (AdSense re-review)
+    if PROMOS_ON:
+        shopping.write(sys.modules[__name__], data, fix)
+    elif (ROOT / "shopping" / "index.html").exists():
+        (ROOT / "shopping" / "index.html").unlink()
     sys.modules.setdefault("build", sys.modules[__name__])  # pages.py does "import build": reuse this module
     import pages
     pages_written = pages.write_pages(data, fix)
@@ -1527,7 +1539,8 @@ def main():
     (ROOT / "404.html").write_text(fix(page_404(data)), "utf-8", newline="\n")
     (ROOT / "buscar.json").write_bytes(sidx)
     seg_counts = write_sitemaps(pages_written, {r["slug"] for r in data["regions"]})
-    shopping.add_to_sitemap(sys.modules[__name__])  # /shopping/ is written outside pages.write: keep it in the sitemap
+    if PROMOS_ON:
+        shopping.add_to_sitemap(sys.modules[__name__])  # /shopping/ is written outside pages.write: keep it in the sitemap
 
     manifest = {
         "name": t("app_name"), "short_name": t("app_short"), "lang": LANG, "description": t("app_desc"),

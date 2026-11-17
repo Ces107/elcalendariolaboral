@@ -1,3 +1,9 @@
 User-agent: *
 Allow: /
+Disallow: /seo/
+Disallow: /herramientas/
+Disallow: /data/
+Disallow: /promo/
+Disallow: /*.py$
+Disallow: /*.md$
 Sitemap: https://elcalendariolaboral.es/sitemap_index.xml

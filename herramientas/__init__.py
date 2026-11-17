@@ -67,6 +67,18 @@ MON_EN = ["January", "February", "March", "April", "May", "June", "July", "Augus
 
 # ---------------------------------------------------------------- registry
 
+# Published tools (17 Nov 2026, AdSense "contenido de poco valor" + topical focus): only what a visitor of a Spanish
+# working-calendar site needs: work and payroll calculators, date/calendar tools, school-calendar tools. The ~85
+# unrelated calculators (cooking, DIY, sport, e-commerce...) and the 50 English tools stay as source files but are NOT
+# built, listed or put in the sitemap. HT_ONLY (environment) still overrides this for development.
+KEEP = frozenset("""
+cuadrante-turnos registro-jornada calculadora-vacaciones calculadora-finiquito calculadora-paro cuota-autonomos-2026
+horas-conduccion-tacografo fecha-jubilacion carta-baja-voluntaria permiso-nacimiento trienios-funcionarios
+dias-asuntos-propios smi-jornada-parcial coste-empleada-hogar antiguedad-empresa horas-extra kilometraje-dietas
+dias-entre-fechas edad-exacta fecha-semana-santa dia-de-la-semana cuenta-atras anos-bisiestos horas-entre-horas
+horario-escolar dias-lectivos-restantes
+""".split())
+
 _TOOLS = None
 _STRICT = None  # slugs that must load (set by strict()); None = full mode
 BROKEN = {}     # slug -> error: tool files registry() skipped because they fail to import or fail check_tool
@@ -123,8 +135,7 @@ def registry():
                     raise RuntimeError(f"duplicate tool slug {s}: herramientas/tools/{fs}")
                 BROKEN[s] = f"duplicate slug in herramientas/tools/{fs}: all skipped"
         out = [t for t in out if len(files[t["slug"]]) == 1]
-        if only:
-            out = [t for t in out if t["slug"] in only]
+        out = [t for t in out if t["slug"] in (only or KEEP)]
         if BROKEN:
             lines = "\n".join(f"    {s}: {err[:300]}" for s, err in sorted(BROKEN.items()))
             if _STRICT is not None:

@@ -415,7 +415,8 @@ def prov_page(p, cat, write):
         desc = B.pick(155, f'Festivos locales 2027 de los {n} municipios de {pn}: pendientes del boletín oficial. Mientras, los '
                            f'{len(base)} festivos de {r["name"]}.', f'Festivos locales 2027 en {pn}: pendientes del boletín.')
     head = B.head_html(title, desc, p["path"], f'{B.SITE}{B.ASSETS}og/{r["slug"]}.png',
-                       P.ld(P.crumbs_ld(crumbs), P.webpage_ld(title, p["path"], upd_date)), langs=B.es_ca(p["path"]), ads=False)
+                       P.ld(P.crumbs_ld(crumbs), P.webpage_ld(title, p["path"], upd_date)), langs=B.es_ca(p["path"]), ads=False,
+                       index=n_ok > 0)  # 17 Nov 2026: 0 published municipalities = placeholder: noindex until its bulletin is out
     write(p["path"], B.page(head, "pg", "", main, P.DATA, js=False, lean=True), upd_date, B.es_ca(p["path"]))
 
 

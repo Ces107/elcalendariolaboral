@@ -554,8 +554,8 @@ def trust_pages(write, cities, loc):
              f'muestra la fecha de su última actualización.</li></ul>'
              f'<h2>Errores y avisos</h2><p>Si ves una fecha mal o tu municipio ya publicó sus festivos, escribe a {mail} con el '
              f'enlace al boletín o al acuerdo del pleno. Lo comprobamos con la fuente y lo corregimos.</p>'
-             f'<h2>Cómo se paga</h2><p>Con anuncios de Google AdSense y con un enlace patrocinado a una agenda en papel. No '
-             f'cambian ningún dato. No hay cuentas ni registro: lo que eliges se guarda solo en tu navegador '
+             f'<h2>Cómo se paga</h2><p>Con publicidad de Google AdSense, cuando está activa en el sitio. Sin anuncios la '
+             f'web sigue igual: es un proyecto independiente que se mantiene por cuenta propia. La publicidad no cambia ningún dato. No hay cuentas ni registro: lo que eliges se guarda solo en tu navegador '
              f'(<a href="{B.BASE}privacidad/">privacidad</a>).</p>', date)
     doc_page(write, "contacto/", "Contacto · El Calendario Laboral",
              "Escribe a El Calendario Laboral para corregir una fecha o avisar de los festivos locales de tu municipio.",

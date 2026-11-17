@@ -551,7 +551,7 @@ def home_page():
     upd = guia.upd(upd_date, src=False)
     labs = sorted(B.workdays(f["hols"], 1 if f["can"] else 0) for f in regs.values())
     lab_rng = tn("n_lab", labs[-1]).replace(str(labs[-1]), f"{labs[0]}–{labs[-1]}", 1)
-    stats = B.stats_html([(None, tn("n_nat", len(nat))), (None, lab_rng), (None, tn("n_pts", len(B.puentes(nat))))])
+    stats = B.stats_html([(None, tn("n_nat", len(nat))), (None, lab_rng), (None, tn("n_pts", len(B.all_breaks(nat))))])  # same count as the puentes table below
     hero = ('<div class="hero wrap">' + (B.lang_chip("", ["es", "ca"]) if CA else "")
             + B.hero_grid(f'<h1>{E(t("h1"))}</h1>{guia.home_lead() if ES else CAT.home_lead() if CA else ""}{B.search_box("q-home", big=True)}'
                           f'<div class="pickers">{B.region_select(None)}{B.home_city_select()}</div>',
@@ -573,7 +573,22 @@ def home_page():
     vac = f'<p class="more-l"><a href="{B.BASE}vacaciones-2027/">Maximiza tus vacaciones 2027 →</a></p>' if ES else ""
     pts_sec = B.section("puentes", E(B.fill(t("h_pts"), sp)), f'<table class="tbl pts">{B.pts_head()}<tbody>{prow}</tbody></table>{vac}')
     notes = guia.home_notes() if ES else CAT.home_notes() if CA else ""
-    main = f'{hero}<div class="wrap body">{cal_sec}{B.ad("cal")}{reg_sec}{hol_sec}{pts_sec}{notes}{faq_html(qas)}</div>{B.POP}'
+    cmp_sec = ""
+    if ES:  # the table every comparison page has: what each comunidad adds to the 9 national days (computed from the BOE data)
+        rows = []
+        for r in DATA["regions"]:
+            f = regs[r["slug"]]
+            own = "; ".join(f'{B.dmon(h["date"])} {E(h["name"])}' for h in f["own"]) or "Ninguno propio"
+            isl = " + fiesta de cada isla" if f["can"] else ""
+            rows.append(f'<tr><th scope="row"><a href="{B.BASE}{r["slug"]}/">{E(r["name"])}</a></th><td>{f["n"]}{isl}</td>'
+                        f'<td>{own}</td><td>{B.workdays(f["hols"], 1 if f["can"] else 0)}</td><td>{len(f["pts"])}</td></tr>')
+        cmp_sec = B.section("por-comunidad", "Festivos 2027 por comunidad autónoma",
+                            f'<p>Todas las comunidades comparten los {len(nat)} festivos nacionales. Esta tabla muestra los que añade cada una '
+                            f'(BOE del 13 de octubre de 2026), sus días laborables de lunes a viernes y sus puentes. '
+                            f'A esto se suman los 2 festivos locales de cada municipio.</p>'
+                            f'<div class="tw"><table class="tbl"><thead><tr><th>Comunidad</th><th>Festivos</th><th>Propios de la comunidad (además de los nacionales)</th>'
+                            f'<th>Días laborables</th><th>Puentes</th></tr></thead><tbody>{"".join(rows)}</tbody></table></div>')
+    main = f'{hero}<div class="wrap body">{cal_sec}{B.ad("cal")}{reg_sec}{hol_sec}{cmp_sec}{pts_sec}{notes}{faq_html(qas)}</div>{B.POP}'
     org = f"{B.SITE}{B.ASSETS}#org"
     # No SearchAction: Google retired the sitelinks search box (Nov 2024) and /buscar/ is a noindex fallback.
     lds = [{"@type": "WebSite", "@id": f"{B.SITE}{B.ASSETS}#web", "name": t("site_name"), "alternateName": B.HOST, "url": B.URL,

@@ -852,7 +852,8 @@ def prov_page(p, cat, write, REG, UPDATED):
                            f'els {len(base)} festius {names["region_of"]}.', f'Festius locals 2027 {pn}: pendents del butlletí.')
     desc = desc.replace("..", ".")
     head = B.head_html(title, desc, p["path"], f'{B.SITE}{B.ASSETS}og/{r["slug"]}.png',
-                       P.ld(P.crumbs_ld(crumbs), P.webpage_ld(title, p["path"], upd_date)), langs=["es", "ca"], ads=False)
+                       P.ld(P.crumbs_ld(crumbs), P.webpage_ld(title, p["path"], upd_date)), langs=["es", "ca"], ads=False,
+                       index=n_ok > 0)  # 17 Nov 2026: same rule as the Spanish province page (0 published = noindex)
     write(p["path"], B.page(head, "pg", "", main, P.DATA, js=False, lean=True), upd_date, ["es", "ca"])
 
 
