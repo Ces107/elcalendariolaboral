@@ -62,6 +62,7 @@ Sunday dates kept as published (merge adds a note): Alberuela de Tubo, El Viso, 
 - 2026-11-07: Cataluña, Madrid, C. Valenciana parsed by me; sub-agents on Andalucía+Extremadura and Galicia+Asturias+Cantabria+País Vasco (resumed after a rate-limit stop). The CV/Murcia/Canarias/Baleares agent died at the rate limit; I took over CV from its downloads.
 - 2026-11-07: Murcia, Canarias, Aragón, Navarra, Baleares, Ceuta, Melilla parsed by me; merge → 5,243 municipalities. CyL and CLM sub-agents running. La Rioja blocked (Cloudflare).
 - 2026-11-07: CyL and CLM done. Final merge: **7,257 / 8,132** municipalities, 30 sources. `jcyl-2026` (Junta open-data gap-filler, 11 entries) is kept on disk but excluded in `merge_locales_2026.py` (wrong INE codes and 2024/2025 dates in that CSV).
+- 2026-11-17: 2027 data refreshed (`data/locales-2027-all.json` 4,264 → 4,799 municipalities: BOP Alicante 210, BOP Castellón 136, BOP Cuenca 130, 23 council agreements). Municipality pages of Alicante, Castellón and Cuenca provinces move from the 2026 reference to official 2027 dates on the next build. Details and what is still pending: `seo/locales-PROGRESS.md`, "2026-11-17 refresh".
 
 ## Next steps (resume here)
 

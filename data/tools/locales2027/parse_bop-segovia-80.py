@@ -48,6 +48,8 @@ def main():
     for pn in range(8, 13):
         lines = {}
         for w in doc[pn].get_text("words"):
+            if w[0] >= 545:  # vertical signature footer in the right margin ("Documento firmado ... Página")
+                continue
             lines.setdefault(round((w[1] + w[3]) / 2 / 2), []).append(w)
         for k in sorted(lines):
             ws = sorted(lines[k], key=lambda w: w[0])

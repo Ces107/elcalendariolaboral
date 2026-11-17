@@ -317,10 +317,26 @@
    "province": "Cuenca",
    "region": "castilla-la-mancha",
    "capital": true,
-   "status": "unpublished",
-   "holidays": null,
-   "source": null,
-   "note": "Proposal (Comisión de Cultura, Oct 2026, per press): 1 June (Virgen de la Luz) and 21 September (San Mateo), pending pleno of 26 October 2026; no official text found. Not in BOP Cuenca as of 2026-10-26."
+   "status": "boletin",
+   "new": true,
+   "holidays": [
+    {
+     "date": "2027-06-01",
+     "name": "Virgen de la Luz",
+     "text": "Cuenca 01/06/2027 21/09/2027"
+    },
+    {
+     "date": "2027-09-21",
+     "name": "San Mateo",
+     "text": "Cuenca 01/06/2027 21/09/2027"
+    }
+   ],
+   "source": {
+    "title": "Resolución de 12/11/2026 de la Delegación Provincial de la Consejería de Economía, Empresas y Empleo en Cuenca por la que se determinan los festivos locales para los municipios de la provincia de Cuenca durante el año 2027 (BOP Cuenca núm. 130, 13-11-2026, anuncio núm. 2719)",
+    "url": "https://www.dipucuenca.es/documents/34525/677c6742-e5d3-5de4-d58b-818c94f036b4",
+    "checked": "2026-11-17"
+   },
+   "note": "The BOP annex gives dates only; holiday names are from the Comisión de Cultura proposal as reported by the press (Oct 2026). The bulletin also sets separate days for some pedanías of Cuenca (Cólliga, Colliguilla, Nohales and others; see locales-2027-all.json); La Melgosa and Mohorte share the city's days. new=true: page published after the AdSense review request (no ads until approval), as muni.overlay_locales does."
   },
   {
    "slug": "guadalajara",
@@ -887,10 +903,26 @@
    "province": "Lleida",
    "region": "cataluna",
    "capital": true,
-   "status": "unpublished",
-   "holidays": null,
-   "source": null,
-   "note": "No official 2027 text found (no Paeria page or ple agreement). The DOGC Ordre with the 2027 local holidays of all Catalan municipalities was not yet published on 2026-10-26 (the 2026 one, EMT/208/2025, came out in DOGC 9565 on 17/12/2025); the Generalitat open-data set (analisi.transparenciacatalunya.cat b4eh-r8up) has no 2027 rows yet."
+   "status": "ayuntamiento",
+   "new": true,
+   "holidays": [
+    {
+     "date": "2027-05-11",
+     "name": "Festa Major - Sant Anastasi",
+     "text": "LLEIDA: 11 de maig (Festa Major - Sant Anastasi)"
+    },
+    {
+     "date": "2027-09-29",
+     "name": "Festa Major - Sant Miquel",
+     "text": "i 29 de setembre (Festa Major - Sant Miquel)"
+    }
+   ],
+   "source": {
+    "title": "Ajuntament de Lleida (La Paeria), 'Calendari laboral': festes locals 2027",
+    "url": "https://www.paeria.cat/ca/ciutat/calendaris/calendari-laboral",
+    "checked": "2026-11-17"
+   },
+   "note": "Official Paeria page (modified 2026-08-31): 'Les festes locals pel calendari 2027 són: LLEIDA: 11 de maig i 29 de setembre'; the same page gives Raimat (27 Apr, 23 Jul) and Sucs (14 May, 13 Aug) their own days (see locales-2027-all.json). The DOGC Ordre with the 2027 local holidays of Catalonia was not yet published on 2026-11-17. new=true: page published after the AdSense review request (no ads until approval), as muni.overlay_locales does."
   },
   {
    "slug": "tarragona",
