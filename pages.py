@@ -413,8 +413,11 @@ def hub_locales(loc, regions, cities):
             li = "".join(f'<li><a href="{B.BASE}{p["path"]}">{E(p["label"])}</a> <span class="m">{sum(1 for x in p["munis"] if x["ok"])}'
                          f' de {len(p["munis"])}</span></li>' for p in sorted(provs, key=lambda p: muni.fold(p["name"])))
             blocks.insert(0, B.section("provincias", "Por provincia: todos los municipios", f'<ul class="links">{li}</ul>'))
+    ana = (f'<p class="more-l">Análisis con estos datos: <a href="{B.BASE}analisis/festivos-locales-mas-repetidos-2027/">las fechas más repetidas</a> · '
+           f'<a href="{B.BASE}analisis/festivos-locales-en-fin-de-semana-2027/">los que caen en fin de semana</a> · '
+           f'<a href="{B.BASE}analisis/cuando-publica-cada-provincia-sus-festivos-locales/">cuándo publica cada provincia</a></p>') if ES else ""
     main = (f'<div class="hero wrap">{B.crumbs_html(crumbs)}<h1>{E(h1)}</h1>{lead}{ctx}</div>'
-            f'<div class="wrap body narrow">{guia.hub_notes(cities) if ES else ""}{"".join(blocks)}{faq_html(qas)}</div>')  # no ad(): this page has ads=False
+            f'<div class="wrap body narrow">{guia.hub_notes(cities) if ES else ""}{"".join(blocks)}{ana}{faq_html(qas)}</div>')  # no ad(): this page has ads=False
     head = B.head_html(title, desc, "festivos-locales/", f"{B.SITE}{B.ASSETS}og/espana.png", ld(crumbs_ld(crumbs), faq_ld(qas)), ads=False)
     return B.page(head, "pg", "locals", main, DATA, js=False)
 
@@ -561,7 +564,10 @@ def home_page():
     cal_sec = B.section("calendario", t("h_cal"), B.legend_html(["n"]) + B.year_html(nat), B.tools_html(), "cal")
     school = (f'<p class="more-l"><a href="{B.BASE}calendario-escolar/">Calendario escolar 2026-2027</a> · '
               f'<a href="{B.BASE}vacaciones-escolares/navidad/">Vacaciones de Navidad 2026-2027</a> · '
-              f'<a href="{B.BASE}vacaciones-escolares/semana-santa/">Vacaciones de Semana Santa 2027</a></p>') if ES else ""
+              f'<a href="{B.BASE}vacaciones-escolares/semana-santa/">Vacaciones de Semana Santa 2027</a></p>'
+              f'<p class="more-l"><a href="{B.ASSETS}calendario-laboral-2027-pdf/">Calendario laboral 2027 en PDF</a> · '
+              f'<a href="{B.BASE}festivos-locales/">Festivos locales 2027 por municipio</a> · '
+              f'<a href="{B.BASE}vacaciones-2027/">Planificador de vacaciones</a></p>') if ES else ""
     import utilidades
     ul = utilidades.home_links()
     if ES:  # + the tools hub

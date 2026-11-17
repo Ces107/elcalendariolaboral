@@ -783,6 +783,7 @@ def footer_html(data):
             + util_footer() + '</section>'
             f'<section><h2>El Calendario Laboral</h2><ul><li><a href="{s["url"]}" rel="noopener">{t("data_source")}</a></li>'
             f'<li><a href="{ASSETS}widget/"{"" if LANG == "es" else " hreflang=es lang=es"}>{"Widget per al teu web" if LANG == "ca" else "Widget para tu web"}</a></li>'
+            + (f'<li><a href="{ASSETS}datos/">Datos abiertos (CSV)</a></li>' if LANG == "es" else "")
             + ('<li><a href="https://www.amazon.es/dp/B0HQ8FVGZS" target="_blank" rel="sponsored noopener">'
                'Agenda 2027 en papel, con estos festivos →</a></li>'
                f'<li><a href="{BASE}shopping/">Tienda Calma Planners</a></li>' if LANG == "es" and PROMOS_ON else "")
@@ -1509,6 +1510,8 @@ def main():
     if LANG == "es":  # /analisis/: editorial analyses computed from our own data (AdSense: original content)
         import analisis
         pages_written += analisis.write(sys.modules[__name__], data, fix)
+        import datos  # open dataset: /datos/ + the CSV of every municipality with official 2027 local holidays
+        pages_written += datos.write(sys.modules[__name__], data, fix)
     if LANG != "es":
         print(f"ok · {LANG} · {len(pages_written) + 1} pages in {OUT}")
         return
