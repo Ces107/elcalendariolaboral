@@ -592,6 +592,7 @@ def page_repeated(S):
     in_shared = sum(v for v in R["pairs"].values() if v > 1)
     saints = [(k, v) for k, v in R["saints"] if v["n"] >= 2][:12]
     pend = [REG[s]["name"] for s in S["pending_regions"]]
+    pend_prov = [v["p"]["name"] for v in S["pub"].values() if not v["d27"] and v["p"]["region"] not in S["pending_regions"]]
 
     # San Roque / any saint split across two dates: the biggest such split among the top saints
     split = next(((k, v) for k, v in saints if len(v["dates"]) >= 2 and v["dates"].most_common(2)[1][1] >= 0.2 * v["n"]), None)
@@ -678,7 +679,7 @@ def page_repeated(S):
         f'son los días en los que más oficinas cerrarán a la vez.',
         pair_txt,
         f'<b>Límites.</b> El ranking cambia a medida que se publican más boletines. Hoy faltan comunidades enteras '
-        f'({few(pend, 6)}), así que las fiestas habituales en esas comunidades todavía no pesan en el ranking. '
+        f'({few(pend, 6)}) y provincias sueltas de otras ({few(pend_prov, 4)}), así que las fiestas habituales de esas zonas todavía no pesan en el ranking. '
         f'Tampoco contamos los días que solo valen en una pedanía o un núcleo del municipio.' if pend else
         '<b>Límites.</b> Tampoco contamos los días que solo valen en una pedanía o un núcleo del municipio.',
     )

@@ -12181,6 +12181,21 @@
    ],
    "status": "boletin",
    "source": "boib-2026-122",
+   "localities": [
+    {
+     "name": "Pina",
+     "holidays": [
+      {
+       "date": "2027-01-18",
+       "name": null
+      },
+      {
+       "date": "2027-09-27",
+       "name": null
+      }
+     ]
+    }
+   ],
    "note": "The BOIB lists days per nucleus; these are the days of Algaida i Randa. Other nuclei: Pina: 18/01 and 27/09."
   },
   "07005": {
