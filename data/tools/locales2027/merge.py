@@ -1,8 +1,10 @@
 """Build data/locales-2027-all.json from <workdir>/parsed/*.json plus the official
 entries already in data/locales-2027.json.
 
-python -I merge.py <workdir> [--write]
-Without --write it only prints the coverage table and the conflicts."""
+python -I merge.py <workdir> [--write] [--base]
+Without --write it only prints the coverage table and the conflicts.
+--base starts from the current data/locales-2027-all.json (its sources and rows) and lays the workdir's parsed files
+over it, for a workdir that holds only the new sources (the earlier parsed/*.json were not kept)."""
 import glob
 import json
 import os
@@ -15,7 +17,8 @@ import common
 
 W = common.workdir_from_argv()
 WRITE = "--write" in sys.argv
-UPDATED = "2026-11-17"
+BASE = "--base" in sys.argv
+UPDATED = "2026-11-23"
 OUT = os.path.join(common.REPO, "data", "locales-2027-all.json")
 OLD = os.path.join(common.REPO, "data", "locales-2027.json")
 PROV_CODE = {v[0]: k for k, v in common.PROVINCES.items()}
@@ -71,6 +74,12 @@ def put(key, entry, origin):
         log.append(f"replace {key}: {old['source']} -> {entry['source']} ({origin})")
     munis[key] = entry
 
+
+# 0) with --base: everything already published in data/locales-2027-all.json
+if BASE:
+    prev = json.load(open(OUT, encoding="utf-8"))
+    sources.update(prev["sources"])
+    munis.update(prev["municipios"])
 
 # 1) parsed bulletins / council agreements
 for path in sorted(glob.glob(os.path.join(W, "parsed", "*.json"))):
