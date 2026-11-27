@@ -1,6 +1,6 @@
 {
  "year": 2027,
- "updated": "2026-11-23",
+ "updated": "2026-11-27",
  "about": "Fiestas locales de 2027 por municipio (clave: código INE de 5 cifras). Solo publicadas oficialmente: boletín (BOP/autonómico) o acuerdo del ayuntamiento publicado por el propio ayuntamiento. 'name' es null cuando la publicación da solo la fecha. 'localities' recoge días que solo rigen en una parte del municipio. Los municipios sin publicación oficial no aparecen.",
  "status_values": {
   "boletin": "publicado en boletín oficial",
@@ -67,10 +67,20 @@
    "url": "https://www.diputacionavila.es/bops/2026/08-07-2026/08-07-2026_144826.pdf",
    "published": "2026-07-08"
   },
+  "bop-avila-2155": {
+   "title": "Junta de Castilla y León, Oficina Territorial de Trabajo de Ávila. Anuncio: segunda relación complementaria del calendario de fiestas de carácter local año 2027 (BOP Ávila núm. 210, 29-X-2026, anuncio 2155/26)",
+   "url": "https://www.diputacionavila.es/bops/2026/29-10-2026/29-10-2026_215526.pdf",
+   "published": "2026-10-29"
+  },
   "bop-burgos-145": {
    "title": "Junta de Castilla y León, Oficina Territorial de Trabajo de Burgos. Resolución sobre calendario de fiestas locales, retribuidas y no recuperables, para el año 2027 (BOP Burgos núm. 145, 4-VIII-2026, C.V.E. BOPBUR-2026-03251)",
    "url": "https://trabajoyprevencion.jcyl.es/web/jcyl/binarios/532/765/Publicacion%20Fiestas%20Locales%20-%20bopbur-2026-145.pdf?blobheader=application%2Fpdf%3Bcharset%3DUTF-8&blobnocache=true",
    "published": "2026-08-04"
+  },
+  "bop-burgos-202": {
+   "title": "Junta de Castilla y León, Oficina Territorial de Trabajo de Burgos. Resolución complementaria sobre calendario de fiestas locales, retribuidas y no recuperables, para el año 2027 (BOP Burgos núm. 202, 23-X-2026, C.V.E. BOPBUR-2026-04503)",
+   "url": "https://bopbur.diputaciondeburgos.es/sites/default/files/private/publicado/bopbur-2026-202/bopbur-2026-202-anuncio-202604503.pdf",
+   "published": "2026-10-23"
   },
   "bop-castellon-136": {
    "title": "Resolución de 29 de octubre de 2026 de la Dirección Territorial de Vivienda, Empleo, Juventud e Igualdad de Castellón, por la que se aprueba el calendario de fiestas locales, retribuidas y no recuperables, en el ámbito de la provincia de Castellón para el año 2027 (BOP Castellón núm. 136, 10-11-2026, anuncio 04772-2026)",
@@ -112,6 +122,11 @@
    "url": "https://bop.depourense.es/portalapi/api/edicto/descargar/pdf/352736/idioma/gl",
    "published": "2026-10-14"
   },
+  "bop-palencia-129": {
+   "title": "Junta de Castilla y León, Oficina Territorial de Trabajo de Palencia. Ampliación de publicación de las fiestas locales a efectos laborales para el año 2027 en la provincia de Palencia (BOP Palencia núm. 129, 28-X-2026, anuncio 2809)",
+   "url": "https://www.diputaciondepalencia.es/system/files/bop/2026/20261028-bop-129-Ordinario.pdf",
+   "published": "2026-10-28"
+  },
   "bop-palencia-83": {
    "title": "Junta de Castilla y León, Oficina Territorial de Trabajo de Palencia. Acuerdo de determinación de las fiestas locales, a efectos laborales, en los municipios de la provincia (año 2027) (BOP Palencia núm. 83, 13-VII-2026)",
    "url": "https://www.diputaciondepalencia.es/system/files/bop/2026/20260713-bop-83-Ordinario.pdf",
@@ -121,6 +136,11 @@
    "title": "Acuerdo de 1 de julio de 2026, de la Oficina Territorial de Trabajo de Salamanca, para la determinación de las fiestas locales, a efectos laborales, en los municipios de esta provincia para el año 2027 (BOP Salamanca núm. 129, 8-VII-2026)",
    "url": "https://trabajoyprevencion.jcyl.es/web/jcyl/binarios/686/528/BOP-SA-20260708-001.pdf?blobheader=application%2Fpdf%3Bcharset%3DUTF-8&blobnocache=true",
    "published": "2026-07-08"
+  },
+  "bop-salamanca-206": {
+   "title": "Junta de Castilla y León, Oficina Territorial de Trabajo de Salamanca. Acuerdo complementario de 19 de octubre de 2026 para la determinación de las fiestas locales del año 2027 (BOP Salamanca núm. 206, 23-X-2026, CVE BOP-SA-20261023-001)",
+   "url": "https://sede.diputaciondesalamanca.gob.es/documentacion/bop/2026/20261023/BOP-SA-20261023-001.pdf",
+   "published": "2026-10-23"
   },
   "bop-segovia-80": {
    "title": "Junta de Castilla y León, Oficina Territorial de Trabajo de Segovia. Fiestas locales 2027 (acuerdo de 30-VI-2026) (BOP Segovia núm. 80, 6-VII-2026, RC-9105)",
@@ -147,10 +167,25 @@
    "url": "https://trabajoyprevencion.jcyl.es/web/jcyl/binarios/569/674/Fiestas%20BOPVA-A-2026-02051.pdf?blobheader=application%2Fpdf%3Bcharset%3DUTF-8&blobnocache=true",
    "published": "2026-07-09"
   },
+  "bop-valladolid-204": {
+   "title": "Junta de Castilla y León, Oficina Territorial de Trabajo de Valladolid. Resolución de 16 de octubre de 2026 para la determinación de las fiestas locales, a efectos laborales, en los municipios de la provincia de Valladolid (ampliación 2027) (BOP Valladolid núm. 2026/204, 23-X-2026, BOPVA-A-2026-03085)",
+   "url": "https://bop.sede.diputaciondevalladolid.es/boletines/2026/octubre/23/BOPVA-A-2026-03085.pdf",
+   "published": "2026-10-23"
+  },
+  "bop-zamora-130": {
+   "title": "Junta de Castilla y León, Oficina Territorial de Trabajo de Zamora. Calendario complementario de fiestas locales para el año 2027 (BOP Zamora núm. 130, 6-XI-2026, R-202602561)",
+   "url": "https://www.diputaciondezamora.es/opencms/export/sites/dipu-zamora/servicios/BOP/.Archivos/documentos/BOP/anuncios/2026/130/202602561.pdf",
+   "published": "2026-11-06"
+  },
   "bop-zamora-88": {
    "title": "Junta de Castilla y León, Oficina Territorial de Trabajo de Zamora. Calendario de fiestas locales para el año 2027 — corrección de errores con publicación íntegra (BOP Zamora núm. 88, 31-VII-2026, R-202601897)",
    "url": "https://www.diputaciondezamora.es/opencms/export/sites/dipu-zamora/servicios/BOP/.Archivos/documentos/BOP/anuncios/2026/88/202601897.pdf",
    "published": "2026-07-31"
+  },
+  "bop-zamora-91": {
+   "title": "Junta de Castilla y León, Oficina Territorial de Trabajo de Zamora. Corrección de errores del anexo del calendario de fiestas de la provincia de Zamora para el año 2027 publicado en el BOP n.º 88 (BOP Zamora núm. 91, 7-VIII-2026, R-202601943)",
+   "url": "https://www.diputaciondezamora.es/opencms/export/sites/dipu-zamora/servicios/BOP/.Archivos/documentos/BOP/anuncios/2026/91/202601943.pdf",
+   "published": "2026-08-07"
   },
   "bopa-110": {
    "title": "Resolución de 22 de mayo de 2026, de la Consejería de Ciencia, Industria y Empleo, por la que se aprueba el calendario de fiestas locales para el año 2027 en el ámbito del Principado de Asturias (BOPA núm. 110, 10-VI-2026, cód. 2026-04656)",
@@ -191,11 +226,6 @@
    "title": "Ajuntament de Blanes, notícia 26-06-2026 sobre el Ple municipal de 25-06-2026 (punt 14: festes locals 2027)",
    "url": "https://www.blanes.cat/docweb/2026-06-26-ple",
    "published": "2026-06-26"
-  },
-  "councils-2026-11-17:burgos": {
-   "title": "Ayuntamiento de Burgos, noticia 11-11-2026 'Aprobación de los festivos locales de la ciudad de Burgos para el año 2027' (acuerdo de la Junta de Gobierno Local)",
-   "url": "https://www.aytoburgos.es/-/aprobaci%C3%B3n-de-los-festivos-locales-de-la-ciudad-de-burgos-para-el-a%C3%B1o-2027.",
-   "published": "2026-11-11"
   },
   "councils-2026-11-17:cornella-de-llobregat": {
    "title": "Ajuntament de Cornellà de Llobregat, 'Festes locals i fires': dies festius 2027 (decret de festes locals 2027; Ple de 22-07-2026)",
@@ -336,11 +366,6 @@
    "title": "Ayuntamiento de Torrejón de Ardoz, nota de prensa 19/10/2026 'El 21 y 22 de junio serán los días festivos de Torrejón de Ardoz en 2027' (acuerdo de la Junta de Gobierno Local de 13 de octubre de 2026)",
    "url": "https://www.ayto-torrejon.es/noticia/nota-de-prensa/el-21-y-22-de-junio-seran-los-dias-festivos-de-torrejon-de-ardoz-en-2027",
    "published": "2026-10-19"
-  },
-  "site:valladolid": {
-   "title": "Ayuntamiento de Valladolid, Sede Electrónica: calendario de días inhábiles",
-   "url": "https://sede.valladolid.es/opencms/opencms/system/modules/sede/pages/calendario",
-   "published": null
   }
  },
  "municipios": {
@@ -7024,6 +7049,42 @@
    "status": "boletin",
    "source": "boja-2026-210"
   },
+  "05001": {
+   "name": "Adanero",
+   "province": "Ávila",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-09-13",
+     "name": null
+    },
+    {
+     "date": "2027-09-14",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-avila-2155",
+   "note": "Second complementary list (late proposals and changes to BOP Ávila 129); printed: «13 y 14 septiembre»."
+  },
+  "05002": {
+   "name": "La Adrada",
+   "province": "Ávila",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2027-08-06",
+     "name": "El Salvador"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-avila-2155",
+   "note": "Second complementary list (late proposals and changes to BOP Ávila 129); printed: «3 de febrero, San Blas y 6 de agosto El Salvador»."
+  },
   "05005": {
    "name": "Albornos",
    "province": "Ávila",
@@ -7238,12 +7299,31 @@
      "name": "San Pedro del Barco"
     },
     {
-     "date": "2027-09-04",
+     "date": "2027-09-03",
      "name": "Cristo"
     }
    ],
    "status": "boletin",
-   "source": "bop-avila-129"
+   "source": "bop-avila-2155",
+   "note": "Second complementary list (late proposals and changes to BOP Ávila 129); printed: «12 de agosto, San Pedro del Barco y 3 de septiembre Cristo»."
+  },
+  "05022": {
+   "name": "El Barraco",
+   "province": "Ávila",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-09-14",
+     "name": null
+    },
+    {
+     "date": "2027-09-15",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-avila-2155",
+   "note": "Second complementary list (late proposals and changes to BOP Ávila 129); printed: «14 y 15 de septiembre»."
   },
   "05023": {
    "name": "Barromán",
@@ -7636,6 +7716,24 @@
    "status": "boletin",
    "source": "bop-avila-129"
   },
+  "05053": {
+   "name": "Casasola",
+   "province": "Ávila",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2027-08-17",
+     "name": "San Roque"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-avila-2155",
+   "note": "Second complementary list (late proposals and changes to BOP Ávila 129); printed: «3 de febrero San Blas y 17 de agosto San Roque»."
+  },
   "05054": {
    "name": "Casavieja",
    "province": "Ávila",
@@ -7669,6 +7767,24 @@
    ],
    "status": "boletin",
    "source": "bop-avila-129"
+  },
+  "05056": {
+   "name": "Castellanos de Zapardiel",
+   "province": "Ávila",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-07-16",
+     "name": "Virgen del Carmen"
+    },
+    {
+     "date": "2027-09-08",
+     "name": "Ntra Sra del Castillo"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-avila-2155",
+   "note": "Second complementary list (late proposals and changes to BOP Ávila 129); printed: «16 de julio, Virgen del Carmen y 8 de septiembre Ntra Sra del Castillo»."
   },
   "05057": {
    "name": "Cebreros",
@@ -8218,6 +8334,24 @@
    "status": "boletin",
    "source": "bop-avila-129"
   },
+  "05100": {
+   "name": "El Hornillo",
+   "province": "Ávila",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-04-26",
+     "name": "San Marcos"
+    },
+    {
+     "date": "2027-12-27",
+     "name": "San Juan Evangelista"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-avila-2155",
+   "note": "Second complementary list (late proposals and changes to BOP Ávila 129); printed: «26 de abril, San Marcos y 27 de diciembre San Juan Evangelista»."
+  },
   "05101": {
    "name": "Hoyocasero",
    "province": "Ávila",
@@ -8330,12 +8464,13 @@
      "name": null
     },
     {
-     "date": "2027-10-16",
-     "name": null
+     "date": "2027-05-17",
+     "name": "Pascua de Pentecostés"
     }
    ],
    "status": "boletin",
-   "source": "bop-avila-129"
+   "source": "bop-avila-2155",
+   "note": "Second complementary list (late proposals and changes to BOP Ávila 129); printed: «2 de febrero y 17 de mayo Pascua de Pentecostés»."
   },
   "05110": {
    "name": "Lanzahíta",
@@ -8472,6 +8607,24 @@
    ],
    "status": "boletin",
    "source": "bop-avila-129"
+  },
+  "05121": {
+   "name": "Martiherrero",
+   "province": "Ávila",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-07-01",
+     "name": "Ntra Sra de la Asunción"
+    },
+    {
+     "date": "2027-07-02",
+     "name": "Ntra Sra de la Asunción"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-avila-2155",
+   "note": "Second complementary list (late proposals and changes to BOP Ávila 129); printed: «1 y 2 de julio Ntra Sra de la Asunción»."
   },
   "05122": {
    "name": "Martínez",
@@ -9132,6 +9285,24 @@
    "status": "boletin",
    "source": "bop-avila-129"
   },
+  "05167": {
+   "name": "Navarrevisca",
+   "province": "Ávila",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-09-15",
+     "name": null
+    },
+    {
+     "date": "2027-09-16",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-avila-2155",
+   "note": "Second complementary list (late proposals and changes to BOP Ávila 129); printed: «15 y 16 de septiembre»."
+  },
   "05168": {
    "name": "Las Navas del Marqués",
    "province": "Ávila",
@@ -9421,6 +9592,24 @@
    "status": "boletin",
    "source": "bop-avila-129"
   },
+  "05184": {
+   "name": "Peguerinos",
+   "province": "Ávila",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-08-17",
+     "name": null
+    },
+    {
+     "date": "2027-10-04",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-avila-2155",
+   "note": "Second complementary list (late proposals and changes to BOP Ávila 129); printed: «17 de agosto y 4 de octubre»."
+  },
   "05185": {
    "name": "Peñalba de Ávila",
    "province": "Ávila",
@@ -9523,6 +9712,24 @@
    ],
    "status": "boletin",
    "source": "bop-avila-129"
+  },
+  "05191": {
+   "name": "Pradosegar",
+   "province": "Ávila",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-08-16",
+     "name": "San Roque"
+    },
+    {
+     "date": "2027-08-17",
+     "name": "San Roquito"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-avila-2155",
+   "note": "Second complementary list (late proposals and changes to BOP Ávila 129); printed: «16 de agosto, San Roque y 17 de agosto San Roquito»."
   },
   "05193": {
    "name": "Rasueros",
@@ -9794,6 +10001,24 @@
    ],
    "status": "boletin",
    "source": "bop-avila-129"
+  },
+  "05212": {
+   "name": "San Juan del Molinillo",
+   "province": "Ávila",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-06-24",
+     "name": null
+    },
+    {
+     "date": "2027-09-27",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-avila-2155",
+   "note": "Second complementary list (late proposals and changes to BOP Ávila 129); printed: «24 de junio y 27 de septiembre»."
   },
   "05214": {
    "name": "San Lorenzo de Tormes",
@@ -10206,6 +10431,24 @@
    "status": "boletin",
    "source": "bop-avila-129"
   },
+  "05241": {
+   "name": "El Tiemblo",
+   "province": "Ávila",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-06-14",
+     "name": "San Antonio"
+    },
+    {
+     "date": "2027-09-13",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-avila-2155",
+   "note": "Second complementary list (late proposals and changes to BOP Ávila 129); printed: «14 de junio San Antonio y 13 de septiembre»."
+  },
   "05242": {
    "name": "Tiñosillos",
    "province": "Ávila",
@@ -10257,6 +10500,24 @@
    ],
    "status": "boletin",
    "source": "bop-avila-129"
+  },
+  "05245": {
+   "name": "Tornadizos de Ávila",
+   "province": "Ávila",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-09-29",
+     "name": null
+    },
+    {
+     "date": "2027-10-01",
+     "name": "San Miguel Arcángel"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-avila-2155",
+   "note": "Second complementary list (late proposals and changes to BOP Ávila 129); printed: «29 de septiembre y 1 de octubre San Miguel Arcángel»."
   },
   "05252": {
    "name": "Valdecasa",
@@ -10624,6 +10885,24 @@
      ]
     }
    ]
+  },
+  "05905": {
+   "name": "Villanueva de Ávila",
+   "province": "Ávila",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-03",
+     "name": null
+    },
+    {
+     "date": "2027-08-17",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-avila-2155",
+   "note": "Second complementary list (late proposals and changes to BOP Ávila 129); printed: «3 de mayo y 17 de agosto»."
   },
   "06001": {
    "name": "Acedera",
@@ -15590,9 +15869,9 @@
      "name": "San Pedro y San Pablo"
     }
    ],
-   "status": "ayuntamiento",
-   "source": "councils-2026-11-17:burgos",
-   "note": "Junta de Gobierno Local agreement. The city's proposal reached the Oficina Territorial de Trabajo after its 30-06-2026 deadline (the council's own diligencia says so), which is why Burgos city is missing from the BOP Burgos list of 04-08-2026; a later bulletin entry is still pending."
+   "status": "boletin",
+   "source": "bop-burgos-202",
+   "note": "Complementary list (proposals received after BOP Burgos 145); the annex gives one line per day; 'FIESTA LOCAL' means no festivity name."
   },
   "09060": {
    "name": "Busto de Bureba",
@@ -16260,6 +16539,24 @@
    "source": "bop-burgos-145",
    "note": "The annex gives one line per day; 'FIESTA LOCAL' means no festivity name."
   },
+  "09163": {
+   "name": "Hontoria del Pinar",
+   "province": "Burgos",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-08-13",
+     "name": null
+    },
+    {
+     "date": "2027-08-17",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-burgos-202",
+   "note": "Complementary list (proposals received after BOP Burgos 145); the annex gives one line per day; 'FIESTA LOCAL' means no festivity name."
+  },
   "09164": {
    "name": "Hontoria de Valdearados",
    "province": "Burgos",
@@ -16309,6 +16606,24 @@
    "status": "boletin",
    "source": "bop-burgos-145",
    "note": "The annex gives one line per day; 'FIESTA LOCAL' means no festivity name."
+  },
+  "09172": {
+   "name": "Huérmeces",
+   "province": "Burgos",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-06-24",
+     "name": "San Juan"
+    },
+    {
+     "date": "2027-08-10",
+     "name": "San Lorenzo"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-burgos-202",
+   "note": "Complementary list (proposals received after BOP Burgos 145); the annex gives one line per day; 'FIESTA LOCAL' means no festivity name."
   },
   "09175": {
    "name": "Humada",
@@ -16562,6 +16877,24 @@
    "source": "bop-burgos-145",
    "note": "The annex gives one line per day; 'FIESTA LOCAL' means no festivity name."
   },
+  "09214": {
+   "name": "Merindad de Montija",
+   "province": "Burgos",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-03-29",
+     "name": "Lunes de Pascua"
+    },
+    {
+     "date": "2027-06-29",
+     "name": "San Pedro"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-burgos-202",
+   "note": "Complementary list (proposals received after BOP Burgos 145); the annex gives one line per day; 'FIESTA LOCAL' means no festivity name."
+  },
   "09215": {
    "name": "Merindad de Sotoscueva",
    "province": "Burgos",
@@ -16579,6 +16912,24 @@
    "status": "boletin",
    "source": "bop-burgos-145",
    "note": "The annex gives one line per day; 'FIESTA LOCAL' means no festivity name."
+  },
+  "09217": {
+   "name": "Merindad de Valdivielso",
+   "province": "Burgos",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2027-06-24",
+     "name": "San Juan"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-burgos-202",
+   "note": "Complementary list (proposals received after BOP Burgos 145); the annex gives one line per day; 'FIESTA LOCAL' means no festivity name."
   },
   "09218": {
    "name": "Milagros",
@@ -16813,6 +17164,24 @@
    "status": "boletin",
    "source": "bop-burgos-145",
    "note": "The annex gives one line per day; 'FIESTA LOCAL' means no festivity name."
+  },
+  "09247": {
+   "name": "Palacios de Riopisuerga",
+   "province": "Burgos",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-01-25",
+     "name": null
+    },
+    {
+     "date": "2027-06-03",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-burgos-202",
+   "note": "Complementary list (proposals received after BOP Burgos 145); the annex gives one line per day; 'FIESTA LOCAL' means no festivity name."
   },
   "09249": {
    "name": "Palazuelos de Muñó",
@@ -18241,6 +18610,24 @@
    "source": "bop-burgos-145",
    "note": "The annex gives one line per day; 'FIESTA LOCAL' means no festivity name."
   },
+  "09456": {
+   "name": "Villaquirán de los Infantes",
+   "province": "Burgos",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-09-08",
+     "name": "Natividad de Ntra Sra"
+    },
+    {
+     "date": "2027-09-09",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-burgos-202",
+   "note": "Complementary list (proposals received after BOP Burgos 145); the annex gives one line per day; 'FIESTA LOCAL' means no festivity name."
+  },
   "09458": {
    "name": "Villariezo",
    "province": "Burgos",
@@ -18522,6 +18909,24 @@
    "status": "boletin",
    "source": "bop-burgos-145",
    "note": "The annex gives one line per day; 'FIESTA LOCAL' means no festivity name."
+  },
+  "09907": {
+   "name": "Alfoz de Quintanadueñas",
+   "province": "Burgos",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-06-04",
+     "name": null
+    },
+    {
+     "date": "2027-10-04",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-burgos-202",
+   "note": "Complementary list (proposals received after BOP Burgos 145); the annex gives one line per day; 'FIESTA LOCAL' means no festivity name."
   },
   "09908": {
    "name": "Valle de Losa",
@@ -68496,6 +68901,24 @@
    "source": "bop-palencia-83",
    "note": "The annex gives dates only, without festivity names."
   },
+  "34036": {
+   "name": "Brañosera",
+   "province": "Palencia",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-10-13",
+     "name": null
+    },
+    {
+     "date": "2027-12-04",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-palencia-129",
+   "note": "Late list (ampliación) to BOP Palencia 83; the annex gives dates only."
+  },
   "34037": {
    "name": "Buenavista de Valdavia",
    "province": "Palencia",
@@ -68513,6 +68936,39 @@
    "status": "boletin",
    "source": "bop-palencia-83",
    "note": "The annex gives dates only, without festivity names."
+  },
+  "34038": {
+   "name": "Bustillo de la Vega",
+   "province": "Palencia",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": null
+    },
+    {
+     "date": "2027-06-29",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-palencia-129",
+   "note": "Late list (ampliación) to BOP Palencia 83; the annex gives dates only. The bulletin also lists other localities of the municipality with their own days: Lagunilla de la Vega 2027-09-14, 2027-09-15.",
+   "localities": [
+    {
+     "name": "Lagunilla de la Vega",
+     "holidays": [
+      {
+       "date": "2027-09-14",
+       "name": null
+      },
+      {
+       "date": "2027-09-15",
+       "name": null
+      }
+     ]
+    }
+   ]
   },
   "34041": {
    "name": "Calahorra de Boedo",
@@ -68586,19 +69042,41 @@
    "source": "bop-palencia-83",
    "note": "The annex gives dates only, without festivity names."
   },
+  "34049": {
+   "name": "Castrejón de la Peña",
+   "province": "Palencia",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-02-05",
+     "name": null
+    },
+    {
+     "date": "2027-05-15",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-palencia-129",
+   "note": "Late list (ampliación) to BOP Palencia 83; the annex gives dates only."
+  },
   "34051": {
    "name": "Castrillo de Onielo",
    "province": "Palencia",
    "region": "castilla-y-leon",
    "holidays": [
     {
+     "date": "2027-01-25",
+     "name": null
+    },
+    {
      "date": "2027-05-22",
      "name": null
     }
    ],
    "status": "boletin",
-   "source": "bop-palencia-83",
-   "note": "The bulletin lists only one local day. The annex gives dates only, without festivity names. The other day is printed as 'no comunicado' (not communicated by the council)."
+   "source": "bop-palencia-129",
+   "note": "Late list (ampliación) to BOP Palencia 83; the annex gives dates only."
   },
   "34052": {
    "name": "Castrillo de Villavega",
@@ -68761,6 +69239,24 @@
    "status": "boletin",
    "source": "bop-palencia-83",
    "note": "The annex gives dates only, without festivity names."
+  },
+  "34063": {
+   "name": "Cordovilla la Real",
+   "province": "Palencia",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": null
+    },
+    {
+     "date": "2027-05-24",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-palencia-129",
+   "note": "Late list (ampliación) to BOP Palencia 83; the annex gives dates only."
   },
   "34066": {
    "name": "Cubillas de Cerrato",
@@ -68946,11 +69442,15 @@
     {
      "date": "2027-05-14",
      "name": null
+    },
+    {
+     "date": "2027-08-17",
+     "name": null
     }
    ],
    "status": "boletin",
-   "source": "bop-palencia-83",
-   "note": "The bulletin lists only one local day. The annex gives dates only, without festivity names. The other day is printed as 'no comunicado' (not communicated by the council)."
+   "source": "bop-palencia-129",
+   "note": "Late list (ampliación) to BOP Palencia 83; the annex gives dates only."
   },
   "34079": {
    "name": "Grijota",
@@ -69167,6 +69667,24 @@
    "status": "boletin",
    "source": "bop-palencia-83",
    "note": "The annex gives dates only, without festivity names."
+  },
+  "34096": {
+   "name": "Lomas",
+   "province": "Palencia",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-07-26",
+     "name": null
+    },
+    {
+     "date": "2027-09-20",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-palencia-129",
+   "note": "Late list (ampliación) to BOP Palencia 83; the annex gives dates only."
   },
   "34098": {
    "name": "Magaz de Pisuerga",
@@ -69488,6 +70006,24 @@
    "status": "boletin",
    "source": "bop-palencia-83",
    "note": "The annex gives dates only, without festivity names."
+  },
+  "34122": {
+   "name": "Páramo de Boedo",
+   "province": "Palencia",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-02-03",
+     "name": null
+    },
+    {
+     "date": "2027-05-08",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-palencia-129",
+   "note": "Late list (ampliación) to BOP Palencia 83; the annex gives dates only."
   },
   "34123": {
    "name": "Paredes de Nava",
@@ -69936,6 +70472,65 @@
    "source": "bop-palencia-83",
    "note": "The annex gives dates only, without festivity names."
   },
+  "34147": {
+   "name": "Renedo de la Vega",
+   "province": "Palencia",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": null
+    },
+    {
+     "date": "2027-11-11",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-palencia-129",
+   "note": "Late list (ampliación) to BOP Palencia 83; the annex gives dates only. The bulletin also lists other localities of the municipality with their own days: Moslares de la Vega 2027-01-22, 2027-08-07; Santillán de la Vega 2027-01-07, 2027-01-08; Albalá de la Vega 2027-05-07, 2027-05-08.",
+   "localities": [
+    {
+     "name": "Moslares de la Vega",
+     "holidays": [
+      {
+       "date": "2027-01-22",
+       "name": null
+      },
+      {
+       "date": "2027-08-07",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Santillán de la Vega",
+     "holidays": [
+      {
+       "date": "2027-01-07",
+       "name": null
+      },
+      {
+       "date": "2027-01-08",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Albalá de la Vega",
+     "holidays": [
+      {
+       "date": "2027-05-07",
+       "name": null
+      },
+      {
+       "date": "2027-05-08",
+       "name": null
+      }
+     ]
+    }
+   ]
+  },
   "34151": {
    "name": "Respenda de la Peña",
    "province": "Palencia",
@@ -70257,6 +70852,24 @@
    "source": "bop-palencia-83",
    "note": "The annex gives dates only, without festivity names."
   },
+  "34174": {
+   "name": "Santoyo",
+   "province": "Palencia",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-06-24",
+     "name": null
+    },
+    {
+     "date": "2027-08-30",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-palencia-129",
+   "note": "Late list (ampliación) to BOP Palencia 83; the annex gives dates only."
+  },
   "34175": {
    "name": "La Serna",
    "province": "Palencia",
@@ -70347,6 +70960,24 @@
    "source": "bop-palencia-83",
    "note": "The annex gives dates only, without festivity names."
   },
+  "34180": {
+   "name": "Támara de Campos",
+   "province": "Palencia",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-03",
+     "name": null
+    },
+    {
+     "date": "2027-08-13",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-palencia-129",
+   "note": "Late list (ampliación) to BOP Palencia 83; the annex gives dates only."
+  },
   "34181": {
    "name": "Tariego de Cerrato",
    "province": "Palencia",
@@ -70436,6 +71067,24 @@
    "status": "boletin",
    "source": "bop-palencia-83",
    "note": "The annex gives dates only, without festivity names."
+  },
+  "34190": {
+   "name": "Valderrábano",
+   "province": "Palencia",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-11-22",
+     "name": null
+    },
+    {
+     "date": "2027-11-24",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-palencia-129",
+   "note": "Late list (ampliación) to BOP Palencia 83; the annex gives dates only."
   },
   "34192": {
    "name": "Valde-Ucieza",
@@ -70535,6 +71184,24 @@
    "status": "boletin",
    "source": "bop-palencia-83",
    "note": "The annex gives dates only, without festivity names."
+  },
+  "34201": {
+   "name": "Vertavillo",
+   "province": "Palencia",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-02-09",
+     "name": null
+    },
+    {
+     "date": "2027-05-15",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-palencia-129",
+   "note": "Late list (ampliación) to BOP Palencia 83; the annex gives dates only."
   },
   "34202": {
    "name": "Villabasta de Valdavia",
@@ -70934,6 +71601,24 @@
    "source": "bop-palencia-83",
    "note": "The annex gives dates only, without festivity names."
   },
+  "34230": {
+   "name": "Villarmentero de Campos",
+   "province": "Palencia",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-10",
+     "name": null
+    },
+    {
+     "date": "2027-11-11",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-palencia-129",
+   "note": "Late list (ampliación) to BOP Palencia 83; the annex gives dates only."
+  },
   "34232": {
    "name": "Villarramiel",
    "province": "Palencia",
@@ -70951,6 +71636,24 @@
    "status": "boletin",
    "source": "bop-palencia-83",
    "note": "The annex gives dates only, without festivity names."
+  },
+  "34233": {
+   "name": "Villasarracino",
+   "province": "Palencia",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": null
+    },
+    {
+     "date": "2027-09-08",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-palencia-129",
+   "note": "Late list (ampliación) to BOP Palencia 83; the annex gives dates only."
   },
   "34234": {
    "name": "Villasila de Valdavia",
@@ -72824,6 +73527,24 @@
    "source": "bop-salamanca-129",
    "note": "The annex gives dates only, without festivity names."
   },
+  "37003": {
+   "name": "Ahigal de los Aceiteros",
+   "province": "Salamanca",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-06-18",
+     "name": null
+    },
+    {
+     "date": "2027-08-13",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-salamanca-206",
+   "note": "Complementary list to BOP Salamanca 129; the annex gives dates only."
+  },
   "37004": {
    "name": "Ahigal de Villarino",
    "province": "Salamanca",
@@ -73021,6 +73742,24 @@
    "status": "boletin",
    "source": "bop-salamanca-129",
    "note": "The annex gives dates only, without festivity names."
+  },
+  "37015": {
+   "name": "Aldea del Obispo",
+   "province": "Salamanca",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-01-20",
+     "name": null
+    },
+    {
+     "date": "2027-07-26",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-salamanca-206",
+   "note": "Complementary list to BOP Salamanca 129; the annex gives dates only."
   },
   "37016": {
    "name": "Aldealengua",
@@ -73381,6 +74120,24 @@
    "status": "boletin",
    "source": "bop-salamanca-129",
    "note": "The annex gives dates only, without festivity names."
+  },
+  "37036": {
+   "name": "San Miguel del Robledo",
+   "province": "Salamanca",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-07",
+     "name": null
+    },
+    {
+     "date": "2027-09-29",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-salamanca-206",
+   "note": "Complementary list to BOP Salamanca 129; the annex gives dates only."
   },
   "37037": {
    "name": "La Atalaya",
@@ -74333,6 +75090,24 @@
    "source": "bop-salamanca-129",
    "note": "The annex gives dates only, without festivity names."
   },
+  "37103": {
+   "name": "Cespedosa de Tormes",
+   "province": "Salamanca",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-09-08",
+     "name": null
+    },
+    {
+     "date": "2027-09-09",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-salamanca-206",
+   "note": "Complementary list to BOP Salamanca 129; the annex gives dates only."
+  },
   "37104": {
    "name": "Cilleros de la Bastida",
    "province": "Salamanca",
@@ -74530,6 +75305,24 @@
    "status": "boletin",
    "source": "bop-salamanca-129",
    "note": "The annex gives dates only, without festivity names."
+  },
+  "37117": {
+   "name": "Doñinos de Salamanca",
+   "province": "Salamanca",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-04-26",
+     "name": null
+    },
+    {
+     "date": "2027-08-09",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-salamanca-206",
+   "note": "Complementary list to BOP Salamanca 129; the annex gives dates only."
   },
   "37118": {
    "name": "Éjeme",
@@ -74999,6 +75792,24 @@
    "source": "bop-salamanca-129",
    "note": "The annex gives dates only, without festivity names."
   },
+  "37145": {
+   "name": "Gallegos de Argañán",
+   "province": "Salamanca",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-04-26",
+     "name": null
+    },
+    {
+     "date": "2027-04-27",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-salamanca-206",
+   "note": "Complementary list to BOP Salamanca 129; the annex gives dates only."
+  },
   "37146": {
    "name": "Gallegos de Solmirón",
    "province": "Salamanca",
@@ -75359,6 +76170,24 @@
    "source": "bop-salamanca-129",
    "note": "The annex gives dates only, without festivity names."
   },
+  "37168": {
+   "name": "Lagunilla",
+   "province": "Salamanca",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-09-14",
+     "name": null
+    },
+    {
+     "date": "2027-09-15",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-salamanca-206",
+   "note": "Complementary list to BOP Salamanca 129; the annex gives dates only."
+  },
   "37169": {
    "name": "Larrodrigo",
    "province": "Salamanca",
@@ -75376,6 +76205,24 @@
    "status": "boletin",
    "source": "bop-salamanca-129",
    "note": "The annex gives dates only, without festivity names."
+  },
+  "37170": {
+   "name": "Ledesma",
+   "province": "Salamanca",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-27",
+     "name": null
+    },
+    {
+     "date": "2027-05-31",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-salamanca-206",
+   "note": "Complementary list to BOP Salamanca 129; the annex gives dates only."
   },
   "37171": {
    "name": "Ledrada",
@@ -75538,6 +76385,24 @@
    "status": "boletin",
    "source": "bop-salamanca-129",
    "note": "The annex gives dates only, without festivity names."
+  },
+  "37181": {
+   "name": "Martiago",
+   "province": "Salamanca",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-09-13",
+     "name": null
+    },
+    {
+     "date": "2027-09-14",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-salamanca-206",
+   "note": "Complementary list to BOP Salamanca 129; the annex gives dates only."
   },
   "37183": {
    "name": "Martín de Yeltes",
@@ -75881,6 +76746,24 @@
    "source": "bop-salamanca-129",
    "note": "The annex gives dates only, without festivity names."
   },
+  "37202": {
+   "name": "Monterrubio de Armuña",
+   "province": "Salamanca",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-06-12",
+     "name": null
+    },
+    {
+     "date": "2027-09-08",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-salamanca-206",
+   "note": "Complementary list to BOP Salamanca 129; the annex gives dates only."
+  },
   "37203": {
    "name": "Monterrubio de la Sierra",
    "province": "Salamanca",
@@ -76129,6 +77012,24 @@
    "status": "boletin",
    "source": "bop-salamanca-129",
    "note": "The annex gives dates only, without festivity names."
+  },
+  "37217": {
+   "name": "Navalmoral de Béjar",
+   "province": "Salamanca",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-08-23",
+     "name": null
+    },
+    {
+     "date": "2027-08-24",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-salamanca-206",
+   "note": "Complementary list to BOP Salamanca 129; the annex gives dates only."
   },
   "37218": {
    "name": "Navamorales",
@@ -76562,6 +77463,24 @@
    "source": "bop-salamanca-129",
    "note": "The annex gives dates only, without festivity names."
   },
+  "37245": {
+   "name": "Peñaparda",
+   "province": "Salamanca",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-06-18",
+     "name": null
+    },
+    {
+     "date": "2027-06-21",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-salamanca-206",
+   "note": "Complementary list to BOP Salamanca 129; the annex gives dates only."
+  },
   "37246": {
    "name": "Peñaranda de Bracamonte",
    "province": "Salamanca",
@@ -76579,6 +77498,24 @@
    "status": "boletin",
    "source": "bop-salamanca-129",
    "note": "The annex gives dates only, without festivity names."
+  },
+  "37247": {
+   "name": "Peñarandilla",
+   "province": "Salamanca",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-02-05",
+     "name": null
+    },
+    {
+     "date": "2027-05-31",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-salamanca-206",
+   "note": "Complementary list to BOP Salamanca 129; the annex gives dates only."
   },
   "37250": {
    "name": "Pereña de la Ribera",
@@ -76724,6 +77661,24 @@
    "source": "bop-salamanca-129",
    "note": "The annex gives dates only, without festivity names."
   },
+  "37259": {
+   "name": "Puebla de San Medel",
+   "province": "Salamanca",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-07-02",
+     "name": null
+    },
+    {
+     "date": "2027-08-27",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-salamanca-206",
+   "note": "Complementary list to BOP Salamanca 129; the annex gives dates only."
+  },
   "37260": {
    "name": "Puebla de Yeltes",
    "province": "Salamanca",
@@ -76814,6 +77769,60 @@
    "source": "bop-salamanca-129",
    "note": "The annex gives dates only, without festivity names."
   },
+  "37266": {
+   "name": "La Redonda",
+   "province": "Salamanca",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-03",
+     "name": null
+    },
+    {
+     "date": "2027-08-13",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-salamanca-206",
+   "note": "Complementary list to BOP Salamanca 129; the annex gives dates only."
+  },
+  "37267": {
+   "name": "Retortillo",
+   "province": "Salamanca",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-02-03",
+     "name": null
+    },
+    {
+     "date": "2027-06-03",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-salamanca-206",
+   "note": "Complementary list to BOP Salamanca 129; the annex gives dates only."
+  },
+  "37268": {
+   "name": "La Rinconada de la Sierra",
+   "province": "Salamanca",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-02-02",
+     "name": null
+    },
+    {
+     "date": "2027-07-26",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-salamanca-206",
+   "note": "Complementary list to BOP Salamanca 129; the annex gives dates only."
+  },
   "37269": {
    "name": "Robleda",
    "province": "Salamanca",
@@ -76832,6 +77841,42 @@
    "source": "bop-salamanca-129",
    "note": "The annex gives dates only, without festivity names."
   },
+  "37270": {
+   "name": "Robliza de Cojos",
+   "province": "Salamanca",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-01-23",
+     "name": null
+    },
+    {
+     "date": "2027-08-06",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-salamanca-206",
+   "note": "Complementary list to BOP Salamanca 129; the annex gives dates only."
+  },
+  "37271": {
+   "name": "Rollán",
+   "province": "Salamanca",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-01-20",
+     "name": null
+    },
+    {
+     "date": "2027-08-10",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-salamanca-206",
+   "note": "Complementary list to BOP Salamanca 129; the annex gives dates only."
+  },
   "37272": {
    "name": "Saelices el Chico",
    "province": "Salamanca",
@@ -76849,6 +77894,24 @@
    "status": "boletin",
    "source": "bop-salamanca-129",
    "note": "The annex gives dates only, without festivity names."
+  },
+  "37273": {
+   "name": "La Sagrada",
+   "province": "Salamanca",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": null
+    },
+    {
+     "date": "2027-05-29",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-salamanca-206",
+   "note": "Complementary list to BOP Salamanca 129; the annex gives dates only."
   },
   "37274": {
    "name": "Salamanca",
@@ -77066,6 +78129,42 @@
    "source": "bop-salamanca-129",
    "note": "The annex gives dates only, without festivity names."
   },
+  "37286": {
+   "name": "San Martín del Castañar",
+   "province": "Salamanca",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-10-11",
+     "name": null
+    },
+    {
+     "date": "2027-11-11",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-salamanca-206",
+   "note": "Complementary list to BOP Salamanca 129; the annex gives dates only."
+  },
+  "37287": {
+   "name": "San Miguel de Valero",
+   "province": "Salamanca",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-09-30",
+     "name": null
+    },
+    {
+     "date": "2027-10-01",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-salamanca-206",
+   "note": "Complementary list to BOP Salamanca 129; the annex gives dates only."
+  },
   "37288": {
    "name": "San Morales",
    "province": "Salamanca",
@@ -77119,6 +78218,24 @@
    "status": "boletin",
    "source": "bop-salamanca-129",
    "note": "The annex gives dates only, without festivity names."
+  },
+  "37291": {
+   "name": "San Pedro de Rozados",
+   "province": "Salamanca",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-02-03",
+     "name": null
+    },
+    {
+     "date": "2027-05-27",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-salamanca-206",
+   "note": "Complementary list to BOP Salamanca 129; the annex gives dates only."
   },
   "37292": {
    "name": "San Pelayo de Guareña",
@@ -77228,6 +78345,24 @@
    "source": "bop-salamanca-129",
    "note": "The annex gives dates only, without festivity names."
   },
+  "37299": {
+   "name": "Santiz",
+   "province": "Salamanca",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-09-28",
+     "name": null
+    },
+    {
+     "date": "2027-09-29",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-salamanca-206",
+   "note": "Complementary list to BOP Salamanca 129; the annex gives dates only."
+  },
   "37300": {
    "name": "Los Santos",
    "province": "Salamanca",
@@ -77281,6 +78416,24 @@
    "status": "boletin",
    "source": "bop-salamanca-129",
    "note": "The annex gives dates only, without festivity names."
+  },
+  "37303": {
+   "name": "El Sahugo",
+   "province": "Salamanca",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-08-07",
+     "name": null
+    },
+    {
+     "date": "2027-09-24",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-salamanca-206",
+   "note": "Complementary list to BOP Salamanca 129; the annex gives dates only."
   },
   "37304": {
    "name": "Sepulcro-Hilario",
@@ -77768,6 +78921,24 @@
    "source": "bop-salamanca-129",
    "note": "The annex gives dates only, without festivity names."
   },
+  "37333": {
+   "name": "Valdelacasa",
+   "province": "Salamanca",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-09-16",
+     "name": null
+    },
+    {
+     "date": "2027-09-17",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-salamanca-206",
+   "note": "Complementary list to BOP Salamanca 129; the annex gives dates only."
+  },
   "37334": {
    "name": "Valdelageve",
    "province": "Salamanca",
@@ -77803,6 +78974,24 @@
    "status": "boletin",
    "source": "bop-salamanca-129",
    "note": "The annex gives dates only, without festivity names."
+  },
+  "37337": {
+   "name": "Valderrodrigo",
+   "province": "Salamanca",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-10-01",
+     "name": null
+    },
+    {
+     "date": "2027-10-04",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-salamanca-206",
+   "note": "Complementary list to BOP Salamanca 129; the annex gives dates only."
   },
   "37338": {
    "name": "Valdunciel",
@@ -77875,6 +79064,24 @@
    "status": "boletin",
    "source": "bop-salamanca-129",
    "note": "The annex gives dates only, without festivity names."
+  },
+  "37342": {
+   "name": "Valverdón",
+   "province": "Salamanca",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-06-15",
+     "name": null
+    },
+    {
+     "date": "2027-06-24",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-salamanca-206",
+   "note": "Complementary list to BOP Salamanca 129; the annex gives dates only."
   },
   "37343": {
    "name": "Vallejera de Riofrío",
@@ -78272,6 +79479,24 @@
    "source": "bop-salamanca-129",
    "note": "The annex gives dates only, without festivity names."
   },
+  "37366": {
+   "name": "Villarmuerto",
+   "province": "Salamanca",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-08-14",
+     "name": null
+    },
+    {
+     "date": "2027-08-20",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-salamanca-206",
+   "note": "Complementary list to BOP Salamanca 129; the annex gives dates only."
+  },
   "37367": {
    "name": "Villasbuenas",
    "province": "Salamanca",
@@ -78398,6 +79623,24 @@
    "source": "bop-salamanca-129",
    "note": "The annex gives dates only, without festivity names."
   },
+  "37374": {
+   "name": "Villoria",
+   "province": "Salamanca",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": null
+    },
+    {
+     "date": "2027-09-08",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-salamanca-206",
+   "note": "Complementary list to BOP Salamanca 129; the annex gives dates only."
+  },
   "37375": {
    "name": "Villoruela",
    "province": "Salamanca",
@@ -78452,6 +79695,24 @@
    "source": "bop-salamanca-129",
    "note": "The annex gives dates only, without festivity names."
   },
+  "37378": {
+   "name": "Zamarra",
+   "province": "Salamanca",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-01-20",
+     "name": null
+    },
+    {
+     "date": "2027-05-03",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-salamanca-206",
+   "note": "Complementary list to BOP Salamanca 129; the annex gives dates only."
+  },
   "37379": {
    "name": "Zamayón",
    "province": "Salamanca",
@@ -78487,6 +79748,24 @@
    "status": "boletin",
    "source": "bop-salamanca-129",
    "note": "The annex gives dates only, without festivity names."
+  },
+  "37381": {
+   "name": "La Zarza de Pumareda",
+   "province": "Salamanca",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-03-29",
+     "name": null
+    },
+    {
+     "date": "2027-08-10",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-salamanca-206",
+   "note": "Complementary list to BOP Salamanca 129; the annex gives dates only."
   },
   "37382": {
    "name": "Zorita de la Frontera",
@@ -103663,6 +104942,24 @@
    "source": "bop-valladolid-129",
    "note": "The annex gives dates only, without festivity names."
   },
+  "47049": {
+   "name": "Cervillego de la Cruz",
+   "province": "Valladolid",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-03",
+     "name": null
+    },
+    {
+     "date": "2027-08-30",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-valladolid-204",
+   "note": "Late list (ampliación) to BOP Valladolid 2026/129; the annex gives dates only."
+  },
   "47050": {
    "name": "Cigales",
    "province": "Valladolid",
@@ -103843,6 +105140,24 @@
    "source": "bop-valladolid-129",
    "note": "The annex gives dates only, without festivity names."
   },
+  "47060": {
+   "name": "Encinas de Esgueva",
+   "province": "Valladolid",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-03-29",
+     "name": null
+    },
+    {
+     "date": "2027-08-17",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-valladolid-204",
+   "note": "Late list (ampliación) to BOP Valladolid 2026/129; the annex gives dates only."
+  },
   "47061": {
    "name": "Esguevillas de Esgueva",
    "province": "Valladolid",
@@ -103951,6 +105266,24 @@
    "source": "bop-valladolid-129",
    "note": "The annex gives dates only, without festivity names."
   },
+  "47067": {
+   "name": "Fuente el Sol",
+   "province": "Valladolid",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": null
+    },
+    {
+     "date": "2027-06-24",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-valladolid-204",
+   "note": "Late list (ampliación) to BOP Valladolid 2026/129; the annex gives dates only."
+  },
   "47068": {
    "name": "Fuente-Olmedo",
    "province": "Valladolid",
@@ -104004,6 +105337,24 @@
    "status": "boletin",
    "source": "bop-valladolid-129",
    "note": "The annex gives dates only, without festivity names."
+  },
+  "47071": {
+   "name": "Geria",
+   "province": "Valladolid",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-02-03",
+     "name": null
+    },
+    {
+     "date": "2027-05-14",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-valladolid-204",
+   "note": "Late list (ampliación) to BOP Valladolid 2026/129; the annex gives dates only."
   },
   "47073": {
    "name": "Herrín de Campos",
@@ -104131,6 +105482,24 @@
    "source": "bop-valladolid-129",
    "note": "The annex gives dates only, without festivity names."
   },
+  "47081": {
+   "name": "Marzales",
+   "province": "Valladolid",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-07",
+     "name": null
+    },
+    {
+     "date": "2027-05-10",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-valladolid-204",
+   "note": "Late list (ampliación) to BOP Valladolid 2026/129; the annex gives dates only."
+  },
   "47082": {
    "name": "Matapozuelos",
    "province": "Valladolid",
@@ -104239,6 +105608,42 @@
    "source": "bop-valladolid-129",
    "note": "The annex gives dates only, without festivity names."
   },
+  "47088": {
+   "name": "Melgar de Abajo",
+   "province": "Valladolid",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-07-02",
+     "name": null
+    },
+    {
+     "date": "2027-12-27",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-valladolid-204",
+   "note": "Late list (ampliación) to BOP Valladolid 2026/129; the annex gives dates only."
+  },
+  "47089": {
+   "name": "Melgar de Arriba",
+   "province": "Valladolid",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-08",
+     "name": null
+    },
+    {
+     "date": "2027-08-24",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-valladolid-204",
+   "note": "Late list (ampliación) to BOP Valladolid 2026/129; the annex gives dates only."
+  },
   "47090": {
    "name": "Mojados",
    "province": "Valladolid",
@@ -104256,6 +105661,24 @@
    "status": "boletin",
    "source": "bop-valladolid-129",
    "note": "The annex gives dates only, without festivity names."
+  },
+  "47091": {
+   "name": "Monasterio de Vega",
+   "province": "Valladolid",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-14",
+     "name": null
+    },
+    {
+     "date": "2027-11-30",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-valladolid-204",
+   "note": "Late list (ampliación) to BOP Valladolid 2026/129; the annex gives dates only."
   },
   "47092": {
    "name": "Montealegre de Campos",
@@ -104472,6 +105895,24 @@
    "status": "boletin",
    "source": "bop-valladolid-129",
    "note": "The annex gives dates only, without festivity names."
+  },
+  "47104": {
+   "name": "Olmedo",
+   "province": "Valladolid",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-09-29",
+     "name": null
+    },
+    {
+     "date": "2027-10-11",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-valladolid-204",
+   "note": "Late list (ampliación) to BOP Valladolid 2026/129; the annex gives dates only."
   },
   "47105": {
    "name": "Olmos de Esgueva",
@@ -104883,6 +106324,24 @@
    "source": "bop-valladolid-129",
    "note": "The annex gives dates only, without festivity names."
   },
+  "47131": {
+   "name": "Rábano",
+   "province": "Valladolid",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-08-17",
+     "name": null
+    },
+    {
+     "date": "2027-08-18",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-valladolid-204",
+   "note": "Late list (ampliación) to BOP Valladolid 2026/129; the annex gives dates only."
+  },
   "47132": {
    "name": "Ramiro",
    "province": "Valladolid",
@@ -104973,6 +106432,24 @@
    "source": "bop-valladolid-129",
    "note": "The annex gives dates only, without festivity names."
   },
+  "47138": {
+   "name": "Rubí de Bracamonte",
+   "province": "Valladolid",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-06-14",
+     "name": null
+    },
+    {
+     "date": "2027-08-05",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-valladolid-204",
+   "note": "Late list (ampliación) to BOP Valladolid 2026/129; the annex gives dates only."
+  },
   "47139": {
    "name": "Rueda",
    "province": "Valladolid",
@@ -105018,6 +106495,20 @@
      ]
     }
    ]
+  },
+  "47140": {
+   "name": "Saelices de Mayorga",
+   "province": "Valladolid",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-07-16",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-valladolid-204",
+   "note": "The bulletin lists only one local day. Late list (ampliación) to BOP Valladolid 2026/129; the annex gives dates only. The other day is printed as 'No comunicada'."
   },
   "47141": {
    "name": "Salvador de Zapardiel",
@@ -105234,6 +106725,24 @@
    "status": "boletin",
    "source": "bop-valladolid-129",
    "note": "The annex gives dates only, without festivity names."
+  },
+  "47153": {
+   "name": "Santervás de Campos",
+   "province": "Valladolid",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": null
+    },
+    {
+     "date": "2027-06-19",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-valladolid-204",
+   "note": "Late list (ampliación) to BOP Valladolid 2026/129; the annex gives dates only."
   },
   "47154": {
    "name": "Santibáñez de Valcorba",
@@ -105793,11 +107302,15 @@
     {
      "date": "2027-05-25",
      "name": null
+    },
+    {
+     "date": "2027-08-17",
+     "name": null
     }
    ],
    "status": "boletin",
-   "source": "bop-valladolid-129",
-   "note": "The bulletin lists only one local day. The annex gives dates only, without festivity names. The other day is printed as 'No comunicada' (not communicated by the council)."
+   "source": "bop-valladolid-204",
+   "note": "Late list (ampliación) to BOP Valladolid 2026/129; the annex gives dates only."
   },
   "47186": {
    "name": "Valladolid",
@@ -105813,9 +107326,27 @@
      "name": "Virgen de San Lorenzo"
     }
    ],
-   "status": "ayuntamiento",
-   "source": "site:valladolid",
-   "note": "The provincial resolution (Oficina Territorial de Trabajo de Valladolid, Resolución de 6-VII-2026, BOP Valladolid BOPVA-A-2026-02051, 13-VII-2026) lists VALLADOLID as 'No comunicada No comunicada'; no complementary resolution found. The dates come only from the Ayuntamiento's e-office non-working-day calendar, which carries the caveat 'puede estar desactualizado o incluir únicamente los festivos nacionales'."
+   "status": "boletin",
+   "source": "bop-valladolid-204",
+   "note": "Late list (ampliación) to BOP Valladolid 2026/129; the annex gives dates only."
+  },
+  "47187": {
+   "name": "Vega de Ruiponce",
+   "province": "Valladolid",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-03",
+     "name": null
+    },
+    {
+     "date": "2027-09-14",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-valladolid-204",
+   "note": "Late list (ampliación) to BOP Valladolid 2026/129; the annex gives dates only."
   },
   "47188": {
    "name": "Vega de Valdetronco",
@@ -105870,6 +107401,24 @@
    "status": "boletin",
    "source": "bop-valladolid-129",
    "note": "The annex gives dates only, without festivity names."
+  },
+  "47191": {
+   "name": "Velliza",
+   "province": "Valladolid",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-09-08",
+     "name": null
+    },
+    {
+     "date": "2027-11-12",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-valladolid-204",
+   "note": "Late list (ampliación) to BOP Valladolid 2026/129; the annex gives dates only."
   },
   "47192": {
    "name": "Ventosa de la Cuesta",
@@ -105961,6 +107510,24 @@
    "source": "bop-valladolid-129",
    "note": "The annex gives dates only, without festivity names."
   },
+  "47197": {
+   "name": "Villabrágima",
+   "province": "Valladolid",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-03",
+     "name": null
+    },
+    {
+     "date": "2027-05-04",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-valladolid-204",
+   "note": "Late list (ampliación) to BOP Valladolid 2026/129; the annex gives dates only."
+  },
   "47198": {
    "name": "Villacarralón",
    "province": "Valladolid",
@@ -106023,11 +107590,15 @@
     {
      "date": "2027-05-15",
      "name": null
+    },
+    {
+     "date": "2027-12-27",
+     "name": null
     }
    ],
    "status": "boletin",
-   "source": "bop-valladolid-129",
-   "note": "The bulletin lists only one local day. The annex gives dates only, without festivity names. The other day is printed as 'No comunicada' (not communicated by the council)."
+   "source": "bop-valladolid-204",
+   "note": "Late list (ampliación) to BOP Valladolid 2026/129; the annex gives dates only."
   },
   "47204": {
    "name": "Villafranca de Duero",
@@ -106154,6 +107725,24 @@
    "status": "boletin",
    "source": "bop-valladolid-129",
    "note": "The annex gives dates only, without festivity names."
+  },
+  "47211": {
+   "name": "Villalba de la Loma",
+   "province": "Valladolid",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-20",
+     "name": null
+    },
+    {
+     "date": "2027-11-30",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-valladolid-204",
+   "note": "Late list (ampliación) to BOP Valladolid 2026/129; the annex gives dates only."
   },
   "47212": {
    "name": "Villalba de los Alcores",
@@ -106442,6 +108031,24 @@
    "status": "boletin",
    "source": "bop-valladolid-129",
    "note": "The annex gives dates only, without festivity names."
+  },
+  "47228": {
+   "name": "Villaverde de Medina",
+   "province": "Valladolid",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-10",
+     "name": null
+    },
+    {
+     "date": "2027-05-11",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-valladolid-204",
+   "note": "Late list (ampliación) to BOP Valladolid 2026/129; the annex gives dates only."
   },
   "47229": {
    "name": "Villavicencio de los Caballeros",
@@ -108642,6 +110249,39 @@
    "status": "boletin",
    "source": "bop-zamora-88"
   },
+  "49005": {
+   "name": "Alfaraz de Sayago",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2027-10-07",
+     "name": "Virgen del Rosario"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "Complementary list (councils that communicated their days after BOP Zamora 87/88). The bulletin also lists other localities of the municipality with their own days: Viñuela de Sayago 2027-05-15, 2027-09-08.",
+   "localities": [
+    {
+     "name": "Viñuela de Sayago",
+     "holidays": [
+      {
+       "date": "2027-05-15",
+       "name": "San Isidro"
+      },
+      {
+       "date": "2027-09-08",
+       "name": "Ntra. Sra. de la Natividad"
+      }
+     ]
+    }
+   ]
+  },
   "49006": {
    "name": "Algodre",
    "province": "Zamora",
@@ -108727,6 +110367,24 @@
    "status": "boletin",
    "source": "bop-zamora-88"
   },
+  "49011": {
+   "name": "Arcos de la Polvorosa",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2027-08-06",
+     "name": "El Salvador"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "Complementary list (councils that communicated their days after BOP Zamora 87/88)."
+  },
   "49012": {
    "name": "Argañín",
    "province": "Zamora",
@@ -108743,6 +110401,24 @@
    ],
    "status": "boletin",
    "source": "bop-zamora-88"
+  },
+  "49013": {
+   "name": "Argujillo",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-02-09",
+     "name": "Virgen de la Salud"
+    },
+    {
+     "date": "2027-08-13",
+     "name": "Virgen de la Asunción"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "Complementary list (councils that communicated their days after BOP Zamora 87/88)."
   },
   "49014": {
    "name": "Arquillinos",
@@ -108960,6 +110636,24 @@
    "status": "boletin",
    "source": "bop-zamora-88"
   },
+  "49021": {
+   "name": "Benavente",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "La Veguilla"
+    },
+    {
+     "date": "2027-05-26",
+     "name": "Toro Enmaromado"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "Complementary list (councils that communicated their days after BOP Zamora 87/88)."
+  },
   "49022": {
    "name": "Benegiles",
    "province": "Zamora",
@@ -109087,6 +110781,24 @@
      ]
     }
    ]
+  },
+  "49024": {
+   "name": "La Bóveda de Toro",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-04-05",
+     "name": "Lunes de Aguas"
+    },
+    {
+     "date": "2027-08-05",
+     "name": "Ntra. Sra. de las Nieves"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "Complementary list (councils that communicated their days after BOP Zamora 87/88)."
   },
   "49025": {
    "name": "Bretó",
@@ -109399,6 +111111,24 @@
    ],
    "status": "boletin",
    "source": "bop-zamora-88"
+  },
+  "49039": {
+   "name": "Casaseca de las Chanas",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-06-24",
+     "name": "San Juan"
+    },
+    {
+     "date": "2027-12-28",
+     "name": "Los Inocentes"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "Complementary list (councils that communicated their days after BOP Zamora 87/88)."
   },
   "49040": {
    "name": "Castrillo de la Guareña",
@@ -109859,14 +111589,11 @@
     {
      "date": "2027-06-07",
      "name": "Corazón de Jesús"
-    },
-    {
-     "date": "2027-08-16",
-     "name": "San Roque"
     }
    ],
    "status": "boletin",
-   "source": "bop-zamora-88"
+   "source": "bop-zamora-91",
+   "note": "The bulletin lists only one local day. Days as corrected by BOP Zamora 91 (corrección de errores of the BOP 88 annex)."
   },
   "49058": {
    "name": "El Cubo de Tierra del Vino",
@@ -109978,15 +111705,11 @@
     {
      "date": "2027-02-03",
      "name": "San Blas"
-    },
-    {
-     "date": "2027-08-16",
-     "name": "San Roque"
     }
    ],
    "status": "boletin",
-   "source": "bop-zamora-88",
-   "note": "The bulletin also lists other localities of the municipality with their own days: Villanueva de Valrojo 2027-02-08, 2027-07-05.",
+   "source": "bop-zamora-91",
+   "note": "The bulletin lists only one local day. Days as corrected by BOP Zamora 91 (corrección de errores of the BOP 88 annex). The bulletin also lists other localities of the municipality with their own days: Villanueva de Valrojo 2027-02-08, 2027-07-05.",
    "localities": [
     {
      "name": "Villanueva de Valrojo",
@@ -110009,13 +111732,17 @@
    "region": "castilla-y-leon",
    "holidays": [
     {
+     "date": "2027-06-14",
+     "name": "San Antonio"
+    },
+    {
      "date": "2027-08-13",
      "name": "La Asunción"
     }
    ],
    "status": "boletin",
-   "source": "bop-zamora-88",
-   "note": "The bulletin lists only one local day. The bulletin also lists other localities of the municipality with their own days: Escober de Tábara 2027-08-27, 2027-08-30; Sesnández de Tábara 2027-07-22, 2027-09-20.",
+   "source": "bop-zamora-130",
+   "note": "2027-08-13 from BOP Zamora 88; 2027-06-14 added by this complementary list (BOP Zamora 130). The bulletin also lists other localities of the municipality with their own days: Escober de Tábara 2027-08-27, 2027-08-30; Sesnández de Tábara 2027-07-22, 2027-09-20.",
    "localities": [
     {
      "name": "Escober de Tábara",
@@ -110238,6 +111965,24 @@
     }
    ]
   },
+  "49076": {
+   "name": "Fresno de la Ribera",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-02-10",
+     "name": "Miércoles de Ceniza"
+    },
+    {
+     "date": "2027-05-15",
+     "name": "San Isidro"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "Complementary list (councils that communicated their days after BOP Zamora 87/88)."
+  },
   "49077": {
    "name": "Fresno de Sayago",
    "province": "Zamora",
@@ -110287,6 +112032,42 @@
    ],
    "status": "boletin",
    "source": "bop-zamora-88"
+  },
+  "49080": {
+   "name": "Fuentelapeña",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-25",
+     "name": "2.º día de Quintos"
+    },
+    {
+     "date": "2027-08-17",
+     "name": "San Roque"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-91",
+   "note": "Days as corrected by BOP Zamora 91 (corrección de errores of the BOP 88 annex). Added by the correction."
+  },
+  "49081": {
+   "name": "Fuentesaúco",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-17",
+     "name": "Virgen de la Antigua"
+    },
+    {
+     "date": "2027-07-05",
+     "name": "Virgen de la Visitación"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "Complementary list (councils that communicated their days after BOP Zamora 87/88)."
   },
   "49082": {
    "name": "Fuentes de Ropel",
@@ -110696,6 +112477,168 @@
    "status": "boletin",
    "source": "bop-zamora-88"
   },
+  "49098": {
+   "name": "Losacino",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-10-01",
+     "name": "Virgen del Rosario"
+    },
+    {
+     "date": "2027-10-02",
+     "name": "Virgen del Rosario"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "Complementary list (councils that communicated their days after BOP Zamora 87/88). The bulletin also lists other localities of the municipality with their own days: Muga de Alba 2027-05-08, 2027-09-24; Vide de Alba 2027-08-13, 2027-08-14; Castillo de Alba 2027-08-06, 2027-08-07.",
+   "localities": [
+    {
+     "name": "Muga de Alba",
+     "holidays": [
+      {
+       "date": "2027-05-08",
+       "name": "Virgen de la Merced"
+      },
+      {
+       "date": "2027-09-24",
+       "name": "Virgen de la Merced"
+      }
+     ]
+    },
+    {
+     "name": "Vide de Alba",
+     "holidays": [
+      {
+       "date": "2027-08-13",
+       "name": "Virgen de la Encina"
+      },
+      {
+       "date": "2027-08-14",
+       "name": "Virgen de la Encina"
+      }
+     ]
+    },
+    {
+     "name": "Castillo de Alba",
+     "holidays": [
+      {
+       "date": "2027-08-06",
+       "name": "Santa Cruz"
+      },
+      {
+       "date": "2027-08-07",
+       "name": "Santa Cruz"
+      }
+     ]
+    }
+   ]
+  },
+  "49099": {
+   "name": "Losacio",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-03",
+     "name": "Santa Cruz"
+    },
+    {
+     "date": "2027-06-29",
+     "name": "San Pedro"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "Complementary list (councils that communicated their days after BOP Zamora 87/88)."
+  },
+  "49100": {
+   "name": "Lubián",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-08-05",
+     "name": "Romeria de la Tuiza"
+    },
+    {
+     "date": "2027-09-08",
+     "name": "Fiesta Patronal"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "Complementary list (councils that communicated their days after BOP Zamora 87/88). The bulletin also lists other localities of the municipality with their own days: Aciberos 2027-07-16, 2027-08-05; Chanos 2027-07-21, 2027-08-05; Hedradas, las 2027-06-26, 2027-08-05; Hedroso 2027-08-05, 2027-08-23; Padornelo 2027-08-05, 2027-08-17.",
+   "localities": [
+    {
+     "name": "Aciberos",
+     "holidays": [
+      {
+       "date": "2027-07-16",
+       "name": "Virgen del Carmen"
+      },
+      {
+       "date": "2027-08-05",
+       "name": "Romería de la Tuiza"
+      }
+     ]
+    },
+    {
+     "name": "Chanos",
+     "holidays": [
+      {
+       "date": "2027-07-21",
+       "name": "San Mateo"
+      },
+      {
+       "date": "2027-08-05",
+       "name": "Romería de la Tuiza"
+      }
+     ]
+    },
+    {
+     "name": "Hedradas, las",
+     "holidays": [
+      {
+       "date": "2027-06-26",
+       "name": "San Pedro"
+      },
+      {
+       "date": "2027-08-05",
+       "name": "Romería de la Tuiza"
+      }
+     ]
+    },
+    {
+     "name": "Hedroso",
+     "holidays": [
+      {
+       "date": "2027-08-05",
+       "name": "Romería de la Tuiza"
+      },
+      {
+       "date": "2027-08-23",
+       "name": "Fiesta Patronal"
+      }
+     ]
+    },
+    {
+     "name": "Padornelo",
+     "holidays": [
+      {
+       "date": "2027-08-05",
+       "name": "Romería de la Tuiza"
+      },
+      {
+       "date": "2027-08-17",
+       "name": "Fiesta Patronal"
+      }
+     ]
+    }
+   ]
+  },
   "49101": {
    "name": "Luelmo",
    "province": "Zamora",
@@ -110728,6 +112671,24 @@
      ]
     }
    ]
+  },
+  "49102": {
+   "name": "El Maderal",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2027-07-22",
+     "name": "Santa María Magdalena"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "Complementary list (councils that communicated their days after BOP Zamora 87/88)."
   },
   "49104": {
    "name": "Mahide",
@@ -110886,6 +112847,113 @@
    "status": "boletin",
    "source": "bop-zamora-88"
   },
+  "49110": {
+   "name": "Manzanal de Arriba",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-03-19",
+     "name": "Viernes de Dolores"
+    },
+    {
+     "date": "2027-08-07",
+     "name": "San Mamés"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "Complementary list (councils that communicated their days after BOP Zamora 87/88). The bulletin also lists other localities of the municipality with their own days: Codesal 2027-06-01, 2027-12-27; Folgoso de la Carballeda 2027-08-24, 2027-12-13; Linarejos 2027-02-02, 2027-05-17; Pedroso de la Carballeda 2027-04-29, 2027-08-10; Sagallos 2027-05-27, 2027-08-06; Sandín 2027-07-26; Santa Cruz de los Cuérragos 2027-05-13, 2027-09-14.",
+   "localities": [
+    {
+     "name": "Codesal",
+     "holidays": [
+      {
+       "date": "2027-06-01",
+       "name": "El Corpus"
+      },
+      {
+       "date": "2027-12-27",
+       "name": "San Esteban"
+      }
+     ]
+    },
+    {
+     "name": "Folgoso de la Carballeda",
+     "holidays": [
+      {
+       "date": "2027-08-24",
+       "name": "San Bartolomé"
+      },
+      {
+       "date": "2027-12-13",
+       "name": "Santa Lucía"
+      }
+     ]
+    },
+    {
+     "name": "Linarejos",
+     "holidays": [
+      {
+       "date": "2027-02-02",
+       "name": "Virgen de las Candelas"
+      },
+      {
+       "date": "2027-05-17",
+       "name": "Pentecostés"
+      }
+     ]
+    },
+    {
+     "name": "Pedroso de la Carballeda",
+     "holidays": [
+      {
+       "date": "2027-04-29",
+       "name": "San Pedro Verona"
+      },
+      {
+       "date": "2027-08-10",
+       "name": "San Lorenzo"
+      }
+     ]
+    },
+    {
+     "name": "Sagallos",
+     "holidays": [
+      {
+       "date": "2027-05-27",
+       "name": "Corpus Christi"
+      },
+      {
+       "date": "2027-08-06",
+       "name": "San Salvador"
+      }
+     ]
+    },
+    {
+     "name": "Sandín",
+     "holidays": [
+      {
+       "date": "2027-07-26",
+       "name": "Santiago Apóstol"
+      }
+     ]
+    },
+    {
+     "name": "Santa Cruz de los Cuérragos",
+     "holidays": [
+      {
+       "date": "2027-05-13",
+       "name": "Virgen de Fátima"
+      },
+      {
+       "date": "2027-09-14",
+       "name": "Festividad de la Santa Cruz"
+      }
+     ]
+    }
+   ]
+  },
   "49111": {
    "name": "Manzanal del Barco",
    "province": "Zamora",
@@ -111005,6 +113073,24 @@
    "status": "boletin",
    "source": "bop-zamora-88"
   },
+  "49114": {
+   "name": "Matilla la Seca",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2027-06-29",
+     "name": "San Pedro"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "Complementary list (councils that communicated their days after BOP Zamora 87/88)."
+  },
   "49115": {
    "name": "Mayalde",
    "province": "Zamora",
@@ -111115,6 +113201,24 @@
    "status": "boletin",
    "source": "bop-zamora-88"
   },
+  "49119": {
+   "name": "Molacillos",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-02-02",
+     "name": "Las Candelas"
+    },
+    {
+     "date": "2027-06-24",
+     "name": "San Juan"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "Complementary list (councils that communicated their days after BOP Zamora 87/88)."
+  },
   "49120": {
    "name": "Molezuelas de la Carballeda",
    "province": "Zamora",
@@ -111195,6 +113299,24 @@
    "status": "boletin",
    "source": "bop-zamora-88"
   },
+  "49123": {
+   "name": "Montamarta",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-02-10",
+     "name": "Miércoles de Ceniza"
+    },
+    {
+     "date": "2027-05-17",
+     "name": "Fiesta Local"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "Complementary list (councils that communicated their days after BOP Zamora 87/88)."
+  },
   "49124": {
    "name": "Moral de Sayago",
    "province": "Zamora",
@@ -111223,6 +113345,42 @@
      ]
     }
    ]
+  },
+  "49125": {
+   "name": "Moraleja del Vino",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-02-02",
+     "name": "Las Candelas"
+    },
+    {
+     "date": "2027-07-22",
+     "name": "La Magdalena"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "Complementary list (councils that communicated their days after BOP Zamora 87/88)."
+  },
+  "49126": {
+   "name": "Moraleja de Sayago",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-27",
+     "name": "Corpus Christi"
+    },
+    {
+     "date": "2027-09-14",
+     "name": "Bendito Cristo de la Paz"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "Complementary list (councils that communicated their days after BOP Zamora 87/88)."
   },
   "49127": {
    "name": "Morales del Vino",
@@ -111340,6 +113498,57 @@
     }
    ]
   },
+  "49131": {
+   "name": "Moralina",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-07",
+     "name": "San Miguel"
+    },
+    {
+     "date": "2027-10-05",
+     "name": "San Atilano"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "Complementary list (councils that communicated their days after BOP Zamora 87/88)."
+  },
+  "49133": {
+   "name": "Moreruela de Tábara",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-09-29",
+     "name": "Fiesta Local"
+    },
+    {
+     "date": "2027-09-30",
+     "name": "Fiesta Local"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "Complementary list (councils that communicated their days after BOP Zamora 87/88). The bulletin also lists other localities of the municipality with their own days: Santa Eulalia 2027-10-18, 2027-10-19.",
+   "localities": [
+    {
+     "name": "Santa Eulalia",
+     "holidays": [
+      {
+       "date": "2027-10-18",
+       "name": "Fiesta Local"
+      },
+      {
+       "date": "2027-10-19",
+       "name": "Fiesta Local"
+      }
+     ]
+    }
+   ]
+  },
   "49134": {
    "name": "Muelas de los Caballeros",
    "province": "Zamora",
@@ -111372,8 +113581,8 @@
     }
    ],
    "status": "boletin",
-   "source": "bop-zamora-88",
-   "note": "The bulletin also lists other localities of the municipality with their own days: Cerezal de Aliste 2027-08-07, 2027-08-10; Ricobayo de Alba 2027-08-16, 2027-10-11; Villaflor 2027-05-20, 2027-08-20.",
+   "source": "bop-zamora-91",
+   "note": "Days as corrected by BOP Zamora 91 (corrección de errores of the BOP 88 annex). (one of its localities) The bulletin also lists other localities of the municipality with their own days: Cerezal de Aliste 2027-08-07, 2027-08-10; Ricobayo de Alba 2027-08-17, 2027-10-11; Villaflor 2027-05-20, 2027-08-20.",
    "localities": [
     {
      "name": "Cerezal de Aliste",
@@ -111392,7 +113601,7 @@
      "name": "Ricobayo de Alba",
      "holidays": [
       {
-       "date": "2027-08-16",
+       "date": "2027-08-17",
        "name": "Ntra. Sra. de la Asunción"
       },
       {
@@ -111558,6 +113767,24 @@
    ],
    "status": "boletin",
    "source": "bop-zamora-88"
+  },
+  "49142": {
+   "name": "Palacios del Pan",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-04-22",
+     "name": "Santo Cristo del Rio"
+    },
+    {
+     "date": "2027-12-10",
+     "name": "Santa Eulalia"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "Complementary list (councils that communicated their days after BOP Zamora 87/88)."
   },
   "49143": {
    "name": "Palacios de Sanabria",
@@ -111775,6 +114002,24 @@
    "status": "boletin",
    "source": "bop-zamora-88"
   },
+  "49153": {
+   "name": "Perilla de Castro",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-04-24",
+     "name": "San Marcos"
+    },
+    {
+     "date": "2027-11-11",
+     "name": "San Martín"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "Complementary list (councils that communicated their days after BOP Zamora 87/88)."
+  },
   "49154": {
    "name": "Pías",
    "province": "Zamora",
@@ -111872,6 +114117,24 @@
    "status": "boletin",
    "source": "bop-zamora-88"
   },
+  "49158": {
+   "name": "El Piñero",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-06-14",
+     "name": "San Antonio de Padua"
+    },
+    {
+     "date": "2027-07-22",
+     "name": "Santa María Magdalena"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "Complementary list (councils that communicated their days after BOP Zamora 87/88)."
+  },
   "49159": {
    "name": "Pobladura del Valle",
    "province": "Zamora",
@@ -111940,6 +114203,24 @@
    "status": "boletin",
    "source": "bop-zamora-88"
   },
+  "49164": {
+   "name": "Pozuelo de Tábara",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-06-24",
+     "name": "San Juan"
+    },
+    {
+     "date": "2027-12-27",
+     "name": "Tafarrón"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "Complementary list (councils that communicated their days after BOP Zamora 87/88)."
+  },
   "49165": {
    "name": "Prado",
    "province": "Zamora",
@@ -111956,6 +114237,65 @@
    ],
    "status": "boletin",
    "source": "bop-zamora-88"
+  },
+  "49166": {
+   "name": "Puebla de Sanabria",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-09-08",
+     "name": "Fiesta Local"
+    },
+    {
+     "date": "2027-09-09",
+     "name": "Fiesta Local"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "Complementary list (councils that communicated their days after BOP Zamora 87/88). The bulletin also lists other localities of the municipality with their own days: Castellanos 2027-08-13, 2027-08-17; Robledo 2027-08-24, 2027-08-25; Ungilde 2027-08-09, 2027-08-10.",
+   "localities": [
+    {
+     "name": "Castellanos",
+     "holidays": [
+      {
+       "date": "2027-08-13",
+       "name": "Fiesta Local"
+      },
+      {
+       "date": "2027-08-17",
+       "name": "Fiesta Local"
+      }
+     ]
+    },
+    {
+     "name": "Robledo",
+     "holidays": [
+      {
+       "date": "2027-08-24",
+       "name": "Fiesta Local"
+      },
+      {
+       "date": "2027-08-25",
+       "name": "Fiesta Local"
+      }
+     ]
+    },
+    {
+     "name": "Ungilde",
+     "holidays": [
+      {
+       "date": "2027-08-09",
+       "name": "Fiesta Local"
+      },
+      {
+       "date": "2027-08-10",
+       "name": "Fiesta Local"
+      }
+     ]
+    }
+   ]
   },
   "49168": {
    "name": "Quintanilla del Monte",
@@ -112056,8 +114396,8 @@
     }
    ],
    "status": "boletin",
-   "source": "bop-zamora-88",
-   "note": "The bulletin also lists other localities of the municipality with their own days: Fradellos 2027-05-13, 2027-09-29; Grisuela 2027-07-22, 2027-08-09; Matellanes 2027-06-29, 2027-06-30; Mellanes 2027-01-18, 2027-07-26; Ufones 2027-12-10, 2027-12-11.",
+   "source": "bop-zamora-91",
+   "note": "Days as corrected by BOP Zamora 91 (corrección de errores of the BOP 88 annex). (one of its localities) The bulletin also lists other localities of the municipality with their own days: Fradellos 2027-05-13, 2027-09-29; Grisuela 2027-07-22, 2027-08-09; Matellanes 2027-06-29, 2027-06-30; Mellanes 2027-01-18, 2027-07-26; Ufones 2027-12-09, 2027-12-10.",
    "localities": [
     {
      "name": "Fradellos",
@@ -112115,11 +114455,11 @@
      "name": "Ufones",
      "holidays": [
       {
-       "date": "2027-12-10",
+       "date": "2027-12-09",
        "name": "Santa Eulalia"
       },
       {
-       "date": "2027-12-11",
+       "date": "2027-12-10",
        "name": "Santa Eulalia"
       }
      ]
@@ -112219,6 +114559,65 @@
    "status": "boletin",
    "source": "bop-zamora-88"
   },
+  "49176": {
+   "name": "Riofrío de Aliste",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-06-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2027-08-20",
+     "name": "Fiesta Patronal"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "Complementary list (councils that communicated their days after BOP Zamora 87/88). The bulletin also lists other localities of the municipality with their own days: Sarracín de Aliste 2027-02-02, 2027-09-29; Cabañas de Aliste 2027-01-15, 2027-08-17; Abejera de Tábara 2027-01-15, 2027-09-08.",
+   "localities": [
+    {
+     "name": "Sarracín de Aliste",
+     "holidays": [
+      {
+       "date": "2027-02-02",
+       "name": "Las Candelas"
+      },
+      {
+       "date": "2027-09-29",
+       "name": "San Miguel Arcángel"
+      }
+     ]
+    },
+    {
+     "name": "Cabañas de Aliste",
+     "holidays": [
+      {
+       "date": "2027-01-15",
+       "name": "San Amaro"
+      },
+      {
+       "date": "2027-08-17",
+       "name": "Fiesta Patronal"
+      }
+     ]
+    },
+    {
+     "name": "Abejera de Tábara",
+     "holidays": [
+      {
+       "date": "2027-01-15",
+       "name": "San Antón"
+      },
+      {
+       "date": "2027-09-08",
+       "name": "La Natividad"
+      }
+     ]
+    }
+   ]
+  },
   "49177": {
    "name": "Rionegro del Puente",
    "province": "Zamora",
@@ -112301,8 +114700,8 @@
    "region": "castilla-y-leon",
    "holidays": [],
    "status": "boletin",
-   "source": "bop-zamora-88",
-   "note": "The bulletin gives no municipality-wide days, only days for each locality. The bulletin also lists other localities of the municipality with their own days: Cervantes 2027-01-29, 2027-07-16; Ferreros 2027-02-03; Paramio 2027-01-22; Robleda 2027-07-27; Sampil 2027-01-22, 2027-08-05; San Juan de la Cuesta 2027-01-19, 2027-08-17; Triufé 2027-01-19, 2027-12-21; Valdespino 2027-06-30, 2027-08-25.",
+   "source": "bop-zamora-91",
+   "note": "The bulletin gives no municipality-wide days, only days for each locality. The bulletin also lists other localities of the municipality with their own days: Cervantes 2027-01-29, 2027-07-16; Ferreros 2027-02-03; Paramio 2027-01-22; Robleda 2027-07-27, 2027-09-15; Sampil 2027-01-22, 2027-08-05; San Juan de la Cuesta 2027-01-19, 2027-08-17; Triufé 2027-01-19, 2027-12-21; Valdespino 2027-06-30, 2027-08-25.",
    "localities": [
     {
      "name": "Cervantes",
@@ -112341,6 +114740,10 @@
       {
        "date": "2027-07-27",
        "name": "Santa Ana"
+      },
+      {
+       "date": "2027-09-15",
+       "name": "La Patrona"
       }
      ]
     },
@@ -112414,6 +114817,143 @@
    ],
    "status": "boletin",
    "source": "bop-zamora-88"
+  },
+  "49181": {
+   "name": "Rosinos de la Requejada",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-12-16",
+     "name": "Santa Colomba"
+    },
+    {
+     "date": "2027-12-17",
+     "name": "Santa Colomba"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "Complementary list (councils that communicated their days after BOP Zamora 87/88). The bulletin also lists other localities of the municipality with their own days: Anta de Rioconejos 2027-09-13, 2027-09-14; Carbajalinos 2027-08-17, 2027-02-03; Oney de la Requejada 2027-08-06, 2027-08-09; Escuredo de la Requejada 2027-09-07, 2027-09-08; Gusandanos 2027-04-26, 2027-04-27; Monterrubio 2027-07-05, 2027-07-06; Rionegrito 2027-05-13, 2027-11-30; Santiago de la Requejada 2027-07-26, 2027-07-27; Villarejo de la Sierra 2027-05-14, 2027-07-16.",
+   "localities": [
+    {
+     "name": "Anta de Rioconejos",
+     "holidays": [
+      {
+       "date": "2027-09-13",
+       "name": "Santo Cristo"
+      },
+      {
+       "date": "2027-09-14",
+       "name": "Santo Cristo"
+      }
+     ]
+    },
+    {
+     "name": "Carbajalinos",
+     "holidays": [
+      {
+       "date": "2027-08-17",
+       "name": "San Roque"
+      },
+      {
+       "date": "2027-02-03",
+       "name": "Virgen de las Candelas"
+      }
+     ]
+    },
+    {
+     "name": "Oney de la Requejada",
+     "holidays": [
+      {
+       "date": "2027-08-06",
+       "name": "Virgen de las Angustias"
+      },
+      {
+       "date": "2027-08-09",
+       "name": "Virgen de las Angustias"
+      }
+     ]
+    },
+    {
+     "name": "Escuredo de la Requejada",
+     "holidays": [
+      {
+       "date": "2027-09-07",
+       "name": "Virgen de la Aparecida"
+      },
+      {
+       "date": "2027-09-08",
+       "name": "Virgen de la Aparecida"
+      }
+     ]
+    },
+    {
+     "name": "Gusandanos",
+     "holidays": [
+      {
+       "date": "2027-04-26",
+       "name": "San Marcos"
+      },
+      {
+       "date": "2027-04-27",
+       "name": "San Marcos"
+      }
+     ]
+    },
+    {
+     "name": "Monterrubio",
+     "holidays": [
+      {
+       "date": "2027-07-05",
+       "name": "Virgen de la Consolación"
+      },
+      {
+       "date": "2027-07-06",
+       "name": "Virgen de la Consolación"
+      }
+     ]
+    },
+    {
+     "name": "Rionegrito",
+     "holidays": [
+      {
+       "date": "2027-05-13",
+       "name": "Virgen de Fátima"
+      },
+      {
+       "date": "2027-11-30",
+       "name": "San Andrés"
+      }
+     ]
+    },
+    {
+     "name": "Santiago de la Requejada",
+     "holidays": [
+      {
+       "date": "2027-07-26",
+       "name": "Apóstol Santiago"
+      },
+      {
+       "date": "2027-07-27",
+       "name": "Apóstol Santiago"
+      }
+     ]
+    },
+    {
+     "name": "Villarejo de la Sierra",
+     "holidays": [
+      {
+       "date": "2027-05-14",
+       "name": "Fátima"
+      },
+      {
+       "date": "2027-07-16",
+       "name": "Virgen del Carmen"
+      }
+     ]
+    }
+   ]
   },
   "49183": {
    "name": "Salce",
@@ -112698,6 +115238,24 @@
    "status": "boletin",
    "source": "bop-zamora-88"
   },
+  "49194": {
+   "name": "San Pedro de la Nave-Almendra",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-09-17",
+     "name": "Fiesta Local"
+    },
+    {
+     "date": "2027-09-24",
+     "name": "Virgen del Rosario"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "Complementary list (councils that communicated their days after BOP Zamora 87/88)."
+  },
   "49197": {
    "name": "Santa Clara de Avedillo",
    "province": "Zamora",
@@ -112714,6 +115272,20 @@
    ],
    "status": "boletin",
    "source": "bop-zamora-88"
+  },
+  "49199": {
+   "name": "Santa Colomba de las Monjas",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-09-17",
+     "name": "Santa Colomba"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "The bulletin lists only one local day. Complementary list (councils that communicated their days after BOP Zamora 87/88)."
   },
   "49200": {
    "name": "Santa Cristina de la Polvorosa",
@@ -112748,6 +115320,48 @@
    ],
    "status": "boletin",
    "source": "bop-zamora-88"
+  },
+  "49202": {
+   "name": "Santa Eufemia del Barco",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-06",
+     "name": "Bendición de Panes"
+    },
+    {
+     "date": "2027-09-16",
+     "name": "Santa Eufemia"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "Complementary list (councils that communicated their days after BOP Zamora 87/88). The bulletin also lists other localities of the municipality with their own days: Losilla de Alba 2027-02-03; San Pedro de las Cuevas 2027-06-29, 2027-08-07.",
+   "localities": [
+    {
+     "name": "Losilla de Alba",
+     "holidays": [
+      {
+       "date": "2027-02-03",
+       "name": "San Blas"
+      }
+     ]
+    },
+    {
+     "name": "San Pedro de las Cuevas",
+     "holidays": [
+      {
+       "date": "2027-06-29",
+       "name": "San Pedro"
+      },
+      {
+       "date": "2027-08-07",
+       "name": "Fiesta del Verano"
+      }
+     ]
+    }
+   ]
   },
   "49203": {
    "name": "Santa María de la Vega",
@@ -113003,6 +115617,78 @@
     }
    ]
   },
+  "49209": {
+   "name": "San Vitero",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-03-19",
+     "name": "Fiesta Local"
+    },
+    {
+     "date": "2027-05-10",
+     "name": "Fiesta Local"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "Complementary list (councils that communicated their days after BOP Zamora 87/88). The bulletin also lists other localities of the municipality with their own days: El Poyo de Aliste 2027-08-13, 2027-08-17; San Cristóbal de Aliste 2027-07-26, 2027-09-08; San Juan del Rebollar 2027-06-24, 2027-08-30; Villarino de Cebal 2027-08-23, 2027-08-24.",
+   "localities": [
+    {
+     "name": "El Poyo de Aliste",
+     "holidays": [
+      {
+       "date": "2027-08-13",
+       "name": "Fiesta Local"
+      },
+      {
+       "date": "2027-08-17",
+       "name": "Fiesta Local"
+      }
+     ]
+    },
+    {
+     "name": "San Cristóbal de Aliste",
+     "holidays": [
+      {
+       "date": "2027-07-26",
+       "name": "Fiesta Local"
+      },
+      {
+       "date": "2027-09-08",
+       "name": "Fiesta Local"
+      }
+     ]
+    },
+    {
+     "name": "San Juan del Rebollar",
+     "holidays": [
+      {
+       "date": "2027-06-24",
+       "name": "Fiesta Local"
+      },
+      {
+       "date": "2027-08-30",
+       "name": "Fiesta Local"
+      }
+     ]
+    },
+    {
+     "name": "Villarino de Cebal",
+     "holidays": [
+      {
+       "date": "2027-08-23",
+       "name": "Fiesta Local"
+      },
+      {
+       "date": "2027-08-24",
+       "name": "Fiesta Local"
+      }
+     ]
+    }
+   ]
+  },
   "49210": {
    "name": "Sanzoles",
    "province": "Zamora",
@@ -113020,6 +115706,24 @@
    "status": "boletin",
    "source": "bop-zamora-88"
   },
+  "49214": {
+   "name": "Tábara",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-03-29",
+     "name": "San Mamés"
+    },
+    {
+     "date": "2027-08-17",
+     "name": "Nuestra Sra. de la Asunción"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "Complementary list (councils that communicated their days after BOP Zamora 87/88)."
+  },
   "49216": {
    "name": "Tapioles",
    "province": "Zamora",
@@ -113036,6 +115740,24 @@
    ],
    "status": "boletin",
    "source": "bop-zamora-88"
+  },
+  "49219": {
+   "name": "Toro",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-17",
+     "name": "Cristo de las Batallas"
+    },
+    {
+     "date": "2027-09-08",
+     "name": "Virgen del Canto"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-91",
+   "note": "Days as corrected by BOP Zamora 91 (corrección de errores of the BOP 88 annex). Added by the correction."
   },
   "49220": {
    "name": "La Torre del Valle",
@@ -113070,6 +115792,24 @@
    ],
    "status": "boletin",
    "source": "bop-zamora-88"
+  },
+  "49222": {
+   "name": "Torres del Carrizal",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-01-18",
+     "name": "San Antonio Abad"
+    },
+    {
+     "date": "2027-05-31",
+     "name": "Día del Señor"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "Complementary list (councils that communicated their days after BOP Zamora 87/88)."
   },
   "49223": {
    "name": "Trabazos",
@@ -113194,6 +115934,24 @@
    "status": "boletin",
    "source": "bop-zamora-88"
   },
+  "49227": {
+   "name": "Valcabado",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-02-03",
+     "name": "San Blas"
+    },
+    {
+     "date": "2027-05-17",
+     "name": "Virgen de la Hiniesta"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "Complementary list (councils that communicated their days after BOP Zamora 87/88)."
+  },
   "49228": {
    "name": "Valdefinjas",
    "province": "Zamora",
@@ -113268,8 +116026,8 @@
     }
    ],
    "status": "boletin",
-   "source": "bop-zamora-88",
-   "note": "The bulletin also lists other localities of the municipality with their own days: Calzada de Tera 2027-01-22, 2027-08-07; Junquera de Tera 2027-01-20, 2027-05-27; Milla de Tera 2027-01-28, 2027-08-16.",
+   "source": "bop-zamora-91",
+   "note": "Days as corrected by BOP Zamora 91 (corrección de errores of the BOP 88 annex). (one of its localities) The bulletin also lists other localities of the municipality with their own days: Calzada de Tera 2027-01-22, 2027-08-07; Junquera de Tera 2027-01-20, 2027-05-27; Milla de Tera 2027-01-28.",
    "localities": [
     {
      "name": "Calzada de Tera",
@@ -113303,10 +116061,6 @@
       {
        "date": "2027-01-28",
        "name": "San Tirso"
-      },
-      {
-       "date": "2027-08-16",
-       "name": "Ntra. Sra. de la Asunción"
       }
      ]
     }
@@ -113465,12 +116219,31 @@
      "name": "San Isidro"
     },
     {
-     "date": "2027-08-17",
-     "name": "San Roque"
+     "date": "2027-10-01",
+     "name": "Ofertorio Virgen del Rosario"
     }
    ],
    "status": "boletin",
-   "source": "bop-zamora-88"
+   "source": "bop-zamora-91",
+   "note": "Days as corrected by BOP Zamora 91 (corrección de errores of the BOP 88 annex)."
+  },
+  "49241": {
+   "name": "Villaescusa",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-17",
+     "name": "Virgen del Olmo"
+    },
+    {
+     "date": "2027-08-02",
+     "name": "San Gervasio y S. Protasio"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "Complementary list (councils that communicated their days after BOP Zamora 87/88)."
   },
   "49242": {
    "name": "Villafáfila",
@@ -113624,6 +116397,24 @@
    "status": "boletin",
    "source": "bop-zamora-88"
   },
+  "49251": {
+   "name": "Villalube",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-03-29",
+     "name": "Virgen del Templo"
+    },
+    {
+     "date": "2027-05-14",
+     "name": "San Isidro"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "Complementary list (councils that communicated their days after BOP Zamora 87/88)."
+  },
   "49252": {
    "name": "Villamayor de Campos",
    "province": "Zamora",
@@ -113640,6 +116431,24 @@
    ],
    "status": "boletin",
    "source": "bop-zamora-88"
+  },
+  "49255": {
+   "name": "Villamor de los Escuderos",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-17",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2027-08-17",
+     "name": "San Roque"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "Complementary list (councils that communicated their days after BOP Zamora 87/88)."
   },
   "49256": {
    "name": "Villanázar",
@@ -113702,16 +116511,12 @@
     }
    ],
    "status": "boletin",
-   "source": "bop-zamora-88",
-   "note": "The bulletin also lists other localities of the municipality with their own days: Castropepe 2027-05-26, 2027-07-22.",
+   "source": "bop-zamora-91",
+   "note": "Days as corrected by BOP Zamora 91 (corrección de errores of the BOP 88 annex). (one of its localities) The bulletin also lists other localities of the municipality with their own days: Castropepe 2027-07-22.",
    "localities": [
     {
      "name": "Castropepe",
      "holidays": [
-      {
-       "date": "2027-05-26",
-       "name": "El Toro"
-      },
       {
        "date": "2027-07-22",
        "name": "Santa María Magdalena"
@@ -113736,6 +116541,20 @@
    ],
    "status": "boletin",
    "source": "bop-zamora-88"
+  },
+  "49259": {
+   "name": "Villanueva de las Peras",
+   "province": "Zamora",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": "San Isidro Labrador"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-zamora-130",
+   "note": "The bulletin lists only one local day. Complementary list (councils that communicated their days after BOP Zamora 87/88)."
   },
   "49260": {
    "name": "Villanueva del Campo",

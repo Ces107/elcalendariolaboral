@@ -18,7 +18,7 @@ import common
 W = common.workdir_from_argv()
 WRITE = "--write" in sys.argv
 BASE = "--base" in sys.argv
-UPDATED = "2026-11-23"
+UPDATED = "2026-11-27"
 OUT = os.path.join(common.REPO, "data", "locales-2027-all.json")
 OLD = os.path.join(common.REPO, "data", "locales-2027.json")
 PROV_CODE = {v[0]: k for k, v in common.PROVINCES.items()}

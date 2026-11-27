@@ -27,8 +27,8 @@ SKIP = ("BOLETÍN OFICIAL", "N.º 88", "Pág.", "www.diputaciondezamora", "R-202
         "Verificación:", "Documento firmado", "Localidad Día")
 
 
-def main():
-    W = common.workdir_from_argv()
+def read_recs(W):
+    """-> (ine, recs) as printed in BOP 88 (used again by parse_bop-zamora-91.py)."""
     ine = common.INE(W)
     by_name = {n: c for c, n in ine.by_code.items() if c[:2] == "49"}
     for printed, official in [("ABEZANES", "Abezames"), ("BRETÓ DE LA RIBERA", "Bretó"),
@@ -89,6 +89,12 @@ def main():
         else:
             muni = e["name"]
             recs.append({"muni": muni, "locality": None, "holidays": hs, "note": note})
+    return ine, recs
+
+
+def main():
+    W = common.workdir_from_argv()
+    ine, recs = read_recs(W)
     rows = cu.build_rows(ine, "49", recs)
     miss = common.coverage(ine, rows, ["49"])
     print("not in bulletin:", len(miss), [n for _, n in miss])
