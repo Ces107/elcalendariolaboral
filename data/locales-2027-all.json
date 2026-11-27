@@ -227,6 +227,11 @@
    "url": "https://www.araba.eus/botha/Boletines/2026/116/2026_116_02851_C.pdf",
    "published": "2026-10-09"
   },
+  "council:santa-coloma-de-gramenet": {
+   "title": "Ajuntament de Santa Coloma de Gramenet, butlletí «L'Ajuntament Informa» núm. 1895 (31-07-2026), avís «Festius locals per al 2027» (Ple ordinari de juliol de 2026)",
+   "url": "https://www.gramenet.cat/fileadmin/Files/Ajuntament/butlleti/butlleti2026/1895_31_juliol_web.pdf",
+   "published": "2026-07-31"
+  },
   "councils-2026-11-17:alcala-de-henares": {
    "title": "Ayuntamiento de Alcalá de Henares, noticia 16-11-2026 'El Pleno del Ayuntamiento de Alcalá de Henares aprobó los festivos locales para el año 2027' (Pleno ordinario de 20-10-2026, por unanimidad)",
    "url": "https://www.ayto-alcaladehenares.es/el-pleno-del-ayuntamiento-de-alcala-de-henares-aprobo-los-festivos-locales-para-el-ano-2027",
@@ -15334,6 +15339,24 @@
      ]
     }
    ]
+  },
+  "08245": {
+   "name": "Santa Coloma de Gramenet",
+   "province": "Barcelona",
+   "region": "cataluna",
+   "holidays": [
+    {
+     "date": "2027-05-17",
+     "name": "Lunes de Pascua Granada"
+    },
+    {
+     "date": "2027-09-24",
+     "name": "Mare de Déu de la Mercè"
+    }
+   ],
+   "status": "ayuntamiento",
+   "source": "council:santa-coloma-de-gramenet",
+   "note": "The council's weekly bulletin «L'Ajuntament Informa» no. 1895 (31-07-2026) reports that the July ordinary Ple approved 17 May (dilluns de Pasqua Granada o segona Pasqua) and 24 September (Mare de Déu de la Mercè) 2027 as local holidays. The DOGC Ordre with the 2027 local holidays of Catalonia was not yet published (checked 2026-11-27)."
   },
   "08307": {
    "name": "Vilanova i la Geltrú",
