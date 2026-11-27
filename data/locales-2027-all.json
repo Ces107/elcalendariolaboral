@@ -112,6 +112,11 @@
    "url": "https://bop.dipuleon.es/export/sites/bop/.galleries/Documentos-Anuncios-en-PDF/firmado-1785473203697-final-5ba4d1de.pdf",
    "published": "2026-07-31"
   },
+  "bop-leon-207": {
+   "title": "Junta de Castilla y León, Oficina Territorial de Trabajo de León. Resolución complementaria de la de 20 de julio de 2026, por la que se fijan las Fiestas Locales de los distintos Municipios de la provincia de León para el año 2027 (BOP León núm. 207, 30-X-2026, CVE BOP-LE-2026-207028)",
+   "url": "https://bop.dipuleon.es/export/sites/bop/.galleries/Documentos-BOPs-en-PDF/bop-30_10_2026-4632db0a-d39d-11f1-affd-dd38f9a6a5be-1793339192595.pdf",
+   "published": "2026-10-30"
+  },
   "bop-lugo-221": {
    "title": "Resolución sobre o calendario laboral do ano 2027 para a Provincia de Lugo, Dirección Territorial da Consellería de Emprego, Comercio e Emigración (BOP Lugo nº 221, 26/09/2026)",
    "url": "https://www.deputacionlugo.gal/sites/deputacionlugo.org/files/inline-files/26-09-2026.pdf",
@@ -142,10 +147,20 @@
    "url": "https://sede.diputaciondesalamanca.gob.es/documentacion/bop/2026/20261023/BOP-SA-20261023-001.pdf",
    "published": "2026-10-23"
   },
+  "bop-segovia-129": {
+   "title": "Junta de Castilla y León, Oficina Territorial de Trabajo de Segovia. Fiestas locales 2027 (acuerdo de 23-X-2026) (BOP Segovia núm. 129, 28-X-2026, RC-13938)",
+   "url": "https://www.dipsegovia.es/documents/39512/de568f33-0970-6e5a-59ce-739a904cc74c",
+   "published": "2026-10-28"
+  },
   "bop-segovia-80": {
    "title": "Junta de Castilla y León, Oficina Territorial de Trabajo de Segovia. Fiestas locales 2027 (acuerdo de 30-VI-2026) (BOP Segovia núm. 80, 6-VII-2026, RC-9105)",
    "url": "https://trabajoyprevencion.jcyl.es/web/jcyl/binarios/629/351/BOP%20Fiestas%20locales.pdf?blobheader=application%2Fpdf%3Bcharset%3DUTF-8&blobnocache=true",
    "published": "2026-07-06"
+  },
+  "bop-soria-113": {
+   "title": "Junta de Castilla y León, Oficina Territorial de Trabajo de Soria. Corrección de error material del Acuerdo de 7 de julio de 2026 por el que se determinan las fiestas laborales de las localidades de la provincia de Soria (BOP Soria núm. 113, 28-IX-2026, anuncio 1756)",
+   "url": "https://bop.dipsoria.es/index.php/mod.documentos/mem.descargar/fichero.documentos_1756_8b789a52%232E%23pdf",
+   "published": "2026-09-28"
   },
   "bop-soria-81": {
    "title": "Junta de Castilla y León, Oficina Territorial de Trabajo de Soria. Fiestas laborales año 2027 (BOP Soria núm. 81, 15-VII-2026, BOPSO-81-15072026)",
@@ -52044,6 +52059,42 @@
     }
    ]
   },
+  "24008": {
+   "name": "Astorga",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-07-23",
+     "name": "Festividad de Astures y Romanos"
+    },
+    {
+     "date": "2027-08-23",
+     "name": "en honor a Santa Marta"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144."
+  },
+  "24009": {
+   "name": "Balboa",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-07-19",
+     "name": "Santa Marina"
+    },
+    {
+     "date": "2027-09-08",
+     "name": "La Encina"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144."
+  },
   "24010": {
    "name": "La Bañeza",
    "province": "León",
@@ -52330,6 +52381,24 @@
    "status": "boletin",
    "source": "bop-leon-144"
   },
+  "24019": {
+   "name": "Berlanga del Bierzo",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-06-29",
+     "name": "San Pedro"
+    },
+    {
+     "date": "2027-09-08",
+     "name": "La Encina"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144."
+  },
   "24020": {
    "name": "Boca de Huérgano",
    "province": "León",
@@ -52446,12 +52515,13 @@
      "name": "Santiago Apóstol"
     },
     {
-     "date": "2027-08-17",
-     "name": "San Roque"
+     "date": "2027-08-23",
+     "name": null
     }
    ],
    "status": "boletin",
-   "source": "bop-leon-144"
+   "source": "bop-leon-207",
+   "note": "BOP León 207 (30-X-2026) corrects BOP 144: 23 Aug instead of 17 Aug."
   },
   "24024": {
    "name": "El Burgo Ranero",
@@ -52717,6 +52787,24 @@
     }
    ]
   },
+  "24027": {
+   "name": "Cabañas Raras",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-07-26",
+     "name": "Santa Ana"
+    },
+    {
+     "date": "2027-11-11",
+     "name": "San Martín"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144."
+  },
   "24028": {
    "name": "Cabreros del Río",
    "province": "León",
@@ -52917,6 +53005,24 @@
     }
    ]
   },
+  "24032": {
+   "name": "Campazas",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-02-02",
+     "name": "Las Candelas"
+    },
+    {
+     "date": "2027-06-14",
+     "name": "San Antonio"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144."
+  },
   "24033": {
    "name": "Campo de Villavidel",
    "province": "León",
@@ -53005,6 +53111,24 @@
      ]
     }
    ]
+  },
+  "24036": {
+   "name": "Valle de Ancares",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-02-08",
+     "name": null
+    },
+    {
+     "date": "2027-03-29",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144."
   },
   "24037": {
    "name": "Cármenes",
@@ -53295,6 +53419,24 @@
    "status": "boletin",
    "source": "bop-leon-144"
   },
+  "24042": {
+   "name": "Castilfalé",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-08",
+     "name": "Festividad de la Cruz"
+    },
+    {
+     "date": "2027-09-25",
+     "name": "Festividad del Cristo"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144."
+  },
   "24043": {
    "name": "Castrillo de Cabrera",
    "province": "León",
@@ -53404,6 +53546,91 @@
     }
    ]
   },
+  "24047": {
+   "name": "Castrocontrigo",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": null
+    },
+    {
+     "date": "2027-08-06",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144. The bulletin also lists other localities of the municipality with their own days: Morla de la Valdería 2027-08-24, 2027-12-10; Torneros de la Valdería 2027-05-15, 2027-06-29; Nogarejas 2027-05-27, 2027-08-10; Pinilla de la Valdería 2027-05-24, 2027-08-16; Pobladura de Yuso 2027-08-12, 2027-08-13.",
+   "localities": [
+    {
+     "name": "Morla de la Valdería",
+     "holidays": [
+      {
+       "date": "2027-08-24",
+       "name": null
+      },
+      {
+       "date": "2027-12-10",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Torneros de la Valdería",
+     "holidays": [
+      {
+       "date": "2027-05-15",
+       "name": null
+      },
+      {
+       "date": "2027-06-29",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Nogarejas",
+     "holidays": [
+      {
+       "date": "2027-05-27",
+       "name": null
+      },
+      {
+       "date": "2027-08-10",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Pinilla de la Valdería",
+     "holidays": [
+      {
+       "date": "2027-05-24",
+       "name": null
+      },
+      {
+       "date": "2027-08-16",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Pobladura de Yuso",
+     "holidays": [
+      {
+       "date": "2027-08-12",
+       "name": null
+      },
+      {
+       "date": "2027-08-13",
+       "name": null
+      }
+     ]
+    }
+   ]
+  },
   "24049": {
    "name": "Castropodame",
    "province": "León",
@@ -53473,6 +53700,53 @@
       {
        "date": "2027-02-01",
        "name": "Las Candelas"
+      }
+     ]
+    }
+   ]
+  },
+  "24051": {
+   "name": "Cea",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": "San Isidro Labrador"
+    },
+    {
+     "date": "2027-07-17",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144. One day is set for the whole municipality ('Para todo el municipio'); the other listed day is that of the main town. The bulletin also lists other localities of the municipality with their own days: San Pedro de Valderaduey 2027-07-03; Sahelices del Rio 2027-08-17; Bustillo de Cea 2027-09-25.",
+   "localities": [
+    {
+     "name": "San Pedro de Valderaduey",
+     "holidays": [
+      {
+       "date": "2027-07-03",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Sahelices del Rio",
+     "holidays": [
+      {
+       "date": "2027-08-17",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Bustillo de Cea",
+     "holidays": [
+      {
+       "date": "2027-09-25",
+       "name": null
       }
      ]
     }
@@ -53671,6 +53945,24 @@
      ]
     }
    ]
+  },
+  "24056": {
+   "name": "Cistierna",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-28",
+     "name": null
+    },
+    {
+     "date": "2027-09-08",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144."
   },
   "24057": {
    "name": "Congosto",
@@ -53995,6 +54287,24 @@
     }
    ]
   },
+  "24067": {
+   "name": "Encinedo",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-07-16",
+     "name": "La Virgen del Carmen"
+    },
+    {
+     "date": "2027-08-11",
+     "name": "San Mamet"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144."
+  },
   "24068": {
    "name": "La Ercina",
    "province": "León",
@@ -54046,6 +54356,104 @@
    "status": "boletin",
    "source": "bop-leon-144"
   },
+  "24071": {
+   "name": "Folgoso de la Ribera",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-06-24",
+     "name": "San Juan"
+    },
+    {
+     "date": "2027-08-20",
+     "name": "Jesusín"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144. The bulletin also lists other localities of the municipality with their own days: Boeza 2027-06-14, 2027-09-08; El Valle 2027-07-12, 2027-12-22; La Ribera de Folgoso 2027-04-02, 2027-05-28; Rozuelo 2027-09-08, 2027-09-09; Tedejo 2027-08-06, 2027-01-26; Villaviciosa de San Miguel 2027-05-07, 2027-08-13.",
+   "localities": [
+    {
+     "name": "Boeza",
+     "holidays": [
+      {
+       "date": "2027-06-14",
+       "name": "San Antonio"
+      },
+      {
+       "date": "2027-09-08",
+       "name": "Virgen de la Encina"
+      }
+     ]
+    },
+    {
+     "name": "El Valle",
+     "holidays": [
+      {
+       "date": "2027-07-12",
+       "name": "El Corpus"
+      },
+      {
+       "date": "2027-12-22",
+       "name": "Santo Tomás"
+      }
+     ]
+    },
+    {
+     "name": "La Ribera de Folgoso",
+     "holidays": [
+      {
+       "date": "2027-04-02",
+       "name": "la Pilarica"
+      },
+      {
+       "date": "2027-05-28",
+       "name": "el Corpus"
+      }
+     ]
+    },
+    {
+     "name": "Rozuelo",
+     "holidays": [
+      {
+       "date": "2027-09-08",
+       "name": "Virgen de la Encina"
+      },
+      {
+       "date": "2027-09-09",
+       "name": "Virgen de la Encina"
+      }
+     ]
+    },
+    {
+     "name": "Tedejo",
+     "holidays": [
+      {
+       "date": "2027-08-06",
+       "name": "el Corpus"
+      },
+      {
+       "date": "2027-01-26",
+       "name": "Los Mártires"
+      }
+     ]
+    },
+    {
+     "name": "Villaviciosa de San Miguel",
+     "holidays": [
+      {
+       "date": "2027-05-07",
+       "name": "San Miguel Arcángel"
+      },
+      {
+       "date": "2027-08-13",
+       "name": null
+      }
+     ]
+    }
+   ]
+  },
   "24073": {
    "name": "Fresno de la Vega",
    "province": "León",
@@ -54095,6 +54503,24 @@
      ]
     }
    ]
+  },
+  "24076": {
+   "name": "Garrafe de Torío",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-06-24",
+     "name": "San Juan"
+    },
+    {
+     "date": "2027-09-20",
+     "name": "día de las Manzanedas"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144."
   },
   "24077": {
    "name": "Gordaliza del Pino",
@@ -54715,8 +55141,8 @@
     }
    ],
    "status": "boletin",
-   "source": "bop-leon-144",
-   "note": "One day is set for the whole municipality ('Para todo el Municipio'); the other listed day is that of the main town. The bulletin also lists other localities of the municipality with their own days: Barrio de la Estación 2027-08-24; Barrio San Lorenzo 2027-08-10; La Valcueva 2027-06-14; Naredo de Fenar 2027-08-28; Orzonaga 2027-08-05; Pardavé 2027-09-08; Robledo de Fenar 2027-04-30; Robles de la Valcueva 2027-08-16; Serrilla 2027-09-14; Villalfeide 2027-08-02.",
+   "source": "bop-leon-207",
+   "note": "One day is set for the whole municipality ('Para todo el Municipio'); the other listed day is that of the main town. BOP León 207 (30-X-2026) moves Robles de la Valcueva from 16 to 17 Aug. The bulletin also lists other localities of the municipality with their own days: Barrio de la Estación 2027-08-24; Barrio San Lorenzo 2027-08-10; La Valcueva 2027-06-14; Naredo de Fenar 2027-08-28; Orzonaga 2027-08-05; Pardavé 2027-09-08; Robledo de Fenar 2027-04-30; Robles de la Valcueva 2027-08-17; Serrilla 2027-09-14; Villalfeide 2027-08-02.",
    "localities": [
     {
      "name": "Barrio de la Estación",
@@ -54785,7 +55211,7 @@
      "name": "Robles de la Valcueva",
      "holidays": [
       {
-       "date": "2027-08-16",
+       "date": "2027-08-17",
        "name": null
       }
      ]
@@ -54855,6 +55281,60 @@
      ]
     }
    ]
+  },
+  "24100": {
+   "name": "Molinaseca",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-08-17",
+     "name": null
+    },
+    {
+     "date": "2027-09-08",
+     "name": "Patrona de El Bierzo"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144."
+  },
+  "24101": {
+   "name": "Murias de Paredes",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-06-24",
+     "name": null
+    },
+    {
+     "date": "2027-06-25",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144."
+  },
+  "24102": {
+   "name": "Noceda del Bierzo",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-08-13",
+     "name": null
+    },
+    {
+     "date": "2027-08-20",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144."
   },
   "24103": {
    "name": "Oencia",
@@ -55509,6 +55989,169 @@
    "status": "boletin",
    "source": "bop-leon-144"
   },
+  "24121": {
+   "name": "Puebla de Lillo",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-14",
+     "name": "San Isidro Labrador"
+    },
+    {
+     "date": "2027-08-05",
+     "name": "Las Nieves"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144. One day is set for the whole municipality ('Para todo el municipio'); the other listed day is that of the main town. The bulletin also lists other localities of the municipality with their own days: Cofiñal 2027-09-06; Redipollos 2027-08-24; Solle 2027-08-13; San Cibrián de la Somoza 2027-09-16; Isoba 2027-07-22.",
+   "localities": [
+    {
+     "name": "Cofiñal",
+     "holidays": [
+      {
+       "date": "2027-09-06",
+       "name": "Las Ánimas"
+      }
+     ]
+    },
+    {
+     "name": "Redipollos",
+     "holidays": [
+      {
+       "date": "2027-08-24",
+       "name": "San Bartolomé"
+      }
+     ]
+    },
+    {
+     "name": "Solle",
+     "holidays": [
+      {
+       "date": "2027-08-13",
+       "name": "San Roque"
+      }
+     ]
+    },
+    {
+     "name": "San Cibrián de la Somoza",
+     "holidays": [
+      {
+       "date": "2027-09-16",
+       "name": "San Cipriano"
+      }
+     ]
+    },
+    {
+     "name": "Isoba",
+     "holidays": [
+      {
+       "date": "2027-07-22",
+       "name": "La Magdalena"
+      }
+     ]
+    }
+   ]
+  },
+  "24122": {
+   "name": "Puente de Domingo Flórez",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-31",
+     "name": "Sagrado Corazón"
+    },
+    {
+     "date": "2027-08-17",
+     "name": "San Roquín"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144. The bulletin also lists other localities of the municipality with their own days: Robledo de Sobrecastro 2027-07-26, 2027-12-09; Yeres 2027-06-24, 2027-08-27; San Pedro de Trones 2027-06-29, 2027-06-30; Castroquilame 2027-08-05, 2027-08-06; Salas de la Ribera 2027-08-27, 2027-11-30; Las Vegas de Yeres 2027-08-24, 2027-12-18.",
+   "localities": [
+    {
+     "name": "Robledo de Sobrecastro",
+     "holidays": [
+      {
+       "date": "2027-07-26",
+       "name": "Santiago Apóstol"
+      },
+      {
+       "date": "2027-12-09",
+       "name": "Santa Leocadia"
+      }
+     ]
+    },
+    {
+     "name": "Yeres",
+     "holidays": [
+      {
+       "date": "2027-06-24",
+       "name": "San Juan"
+      },
+      {
+       "date": "2027-08-27",
+       "name": "San Pelayo"
+      }
+     ]
+    },
+    {
+     "name": "San Pedro de Trones",
+     "holidays": [
+      {
+       "date": "2027-06-29",
+       "name": "San Pedro de Trones"
+      },
+      {
+       "date": "2027-06-30",
+       "name": "San Pedro de Trones"
+      }
+     ]
+    },
+    {
+     "name": "Castroquilame",
+     "holidays": [
+      {
+       "date": "2027-08-05",
+       "name": "La Magdalena"
+      },
+      {
+       "date": "2027-08-06",
+       "name": "San Salvador"
+      }
+     ]
+    },
+    {
+     "name": "Salas de la Ribera",
+     "holidays": [
+      {
+       "date": "2027-08-27",
+       "name": "Santo Cristo"
+      },
+      {
+       "date": "2027-11-30",
+       "name": "San Andrés"
+      }
+     ]
+    },
+    {
+     "name": "Las Vegas de Yeres",
+     "holidays": [
+      {
+       "date": "2027-08-24",
+       "name": "San Bartolomé"
+      },
+      {
+       "date": "2027-12-18",
+       "name": "Mª de la Expectación"
+      }
+     ]
+    }
+   ]
+  },
   "24123": {
    "name": "Quintana del Castillo",
    "province": "León",
@@ -55655,6 +56298,65 @@
       },
       {
        "date": "2027-07-31",
+       "name": null
+      }
+     ]
+    }
+   ]
+  },
+  "24129": {
+   "name": "Reyero",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-08-13",
+     "name": null
+    },
+    {
+     "date": "2027-08-14",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144. The bulletin also lists other localities of the municipality with their own days: Pallide 2027-07-26, 2027-07-27; Viego 2027-08-02, 2027-08-03; Primajas 2027-08-09, 2027-08-10.",
+   "localities": [
+    {
+     "name": "Pallide",
+     "holidays": [
+      {
+       "date": "2027-07-26",
+       "name": null
+      },
+      {
+       "date": "2027-07-27",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Viego",
+     "holidays": [
+      {
+       "date": "2027-08-02",
+       "name": null
+      },
+      {
+       "date": "2027-08-03",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Primajas",
+     "holidays": [
+      {
+       "date": "2027-08-09",
+       "name": null
+      },
+      {
+       "date": "2027-08-10",
        "name": null
       }
      ]
@@ -55910,6 +56612,74 @@
     }
    ]
   },
+  "24137": {
+   "name": "Sabero",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-08-21",
+     "name": "Nuestra Sra. Reina de los Ángeles"
+    },
+    {
+     "date": "2027-08-24",
+     "name": "Nuestra Sra. Reina de los Ángeles"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144. The bulletin also lists other localities of the municipality with their own days: Alejico 2027-08-17; Sahelices de Sabero 2027-09-14, 2027-09-15; Olleros de Sabero 2027-08-06, 2027-08-07; Sotillos de Sabero 2027-07-16, 2027-08-24.",
+   "localities": [
+    {
+     "name": "Alejico",
+     "holidays": [
+      {
+       "date": "2027-08-17",
+       "name": "San Roque"
+      }
+     ]
+    },
+    {
+     "name": "Sahelices de Sabero",
+     "holidays": [
+      {
+       "date": "2027-09-14",
+       "name": "Nuestra Señora de los Dolores"
+      },
+      {
+       "date": "2027-09-15",
+       "name": "Nuestra Señora de los Dolores"
+      }
+     ]
+    },
+    {
+     "name": "Olleros de Sabero",
+     "holidays": [
+      {
+       "date": "2027-08-06",
+       "name": "Santos Justo y Pastor"
+      },
+      {
+       "date": "2027-08-07",
+       "name": "Santos Justo y Pastor"
+      }
+     ]
+    },
+    {
+     "name": "Sotillos de Sabero",
+     "holidays": [
+      {
+       "date": "2027-07-16",
+       "name": null
+      },
+      {
+       "date": "2027-08-24",
+       "name": "El Carmen y San Bartolomé"
+      }
+     ]
+    }
+   ]
+  },
   "24139": {
    "name": "Sahagún",
    "province": "León",
@@ -56087,6 +56857,75 @@
      ]
     }
    ]
+  },
+  "24149": {
+   "name": "San Millán de los Caballeros",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-02-03",
+     "name": null
+    },
+    {
+     "date": "2027-05-15",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144."
+  },
+  "24150": {
+   "name": "San Pedro Bercianos",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-14",
+     "name": "San Isidro Labrador"
+    },
+    {
+     "date": "2027-06-29",
+     "name": "San Pedro"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144. The bulletin also lists other localities of the municipality with their own days: La Mata del Páramo 2027-05-14, 2027-12-27.",
+   "localities": [
+    {
+     "name": "La Mata del Páramo",
+     "holidays": [
+      {
+       "date": "2027-05-14",
+       "name": "San Isidro Labrador"
+      },
+      {
+       "date": "2027-12-27",
+       "name": "San Juan Evangelista"
+      }
+     ]
+    }
+   ]
+  },
+  "24152": {
+   "name": "Santa Colomba de Somoza",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-08-02",
+     "name": "Santa Isabel"
+    },
+    {
+     "date": "2027-12-17",
+     "name": "Santa Eva"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144."
   },
   "24153": {
    "name": "Santa Cristina de Valmadrigal",
@@ -56378,6 +57217,24 @@
     }
    ]
   },
+  "24161": {
+   "name": "Santiago Millas",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-02-09",
+     "name": "Martes de Carnaval"
+    },
+    {
+     "date": "2027-07-26",
+     "name": "Santiago Apóstol"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144."
+  },
   "24163": {
    "name": "Sariegos",
    "province": "León",
@@ -56395,6 +57252,117 @@
    "status": "boletin",
    "source": "bop-leon-144"
   },
+  "24164": {
+   "name": "Sena de Luna",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-06-14",
+     "name": null
+    },
+    {
+     "date": "2027-11-11",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144. The bulletin also lists other localities of the municipality with their own days: Abelgas de Luna 2027-08-16, 2027-08-17; Aralla de Luna 2027-06-14, 2027-09-08; Caldas de Luna 2027-07-16, 2027-07-17; Pobladura de Luna 2027-01-20, 2027-01-21; Rabanal de Luna 2027-08-13, 2027-08-14; Robledo de Caldas 2027-08-06, 2027-08-31; La Vega de Robledo 2027-08-16, 2027-12-13.",
+   "localities": [
+    {
+     "name": "Abelgas de Luna",
+     "holidays": [
+      {
+       "date": "2027-08-16",
+       "name": null
+      },
+      {
+       "date": "2027-08-17",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Aralla de Luna",
+     "holidays": [
+      {
+       "date": "2027-06-14",
+       "name": null
+      },
+      {
+       "date": "2027-09-08",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Caldas de Luna",
+     "holidays": [
+      {
+       "date": "2027-07-16",
+       "name": null
+      },
+      {
+       "date": "2027-07-17",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Pobladura de Luna",
+     "holidays": [
+      {
+       "date": "2027-01-20",
+       "name": null
+      },
+      {
+       "date": "2027-01-21",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Rabanal de Luna",
+     "holidays": [
+      {
+       "date": "2027-08-13",
+       "name": null
+      },
+      {
+       "date": "2027-08-14",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Robledo de Caldas",
+     "holidays": [
+      {
+       "date": "2027-08-06",
+       "name": null
+      },
+      {
+       "date": "2027-08-31",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "La Vega de Robledo",
+     "holidays": [
+      {
+       "date": "2027-08-16",
+       "name": null
+      },
+      {
+       "date": "2027-12-13",
+       "name": null
+      }
+     ]
+    }
+   ]
+  },
   "24165": {
    "name": "Sobrado",
    "province": "León",
@@ -56411,6 +57379,104 @@
    ],
    "status": "boletin",
    "source": "bop-leon-144"
+  },
+  "24166": {
+   "name": "Soto de la Vega",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-10",
+     "name": "Fiesta Sacramental"
+    },
+    {
+     "date": "2027-09-27",
+     "name": "San Miguel Arcángel"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144. The bulletin also lists other localities of the municipality with their own days: Alcaidón 2027-05-10, 2027-09-27; Santa Colomba de la Vega 2027-07-05, 2027-09-20; Huerga de Garaballes 2027-06-07, 2027-11-29; Oteruelo de la Vega 2027-02-03, 2027-04-05; Vecilla de la Vega 2027-10-04, 2027-12-27; Requejo de la Vega 2027-05-31, 2027-09-20.",
+   "localities": [
+    {
+     "name": "Alcaidón",
+     "holidays": [
+      {
+       "date": "2027-05-10",
+       "name": "Fiesta Sacramental"
+      },
+      {
+       "date": "2027-09-27",
+       "name": "San Miguel Arcángel"
+      }
+     ]
+    },
+    {
+     "name": "Santa Colomba de la Vega",
+     "holidays": [
+      {
+       "date": "2027-07-05",
+       "name": "Sacramental"
+      },
+      {
+       "date": "2027-09-20",
+       "name": "Santa Colomba"
+      }
+     ]
+    },
+    {
+     "name": "Huerga de Garaballes",
+     "holidays": [
+      {
+       "date": "2027-06-07",
+       "name": "Sagrado Corazón"
+      },
+      {
+       "date": "2027-11-29",
+       "name": "San Andrés"
+      }
+     ]
+    },
+    {
+     "name": "Oteruelo de la Vega",
+     "holidays": [
+      {
+       "date": "2027-02-03",
+       "name": "San Blas"
+      },
+      {
+       "date": "2027-04-05",
+       "name": "Santo Toribio"
+      }
+     ]
+    },
+    {
+     "name": "Vecilla de la Vega",
+     "holidays": [
+      {
+       "date": "2027-10-04",
+       "name": "Virgen del Rosario"
+      },
+      {
+       "date": "2027-12-27",
+       "name": "San Esteban"
+      }
+     ]
+    },
+    {
+     "name": "Requejo de la Vega",
+     "holidays": [
+      {
+       "date": "2027-05-31",
+       "name": "Corpus Christi"
+      },
+      {
+       "date": "2027-09-20",
+       "name": "Santo Cristo"
+      }
+     ]
+    }
+   ]
   },
   "24167": {
    "name": "Soto y Amío",
@@ -56809,6 +57875,24 @@
     }
    ]
   },
+  "24171": {
+   "name": "Trabadelo",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-01-28",
+     "name": "Santo Tirso"
+    },
+    {
+     "date": "2027-09-08",
+     "name": "Virgen de la Encina"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144."
+  },
   "24172": {
    "name": "Truchas",
    "province": "León",
@@ -56930,6 +58014,24 @@
      ]
     }
    ]
+  },
+  "24175": {
+   "name": "Valdefresno",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-06-24",
+     "name": "San Juan"
+    },
+    {
+     "date": "2027-10-05",
+     "name": "San Froilán"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144."
   },
   "24176": {
    "name": "Valdefuentes del Páramo",
@@ -57147,6 +58249,24 @@
    ],
    "status": "boletin",
    "source": "bop-leon-144"
+  },
+  "24182": {
+   "name": "Valderrey",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2027-07-22",
+     "name": "Santa Magdalena"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144."
   },
   "24183": {
    "name": "Valderrueda",
@@ -57518,6 +58638,89 @@
    "status": "boletin",
    "source": "bop-leon-144"
   },
+  "24189": {
+   "name": "Valverde de la Virgen",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-01-22",
+     "name": "San Vicente"
+    },
+    {
+     "date": "2027-10-05",
+     "name": "San Froilán"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144. One day is set for the whole municipality ('Para todo el municipio'); the other listed day is that of the main town. The bulletin also lists other localities of the municipality with their own days: Robledo de la Valdoncina 2027-01-28; Oncina de la Valdoncina 2027-02-03; San Miguel del Camino 2027-12-13; Montejos del Camino 2027-06-03; La Aldea de la Valdoncina 2027-07-25; La Virgen del Camino 2027-09-15; Fresno del Camino 2027-11-30.",
+   "localities": [
+    {
+     "name": "Robledo de la Valdoncina",
+     "holidays": [
+      {
+       "date": "2027-01-28",
+       "name": "Santo Tirso"
+      }
+     ]
+    },
+    {
+     "name": "Oncina de la Valdoncina",
+     "holidays": [
+      {
+       "date": "2027-02-03",
+       "name": "San Blas"
+      }
+     ]
+    },
+    {
+     "name": "San Miguel del Camino",
+     "holidays": [
+      {
+       "date": "2027-12-13",
+       "name": "Santa Lucía"
+      }
+     ]
+    },
+    {
+     "name": "Montejos del Camino",
+     "holidays": [
+      {
+       "date": "2027-06-03",
+       "name": "Octava del Corpus"
+      }
+     ]
+    },
+    {
+     "name": "La Aldea de la Valdoncina",
+     "holidays": [
+      {
+       "date": "2027-07-25",
+       "name": "Fiesta de verano"
+      }
+     ]
+    },
+    {
+     "name": "La Virgen del Camino",
+     "holidays": [
+      {
+       "date": "2027-09-15",
+       "name": "Nuestra Señora del Camino"
+      }
+     ]
+    },
+    {
+     "name": "Fresno del Camino",
+     "holidays": [
+      {
+       "date": "2027-11-30",
+       "name": "San Andres"
+      }
+     ]
+    }
+   ]
+  },
   "24190": {
    "name": "Valverde-Enrique",
    "province": "León",
@@ -57546,6 +58749,39 @@
       {
        "date": "2027-06-29",
        "name": "San Pedro"
+      }
+     ]
+    }
+   ]
+  },
+  "24191": {
+   "name": "Vallecillo",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-03-01",
+     "name": "El Ángel"
+    },
+    {
+     "date": "2027-06-29",
+     "name": "San Pedro"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144. The bulletin also lists other localities of the municipality with their own days: Vileza 2027-05-15, 2027-11-27.",
+   "localities": [
+    {
+     "name": "Vileza",
+     "holidays": [
+      {
+       "date": "2027-05-15",
+       "name": "San Isidro"
+      },
+      {
+       "date": "2027-11-27",
+       "name": "San Facundo"
       }
      ]
     }
@@ -57700,6 +58936,24 @@
    "status": "boletin",
    "source": "bop-leon-144"
   },
+  "24198": {
+   "name": "Vega de Valcarce",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-08-09",
+     "name": "Santa María Magdalena"
+    },
+    {
+     "date": "2027-08-17",
+     "name": "San Roque"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144."
+  },
   "24199": {
    "name": "Vegaquemada",
    "province": "León",
@@ -57715,8 +58969,8 @@
     }
    ],
    "status": "boletin",
-   "source": "bop-leon-144",
-   "note": "The bulletin also lists other localities of the municipality with their own days: Candanedo de Boñar 2027-01-22; La Mata de la Riba 2027-02-03, 2027-08-06; La Devesa de Boñar 2027-07-16, 2027-10-07; La Losilla y San Adrián 2027-03-05, 2027-09-08; Llamera 2027-02-05, 2027-09-21; Lugán 2027-06-14, 2027-10-07; Palazuelo de Boñar 2027-01-30, 2027-09-14.",
+   "source": "bop-leon-207",
+   "note": "BOP León 207 (30-X-2026) adds 26 Jul (Santa Ana) for Candanedo de Boñar. The bulletin also lists other localities of the municipality with their own days: Candanedo de Boñar 2027-01-22, 2027-07-26; La Mata de la Riba 2027-02-03, 2027-08-06; La Devesa de Boñar 2027-07-16, 2027-10-07; La Losilla y San Adrián 2027-03-05, 2027-09-08; Llamera 2027-02-05, 2027-09-21; Lugán 2027-06-14, 2027-10-07; Palazuelo de Boñar 2027-01-30, 2027-09-14.",
    "localities": [
     {
      "name": "Candanedo de Boñar",
@@ -57724,6 +58978,10 @@
       {
        "date": "2027-01-22",
        "name": "San Vicente"
+      },
+      {
+       "date": "2027-07-26",
+       "name": "Santa Ana"
       }
      ]
     },
@@ -57823,6 +59081,143 @@
    ],
    "status": "boletin",
    "source": "bop-leon-144"
+  },
+  "24202": {
+   "name": "Villablino",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-08-17",
+     "name": "San Roque"
+    },
+    {
+     "date": "2027-12-04",
+     "name": "Santa Bárbara"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144. One day is set for the whole municipality ('Para todo el municipio'); the other listed day is that of the main town. The bulletin also lists other localities of the municipality with their own days: Caboalles de Arriba 2027-07-26; Caboalles de Abajo 2027-08-24; Villager de Laciana 2027-08-10; Rabanal de Arriba 2027-09-08; Rabanal de Abajo 2027-09-08; Llamas de Laciana 2027-09-08; Lumajo 2027-07-22; Robles de Laciana 2027-01-07; Rioscuro 2027-06-26; El Villar de Santiago 2027-07-26; Villaseca 2027-06-29; Orallo 2027-07-19; Sosas de Laciana 2027-11-30.",
+   "localities": [
+    {
+     "name": "Caboalles de Arriba",
+     "holidays": [
+      {
+       "date": "2027-07-26",
+       "name": "Santiago Apóstol"
+      }
+     ]
+    },
+    {
+     "name": "Caboalles de Abajo",
+     "holidays": [
+      {
+       "date": "2027-08-24",
+       "name": "San Bartolomé"
+      }
+     ]
+    },
+    {
+     "name": "Villager de Laciana",
+     "holidays": [
+      {
+       "date": "2027-08-10",
+       "name": "San Lorenzo"
+      }
+     ]
+    },
+    {
+     "name": "Rabanal de Arriba",
+     "holidays": [
+      {
+       "date": "2027-09-08",
+       "name": "La Virgen del Oteiro"
+      }
+     ]
+    },
+    {
+     "name": "Rabanal de Abajo",
+     "holidays": [
+      {
+       "date": "2027-09-08",
+       "name": "La Virgen del Oteiro"
+      }
+     ]
+    },
+    {
+     "name": "Llamas de Laciana",
+     "holidays": [
+      {
+       "date": "2027-09-08",
+       "name": "La Virgen del Oteiro"
+      }
+     ]
+    },
+    {
+     "name": "Lumajo",
+     "holidays": [
+      {
+       "date": "2027-07-22",
+       "name": "La Magdalena"
+      }
+     ]
+    },
+    {
+     "name": "Robles de Laciana",
+     "holidays": [
+      {
+       "date": "2027-01-07",
+       "name": "San Julián"
+      }
+     ]
+    },
+    {
+     "name": "Rioscuro",
+     "holidays": [
+      {
+       "date": "2027-06-26",
+       "name": "San Pelayo"
+      }
+     ]
+    },
+    {
+     "name": "El Villar de Santiago",
+     "holidays": [
+      {
+       "date": "2027-07-26",
+       "name": "Santiago Apóstol"
+      }
+     ]
+    },
+    {
+     "name": "Villaseca",
+     "holidays": [
+      {
+       "date": "2027-06-29",
+       "name": "San Pedro"
+      }
+     ]
+    },
+    {
+     "name": "Orallo",
+     "holidays": [
+      {
+       "date": "2027-07-19",
+       "name": "Santa Marina"
+      }
+     ]
+    },
+    {
+     "name": "Sosas de Laciana",
+     "holidays": [
+      {
+       "date": "2027-11-30",
+       "name": "San Andrés"
+      }
+     ]
+    }
+   ]
   },
   "24203": {
    "name": "Villabraz",
@@ -57933,6 +59328,24 @@
    "status": "boletin",
    "source": "bop-leon-144"
   },
+  "24207": {
+   "name": "Villademor de la Vega",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-01-11",
+     "name": null
+    },
+    {
+     "date": "2027-09-08",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144."
+  },
   "24209": {
    "name": "Villafranca del Bierzo",
    "province": "León",
@@ -58000,6 +59413,24 @@
     }
    ]
   },
+  "24212": {
+   "name": "Villamañán",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-09-08",
+     "name": "Nuestra Señora de la Zarza"
+    },
+    {
+     "date": "2027-09-09",
+     "name": "Nuestra Señora de la Zarza"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144."
+  },
   "24213": {
    "name": "Villamartín de Don Sancho",
    "province": "León",
@@ -58033,6 +59464,40 @@
    ],
    "status": "boletin",
    "source": "bop-leon-144"
+  },
+  "24215": {
+   "name": "Villamol",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": "San Isidro Labrador"
+    },
+    {
+     "date": "2027-08-03",
+     "name": "San Esteban"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144. One day is set for the whole municipality ('Para todo el municipio'); the other listed day is that of the main town. The bulletin also lists other localities of the municipality with their own days: Villacalabuey 2027-09-29; Villapeceñil (no dates).",
+   "localities": [
+    {
+     "name": "Villacalabuey",
+     "holidays": [
+      {
+       "date": "2027-09-29",
+       "name": "San Miguel"
+      }
+     ]
+    },
+    {
+     "name": "Villapeceñil",
+     "holidays": [],
+     "note": "The bulletin gives 'tercer lunes después de la Pascua de Resurrección, en honor al Patrocinio de San José' instead of a date."
+    }
+   ]
   },
   "24216": {
    "name": "Villamontán de la Valduerna",
@@ -58262,6 +59727,107 @@
     }
    ]
   },
+  "24222": {
+   "name": "Villaquilambre",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-07-22",
+     "name": null
+    },
+    {
+     "date": "2027-10-05",
+     "name": null
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144. One day is set for the whole municipality ('Para todo el municipio'); the other listed day is that of the main town. The bulletin also lists other localities of the municipality with their own days: Canaleja de Torío 2027-09-27; Castrillino 2027-09-29; Navatejera 2027-05-08; Robledo de Torío 2027-08-17; Villamoros de las Regueras 2027-07-26; Villanueva del Árbol 2027-06-26; Villaobispo de las Regueras 2027-05-15; Villarrodrigo de la Regueras 2027-09-08; Villasinta de Torío 2027-08-17.",
+   "localities": [
+    {
+     "name": "Canaleja de Torío",
+     "holidays": [
+      {
+       "date": "2027-09-27",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Castrillino",
+     "holidays": [
+      {
+       "date": "2027-09-29",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Navatejera",
+     "holidays": [
+      {
+       "date": "2027-05-08",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Robledo de Torío",
+     "holidays": [
+      {
+       "date": "2027-08-17",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Villamoros de las Regueras",
+     "holidays": [
+      {
+       "date": "2027-07-26",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Villanueva del Árbol",
+     "holidays": [
+      {
+       "date": "2027-06-26",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Villaobispo de las Regueras",
+     "holidays": [
+      {
+       "date": "2027-05-15",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Villarrodrigo de la Regueras",
+     "holidays": [
+      {
+       "date": "2027-09-08",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Villasinta de Torío",
+     "holidays": [
+      {
+       "date": "2027-08-17",
+       "name": null
+      }
+     ]
+    }
+   ]
+  },
   "24223": {
    "name": "Villarejo de Órbigo",
    "province": "León",
@@ -58278,6 +59844,24 @@
    ],
    "status": "boletin",
    "source": "bop-leon-144"
+  },
+  "24224": {
+   "name": "Villares de Órbigo",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-15",
+     "name": "San Isidro"
+    },
+    {
+     "date": "2027-07-26",
+     "name": "Santiago"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144."
   },
   "24225": {
    "name": "Villasabariego",
@@ -58603,6 +60187,52 @@
    ],
    "status": "boletin",
    "source": "bop-leon-144"
+  },
+  "24230": {
+   "name": "Zotes del Páramo",
+   "province": "León",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-03",
+     "name": "La Virgen de la Aldea"
+    },
+    {
+     "date": "2027-05-15",
+     "name": "San Isidro"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-leon-207",
+   "note": "Complementary list to BOP León 144. The bulletin also lists other localities of the municipality with their own days: Zambroncinos del Páramo 2027-05-15, 2027-08-06; Villaestrigo del Páramo 2027-05-15, 2027-08-02.",
+   "localities": [
+    {
+     "name": "Zambroncinos del Páramo",
+     "holidays": [
+      {
+       "date": "2027-05-15",
+       "name": "San Isidro"
+      },
+      {
+       "date": "2027-08-06",
+       "name": null
+      }
+     ]
+    },
+    {
+     "name": "Villaestrigo del Páramo",
+     "holidays": [
+      {
+       "date": "2027-05-15",
+       "name": "San Isidro"
+      },
+      {
+       "date": "2027-08-02",
+       "name": null
+      }
+     ]
+    }
+   ]
   },
   "24901": {
    "name": "Villamanín",
@@ -82510,6 +84140,24 @@
    "status": "boletin",
    "source": "bop-segovia-80"
   },
+  "40005": {
+   "name": "Alconada de Maderuelo",
+   "province": "Segovia",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-06-21",
+     "name": "San Luis"
+    },
+    {
+     "date": "2027-11-15",
+     "name": "San Martín"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-segovia-129",
+   "note": "Second list (BOP Segovia 129) after BOP Segovia 80."
+  },
   "40006": {
    "name": "Aldealcorvo",
    "province": "Segovia",
@@ -82550,7 +84198,7 @@
    "region": "castilla-y-leon",
    "holidays": [
     {
-     "date": "2027-06-29",
+     "date": "2027-06-25",
      "name": "Sagrado Corazón"
     },
     {
@@ -82559,7 +84207,8 @@
     }
    ],
    "status": "boletin",
-   "source": "bop-segovia-80"
+   "source": "bop-segovia-129",
+   "note": "Second list (BOP Segovia 129) after BOP Segovia 80."
   },
   "40009": {
    "name": "Aldeanueva de la Serrezuela",
@@ -82669,28 +84318,28 @@
    "region": "castilla-y-leon",
    "holidays": [
     {
-     "date": "2027-05-24",
-     "name": "Pinalejo"
+     "date": "2027-09-20",
+     "name": "Dulce Nombre de María"
     },
     {
-     "date": "2027-11-29",
-     "name": "San Andrés"
+     "date": "2027-10-25",
+     "name": "San Frutos"
     }
    ],
    "status": "boletin",
-   "source": "bop-segovia-80",
-   "note": "The bulletin also lists other localities of the municipality with their own days: Olmillo 2027-05-24, 2027-11-29.",
+   "source": "bop-segovia-129",
+   "note": "Second list (BOP Segovia 129) after BOP Segovia 80. The bulletin also lists other localities of the municipality with their own days: Olmillo 2027-09-20, 2027-10-25.",
    "localities": [
     {
      "name": "Olmillo",
      "holidays": [
       {
-       "date": "2027-05-24",
-       "name": "Pinalejo"
+       "date": "2027-09-20",
+       "name": "Dulce Nombre de María"
       },
       {
-       "date": "2027-11-29",
-       "name": "San Andrés"
+       "date": "2027-10-25",
+       "name": "San Frutos"
       }
      ]
     }
@@ -82916,6 +84565,24 @@
    "status": "boletin",
    "source": "bop-segovia-80"
   },
+  "40031": {
+   "name": "Bernuy de Porreros",
+   "province": "Segovia",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-07-23",
+     "name": "Santiago"
+    },
+    {
+     "date": "2027-07-26",
+     "name": "Santa Ana"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-segovia-129",
+   "note": "Second list (BOP Segovia 129) after BOP Segovia 80."
+  },
   "40032": {
    "name": "Boceguillas",
    "province": "Segovia",
@@ -82966,6 +84633,24 @@
    ],
    "status": "boletin",
    "source": "bop-segovia-80"
+  },
+  "40035": {
+   "name": "Cabañas de Polendos",
+   "province": "Segovia",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-10",
+     "name": "San Gregorio"
+    },
+    {
+     "date": "2027-08-10",
+     "name": "San Lorenzo"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-segovia-129",
+   "note": "Second list (BOP Segovia 129) after BOP Segovia 80."
   },
   "40036": {
    "name": "Cabezuela",
@@ -83222,6 +84907,24 @@
    "status": "boletin",
    "source": "bop-segovia-80"
   },
+  "40055": {
+   "name": "Cilleruelo de San Mamés",
+   "province": "Segovia",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-06-11",
+     "name": "San Bartolomé"
+    },
+    {
+     "date": "2027-08-17",
+     "name": "San Mamés"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-segovia-129",
+   "note": "Second list (BOP Segovia 129) after BOP Segovia 80."
+  },
   "40056": {
    "name": "Cobos de Fuentidueña",
    "province": "Segovia",
@@ -83367,67 +85070,13 @@
      "name": "Fiestas Locales"
     },
     {
-     "date": "2027-12-14",
+     "date": "2027-10-01",
      "name": "Fiestas Locales"
     }
    ],
    "status": "boletin",
-   "source": "bop-segovia-80",
-   "note": "The bulletin also lists other localities of the municipality with their own days: Arroyo de Cuéllar 2027-12-13, 2027-12-14; Campo de Cuéllar 2027-05-15, 2027-06-24; Chatún 2027-05-15, 2027-07-03; Lovingos 2027-06-14, 2027-08-03.",
-   "localities": [
-    {
-     "name": "Arroyo de Cuéllar",
-     "holidays": [
-      {
-       "date": "2027-12-13",
-       "name": "Fiestas Locales"
-      },
-      {
-       "date": "2027-12-14",
-       "name": "Fiestas Locales"
-      }
-     ]
-    },
-    {
-     "name": "Campo de Cuéllar",
-     "holidays": [
-      {
-       "date": "2027-05-15",
-       "name": "Fiestas Locales"
-      },
-      {
-       "date": "2027-06-24",
-       "name": "Fiestas Locales"
-      }
-     ]
-    },
-    {
-     "name": "Chatún",
-     "holidays": [
-      {
-       "date": "2027-05-15",
-       "name": "Fiestas Locales"
-      },
-      {
-       "date": "2027-07-03",
-       "name": "Fiestas Locales"
-      }
-     ]
-    },
-    {
-     "name": "Lovingos",
-     "holidays": [
-      {
-       "date": "2027-06-14",
-       "name": "Fiestas Locales"
-      },
-      {
-       "date": "2027-08-03",
-       "name": "Fiestas Locales"
-      }
-     ]
-    }
-   ]
+   "source": "bop-segovia-129",
+   "note": "Second list (BOP Segovia 129) after BOP Segovia 80."
   },
   "40065": {
    "name": "Chañe",
@@ -83983,6 +85632,24 @@
    ],
    "status": "boletin",
    "source": "bop-segovia-80"
+  },
+  "40095": {
+   "name": "Gomezserracín",
+   "province": "Segovia",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-06-14",
+     "name": "San Antonio de Padua"
+    },
+    {
+     "date": "2027-07-22",
+     "name": "Santa María Magdalena"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-segovia-129",
+   "note": "Second list (BOP Segovia 129) after BOP Segovia 80."
   },
   "40097": {
    "name": "Grajera",
@@ -84639,12 +86306,13 @@
      "name": "San Justo y Pastor"
     },
     {
-     "date": "2027-08-16",
+     "date": "2027-08-13",
      "name": "San Roque"
     }
    ],
    "status": "boletin",
-   "source": "bop-segovia-80"
+   "source": "bop-segovia-129",
+   "note": "Second list (BOP Segovia 129) after BOP Segovia 80."
   },
   "40142": {
    "name": "Navares de Ayuso",
@@ -84720,7 +86388,7 @@
    "region": "castilla-y-leon",
    "holidays": [
     {
-     "date": "2027-05-14",
+     "date": "2027-06-14",
      "name": "San Antonio"
     },
     {
@@ -84729,7 +86397,8 @@
     }
    ],
    "status": "boletin",
-   "source": "bop-segovia-80"
+   "source": "bop-segovia-129",
+   "note": "Second list (BOP Segovia 129) after BOP Segovia 80."
   },
   "40148": {
    "name": "Nieva",
@@ -84822,7 +86491,7 @@
    "region": "castilla-y-leon",
    "holidays": [
     {
-     "date": "2027-08-07",
+     "date": "2027-08-09",
      "name": "Santo Domingo"
     },
     {
@@ -84831,7 +86500,8 @@
     }
    ],
    "status": "boletin",
-   "source": "bop-segovia-80"
+   "source": "bop-segovia-129",
+   "note": "Second list (BOP Segovia 129) after BOP Segovia 80."
   },
   "40155": {
    "name": "Palazuelos de Eresma",
@@ -85094,6 +86764,42 @@
    ],
    "status": "boletin",
    "source": "bop-segovia-80"
+  },
+  "40168": {
+   "name": "Riaguas de San Bartolomé",
+   "province": "Segovia",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-07-19",
+     "name": "Ntra. Sra. Del Carmen"
+    },
+    {
+     "date": "2027-08-24",
+     "name": "San Bartolomé"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-segovia-129",
+   "note": "Second list (BOP Segovia 129) after BOP Segovia 80."
+  },
+  "40170": {
+   "name": "Riaza",
+   "province": "Segovia",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-05-10",
+     "name": "San Gregorio"
+    },
+    {
+     "date": "2027-09-08",
+     "name": "Ntra. Sra. del Manto"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-segovia-129",
+   "note": "Second list (BOP Segovia 129) after BOP Segovia 80."
   },
   "40171": {
    "name": "Ribota",
@@ -85457,7 +87163,7 @@
    "region": "castilla-y-leon",
    "holidays": [
     {
-     "date": "2027-06-22",
+     "date": "2027-07-22",
      "name": "Santa M.ª Magdalena"
     },
     {
@@ -85466,7 +87172,8 @@
     }
    ],
    "status": "boletin",
-   "source": "bop-segovia-80"
+   "source": "bop-segovia-129",
+   "note": "Second list (BOP Segovia 129) after BOP Segovia 80."
   },
   "40194": {
    "name": "Segovia",
@@ -85644,7 +87351,7 @@
    "region": "castilla-y-leon",
    "holidays": [
     {
-     "date": "2027-05-14",
+     "date": "2027-06-14",
      "name": "San Antonio"
     },
     {
@@ -85653,7 +87360,8 @@
     }
    ],
    "status": "boletin",
-   "source": "bop-segovia-80"
+   "source": "bop-segovia-129",
+   "note": "Second list (BOP Segovia 129) after BOP Segovia 80."
   },
   "40206": {
    "name": "Torre Val de San Pedro",
@@ -85661,7 +87369,7 @@
    "region": "castilla-y-leon",
    "holidays": [
     {
-     "date": "2027-07-27",
+     "date": "2027-07-26",
      "name": "Santa Ana"
     },
     {
@@ -85670,7 +87378,8 @@
     }
    ],
    "status": "boletin",
-   "source": "bop-segovia-80"
+   "source": "bop-segovia-129",
+   "note": "Second list (BOP Segovia 129) after BOP Segovia 80."
   },
   "40207": {
    "name": "Trescasas",
@@ -85847,12 +87556,13 @@
      "name": "San Pedro"
     },
     {
-     "date": "2027-10-26",
+     "date": "2027-10-25",
      "name": "San Frutos"
     }
    ],
    "status": "boletin",
-   "source": "bop-segovia-80"
+   "source": "bop-segovia-129",
+   "note": "Second list (BOP Segovia 129) after BOP Segovia 80."
   },
   "40218": {
    "name": "Valle de Tabladillo",
@@ -85904,6 +87614,24 @@
    ],
    "status": "boletin",
    "source": "bop-segovia-80"
+  },
+  "40221": {
+   "name": "Valleruela de Sepúlveda",
+   "province": "Segovia",
+   "region": "castilla-y-leon",
+   "holidays": [
+    {
+     "date": "2027-06-14",
+     "name": "San Antonio"
+    },
+    {
+     "date": "2027-09-08",
+     "name": "Ntra. Sra. del Barrio"
+    }
+   ],
+   "status": "boletin",
+   "source": "bop-segovia-129",
+   "note": "Second list (BOP Segovia 129) after BOP Segovia 80."
   },
   "40222": {
    "name": "Veganzones",
@@ -88976,7 +90704,7 @@
    "region": "castilla-y-leon",
    "holidays": [
     {
-     "date": "2027-08-30",
+     "date": "2027-08-23",
      "name": null
     },
     {
@@ -88985,8 +90713,8 @@
     }
    ],
    "status": "boletin",
-   "source": "bop-soria-81",
-   "note": "The resolution gives dates only, without festivity names."
+   "source": "bop-soria-113",
+   "note": "BOP Soria 113 (28-IX-2026) corrects BOP Soria 81: 23 Aug instead of 30 Aug. The resolution gives dates only, without festivity names."
   },
   "42036": {
    "name": "Blacos",
