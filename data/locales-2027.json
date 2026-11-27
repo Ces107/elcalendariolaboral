@@ -3735,10 +3735,25 @@
    "province": "Madrid",
    "region": "madrid",
    "capital": false,
-   "status": "unpublished",
-   "holidays": null,
-   "source": null,
-   "note": "Not yet approved: the council's news of 26-10-2026 (colladovillalba.es/-/pleno-ordinario-12) lists item 3 'Aprobación, si procede, de la designación de fiestas laborales locales para el año 2027' for the ordinary pleno of Thursday 29-10-2026, without giving dates. Re-check after that session; no BOCM resolution yet."
+   "status": "ayuntamiento",
+   "holidays": [
+    {
+     "date": "2027-06-11",
+     "name": "Fiesta local",
+     "text": "Festivos locales 2027: Viernes 11 de junio de 2027, Viernes 23 de julio de 2027"
+    },
+    {
+     "date": "2027-07-23",
+     "name": "Fiesta local",
+     "text": "Festivos locales 2027: Viernes 11 de junio de 2027, Viernes 23 de julio de 2027"
+    }
+   ],
+   "source": {
+    "title": "Ayuntamiento de Collado Villalba, official page 'Calendario Festivos' (Festivos locales 2027), read 27-11-2026",
+    "url": "https://www.colladovillalba.es/calendario-festivos-collado-villalba",
+    "checked": "2026-11-27"
+   },
+   "note": "The council's official 'Calendario Festivos' page (Tu municipio) lists under 'Festivos locales 2027' Friday 11 June and Friday 23 July 2027, next to the 2027 Comunidad de Madrid list; no festivity names given. The designation went to the pleno (agenda of 29-10-2026 item 3; press pointer: Vivir Ediciones reports an extraordinary session of 03-11-2026 on it). No BOCM resolution yet (checked 2026-11-27)."
   },
   {
    "slug": "aranjuez",
@@ -3746,10 +3761,25 @@
    "province": "Madrid",
    "region": "madrid",
    "capital": false,
-   "status": "unpublished",
-   "holidays": null,
-   "source": null,
-   "note": "Not yet approved: the agenda of the pleno of 28-10-2026 (aranjuez.es/transparencia/plenos-municipales/plenos-municipales-ano-2026/pleno-municipal-20261028/) includes item 4 'Propuesta que presenta la Concejala Delegada de Fiestas sobre declaración de fiestas locales para el año 2027', without giving dates. The council usually publishes an 'Aprobados los días festivos para el año ...' news item right after the October pleno; no BOCM resolution yet."
+   "status": "ayuntamiento",
+   "holidays": [
+    {
+     "date": "2027-05-28",
+     "name": "San Fernando",
+     "text": "El viernes 28 de mayo, festividad de San Fernando, y el lunes 6 de septiembre, con motivo de las Fiestas del Motín, serán los días festivos locales del próximo año."
+    },
+    {
+     "date": "2027-09-06",
+     "name": "Fiestas del Motín",
+     "text": "El viernes 28 de mayo, festividad de San Fernando, y el lunes 6 de septiembre, con motivo de las Fiestas del Motín, serán los días festivos locales del próximo año."
+    }
+   ],
+   "source": {
+    "title": "Ayuntamiento de Aranjuez, news 'Aprobados los días festivos locales 2027' (29-10-2026)",
+    "url": "https://www.aranjuez.es/aprobados-los-dias-festivos-locales-2027/",
+    "checked": "2026-11-27"
+   },
+   "note": "Official council news of 29-10-2026, after the pleno of 28-10-2026 (agenda item 4, proposal of the Concejala Delegada de Fiestas): Friday 28 May (San Fernando) and Monday 6 September (Fiestas del Motín); weekdays match 2027. No BOCM resolution yet (checked 2026-11-27)."
   },
   {
    "slug": "arganda-del-rey",

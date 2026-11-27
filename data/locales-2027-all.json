@@ -337,6 +337,11 @@
    "url": "https://ajuntament.barcelona.cat/calendarifestius/ca",
    "published": null
   },
+  "site:collado-villalba": {
+   "title": "Ayuntamiento de Collado Villalba, official page 'Calendario Festivos' (Festivos locales 2027), read 27-11-2026",
+   "url": "https://www.colladovillalba.es/calendario-festivos-collado-villalba",
+   "published": "2026-11-27"
+  },
   "site:fuenlabrada": {
    "title": "Ayuntamiento de Fuenlabrada, noticia 01/10/2026 'El 9 de marzo y el 14 de septiembre serán fiestas locales en 2027' (aprobado por el Pleno)",
    "url": "https://www.ayto-fuenlabrada.es/web/portal/w/el-9-de-marzo-y-el-14-de-septiembre-seran-fiestas-locales-en-2027-1-10-2026",
@@ -64434,6 +64439,24 @@
    "status": "ayuntamiento",
    "source": "madrid-councils:aranjuez",
    "note": "Council agreement; to be sent to the Dirección General de Trabajo for the BOCM resolution."
+  },
+  "28047": {
+   "name": "Collado Villalba",
+   "province": "Madrid",
+   "region": "madrid",
+   "holidays": [
+    {
+     "date": "2027-06-11",
+     "name": "Fiesta local"
+    },
+    {
+     "date": "2027-07-23",
+     "name": "Fiesta local"
+    }
+   ],
+   "status": "ayuntamiento",
+   "source": "site:collado-villalba",
+   "note": "The council's official 'Calendario Festivos' page (Tu municipio) lists under 'Festivos locales 2027' Friday 11 June and Friday 23 July 2027, next to the 2027 Comunidad de Madrid list; no festivity names given. The designation went to the pleno (agenda of 29-10-2026 item 3; press pointer: Vivir Ediciones reports an extraordinary session of 03-11-2026 on it). No BOCM resolution yet (checked 2026-11-27)."
   },
   "28058": {
    "name": "Fuenlabrada",
